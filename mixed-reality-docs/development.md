@@ -7,12 +7,12 @@ ms.author: grbury
 ms.date: 02/12/2019
 ms.topic: article
 keywords: Une réalité mixte, développer, développement, HoloLens, unity, directx
-ms.openlocfilehash: e48a1cbfbe084de9382b9fa1104b2d5fc0f68fcc
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: b4fa41171fff1f1fdc10359c93f4d1e7e4a84867
+ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59593226"
+ms.lasthandoff: 05/02/2019
+ms.locfileid: "64993593"
 ---
 # <a name="development-launchpad"></a>Launchpad de développement
 
@@ -38,7 +38,7 @@ ms.locfileid: "59593226"
                             <a href="install-the-tools.md">Installer les outils</a>
                         </p>
                         <p>
-                            <a href="holograms-100.md">Didacticiels et exemples d’applications</a>
+                            <a href="mrlearning-base-ch1.md">MR de formation : HoloLens 2 et MRTK v2</a>
                         </p>
                     </div>
                 </div>
@@ -132,10 +132,10 @@ Unreal - bientôt disponible !
                     <div class="cardText">
                         <h3>Guides en matière de portage</h3>
                         <p>
-                            <a href="mrtk-porting-guide.md">Mise à jour vers la dernière mixte<br>Réalité Toolkit (MRTK)</a>
+                            <a href="mrtk-porting-guide.md">La mise à jour des applications pour HoloLens 2<br>à partir de HoloLens (1er gen)</a>
                         </p>
                         <p>
-HoloLens (1er gen) pour HoloLens 2<br>- À venir !
+                            <a href="https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/HTKToMRTKPortingGuide.html">La boîte à outils de réalité mixte (MRTK)<br>Guide du portage API</a>
                         </p>
                         <p>
                             <a href="porting-guides.md">Applications immersives casque</a>

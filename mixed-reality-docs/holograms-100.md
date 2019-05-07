@@ -6,12 +6,12 @@ ms.author: kurtie
 ms.date: 03/21/2018
 ms.topic: article
 keywords: mixte réalité, Windows Mixed Reality, HoloLens, immersive, vr, mr, prise en main, HOLOGRAMME, academy, didacticiel
-ms.openlocfilehash: 1f4a5490383671fba694b386015ff6742d37241b
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: fd3bed955e80ec18b7be500adbdb0fcb7062d129
+ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59593250"
+ms.lasthandoff: 05/02/2019
+ms.locfileid: "64993620"
 ---
 >[!NOTE]
 >Les didacticiels Académie de réalité mixte ont été conçus avec HoloLens (1er gen) et des casques IMMERSIFS réalité mixte à l’esprit.  Par conséquent, nous estimons qu’il est important de laisser ces didacticiels en place pour les développeurs qui cherchent toujours pour obtenir des conseils de développement pour ces appareils.  Ces didacticiels seront **_pas_** être mis à jour avec les ensembles d’outils ou les interactions utilisées pour HoloLens 2 dernières.  Ils seront conservées pour continuer à travailler sur les appareils pris en charge. Il y aura une nouvelle série de didacticiels seront publiés dans le futur qui va vous montrer comment développer pour HoloLens 2.  Cet avis sera mis à jour avec un lien vers ces didacticiels lorsqu’elles sont validées.
@@ -97,7 +97,7 @@ Dans ce chapitre, nous allons définir certains paramètres de projet Unity qui 
 
 Dans la mesure où il est si important de maintenir une haute fréquence d’images sur HoloLens, nous voulons les paramètres de qualité adaptées à de meilleures performances. Pour plus d’informations sur les performances, [recommandations relatives aux performances pour Unity](performance-recommendations-for-unity.md).
 1. Sélectionnez **Modifier > Paramètres du projet > qualité**
-2. Sélectionnez le **déroulante** sous le **Windows Store** logo, puis sélectionnez **très faible**. Vous saurez que le paramètre est appliqué correctement lorsque la case dans la colonne du Windows Store et de la ligne le plus rapide est vert.
+2. Sélectionnez le **déroulante** sous le **Windows Store** logo, puis sélectionnez **très faible**. Vous saurez que le paramètre est correctement appliqué lorsque la zone de la colonne du Windows Store et **très faible** ligne est verte.
 
 **Pour les applications de réalité mixte ciblées à affiche un vaisseau**, vous pouvez laisser les paramètres de qualité à ses valeurs par défaut.
 
@@ -220,6 +220,6 @@ Maintenant que votre application est déployée, essayez de déplacer tout autou
 
 ## <a name="see-also"></a>Voir aussi
 * [Vue d’ensemble du développement Unity](unity-development-overview.md)
-* [Meilleures pratiques pour travailler avec Unity et Visual Studio](best-practices-for-working-with-unity-and-visual-studio.md)
+* [Bonnes pratiques sur l’utilisation d’Unity et de Visual Studio](best-practices-for-working-with-unity-and-visual-studio.md)
 * [Principes de base MR 101](holograms-101.md)
 * [Principes de base MR 101E](holograms-101e.md)

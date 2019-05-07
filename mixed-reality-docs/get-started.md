@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 08/06/2018
 ms.topic: article
 keywords: prise en main, principes de base, HoloLens, casque immersif, ar, vr, unity, visual studio, Guide de démarrage rapide, comment
-ms.openlocfilehash: 92fbc6eee227da571ff36401f84cf81a093062d7
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 4277de37ffe4a7ab03f382626452b96bf9157634
+ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59594859"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64873959"
 ---
 # <a name="get-started"></a>Prise en main
 
@@ -63,7 +63,7 @@ Maintenant que votre PC et les périphériques sont configurés, vous êtes prê
 
 Maintenant que vous avez créé votre premier projet MR, vous avez probablement faim et bien plus encore ! Voici quelques ressources qui peut aider à :
 * [Mixte de documentation pour développeurs réalité](mixed-reality.md) - vous êtes déjà ici, mais il est bien plus encore à consulter, y compris la documentation technique, des conseils de conception, des exemples de projets et des études de cas.
-* [Académie de réalité mixte](academy.md) -suivre des didacticiels qui couvrent tous les éléments à partir de la configuration de projets, à l’implémentation des principaux blocs de construction MR, à l’intégration d’Azure cloud services dans votre application MR.
+* [Didacticiels de la réalité de mixte](tutorials.md) -suivre des didacticiels qui couvrent tous les éléments à partir de la configuration de projets, à l’implémentation des principaux blocs de construction MR, à l’intégration d’Azure cloud services dans votre application MR.
 * [Découvrez Unity](https://unity3d.com/learn) -site Web de Unity propose des didacticiels, des projets et des sessions de formation en direct pour les créateurs à chaque étape de la formation.
 
 Vous pouvez également vous aider à partir de ces ressources de communauté très :

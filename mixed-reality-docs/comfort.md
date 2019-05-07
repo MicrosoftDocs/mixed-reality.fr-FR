@@ -3,15 +3,15 @@ title: Confort
 description: Au cours de l’affichage physique, le système visual humain s’appuie sur plusieurs sources d’informations, ou « piles » pour interpréter des formes 3D et la position relative des objets.
 author: erickjpaul
 ms.author: erpau
-ms.date: 02/13/2019
+ms.date: 04/5/2019
 ms.topic: article
-keywords: Réalité mixte, conception, confort
-ms.openlocfilehash: dbf7080f5b9a2ebafdbd06fca79fae717b3207ed
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+keywords: Une réalité, conception, mixte confort, HoloLens, 2, HoloLens (1er gen)
+ms.openlocfilehash: 3dac997923b3f2319cb97137c1bbd9a12c4126b1
+ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59597057"
+ms.lasthandoff: 05/02/2019
+ms.locfileid: "64993628"
 ---
 # <a name="comfort"></a>Confort
 
@@ -34,7 +34,7 @@ HoloLens affiche est fixés à une distance optique environ 2.0m éloignée de l
 ![Distance optimale pour placer hologrammes à partir de l’utilisateur.](images/distanceguiderendering-950px.png)<br>
 *Distance optimale pour placer hologrammes à partir de l’utilisateur*
 
-#### <a name="best-practices-for-hololens-1st-gen-and-hololens-2"></a>Meilleures pratiques pour HoloLens (1er gen) et 2 de HoloLens
+### <a name="best-practices-for-hololens-1st-gen-and-hololens-2"></a>Meilleures pratiques pour HoloLens (1er gen) et 2 de HoloLens
 
 Pour plus de confort maximal, **la zone optimale pour la sélection élective hologramme est comprise entre 1,25 m et 5m**. Dans tous les cas, les concepteurs doivent tenter d’arrière-plan de contenu de structure pour encourager les utilisateurs à interagir 1 million ou plus éloignés du contenu (par exemple, ajuster [taille du contenu et par défaut des paramètres de positionnement](gaze-targeting.md)). 
 
@@ -42,10 +42,14 @@ Bien que le contenu peut parfois besoin d’afficher moins de 1 million, nous vo
 
 Objets déplacement en profondeur sont plus susceptibles que les objets STATIONNAIRES pour produire de gêne en raison du conflit vergence-hébergement. De même, que les utilisateurs doivent rapidement passer de près de focus lointain focus (par exemple, en raison d’un hologramme contextuels nécessitant une interaction directe) risque de fatigue et gêne visual. Par conséquent, **supplémentaire doit veiller à réduire la fréquence à laquelle les utilisateurs sont : affichage de contenu qui se déplacent en profondeur ; ou rapidement ramener le focus entre hologrammes proches**. 
 
-Lors de la conception de contenu pour direct (near) interaction dans 2 HoloLens, ou **dans toutes les applications où le contenu doit être placé à moins de 1m, une attention particulière à entreprendre pour garantir le confort de l’utilisateur**. Les probabilités de gêne en raison du conflit vergence-hébergement augmenter de façon exponentielle avec diminution de distance de visualisation. **Nous vous recommandons de créer un budget « profondeur » pour les applications basées sur la durée pendant laquelle un utilisateur est censé afficher le contenu qui est proche de (< 1m) et le déplacement en profondeur**. Un exemple consiste à éviter de placer l’utilisateur dans ces situations plus de 25 % du temps. Si le budget de profondeur est dépassé, nous vous recommandons d’attention utilisateur de test pour vous assurer qu’il reste une expérience à l’aise.
+### <a name="additional-considerations-for-hololens-2-and-near-interaction-distances"></a>Considérations supplémentaires pour HoloLens 2 et près de distances d’interaction
 
-> [!NOTE]
-> Obtenir des instructions spécifiques pour HoloLens 2 [bientôt](index.md#news-and-notes).
+Lors de la conception de contenu pour direct (near) interaction dans 2 HoloLens, ou **dans toutes les applications où le contenu doit être placé à moins de 1m, une attention particulière à entreprendre pour garantir le confort de l’utilisateur**. Les probabilités de gêne en raison du conflit vergence-hébergement augmenter de façon exponentielle avec diminution de distance de visualisation. En outre, les utilisateurs peuvent rencontrer bluriness accrue lors de l’affichage de contenu à près de distances d’interaction, nous vous recommandons de test contenu restitué à la fois dans la zone de placement optimal hologramme ainsi que de plus près (inférieur à 1,0 m jusqu’au plan de découpage) à Vérifiez qu’il reste claire et à l’aise afficher. 
+
+**Nous vous recommandons de créer un budget « profondeur » pour les applications basées sur la durée pendant laquelle un utilisateur est censé afficher le contenu qui est proche de (inférieure à 1.0 m) et le déplacement en profondeur**. Un exemple consiste à éviter de placer l’utilisateur dans ces situations plus de 25 % du temps. Si le budget de profondeur est dépassé, nous vous recommandons d’attention utilisateur de test pour vous assurer qu’il reste une expérience à l’aise. 
+
+En règle générale, nous recommandons également prudent de test pour assurer des exigences d’interaction (par exemple, la vitesse de déplacement, l’accessibilité, etc.) à près de distances d’interaction restent à l’aise pour les utilisateurs. 
+
 
 ### <a name="guidance-for-immersive-devices"></a>Conseils pour les appareils immersives
 
@@ -65,8 +69,7 @@ Pour HoloLens (1er gen), IPD est estimé et au cours de l’appareil [étalonnag
 
 #### <a name="hololens-2"></a>HoloLens 2
 
-> [!NOTE]
-> Obtenir des instructions spécifiques pour HoloLens 2 [bientôt](index.md#news-and-notes).
+Pour HoloLens 2, IPD est estimé et pendant les yeux/appareil [étalonnage](calibration.md). Pour les nouveaux utilisateurs à un déjà définie d’appareil, étalonnage doit être exécuté pour garantir l’IPD est correctement définie. VO est comptabilisée automatiquement dans les 2 HoloLens. 
 
 ### <a name="guidance-for-immersive-devices"></a>Conseils pour les appareils immersives
 
@@ -120,7 +123,7 @@ Dans les dernières premier-TIR, affichages tête haute (HUDs) présentent mani�
 
 ## <a name="text-legibility"></a>Meilleure lisibilité du texte
 
-Une meilleure lisibilité du texte optimal peut aider à alléger la charge de surveiller et maintenir le confort de l’utilisateur, en particulier dans les applications ou des scénarios qui requièrent des utilisateurs à lire dans un HMD. Une meilleure lisibilité du texte dépend de divers facteurs, notamment diverses propriétés d’affichage (par exemple, une densité de pixels, luminosité, contraste), propriétés de filtre (par exemple, les aberrations chromatique) et propriétés de police du texte / (par exemple, la police spécifique caractéristiques telles qu’épaisseur, empattements, etc., couleur de police, couleur d’arrière-plan).  
+Une meilleure lisibilité du texte optimal peut aider à alléger la charge de surveiller et maintenir le confort de l’utilisateur, en particulier dans les applications ou des scénarios qui requièrent des utilisateurs à lire dans un HMD. Une meilleure lisibilité du texte dépend de divers facteurs, notamment diverses propriétés d’affichage (par exemple, une densité de pixels, luminosité, contraste), propriétés de filtre (par exemple, les aberrations chromatique) et propriétés de police du texte / (par exemple, la police spécifique caractéristiques comme poids, l’espacement, empattements, etc., couleur de police, couleur d’arrière-plan).  
 
 En règle générale, nous vous recommandons de tester des applications spécifiques pour une meilleure lisibilité et de rendre les tailles de police aussi grand que possible pour une expérience à l’aise. Ci-dessous, nous proposons des conseils généraux comme point de départ pour le développement. Notez que toutes les tailles de police sont signalés en degrés de [angle visual](https://en.wikipedia.org/wiki/Visual_angle) au lieu de tailles physiques spécifiques, qui fournit des conseils pour n’importe quelle distance dans la zone de sélection élective hologramme optimale, car elle prend en compte la taille de la texte et la distance, il apparaît dans l’Observateur. 
 
@@ -130,18 +133,25 @@ Pour les appareils HOLOGRAPHIQUE, rendu du texte noir/sombre sur un arrière-pla
 
 #### <a name="hololens-1st-gen"></a>HoloLens (1er gen)
 
-La taille de police verticale lisibles minimale est environ 0,35 ° et une taille de police verticale à l’aise est au moins environ 0,5 ° pour lire le contenu présenté à une distance de 2m à l’utilisateur. 
+La taille de police lisibles minimale (mesure à partir de la ligne de base à ascender) est d’environ 0,35 ° et une taille de police à l’aise est au moins environ 0,5 ° pour lire le contenu présenté à une distance de 2m à l’utilisateur. 
 
 #### <a name="hololens-2"></a>HoloLens 2
 
-> [!NOTE]
-> Obtenir des instructions spécifiques pour HoloLens 2 [bientôt](index.md#news-and-notes).
+La taille de police lisibles minimale (mesure à partir de la ligne de base à ascender) est au moins approximativement : 
+   - ° 0.4-0,5 ° à 45 centimètres (distance manipulation directe) 
+   - ° 0,35-0,4 ° à m 2.0
+   
+La taille de police confortablement lisibles (mesure à partir de la ligne de base à ascender) est au moins approximativement : 
+   - ° 0,65-0,8 ° à 45 centimètres (distance manipulation directe)
+   - ° 0.6-0,75 ° à m 2.0
+
+Notez que les tailles de police doivent être légèrement plus grande pour le texte à des distances de la manipulation directe en raison du conflit vergence-hébergement décrit ci-dessus (yeux des utilisateurs sont l’adaptation à une distance de m 2.0 sur l’affichage de HoloLens, donc le contenu affiché, par exemple, 45 cm peut apparaître plus flou aux utilisateurs). 
 
 ### <a name="guidance-for-immersive-devices"></a>Conseils pour les appareils immersives
 
-Appareils immersives généralement ont un taux de contraste plus élevé en raison de l’occlusion complète de l’environnement extérieur, mais ont une densité de pixels effectif inférieur en partie en raison de l’agrandissement des lentilles devant l’affiche. 
+Appareils immersives généralement ont un taux de contraste plus élevé en raison de l’occlusion complète de l’environnement extérieur, mais peuvent avoir une densité de pixels effectif inférieur en partie en raison de l’agrandissement des lentilles devant l’affiche. 
 
-Pour HMDs immersives de Windows Mixed Reality, la taille de police verticale lisibles minimale est environ 0,7-0,9 ° et une taille de police verticale à l’aise est environ 1.0° pour lire le contenu présenté à une distance de 2m à l’utilisateur.
+Pour HMDs immersives de Windows Mixed Reality, la taille de police verticale lisibles minimale (mesure à partir de la ligne de base à ascender) est environ 0,7-0,9 ° et une taille de police verticale à l’aise est environ 1.0° pour lire le contenu présenté à une distance de 2m à la utilisateur.
 
 ## <a name="gaze-direction"></a>Direction du regard
 
@@ -160,8 +170,8 @@ L’angle du pointage de regard (repos) optimal est considéré comme entre les 
 Fatigue de muscle peut s’accumuler lorsque les utilisateurs sont censées conserver une main déclenchée pendant toute la durée d’une expérience. Il peut également être fatiguing pour obliger l’utilisateur à plusieurs reprises apporter air appuyez sur les mouvements sur de longues périodes. Nous recommandons donc d’expériences évitent exigeant une saisie de mouvement de constante, répétées. Cet objectif peut être obtenu en incorporant des pauses ou offre un mélange de gestes et paroles d’entrée pour interagir avec l’application.
 
 ## <a name="see-also"></a>Voir aussi
-* [Gaze](gaze.md)
-* [Stabilité HOLOGRAMME](hologram-stability.md)
-* [Notions fondamentales d’interaction](interaction-fundamentals.md)
-* [Frame HOLOGRAPHIQUE](holographic-frame.md)
-* [Calibration](calibration.md)
+* [Pointage du regard](gaze.md)
+* [Stabilité des hologrammes](hologram-stability.md)
+* [Fonctionnalités de base des interactions](interaction-fundamentals.md)
+* [Image holographique](holographic-frame.md)
+* [Étalonnage](calibration.md)

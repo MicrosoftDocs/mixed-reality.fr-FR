@@ -6,12 +6,12 @@ ms.author: ericrehm
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Réalité mixte Windows, HoloLens, fenêtre magique, parallaxe
-ms.openlocfilehash: 0c0828a6ebbefdcff7f0a66f48469007c5c532df
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 945a09614fbc77400825b524f4e0b591bf7b1f6b
+ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59594526"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64873936"
 ---
 # <a name="case-study---looking-through-holes-in-your-reality"></a>Étude de cas - parcourant des trous dans la réalité
 
@@ -93,7 +93,7 @@ Avoir un HoloLens et souhaitez tester l’effet par vous-même ? Le plus simple
 
 Affichage de ce modèle dans votre éditeur Unity affichera une grande boîte noire autour du préfabriqué. Sur HoloLens, la zone disparaît, permet un effet magique de fenêtre.
 
-Si vous souhaitez créer une application qui utilise cette technique, consultez le [101 de principes de base MR didacticiel](holograms-101.md) dans le [Académie de réalité mixte](academy.md). Chapitre 7 se termine par une explosion dans votre étage que révèle un underworld masqué (comme indiqué dans l’illustration ci-dessus). Vous dites didacticiels devaient être ennuyeux ?
+Si vous souhaitez créer une application qui utilise cette technique, consultez le [101 de principes de base MR didacticiel](holograms-101.md) dans le [didacticiels de réalité mixte](tutorials.md). Chapitre 7 se termine par une explosion dans votre étage que révèle un underworld masqué (comme indiqué dans l’illustration ci-dessus). Vous dites didacticiels devaient être ennuyeux ?
 
 Voici quelques idées où vous pouvez tirer cette idée suivante :
 * Imaginer des moyens de rendre le contenu à l’intérieur de la faille virtuelle interactif. Permet à vos utilisateurs ont un impact au-delà de leurs murs peut véritablement améliorer le sens d’étonnant que cette astuce peut fournir.
@@ -109,7 +109,7 @@ Voici quelques idées où vous pouvez tirer cette idée suivante :
 </table>
 
 ## <a name="see-also"></a>Voir aussi
-* [Principes de base MR 101 : Projet complet avec l’appareil](holograms-101.md)
+* [Réalité mixte - Principes fondamentaux - Cours 101 : Projet complet avec appareil](holograms-101.md)
 * [Systèmes de coordonnées](coordinate-systems.md)
 * [Ancres spatiales](spatial-anchors.md)
 * [Mappage spatial](spatial-mapping.md)

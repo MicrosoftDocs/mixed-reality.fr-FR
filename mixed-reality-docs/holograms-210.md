@@ -6,12 +6,12 @@ ms.author: kurtie
 ms.date: 03/21/2018
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-unity, academy, tutorial, gaze
-ms.openlocfilehash: 63c55e8a7a348f2a3e0cc29a9795d7fabcef5df0
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 076314389ec5ed70347c26d50c6a993f55da0758
+ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59593975"
+ms.lasthandoff: 05/02/2019
+ms.locfileid: "64993545"
 ---
 >[!NOTE]
 >Les didacticiels Académie de réalité mixte ont été conçus avec HoloLens (1er gen) et des casques IMMERSIFS réalité mixte à l’esprit.  Par conséquent, nous estimons qu’il est important de laisser ces didacticiels en place pour les développeurs qui cherchent toujours pour obtenir des conseils de développement pour ces appareils.  Ces didacticiels seront **_pas_** être mis à jour avec les ensembles d’outils ou les interactions utilisées pour HoloLens 2 dernières.  Ils seront conservées pour continuer à travailler sur les appareils pris en charge. Il y aura une nouvelle série de didacticiels seront publiés dans le futur qui va vous montrer comment développer pour HoloLens 2.  Cet avis sera mis à jour avec un lien vers ces didacticiels lorsqu’elles sont validées.
@@ -103,7 +103,7 @@ Enfin, nous mettrons à jour nos paramètres de qualité pour accélérer les pe
 
 1. Accédez à **Modifier > Paramètres du projet > qualité**.
 2. Cliquez sur la flèche vers le bas dans la **par défaut** ligne sous l’icône du Windows Store.
-3. Sélectionnez **plus rapide** pour **applications du Windows Store**.
+3. Sélectionnez **très faible** pour **applications du Windows Store**.
 
 ### <a name="import-project-assets"></a>Importer des éléments de projet
 

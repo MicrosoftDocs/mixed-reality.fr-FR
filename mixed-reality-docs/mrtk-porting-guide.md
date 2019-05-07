@@ -1,21 +1,21 @@
 ---
 title: Préparation de votre application pour HoloLens 2
 description: Destiné aux développeurs qui disposent d’une application existante sur HoloLens (1er gen) et/ou anciennes MRTK et la recherche vers le port MRTK version 2 et HoloLens 2.
-author: author:grbury
+author: grbury
 ms.author: grbury
 ms.date: 04/12/19
 ms.topic: article
 keywords: Windows Mixed Reality, tester, MRTK, MRTK version 2, HoloLens 2
-ms.openlocfilehash: a5a329f69f5f9cc64666483adc92786ae8910b2f
-ms.sourcegitcommit: 07773e094ace2e828e329bd55da759983be3b8c1
+ms.openlocfilehash: 369470326d815ee711e96264939dd2e0487879b6
+ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59597200"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64873912"
 ---
 # <a name="getting-your-existing-app-ready-for-hololens-2"></a>Préparation de votre application existante pour HoloLens 2
 
-Ce guide est conçu spécialement pour aider les développeurs qui disposent d’une application Unity pour 1 HoloLens porter leur application pour le nouvel appareil HoloLens 2. Il existe quatre étapes clés pour le portage d’une application de HoloLens 1 Unity pour HoloLens 2. Les sections ci-dessous décrit en détail les informations pour chaque phase. 
+Ce guide est conçu spécialement pour aider les développeurs qui disposent d’une application Unity pour HoloLens (1er gen) au port de leur application pour le nouvel appareil HoloLens 2. Il existe quatre étapes clés pour le portage d’un HoloLens (1er gen) application Unity pour HoloLens 2. Les sections ci-dessous décrit en détail les informations pour chaque phase. 
 
 | Étape 1 | Étape 2 | Étape 3 | Étape 4 |
 |----------|-------------------|-------------------|-------------------|
@@ -31,11 +31,12 @@ Il est **hautement recommandé** que, avant de commencer le processus de portage
 
 ## <a name="migrate-project-to-latest-version-of-unity"></a>Migrer un projet à la dernière version de Unity
 
-La première étape pour le portage de votre application Unity seront pour l’ouvrir dans la dernière version de Unity. Actuellement, il existe deux options : Unity 2018.3.x ou bêta de 2019.1.x Unity. Il existe plusieurs compromis entre ces deux versions, mais la principale différence de l’argument précision est la possibilité de compiler pour ARM64 dans Unity 2019 +. 
+Si vous utilisez le v2 MRTK, Unity 2018 LTS sera le chemin d’accès de prise en charge à long terme mieux sans aucune modification avec rupture dans Unity ou dans MRTK.  La build Unity recommandée, par le ci-dessus « installer les outils » est 2018.3 Unity, qui deviendra la version LTS pour Unity 2018.  En outre, le v2 MRTK sera toujours garantir la prise en charge de Unity 2018 LTS, mais pas nécessairement garantir la prise en charge pour chaque itération de Unity 2019.x. 
 
-Les développeurs doivent évaluer les [les dépendances de plug-in](https://docs.unity3d.com/Manual/Plugins.html) qui existent actuellement dans leur projet et ou non ces DLL peut être générées pour ARM64. Si un plug-in de dépendance dure ne peut pas être généré pour ARM64, un avoir utiliser Unity 2018 LTS. Portage vers ARM64 est généralement souhaitée, si possible, car il existe de nombreuses améliorations des performances visibles sur l’appareil par rapport à ARM32.
+Pour aider à clarifier les différences supplémentaires entre Unity 2018.3.x ou Unity 2019.1.x, ci-dessous décrit les compromis entre ces deux versions, avec la principale différence de l’argument précision en cours de la capacité à compiler pour ARM64 dans Unity 2019. 
 
-En outre, le Toolkit de réalité mixte V2 sera toujours garantir la prise en charge de Unity 2018 LTS, mais pas nécessairement garantir la prise en charge pour chaque itération de Unity 2019.x+. 
+Les développeurs doivent évaluer les [les dépendances de plug-in](https://docs.unity3d.com/Manual/Plugins.html) qui existent actuellement dans leur projet et ou non ces DLL peut être générées pour ARM64. Si un plug-in de dépendance dure ne peut pas être généré pour ARM64, un avoir utiliser Unity 2018 LTS.
+
 
 | Unity 2018.3.x | Unity 2019.1 + |
 |----------|-------------------|

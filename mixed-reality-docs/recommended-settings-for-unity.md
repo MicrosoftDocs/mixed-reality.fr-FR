@@ -6,12 +6,12 @@ ms.author: trferrel
 ms.date: 03/26/2019
 ms.topic: article
 keywords: Unity, les paramètres, réalité mixte
-ms.openlocfilehash: a67c3a65819855be6d43941c05f9a0027abf2f6d
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: c7029f2dfaf246db9f972c7d89b46e4fb9b5f1a1
+ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59594287"
+ms.lasthandoff: 05/02/2019
+ms.locfileid: "64993612"
 ---
 # <a name="recommended-settings-for-unity"></a>Paramètres recommandés pour Unity
 
@@ -19,13 +19,24 @@ Unity fournit un ensemble d’options par défaut qui sont généralement le cas
 
 ## <a name="performant-environment-set-up"></a>Configuration d’environnement performant
 
-### <a name="low-quality-setting"></a>Paramètre de qualité inférieure
+### <a name="low-quality-settings"></a>Paramètres de basse qualité
 
-Il est important de modifier le **les paramètres de qualité de Unity** pour votre environnement à **plus « rapide »**. Cela permet de s’assurer que votre application s’exécute efficacement à la fréquence d’images appropriée. Ceci est extrêmement important pour le développement de Hololens. Pour le développement sur des casques IMMERSIFS, selon les spécifications du bureau mise sous tension de l’expérience de réalité virtuelle, un peut toujours obtenir une fréquence d’images sans les paramètres de qualité la plus basse. 
+Il est important de modifier le **les paramètres de qualité de Unity** pour votre environnement à **très faible**. Cela permet de s’assurer que votre application s’exécute efficacement à la fréquence d’images appropriée. Ceci est extrêmement important pour le développement de Hololens. Pour le développement sur des casques IMMERSIFS, selon les spécifications du bureau mise sous tension de l’expérience de réalité virtuelle, un peut toujours obtenir une fréquence d’images sans les paramètres de qualité la plus basse. 
 
 Dans Unity 2018 LTS +, le niveau de qualité du projet peut être défini :
 
-Sous **modifier** > **paramètres du projet** > **qualité** > définir le **par défaut** en cliquant sur le flèche vers le bas pour le **Fastest** niveau de qualité
+Sous **modifier** > **paramètres du projet** > **qualité** > définir le **par défaut** en cliquant sur le flèche vers le bas pour le **très faible** niveau de qualité
+
+### <a name="lighting-settings"></a>Paramètres d’éclairage
+
+Comme pour les paramètres de scène de qualité, il est important de définir des paramètres d’éclairage optimaux pour votre application de réalité mixte. Dans Unity, le paramètre d’éclairage qui aura généralement le plus grand impact sur les performances de votre scène est **Illumination globale en temps réel**. Cela peut être désactivée en accédant **fenêtre** > **rendu** > **paramètres d’éclairage** > **en temps réel Illumination globale**. 
+
+Il existe un autre paramètre d’éclairage, **intégrées d’Illumination globale**. Ce paramètre peut fournir performante et résultats visuellement frappante sur des casques IMMERSIFS mais n’est généralement pas applicable pour le développement de HoloLens. **Intégrées Global Illumniation** est calculée uniquement pour les GameObjects statiques qui ne figurent généralement pas dans les scènes HoloLens en raison de la nature d’un environnement inconnu et variable.
+
+Veuillez lire [Illumination globale à partir d’Unity](https://docs.unity3d.com/Manual/GIIntro.html) pour plus d’informations. 
+
+>[!NOTE]
+> **Illumination globale en temps réel** a la valeur **par scène** et les développeurs doivent économiser ainsi cette propriété pour chaque scène Unity dans leur projet. 
 
 ### <a name="single-pass-instancing-rendering-path"></a>Chemin d’accès de rendu instanciation unique pass
 
@@ -141,4 +152,4 @@ Les fonctionnalités applicables pour l’activation de l’API couramment utili
 ## <a name="see-also"></a>Voir aussi
 * [Vue d’ensemble du développement Unity](unity-development-overview.md)
 * [Performances Understaing pour la réalité mixte](understanding-performance-for-mixed-reality.md)
-* [Recommandations relatives aux performances pour Unity](performance-recommendations-for-unity.md)
+* [Recommandations de performances pour Unity](performance-recommendations-for-unity.md)

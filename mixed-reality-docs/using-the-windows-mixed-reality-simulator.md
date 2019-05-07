@@ -1,17 +1,17 @@
 ---
 title: L’utilisation du simulateur Windows Mixed Reality
 description: Le simulateur Windows Mixed Reality vous permet de tester des applications de réalité mixte sur votre PC sans un casque immersif Windows Mixed Reality.
-author: JonMLyons
-ms.author: jlyons
-ms.date: 03/21/2018
+author: pbarnettms
+ms.author: pbarnett
+ms.date: 04/25/2019
 ms.topic: article
 keywords: Windows mixte réalité, le simulateur, test
-ms.openlocfilehash: 782cab85f163edd2afc4251210b7596c73dcc8b8
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: a7cbd5b5ca1c0ed0e4f81715d337d5eec68117f0
+ms.sourcegitcommit: f5c1dedb3b9e29f27f627025b9e7613931a7ce18
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59596335"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64580700"
 ---
 # <a name="using-the-windows-mixed-reality-simulator"></a>L’utilisation du simulateur Windows Mixed Reality
 
@@ -28,7 +28,7 @@ Le simulateur Windows Mixed Reality vous permet de tester des applications de r�
    4. Cliquez sur **configurer** pour confirmer votre choix
 4. Cliquez sur le **pour les développeurs** bouton sur le côté gauche du portail de réalité mixte
 5. Activer le bouton bascule Simulation **sur**
-   * Cela nécessite des autorisations d’administrateur et vous devez accepter la boîte de dialogue contrôle de compte d’utilisateur qui s’affiche
+   * L’activation de simulation installe et Active le contrôleur 6-DDL simulé gauche par défaut.  Avant Windows 10 mai 2019 mise à jour, l’installation d’un contrôleur simulé 6-DDL nécessite des autorisations d’administrateur.  Vous devez accepter la boîte de dialogue contrôle de compte d’utilisateur si celui-ci apparaît.
 
 Vous devez maintenant exécuter avec simulation !
 
@@ -50,11 +50,13 @@ Vous contrôlez le simulateur en dirigeant les actions d’un utilisateur simul�
 ## <a name="tracked-controllers"></a>Contrôleurs de suivis
 
 Le simulateur de réalité mixte permet de simuler jusqu'à deux contrôleurs de mouvement suivies à main. Activer l’utilisation des commutateurs bascule dans le portail de réalité mixte. Chaque contrôleur simulé a :
-* Position dans l’espace
+* Position et l’orientation dans l’espace
 * Bouton Accueil
 * Bouton Menu
 * Bouton de la poignée
 * Pavé tactile
+* Stick analogique
+* Niveau de batterie
 
 ## <a name="see-also"></a>Voir aussi
 * [Utilisation de l’émulateur HoloLens](using-the-hololens-emulator.md)

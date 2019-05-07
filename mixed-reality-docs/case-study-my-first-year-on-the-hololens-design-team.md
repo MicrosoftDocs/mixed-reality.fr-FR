@@ -6,12 +6,12 @@ ms.author: haejinl
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Personnel éditorial, de conception, Windows Mixed Reality, HoloLens,
-ms.openlocfilehash: e16be57d42bdc003fd601b94e054c7c25ebd290e
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 050645e6096559a4f37b033e5ddfdc5444039c08
+ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59597097"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64873956"
 ---
 # <a name="case-study---my-first-year-on-the-hololens-design-team"></a>Étude de cas - équipe de conception de ma première année sur l’HoloLens
 
@@ -105,7 +105,7 @@ Lorsque j’ai travaillé en 2D, j’ai décrit principalement seulement le cont
 
 **« Quel que soit le plus proche j’ai décrit la scène en 3D, l’expérience réelle dans casque était presque jamais le même que l’ébauche de projet. C’est pourquoi il est important de tester la scène dans la cible casques. » — HAÉ Jin Lee**
 
-Pour le prototypage d’HoloLens, j’ai essayé toutes les didacticiels à [Académie de réalité mixte](academy.md) pour démarrer. Puis j’ai commencé à jouer avec [HoloToolkit.Unity](https://github.com/Microsoft/HoloToolkit-Unity/) que Microsoft offre aux développeurs pour accélérer le développement d’applications HOLOGRAPHIQUE. Lorsque je suis bloqué par quelque chose, j’ai publié ma question à [HoloLens Question & réponse Forum](https://forums.hololens.com/categories/questions-and-answers/).
+Pour le prototypage d’HoloLens, j’ai essayé toutes les didacticiels à [didacticiels de réalité mixte](tutorials.md) pour démarrer. Puis j’ai commencé à jouer avec [HoloToolkit.Unity](https://github.com/Microsoft/HoloToolkit-Unity/) que Microsoft offre aux développeurs pour accélérer le développement d’applications HOLOGRAPHIQUE. Lorsque je suis bloqué par quelque chose, j’ai publié ma question à [HoloLens Question & réponse Forum](https://forums.hololens.com/categories/questions-and-answers/).
 
 Après avoir acquis une compréhension élémentaire de prototypage de HoloLens, je souhaitais permettre à d’autres non codeurs au prototype sur leurs propres. Par conséquent, j’ai apporté un didacticiel vidéo qui explique comment développer une simple PROJECTILES à l’aide de HoloLens. J’ai expliquer brièvement les concepts de base, par conséquent, même que si vous avez aucune expérience en développement de HoloLens, vous pourrez suivre la procédure.
 
