@@ -6,13 +6,31 @@ ms.author: jennyk
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Mixte réalité, les regards, les regards ciblant, interaction, concevoir
-ms.openlocfilehash: c3225e27331f8afcda65469eb84fe5470bf6ee8c
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 1ac4f06208a7574fced0a7e27e93469ec93bf6e0
+ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59594498"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64873926"
 ---
+# <a name="gaze-and-dwell"></a>Regards et durée d’affichage
+Il existe un grand nombre de différentes façons pour confirmer une _validation_ telles que la combinaison des regards avec _voix_ ou _main mouvements_.
+Il existe plusieurs scénarios utilisateur Cependant, dans lequel les utilisateurs peuvent être occupés ou ne peut pas être suivies (par exemple, les travailleurs de fabrique avec des gants lourds volumineux). Entrée vocale également peut-être pas disponible en raison des préférences de l’utilisateur, contexte de réseaux sociaux ou environnements bruyants.
+Comme une solution de secours, une autre option pour effectuer un _validation_ consiste simplement à conserver fixant un élément d’interface utilisateur que nous appelons _m’attarderai pas_.
+Un _m’attarderai pas_ peuvent être effectuées avec des regards head ou yeux. L’idée est simple et peut être décomposée dans les phases suivantes : 
+1. Utilisateur démarre gazing à un bouton HOLOGRAPHIQUE
+
+2. Après un délai bref apparition (par exemple, 150 ms), une animation de rétroaction visuelle est démarrée. Le délai de début est utilisé pour éviter de surcharger l’utilisateur en affichant immédiatement des commentaires tout le temps.
+    - Pour _les regards yeux_, nous vous recommandons de commentaires m’attarderai pas les éléments suivants pour la conception de l’élément visuel :
+      - **Blend il**: Fondre dans les commentaires à partir d’à peine visible à tout d’abord à totalement opaque. Les commentaires est ainsi moins de détourner votre attention et overwhleming et bien s’aligne avec la certitude que le système que l’utilisateur souhaite collaborer avec ce bouton.
+      - **Tirez-la**: Créer une rétroaction visuelle que diminue en taille et la déplace vers le centre de la cible, en extrayant des attention visuelle de l’utilisateur. 
+
+3. Après une durée de la durée d’affichage prédéfinis (par exemple, 800 ms), la durée d’affichage se termine et déclenchement d’un événement associé.
+    - Fournir certains finalisation auditifs ou des commentaires visuels à réellement mettre accueil que l’élément a été sélectionné maintenant.
+
+![M’attarderai pas États](images/eyes_dwellstate_recommendation.png)
+
+
 # <a name="gaze-targeting"></a>Ciblage des regards
 
 Toutes les interactions reposent sur la capacité d’un utilisateur à cibler l’élément qu'ils souhaitent interagir, quelle que soit la modalité d’entrée. En réalité mixte Windows, cela s’effectue en général à l’aide regard de l’utilisateur.
@@ -32,7 +50,7 @@ Pour permettre aux utilisateurs de travailler avec une expérience avec succès,
 </table>
 
 > [!NOTE]
-> Obtenir des instructions spécifiques pour HoloLens 2 [bientôt](index.md#news-and-notes).
+> Obtenir des instructions spécifiques pour HoloLens 2 [bientôt](index.md).
 
 ## <a name="target-sizing-and-feedback"></a>Commentaires et dimensionnement de la cible
 
