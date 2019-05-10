@@ -1,21 +1,21 @@
 ---
-title: Conception de la voix
+title: Regards et vocal
 description: Regards, les gestes et voix (GGV) constituent le principal moyen d’interaction sur HoloLens. Cet article fournit une assistance détaillée sur la conception de la voix.
-author: rwinj
-ms.author: randyw
-ms.date: 03/21/2018
+author: grbury
+ms.author: grbury
+ms.date: 04/21/2019
 ms.topic: article
 keywords: Windows Mixed Reality, conception, interaction, voix
-ms.openlocfilehash: 2df0e15c66891b08577fcf203d11f7c7008247f1
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 35e4c72026acaa36e5fd686cf892dd602f6626d6
+ms.sourcegitcommit: a4a53e6772805d89a47588857e3e8fb1fd8d9710
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59596713"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469073"
 ---
-# <a name="voice-design"></a>Conception de la voix
+# <a name="gaze-and-voice"></a>Regards et vocal
 
-Regards, les gestes et voix (GGV) constituent le principal moyen d’interaction sur HoloLens. [Utilisation](gaze.md) utilisé avec un [curseur](cursors.md) est le mécanisme pour un utilisateur cibler le contenu, ils sont prêts à interagir avec. [Mouvement](gestures.md) ou [voix](voice-input.md) sont les mécanismes d’intention. Regards peut être utilisé avec mouvement ou vocale pour terminer une interaction.
+Regards, les gestes et voix (GGV) constituent le principal moyen d’interaction sur HoloLens (1er gen). [Utilisation](gaze.md) utilisé avec un [curseur](cursors.md) est le mécanisme pour un utilisateur cibler le contenu, ils sont prêts à interagir avec. [Mouvement](gestures.md) ou [voix](voice-input.md) sont les mécanismes d’intention. Regards peut être utilisé avec mouvement ou vocale pour terminer une interaction.
 
 Sur des casques IMMERSIFS, le principal moyen d’interaction est regards et validation et point et validation (avec un [contrôleur de mouvement](motion-controllers.md)). Si l’utilisateur a un casque avec fonctionnalités vocales, voix utilisable en combinaison avec les regards ou point pour effectuer une action.
 
@@ -27,7 +27,7 @@ Lors de la conception d’applications, vous devez envisager comment faire ces i
 <tr>
 <th>Fonctionnalité</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (1er gen)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Casques IMMERSIFS</a></th>
 </tr><tr>
-<td> Voix</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️ (avec casque attaché)</td>
+<td>Regards et vocal</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️ (avec casque attaché)</td>
 </tr>
 </table>
 
@@ -102,4 +102,4 @@ Lors de la voix est appliquée correctement, l’utilisateur comprenne bien **qu
 
 ## <a name="see-also"></a>Voir aussi
 * [Mouvements](gestures.md)
-* [Ciblage des regards](gaze-targeting.md)
+* [Pointage du regard](gaze-targeting.md)

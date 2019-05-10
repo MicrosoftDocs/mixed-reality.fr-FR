@@ -6,12 +6,12 @@ ms.author: liamar
 ms.date: 03/31/2019
 ms.topic: article
 keywords: Mixte réalité, regards, durée d’affichage, interaction, concevoir
-ms.openlocfilehash: a50ae948a351f5152ebb98778da9be8c08090d72
-ms.sourcegitcommit: 222cba2d622b47f75949bf8af80d5c62de4dceab
+ms.openlocfilehash: d99180b6eb278eb6d7bf322c01a1c7cceb7fad1f
+ms.sourcegitcommit: a4a53e6772805d89a47588857e3e8fb1fd8d9710
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2019
-ms.locfileid: "64914613"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469065"
 ---
 # <a name="gaze-and-dwell"></a>Regards et durée d’affichage
 
@@ -128,7 +128,7 @@ Fournissent un mécanisme pour les interactions de mains-libres, sans utiliser l
  
  ## <a name="see-also"></a>Voir aussi
 * [Manipulation directe](direct-manipulation.md)
-* [Point et validation](point-and-commit.md)
+* [Pointer et valider](point-and-commit.md)
 * [Fonctionnalités de base des interactions](interaction-fundamentals.md)
-* [Regards de tête et de validation](gaze-and-commit.md)
-* [Regards et vocal](voice-design.md)
+* [Pointer du regard vers l’avant et valider](gaze-and-commit.md)
+* [Pointer du regard et parler](voice-design.md)

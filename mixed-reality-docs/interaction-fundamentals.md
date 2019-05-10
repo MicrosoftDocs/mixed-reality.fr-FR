@@ -6,12 +6,12 @@ ms.author: shengkait
 ms.date: 04/11/2019
 ms.topic: article
 keywords: Mixte réalité, regards, regards ciblant, interaction, concevoir
-ms.openlocfilehash: f52a0cd8ec53bfe0f4c5da2c054c538eda1c93ca
-ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
+ms.openlocfilehash: c762518a224138dab248670eaef23ccb92016fce
+ms.sourcegitcommit: a4a53e6772805d89a47588857e3e8fb1fd8d9710
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/02/2019
-ms.locfileid: "64993601"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469107"
 ---
 # <a name="introducing-instinctual-interactions"></a>Présentation des interactions instinctual
 La philosophie d’interactions simples, instinctual nouée tout au long de la plateforme de réalité mixte de Microsoft.  Nous avons pris trois étapes pour vérifier que les développeurs et concepteurs d’applications peuvent fournir des interactions faciles et intuitives pour leurs clients. 
@@ -55,13 +55,13 @@ Le tableau ci-dessous est une vue d’ensemble simplifiée.  Des informations d�
         <td>HoloLens 2<br>Windows immersives avec 6DOF contrôleurs</td>
     </tr>
     <tr>
-        <td><a href="hands-free.md">Mains libres</a></td>
+        <td><a href="hands-free.md">Mains-libres</a></td>
         <td>Expériences contextuelles, où les mains d’un utilisateur sont occupés par exemple, sur le travail d’apprentissage, de maintenance</td>
         <td>Certaines de formation requise<br>Si les mains ne sont pas disponibles<br>paires bien avec la voix et de langage naturel</td>
         <td>HoloLens 2<br>HoloLens (1er gen)<br> Immersive de Windows</td>
     </tr>
     <tr>
-        <td><a href="gaze-and-commit.md">Regards de tête et de validation</a></td>
+        <td><a href="gaze-and-commit.md">Pointer du regard vers l’avant et valider</a></td>
         <td>Par exemple, 3D des présentations, démos des expériences clic</td>
         <td>Nécessite une formation sur HMDs, mais pas sur mobile<br>Idéal pour les contrôleurs accessibles<br>Idéal pour HoloLens (1er gen)</td>
         <td>HoloLens 2<br>HoloLens (1er gen)<br> Immersive de Windows<br> Mobile AR</td>
@@ -107,7 +107,7 @@ Voici quelques exemples de la façon dont les intuitivité et comportements sont
     <tr>
         <td><strong>Modèle</strong></td>
         <td><strong>Comment savoir qu’il fonctionne ?</strong></td>
-        <td><strong>Comment savoir ce que puis-je faire ?</strong></td>
+        <td><strong>Comment savoir que puis-je faire ?</strong></td>
         <td><strong>Comment savoir ce que je viens de faire ?</strong></td>
     </tr>
     <tr>
@@ -117,7 +117,7 @@ Voici quelques exemples de la façon dont les intuitivité et comportements sont
         <td>J’ai entendre des tonalités sonores et voir les animations sur la manipulation et la mise en production.</td>
     </tr>
     <tr>
-        <td><a href="gaze-and-commit.md">Regards de tête et de validation</a></td>
+        <td><a href="gaze-and-commit.md">Pointer du regard vers l’avant et valider</a></td>
         <td>Je vois un curseur dans le centre de mon champ de vision.</td>
         <td>Le curseur du pointage de regard modifie l’état lorsque sur certains objets.</td>
         <td>J’ai consultez / entendre les confirmations et sonores quand prendre des mesures.</td>
@@ -175,9 +175,9 @@ Si votre expérience requiert plusieurs modèles d’interaction, nous avons con
  
 
 ## <a name="see-also"></a>Voir aussi
-* [Regards de tête et de validation](gaze-and-commit.md)
+* [Pointer du regard vers l’avant et valider](gaze-and-commit.md)
 * [Manipulation directe](direct-manipulation.md)
-* [Point et validation](point-and-commit.md)
+* [Pointer et valider](point-and-commit.md)
 * [Pointage du regard](gaze-targeting.md)
 * [Mouvements](gestures.md)
 * [Conception de la voix](voice-design.md)
