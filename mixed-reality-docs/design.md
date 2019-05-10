@@ -7,12 +7,12 @@ ms.author: randyw
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, conception, Interaction, Style, couleur, les modèles d’application, contrôles, exemples d’applications, Kit de ressources de réalité mixte, MRTK
-ms.openlocfilehash: 470dff4319abded630e084f46193dcc79531aa54
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 8d5618b6f01f379b70f95e6493bdc670a1338e4c
+ms.sourcegitcommit: a4a53e6772805d89a47588857e3e8fb1fd8d9710
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59596388"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469092"
 ---
 # <a name="design-for-mixed-reality"></a>Conception pour la réalité mixte
 
@@ -64,21 +64,21 @@ Ce guide a été coécrit par les concepteurs, les développeurs, les responsabl
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Conception de l’interaction</h3>
-                        <p>
-                            <a href="interaction-fundamentals.md">Notions fondamentales d’interaction</a>
-                        </p>
+                        <h3>Conception des interactions</h3>
                         <p>
                             <a href="comfort.md">Confort</a>
                         </p>
-                        <p>
-                            <a href="gaze-targeting.md">Ciblage des regards</a>
+            <p>
+                            <a href="interaction-fundamentals.md">Interactions instinctual</a>
                         </p>
                         <p>
-                            <a href="gestures.md">Mouvements</a>
+                            <a href="hands-and-tools.md">Mains et contrôleurs</a>
+                        </p>
+                        <p>
+                            <a href="hands-free.md">Mains libres</a>
                         </p>
                          <p>
-                            <a href="voice-design.md">Conception de la voix</a>
+                            <a href="gaze-and-commit.md">Regards de tête et de validation</a>
                         </p>
                     </div>
                 </div>
