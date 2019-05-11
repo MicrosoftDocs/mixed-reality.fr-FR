@@ -7,12 +7,12 @@ ms.author: randyw
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, conception, Interaction, Style, couleur, les modèles d’application, contrôles, exemples d’applications, Kit de ressources de réalité mixte, MRTK
-ms.openlocfilehash: 8d5618b6f01f379b70f95e6493bdc670a1338e4c
-ms.sourcegitcommit: a4a53e6772805d89a47588857e3e8fb1fd8d9710
+ms.openlocfilehash: aa7b1ba42823324bf247580781b46a4f4c885d99
+ms.sourcegitcommit: d6d96d552ec10cd7e6502fbbc1905432e2878325
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469092"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524352"
 ---
 # <a name="design-for-mixed-reality"></a>Conception pour la réalité mixte
 
@@ -60,11 +60,11 @@ Ce guide a été coécrit par les concepteurs, les développeurs, les responsabl
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="images/Interaction_Icon_120x130.png" alt="Interaction design icon">
+                            <img src="images/Interaction_Icon_120x130.png" alt="MR design system and tools icon">
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Conception des interactions</h3>
+                        <h3>Outils et système de conception de réalité mixte</h3>
                         <p>
                             <a href="comfort.md">Confort</a>
                         </p>
