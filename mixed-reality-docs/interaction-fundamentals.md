@@ -6,19 +6,19 @@ ms.author: shengkait
 ms.date: 04/11/2019
 ms.topic: article
 keywords: Mixte réalité, regards, regards ciblant, interaction, concevoir
-ms.openlocfilehash: c762518a224138dab248670eaef23ccb92016fce
-ms.sourcegitcommit: a4a53e6772805d89a47588857e3e8fb1fd8d9710
+ms.openlocfilehash: 8c578d9a67f6809df69fb132f4c46a381726596e
+ms.sourcegitcommit: d6d96d552ec10cd7e6502fbbc1905432e2878325
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469107"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524336"
 ---
 # <a name="introducing-instinctual-interactions"></a>Présentation des interactions instinctual
 La philosophie d’interactions simples, instinctual nouée tout au long de la plateforme de réalité mixte de Microsoft.  Nous avons pris trois étapes pour vérifier que les développeurs et concepteurs d’applications peuvent fournir des interactions faciles et intuitives pour leurs clients. 
 
 Tout d’abord, nous avons veillé à ce notre étonnant de capteurs et de la technologie d’entrée, notamment main suivi, suivi de le œil et langage naturel, combinent des modèles d’interaction multimodale transparente.  Selon nos recherches, conception et développement multi-modalement--et ne dépendent ne pas des entrées uniques--est essentiel à la création d’expériences instinctual.
 
-Deuxièmement, nous reconnaissons que de nombreux développeurs ciblent plusieurs appareils, que ce soit pour HoloLens 2 et HoloLens (1er gen) ou HoloLens et VR.  Par conséquent, nous avons conçu nos modèles d’interaction pour travailler sur des appareils (même si la technologie d’entrée varie sur chaque appareil).  Par exemple, interaction lointain sur casque Immersive de Windows avec un contrôleur 6DOF et lointain interaction sur les deux 2 HoloLens utiliser l’intuitivité identiques et les modèles, ce qui facilite pour les applications entre les périphériques. Est non seulement ce pratique pour les développeurs et concepteurs, mais il a l’air normal pour les utilisateurs finaux. 
+Deuxièmement, nous reconnaissons que de nombreux développeurs ciblent plusieurs appareils, que ce soit pour HoloLens 2 et HoloLens (1er gen) ou HoloLens et VR.  Par conséquent, nous avons conçu nos modèles d’interaction pour travailler sur des appareils (même si la technologie d’entrée varie sur chaque appareil).  Par exemple, interaction lointain sur casque Immersive de Windows avec un contrôleur 6DoF et lointain interaction sur les deux 2 HoloLens utiliser l’intuitivité identiques et les modèles, ce qui facilite pour les applications entre les périphériques. Est non seulement ce pratique pour les développeurs et concepteurs, mais il a l’air normal pour les utilisateurs finaux. 
 
 Enfin, alors que nous reconnaissons qu’il existe des milliers d’effective, attrayantes et interactions magiques possibles dans MR, nous avons trouvé cette intentionnellement utilisant un modèle d’interaction unique bout en bout dans une application est la meilleure façon de garantir aux utilisateurs réussissent et offrir une bonne expérience.  À cette fin, nous avons inclus les trois choses dans ce guide de l’interaction :
 * Nous avons structuré ce guide autour de trois modèles d’interaction principal et les composants et les modèles requis pour chaque
@@ -51,8 +51,8 @@ Le tableau ci-dessous est une vue d’ensemble simplifiée.  Des informations d�
     <tr>
         <td><a href="hands-and-tools.md">Mains et outils</a></td>
         <td>Expériences spatiales 3D<br>par exemple, spatiale disposition et conception, manipulation de contenu ou simulation</td>
-        <td>Idéal pour les nouveaux utilisateurs<br>Courbe d’apprentissage basse<br>Ancrée dans intuitivité visual facile<br>Expérience utilisateur cohérente entre main suivi et les contrôleurs de DDL 6<br>Très bien associée à la voix, suivi de le œil ou head les regards</td>
-        <td>HoloLens 2<br>Windows immersives avec 6DOF contrôleurs</td>
+        <td>Idéal pour les nouveaux utilisateurs<br>Courbe d’apprentissage basse<br>Ancrée dans intuitivité visual facile<br>Expérience utilisateur cohérente entre main suivi et 6DoF contrôleurs<br>Très bien associée à la voix, suivi de le œil ou head les regards</td>
+        <td>HoloLens 2<br>Windows immersives avec 6DoF contrôleurs</td>
     </tr>
     <tr>
         <td><a href="hands-free.md">Mains-libres</a></td>
