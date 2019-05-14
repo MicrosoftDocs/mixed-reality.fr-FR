@@ -6,12 +6,12 @@ ms.author: liamar
 ms.date: 04/20/2019
 ms.topic: article
 keywords: Une réalité mixte, mains libres, utilisation, utilisation de ciblage, interaction, conception
-ms.openlocfilehash: b64dec802d8ed2886021a54f302ba4a948c4f5b9
-ms.sourcegitcommit: f5c1dedb3b9e29f27f627025b9e7613931a7ce18
+ms.openlocfilehash: f39a9524831161997b59be6cf89b124fa5b29c78
+ms.sourcegitcommit: d6d96d552ec10cd7e6502fbbc1905432e2878325
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2019
-ms.locfileid: "64581029"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524327"
 ---
 # <a name="optimizing-your-app-for-hands-free"></a>Optimisation de votre application pour mains libres
 
@@ -42,7 +42,7 @@ Certains scénarios spécifiques peuvent être :
 
 Dans certaines situations mains-libres, en utilisant votre voix n’est pas idéale ou même possible. Environnements d’usine forte, confidentialité ou normes sociaux peuvent tous être des contraintes. Utilisation de la tête + m’attarderai pas modèle permet à l’utilisateur à naviguer de l’application à l’aide de leur vecteur principal pour qu’il pointe, tout en attente, ou logement sur un bouton s’activer après un certain laps de temps (généralement environ 1 seconde ou ainsi). 
 
-* [Regards et durée d’affichage](gaze-and-dwell.md)
+* [Pointer du regard et fixer](gaze-and-dwell.md)
 
 ## <a name="transitioning-in-and-out-of-hands-free"></a>Transition vers et depuis mains libres
 
@@ -97,6 +97,6 @@ L’utilisateur comprend...
 
 
 ## <a name="see-also"></a>Voir aussi
-* [Regards et validation](gaze-and-commit.md)
+* [Pointer du regard vers l’avant et valider](gaze-and-commit.md)
 * [Manipulation directe](direct-manipulation.md)
-* [Point et validation](point-and-commit.md)
+* [Pointer et valider](point-and-commit.md)

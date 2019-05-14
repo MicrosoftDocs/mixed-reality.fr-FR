@@ -8,7 +8,7 @@ ms.topic: article
 keywords: Release notes, version, windows 10, build, rs3, système d’exploitation
 ms.openlocfilehash: 7274dcf1db449fa35981eb72192fea9873fcc90a
 ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59593358"

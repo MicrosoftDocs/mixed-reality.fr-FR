@@ -8,7 +8,7 @@ ms.topic: article
 keywords: Explorateur de Galaxy, HoloLens, réalité mixte Windows, partager vos idées, étude de cas
 ms.openlocfilehash: a478eaa35144a8ee0fbeaeb43cec4b9f901890ab
 ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59597017"
@@ -147,7 +147,7 @@ Effectuant des clouds de plein écran et essayez de les flou aurait été une ma
 
 ### <a name="a-bit-of-context-first"></a>Un bit du contexte tout d’abord
 
-Lors de l’utilisation des textures dans un jeu de la taille de texture rarement correspond à la zone que nous souhaitons utiliser dans, mais nous pouvons utiliser différents types de filtrage pour obtenir la carte graphique pour interpoler la couleur que nous voulons des pixels de la texture de texture ([defiltragedeTexture<C3/>). Le filtrage qui nous intéresse est [Filtrage bilinéaire](https://msdn.microsoft.com/library/windows/desktop/bb172357.aspx) qui calcule la valeur d’un pixel à l’aide de la 4 voisins les plus proches.
+Lors de l’utilisation des textures dans un jeu de la taille de texture rarement correspond à la zone que nous souhaitons utiliser dans, mais nous pouvons utiliser différents types de filtrage pour obtenir la carte graphique pour interpoler la couleur que nous voulons des pixels de la texture de texture ([defiltragedeTexture<C3/>](https://msdn.microsoft.com/library/dn642451.aspx)). Le filtrage qui nous intéresse est [Filtrage bilinéaire](https://msdn.microsoft.com/library/windows/desktop/bb172357.aspx) qui calcule la valeur d’un pixel à l’aide de la 4 voisins les plus proches.
 
 ![Original avant le filtrage](images/texture-1.png)
 

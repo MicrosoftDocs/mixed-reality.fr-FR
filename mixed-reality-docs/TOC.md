@@ -48,11 +48,13 @@
 ### [Processus AfterNow - Planification, prototypage, création](case-study-afternows-process-envisioning,-prototyping,-building.md)
 ### [HoloSketch : application pour la conception d’une disposition spatiale et d’une expérience utilisateur HoloLens](case-study-building-holosketch,-a-spatial-layout-and-ux-sketching-app-for-hololens.md)
 ### [Capture et création de contenu pour HoloTour](case-study-capturing-and-creating-content-for-holotour.md)
-### [Création d’une galaxie en réalité mixte](case-study-creating-a-galaxy-in-mixed-reality.md)
 ### [Création d’une expérience immersive dans Fragments](case-study-creating-an-immersive-experience-in-fragments.md)
 ### [Création de perspectives impossibles pour HoloTour](case-study-creating-impossible-perspectives-for-holotour.md)
 ### [Développement du processus de conception pour la réalité mixte](case-study-expanding-the-design-process-for-mixed-reality.md)
 ### [Développement des fonctionnalités de mappage spatial d’HoloLens](case-study-expanding-the-spatial-mapping-capabilities-of-hololens.md)
+### Galaxy Explorer
+#### [Création d’une galaxie en réalité mixte pour Hololens (1ère génération)](case-study-creating-a-galaxy-in-mixed-reality.md)
+#### [Mise à jour de Galaxy Explorer pour HoloLens 2](galaxy-explorer-update.md)
 ### [Conception de l’interface utilisateur et des interactions HoloStudio](case-study-3-holostudio-ui-and-interaction-design-learnings.md)
 ### [Leçons de l’entreprise Lowe’s](case-study-lessons-from-the-lowes-kitchen.md)
 ### [Voir à travers vos objets](case-study-looking-through-holes-in-your-reality.md)
@@ -190,7 +192,8 @@
 ### Unity
 #### Modules d’apprentissage sur la réalité mixte
 ##### HoloLens 2
-###### [Module de base - Vue d’ensemble et objectifs](mrlearning-base.md)
+###### Module de base
+####### [Module de base - Vue d’ensemble et objectifs](mrlearning-base.md)
 ####### [Initialisation du projet et première application](mrlearning-base-ch1.md)
 ####### [Interface utilisateur, suivi manuel et configuration du Kit de ressources de réalité mixte](mrlearning-base-ch2.md)
 ####### [Placement de contenu dynamique et solveurs](mrlearning-base-ch3.md)
