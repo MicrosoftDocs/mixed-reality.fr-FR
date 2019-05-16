@@ -1,25 +1,23 @@
 ---
-title: Regards et vocal
+title: Exécution des commandes vocales
 description: Regards, les gestes et voix (GGV) constituent le principal moyen d’interaction sur HoloLens. Cet article fournit une assistance détaillée sur la conception de la voix.
-author: grbury
-ms.author: grbury
+author: shentan
+ms.author: shentan
 ms.date: 04/21/2019
 ms.topic: article
+ms.localizationpriority: high
 keywords: Windows Mixed Reality, conception, interaction, voix
-ms.openlocfilehash: 35e4c72026acaa36e5fd686cf892dd602f6626d6
-ms.sourcegitcommit: a4a53e6772805d89a47588857e3e8fb1fd8d9710
+ms.openlocfilehash: 49fa199b2656db95b15583ccfbee39f33942f180
+ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469073"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65730799"
 ---
-# <a name="gaze-and-voice"></a>Regards et vocal
+# <a name="voice-commanding"></a>Exécution des commandes vocales
 
-Regards, les gestes et voix (GGV) constituent le principal moyen d’interaction sur HoloLens (1er gen). [Utilisation](gaze.md) utilisé avec un [curseur](cursors.md) est le mécanisme pour un utilisateur cibler le contenu, ils sont prêts à interagir avec. [Mouvement](gestures.md) ou [voix](voice-input.md) sont les mécanismes d’intention. Regards peut être utilisé avec mouvement ou vocale pour terminer une interaction.
+Lorsque vous utilisez les commandes vocales, regards est généralement utilisé comme le ciblage mechaninism, soit comme un pointeur (« select ») ou d’indiquer à votre commande à une application (« voir, dites-le »). Bien entendu, certaines commandes vocales ne nécessitent pas une cible, comme « accédez à démarrer » ou « Hé, Cortana. »
 
-Sur des casques IMMERSIFS, le principal moyen d’interaction est regards et validation et point et validation (avec un [contrôleur de mouvement](motion-controllers.md)). Si l’utilisateur a un casque avec fonctionnalités vocales, voix utilisable en combinaison avec les regards ou point pour effectuer une action.
-
-Lors de la conception d’applications, vous devez envisager comment faire ces interactions fonctionnent bien ensemble.
 
 ## <a name="device-support"></a>Prise en charge des appareils
 
@@ -27,7 +25,7 @@ Lors de la conception d’applications, vous devez envisager comment faire ces i
 <tr>
 <th>Fonctionnalité</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (1er gen)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Casques IMMERSIFS</a></th>
 </tr><tr>
-<td>Regards et vocal</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️ (avec casque attaché)</td>
+<td></td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️ (avec casque attaché)</td>
 </tr>
 </table>
 
@@ -51,13 +49,16 @@ Voici quelques pratiques qui vous aideront à la reconnaissance vocale sans heur
    * « Hey Cortana »
    * « Sélectionner »
 
-### <a name="what-users-can-say"></a>Ce que les utilisateurs peuvent par exemple
+### <a name="select"></a>« Sélectionner »
 
-Comme un utilisateur cible n’importe quel bouton par le biais du pointage de regard ou pointant, ils peuvent par exemple le mot **« Select »** pour activer ce bouton. « Select » est un des mots clés à faible consommation d’énergie qui est toujours pris en compte pour. Pour aller plus loin, un utilisateur peut également utiliser « grammaire du bouton » sur le système ou des applications. Par exemple, lorsque vous examinez une application, un utilisateur peut dire la commande « Remove » (qui est dans la barre des applications) pour supprimer l’application du monde.
+Indiquant que « select » à tout moment activera tout ce qui est positionné le curseur du pointage de regard. 
+
+>Remarque: HoloLens 2, le regards curseur doit être appelée en premier en indiquant que le mot « select ». Par exemple, « select » à nouveau à activer. Pour masquer le curseur du pointage de regard, simplement vos mains--airtap ou touch d’un objet. 
 
 ### <a name="see-it-say-it"></a>Voir, par exemple, il
 
 Réalité mixte Windows a utilisé un modèle de voix « voir, dites » où **étiquettes sur les boutons sont identiques aux commandes vocales associé**. Car il n’est pas tout dissonance entre l’étiquette et les commandes vocales, les utilisateurs puissent mieux comprendre ce qu’il faut dire à contrôler le système. Pour cela, renforcer lors de logement sur un bouton, un **« Conseil m’attarderai pas voix »** s’affiche pour communiquer les boutons sont voix activée.
+
 
 ![Découvrez-le dites-le exemple 1](images/voice-seeitsayit1-640px.jpg)
 

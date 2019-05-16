@@ -1,17 +1,18 @@
 ---
-title: Regards et validation
-description: Vue d’ensemble du modèle d’entrée du pointage de regard et validation
+title: Regards de tête et de validation
+description: Vue d’ensemble du modèle d’entrée du pointage de regard head et validation
 author: caseymeekhof
 ms.author: cmeekhof
 ms.date: 03/31/2019
 ms.topic: article
+ms.localizationpriority: high
 keywords: Mixte réalité, regards, regards ciblant, interaction, concevoir
-ms.openlocfilehash: 7bce18853e46d71d963574b35c393e5a5dbf2cd0
-ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
+ms.openlocfilehash: 95f2cef8c10ce3d0d2a218953613fef6f0a00362
+ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64873972"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65730822"
 ---
 # <a name="head-gaze-and-commit"></a>Regards de tête et de validation
 Regards de tête et de validation est un modèle d’entrée qui implique de cibler un objet avec la direction de votre tête pointant vers l’avant (direction de tête) et en agissant ensuite dessus avec une base de données secondaire d’entrée tels que le mouvement de la main Air appuyez sur ou la voix de commande « Select ». Il est considéré comme un modèle « beaucoup » d’entrée avec manipulation indirecte, ce qui signifie qu’il est particulièrement adapté pour l’interaction avec du contenu qui est au-delà des armes atteindre.
@@ -53,14 +54,14 @@ Après le ciblage d’un objet ou un élément d’interface utilisateur, l’ut
 - Appuyez sur le bouton « A » sur un Xbox Gamepad
 - Appuyez sur le bouton « A » sur un contrôleur Adaptive Xbox
 
-### <a name="gaze-and-air-tap-gesture"></a>Mouvement d’appui regards et air
+### <a name="head-gaze-and-air-tap-gesture"></a>Mouvement d’appui regards de tête et air
 Appui en l’air est un mouvement en appuyant sur avec la main droite. Pour effectuer un appui, déclencher votre doigt de l’index à la position de prête, puis pincement avec votre curseur et déclencher votre doigt index sauvegarder à libérer. Sur 1 HoloLens, appui en l’Air est l’entrée secondaire courante.
 
 ![Doigt dans la position de prête, puis un mouvement cliquez ou appuyez sur](images/readyandpress.jpg)<br>
 
 Appui en l’air est également disponible sur HoloLens 2, et il a été levée à partir de la version d’origine. Presque tous les types de pinches sont désormais pris en charge, tant que la main est vertical et exploitation toujours. Cela rend beaucoup plus facile pour les utilisateurs à apprendre et effectuez le geste.  Ce nouvel appui remplace l’ancien via l’API de même, pour les applications existantes obtiennent le nouveau comportement automatiquement après recompilation pour HoloLens 2.
 
-### <a name="gaze-and-select-voice-command"></a>Utilisation et voice command « sélectionner »
+### <a name="head-gaze-and-select-voice-command"></a>Commande de vocale regards de tête et « Select »
 Exécution des commandes vocales sont une des méthodes d’interaction principal sur la réalité mixte. Il fournit un mécanisme de « Mains libre » très puissant pour contrôler le système. Il existe autre types de modèles d’interaction vocale :
 
 - La commande générique « Select » qui permet d’effectuer une activation de « clic » ou la validation comme une entrée secondaire.
@@ -72,7 +73,7 @@ Exécution des commandes vocales sont une des méthodes d’interaction principa
 Pour trouver plus d’informations et une liste de comprenhesive des commandes disponibles et l’utilisation, consultez notre [vocal conception](voice-design.md) des conseils.
 
 
-### <a name="gaze-and-hololens-clicker"></a>Regards et HoloLens Clicker
+### <a name="head-gaze-and-hololens-clicker"></a>Regards de tête et HoloLens Clicker
 Le HoloLens Clicker est le premier périphérique spécialement conçu pour HoloLens et est inclus avec l’édition de développement HoloLens 1. Le HoloLens Clicker permet à un utilisateur de cliquer avec le mouvement de la main minimal et valider en tant qu’une entrée secondaire. Le clicker HoloLens se connecte à la HoloLens 1 ou 2 à l’aide de Bluetooth faible énergie (BTLE).
 
 ![](images/hololens-clicker-500px.jpg)<br>
@@ -83,7 +84,7 @@ Plus d’informations et obtenir des instructions pour coupler l’appareil, vou
 
 
 
-### <a name="gaze-and-xbox-wireless-controller"></a>Regards et contrôleur sans fil Xbox
+### <a name="head-gaze-and-xbox-wireless-controller"></a>Regards de tête et de contrôleur sans fil Xbox
 Le contrôleur sans fil Xbox permet pour exécuter une commande « clic » comme une base de données secondaire d’entrée à l’aide du bouton A. L’appareil est mappé à un ensemble par défaut des actions qui aident à naviguer et contrôler le système. Si vous souhaitez personnaliser le contrôleur, utilisez le Xbox Accesories application pour configurer votre contrôleur de sans fil Xbox.
 
 ![](images/xboxcontroller.jpg)<br>
@@ -92,7 +93,7 @@ Contrôleur sans fil Xbox
 [Association d’une manette Xbox avec votre PC](hardware-accessories.md#pairing-bluetooth-accessories)
 
 
-### <a name="gaze-and-xbox-adaptive-controller"></a>Contrôleur Adaptive regards et Xbox
+### <a name="head-gaze-and-xbox-adaptive-controller"></a>Contrôleur Adaptive regards de tête et Xbox
 Conçu principalement pour répondre aux besoins de joueurs à mobilité réduite, le contrôleur Adaptive Xbox est un hub unifié pour les appareils qui permet de rendre la réalité mixte plus accessible.
 
 Le contrôleur Adaptive Xbox permet d’exécuter une commande « clic » comme une base de données secondaire d’entrée à l’aide du bouton A. L’appareil est mappé à un ensemble par défaut des actions qui aident à naviguer et contrôler le système. Si vous souhaitez personnaliser le contrôleur, utilisez le Xbox Accesories application pour configurer votre contrôleur Adaptive Xbox.
@@ -110,16 +111,11 @@ Ports de contrôleur Adaptive Xbox
 <a href=https://www.xbox.com/en-US/xbox-one/accessories/controllers/xbox-adaptive-controller>Plus d’informations sur le site Xbox</a>
 
 
-# <a name="device-support"></a>Prise en charge des appareils
-Utilisation de tête et validation est disponible sur tous les casques de réalité mixte. Est le modèle d’entrée principal sur HoloLens v1. En règle générale, autres casques incluent un mécanisme de pointage sur à la main, tels que les contrôleurs de mouvement ou articulée main suivi. Sur ces appareils, applications privilégier [point-validation](point-and-commit.md) pour les interactions lointain lorsque cela est possible.
-
-Les regards yeux et de la validation est disponible sur HoloLens 2, mais n’est pas le modèle d’entrée principal. Accède à la section « Instructions de conception du pointage de regard yeux » pour une discussion sur lorsque cela peut être utile pour votre application.
-
-# <a name="head-gaze-design-guidelines"></a>Head utilisation des règles de conception
+# <a name="head-gaze-design-guidelines"></a>Instructions de conception des regards de tête
 > [!NOTE]
 > Obtenir des instructions spécifiques à l’utilisation de conception [bientôt](index.md).
 
-## <a name="gaze-targeting"></a>Ciblage des regards
+## <a name="head-gaze-targeting"></a>Ciblage de tête-regards
 Toutes les interactions reposent sur la capacité d’un utilisateur à cibler l’élément qu'ils souhaitent interagir, quelle que soit la modalité d’entrée. En réalité mixte Windows, cela s’effectue en général à l’aide regard de l’utilisateur.
 Pour permettre aux utilisateurs de travailler avec une expérience avec succès, présentation de calculée du système de l’intention de l’utilisateur et l’intention de réelle de l’utilisateur, doit être alignées aussi près que possible. Dans la mesure que le système interprète les actions prévues de l’utilisateur correctement, la satisfaction des augmentations et les performances améliore.
 
@@ -142,7 +138,7 @@ Utilisateurs échouent souvent rechercher des éléments d’interface utilisate
 ## <a name="improving-targeting-behaviors"></a>Amélioration des comportements de ciblage
 Si l’intention de l’utilisateur pour cibler un élément peut être déterminée (ou approximative étroitement), il peut être très utile accepter les tentatives de « near miss » à l’interaction comme s’ils ont été correctement ciblés. Il existe un certain nombre de méthodes réussites qui peuvent être incorporées dans les expériences de réalité mixte :
 
-### <a name="gaze-stabilization-gravity-wells"></a>Utilisation de stabilisation (« wells gravité »)
+### <a name="head-gaze-stabilization-gravity-wells"></a>Stabilisation du pointage de regard HEAD (« wells gravité »)
 Cela doit être allumé/all de la plupart du temps. Cette technique supprime le gigues du tête/cou naturel que les utilisateurs devront peut-être. Également le déplacement en raison de comportements de recherche/parler.
 
 ### <a name="closest-link-algorithms"></a>Algorithmes de lien le plus proche
@@ -209,10 +205,10 @@ Voici trois choses que vous devez prendre en compte :
 
 ## <a name="see-also"></a>Voir aussi
 * [Manipulation directe](direct-manipulation.md)
-* [Point et validation](point-and-commit.md)
+* [Pointer et valider](point-and-commit.md)
 * [Fonctionnalités de base des interactions](interaction-fundamentals.md)
-* [Regards et durée d’affichage](gaze-targeting.md)
-* [Regards et vocal](voice-design.md)
+* [Pointer du regard et fixer](gaze-targeting.md)
+* [Pointer du regard et parler](voice-design.md)
 
 
 
