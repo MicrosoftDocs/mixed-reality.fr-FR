@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Mixte réalité, le localisateur spatiale, cadre de référence spatiale, système de coordonnées spatial, étape spatiale, exemple de code, stabilisation de l’image, spatiale d’ancrage, Boutique spatiale, perte de suivi, procédure pas à pas
-ms.openlocfilehash: c8cdb39cbf4634edb4ed0a595381fc70f1388ce4
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.openlocfilehash: 5a48e0a829ba8647718e28ec20760d8a764b13fe
+ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59597145"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65628974"
 ---
 # <a name="coordinate-systems-in-directx"></a>Systèmes de coordonnées dans DirectX
 
@@ -622,7 +622,7 @@ Nous voulons que notre hologramme d’exemple à suivre l’utilisateur [les reg
 SpatialPointerPose^ pose = SpatialPointerPose::TryGetAtTimestamp(currentCoordinateSystem, prediction->Timestamp);
 ```
 
-Cette SpatialPointerPose a les informations nécessaires pour positionner l’hologramme conformément à la [titre actuel de l’utilisateur](gaze,-gestures,-and-motion-controllers-in-directx.md).
+Cette SpatialPointerPose a les informations nécessaires pour positionner l’hologramme conformément à la [titre actuel de l’utilisateur](gaze-in-directx.md).
 
 Pour des raisons de confort de l’utilisateur, nous utilisons une interpolation linéaire (« lerp ») pour lisser la modification de la position où il se produit sur une période de temps. Il s’agit plus à l’aise pour l’utilisateur que l’hologramme à leur regards de verrouillage. Lerping que position de l’hologramme tag-along permet également de stabiliser le hologramme par atténuation pour le déplacement ; Si nous n’avez pas ce blocage, l’utilisateur verrait l’hologramme instabilité en raison de ce qui sont normalement considéré comme imperceptibles mouvements de tête de l’utilisateur.
 
@@ -797,6 +797,7 @@ Le [mappage spatial](spatial-mapping-in-directx.md) API permettent l’utilisati
 ## <a name="see-also"></a>Voir aussi
 * [Systèmes de coordonnées](coordinate-systems.md)
 * [Ancres spatiales](spatial-anchors.md)
-* <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Ancres Spatial Azure</a>
-* [Regards, les mouvements et les contrôleurs de mouvement dans DirectX](gaze,-gestures,-and-motion-controllers-in-directx.md)
+* <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure Spatial Anchors</a>
+* [HEAD et surveillez les regards dans DirectX](gaze-in-directx.md)
+* [Mains et contrôleurs de mouvement dans DirectX](hands-and-motion-controllers-in-directx.md)
 * [Mappage spatial dans DirectX](spatial-mapping-in-directx.md)

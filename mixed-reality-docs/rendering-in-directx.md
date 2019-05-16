@@ -6,12 +6,12 @@ ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, hologrammes, de rendu, de graphiques 3D, HolographicFrame, restituer la boucle, la boucle de mise à jour, procédure pas à pas, exemple de code
-ms.openlocfilehash: fd35f971af4c3c9dfd7f21ee396c92216b3246e9
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.openlocfilehash: 6edcaf808f2d7d48f480169e5579adb8984678a0
+ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59597149"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65629037"
 ---
 # <a name="rendering-in-directx"></a>Rendu dans DirectX
 
@@ -89,7 +89,7 @@ auto viewTransformContainer = cameraPose.TryGetViewTransform(coordinateSystem);
 
 ### <a name="process-gaze-and-gesture-input"></a>Regards de processus et des mouvements d’entrée
 
-[Utilisation](gaze.md) et [mouvement](gestures.md) d’entrée ne sont pas basés sur le temps et n’ayant donc pas à mettre à jour dans le **StepTimer** (fonction). Toutefois [cette entrée](gaze,-gestures,-and-motion-controllers-in-directx.md) est quelque chose que l’application a besoin d’examiner chaque frame.
+[Utilisation](gaze-in-directx.md) et [main](hands-and-motion-controllers-in-directx.md) d’entrée ne sont pas basés sur le temps et n’ayant donc pas à mettre à jour dans le **StepTimer** (fonction). Toutefois, cette entrée est quelque chose que l’application a besoin d’examiner chaque frame.
 
 ### <a name="process-time-based-updates"></a>Processus temporelle des mises à jour
 

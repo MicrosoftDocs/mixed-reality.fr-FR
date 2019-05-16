@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Réalité mixte, regards, Interaction, concevoir
-ms.openlocfilehash: 9a12a5a3b3a583477fd98caeaa2f6890c67e2655
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 738ba9063a5d00f3bbedce989d93076d56ad1a44
+ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59597073"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65629108"
 ---
 # <a name="gaze"></a>Pointage du regard
 
@@ -61,6 +61,6 @@ La plupart des applications doivent utiliser un [curseur](cursors.md) (ou autre 
 Une fois que l’utilisateur a ciblé un hologramme ou un objet réel à l’aide de leurs regards, leur étape suivante consiste à prendre des mesures sur cet objet. Les méthodes principales pour un utilisateur de prendre des mesures sont effectuent via [mouvements](gestures.md), [contrôleurs de mouvement](motion-controllers.md) et [voix](voice-input.md).
 
 ## <a name="see-also"></a>Voir aussi
-* [Entrée M. 210 : Gaze](holograms-210.md)
-* [Regards, les mouvements et les contrôleurs de mouvement dans DirectX](gaze,-gestures,-and-motion-controllers-in-directx.md)
-* [Les regards dans Unity](gaze-in-unity.md)
+* [Réalité mixte - Entrées - Cours 210 : Pointage du regard](holograms-210.md)
+* [HEAD et surveillez les regards dans DirectX](gaze-in-directx.md)
+* [Pointage du regard dans Unity](gaze-in-unity.md)

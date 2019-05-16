@@ -6,12 +6,12 @@ ms.author: crderr
 ms.date: 03/21/2018
 ms.topic: article
 keywords: critères de qualité des applications, une réalité, mixte mixte des applications en réalité
-ms.openlocfilehash: 8070a434be462a636b314527c59f299ca77fb6d4
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: e9f6cd5a6017e11cd167c8141d29b82f89af08e4
+ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59595482"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65628988"
 ---
 # <a name="app-quality-criteria"></a>Critères de qualité des applications
 
@@ -61,7 +61,7 @@ Fréquence d’images est le premier pilier de confort de la stabilité et l’u
 * [Comprendre les performances pour la réalité mixte](understanding-performance-for-mixed-reality.md)
 * [Fréquence d’images et la stabilité HOLOGRAMME](hologram-stability.md#frame-rate)
 * [Budget de performances Asset](asset-creation-process.md)
-* [Recommandations relatives aux performances pour Unity](performance-recommendations-for-unity.md)
+* [Recommandations de performances pour Unity](performance-recommendations-for-unity.md)
 
 #### <a name="tools-and-tutorials"></a>Outils et didacticiels
 
@@ -119,7 +119,7 @@ Tandis que le port de l’appareil et l’expérience d’affichage :
 * [Fréquence d’images et la stabilité HOLOGRAMME](hologram-stability.md#frame-rate)
 * [Étude de cas, à l’aide du plan de stabilisation](case-study-using-the-stabilization-plane-to-reduce-holographic-turbulence.md)
 * [Comprendre les performances pour la réalité mixte](understanding-performance-for-mixed-reality.md)
-* [Recommandations relatives aux performances pour Unity](performance-recommendations-for-unity.md)
+* [Recommandations de performances pour Unity](performance-recommendations-for-unity.md)
 * [Ancres spatiales](spatial-anchors.md)
 * [Gestion des erreurs de suivi](coordinate-systems.md#handling-tracking-errors)
 * [Système de référence stationnaire](coordinate-systems.md#stationary-frame-of-reference)
@@ -173,7 +173,7 @@ Distorsions de hologrammes avec des objets physiques (si destinés à être mis 
 
 #### <a name="tools-and-tutorials"></a>Outils et didacticiels
 
-* [MR 230 spatiale : Mappage spatial](holograms-230.md)
+* [Réalité mixte - Fonctionnalités spatiales - Cours 230 : Mappage spatial](holograms-230.md)
 * [MR boîte à outils, bibliothèques de mappage Spatial](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/SpatialMapping/README.md)
 * [Kit de Compagnon MR, exemple d’étalonnage de Poster](https://github.com/Microsoft/MixedRealityCompanionKit/tree/master/PosterCalibrationSample)
 * [Kit d’accompagnement MR, Kinect IPD](https://github.com/Microsoft/MixedRealityCompanionKit/tree/master/KinectIPD)
@@ -301,14 +301,14 @@ En réalité mixte de Windows, le moteur audio fournit le composant auditif de l
 #### <a name="documentation"></a>Documentation
 
 * [Son spatial](spatial-sound.md)
-* [Sonorisation spatiale](spatial-sound-design.md)
+* [Conception du son spatial](spatial-sound-design.md)
 * [Son spatial dans Unity](spatial-sound-in-unity.md)
 * [Étude de cas, Spatial audio pour HoloTour](case-study-spatial-sound-design-for-holotour.md)
 * [Étude de cas, à l’aide de son spatial dans RoboRaid](case-study-using-spatial-sound-in-roboraid.md)
 
 #### <a name="tools-and-tutorials"></a>Outils et didacticiels
 
-* [MR 220 spatiale : Son spatial](holograms-220.md)
+* [Réalité mixte - Fonctionnalités spatiales - Cours 220 : Son spatial](holograms-220.md)
 * [MRToolkit, Audio Spatial](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/SpatialSound/README.md)
 
 ## <a name="focus-on-holographic-frame-fov-boundaries"></a>Vous concentrer sur les limites du cadre HOLOGRAPHIQUE (angle d’ouverture)
@@ -348,7 +348,7 @@ Expériences utilisateur bien conçue peuvent créer et gérer un contexte utile
 
 #### <a name="documentation"></a>Documentation
 
-* [Frame HOLOGRAPHIQUE](holographic-frame.md)
+* [Image holographique](holographic-frame.md)
 * [Étude de cas, HoloStudio UI et apprentissages de conception d’interaction](case-study-3-holostudio-ui-and-interaction-design-learnings.md?#problem-2-modal-dialogs-are-sometimes-out-of-the-holographic-frame)
 * [Mise à l’échelle des objets et des environnements](scale.md)
 * [Curseurs, les signaux visuels](cursors.md#visual-cues)
@@ -402,13 +402,13 @@ Hologrammes doivent réagir à la position de l’utilisateur dans à peu près 
 
 * [Conception de l’interaction](hologram.md)
 * [Couleur, clair et matériel](color,-light-and-materials.md)
-* [Le billboarding et tag-along](billboarding-and-tag-along.md)
-* [Notions fondamentales d’interaction](interaction-fundamentals.md)
+* [Billboarding et tag-along](billboarding-and-tag-along.md)
+* [Fonctionnalités de base des interactions](interaction-fundamentals.md)
 * [Automatique de mouvement et locomotion de l’utilisateur](comfort.md#self-motion-and-user-locomotion)
 
 #### <a name="tools-and-tutorials"></a>Outils et didacticiels
 
-* [Entrée M. 210 : Gaze](holograms-210.md)
+* [Réalité mixte - Entrées - Cours 210 : Pointage du regard](holograms-210.md)
 
 ## <a name="input-interaction-clarity"></a>Clarté de l’interaction d’entrée
 
@@ -453,20 +453,21 @@ Clarté de l’interaction d’entrée est essentielle à la facilité d’utili
 
 * [Principes de base Windows MR interaction](interaction-fundamentals.md)
 * [Objets sur](interactable-object.md)
-* [Ciblage des regards](gaze-targeting.md)
+* [Pointage du regard](gaze-targeting.md)
 * [Curseurs](cursors.md)
 * [Confort et regards](comfort.md#gaze-direction)
 * [Mouvements](gestures.md)
 * [Entrée vocale](voice-input.md)
 * [Conception de la voix](voice-design.md)
 * [Contrôleurs de mouvement](motion-controllers.md)
-* [Entrée portage guide pour Unity](input-porting-guide-for-unity.md)
-* [Entrée au clavier dans Unity](keyboard-input-in-unity.md)
-* [Les regards dans Unity](gaze-in-unity.md)
-* [Mouvements et les contrôleurs de mouvement dans Unity](gestures-and-motion-controllers-in-unity.md)
+* [Guide de portage des entrées pour Unity](input-porting-guide-for-unity.md)
+* [Saisie au clavier dans Unity](keyboard-input-in-unity.md)
+* [Pointage du regard dans Unity](gaze-in-unity.md)
+* [Mouvements et contrôleurs de mouvement dans Unity](gestures-and-motion-controllers-in-unity.md)
 * [Entrée vocale dans Unity](voice-input-in-unity.md)
-* [Entrée d’un contrôleur dans DirectX, clavier et souris](keyboard,-mouse,-and-controller-input-in-directx.md)
-* [Regards, les mouvements et les contrôleurs de mouvement dans DirectX](gaze,-gestures,-and-motion-controllers-in-directx.md)
+* [Saisie à l’aide de la commande de jeu, du clavier et de la souris dans DirectX](keyboard,-mouse,-and-controller-input-in-directx.md)
+* [HEAD et surveillez les regards dans DirectX](gaze-in-directx.md)
+* [Mains et contrôleurs de mouvement dans DirectX](hands-and-motion-controllers-in-directx.md)
 * [Entrée vocale dans DirectX](voice-input-in-directx.md)
 
 #### <a name="tools-and-tutorials"></a>Outils et didacticiels
@@ -475,9 +476,9 @@ Clarté de l’interaction d’entrée est essentielle à la facilité d’utili
 * [Étude de cast : HoloStudio UI et apprentissages de conception d’interaction](case-study-3-holostudio-ui-and-interaction-design-learnings.md)
 * [Exemple d’application : Tableau périodique des éléments](periodic-table-of-the-elements.md)
 * [Exemple d’application : Module de lunaire](lunar-module.md)
-* [Entrée M. 210 : Gaze](holograms-210.md)
-* [Entrée M. 211 : Mouvements](holograms-211.md)
-* [Entrée M. 212 : Voix](holograms-212.md)
+* [Réalité mixte - Entrées - Cours 210 : Pointage du regard](holograms-210.md)
+* [Réalité mixte - Entrées - Cours 211 : Mouvements](holograms-211.md)
+* [Réalité mixte - Entrées - Cours 212 : Voix](holograms-212.md)
 
 ## <a name="interactable-objects"></a>Objets sur
 
@@ -515,9 +516,9 @@ Un bouton a longtemps été une métaphore utilisée pour déclencher un événe
 
 #### <a name="documentation"></a>Documentation
 
-* [Objet sur](interactable-object.md)
+* [Objet avec interaction possible](interactable-object.md)
 * [Texte dans Unity](text-in-unity.md)
-* [Barre de l’application et de la zone englobante](app-bar-and-bounding-box.md)
+* [Barre de l’application et cadre englobant](app-bar-and-bounding-box.md)
 * [Conception de la voix](voice-design.md)
 
 #### <a name="tools-and-tutorials"></a>Outils et didacticiels
@@ -560,7 +561,7 @@ Les applications qui requièrent des données de mappage spatial s’appuient su
 
 #### <a name="documentation"></a>Documentation
 
-* [Visualisation d’analyse de salle](room-scan-visualization.md)
+* [Visualisation du balayage d’une pièce](room-scan-visualization.md)
 * [Étude de cas : Développer les capacités de mappage spatial d’HoloLens](case-study-expanding-the-spatial-mapping-capabilities-of-hololens.md)
 * [Étude de cas : Spatiale sonorisation pour HoloTour](case-study-spatial-sound-design-for-holotour.md)
 * [Étude de cas : Création d’une expérience d’immersion dans les Fragments](case-study-creating-an-immersive-experience-in-fragments.md)
@@ -600,7 +601,7 @@ Dans une application de réalité mixte, le contenu peut être à l’extérieur
 
 ### <a name="resources"></a>Ressources
 
-* [Frame HOLOGRAPHIQUE](holographic-frame.md)
+* [Image holographique](holographic-frame.md)
 
 ## <a name="data-loading"></a>Chargement des données
 
