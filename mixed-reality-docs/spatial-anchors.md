@@ -5,13 +5,14 @@ author: thetuvix
 ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
+ms.localizationpriority: high
 keywords: système de coordonnées, système de coordonnées spatial, à l’échelle mondiale, monde, mise à l’échelle, position, orientation, ancre, ancre spatiale, persistance world-verrouillé, verrouillage world, partage
-ms.openlocfilehash: eb0fae7881f1b6517da57305ef2fa3cb1ed78648
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.openlocfilehash: 16165194d040ad22f7885897eddcc65cf9dcaec3
+ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59597128"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65730858"
 ---
 # <a name="spatial-anchors"></a>Ancres spatiales
 
@@ -74,8 +75,8 @@ Points d’ancrage spatial cloud, votre stockage peut évoluer à mesure que vot
 
 ## <a name="see-also"></a>Voir aussi
 * [Systèmes de coordonnées](coordinate-systems.md)
-* [Partage des expériences en réalité mixte](shared-experiences-in-mixed-reality.md)
-* <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Ancres Spatial Azure</a>
+* [Expériences partagées dans Mixed Reality](shared-experiences-in-mixed-reality.md)
+* <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure Spatial Anchors</a>
 * [Persistance dans Unity](persistence-in-unity.md)
 * [Ancres spatiales dans DirectX](coordinate-systems-in-directx.md#place-holograms-in-the-world-using-spatial-anchors)
 * [Étude de cas - parcourant des trous dans la réalité](case-study-looking-through-holes-in-your-reality.md)

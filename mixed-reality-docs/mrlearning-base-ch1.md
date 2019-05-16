@@ -5,13 +5,14 @@ author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
+ms.localizationpriority: high
 keywords: réalité mixte, hololens (didacticiel), unity,
-ms.openlocfilehash: 95ba00d68eb5fb6c990ddee343ac58ebe00dbb10
-ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
+ms.openlocfilehash: 4546e4c8d973cbd4ce4190a974a4de9c01197e56
+ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/02/2019
-ms.locfileid: "64993645"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65730938"
 ---
 # <a name="mr-learning-base-module---project-initialization-and-first-application"></a>Module de Base de formation de MR - l’initialisation de projets et de la première Application
 

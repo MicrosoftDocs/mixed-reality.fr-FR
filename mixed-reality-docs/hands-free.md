@@ -1,19 +1,19 @@
 ---
-title: Optimisation de votre application pour mains libres
+title: Mains-libres
 description: Optimisation de votre application pour mains libres
 author: liamar
 ms.author: liamar
 ms.date: 04/20/2019
 ms.topic: article
 keywords: Une réalité mixte, mains libres, utilisation, utilisation de ciblage, interaction, conception
-ms.openlocfilehash: f39a9524831161997b59be6cf89b124fa5b29c78
-ms.sourcegitcommit: d6d96d552ec10cd7e6502fbbc1905432e2878325
+ms.openlocfilehash: 59a460a0c46ace7e633381019d29af54b1061695
+ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524327"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65629020"
 ---
-# <a name="optimizing-your-app-for-hands-free"></a>Optimisation de votre application pour mains libres
+# <a name="hands-free"></a>Mains-libres
 
 
 
@@ -31,18 +31,16 @@ Certains scénarios spécifiques peuvent être :
 
 ## <a name="hands-free-modalities"></a>Modalités de mains libres
 
-### <a name="voice-commanding"></a>Exécution des commandes vocales
+### <a name="voice-commandingvoice-designmd"></a>[Exécution des commandes vocales](voice-design.md)
 
 À l’aide de votre voix à la commande et de contrôle de qu'une interface peut non seulement autoriser l’utilisateur à mains libres de fonctionner, mais également ignorer plusieurs étapes. L’utilisation de cette modalité peut varier de permettre à l’utilisateur en lisant simplement les nom de n’importe quel bouton audio pour l’activer, comme dans Voir-it-say-it, à converser avec un agent qui peut effectuer des tâches pour vous.
 
-* [Conception de la voix](voice-design.md)
 
 
-### <a name="head-gaze-and-dwell"></a>Regards de tête et de balayage
+### <a name="head-gaze-and-dwellgaze-and-dwellmd"></a>[Regards de tête et de balayage](gaze-and-dwell.md)
 
 Dans certaines situations mains-libres, en utilisant votre voix n’est pas idéale ou même possible. Environnements d’usine forte, confidentialité ou normes sociaux peuvent tous être des contraintes. Utilisation de la tête + m’attarderai pas modèle permet à l’utilisateur à naviguer de l’application à l’aide de leur vecteur principal pour qu’il pointe, tout en attente, ou logement sur un bouton s’activer après un certain laps de temps (généralement environ 1 seconde ou ainsi). 
 
-* [Pointer du regard et fixer](gaze-and-dwell.md)
 
 ## <a name="transitioning-in-and-out-of-hands-free"></a>Transition vers et depuis mains libres
 

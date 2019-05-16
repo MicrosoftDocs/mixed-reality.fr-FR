@@ -5,13 +5,14 @@ author: sostel
 ms.author: sostel
 ms.date: 04/05/2019
 ms.topic: article
+ms.localizationpriority: high
 keywords: Suivi des yeux, mixte réalité, entrée, surveillez les regards
-ms.openlocfilehash: 75cbba9048b620e4b00492ad3f71315fabf86677
-ms.sourcegitcommit: f5c1dedb3b9e29f27f627025b9e7613931a7ce18
+ms.openlocfilehash: f61f813c702cbeaa03ddc50c6a1958af3566bc1c
+ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2019
-ms.locfileid: "64581049"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65730766"
 ---
 # <a name="eye-tracking-on-hololens-2"></a>Yeux sur HoloLens 2
 HoloLens 2 permet un niveau inédite de contexte et la compréhension humaine dans le Holographic expérience en fournissant aux développeurs la possibilité d’incroyable de l’utilisation d’informations sur ce que les utilisateurs regardez. Cette page donne un aperçu de comment les développeurs peuvent tirer profit suivi d’oeil pour différents cas d’utilisation et les solutions à prendre en compte lors de la conception d’interfaces utilisateur basées sur des regards yeux. 
