@@ -7,12 +7,12 @@ ms.date: 05/13/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixte réalité, regards, durée d’affichage, interaction, concevoir
-ms.openlocfilehash: 9f9fa89d7730e21e89bd24ce3b483d129c8a16db
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
+ms.openlocfilehash: 05457b35c13422c8aa6663bdf52a489a4f5afdaa
+ms.sourcegitcommit: b5bad4eeb5cdd0c2a7b639442656c306e8b5853b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730777"
+ms.locfileid: "65813990"
 ---
 # <a name="head-gaze-and-dwell"></a>Regards de tête et de balayage
 
@@ -92,9 +92,9 @@ Utilisez un court délai avant de démarrer des commentaires visuels afin d’é
 ### <a name="high-frequency-buttons"></a>Boutons de fréquence élevée
 ![Bouton suivant pour Microsoft Dynamics 365 Guides](images/GuideNextButton.png "bouton suivant pour Microsoft Dynamics 365 Guides") haute fréquence boutons sont couramment utilisés tout au long d’une application. Un bon exemple de ceux-ci sont les boutons suivant et précédent dans les Guides de Microsoft Dynamics 365.
 
-* Boutons de haute fréquence doit...
-  * boutons plus grande, plus facile à atteindre regards de tête
-  * Restez près de hauteur des yeux afin d’éviter de surcharger ergonomique.
+Boutons de haute fréquence doit...
+* boutons plus grande, plus facile à atteindre regards de tête
+* Restez près de hauteur des yeux afin d’éviter de surcharger ergonomique.
 
 ### <a name="low-frequency-buttons"></a>Boutons de fréquence faible
 Boutons de fréquence faible sont qui ne sont pas interagi avec comme régulièrement tout au long de l’application. Un bon exemple peut être un bouton pour accéder au menu Paramètres, ou un bouton pour effacer tout le travail.
@@ -127,5 +127,5 @@ Quelques conseils pour la conception de vues de liste :
 * [Manipulation directe](direct-manipulation.md)
 * [Pointer et valider](point-and-commit.md)
 * [Fonctionnalités de base des interactions](interaction-fundamentals.md)
-* [Pointer du regard vers l’avant et valider](gaze-and-commit.md)
+* [Suivre de la tête et valider](gaze-and-commit.md)
 * [Pointer du regard et parler](voice-design.md)
