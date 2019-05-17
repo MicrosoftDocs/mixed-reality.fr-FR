@@ -7,12 +7,12 @@ ms.date: 02/26/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: réalité mixte, hololens (didacticiel), unity,
-ms.openlocfilehash: 4546e4c8d973cbd4ce4190a974a4de9c01197e56
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
+ms.openlocfilehash: c5490e6a3b542a5ca677b309e5ed1171f8666fe7
+ms.sourcegitcommit: b5bad4eeb5cdd0c2a7b639442656c306e8b5853b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730938"
+ms.locfileid: "65814012"
 ---
 # <a name="mr-learning-base-module---project-initialization-and-first-application"></a>Module de Base de formation de MR - l’initialisation de projets et de la première Application
 
@@ -83,7 +83,7 @@ Dans cette première leçon, vous apprendrez certaines des fonctionnalités de q
 4. Créez et nommez un nouveau dossier pour votre application. Dans l’image ci-dessous, un dossier portant le nom « Application » a été créée pour contenir l’application. Cliquez sur « Sélectionner le dossier » pour commencer à créer dans le dossier nouvellement créé. Une fois la build terminée, vous pouvez fermer la fenêtre « Paramètres de Build » dans Unity. 
     ![Étape 4 de Chapter5 Lesson1](images/Lesson1Chapter5Step4.JPG)
 
-  > REMARQUE : Si la build échoue, tentez une génération à nouveau ou redémarrer Unity et créer à nouveau. Si vous voyez une erreur comme « erreur : CS0246 = le nom de type ou espace de noms « XX » est introuvable (ne manque-t-il pas une à l’aide de la directive ou une référence d’assembly ?) », puis vous devrez peut-être installer [SDK Windows 10 (10.0.18362.0)](<https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk>)
+  > REMARQUE : Si la build échoue, tentez une génération à nouveau ou redémarrer Unity et créer à nouveau. Si vous voyez une erreur comme « erreur : CS0246 = le nom du type ou espace de noms « XX » est introuvable (ne manque-t-il pas une à l’aide de la directive ou une référence d’assembly ?) », puis vous devrez peut-être installer [SDK Windows 10 (10.0.18362.0)](<https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk>)
   >
 
 5. Une fois la build terminée, ouvrez le dossier nouvellement créé qui contient vos fichiers d’application nouvellement créée. Double-cliquez sur la solution « MixedRealityBase.sln » (ou le nom correspondant, si vous avez utilisé un autre nom pour votre projet) pour ouvrir le fichier de solution dans Visual Studio.

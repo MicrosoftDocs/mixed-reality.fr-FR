@@ -7,17 +7,17 @@ ms.date: 04/02/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixte réalité, les regards, les regards ciblant, interaction, concevez, mains near, HoloLens
-ms.openlocfilehash: e241e13a778de0889942a3643246e087a107db86
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
+ms.openlocfilehash: 5952d2ecb75f7addacffcec2776f34289abda6cf
+ms.sourcegitcommit: b5bad4eeb5cdd0c2a7b639442656c306e8b5853b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730749"
+ms.locfileid: "65813997"
 ---
 # <a name="direct-manipulation-with-hands"></a>Manipulation directe des mains
 Manipulation directe est un modèle d’entrée qui implique de toucher hologrammes directement avec vos mains. L’objectif de la manipulation directe est que les objets se comportent exactement comme dans le monde réel. Boutons peuvent être activées simplement en appuyant sur les objets peuvent être interceptés par s’emparer les et contenu 2D se comporte comme un écran tactile virtuel.  Pour cette raison, diriger manipulation est facile pour les utilisateurs pour en savoir plus, et il est passionnant trop.  Il est considéré comme un modèle d’entrée « proches », ce qui signifie qu’il est particulièrement adapté pour l’interaction avec du contenu qui est au sein des armes atteindre.
 
-La version 2 HoloLens a un modèle d’entrée de manipulation directe qui vous permet de toucher dircly hologrammes avec vos mains. L’objectif de la manipulation directe est pour les objets se comporte exactement comme dans le monde réel. Vous pouvez activer les boutons en appuyant simplement sur eux et même prélever, saisir et déplacer des objets. Dans ces scénarios, contenu 2D se comporte comme un écran tactile virtuel.
+La version 2 HoloLens a un modèle d’entrée de manipulation directe qui vous permet de toucher hologrammes directement avec vos mains. L’objectif de la manipulation directe est pour les objets se comporte exactement comme dans le monde réel. Vous pouvez activer les boutons en appuyant simplement sur eux et même prélever, saisir et déplacer des objets. Dans ces scénarios, contenu 2D se comporte comme un écran tactile virtuel.
 
 Diriger la manipulation est facile pour les utilisateurs pour en savoir plus, et il a amusants trop. Il est considéré comme un modèle d’entrée « remet près », ce qui signifie qu’il est particulièrement adapté pour l’interaction avec du contenu qui se trouve dans une portée d’un arm.
 
@@ -147,7 +147,7 @@ En procédant ainsi, vous déplacer accidentellement votre main sur certains bou
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Pointer du regard vers l’avant et valider](gaze-and-commit.md)
+* [Suivre de la tête et valider](gaze-and-commit.md)
 * [Pointer et valider](point-and-commit.md)
 * [Interactions instinctuelles](interaction-fundamentals.md)
 
