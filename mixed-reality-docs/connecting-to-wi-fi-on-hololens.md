@@ -65,7 +65,7 @@ L’adresse IP s’affichera à côté **adresse IPv4**.
 
 ### <a name="using-cortana"></a>À l’aide de Cortana
 
-Par exemple «*Hey Cortana, quelle est mon adresse IP ?*» et Cortana s’affiche et lire votre adresse IP.
+Par exemple *Hey Cortana, quelle est mon adresse IP ?* et Cortana s’affiche et lire votre adresse IP.
 
 ### <a name="using-windows-device-portal"></a>À l’aide de Windows Device Portal
 
