@@ -8,7 +8,7 @@ ms.topic: article
 keywords: Azure, mixte réalité academy, unity, didacticiel, api, face à la reconnaissance, vr immersives, hololens,
 ms.openlocfilehash: 6330d3e5c51d6b2cbc43ea795a3f953a5b14d6f1
 ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59596466"
@@ -112,11 +112,11 @@ Pour utiliser le *API visage* service dans Azure, vous devez configurer une inst
 
     6. Vous devez également confirmer que vous avez compris les termes et Conditions appliquées à ce Service.
 
-    7. Sélectionnez **créer *.**
+    7. Sélectionnez **créer*.**
 
         ![Créer face service api](images/AzureLabs-Lab4-03.png)
 
-5.  Une fois que vous avez cliqué sur **créer *** avoir à attendre que le service doit être créé, cette opération peut prendre une minute.
+5.  Une fois que vous avez cliqué sur **créer*** avoir à attendre que le service doit être créé, cette opération peut prendre une minute.
 
 6.  Une fois que l’instance de Service est créée, une notification s’affiche dans le portail.
 
