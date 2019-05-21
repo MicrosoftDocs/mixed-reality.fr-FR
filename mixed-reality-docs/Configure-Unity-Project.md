@@ -6,12 +6,12 @@ ms.author: Yoyoz
 ms.date: 04/15/2018
 ms.topic: article
 keywords: Unity, mixte réalité, de développement, de mise en route, nouveau projet
-ms.openlocfilehash: 4ee81eca25109da428d7b3addf59e102ddc5c5cf
-ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
+ms.openlocfilehash: aad38474781fd78425d48034877122d36d9e3e93
+ms.sourcegitcommit: d565a69a9320e736304372b3f010af1a4d286a62
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/02/2019
-ms.locfileid: "64993538"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65940747"
 ---
 # <a name="configure-a-new-unity-project-for-windows-mixed-reality"></a>Configurer un projet Unity pour Windows Mixed Reality 
 
@@ -36,6 +36,9 @@ Nous devons informer Unity que l’application que nous tentons de les exporter 
 4. Dans le **XR paramètres** section, vérifiez le **virtuel pris en charge de réalité** case à cocher pour ajouter le **des appareils de réalité virtuelle** liste.
 5. Dans le **XR paramètres** de groupe, vérifiez que **« Windows Mixed Reality »** est répertorié comme un appareil pris en charge. (Cela peut apparaître en tant que « Windows HOLOGRAPHIQUE » dans les versions antérieures de Unity)
 
+![Paramètres de qualité de Unity](images/getting-started-unity-quality-settings.jpg)<br>
+*Paramètres de xr Unity*
+
 Votre application peut maintenant faire base rendu holographique et entrée spatiale. Pour aller plus loin et tirer parti de certaines fonctionnalités, votre application doit déclarer les fonctionnalités appropriées dans son manifeste. Les déclarations de manifeste peuvent être rendues Unity, ils sont inclus dans chaque exportation ultérieures du projet. Le paramètre se trouvent dans **paramètres du lecteur > Paramètres de plateforme Windows universelle > Paramètres de publication > fonctionnalités**. Les fonctionnalités applicables pour l’activation des API de Unity couramment utilisés pour la réalité mixte sont :
 
 |  Fonctionnalité  |  API nécessitant une fonctionnalité | 
@@ -48,7 +51,7 @@ Votre application peut maintenant faire base rendu holographique et entrée spat
 
 **Paramètres de qualité de Unity**
 
-![Paramètres de qualité de Unity](images/unityqualitysettings-350px.png)<br>
+![Paramètres de qualité de Unity](images/getting-started-unity-quality-settings.jpg)<br>
 *Paramètres de qualité de Unity*
 
 HoloLens a un GPU mobile-classe. Si votre application cible HoloLens, vous pourrez les paramètres de qualité afin de que nous mettons en place une fréquence d’images complète est optimisés pour les performances le plus rapide :

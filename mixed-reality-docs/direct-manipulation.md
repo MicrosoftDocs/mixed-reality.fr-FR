@@ -7,19 +7,15 @@ ms.date: 04/02/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixte réalité, les regards, les regards ciblant, interaction, concevez, mains near, HoloLens
-ms.openlocfilehash: 5952d2ecb75f7addacffcec2776f34289abda6cf
-ms.sourcegitcommit: b5bad4eeb5cdd0c2a7b639442656c306e8b5853b
+ms.openlocfilehash: 412d77a1d7446f82ddf43f051fdb149cb1fd559c
+ms.sourcegitcommit: d565a69a9320e736304372b3f010af1a4d286a62
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65813997"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65940765"
 ---
 # <a name="direct-manipulation-with-hands"></a>Manipulation directe des mains
 Manipulation directe est un modèle d’entrée qui implique de toucher hologrammes directement avec vos mains. L’objectif de la manipulation directe est que les objets se comportent exactement comme dans le monde réel. Boutons peuvent être activées simplement en appuyant sur les objets peuvent être interceptés par s’emparer les et contenu 2D se comporte comme un écran tactile virtuel.  Pour cette raison, diriger manipulation est facile pour les utilisateurs pour en savoir plus, et il est passionnant trop.  Il est considéré comme un modèle d’entrée « proches », ce qui signifie qu’il est particulièrement adapté pour l’interaction avec du contenu qui est au sein des armes atteindre.
-
-La version 2 HoloLens a un modèle d’entrée de manipulation directe qui vous permet de toucher hologrammes directement avec vos mains. L’objectif de la manipulation directe est pour les objets se comporte exactement comme dans le monde réel. Vous pouvez activer les boutons en appuyant simplement sur eux et même prélever, saisir et déplacer des objets. Dans ces scénarios, contenu 2D se comporte comme un écran tactile virtuel.
-
-Diriger la manipulation est facile pour les utilisateurs pour en savoir plus, et il a amusants trop. Il est considéré comme un modèle d’entrée « remet près », ce qui signifie qu’il est particulièrement adapté pour l’interaction avec du contenu qui se trouve dans une portée d’un arm.
 
 Manipulation directe est intuitif, ce qui signifie que son convivial. Il n’y a aucune mouvements symboliques à apprendre aux utilisateurs. Toutes les interactions reposent sur un élément visuel que vous pouvez toucher ou saisir.
 
@@ -148,6 +144,6 @@ En procédant ainsi, vous déplacer accidentellement votre main sur certains bou
 ## <a name="see-also"></a>Voir aussi
 
 * [Suivre de la tête et valider](gaze-and-commit.md)
-* [Pointer et valider](point-and-commit.md)
+* [Pointer et valider avec les mains](point-and-commit.md)
 * [Interactions instinctuelles](interaction-fundamentals.md)
 
