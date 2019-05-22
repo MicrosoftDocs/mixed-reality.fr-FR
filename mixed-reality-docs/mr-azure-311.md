@@ -8,7 +8,7 @@ ms.topic: article
 keywords: réalité Azure, mixte, academy, unity, didacticiel, api, graph de microsoft, hololens, immersives, vr
 ms.openlocfilehash: 98fe2c872f332a21fff3af6751ae555968073a24
 ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59593290"
@@ -266,12 +266,12 @@ Le premier script que vous créez est **MeetingsUI**, qui est responsable de l�
 
 Pour créer cette classe :
 
-1.  Avec le bouton droit sur le **actifs** dossier dans le *panneau projet*, puis sélectionnez **créer* > * dossier **. Nommez le dossier **Scripts**.
+1.  Avec le bouton droit sur le **actifs** dossier dans le *panneau projet*, puis sélectionnez **créer* > *dossier**. Nommez le dossier **Scripts**.
 
     ![](images/AzureLabs-Lab311-26.png)
     ![](images/AzureLabs-Lab311-27.png)
 
-2.  Ouvrez le **Scripts** dossier puis, dans ce dossier, avec le bouton droit, **créer* > * C\# Script **. Nommez le script **MeetingsUI.**
+2.  Ouvrez le **Scripts** dossier puis, dans ce dossier, avec le bouton droit, **créer* > *C\# Script**. Nommez le script **MeetingsUI.**
 
     ![](images/AzureLabs-Lab311-28.png)
 
@@ -628,7 +628,7 @@ Pour créer le script :
 
 3.  Double-cliquez sur le script pour l’ouvrir avec Visual Studio.
 
-4.  Modifier le code des espaces de noms pour correspondre à celui ci-dessous, ainsi que l’ajout de la «**\[System.Serializable\]**' balise ci-dessus votre **GazeInput** classe, afin qu’il puisse être sérialisé :
+4.  Modifier le code des espaces de noms pour correspondre à celui ci-dessous, ainsi que l’ajout de la '**\[System.Serializable\]**' balise ci-dessus votre **GazeInput** classe, afin qu’il puisse être sérialisé :
 
     ```csharp
     using UnityEngine;
@@ -939,7 +939,7 @@ Pour créer la balise :
 
 Tous les éléments nécessaires pour la section Unity de ce projet sont maintenant terminée, il est temps de générer à partir de Unity.
 
-1.  Accédez à *les paramètres de génération* (**fichier* > * Build paramètres **).
+1.  Accédez à *les paramètres de génération* (**fichier* > *Build paramètres**).
 
     ![](images/AzureLabs-Lab311-33.png)
 

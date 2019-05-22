@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: hologrammes, stabilité, hololens
-ms.openlocfilehash: 9b0227102934650d5640a4ac1c4d6f59ecd8e6dd
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: b35b904e3c662c5ebd0670a98044706fe208e348
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59594534"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974937"
 ---
 # <a name="hologram-stability"></a>Stabilité HOLOGRAMME
 
@@ -147,5 +147,5 @@ Comme avant, le rendu à 60 i/s et en définissant le plan de stabilisation sont
 
 ## <a name="see-also"></a>Voir aussi
 * [Comprendre les performances pour la réalité mixte](understanding-performance-for-mixed-reality.md)
-* [Couleur, clair et supports](color,-light-and-materials.md)
-* [Notions fondamentales d’interaction](interaction-fundamentals.md)
+* [Couleurs, éclairage et matériaux](color,-light-and-materials.md)
+* [Interactions instinctuelles](interaction-fundamentals.md)

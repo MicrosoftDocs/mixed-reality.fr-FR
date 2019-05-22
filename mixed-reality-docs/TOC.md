@@ -24,6 +24,7 @@
 #### [Voir vos photos](see-your-photos.md)
 #### [Réglage des capteurs](sensor-tuning.md)
 #### [Mise à jour du casque HoloLens](updating-hololens.md)
+#### [Partage d’appareil](device-sharing.md)
 #### [Guide de mise en place et de nettoyage du casque HoloLens pour les démos](hololens-demo-guide.md)
 ### Casques immersifs
 #### [Informations détaillées sur les casques immersifs](immersive-headset-hardware-details.md)
@@ -160,6 +161,7 @@
 #### [Saisie au clavier dans Unity](keyboard-input-in-unity.md)
 ### Rubriques avancées
 #### [Utilisation de l’espace de noms Windows avec les applications Unity pour HoloLens](using-the-windows-namespace-with-unity-apps-for-hololens.md)
+#### [Objets natifs de réalité mixte dans Unity](unity-xrdevice-advanced.md)
 #### [Utilisation de Vuforia avec Unity](vuforia-development-overview.md)
 ### Documents existants (Unity 2017.4/HTK/MRTK v1)
 ## Unreal

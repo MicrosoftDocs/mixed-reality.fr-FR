@@ -8,7 +8,7 @@ ms.topic: article
 keywords: réalité Azure, mixte, academy, edge, iot edge, didacticiel, api, notification, fonctions, tables, hololens, immersives, vr, iot, machine virtuelle, ubuntu, python
 ms.openlocfilehash: 1ab7c48ac3cff1cb2283cadb171098af9e148628
 ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59593254"
@@ -320,7 +320,7 @@ Maintenant vous pouvez passer à la configuration de votre appareil **en cours d
 
     1.  Utilisez les touches de direction de votre clavier pour faire défiler vers le bas (vous devez faire défiler de façon un peu) pour atteindre la ligne contenant « :
 
-        «**\<AJOUTER ICI DEVICE CONNECTION STRING &GT;**».
+        "**\<AJOUTER ICI DEVICE CONNECTION STRING &GT;**".
 
     2. Remplacez la ligne, **y compris les crochets**, avec le **Device Connection String** que vous avez noté précédemment.
 

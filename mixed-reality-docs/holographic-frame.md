@@ -6,12 +6,12 @@ ms.author: mavitazk
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, réalité mixte Windows, HOLOGRAPHIQUE frame, champ de vision
-ms.openlocfilehash: 6773bc03dea471c97d0c6006d2ab7853a5ef3669
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: c505eadbc16bb59143313aa62dd7c9d95384e0c8
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59593742"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974912"
 ---
 # <a name="holographic-frame"></a>Frame HOLOGRAPHIQUE
 
@@ -127,8 +127,8 @@ Comme une expérience d’immersion, ces utilisateurs ont été invités pour ob
 La représentation sous forme réaliste buzz fourni un point focal puissant, complète avec les techniques de subtiles pour activer le Buzz vers l’utilisateur se sentir comme s’il est, en parlant pour vous. Lorsque l’utilisateur se trouve sur l’expérience, Buzz décale vers vous à un seuil avant de retourner à l’état neutre, si l’utilisateur déplace trop loin au-delà de son périphérie. Si l’utilisateur ressemble à partir de Buzz complètement (par exemple, pour examiner un élément ailleurs dans la scène) puis le reconvertit en Buzz, va de position directionnel du Narrateur qu’une seule fois à nouveau être consacré à l’utilisateur. Techniques ainsi sentiment puissant d’immersion et créer un point de référence dans le cadre HOLOGRAPHIQUE, ce qui réduit le mouvement de la tête excessive et promouvoir [confort de l’utilisateur](comfort.md).
 
 ## <a name="see-also"></a>Voir aussi
-* [Notions fondamentales d’interaction](interaction-fundamentals.md)
+* [Interactions instinctuelles](interaction-fundamentals.md)
 * [Confort](comfort.md)
 * [Échelle](scale.md)
-* [Ciblage des regards](gaze-targeting.md)
-* [Stabilité HOLOGRAMME](hologram-stability.md)
+* [Suivre de la tête et stabiliser](gaze-and-dwell.md)
+* [Stabilité des hologrammes](hologram-stability.md)

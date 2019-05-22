@@ -6,12 +6,12 @@ ms.author: adlinv
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Réalité mixte de Windows, le billboarding, tag-along
-ms.openlocfilehash: 8215b96aff1f3c2d43e959f04ad83d41ffd32b2a
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: e33ab0121398742b2e48553c9cbf2c1debdc6abf
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59595986"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974786"
 ---
 # <a name="billboarding-and-tag-along"></a>Le billboarding et tag-along
 
@@ -37,5 +37,5 @@ Comme contenu véritablement tête verrouillée, les objets tag-along peuvent s�
 
 ## <a name="see-also"></a>Voir aussi
 * [Curseurs](cursors.md)
-* [Notions fondamentales d’interaction](interaction-fundamentals.md)
+* [Interactions instinctuelles](interaction-fundamentals.md)
 * [Confort](comfort.md)

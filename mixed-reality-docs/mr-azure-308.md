@@ -8,7 +8,7 @@ ms.topic: article
 keywords: réalité Azure, mixte, academy, unity, didacticiel, api, notification, fonctions, tables, les concentrateurs de notification, vr immersives, hololens,
 ms.openlocfilehash: ed56c936a0498b6e0ac804da15a2c6ec98239d0c
 ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59596997"
@@ -713,7 +713,7 @@ Configurer et tester votre casque immersives de réalité mixte.
 
 9.  Fermer le **paramètres de Build** fenêtre.
 
-10. Enregistrer votre projet et scène **fichier > Enregistrer la scène* / * fichier > Enregistrer le projet **.
+10. Enregistrer votre projet et scène **fichier > Enregistrer la scène* / *fichier > Enregistrer le projet**.
 
     > [!IMPORTANT]
     > Si vous souhaitez ignorer la *Unity configurer* composant pour ce projet (application de bureau) et toujours directement dans le code, n’hésitez pas à [télécharger cette .unitypackage](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20308%20-%20Cross-device%20notifications/Azure-MR-308-Desktop.unitypackage), importez-le dans votre projet en tant qu’un [ **Package personnalisé**](https://docs.unity3d.com/Manual/AssetPackages.html), puis continuez à partir de [chapitre 9](#chapter-9---create-the-tabletoscene-class-in-the-desktop-unity-project).  Vous devrez toujours ajouter les composants de script.
@@ -728,7 +728,7 @@ Pour importer le SDK dans votre propre projet, assurez-vous que vous avez télé
 
 1.  Ajouter le **.unitypackage** à Unity à l’aide de la **actifs \> importer un Package \> Package personnalisé** option de menu.
 
-2.  Dans le **importer un Package Unity** zone s’affiche, vous pouvez sélectionner tous les éléments sous ***plug-in* \> * stockage ***.  Désactivez tout le reste, qu’il n’est pas nécessaire pour ce cours.
+2.  Dans le **importer un Package Unity** zone s’affiche, vous pouvez sélectionner tous les éléments sous ***plug-in* \> *stockage***.  Désactivez tout le reste, qu’il n’est pas nécessaire pour ce cours.
 
     ![importer dans le package](images/AzureLabs-Lab8-61.png)
 
@@ -1233,7 +1233,7 @@ Ce qui suit est un standard configurée pour le développement avec la réalité
 
 9.  Avec ces modifications effectuées, fermez la fenêtre de paramètres de Build.
 
-10. Enregistrer votre projet et scène **fichier* *enregistrer la scène*/ *fichier* * enregistrer projet **.
+10. Enregistrer votre projet et scène **fichier* *enregistrer la scène*/ *fichier* *enregistrer projet**.
 
     > [!IMPORTANT]
     > Si vous souhaitez ignorer la *Unity configurer* composant pour ce projet (mixte réalité application) et toujours directement dans le code, n’hésitez pas à [télécharger cette .unitypackage](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20308%20-%20Cross-device%20notifications/Azure-MR-308-MR.unitypackage), importez-le dans votre projet sous la forme d’un [ **Package personnalisé**](https://docs.unity3d.com/Manual/AssetPackages.html), puis continuez à partir de [chapitre 14](#chapter-14---creating-the-tabletoscene-class-in-the-mixed-reality-unity-project). Vous devrez toujours ajouter les composants de script.

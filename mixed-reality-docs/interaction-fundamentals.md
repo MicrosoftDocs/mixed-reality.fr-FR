@@ -7,12 +7,12 @@ ms.date: 04/11/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixte réalité, les regards, les regards ciblant, interaction, concevez, hololens, MMR, multimodale
-ms.openlocfilehash: 771ebe44dc984c9d4550638bef405810d86b8d69
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
+ms.openlocfilehash: 9d0e639d7474c7e8728282acfa8d288cfeec7043
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730832"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974903"
 ---
 # <a name="introducing-instinctual-interactions"></a>Présentation des interactions instinctual
 
@@ -81,7 +81,7 @@ Voici quelques exemples de la façon dont les intuitivité et comportements sont
         <td>J’ai entendre des tonalités sonores et voir les animations sur la manipulation et la mise en production.</td>
     </tr>
     <tr>
-        <td><a href="gaze-and-commit.md">Pointer du regard vers l’avant et valider</a></td>
+        <td><a href="gaze-and-commit.md">Suivre de la tête et valider</a></td>
         <td>Je vois un curseur dans le centre de mon champ de vision.</td>
         <td>Le curseur de tête-regards change d’état lorsque sur certains objets.</td>
         <td>J’ai consultez / entendre les confirmations et sonores quand prendre des mesures.</td>
@@ -140,13 +140,14 @@ Si votre expérience requiert plusieurs modèles d’interaction, nous avons con
  
 
 ## <a name="see-also"></a>Voir aussi
-* [Pointer du regard vers l’avant et valider](gaze-and-commit.md)
-* [Manipulation directe](direct-manipulation.md)
-* [Pointer et valider](point-and-commit.md)
-* [Pointage du regard](gaze-targeting.md)
+* [Suivre de la tête et valider](gaze-and-commit.md)
+* [Suivre de la tête et stabiliser](gaze-and-dwell.md)
+* [Manipulation directe avec les mains](direct-manipulation.md)
+* [Pointer et valider avec les mains](point-and-commit.md)
 * [Mouvements](gestures.md)
-* [Conception de la voix](voice-design.md)
+* [Commander avec la voix](voice-design.md)
 * [Contrôleurs de mouvement](motion-controllers.md)
 * [Conception du son spatial](spatial-sound-design.md)
 * [Conception du mappage spatial](spatial-mapping-design.md)
 * [Confort](comfort.md)
+

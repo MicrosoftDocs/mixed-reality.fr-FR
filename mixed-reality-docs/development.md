@@ -8,12 +8,12 @@ ms.date: 02/12/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Une réalité mixte, développer, développement, HoloLens, unity, directx
-ms.openlocfilehash: 59b41c6b71e546bac6e3b76c038229d6de45b535
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
+ms.openlocfilehash: 8833d2d692f2082c939bcfc3bb55e5d159e8c9ac
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730783"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974814"
 ---
 # <a name="development-launchpad"></a>Launchpad de développement
 
@@ -158,7 +158,7 @@ Unreal - bientôt disponible !
                     <div class="cardText">
                         <h3>Principes fondamentaux du développement</h3>
                         <p>
-                            <a href="Interaction-fundamentals.md">Interactions</a>
+                            <a href="Interaction-fundamentals.md">Interactions instinctual</a>
                         </p>
                         <p>
                             <a href="rendering.md">Rendu HOLOGRAPHIQUE</a>

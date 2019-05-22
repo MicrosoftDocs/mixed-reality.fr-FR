@@ -6,18 +6,19 @@ ms.author: xerxesb
 ms.date: 02/24/2019
 ms.topic: article
 keywords: calibration, comfort, visuals, quality, ipd
-ms.openlocfilehash: 91af069bc4ae5e49d9eb9c529f0d0db7b1567fc8
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 5f8e6aef1df0efe4c64c807e627f69c7949363f2
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59597001"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974804"
 ---
-# <a name="calibration"></a>Étalonnage
-
-Étalonnage de votre infrastructure ou IPD (distance interpupillary) peut améliorer la qualité de vos éléments visuels. HoloLens et Windows Mixed Reality des casques IMMERSIFS offrent des façons de personnaliser l’IPD.
+# <a name="improve-visual-quality-and-comfort"></a>Améliorer le confort et qualité visuelle
+HoloLens, HoloLens 2 et Windows Mixed Reality des casques IMMERSIFS offrent différentes manières d’améliorer la qualité de l’expérience visuelle. 
 
 ## <a name="hololens"></a>HoloLens
+
+Étalonnage de votre infrastructure ou IPD (distance interpupillary) peut améliorer la qualité de vos éléments visuels.
 
 ### <a name="during-setup"></a>Pendant l’installation
 
@@ -54,10 +55,21 @@ Les utilisateurs sont invités à aligner leurs doigts avec une série de six ci
 
 ## <a name="hololens-2"></a>HoloLens 2
 
-> [!NOTE]
-> Obtenir des instructions spécifiques pour HoloLens 2 [bientôt](index.md#news-and-notes).
+### <a name="calibration"></a>Étalonnage 
 
-## <a name="immersive-headsets"></a>Casques IMMERSIFS
+Sur HoloLens 2, vous devrez ajuster vos éléments visuels lors de l’installation de l’appareil. Les utilisateurs sont invités à consulter l’ensemble des cibles de fixation. Cela permet à l’appareil ajuster le rendu hologramme pour l’utilisateur pour vous assurer de hologrammes positionnées de manière précise, plus confortable 3D expérience d’affichage et amélioré la qualité d’affichage. Tous les ajustements se produisent à la volée sans besoin de réglage manuel. 
+
+### <a name="calibration-when-sharing-a-device"></a>Étalonnage lors du partage d’un appareil 
+
+APPAREIL Hololens 2 peut être partagé entre les personnes, sans besoin de chaque personne à passer par le programme d’installation de périphérique. Hololens 2 invitera l’utilisateur d’étalonner les visuels lorsque l’appareil est placé sur la tête, si l’utilisateur est une nouveauté de l’appareil. Si l’utilisateur a déjà étalonné des éléments visuels sur l’appareil, affichage soient en toute transparence ajusté de qualité et de confort lorsque l’utilisateur place le périphérique sur la tête.  
+
+### <a name="launching-the-calibration-app-from-settings"></a>Lancement de l’application d’étalonnage à partir des paramètres
+1. Démarrer un mouvement permet d’obtenir au Menu Démarrer.
+2. Sélectionnez **+** pour afficher toutes les applications si **paramètres** n’est pas épinglé au début.
+3. Lancez **paramètres**.
+4. Accédez à **système** > **utilitaires** et sélectionnez **étalonnage Open**.
+
+## <a name="immersive-headsets"></a>Casques immersifs
 
 Pour modifier l’IPD au sein de votre casque, ouvrez l’application paramètres et accédez à **une réalité mixte** > **affichage de casque** et faites glisser le curseur. Vous verrez les modifications en temps réel dans votre casque. Si vous connaissez votre IPD, peut-être à partir d’une visite à l’optométriste, vous pouvez entrer elle aussi directement.
 
@@ -66,4 +78,4 @@ Vous pouvez également ajuster ce paramètre en accédant à **paramètres** > *
 Si votre casque ne prend pas en charge la personnalisation de l’IPD, ce paramètre sera désactivé.
 
 ## <a name="see-also"></a>Voir aussi
-* [Considérations sur l’environnement pour HoloLens](environment-considerations-for-hololens.md)
+* [Considérations relatives à l’environnement pour HoloLens](environment-considerations-for-hololens.md)

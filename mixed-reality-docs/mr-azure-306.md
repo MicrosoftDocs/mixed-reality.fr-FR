@@ -8,7 +8,7 @@ ms.topic: article
 keywords: réalité Azure, mixte, academy, unity, didacticiel, api, streaming media services, vidéo, 360, immersives, vr
 ms.openlocfilehash: f6974ab6a72828a557649d5dc65b4e505a7484ff
 ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59594019"
@@ -96,7 +96,7 @@ Pour utiliser le **Service de stockage Azure**, vous devez créer et configurer 
 
     3.  Pour **type de compte**, sélectionnez **stockage (usage général v1)**.
 
-    4.  Pour **performances**, sélectionnez **Standard *.**
+    4.  Pour **performances**, sélectionnez **Standard*.**
 
     5.  Pour **réplication** sélectionnez **stockage localement redondant (LRS)**.
 
@@ -226,7 +226,7 @@ Pour utiliser le Service de média Azure, vous devrez configurer une instance du
 
     ![Le portail Azure](images/AzureLabs-Lab6-21.png)
 
-20. Vous verrez votre vidéo, ainsi que l’autre, ce qui est de ** Type de ressource * MP4 multidébit ***.
+20. Vous verrez votre vidéo, ainsi que l’autre, ce qui est de **Type de ressource *MP4 multidébit***.
 
     ![Le portail Azure](images/AzureLabs-Lab6-22.png)
 
@@ -329,7 +329,7 @@ Ce qui suit est un standard configurée pour le développement avec la réalité
 
 8.  Une fois que vous avez effectué ces modifications, fermez le **paramètres de Build** fenêtre.
 
-9.  Enregistrer votre projet **fichier* * enregistrer projet **.
+9.  Enregistrer votre projet **fichier* *enregistrer projet **.
 
 
 
@@ -625,7 +625,7 @@ Pour créer cette classe :
 
 1.  Accédez à la **Scripts** dossier que vous avez créé précédemment.
 
-2.  Avec le bouton droit dans le **projet** panneau, **créer* * C\# Script **. Nommez le script **les regards**.
+2.  Avec le bouton droit dans le **projet** panneau, **créer* *C\# Script**. Nommez le script **les regards**.
 
 3.  Double-cliquez sur le nouveau ***les regards*** script pour l’ouvrir avec **Visual Studio 2017.**
 

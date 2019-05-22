@@ -7,12 +7,12 @@ ms.date: 03/31/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixte réalité, regards, regards ciblant, interaction, concevoir
-ms.openlocfilehash: 95f2cef8c10ce3d0d2a218953613fef6f0a00362
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
+ms.openlocfilehash: a84465de3479bf3da2131b94dd522539cd7de6e9
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730822"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974879"
 ---
 # <a name="head-gaze-and-commit"></a>Regards de tête et de validation
 Regards de tête et de validation est un modèle d’entrée qui implique de cibler un objet avec la direction de votre tête pointant vers l’avant (direction de tête) et en agissant ensuite dessus avec une base de données secondaire d’entrée tels que le mouvement de la main Air appuyez sur ou la voix de commande « Select ». Il est considéré comme un modèle « beaucoup » d’entrée avec manipulation indirecte, ce qui signifie qu’il est particulièrement adapté pour l’interaction avec du contenu qui est au-delà des armes atteindre.
@@ -70,7 +70,7 @@ Exécution des commandes vocales sont une des méthodes d’interaction principa
 - Interfaces utilisateur de conversation ou des entités comme Cortana qui disposent d’une capacité d’intelligence artificielle en langage naturel.
 - Commnads personnalisé
 
-Pour trouver plus d’informations et une liste de comprenhesive des commandes disponibles et l’utilisation, consultez notre [vocal conception](voice-design.md) des conseils.
+Pour trouver plus d’informations et une liste de comprenhesive des commandes disponibles et l’utilisation, consultez notre [d’exécution des commandes vocales](voice-design.md) conseils.
 
 
 ### <a name="head-gaze-and-hololens-clicker"></a>Regards de tête et HoloLens Clicker
@@ -204,11 +204,11 @@ Voici trois choses que vous devez prendre en compte :
 
 
 ## <a name="see-also"></a>Voir aussi
-* [Manipulation directe](direct-manipulation.md)
-* [Pointer et valider](point-and-commit.md)
-* [Fonctionnalités de base des interactions](interaction-fundamentals.md)
-* [Pointer du regard et fixer](gaze-targeting.md)
-* [Pointer du regard et parler](voice-design.md)
+* [Manipulation directe avec les mains](direct-manipulation.md)
+* [Pointer et valider avec les mains](point-and-commit.md)
+* [Interactions instinctuelles](interaction-fundamentals.md)
+* [Suivre de la tête et stabiliser](gaze-and-dwell.md)
+* [Commander avec la voix](voice-design.md)
 
 
 

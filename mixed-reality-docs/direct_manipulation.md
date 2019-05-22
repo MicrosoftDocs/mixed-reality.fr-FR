@@ -6,12 +6,12 @@ ms.author: cmeekhof
 ms.date: 04/02/2019
 ms.topic: article
 keywords: Mixte réalité, les regards, les regards ciblant, interaction, concevez, mains near, HoloLens
-ms.openlocfilehash: 803157bb248a5541ed524ac4f828ccbba9d59ce1
-ms.sourcegitcommit: 82d4e5cf4ad46bfdc44d0606844e28c75b6e67ce
+ms.openlocfilehash: a9e67f21587381dbc1090f89935eaa2b88630dae
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730505"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974756"
 ---
 # <a name="direct-manipulation"></a>Manipulation directe
 
@@ -143,6 +143,6 @@ Par exemple, imaginez la que lecture dans un texte (démonstration) HOLOGRAPHIQU
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Regards et validation](gaze-and-commit.md)
-* [Pointer et valider](point-and-commit.md)
-* [Fonctionnalités de base des interactions](interaction-fundamentals.md)
+* [Suivre de la tête et valider](gaze-and-commit.md)
+* [Pointer et valider avec les mains](point-and-commit.md)
+* [Interactions instinctuelles](interaction-fundamentals.md)

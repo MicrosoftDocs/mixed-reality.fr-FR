@@ -6,12 +6,12 @@ ms.author: jennyk
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Mixte réalité, les regards, les regards ciblant, interaction, concevoir
-ms.openlocfilehash: 1ac4f06208a7574fced0a7e27e93469ec93bf6e0
-ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
+ms.openlocfilehash: bbacf9bc0039280b9944f2ad6616108d9ceae1cd
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64873926"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974928"
 ---
 # <a name="gaze-and-dwell"></a>Regards et durée d’affichage
 Il existe un grand nombre de différentes façons pour confirmer une _validation_ telles que la combinaison des regards avec _voix_ ou _main mouvements_.
@@ -99,5 +99,5 @@ Lorsque vous déterminez ce qui les plus proches des éléments interactifs pour
 
 ## <a name="see-also"></a>Voir aussi
 * [Mouvements](gestures.md)
-* [Conception de la voix](voice-design.md)
+* [Commander avec la voix](voice-design.md)
 * [Curseurs](cursors.md)

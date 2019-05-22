@@ -7,12 +7,12 @@ ms.date: 04/05/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Suivi des yeux, mixte réalité, entrée, surveillez les regards
-ms.openlocfilehash: f61f813c702cbeaa03ddc50c6a1958af3566bc1c
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
+ms.openlocfilehash: 948d6ad36bfa3f7b179268a8e6241c9a2ce8e732
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730766"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974764"
 ---
 # <a name="eye-tracking-on-hololens-2"></a>Yeux sur HoloLens 2
 HoloLens 2 permet un niveau inédite de contexte et la compréhension humaine dans le Holographic expérience en fournissant aux développeurs la possibilité d’incroyable de l’utilisation d’informations sur ce que les utilisateurs regardez. Cette page donne un aperçu de comment les développeurs peuvent tirer profit suivi d’oeil pour différents cas d’utilisation et les solutions à prendre en compte lors de la conception d’interfaces utilisateur basées sur des regards yeux. 
@@ -127,7 +127,7 @@ Dans le cas d’un curseur, cela peut entraîner l’effet « fuite curseur »
 5. **Compte pour enregistrer les imprécisions dans :** Nous faisons la distinction deux types d’imprécisions qui sont visibles pour les utilisateurs : Décalage et d’instabilité. Le moyen le plus simple aux décalages de l’adresse est de fournir des cibles suffisamment grands pour interagir avec (2° > dans l’angle visual – en tant que référence : votre miniature est environ 2° dans l’angle visual lorsque vous agrandissez votre arm (1)). Il en résulte les conseils suivants :
     - Ne forcez pas aux utilisateurs de sélectionner des cibles minuscules : Research a montré que si les cibles sont suffisamment grandes (et le système est bien conçu), les utilisateurs décrivent l’interaction sans effort et magique. Si les cibles deviennent trop petites, les utilisateurs décrivent l’expérience comme fatigante et frustrante.
     
-# <a name="eye-gaze-design-guidelines-placeholder"></a>Instructions de conception du pointage de regard yeux (espace réservé)
+# <a name="eye-gaze-design-guidelines"></a>Instructions de conception yeux du pointage de regard
 
 Avec 2 HoloLens, nous avons l’occasion idéale pour améliorer les regards & validation plus rapide et plus à l’aise en utilisant des regards de œil au lieu de regards principal. Toutefois, les regards yeux se comportement différemment de regards principal d’une certaine façon et, par conséquent, est fourni avec un nombre de défis uniques. Dans règles de conception les regards yeux, nous résumons les avantages et les défis à prendre en compte lorsque vous utilisez le suivi des yeux comme un moyen d’entrée dans votre application HOLOGRAPHIQUE. Dans cette section, nous nous concentrons sur les considérations de conception spécifiques pour les regards yeux & validation. Tout d’abord, nos yeux extrêmement vite et est donc idéales au ciblage rapidement sur la vue. Cela rend les yeux utilisation idéal pour les regards rapide & Valider les actions en particulier lorsqu’elles sont combinées avec des validations rapides comme un appui en l’air ou bouton press.
 
@@ -138,9 +138,8 @@ Ne pas afficher un curseur : S’il est presque impossible d’interagir sans u
 Rechercher des signaux regards et validation de synchronisation : La synchronisation des signaux d’entrée est peut-être moins difficile pour les regards simple & validation, par conséquent, ne vous inquiétez pas ! Il est quelque chose à prendre en compte au cas où vous souhaitez utiliser des actions de validation plus complexes que qui peut impliquer des commandes vocales long ou mouvements de main compliqué. Imaginez que vous examinez cible et prononcez une commande longue vocale. Prise en compte l’heure à laquelle vous avez besoin de parler et l’heure à laquelle le système nécessaires pour détecter ce que vous l’avez dit, votre regard yeux est généralement long passé à une nouvelle cible dans la scène. Par conséquent, apportez vos utilisateurs qu’ils peuvent pas besoin de continuer à chercher à une cible jusqu'à ce que la commande a été reconnue ou gérer l’entrée de manière à déterminer le début de la commande et ce que l’utilisateur avait été regardez à l’époque.
 
 ## <a name="see-also"></a>Voir aussi
-* [Regards et validation](gaze-and-commit.md)
-* [Head ciblant les regards](gaze-targeting.md)
+* [Suivre de la tête et valider](gaze-and-commit.md)
 * [Mouvements](gestures.md)
-* [Conception de la voix](voice-design.md)
+* [Commander avec la voix](voice-design.md)
 * [Contrôleurs de mouvement](motion-controllers.md)
 * [Confort](comfort.md)

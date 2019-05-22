@@ -7,12 +7,12 @@ ms.date: 05/13/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixte réalité, regards, durée d’affichage, interaction, concevoir
-ms.openlocfilehash: 05457b35c13422c8aa6663bdf52a489a4f5afdaa
-ms.sourcegitcommit: b5bad4eeb5cdd0c2a7b639442656c306e8b5853b
+ms.openlocfilehash: aa4713407f14e94c88e654ae6648c4949f98e580
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65813990"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974868"
 ---
 # <a name="head-gaze-and-dwell"></a>Regards de tête et de balayage
 
@@ -124,8 +124,8 @@ Quelques conseils pour la conception de vues de liste :
 * réutiliser le même modèle aussi souvent que possible pour établir une bonne connaissance de l’expérience utilisateur
  
  ## <a name="see-also"></a>Voir aussi
-* [Manipulation directe](direct-manipulation.md)
-* [Pointer et valider](point-and-commit.md)
-* [Fonctionnalités de base des interactions](interaction-fundamentals.md)
+* [Manipulation directe avec les mains](direct-manipulation.md)
+* [Pointer et valider avec les mains](point-and-commit.md)
+* [Interactions instinctuelles](interaction-fundamentals.md)
 * [Suivre de la tête et valider](gaze-and-commit.md)
-* [Pointer du regard et parler](voice-design.md)
+* [Commander avec la voix](voice-design.md)

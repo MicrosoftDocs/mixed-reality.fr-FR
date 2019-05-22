@@ -6,12 +6,12 @@ ms.author: cmeekhof
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Réalité mixte, les gestes, interaction, conception
-ms.openlocfilehash: fabd47fef424186b826c410de725f805ff7005f5
-ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
+ms.openlocfilehash: 52ba7070e2c9b5632d5978c70571fcf9cda3f499
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65629063"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974885"
 ---
 # <a name="gestures"></a>Mouvements
 
@@ -110,7 +110,7 @@ Voici trois choses que vous devez prendre en compte :
 * Conséquences de rompre les limites de frame de mouvement doivent être réduites. En règle générale, cela signifie que le résultat d’un mouvement doit être arrêté à la limite, mais pas inversé. Par exemple, si un utilisateur déplace un objet HOLOGRAPHIQUE dans une même pièce, le déplacement doit s’arrêter lorsque le frame de mouvement est dépassé, mais **pas** affichera à nouveau le point de départ. L’utilisateur peut rencontrer certains frustration puis, mais peut comprendre plus rapidement les limites et pas obligé de redémarrer leurs actions prévues sont complète chaque fois.
 
 ## <a name="see-also"></a>Voir aussi
-* [Pointage du regard](gaze-targeting.md)
+* [Suivre de la tête et stabiliser](gaze-and-dwell.md)
 * [Conception de la voix](voice-design.md)
 * [Réalité mixte - Entrées - Cours 211 : Mouvement](holograms-211.md)
 * [Mouvements et contrôleurs de mouvement dans Unity](gestures-and-motion-controllers-in-unity.md)
