@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 3/18/2019
 ms.topic: article
 keywords: Réalité mixte OpenXR Developer Preview
-ms.openlocfilehash: c5ac87145ca23e4a6fbe578a285e27d50f1f22a1
-ms.sourcegitcommit: 36192101052666da01dd6c59cad4cfabd4ecb6f9
+ms.openlocfilehash: 723b0b85785d4b6dd735430aa76a24b9ce05b5c7
+ms.sourcegitcommit: 8d6e5723283c03f984f1fafef81afa5aab5d04bc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65048496"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66039182"
 ---
 # <a name="openxr"></a>OpenXR
 
@@ -36,7 +36,7 @@ Prise en main l’aperçu pour développeurs OpenXR réalité mixte sur HoloLens
 
 Prise en main l’aperçu pour développeurs OpenXR réalité mixte sur un PC de bureau :
 
-1. Vérifiez que vous exécutez au moins Windows 10 octobre 2018 mettre à jour (1809).  Si vous êtes sur une version antérieure de Windows 10, vous pouvez mettre à niveau vers l’octobre 2018 mettre à jour à l’aide de la [l’Assistant Mise à jour de Windows 10](https://www.microsoft.com/en-us/software-download/windows10).  Si vous vous sentez aventureux, vous pouvez installer un [build Windows 10 Insider Preview de la mai 2019 mise à jour (1903)](https://insider.windows.com).
+1. Vérifiez que vous exécutez Windows 10 octobre 2018 mise à jour (1809) ou Windows 10 peut 2019 mettre à jour (1903).  Si vous êtes sur une version antérieure de Windows 10, vous pouvez mettre à niveau vers le mai 2019 mettre à jour à l’aide de la [l’Assistant Mise à jour de Windows 10](https://www.microsoft.com/en-us/software-download/windows10).
 1. Configurer un casque Windows Mixed Reality ou suivez les instructions pour [activer le simulateur Windows Mixed Reality](using-the-windows-mixed-reality-simulator.md).
 1. Installer le [Mixed Reality OpenXR Developer Preview, application](https://www.microsoft.com/store/productId/9n5cvvl23qbt).  Cette application vous permet de configurer avec la version préliminaire du runtime de OpenXR sur Windows 10 octobre 2018 mise à jour (1809) ou version ultérieure.  Après avoir installé cette application, le Windows Store conserve le runtime à jour.
 1. Exécutez l’application mixte réalité OpenXR Developer Preview dans le menu Démarrer et suivez les instructions pour rendre le runtime actif.  Bientôt, cette application vous permet d’Explorer les autres informations de débogage OpenXR également.
@@ -45,7 +45,9 @@ Prise en main l’aperçu pour développeurs OpenXR réalité mixte sur un PC de
 
 ### <a name="support-for-windows-10-october-2018-update"></a>Prise en charge de la mise à jour de Windows 10 octobre 2018
 
-Pour commencer à utiliser l’aperçu pour développeurs OpenXR réalité mixte sur un PC de bureau avec Windows 10 octobre 2018 mise à jour (1809, la version actuelle de Windows), vous devez suivre quelques étapes supplémentaires :
+Si vous exécutez Windows 10 mai 2019 (1903) de mettre à jour et suivi les étapes ci-dessus, vous devez être prêt à utiliser l’aperçu pour développeurs OpenXR réalité mixte !
+
+Si vous n’êtes pas prêt à [mise à niveau de votre ordinateur de bureau vers le mai 2019 mise à jour](https://www.microsoft.com/en-us/software-download/windows10), vous pouvez adopter Windows 10 octobre 2018 mettre à jour (1809) en suivant une étape supplémentaire :
 
 1. Suivez les étapes ci-dessus pour installer l’aperçu pour développeurs OpenXR réalité mixte.
 1. Pour définir l’aperçu pour développeurs OpenXR réalité mixte comme runtime de OpenXR actif de votre système, vous devez installer le [Pack de compatibilité mixte réalité OpenXR Developer Preview](https://aka.ms/openxr-compat).
@@ -70,7 +72,7 @@ Si votre application OpenXR ne démarre pas Windows Mixed Reality lors de son ex
 
 ### <a name="mixed-reality-openxr-developer-preview-app-cannot-be-installed"></a>Application de réalité OpenXR Developer Preview mixte ne peut pas être installée 
 
-Vérifiez que vous exécutez au moins Windows 10 octobre 2018 mettre à jour (1809).  Si vous êtes sur une version antérieure de Windows 10, vous pouvez mettre à niveau vers l’octobre 2018 mettre à jour à l’aide de la [l’Assistant Mise à jour de Windows 10](https://www.microsoft.com/en-us/software-download/windows10).
+Vérifiez que vous exécutez au moins Windows 10 octobre 2018 mettre à jour (1809).  Si vous êtes sur une version antérieure de Windows 10, vous pouvez mettre à niveau vers le mai 2019 mettre à jour (1903) à l’aide de la [l’Assistant Mise à jour de Windows 10](https://www.microsoft.com/en-us/software-download/windows10).
 
 Si l’installation de bouton sur l’application mixte réalité OpenXR Developer Preview ne rien sur Windows 10 octobre 2018 met à jour, votre système ont mis en cache obsolète configuration requise pour l’application.  Vous pouvez exécuter la commande `wsreset.exe` à partir d’une invite de commandes pour effacer le cache.
 

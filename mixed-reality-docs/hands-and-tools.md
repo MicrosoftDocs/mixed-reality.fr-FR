@@ -6,12 +6,12 @@ ms.author: shengkait
 ms.date: 04/26/2019
 ms.topic: article
 keywords: Mixte réalité, mains, motion controlles, interaction, concevoir
-ms.openlocfilehash: b13efadd111ca970abe625221fb8045644822c37
-ms.sourcegitcommit: b5bad4eeb5cdd0c2a7b639442656c306e8b5853b
+ms.openlocfilehash: d0e54c71ab42a09f2f9c6063a85441b98e729af1
+ms.sourcegitcommit: 8d6e5723283c03f984f1fafef81afa5aab5d04bc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65813981"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66039164"
 ---
 # <a name="hands-and-motion-controllers"></a>Mains et contrôleurs de mouvement
 ## <a name="scenarios"></a>Scénarios
@@ -38,7 +38,7 @@ Contrôleurs de mouvement sont des outils qui étendent les capacités physiques
 
 ## <a name="see-also"></a>Voir aussi
 * [Suivre de la tête et valider](gaze-and-commit.md)
-* [Manipulation directe (près l’interaction de la main)](direct-manipulation.md)
-* [Point et validation (Far l’interaction disponible)](point-and-commit.md)
+* [Suivre de la tête et stabiliser](gaze-and-dwell.md)
+* [Manipulation directe avec les mains](direct-manipulation.md)
+* [Pointer et valider avec les mains](point-and-commit.md)
 * [Mains-libres](hands-free.md)
-* [Pointer du regard et fixer](gaze-targeting.md)
