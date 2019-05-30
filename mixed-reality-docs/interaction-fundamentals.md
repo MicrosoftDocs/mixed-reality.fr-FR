@@ -7,12 +7,12 @@ ms.date: 04/11/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixte réalité, les regards, les regards ciblant, interaction, concevez, hololens, MMR, multimodale
-ms.openlocfilehash: 9d0e639d7474c7e8728282acfa8d288cfeec7043
-ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
+ms.openlocfilehash: d018179e20d26ee8b7b24bc74d7c1711bc788282
+ms.sourcegitcommit: aba33a8ad1416f7598048ac35ae9ab1734bd5c37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65974903"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270385"
 ---
 # <a name="introducing-instinctual-interactions"></a>Présentation des interactions instinctual
 
@@ -36,11 +36,11 @@ Considérez ces modèles d’interaction comme modèle mental de l’utilisateur
 
 Chacun de ces modèles d’interaction est pratique, puissant et utilisable à part entière, et tous sont optimisés pour un ensemble de besoins des clients. Afficher le graphique ci-dessous, pour des scénarios, des exemples et des avantages de chaque modèle d’interaction.  
 
-**Modèle** | **[Mains et outils](https://docs.microsoft.com/en-us/windows/mixed-reality/hands-and-tools)** | **[Mains libres](https://docs.microsoft.com/en-us/windows/mixed-reality/hands-free)** | **[Regards et validation](https://docs.microsoft.com/en-us/windows/mixed-reality/gaze-and-commit?)**
+**Modèle** | **[Mains et contrôleurs de mouvement](hands-and-tools.md)** | **[Mains libres](hands-free.md)** | **[Regards de tête et de validation](gaze-and-commit.md)**
 |--------- | --------------| ------------| ---------|
 **Exemples de scénarios** | Du contenu 3D expériences spatiales, par exemple spatiale disposition et conception, de manipulation ou de simulation | Expériences contextuelles, où les mains d’un utilisateur sont occupés, par exemple, sur le travail d’apprentissage, de maintenance| Clic des expériences, par exemple, des présentations 3D, des démonstrations
-**Fit** | Idéal pour les nouveaux utilisateurs, voix couplée wit, des yeux regards suivi ou principal. Courbe d’apprentissage basse. Expérience utilisateur cohérente entre main suivi et 6 contrôleurs DDL. | Certains d’apprentissage nécessaire. Si les mains sont des paires indisponibles bien avec la voix et de langage naturel | Nécessite une formation sur HMDs, mais pas sur mobile. Meilleures pour les contrôleurs accessibles idéal pour HoloLens (1er gen) |
-**Matériel** | Casques IMMERSIFS de 2 HoloLens | HoloLens 2 HoloLens (1er gen) des casques IMMERSIFS | Casques IMMERSIFS de 2 HoloLens | HoloLens 2 HoloLens (1er gen) des casques IMMERSIFS Mobile AR |
+**Fit** | Idéal pour les nouveaux utilisateurs, voix couplée wit, des yeux regards suivi ou principal. Courbe d’apprentissage basse. Expérience utilisateur cohérente entre main suivi et 6 contrôleurs DDL. | Certains d’apprentissage nécessaire. Si les mains sont des paires indisponibles bien avec la voix et de langage naturel | Nécessite une formation sur HMDs, mais pas sur mobile. Idéal pour les contrôleurs accessibles. Idéal pour HoloLens (1er gen). |
+**Matériel** | HoloLens 2 <br>Casques immersifs | HoloLens 2 <br>HoloLens (1er gen) <br>Casques immersifs | HoloLens 2 <br>Casques immersifs | HoloLens 2 <br>HoloLens (1er gen) <br>Casques immersifs <br>Mobile AR |
 
 Des informations détaillées pour l’utilisation de toutes les entrées disponibles dans chaque modèle d’interaction entre eux se trouve sur les pages qui suivent, ainsi que les illustrations et les liens vers du contenu de l’exemple à partir de notre MRTK Unity.
 
@@ -75,7 +75,7 @@ Voici quelques exemples de la façon dont les intuitivité et comportements sont
         <td><strong>Comment savoir ce que je viens de faire ?</strong></td>
     </tr>
     <tr>
-        <td><a href="hands-and-tools.md">Mains et outils</a></td>
+        <td><a href="hands-and-tools.md">Mains et contrôleurs de mouvement</a></td>
         <td>Je vois une main de maillage, je vois un intuitif du bout des doigts ou une main / contrôleur de rayons.</td>
         <td>Je vois des handles grabbable ou un rectangle englobant s’affichent lorsque ma main est proche.</td>
         <td>J’ai entendre des tonalités sonores et voir les animations sur la manipulation et la mise en production.</td>

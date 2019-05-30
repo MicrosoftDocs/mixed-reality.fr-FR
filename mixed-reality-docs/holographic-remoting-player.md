@@ -6,12 +6,12 @@ ms.author: jlyons
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, la communication à distance, la communication à distance HOLOGRAPHIQUE
-ms.openlocfilehash: 16add6c72b594822cacbef6c92ce196ab9b13429
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 24213444686dd2e5dbda4016dd551a8ead8f305a
+ms.sourcegitcommit: aba33a8ad1416f7598048ac35ae9ab1734bd5c37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59597085"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270316"
 ---
 # <a name="holographic-remoting-player"></a>Lecteur de communication à distance HOLOGRAPHIQUE
 
@@ -19,8 +19,7 @@ Le lecteur de communication à distance holographique est une application Compag
 
 Le lecteur de communication à distance HOLOGRAPHIQUE utilisable uniquement avec les applications PC conçus spécifiquement pour prendre en charge la communication à distance HOLOGRAPHIQUE.
 
-> [!NOTE]
-> Obtenir des instructions spécifiques pour HoloLens 2 [bientôt](index.md#news-and-notes).
+Le lecteur de communication à distance holographique est disponible pour HoloLens et HoloLens 2.  Applications PC pris en charge la communication à distance holographique avec HoloLens doivent être mis à jour pour prendre en charge HOLOGRAPHIQUE Remtoing avec HoloLens 2.  Si vous avez des questions sur les versions prises en charge, contactez votre fournisseur de l’application.
 
 ## <a name="connecting-to-the-holographic-remoting-player"></a>Connexion à l’acteur de communication à distance HOLOGRAPHIQUE
 
@@ -48,10 +47,10 @@ Pour mesurer la qualité de votre connexion, par exemple **« activer les diagn
 Tandis que dans l’écran principal, vous pouvez dire **« désactiver les diagnostics »** pour désactiver les diagnostics.
 
 ## <a name="pc-system-requirements"></a>Configuration requise du PC
-* Votre PC **doit** exécuter la mise à jour anniversaire de Windows 10.
+* Votre PC **doit** exécuter la mise à jour anniversaire de Windows 10 ou version ultérieure.
 * Nous recommandons un GeForce GTX 970 ou ou AMD Radeon R9 290 de meilleure carte graphique.
 * Nous vous recommandons de que vous connecter à votre PC à votre réseau via ethernet pour réduire le nombre de tronçons de sans fil.
 
 ## <a name="see-also"></a>Voir aussi
-* [Termes du contrat de licence de logiciel holographique de communication à distance](microsoft-holographic-remoting-software-license-terms.md)
+* [Termes du contrat de licence pour Holographic Remoting Player](microsoft-holographic-remoting-software-license-terms.md)
 * [Déclaration de confidentialité Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839)

@@ -7,12 +7,12 @@ ms.date: 02/26/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: réalité mixte, hololens (didacticiel), unity,
-ms.openlocfilehash: 04ed2217c473c5649c1850fcc757d866e23b9b56
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
+ms.openlocfilehash: 6f05b2cecd388b1b2f13e7e5228bc90091eee3bd
+ms.sourcegitcommit: aba33a8ad1416f7598048ac35ae9ab1734bd5c37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730897"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270398"
 ---
 # <a name="mr-learning-base-module---dynamic-content-placement-and-solvers"></a>Module de Base de formation de MR - positionnement du contenu dynamique et solveurs
 
@@ -48,7 +48,7 @@ L’objectif de ce chapitre consiste à améliorer la collection de boutons que 
 
 3. Pour configurer la collection de boutons pour suivre l’utilisateur, nous devons effectuer les ajustements suivants (reportez-vous à l’image ci-dessous) :
 - Dans le script Orbital, définissez la liste déroulante « type orientation » à « Lacet uniquement ». Cela rend afin qu’un seul axe en question de l’objet pivote comme il suit l’utilisateur.
-- La valeur est l’offset local 0 sur tous les axes. La valeur est le décalage du monde x = 0, y = -0,1 et z = 0.6. Ceci verrouille le déplacement de l’objet tel que lorsque l’utilisateur modifie la hauteur, l’objet reste à une hauteur fixe dans l’environnement physique, tout en permettant à suivre l’utilisateur quand l’utilisateur se déplace sur l’environnement. Ces valeurs peuvent être ajustés pour obtenir une plage wade de comportements.
+- La valeur est l’offset local 0 sur tous les axes. La valeur est le décalage du monde x = 0, y = -0,1 et z = 0.6. Ceci verrouille le déplacement de l’objet tel que lorsque l’utilisateur modifie la hauteur, l’objet reste à une hauteur fixe dans l’environnement physique, tout en permettant à suivre l’utilisateur quand l’utilisateur se déplace sur l’environnement. Ces valeurs peuvent être ajustés pour atteindre un large éventail de comportements.
 - Pour un comportement de suivi par laquelle les boutons uniquement suivent l’utilisateur une fois que l’utilisateur principal de son propre suffisamment loin, vous pouvez sélectionner la case à cocher « Utiliser Angle exécution pas à pas pour le décalage du monde » (Remarque : Ce titre peut être tronqué sur certains écrans, car il est dans l’image ci-dessous.) Par exemple, pour que l’objet à suivre l’utilisateur uniquement tous les 90 degrés, définissez le nombre d’étapes égal à 4 (marqués par une flèche verte dans l’exemple à gauche). 
 
 ![Lesson3 Chapter2 Step3im](images/Lesson3_chapter2_step3im.PNG)

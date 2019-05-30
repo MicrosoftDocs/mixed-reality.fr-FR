@@ -6,17 +6,21 @@ ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, hologrammes, communication à distance HOLOGRAPHIQUE, rendu à distance, réseau de rendu, HoloLens, hologrammes à distance
-ms.openlocfilehash: 4726c6af43fe1b89fc8298e459a1af9dfa5fc667
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.openlocfilehash: 1e9567976bad1e2b72e95feca292bf3475893230
+ms.sourcegitcommit: aba33a8ad1416f7598048ac35ae9ab1734bd5c37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59597136"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270357"
 ---
 # <a name="add-holographic-remoting"></a>Ajouter la communication à distance HOLOGRAPHIQUE
 
+## <a name="hololens-2"></a>HoloLens 2
+
 > [!NOTE]
 > Obtenir des instructions spécifiques pour HoloLens 2 [bientôt](index.md#news-and-notes).
+
+Les développeurs de HoloLens à l’aide de la communication à distance HOLOGRAPHIQUE devez mettre à jour leurs applications pour les rendre compatibles avec HoloLens 2.  Cela nécessitera une nouvelle version du package NuGet de communication à distance HOLOGRAPHIQUE qui n’est pas encore disponible publiquement.  Si une application en utilisant le package NuGet de HoloLens tente de se connecter à l’acteur de communication à distance HOLOGRAPHIQUE sur HoloLens 2, la connexion échoue.  Regardez cette page pour les mises à jour une fois que le package NuGet de 2 HoloLens est disponible.
 
 ## <a name="add-holographic-remoting-to-your-desktop-or-uwp-app"></a>Ajouter HOLOGRAPHIQUE communication à distance à votre bureau ou d’une application UWP
 

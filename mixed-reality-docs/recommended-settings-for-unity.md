@@ -6,12 +6,12 @@ ms.author: trferrel
 ms.date: 03/26/2019
 ms.topic: article
 keywords: Unity, les paramètres, réalité mixte
-ms.openlocfilehash: c7029f2dfaf246db9f972c7d89b46e4fb9b5f1a1
-ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
+ms.openlocfilehash: a26dbdb63c8bad9bb9659a6a3303c0b0ab418580
+ms.sourcegitcommit: aba33a8ad1416f7598048ac35ae9ab1734bd5c37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/02/2019
-ms.locfileid: "64993612"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270373"
 ---
 # <a name="recommended-settings-for-unity"></a>Paramètres recommandés pour Unity
 
@@ -83,6 +83,9 @@ Unity a déconseillé la prise en charge des scripts de serveur principal et don
 3) Utiliser un disque SSD pour la génération
 
 Veuillez lire [optimiser le temps de Build pour IL2CPP](https://docs.unity3d.com/Manual/IL2CPP-OptimizingBuildTimes.html) pour plus d’informations.
+
+> [!NOTE]
+> En outre, il peut être avantageux du programme d’installation un [serveur de Cache](https://docs.unity3d.com/Manual/CacheServer.html), en particulier pour les projets Unity avec une grande quantité de ressources (à l’exclusion de fichiers de script) ou en permanence modification scènes/ressources. Lorsque vous ouvrez un projet, Unity stocke actifs éligibles dans un format de cache interne sur l’ordinateur du développeur. Éléments doivent être réimportés et donc à nouveau traitées lors de la modification. Ce processus peut effectué qu’une fois et enregistré dans un serveur de Cache et par conséquent partagé avec d’autres développeurs de gagner du temps, au lieu de chaque développeur de traitement de l’importer à nouveau de nouvelles modifications localement.
 
 ## <a name="publishing-properties"></a>Propriétés de publication
 
