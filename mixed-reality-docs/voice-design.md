@@ -7,12 +7,12 @@ ms.date: 04/21/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Windows Mixed Reality, conception, interaction, voix
-ms.openlocfilehash: 084c1228d17c3e23b38d9b8918c13080598aea98
-ms.sourcegitcommit: 8d6e5723283c03f984f1fafef81afa5aab5d04bc
+ms.openlocfilehash: f2362400cba2946c3e97a7128c410ddcd17b4362
+ms.sourcegitcommit: 5b4292ef786447549c0199003e041ca48bb454cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66039188"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66402369"
 ---
 # <a name="voice-commanding"></a>Exécution des commandes vocales
 
@@ -25,7 +25,7 @@ Lorsque vous utilisez les commandes vocales, regards est généralement utilisé
 <tr>
 <th>Fonctionnalité</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (1er gen)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Casques IMMERSIFS</a></th>
 </tr><tr>
-<td></td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️ (avec casque attaché)</td>
+<td>Exécution des commandes vocales</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️ (avec casque attaché)</td>
 </tr>
 </table>
 
@@ -87,7 +87,7 @@ Lors de la voix est appliquée correctement, l’utilisateur comprenne bien **qu
 ![États de commentaires de voix pour curseur](images/voicefeedbackstates.png)<br>
 *États de commentaires de voix pour curseur*
 
-## <a name="top-things-users-should-know-about-speech-on-windows-mixed-reality"></a>Les utilisateurs de choses doivent être informés sur « vocal » sur Windows Mixed Reality
+## <a name="top-things-users-should-know-about-speech-in-mixed-reality"></a>Les utilisateurs de choses doivent être informés sur « vocal » dans la réalité mixte
 * Par exemple **« Select »** tout en ciblant un bouton (vous pouvez utiliser ceci en tout lieu à cliquer sur un bouton).
 * Vous pouvez dire le **nom d’étiquette d’un bouton de barre d’application** dans certaines applications d’entreprendre une action. Par exemple, lorsque vous examinez une application, un utilisateur peut dire la commande « Supprimer » pour supprimer l’application du monde (Cela évite les temps d’avoir de cliquer dessus avec la main).
 * Vous pouvez lancer Cortana écoute en disant **« Hey Cortana ».** Vous pouvez poser des questions son (« Hey Cortana, la hauteur est la tour Eiffel »), l’inviter à ouvrir une application (« Hey Cortana, ouvrez Netflix ») ou l’inviter à faire apparaître le Menu Démarrer (« Hey Cortana, take me d’accueil ») et bien plus encore.

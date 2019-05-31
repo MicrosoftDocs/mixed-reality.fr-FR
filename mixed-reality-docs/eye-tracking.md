@@ -7,12 +7,12 @@ ms.date: 04/05/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Suivi des yeux, mixte réalité, entrée, surveillez les regards
-ms.openlocfilehash: 948d6ad36bfa3f7b179268a8e6241c9a2ce8e732
-ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
+ms.openlocfilehash: d41b9973ede323e842d7187becb1220ba9980a5d
+ms.sourcegitcommit: 5b4292ef786447549c0199003e041ca48bb454cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65974764"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66402351"
 ---
 # <a name="eye-tracking-on-hololens-2"></a>Yeux sur HoloLens 2
 HoloLens 2 permet un niveau inédite de contexte et la compréhension humaine dans le Holographic expérience en fournissant aux développeurs la possibilité d’incroyable de l’utilisation d’informations sur ce que les utilisateurs regardez. Cette page donne un aperçu de comment les développeurs peuvent tirer profit suivi d’oeil pour différents cas d’utilisation et les solutions à prendre en compte lors de la conception d’interfaces utilisateur basées sur des regards yeux. 
@@ -127,7 +127,7 @@ Dans le cas d’un curseur, cela peut entraîner l’effet « fuite curseur »
 5. **Compte pour enregistrer les imprécisions dans :** Nous faisons la distinction deux types d’imprécisions qui sont visibles pour les utilisateurs : Décalage et d’instabilité. Le moyen le plus simple aux décalages de l’adresse est de fournir des cibles suffisamment grands pour interagir avec (2° > dans l’angle visual – en tant que référence : votre miniature est environ 2° dans l’angle visual lorsque vous agrandissez votre arm (1)). Il en résulte les conseils suivants :
     - Ne forcez pas aux utilisateurs de sélectionner des cibles minuscules : Research a montré que si les cibles sont suffisamment grandes (et le système est bien conçu), les utilisateurs décrivent l’interaction sans effort et magique. Si les cibles deviennent trop petites, les utilisateurs décrivent l’expérience comme fatigante et frustrante.
     
-# <a name="eye-gaze-design-guidelines"></a>Instructions de conception yeux du pointage de regard
+## <a name="eye-gaze-design-guidelines"></a>Instructions de conception yeux du pointage de regard
 
 Avec 2 HoloLens, nous avons l’occasion idéale pour améliorer les regards & validation plus rapide et plus à l’aise en utilisant des regards de œil au lieu de regards principal. Toutefois, les regards yeux se comportement différemment de regards principal d’une certaine façon et, par conséquent, est fourni avec un nombre de défis uniques. Dans règles de conception les regards yeux, nous résumons les avantages et les défis à prendre en compte lorsque vous utilisez le suivi des yeux comme un moyen d’entrée dans votre application HOLOGRAPHIQUE. Dans cette section, nous nous concentrons sur les considérations de conception spécifiques pour les regards yeux & validation. Tout d’abord, nos yeux extrêmement vite et est donc idéales au ciblage rapidement sur la vue. Cela rend les yeux utilisation idéal pour les regards rapide & Valider les actions en particulier lorsqu’elles sont combinées avec des validations rapides comme un appui en l’air ou bouton press.
 

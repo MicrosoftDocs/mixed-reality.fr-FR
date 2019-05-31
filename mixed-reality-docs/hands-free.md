@@ -6,12 +6,12 @@ ms.author: liamar
 ms.date: 04/20/2019
 ms.topic: article
 keywords: Une réalité mixte, mains libres, utilisation, utilisation de ciblage, interaction, conception
-ms.openlocfilehash: 59a460a0c46ace7e633381019d29af54b1061695
-ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
+ms.openlocfilehash: 23b1def15c4ad900265fab2a2c8757cf96706fbc
+ms.sourcegitcommit: 5b4292ef786447549c0199003e041ca48bb454cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65629020"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66402344"
 ---
 # <a name="hands-free"></a>Mains-libres
 
@@ -31,13 +31,13 @@ Certains scénarios spécifiques peuvent être :
 
 ## <a name="hands-free-modalities"></a>Modalités de mains libres
 
-### <a name="voice-commandingvoice-designmd"></a>[Exécution des commandes vocales](voice-design.md)
+### <a name="voice-commandingvoice-designmd"></a>[Commander avec la voix](voice-design.md)
 
 À l’aide de votre voix à la commande et de contrôle de qu'une interface peut non seulement autoriser l’utilisateur à mains libres de fonctionner, mais également ignorer plusieurs étapes. L’utilisation de cette modalité peut varier de permettre à l’utilisateur en lisant simplement les nom de n’importe quel bouton audio pour l’activer, comme dans Voir-it-say-it, à converser avec un agent qui peut effectuer des tâches pour vous.
 
 
 
-### <a name="head-gaze-and-dwellgaze-and-dwellmd"></a>[Regards de tête et de balayage](gaze-and-dwell.md)
+### <a name="head-gaze-and-dwellgaze-and-dwellmd"></a>[Suivre de la tête et stabiliser](gaze-and-dwell.md)
 
 Dans certaines situations mains-libres, en utilisant votre voix n’est pas idéale ou même possible. Environnements d’usine forte, confidentialité ou normes sociaux peuvent tous être des contraintes. Utilisation de la tête + m’attarderai pas modèle permet à l’utilisateur à naviguer de l’application à l’aide de leur vecteur principal pour qu’il pointe, tout en attente, ou logement sur un bouton s’activer après un certain laps de temps (généralement environ 1 seconde ou ainsi). 
 
@@ -95,6 +95,6 @@ L’utilisateur comprend...
 
 
 ## <a name="see-also"></a>Voir aussi
-* [Pointer du regard vers l’avant et valider](gaze-and-commit.md)
-* [Manipulation directe](direct-manipulation.md)
-* [Pointer et valider](point-and-commit.md)
+* [Suivre de la tête et valider](gaze-and-commit.md)
+* [Manipulation directe avec les mains](direct-manipulation.md)
+* [Pointer et valider avec les mains](point-and-commit.md)

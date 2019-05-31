@@ -7,12 +7,12 @@ ms.date: 04/05/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Une réalité, interaction, conception, hololens, mains, mixte présent, pointez et valider
-ms.openlocfilehash: e69c8ff2091beff7d8fbbde4e6f24d909302290a
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
+ms.openlocfilehash: 30f85d2bb455abab3a533e0a829b4fba8cea0a7a
+ms.sourcegitcommit: 5b4292ef786447549c0199003e041ca48bb454cd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730803"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66402382"
 ---
 # <a name="point-and-commit-with-hands"></a>Point et validation des mains
 Point et validation des mains est un modèle d’entrée qui permet aux utilisateurs à cibler, sélectionner et manipuler des objets de contenu et 3D 2D dans la distance. Cette technique d’interaction « beaucoup » est unique à la réalité mixte et n’est pas un humains moyen naturellement intereact avec le monde réel. Par exemple, dans le film super héros *X-hommes*, le caractère [magnéto](https://en.wikipedia.org/wiki/Magneto_(comics)) est capable de contacter et de manipulation d’un objet lointain dans la distance à ses mains. Cela n’est pas quelque chose l’homme faire en réalité. Dans les HoloLens (AR) et la réalité mixte (VR), nous équiper les internautes grâce à cette puissance magique, la contrainte physique du monde réel non seulement à une expérience optimale à vos avec contenu HOLOGRAPHIQUE, mais également pour améliorer l’interaction efficace et plus efficace.
@@ -21,7 +21,7 @@ Point et validation des mains est un modèle d’entrée qui permet aux utilisat
 
 Modèle d’entrée | [HoloLens (1er gen)](https://docs.microsoft.com/en-us/windows/mixed-reality/hololens-hardware-details) | HoloLens 2 | [Casques IMMERSIFS](https://docs.microsoft.com/en-us/windows/mixed-reality/immersive-headset-hardware-details) |
 | ---------| -----| ----- | ---------|
-Point et validation (interaction lointain main) | ❌ Ne pas pris en charge | ✔️ Recommandé | ✔️ Recommandé
+Point et validation des mains | ❌ Ne pas pris en charge | ✔️ Recommandé | ✔️ Recommandé
 
 Point et validation, également appelé mains présent, est une des nouvelles fonctionnalités qui utilise le nouveau système de suivi de la main articulé. Ce modèle d’entrée est également le modèle d’entrée principal sur des casques IMMERSIFS grâce à l’utilisation de contrôleurs de mouvement.
 
@@ -91,7 +91,7 @@ Le concept de point et de validation pour l’interaction lointain a été initi
 ![](images/Instinctual-Gestures-Far-720px.jpg)
 
 ## <a name="see-also"></a>Voir aussi
-* [Pointer du regard vers l’avant et valider](gaze-and-commit.md)
+* [Suivre de la tête et valider](gaze-and-commit.md)
 * [Manipulation directe avec les mains](direct-manipulation.md)
 * [Interactions instinctuelles](interaction-fundamentals.md)
 
