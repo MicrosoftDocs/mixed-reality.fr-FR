@@ -2,28 +2,29 @@
 title: Les regards dans Unity
 description: Regards est un moyen principal pour les utilisateurs à cibler les hologrammes que votre application crée en réalité mixte.
 author: thetuvix
-ms.author: alexturn
+ms.author: yoyoz
 ms.date: 03/21/2018
 ms.topic: article
 keywords: regards, unity, HOLOGRAMME, réalité mixte
-ms.openlocfilehash: 09915479a9eef95c5ce4533371e113ab6191a331
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: b2cc86db156a1e97b013e4cd6debe3abe5ffb6dd
+ms.sourcegitcommit: 60060386305eabfac2758a2c861a43c36286b151
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59597005"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66453721"
 ---
-# <a name="gaze-in-unity"></a>Les regards dans Unity
+# <a name="head-gaze-in-unity"></a>Head regards dans Unity
 
-[Utilisation](gaze.md) est un moyen principal pour les utilisateurs à cibler le [vntana](hologram.md) votre application crée dans [une réalité mixte](mixed-reality.md).
+[Utilisation](gaze.md) est un moyen principal pour les utilisateurs à cibler le [vntana](hologram.md) votre application crée dans [réalité mixte](mixed-reality.md).
 
-## <a name="implementing-gaze"></a>Implémentation du pointage de regard
+
+## <a name="implementing-head-gaze"></a>Implémentation des regards principal
 
 Conceptuellement, [les regards](gaze.md) est implémentée en projetant un rayon à partir de la tête de l’utilisateur où le casque est, dans la direction avant qu’ils sont accessibles et déterminer ce que ray est en conflit avec. Dans Unity, position principal de l’utilisateur et la direction sont exposées via les principaux Unity [caméra](camera-in-unity.md), plus précisément [UnityEngine.Camera.main](http://docs.unity3d.com/ScriptReference/Camera-main.html).[ Transform.Forward](http://docs.unity3d.com/ScriptReference/Transform-forward.html) et [UnityEngine.Camera.main](http://docs.unity3d.com/ScriptReference/Camera-main.html).[ Transform.position](http://docs.unity3d.com/ScriptReference/Transform-position.html).
 
 Appel [Physics.RayCast](http://docs.unity3d.com/ScriptReference/Physics.Raycast.html) entraîne une [RaycastHit](http://docs.unity3d.com/ScriptReference/RaycastHit.html) structure qui contient des informations sur la collision, y compris le point 3D où collision s’est produite et autres GameObject le rayon du pointage de regard entrent en conflit avec.
 
-### <a name="example-implement-gaze"></a>Exemple : Implémentez regards
+### <a name="example-implement-head-gaze"></a>Exemple : Implémentez des regards principal
 
 ```cs
 void Update()
@@ -51,22 +52,11 @@ Tandis que l’exemple ci-dessus montre comment effectuer un raycast unique dans
 
 Tout comme sur le bureau où vous utilisez un pointeur de la souris pour cibler et interagir avec du contenu, vous devez implémenter un [curseur](cursors.md) qui représente le regard de l’utilisateur. Cela donne la confiance des utilisateurs dans ce que sur le point d’interagir avec elles.
 
-## <a name="gaze-in-mixed-reality-toolkit"></a>Utilisation dans le Kit de ressources de réalité mixte
-Lorsque vous importez [MRTK publie des packages de Unity](https://github.com/Microsoft/MixedRealityToolkit-Unity/releases) ou cloner le projet à partir de la [référentiel GitHub](https://github.com/Microsoft/MixedRealityToolkit-Unity), vous vous apprêtez à trouver un nouveau menu « Toolkit de réalité mixte » dans Unity. Sous le menu « Configurer », vous verrez le menu « Application des paramètres de scène réalité mixte ». Lorsque vous cliquez dessus, il supprime l’appareil photo par défaut et ajoute les composants fondamentaux - [InputManager](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/Input/Prefabs/InputManager.prefab), [MixedRealityCameraParent](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/Input/Prefabs/MixedRealityCameraParent.prefab), et [DefaultCursor](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/Input/Prefabs/Cursor/DefaultCursor.prefab).
-
-![Menu MRTK pour le programme d’installation de scène](images/MRTK_Input_Menu.png)<br>
-*Menu MRTK pour le programme d’installation de scène*
-
-![Programme d’installation automatique de scène dans MRTK](images/MRTK_HowTo_Input1.png)<br>
-*Programme d’installation automatique de scène dans MRTK*
-
-### <a name="gaze-related-scripts-in-mixed-reality-toolkit"></a>Utilisation des scripts associés dans le Kit de ressources de réalité mixte
-Mixte réalité la boîte à outils inclut des InputManager prefab [GazeManager.cs](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/Input/Scripts/Gaze/GazeManager.cs) et [les regards de stabilisation](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/Input/Scripts/Gaze/GazeStabilizer.cs). Sous [SimpleSinglePointerSelector](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/Input/Scripts/Focus/SimpleSinglePointerSelector.cs), vous pouvez assigner votre curseur personnalisé. Par défaut, animée [DefaultCursor](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/Input/Prefabs/Cursor/DefaultCursor.prefab) est affecté.
-
-[Cursor.prefab](https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit/Input/Prefabs/Cursor) et [CursorWithFeedback.prefab](https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit/Input/Prefabs/Cursor) vous montre comment visualiser votre regard sur l’utilisation de curseurs.
+## <a name="gaze-in-mixed-reality-toolkit-v2"></a>Utilisation en réalité mixte Toolkit v2
+Vous pouvez accéder à des regards à partir de la [d’entrée Manager](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Overview.html) dans MRTK v2.
 
 ## <a name="see-also"></a>Voir aussi
 * [Appareil photo](camera-in-unity.md)
-* [Gaze](gaze.md)
+* [Entrée des regards](gaze.md)
 * [Curseurs](cursors.md)
-* [Ciblage des regards](gaze-targeting.md)
+* [Pointage du regard](gaze-targeting.md)

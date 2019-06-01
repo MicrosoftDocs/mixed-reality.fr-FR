@@ -7,15 +7,15 @@ ms.date: 04/05/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Suivi des yeux, mixte réalité, entrée, surveillez les regards
-ms.openlocfilehash: d41b9973ede323e842d7187becb1220ba9980a5d
-ms.sourcegitcommit: 5b4292ef786447549c0199003e041ca48bb454cd
+ms.openlocfilehash: 7298a34a946f86aaf789cfe44ad971169fc8ece3
+ms.sourcegitcommit: 60060386305eabfac2758a2c861a43c36286b151
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66402351"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66453703"
 ---
 # <a name="eye-tracking-on-hololens-2"></a>Yeux sur HoloLens 2
-HoloLens 2 permet un niveau inédite de contexte et la compréhension humaine dans le Holographic expérience en fournissant aux développeurs la possibilité d’incroyable de l’utilisation d’informations sur ce que les utilisateurs regardez. Cette page donne un aperçu de comment les développeurs peuvent tirer profit suivi d’oeil pour différents cas d’utilisation et les solutions à prendre en compte lors de la conception d’interfaces utilisateur basées sur des regards yeux. 
+HoloLens 2 permet un nouveau niveau de contexte et la compréhension humaine dans l’expérience HOLOGRAPHIQUE en fournissant aux développeurs la possibilité d’incroyable de l’utilisation d’informations sur ce que les utilisateurs regardez. Cette page donne un aperçu de comment les développeurs peuvent tirer profit suivi d’oeil pour différents cas d’utilisation et les solutions à prendre en compte lors de la conception d’interfaces utilisateur basées sur des regards yeux. 
 
 ## <a name="use-cases"></a>Cas d’utilisation
 Suivi de le œil permet aux applications d’effectuer le suivi de la recherche dans laquelle l’utilisateur en temps réel. Cette section décrit certaines des utilisations potentielles et interactions nouvelle qui devient possibles avec les yeux dans la réalité mixte.
@@ -126,20 +126,13 @@ Dans le cas d’un curseur, cela peut entraîner l’effet « fuite curseur »
 
 5. **Compte pour enregistrer les imprécisions dans :** Nous faisons la distinction deux types d’imprécisions qui sont visibles pour les utilisateurs : Décalage et d’instabilité. Le moyen le plus simple aux décalages de l’adresse est de fournir des cibles suffisamment grands pour interagir avec (2° > dans l’angle visual – en tant que référence : votre miniature est environ 2° dans l’angle visual lorsque vous agrandissez votre arm (1)). Il en résulte les conseils suivants :
     - Ne forcez pas aux utilisateurs de sélectionner des cibles minuscules : Research a montré que si les cibles sont suffisamment grandes (et le système est bien conçu), les utilisateurs décrivent l’interaction sans effort et magique. Si les cibles deviennent trop petites, les utilisateurs décrivent l’expérience comme fatigante et frustrante.
-    
-## <a name="eye-gaze-design-guidelines"></a>Instructions de conception yeux du pointage de regard
-
-Avec 2 HoloLens, nous avons l’occasion idéale pour améliorer les regards & validation plus rapide et plus à l’aise en utilisant des regards de œil au lieu de regards principal. Toutefois, les regards yeux se comportement différemment de regards principal d’une certaine façon et, par conséquent, est fourni avec un nombre de défis uniques. Dans règles de conception les regards yeux, nous résumons les avantages et les défis à prendre en compte lorsque vous utilisez le suivi des yeux comme un moyen d’entrée dans votre application HOLOGRAPHIQUE. Dans cette section, nous nous concentrons sur les considérations de conception spécifiques pour les regards yeux & validation. Tout d’abord, nos yeux extrêmement vite et est donc idéales au ciblage rapidement sur la vue. Cela rend les yeux utilisation idéal pour les regards rapide & Valider les actions en particulier lorsqu’elles sont combinées avec des validations rapides comme un appui en l’air ou bouton press.
-
-Ne pas afficher un curseur : S’il est presque impossible d’interagir sans un curseur lors de l’utilisation de tête les regards, le curseur se transforme rapidement parasites et agaçante lors de l’utilisation du pointage de regard yeux. Au lieu d’utiliser un curseur pour informer l’utilisateur si le suivi de le œil fonctionne et a correctement détecté actuellement consultés sur la cible, visual subtiles utilisation met en évidence (plus de détails ci-dessous).
-
-À tout prix des commentaires subtiles pointage combinées : Ce qui paraît excellent retour visuel pour les regards principal peut entraîner une terrible, écrasant expériences à l’aide du pointage de regard yeux. N’oubliez pas que les yeux sont extrêmement rapides, darting rapidement entre les points de votre champ de vision. Commentaires flickery peuvent entraîner des modifications de mise en surbrillance soudaine rapide (activé/désactivé) lors de la recherche. Par conséquent, lorsque vous fournissez des commentaires de pointage, nous vous recommandons d’utiliser une mise en surbrillance correctement fusionnés dans (et fusionnée à la sortie lors de la recherche de suite). Cela signifie que dans un premier temps vous à peine remarquerait les commentaires lorsque vous examinez une cible. Au cours de 500 à 1000 ms, la mise en surbrillance augmenterait en intensité. Tandis que les utilisateurs novices peuvent continuer à chercher à la cible pour vous assurer que le système a déterminé correctement la cible ayant le focus, les utilisateurs expérimentés pourraient rapidement les regards & sont validées sans attendre que les commentaires sont à son intensité complète. En outre, nous vous recommandons également d’à l’aide de blend montée lorsque atténuant progressivement les commentaires de pointage. Research a montré que les modifications rapides de mouvement et contraste sont très visibles dans votre vision périphérique (par conséquent, la zone de votre champ visuel où vous cherchez pas). Le fondu ne doit pas être lentes en tant que blend dans. Cela est essentiel uniquement lorsque vous avez un contraste élevé ou des modifications de couleur pour votre mise en surbrillance. Si les commentaires de pointage étaient assez subtile pour commencer, vous ne constaterez certainement une différence.
-
-Rechercher des signaux regards et validation de synchronisation : La synchronisation des signaux d’entrée est peut-être moins difficile pour les regards simple & validation, par conséquent, ne vous inquiétez pas ! Il est quelque chose à prendre en compte au cas où vous souhaitez utiliser des actions de validation plus complexes que qui peut impliquer des commandes vocales long ou mouvements de main compliqué. Imaginez que vous examinez cible et prononcez une commande longue vocale. Prise en compte l’heure à laquelle vous avez besoin de parler et l’heure à laquelle le système nécessaires pour détecter ce que vous l’avez dit, votre regard yeux est généralement long passé à une nouvelle cible dans la scène. Par conséquent, apportez vos utilisateurs qu’ils peuvent pas besoin de continuer à chercher à une cible jusqu'à ce que la commande a été reconnue ou gérer l’entrée de manière à déterminer le début de la commande et ce que l’utilisateur avait été regardez à l’époque.
+   
 
 ## <a name="see-also"></a>Voir aussi
 * [Suivre de la tête et valider](gaze-and-commit.md)
-* [Mouvements](gestures.md)
-* [Commander avec la voix](voice-design.md)
+* [Suivre de la tête et du regard dans DirectX](gaze-in-directx.md)
+* [Surveillez les regards dans Unity (Toolkit de réalité mixte)](https://aka.ms/mrtk-eyes)
+* [Mouvements de main](gestures.md)
+* [Entrée vocale](voice-design.md)
 * [Contrôleurs de mouvement](motion-controllers.md)
 * [Confort](comfort.md)

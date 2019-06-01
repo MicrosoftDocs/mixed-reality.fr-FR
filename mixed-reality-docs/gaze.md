@@ -5,13 +5,13 @@ author: thetuvix
 ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
-keywords: Réalité mixte, regards, Interaction, concevoir
-ms.openlocfilehash: 738ba9063a5d00f3bbedce989d93076d56ad1a44
-ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
+keywords: Mixte réalité, regards, interaction, concevoir
+ms.openlocfilehash: 9e50067f9dfeacf3dce5ea9a928990d1b142e4d0
+ms.sourcegitcommit: 60060386305eabfac2758a2c861a43c36286b151
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65629108"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66453708"
 ---
 # <a name="gaze"></a>Pointage du regard
 
@@ -19,7 +19,8 @@ ms.locfileid: "65629108"
 
 Casques de réalité mixte utilisent la position et l’orientation de tête de l’utilisateur pour déterminer leur vecteur regards principal. Vous pouvez considérer ce vecteur comme un pointeur laser directement à l’avance de directement entre les yeux de l’utilisateur. Comme l’utilisateur semble autour de la pièce, votre application peut se croisent ce rayon, avec son propre hologrammes et avec le [mappage spatial](spatial-mapping.md) maille pour déterminer quel objet virtuel ou réelles de votre utilisateur peut regarder.
 
-Sur HoloLens 2, interactions peuvent être ciblées par les regards principal soit l’utilisateur par le biais de près ou présent distribuer interactions.  Sur HoloLens (1er gen), les interactions doivent dériver généralement leur ciblage à partir des regards principal de l’utilisateur, au lieu d’essayer restituer ou interagir directement à l’emplacement de la part. Une fois démarrée, une interaction des mouvements relatifs de la main peuvent être utilisé pour contrôle le [mouvement](gestures.md), comme avec la [manipulation ou navigation](gestures.md#composite-gestures) mouvement. Avec des casques IMMERSIFS, vous pouvez cibler à l’aide soit du pointage de regard ou pointant compatibles [contrôleurs de mouvement](motion-controllers.md).
+Sur HoloLens 2, interactions peuvent être ciblées par principal du pointage de regard soit l’utilisateur, les regards yeux via près ou présent distribuer les interactions.
+Sur HoloLens (1er gen), les interactions doivent dériver généralement leur ciblage à partir des regards principal de l’utilisateur, au lieu d’essayer restituer ou interagir directement à l’emplacement de la part. Une fois démarrée, une interaction des mouvements relatifs de la main peuvent être utilisé pour contrôle le [mouvement](gestures.md), comme avec la [manipulation ou navigation](gestures.md#composite-gestures) mouvement. Avec des casques IMMERSIFS, vous pouvez cibler à l’aide soit du pointage de regard principal ou de pointage compatible [contrôleurs de mouvement](motion-controllers.md).
 
 <br>
 
@@ -43,7 +44,7 @@ Sur HoloLens 2, interactions peuvent être ciblées par les regards principal so
 
 ## <a name="uses-of-gaze"></a>Utilisations des regards
 
-Un développeur de réalité mixte, vous pouvez faire beaucoup avec pointage de regard :
+Un développeur de réalité mixte, vous pouvez faire beaucoup avec regards head ou des yeux :
 * Votre application peut se croisent regards avec les hologrammes dans votre scène pour déterminer où se trouve l’attention des utilisateurs.
 * Votre application peut cibler des mouvements et appuie sur le contrôleur en fonction du pointage de regard de l’utilisateur, vous sélectionnez, activer, récupérer, faites défiler ou sinon interagir avec leurs hologrammes permettant de l’utilisateur.
 * Votre application peut permettre à l’utilisateur de placer des hologrammes sur les surfaces du monde réel, par l’intersection de leur ray regards auprès de la maille de mappage spatial.
@@ -51,16 +52,20 @@ Un développeur de réalité mixte, vous pouvez faire beaucoup avec pointage de 
 
 ## <a name="cursor"></a>Curseur
 
-La plupart des applications doivent utiliser un [curseur](cursors.md) (ou autre indication AUDITIVE/visual) à attribuer à la confiance des utilisateurs de ce que, ils sont sur le point d’interagir avec. En général, vous positionnez ce curseur dans le monde où leur ray regards interagit tout d’abord un objet qui peut être un hologramme ou une surface du monde réel.
+Pour des regards principal, la plupart des applications doivent utiliser un [curseur](cursors.md) (ou autre indication AUDITIVE/visual) à attribuer à la confiance des utilisateurs de ce que, ils sont sur le point d’interagir avec. En général, vous positionnez ce curseur dans le monde où leur ray regards principal tout d’abord entre en intersection avec un objet qui peut être un hologramme ou une surface du monde réel.
 
 ![Un exemple visuel du curseur pour afficher les regards](images/cursor.jpg)<br>
 *Un exemple visuel du curseur pour afficher les regards*
+
+Pour les regards yeux, nous recommandons généralement *pas* pour afficher un curseur, comme cela peut rapidement devenir parasites et agaçante de l’utilisateur. Au lieu de cela légèrement visual cibles de mettre en surbrillance ou un curseur yeux très faible pour assurent sur les nouveautés de l’utilisateur sur le point d’interagir avec. Pour plus d’informations, consultez notre [Guide de conception pour l’entrée basée sur les yeux](eye-tracking.md) sur HoloLens 2.
 
 ## <a name="giving-action-to-the-users-gaze"></a>Donnant action au regard de l’utilisateur
 
 Une fois que l’utilisateur a ciblé un hologramme ou un objet réel à l’aide de leurs regards, leur étape suivante consiste à prendre des mesures sur cet objet. Les méthodes principales pour un utilisateur de prendre des mesures sont effectuent via [mouvements](gestures.md), [contrôleurs de mouvement](motion-controllers.md) et [voix](voice-input.md).
 
 ## <a name="see-also"></a>Voir aussi
-* [Réalité mixte - Entrées - Cours 210 : Pointage du regard](holograms-210.md)
-* [HEAD et surveillez les regards dans DirectX](gaze-in-directx.md)
-* [Pointage du regard dans Unity](gaze-in-unity.md)
+* [Réalité mixte - Entrées - Cours 210 : Utilisation de la tête](holograms-210.md)
+* [Suivre de la tête et du regard dans DirectX](gaze-in-directx.md)
+* [Head regards dans Unity](gaze-in-unity.md)
+* [Yeux sur HoloLens 2](eye-tracking.md)
+* [Surveillez les regards dans Unity à l’aide du Kit de ressources de réalité mixte](https://aka.ms/mrtk-eyes)
