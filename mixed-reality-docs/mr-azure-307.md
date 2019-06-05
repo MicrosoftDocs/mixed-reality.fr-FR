@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: réalité Azure, mixte, academy, unity, didacticiel, api, apprentissage automatique, ml studio d’apprentissage machine, hololens, immersives, vr
-ms.openlocfilehash: 726a6cce91d46ad878f8502381d085fb979ac72a
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 93263817df0fd809a09b32c1b34a636eab7026a1
+ms.sourcegitcommit: 9b6949d7cd2e67e6bde9b32aebeaeea325baa6c4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59594338"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66516037"
 ---
 >[!NOTE]
 >Les didacticiels Académie de réalité mixte ont été conçus avec HoloLens (1er gen) et des casques IMMERSIFS réalité mixte à l’esprit.  Par conséquent, nous estimons qu’il est important de laisser ces didacticiels en place pour les développeurs qui cherchent toujours pour obtenir des conseils de développement pour ces appareils.  Ces didacticiels seront **_pas_** être mis à jour avec les ensembles d’outils ou les interactions utilisées pour HoloLens 2 dernières.  Ils seront conservées pour continuer à travailler sur les appareils pris en charge. Il y aura une nouvelle série de didacticiels seront publiés dans le futur qui va vous montrer comment développer pour HoloLens 2.  Cet avis sera mis à jour avec un lien vers ces didacticiels lorsqu’elles sont validées.
@@ -91,9 +91,9 @@ Pour utiliser l’API de Translator Azure, vous devrez configurer une instance d
 
     1.  Insérer un **nom** pour votre compte, n’oubliez pas ce champ accepte uniquement des lettres minuscules et chiffres.
     2.  Pour **modèle de déploiement,** sélectionnez **Resource manager**.
-    3.  Pour **type de compte**, sélectionnez **stockage (usage général v1)**.
+    3.  Pour **type de compte**, sélectionnez **stockage (usage général v1)** .
     4.  Pour **performances**, sélectionnez **Standard**.
-    5.  Pour **réplication** sélectionnez **en lecture-access-geo-redundant storage (RA-GRS)**.
+    5.  Pour **réplication** sélectionnez **en lecture-access-geo-redundant storage (RA-GRS)** .
     6.  Laissez **transfert sécurisé requis** comme **désactivé**.
     7.  Sélectionnez un **abonnement**.
     4. Choisissez un **groupe de ressources** ou créez-en un. Un groupe de ressources offre un moyen pour surveiller, contrôler l’accès, approvisionner et gérer la facturation pour une collection de ressources Azure. Il est recommandé de garder tous les services Azure associés à un projet unique (par exemple, par exemple, ces laboratoires) sous un groupe de ressources communs).
@@ -144,7 +144,7 @@ Pour utiliser le *Azure Machine Learning*, vous devez configurer une instance du
 
     9.  Vous devez également confirmer que vous avez compris les termes et Conditions appliquées à ce Service.
 
-    10. Cliquez sur **Create (Créer)**.
+    10. Cliquez sur **Create (Créer)** .
 
         ![Azure Machine Learning Studio](images/AzureLabs-Lab7-6.png)
 
@@ -204,7 +204,7 @@ Cet exemple de table contient des 9998 entrées.
 
     3.  Dans le champ de texte ci-dessous, entrez **ProductsTableCSV.csv** comme nom pour le jeu de données (bien que doit être ajouté automatiquement).
 
-    4.  À l’aide de la liste déroulante pour **Type**, sélectionnez **fichier CSV générique avec un en-tête (.csv)**.
+    4.  À l’aide de la liste déroulante pour **Type**, sélectionnez **fichier CSV générique avec un en-tête (.csv)** .
 
     5.  Appuyez sur les graduations dans la partie inférieure droite de la fenêtre de chargement et votre **Dataset** sera téléchargé.
 
@@ -220,23 +220,23 @@ Pour commencer à créer une expérience :
 
 2.  Une nouvelle page s’affiche avec une expérience vide :
 
-3.  À partir du panneau sur la gauche développer **jeux de données enregistrés* > * Mes jeux de données ** et faites glisser le **ProductsTableCSV** à la **canevas de l’expérience**.
+3.  À partir du Panneau de gauche, développez **jeux de données enregistrés* > *mes jeux de données** et faites glisser le **ProductsTableCSV** sur le **Zone d’expérience**.
 
     ![Machine Learning Studio : L’expérience](images/AzureLabs-Lab7-16.png)
 
-4.  Dans le volet gauche, développez **Transformation des données** > **Sample and Split**. Puis faites glisser le **fractionner les données** élément dans le **canevas de l’expérience**. L’élément de données de fractionnement fractionne le jeu de données en deux parties. Une partie, vous allez utiliser pour l’apprentissage de l’algorithme d’apprentissage. La deuxième partie est utilisée pour évaluer la précision de l’algorithme généré.
+4.  Dans le volet gauche, développez **Transformation des données** > **Sample and Split**. Puis faites glisser le **fractionner les données** élément dans le **canevas de l’expérience**. L’élément de données de fractionnement fractionne le jeu de données en deux parties. Une partie, vous allez utiliser pour l’apprentissage de l’algorithme d’apprentissage. La deuxième partie est utilisée pour évaluer la précision de l’algorithme généré.
 
     ![Machine Learning Studio : L’expérience](images/AzureLabs-Lab7-17.png)
 
-5.  Dans le volet de droite (lors de la fractionner les données élément sur le canevas est sélectionné), modifiez le **Fraction de lignes dans le premier jeu de données de sortie** à **0,7**. Il fractionne les données en deux parties, la première partie sera 70 % des données, et la deuxième partie est le 30 % restantes. Pour garantir que les données sont fractionnées de façon aléatoire, vérifiez que le **fractionnement aléatoire** case à cocher reste cochée.
+5.  Dans le volet de droite (lors de la fractionner les données élément sur le canevas est sélectionné), modifiez le **Fraction de lignes dans le premier jeu de données de sortie** à **0,7**. Il fractionne les données en deux parties, la première partie sera 70 % des données, et la deuxième partie est le 30 % restantes. Pour garantir que les données sont fractionnées de façon aléatoire, vérifiez que le **fractionnement aléatoire** case à cocher reste cochée.
 
     ![Machine Learning Studio : L’expérience](images/AzureLabs-Lab7-18.png)
 
-6.  Faites glisser une connexion à partir de la base de la **ProductsTableCSV** élément sur le canevas en haut de l’élément de fractionner les données. Cela lier des éléments et envoyer le **ProductsTableCSV** sortie du jeu de données (données) à fractionner les données d’entrée.  
+6.  Faites glisser une connexion à partir de la base de la **ProductsTableCSV** élément sur le canevas en haut de l’élément de fractionner les données. Cela lier des éléments et envoyer le **ProductsTableCSV** sortie du jeu de données (données) à fractionner les données d’entrée.  
 
     ![Machine Learning Studio : L’expérience](images/AzureLabs-Lab7-19.png)
 
-7.  Dans le **expériences** panneau sur le côté gauche, développez **Machine Learning* > * Train **. Faites glisser le **former modèle ** élément out dans la zone de dessin. La zone de travail doit se présenter le même que le ci-dessous.
+7.  Dans le **expériences** panneau sur le côté gauche, développez **Machine Learning* > * Train **. Faites glisser le **former le modèle** élément arrière dans la zone de dessin. La zone de travail doit se présenter le même que le ci-dessous.
 
     ![Machine Learning Studio : L’expérience](images/AzureLabs-Lab7-20.png)
 
@@ -244,31 +244,31 @@ Pour commencer à créer une expérience :
 
     ![Machine Learning Studio : L’expérience](images/AzureLabs-Lab7-21.png)
 
-9.  Sélectionnez le **former le modèle** élément sur le canevas et, dans le **propriétés** cliquez sur Panneau de configuration (sur le côté droit de la fenêtre du navigateur) le **lancer le sélecteur de colonne**  bouton.
+9.  Sélectionnez le **former le modèle** élément sur le canevas et, dans le **propriétés** cliquez sur Panneau de configuration (sur le côté droit de la fenêtre du navigateur) le **lancer le sélecteur de colonne** bouton.
 
 10. Dans le type de zone de texte **produit** , puis appuyez sur **entrée**, *produit* sera définie comme une colonne pour l’apprentissage des prédictions. Ensuite, cliquez sur le **graduation** en bas à droite pour fermer la boîte de dialogue de sélection.
 
     ![Machine Learning Studio : L’expérience](images/AzureLabs-Lab7-22.png)
 
-11. Vous vous apprêtez à former un **Multiclass Logistic Regression** algorithme pour prédire les plus vendus **produit** selon l’heure de la journée et la date. Il n’entre pas dans le cadre de ce document pour expliquer les détails des différents algorithmes fournis par Azure Machine Learning studio, cependant, vous pouvez trouver plus d’informations à partir de la [Machine Learning aide-mémoire d’algorithme](https://docs.microsoft.com/azure/machine-learning/studio/algorithm-cheat-sheet)
+11. Vous vous apprêtez à former un **Multiclass Logistic Regression** algorithme pour prédire les plus vendus **produit** selon l’heure de la journée et la date. Il n’entre pas dans le cadre de ce document pour expliquer les détails des différents algorithmes fournis par Azure Machine Learning studio, cependant, vous pouvez trouver plus d’informations à partir de la [Machine Learning aide-mémoire d’algorithme](https://docs.microsoft.com/azure/machine-learning/studio/algorithm-cheat-sheet)
 
-12. Dans le panneau éléments expérience sur la gauche, développez ***Machine Learning* > *initialiser le modèle* > * classement ***et faites glisser le **Multiclass Logistique régression ** élément une session sur le canevas d’expérience.
+12. Dans le panneau éléments expérience sur la gauche, développez ***Machine Learning* > *initialiser le modèle* > * *** de Classification, puis faites glisser le **Multiclass Logistic Regression**  élément une session sur le canevas d’expérience.
 
 13. Connectez la sortie, en bas de la **Multiclass Logistic Regression**, à l’entrée de l’angle supérieur gauche de la **former le modèle** élément.
 
     ![Machine Learning Studio : L’expérience](images/AzureLabs-Lab7-23.png)
 
-14. Dans la liste des éléments d’expérience dans le volet gauche, développez **Machine Learning* > * Score**et faites glisser le **élément de modèle de Score ** une session sur le canevas.
+14. Dans la liste des éléments d’expérience dans le volet gauche, développez **Machine Learning* > * Score **, puis faites glisser le **noter le modèle** élément une session sur le canevas.
 
-15. Connectez la sortie, en bas de la **former le modèle**, à l’entrée de l’angle supérieur gauche de la **noter le modèle**.
+15. Connectez la sortie, en bas de la **former le modèle**, à l’entrée de l’angle supérieur gauche de la **noter le modèle**.
 
-16. Connectez la sortie en bas à droite de **fractionner les données**, à l’entrée en haut à droite de la **noter le modèle* élément *.
+16. Connectez la sortie en bas à droite de **fractionner les données**, à l’entrée en haut à droite de la  **noter le modèle* élément*.
 
     ![Machine Learning Studio : L’expérience](images/AzureLabs-Lab7-24.png)
 
-17. Dans la liste des **expérience** éléments dans le volet gauche, développez ***Machine Learning* > * évaluer ***et faites glisser le **élément modèle ** évaluer sur le canevas.
+17. Dans la liste des **expérience** éléments dans le volet gauche, développez ***Machine Learning* > * évaluer ***, puis faites glisser le **évaluer le modèle** élément sur le canevas.
 
-18. Connectez la sortie à partir de la **noter le modèle** à l’entrée de l’angle supérieur gauche de la **évaluer le modèle**.
+18. Connectez la sortie à partir de la **noter le modèle** à l’entrée de l’angle supérieur gauche de la **évaluer le modèle**.
 
     ![Machine Learning Studio : L’expérience](images/AzureLabs-Lab7-25.png)
 
@@ -278,11 +278,11 @@ Pour commencer à créer une expérience :
 
 20. Vous pouvez voir le **état** de l’expérience dans l’angle supérieur droit de la zone de dessin. Attendez quelques instants pour l’expérience se termine.
 
-    > Si vous avez un jeu de données volumineuses (réel), il est probable que l’expérience peut prendre des heures à exécuter.
+    > Si vous avez un jeu de données volumineuses (réel), il est probable que l’expérience peut prendre des heures à exécuter.
 
     ![Machine Learning Studio : L’expérience](images/AzureLabs-Lab7-27.png)
 
-21. Cliquez avec le bouton droit sur le **évaluer le modèle** d’élément dans la zone de dessin et le pointage de menu contextuel à partir de la souris sur **résultats d’évaluation**, puis sélectionnez **visualiser**.
+21. Cliquez avec le bouton droit sur le **évaluer le modèle** d’élément dans la zone de dessin et le pointage de menu contextuel à partir de la souris sur **résultats d’évaluation**, puis sélectionnez **visualiser**.
 
     ![Machine Learning Studio : L’expérience](images/AzureLabs-Lab7-28.png)
 
@@ -292,17 +292,17 @@ Pour commencer à créer une expérience :
 
 23. Fermer le **résultats**.
 
-24. Pour utiliser votre modèle Machine Learning reformé, vous devez exposer en tant qu’un **Service Web**. Pour ce faire, cliquez sur le **configurer le Service Web** dans le menu en bas de la page d’élément de menu, puis cliquez sur **Service Web prédictif**.
+24. Pour utiliser votre modèle Machine Learning reformé, vous devez exposer en tant qu’un **Service Web**. Pour ce faire, cliquez sur le **configurer le Service Web** dans le menu en bas de la page d’élément de menu, puis cliquez sur **Service Web prédictif**.
 
     ![Machine Learning Studio : L’expérience](images/AzureLabs-Lab7-30.png)
 
 25. Un nouvel onglet est créé, et le former le modèle fusionnés pour créer le nouveau service web. 
 
-26. Dans le menu en bas de la page, cliquez sur **enregistrer**, puis cliquez sur **exécuter**. Vous verrez l’état mis à jour dans l’angle supérieur droit de la zone de dessin.
+26. Dans le menu en bas de la page, cliquez sur **enregistrer**, puis cliquez sur **exécuter**. Vous verrez l’état mis à jour dans l’angle supérieur droit de la zone de dessin.
 
     ![Machine Learning Studio : L’expérience](images/AzureLabs-Lab7-31.png)
 
-27. Une fois qu’elle est terminée, un **déployer le Service Web** bouton s’affiche en bas de la page. Vous êtes prêt à déployer le service web. Cliquez sur **déployer le Service Web** (classique) dans le menu en bas de la page.
+27. Une fois qu’elle est terminée, un **déployer le Service Web** bouton s’affiche en bas de la page. Vous êtes prêt à déployer le service web. Cliquez sur **déployer le Service Web** (classique) dans le menu en bas de la page.
 
     ![Machine Learning Studio : L’expérience](images/AzureLabs-Lab7-32.png)
 
@@ -313,7 +313,7 @@ Pour commencer à créer une expérience :
     ![Machine Learning Studio : L’expérience](images/AzureLabs-Lab7-33.png)
 
     > [!NOTE] 
-    > Si vous cliquez sur Test dans cette page, vous serez en mesure d’entrer des données d’entrée et afficher la sortie. Entrez le **jour** et **heure**. Laissez le **produit** entrée vide. Puis cliquez sur le **confirmer** bouton. La sortie au bas de la page affiche l’objet JSON qui représente la probabilité de chaque produit qui est le choix.
+    > Si vous cliquez sur Test dans cette page, vous serez en mesure d’entrer des données d’entrée et afficher la sortie. Entrez le **jour** et **heure**. Laissez le **produit** entrée vide. Puis cliquez sur le **confirmer** bouton. La sortie au bas de la page affiche l’objet JSON qui représente la probabilité de chaque produit qui est le choix.
 
 29. Une nouvelle page web s’ouvre, affichant les instructions et des exemples sur la structure de requête requis par Machine Learning Studio. Copie le **URI de requête** affichés dans cette page, dans votre bloc-notes.
 
@@ -500,7 +500,7 @@ Dans le cadre du package importé, vous vous ont été données cette classe, m�
     ![Créer la classe ShelfKeeper](images/AzureLabs-Lab7-51.png)
 
     > [!IMPORTANT]
-    > Si votre script n’a pas les cibles de référence (par exemple, *Date (texte de maillage)*), faites simplement glisser les objets correspondants de la **hiérarchie panneau**, dans les champs de la cible. Voir ci-dessous pour savoir plus, si nécessaire :
+    > Si votre script n’a pas les cibles de référence (par exemple, *Date (texte de maillage)* ), faites simplement glisser les objets correspondants de la **hiérarchie panneau**, dans les champs de la cible. Voir ci-dessous pour savoir plus, si nécessaire :
     > 
     > 1.  Ouvrez le **Spawn Point** de tableau dans le **ShelfKeeper** script composant par clic gauche il. Une sous-section apparaît appelée **taille**, ce qui indique la taille du tableau. Type **3** dans la zone de texte suivant pour **taille** et appuyez sur **entrée**, et trois emplacements seront créés sous.
     > 2. Dans le **hiérarchie** développez la **affichage temps** objet (en cliquant dessus à la flèche en regard de celle-ci). Ensuite cliquez sur le ***Main Camera*** depuis le **hiérarchie**, de sorte que le **inspecteur** montre ses informations.
@@ -811,7 +811,7 @@ Pour créer cette classe :
 
 14. Faites glisser le **ProductPrediction** classe le script à partir de la **Script** dossier, sur le **Main Camera** objet.
 
-15. Enregistrer votre projet et scène **fichier** > ***enregistrer la scène* / *fichier***   >  **Enregistrer le projet**.
+15. Enregistrer votre projet et scène **fichier** >  ***enregistrer la scène* / *fichier***   >  **Enregistrer le projet**.
 
 ## <a name="chapter-10---build-the-uwp-solution"></a>Chapitre 10 - générer la Solution UWP
 
