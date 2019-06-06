@@ -6,18 +6,18 @@ ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, conception, style, de police, typographie, l’interface utilisateur, l’expérience utilisateur
-ms.openlocfilehash: b4bac35cbc412ec7102748350c2f5c1e236c2f7d
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: debf125a7f82ac79fe3ad776ba9c8c0b69396848
+ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59596046"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66692371"
 ---
 # <a name="typography"></a>Typographie
 
 Le texte est un élément important pour fournir des informations dans votre expérience d’application. Tout comme la typographie sur les écrans 2D, vise à être clairs et lisible. Avec l’aspect en trois dimensions de réalité mixte, il existe une opportunité pour affecter le texte et l’utilisateur globale expérience de manière encore plus grande.
 
-![Exemple de typographie dans HoloLens](images/640px-typography-hero2.jpg)<br>
+![Exemple de typographie dans HoloLens](images/typography-cover.png)<br>
 *Exemple de typographie dans HoloLens*
 
 Lorsque nous parlons de type en 3D, nous avons tendance à considérer extrudé, volumétrique texte 3D. À l’exception de certaines conceptions logotype et quelques autres applications limitées, texte extrudé a tendance à se dégrader la lisibilité du texte. Bien que nous allons concevoir des expériences pour 3D, nous utilisons 2D pour le type, car il est plus lisible et plus facile à lire.
@@ -33,7 +33,7 @@ Règles typographiques en réalité mixte diffèrent pas nulle part ailleurs. Le
 Générer le contraste et la hiérarchie à l’aide de poids et tailles de type différent. Définition d’une rampe de type ou le suivant dans l’ensemble de l’expérience de l’application fournit une expérience utilisateur satisfaisante avec la hiérarchie de la cohérence des informations.
 
 ![Exemples de types de démarrage](images/typography-ramp-1000px.jpg)<br>
-*Exemples de types de démarrage*
+*Définir votre rampe de type et de suivre tout au long de l’expérience d’application*
 
 ### <a name="limit-your-fonts"></a>Limiter vos polices
 
@@ -52,42 +52,56 @@ Dans HoloLens, étant donné que les hologrammes sont construits avec un systèm
 <br>
 
 
-![Nous recommandons à l’aide du texte blanc sur une plaque arrière sombre ou en couleur.](images/typography-whiteonblack2-1000px.jpg)
-
-Nous recommandons à l’aide du texte blanc sur une plaque arrière sombre ou en couleur.
-
+![Nous recommandons à l’aide du texte blanc sur une plaque arrière sombre ou en couleur. ](images/typography-whiteonblack2-1000px.jpg)
+ *Exemples de texte blanc sur une plaque arrière sombre ou en couleur.*
 <br>
-
-
-![Exemples de texte noir](images/640px-typography-textcolors.jpg)
 
 Pour utiliser le texte foncé, vous devez utiliser une plaque arrière brillant pour le rendre accessible en lecture. Dans les systèmes de couleurs additives, noir est affiché comme transparente. Cela signifie que vous ne serez pas en mesure de voir le texte sans une couleur noir plaque de sauvegarde.
 
-<br>
+![Exemples de texte noir](images/typography-whiteonblack.png)
+<br>*Exemples de blanc DOS et noir sur blanc texte*
 
 
 ![Exemples de texte noir](images/640px-typography-blackonwhite.jpg)
-
-Vous trouverez des exemples de texte en noir dans les applications UWP tels que le Store ou les paramètres.
+<br>*Exemples de texte en noir dans les applications système - Store et les paramètres*
 
 ## <a name="recommended-font-size"></a>Taille de police recommandée
 
-![Deux compteurs est la distance optimale pour l’affichage de texte.](images/typography-distance-1000px.jpg)
+Comme vous pouvez l’imaginer, les tailles de type que nous utilisons sur un PC ou une tablette (en général entre 12 – 32 points) Examinez relativement petites une distance de 2 mètres. Il dépend des caractéristiques de chaque police, mais en général le minimum recommandé affichage angle et la hauteur de police pour une meilleure lisibilité concernent 0.35°-0.4°/12.21-13.97mm selon nos études de recherche utilisateur. Il s’agit 35-40pt avec le facteur d’échelle présentée ci-dessus. 
 
-Deux compteurs est la distance optimale pour l’affichage de texte.
+Pour l’interaction proche à 0.45m(45cm), angle de visualisation de la police lisibles minimale et la hauteur sont 0,4 °-0,5 ° / 3.14 – 3.9 mm. Il s’agit 9-12 pt avec le facteur d’échelle présentée ci-dessus.
 
-Étant donné que la réalité mixte implique la profondeur en trois dimensions, il n’est pas toujours facile de communiquer la taille de la police. Pour plus de confort de l’utilisateur, deux compteurs est la distance optimale pour placer hologrammes. Nous pouvons utiliser cette distance comme base pour rechercher la taille de police optimal.
+![NEAR et far plage d’interaction](images/typography-distance-1000px.jpg)
+*plage de contenu à proximité et lointain interaction*
 
-Comme vous pouvez l’imaginer, les tailles de type que nous utilisons sur un PC ou une tablette (en général entre 12 – 32 points) Examinez relativement petites une distance de 2 mètres. Il dépend des caractéristiques de chaque police, mais en général, la taille minimale recommandée pour une meilleure lisibilité sans vibration de trait est environ 30pt. Si votre application est censée être utilisée à distance plus proche, plus petites tailles de type peut être utilisés. **La taille du point repose sur le maillage de texte 3D d’Unity et le texte de l’interface utilisateur. Pour les métriques détaillées et les facteurs d’échelle, reportez-vous à [texte dans Unity](text-in-unity.md).**
+### <a name="the-minimum-legible-font-size"></a>La taille de police lisibles minimale
+| Distance | Angle de visualisation | Hauteur du texte | Taille de police ** |
+|---------|---------|---------|---------|
+| 45 centimètres (distance manipulation directe) | 0.4°-0.5° | 3.14 – 3.9 mm | 8.9 – 11.13pt |
+| 2m | 0.35°-0.4° | 12.21 – 13.97 mm | 34.63-39.58pt |
+
+
+### <a name="the-comfortably-legible-font-size"></a>La taille de police confortablement lisibles
+| Distance | Angle de visualisation | Hauteur du texte | Taille de police ** |
+|---------|---------|---------|---------|
+| 45 centimètres (distance manipulation directe) | 0.65°-0.8° | 5.1-6.3 mm | 14.47-17.8pt |
+| 2m | 0.6°-0.75° | 20,9-26,2 mm | 59.4-74.2pt |
+
+
+Segoe UI (la police par défaut pour Windows) fonctionne bien dans la plupart des cas. Toutefois, évitez d’utiliser les familles de polices clair light ou semi de petite taille dans la mesure où les traits verticaux minces seront vibration et cela dégradera la lisibilité. Polices modernes avec suffisamment épaisseur du trait fonctionnent bien. Par exemple, Helvetica et Arial rechercher exceptionnelles et sont très lisible en HoloLens avec des poids réguliers ou en gras.
+
+** Pour plus d’informations sur le calcul de taille de texte dans Unity, reportez-vous à la page [texte dans Unity](text-in-unity.md)
+
+![Angle d’affichage](images/Text_In_Unity_ViewingAngle.jpg)
+*affichage hauteur distance et angle de texte*
 
 ## <a name="resources"></a>Ressources
 * [Polices Segoe](http://download.microsoft.com/download/1/B/C/1BCF071A-78EE-4968-ACBE-15461C274B61/Segoe%20fonts%20v1705.zip)
 * [Police de HoloLens](http://download.microsoft.com/download/3/8/D/38D659E2-4B9C-413A-B2E7-1956181DC427/Hololens%20font.zip)
 
 ![La police HoloLens vous donne les glyphes de symbole utilisés dans Windows Mixed Reality](images/300px-hololensmdl2symbols.jpg)
-
-La police HoloLens vous donne les glyphes de symbole utilisés dans la réalité mixte de Windows.
+<br>*La police HoloLens vous donne les glyphes de symbole utilisés dans la réalité mixte de Windows.*
 
 ## <a name="see-also"></a>Voir aussi
-* [Texte dans Unity](http://holodocsfuture/index.php?title=Text_in_Unity&action=edit&redlink=1)
-* [Couleur, clair et supports](color,-light-and-materials.md)
+* [Texte dans Unity](text-in-unity.md)
+* [Couleurs, éclairage et matériaux](color,-light-and-materials.md)
