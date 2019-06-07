@@ -6,12 +6,12 @@ ms.author: joekelly
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, son spatial, de conception, de style
-ms.openlocfilehash: c8f5268faf5eef779401c046947c3137d177cb89
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: c758037300392d9365c16933677fb0f026976c2a
+ms.sourcegitcommit: c2a5bff423feba7d29d5431c870b6017c2fe1bc2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59593270"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66750305"
 ---
 # <a name="spatial-sound-design"></a>Sonorisation spatiale
 
@@ -26,12 +26,23 @@ Si vous avez déjà lu [Marco Polo](https://en.wikipedia.org/wiki/Marco_Polo_(ga
 ## <a name="device-support"></a>Prise en charge des appareils
 
 <table>
-<tr>
-<th>Fonctionnalité</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Casques IMMERSIFS</a></th>
-</tr><tr>
-<td> Son spatial</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
-</tr>
+    <colgroup>
+    <col width="33%" />
+    <col width="33%" />
+    <col width="33%" />
+    </colgroup>
+    <tr>
+        <td><strong>Fonctionnalité</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Casques IMMERSIFS</strong></a></td>
+    </tr>
+     <tr>
+        <td>Sonorisation spatiale</td>
+        <td>✔️</td>
+        <td>✔️</td>
+    </tr>
 </table>
+
 
 ## <a name="four-key-things-spatial-sound-does-for-mixed-reality-development"></a>Quatre éléments clés son spatial fait pour le développement de la réalité mixte
 

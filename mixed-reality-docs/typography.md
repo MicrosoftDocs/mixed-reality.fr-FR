@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, conception, style, de police, typographie, l’interface utilisateur, l’expérience utilisateur
-ms.openlocfilehash: debf125a7f82ac79fe3ad776ba9c8c0b69396848
-ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
+ms.openlocfilehash: 6371aa9b12b61d12acdaaae5f7730ff2ae9757f0
+ms.sourcegitcommit: c2a5bff423feba7d29d5431c870b6017c2fe1bc2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66692371"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66750337"
 ---
 # <a name="typography"></a>Typographie
 
@@ -67,9 +67,9 @@ Pour utiliser le texte foncé, vous devez utiliser une plaque arrière brillant 
 
 ## <a name="recommended-font-size"></a>Taille de police recommandée
 
-Comme vous pouvez l’imaginer, les tailles de type que nous utilisons sur un PC ou une tablette (en général entre 12 – 32 points) Examinez relativement petites une distance de 2 mètres. Il dépend des caractéristiques de chaque police, mais en général le minimum recommandé affichage angle et la hauteur de police pour une meilleure lisibilité concernent 0.35°-0.4°/12.21-13.97mm selon nos études de recherche utilisateur. Il s’agit 35-40pt avec le facteur d’échelle présentée ci-dessus. 
+Comme vous pouvez l’imaginer, les tailles de type que nous utilisons sur un PC ou une tablette (en général entre 12 – 32 points) Examinez relativement petites une distance de 2 mètres. Il dépend des caractéristiques de chaque police, mais en général le minimum recommandé affichage angle et la hauteur de police pour une meilleure lisibilité concernent 0.35°-0.4°/12.21-13.97mm selon nos études de recherche utilisateur. Il concerne la 35-40pt avec le facteur d’échelle introduit dans [texte dans Unity](text-in-unity.md) page. 
 
-Pour l’interaction proche à 0.45m(45cm), angle de visualisation de la police lisibles minimale et la hauteur sont 0,4 °-0,5 ° / 3.14 – 3.9 mm. Il s’agit 9-12 pt avec le facteur d’échelle présentée ci-dessus.
+Pour l’interaction proche à 0.45m(45cm), angle de visualisation de la police lisibles minimale et la hauteur sont 0,4 °-0,5 ° / 3.14 – 3.9 mm. Il concerne la 9-12 pt avec le facteur d’échelle introduit dans [texte dans Unity](text-in-unity.md).
 
 ![NEAR et far plage d’interaction](images/typography-distance-1000px.jpg)
 *plage de contenu à proximité et lointain interaction*
