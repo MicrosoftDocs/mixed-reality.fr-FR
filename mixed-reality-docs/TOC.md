@@ -133,7 +133,7 @@
 ## Services cloud de réalité mixte
 ### [Azure Spatial Anchors](https://docs.microsoft.com/azure/spatial-anchors)
 ### [Holographic Remoting Player](holographic-remoting-player.md)
-### [Termes du contrat de licence pour Holographic Remoting Player](microsoft-holographic-remoting-software-license-terms.md)
+### [Termes du contrat de licence pour Holographic Remoting Player](https://docs.microsoft.com/en-us/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
 ## Unity
 ### [Vue d’ensemble du développement Unity](unity-development-overview.md)
 ### Prise en main
