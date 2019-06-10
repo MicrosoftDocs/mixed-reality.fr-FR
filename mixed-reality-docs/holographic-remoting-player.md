@@ -6,12 +6,12 @@ ms.author: jlyons
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, la communication à distance, la communication à distance HOLOGRAPHIQUE
-ms.openlocfilehash: 24213444686dd2e5dbda4016dd551a8ead8f305a
-ms.sourcegitcommit: aba33a8ad1416f7598048ac35ae9ab1734bd5c37
+ms.openlocfilehash: b8354295f9752e73cc9b34c1769254e49808b63f
+ms.sourcegitcommit: c6b59f532a9c5818d9b25c355a174a231f5fa943
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66270316"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66813720"
 ---
 # <a name="holographic-remoting-player"></a>Lecteur de communication à distance HOLOGRAPHIQUE
 
@@ -52,5 +52,5 @@ Tandis que dans l’écran principal, vous pouvez dire **« désactiver les dia
 * Nous vous recommandons de que vous connecter à votre PC à votre réseau via ethernet pour réduire le nombre de tronçons de sans fil.
 
 ## <a name="see-also"></a>Voir aussi
-* [Termes du contrat de licence pour Holographic Remoting Player](microsoft-holographic-remoting-software-license-terms.md)
+* [Termes du contrat de licence pour Holographic Remoting Player](https://docs.microsoft.com/en-us/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
 * [Déclaration de confidentialité Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839)

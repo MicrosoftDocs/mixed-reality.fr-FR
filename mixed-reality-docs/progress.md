@@ -6,18 +6,18 @@ ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, conception, contrôles, l’interface utilisateur, l’expérience utilisateur
-ms.openlocfilehash: 9edddc7800f0d7334d1ceba97b9a06fd6d4580ac
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: d62d86c690233f351b6c156c66eba33cb2687ea6
+ms.sourcegitcommit: c6b59f532a9c5818d9b25c355a174a231f5fa943
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59596017"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66813728"
 ---
 # <a name="displaying-progress"></a>Affichage de la progression
 
 Un contrôle de progression offre un retour à l’utilisateur lorsqu’une longue opération est en cours. Cela peut signifier que l’utilisateur ne peut pas interagir avec l’application lorsque l’indicateur de progression est visible et peut également indiquer le temps d’attente en fonction de l’indicateur utilisé.
 
-![Exemple d’anneau de progression dans HoloLens](images/640px-progress-hero.jpg)<br>
+![Exemple d’anneau de progression dans HoloLens](images/HoloLens2_Loader.gif)<br>
 *Exemple d’anneau de progression dans HoloLens*
 
 ## <a name="types-of-progress"></a>Types de progression
@@ -47,7 +47,8 @@ Vous pouvez ajouter à la personnalité et une identité de marque de votre appl
 * Il est toujours judicieux de fournir des informations d’état sur ce qui se passe à l’utilisateur. Le préfabriqué progression fournit différents styles visuels, y compris la progression de type d’anneau standard de Windows pour fournir l’état. Vous pouvez également utiliser une maille personnalisée avec une animation, si vous souhaitez que le style de votre progression pour l’aligner sur la marque de votre application.
 
 ## <a name="see-also"></a>Voir aussi
-* [Scripts et prefabs pour la progression sur le Kit de ressources de réalité mixte](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit-Examples/UX/Readme/README_ProgressExample.md)
-* [Objet sur](interactable-object.md)
+* [Scripts de progression et prefabs sur le Kit de ressources de réalité mixte](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/Features/UX/Prefabs/Loader)
+* [Zone englobante](app-bar-and-bounding-box.md)
+* [Objet avec interaction possible](interactable-object.md)
 * [Collection d’objets](object-collection.md)
-* [Le billboarding et tag-along](billboarding-and-tag-along.md)
+* [Billboarding et tag-along](billboarding-and-tag-along.md)
