@@ -91,7 +91,7 @@ Pour une aide sur le réglage de capteur, veuillez suivre ce [lien vers l’arti
 3. Configurer votre **Machine virtuelle Ubuntu** à l’aide de **Hyper-V**. Les ressources suivantes vous aideront avec le processus.
     1.  Tout d’abord, suivez ce lien pour [télécharger le fichier ISO Ubuntu 16.04.4 LTS (Xenial Xerus)](http://au.releases.ubuntu.com/16.04/). Sélectionnez le **image de bureau de PC (AMD64) 64 bits**.
     2.  Assurez-vous que **Hyper-V** est activée sur votre ordinateur Windows 10. Vous pouvez suivre ce lien pour obtenir des conseils sur [installation et l’activation d’Hyper-V sur Windows 10](https://docs.microsoft.com/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v).
-    3.  Démarrer Hyper-V et créer une nouvelle VM Ubuntu. Vous pouvez suivre ce lien pour une [guide étape par étape sur la façon de créer une machine virtuelle avec Hyper-V](https://docs.microsoft.com/virtualization/hyper-v-on-windows/quick-start/create-virtual-machine). Lorsque la demande est **« Installer un système d’exploitation à partir d’un fichier image de démarrage »**, sélectionnez le **ISO Ubuntu** avoir téléchargement précédemment.
+    3.  Démarrer Hyper-V et créer une nouvelle VM Ubuntu. Vous pouvez suivre ce lien pour une [guide étape par étape sur la façon de créer une machine virtuelle avec Hyper-V](https://docs.microsoft.com/virtualization/hyper-v-on-windows/quick-start/create-virtual-machine). Lorsque la demande est **« Installer un système d’exploitation à partir d’un fichier image de démarrage »** , sélectionnez le **ISO Ubuntu** avoir téléchargement précédemment.
 
     > [!NOTE]
     > À l’aide de **création rapide Hyper-V** n’est pas conseillée.  
@@ -277,7 +277,7 @@ Maintenant vous pouvez passer à la configuration de votre appareil **en cours d
         sudo apt-get install python-pip
     ```
 
-2.  Tout au long de ce chapitre, vous pouvez être invité, par *Terminal*d’autorisation d’utilisation du stockage de l’appareil et vous saisissiez **o/n** (Oui ou non), type **'y'**, puis appuyez sur la **Entrée** clé, à accepter.
+2.  Tout au long de ce chapitre, vous pouvez être invité, par *Terminal*d’autorisation d’utilisation du stockage de l’appareil et vous saisissiez **o/n** (Oui ou non), type **'y'** , puis appuyez sur la **Entrée** clé, à accepter.
 
 3.  Une fois cette commande terminée, utilisez la commande suivante pour installer **curl**:
 
@@ -320,7 +320,7 @@ Maintenant vous pouvez passer à la configuration de votre appareil **en cours d
 
     1.  Utilisez les touches de direction de votre clavier pour faire défiler vers le bas (vous devez faire défiler de façon un peu) pour atteindre la ligne contenant « :
 
-        "**\<AJOUTER ICI DEVICE CONNECTION STRING &GT;**".
+        " **\<AJOUTER ICI DEVICE CONNECTION STRING &GT;** ".
 
     2. Remplacez la ligne, **y compris les crochets**, avec le **Device Connection String** que vous avez noté précédemment.
 
@@ -404,7 +404,7 @@ Maintenant vous pouvez passer à la configuration de votre appareil **en cours d
 
 7. Vous pouvez remarquer un prédéfinis *référentiel d’images Docker* adresse apparaîtra dans la palette. Il doit ressembler :
 
-    **localhost:5000 /-nom de votre MODULE -**. 
+    **localhost:5000 /-nom de votre MODULE -** . 
 
 8. Supprimer **localhost:5000**et dans son insertion place le *Container Registry* **serveur de connexion** adresse que vous avez notée lors de la création du **conteneur Service de Registre** ([à l’étape 8, chapitre 2](#chapter-2---the-container-registry-service)). Appuyez sur la **entrée** clé, pour confirmer l’adresse.
 
@@ -744,7 +744,7 @@ Vous allez ensuite créer le *images* dossier, utilisé par le script python pou
 
 ## <a name="chapter-9---package-the-solution-as-a-container"></a>Chapitre 9 - Package de la solution en tant que conteneur
 
-1.  Vous êtes maintenant prêt à « package » de vos fichiers en tant que conteneur et les distribuer à vos **Azure Container Registry**. Dans VS Code, ouvrez le *Terminal intégré* (**Affichage > Terminal intégré / CTRL + '**) et utilisez la ligne suivante pour vous connecter à **Docker** (remplacez les valeurs de la commande avec les informations d’identification de votre **Azure Container Registry (ACR)**) :
+1.  Vous êtes maintenant prêt à « package » de vos fichiers en tant que conteneur et les distribuer à vos **Azure Container Registry**. Dans VS Code, ouvrez le *Terminal intégré* (**Affichage > Terminal intégré / CTRL + '** ) et utilisez la ligne suivante pour vous connecter à **Docker** (remplacez les valeurs de la commande avec les informations d’identification de votre **Azure Container Registry (ACR)** ) :
 
     ```bash
         docker login -u <ACR username> -p <ACR password> <ACR login server>
@@ -856,11 +856,11 @@ Accédez à votre portail Azure, où vous allez créer un Service de Tables Azur
 
     2. Pour **modèle de déploiement**, cliquez sur **Resource manager**.
 
-    3. Pour **type de compte**, utilisez le menu déroulant, cliquez sur **stockage (usage général v1)**.
+    3. Pour **type de compte**, utilisez le menu déroulant, cliquez sur **stockage (usage général v1)** .
 
     4. Cliquez sur un texte approprié **emplacement**.
     
-    5. Pour le **réplication** menu déroulant, cliquez sur **en lecture-access-geo-redundant storage (RA-GRS)**.
+    5. Pour le **réplication** menu déroulant, cliquez sur **en lecture-access-geo-redundant storage (RA-GRS)** .
 
     6. Pour **performances**, cliquez sur **Standard**.
 
@@ -874,7 +874,7 @@ Accédez à votre portail Azure, où vous allez créer un Service de Tables Azur
 
     10. Laissez **réseaux virtuels** comme **désactivé**, s’il s’agit d’une option pour vous.
 
-    11. Cliquez sur **Create (Créer)**.
+    11. Cliquez sur **Create (Créer)** .
 
         ![Renseignez les détails de stockage](images/AzureLabs-Lab313-37.png)
 
@@ -1023,7 +1023,7 @@ Vous devez tout d’abord, créez un fichier qui permettra à votre fonction Azu
 
     9. Vous n’aurez pas *Application Insights* dans cette application, par conséquent, n’hésitez pas à laisser **hors**.
 
-    10. Cliquez sur **Create (Créer)**.
+    10. Cliquez sur **Create (Créer)** .
 
         ![créer la nouvelle instance](images/AzureLabs-Lab313-55.png)
 
@@ -1047,7 +1047,7 @@ Vous devez tout d’abord, créez un fichier qui permettra à votre fonction Azu
 
     ![fonction personnalisée](images/AzureLabs-Lab313-59.png)
 
-13. Défilement vers le bas de la page suivante, jusqu'à ce que vous trouviez **IoT Hub (Event Hub)**, puis cliquez dessus.
+13. Défilement vers le bas de la page suivante, jusqu'à ce que vous trouviez **IoT Hub (Event Hub)** , puis cliquez dessus.
 
     ![fonction personnalisée](images/AzureLabs-Lab313-60.png)
 
