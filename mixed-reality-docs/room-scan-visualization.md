@@ -6,12 +6,12 @@ ms.author: alexpf
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, modèles d’application, la conception, HoloLens, analyse de la salle, spatiale de mappage, surface reconstruction, de maillage
-ms.openlocfilehash: 8ffde9d476e25016f986321377dce8125ee3a596
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 09df4464ea4dac01dfad637886b07b861f468d4d
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59596944"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829915"
 ---
 # <a name="room-scan-visualization"></a>Visualisation d’analyse de salle
 
@@ -27,11 +27,21 @@ Notez que dans tous ces cas, les données réelles collectées au cours de l’e
 ## <a name="device-support"></a>Prise en charge des appareils
 
 <table>
-<tr>
-<th>Fonctionnalité</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Casques IMMERSIFS</a></th>
-</tr><tr>
-<td> Visualisation d’analyse de salle</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"></td>
-</tr>
+    <colgroup>
+    <col width="33%" />
+    <col width="33%" />
+    <col width="33%" />
+    </colgroup>
+    <tr>
+        <td><strong>Fonctionnalité</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Casques IMMERSIFS</strong></a></td>
+    </tr>
+     <tr>
+        <td>Visualisation d’analyse de salle</td>
+        <td>✔️</td>
+        <td>❌</td>
+    </tr>
 </table>
 
 
@@ -83,6 +93,6 @@ Certaines applications peuvent reposer sur poursuit l’analyse pour actualiser 
 Un bon cas pour cette méthode est un où les hologrammes sont amenés à interagir avec le déplacement d’objets, par exemple, une voiture HOLOGRAPHIQUE que lecteurs sur le sol souhaitez correctement rencontrent une porte selon qu’il est ouvert ou fermé.
 
 ## <a name="see-also"></a>Voir aussi
-* [Conception de mappage spatial](spatial-mapping-design.md)
+* [Conception du mappage spatial](spatial-mapping-design.md)
 * [Systèmes de coordonnées](coordinate-systems.md)
-* [Sonorisation spatiale](spatial-sound-design.md)
+* [Conception du son spatial](spatial-sound-design.md)

@@ -119,7 +119,7 @@
 ### [Objet avec interaction possible](interactable-object.md)
 ### [Collection d’objets](object-collection.md)
 ### [Affichage de la progression](progress.md)
-### [Barre de l’application et cadre englobant](app-bar-and-bounding-box.md)
+### [Rectangle englobant et barre de l’application](app-bar-and-bounding-box.md)
 ## Conception pour la page d’accueil de la réalité mixte
 ### [Guide de conception du lanceur d’applications 3D](3d-app-launcher-design-guidance.md)
 ### [Créer des modèles 3D à utiliser dans la page d’accueil](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md)

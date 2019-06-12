@@ -6,12 +6,12 @@ ms.author: hakons
 ms.date: 03/21/2018
 ms.topic: article
 keywords: spatial son son à effet surround, audio 3d, audio audio, spatial 3d
-ms.openlocfilehash: ccb236a8b53e757ba632a1c7c6cb2d4f07735910
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: a30a484c4e47593556fbd1786158262551e11d22
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59594559"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829923"
 ---
 # <a name="spatial-sound"></a>Son spatial
 
@@ -26,13 +26,24 @@ Bien que hologrammes ne peuvent apparaître visuellement où le regard de l’ut
 ## <a name="device-support"></a>Prise en charge des appareils
 
 <table>
-<tr>
-<th>Fonctionnalité</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (1er gen)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"><a href="immersive-headset-hardware-details.md">Casques IMMERSIFS</a></th>
-</tr><tr>
-
-<td> Son spatial</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️ (avec un casque)</td>
-
-</tr>
+    <colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    </colgroup>
+    <tr>
+        <td><strong>Fonctionnalité</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens (1er gen)</strong></a></td>
+        <td><strong>HoloLens 2</strong></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Casques IMMERSIFS</strong></a></td>
+    </tr>
+     <tr>
+        <td>Son spatial</td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>✔️ (avec un casque)</td>
+    </tr>
 </table>
 
 ## <a name="simulating-the-perceived-location-and-distance-of-sounds"></a>Simulation de l’emplacement perçue et la distance de sons
@@ -62,4 +73,4 @@ Moteur audio spatial des Windows prend uniquement en charge un taux d’échanti
 * [MR 220 Spatial](holograms-220.md)
 * [Son spatial dans Unity](spatial-sound-in-unity.md)
 * [Son spatial dans DirectX](spatial-sound-in-directx.md)
-* [Sonorisation spatiale](spatial-sound-design.md)
+* [Conception du son spatial](spatial-sound-design.md)

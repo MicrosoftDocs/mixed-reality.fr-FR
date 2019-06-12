@@ -1,17 +1,17 @@
 ---
-title: Barre de l’application et de la zone englobante
+title: Cadre englobant de la zone et la barre de l’application
 description: La barre des applications est un menu de niveau de l’objet qui contient une série de boutons qui s’affiche sur le bord inférieur des limites d’un hologramme.
 author: radicalad
 ms.author: adlinv
-ms.date: 03/21/2018
+ms.date: 06/07/2019
 ms.topic: article
 keywords: Windows Mixed Reality, barre, zone englobante de l’application
-ms.openlocfilehash: ab472e1c988e6bdfb0a69d90e90280082b3db759
-ms.sourcegitcommit: c6b59f532a9c5818d9b25c355a174a231f5fa943
+ms.openlocfilehash: d289be31129324c6ff419b69dbce52bd8f62eb64
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66813852"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829684"
 ---
 # <a name="bounding-box-and-app-bar"></a>Cadre englobant de la zone et la barre de l’application
 ![La délimitation est l’interface standard pour la manipulation des objets dans la réalité mixte.](images/640px-boundingbox-hero.jpg)<br>

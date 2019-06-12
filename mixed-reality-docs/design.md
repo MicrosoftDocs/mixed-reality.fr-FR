@@ -1,27 +1,27 @@
 ---
 layout: LandingPage
 title: Concevoir
-description: Ce guide a été coécrit par les concepteurs, les développeurs, les responsables de programme et les chercheurs, dont les appareils HOLOGRAPHIQUE (par exemple, HoloLens) et immersive (par exemple, les casques Acer et HP Windows Mixed Reality) s’étend sur Microsoft. Par conséquent, envisagez ce travail comme un ensemble de rubriques « comment concevoir pour Windows afficheur tête haute ».
+description: Cette aide a été écrite par des concepteurs, des développeurs, des responsables de programme et les chercheurs de Microsoft, dont les travaux couvrent les appareils holographiques (par exemple HoloLens) et les appareils immersifs (par exemple les casques Windows Mixed Reality Acer et HP). Considérez donc ce travail comme un ensemble de rubriques expliquant « comment concevoir pour les afficheurs Windows placés sur la tête ».
 author: rwinj
 ms.author: randyw
 ms.date: 03/21/2018
 ms.topic: article
 ms.localizationpriority: high
-keywords: Windows Mixed Reality, conception, Interaction, Style, couleur, les modèles d’application, contrôles, exemples d’applications, Kit de ressources de réalité mixte, MRTK
+keywords: Windows Mixed Reality, conception, interaction, style, couleur, modèles d’application, contrôles, exemples d’applications, Mixed Reality Toolkit, MRTK
 ms.openlocfilehash: 88de9008dbea6cce3b980bbbe3d0f45b7818e7c9
-ms.sourcegitcommit: 8d6e5723283c03f984f1fafef81afa5aab5d04bc
-ms.translationtype: MT
+ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/05/2019
 ms.locfileid: "66039209"
 ---
 # <a name="design-for-mixed-reality"></a>Conception pour la réalité mixte
 
 ![Conception pour la réalité mixte](images/Bicycle-Leschi10.gif)
 
-Ce guide a été coécrit par les concepteurs, les développeurs, les responsables de programme et les chercheurs, dont les appareils HOLOGRAPHIQUE (par exemple, HoloLens) et immersive (par exemple, les casques Acer et HP Windows Mixed Reality) s’étend sur Microsoft. Par conséquent, envisagez ce travail comme un ensemble de rubriques « comment concevoir pour Windows afficheur tête haute ».
+Cette aide a été écrite par des concepteurs, des développeurs, des responsables de programme et les chercheurs de Microsoft, dont les travaux couvrent les appareils holographiques (par exemple HoloLens) et les appareils immersifs (par exemple les casques Windows Mixed Reality Acer et HP). Considérez donc ce travail comme un ensemble de rubriques expliquant « comment concevoir pour les afficheurs Windows placés sur la tête ».
 
-## <a name="article-categories"></a>Catégories d’article
+## <a name="article-categories"></a>Catégories d’articles
 
 <ul class="panelContent cardsF">
     <li>
@@ -34,21 +34,21 @@ Ce guide a été coécrit par les concepteurs, les développeurs, les responsabl
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Commencer à concevoir</h3>
+                        <h3>Bien démarrer avec la conception</h3>
                         <p>
-                            <a href="mixed-reality.md">Ce qui est une réalité mixte ?</a>
+                            <a href="mixed-reality.md">Qu’est-ce que la réalité mixte ?</a>
                         </p>
                         <p>
-                            <a href="about-this-design-guidance.md">À propos de ce guide</a>
+                            <a href="about-this-design-guidance.md">À propos de cette aide</a>
                         </p>
                         <p>
-                            <a href="case-study-my-first-year-on-the-hololens-design-team.md">Ma première année sur l’équipe de conception</a>
+                            <a href="case-study-my-first-year-on-the-hololens-design-team.md">Ma première année au sein de l’équipe de conception</a>
                         </p>
                         <p>
                             <a href="case-study-expanding-the-design-process-for-mixed-reality.md">Développement du processus de conception pour la réalité mixte</a>
                         </p>
                         <p>
-                            <a href="case-study-the-pursuit-of-more-personal-computing.md">La poursuite de l’informatique plus personnelle</a>
+                            <a href="case-study-the-pursuit-of-more-personal-computing.md">À la recherche d’une informatique plus personnelle</a>
                         </p>
                     </div>
                 </div>
@@ -70,16 +70,16 @@ Ce guide a été coécrit par les concepteurs, les développeurs, les responsabl
                             <a href="comfort.md">Confort</a>
                         </p>
             <p>
-                            <a href="interaction-fundamentals.md">Interactions instinctual</a>
+                            <a href="interaction-fundamentals.md">Interactions instinctives</a>
                         </p>
                         <p>
                             <a href="hands-and-tools.md">Mains et contrôleurs de mouvement</a>
                         </p>
                         <p>
-                            <a href="hands-free.md">Mains libres</a>
+                            <a href="hands-free.md">Mains-libres</a>
                         </p>
                          <p>
-                            <a href="gaze-and-commit.md">Regards de tête et de validation</a>
+                            <a href="gaze-and-commit.md">Suivre de la tête et valider</a>
                         </p>
                     </div>
                 </div>
@@ -98,16 +98,16 @@ Ce guide a été coécrit par les concepteurs, les développeurs, les responsabl
                     <div class="cardText">
                         <h3>Style</h3>
                         <p>
-                            <a href="color,-light-and-materials.md">Couleur, clair et supports</a>
+                            <a href="color,-light-and-materials.md">Couleurs, éclairage et matériaux</a>
                         </p>
                          <p>
-                            <a href="spatial-sound-design.md">Sonorisation spatiale</a>
+                            <a href="spatial-sound-design.md">Conception du son spatial</a>
                         </p>
                         <p>
                             <a href="typography.md">Typographie</a>
                         </p>
                         <p>
-                            <a href="scale.md">Mise à l’échelle</a>
+                            <a href="scale.md">Mettre à l’échelle</a>
                         </p>                      
                     </div>
                 </div>
@@ -129,13 +129,13 @@ Ce guide a été coécrit par les concepteurs, les développeurs, les responsabl
                             <a href="types-of-mixed-reality-apps.md">Types d’applications de réalité mixte</a>
                         </p>
                         <p>
-                            <a href="room-scan-visualization.md">Visualisation d’analyse de salle</a>
+                            <a href="room-scan-visualization.md">Visualisation du balayage d’une pièce</a>
                         </p>
                         <p>
                             <a href="cursors.md">Curseurs</a>
                         </p>
                         <p>
-                            <a href="billboarding-and-tag-along.md">Le billboarding et tag-along</a>
+                            <a href="billboarding-and-tag-along.md">Billboarding et tag-along</a>
                         </p>
                     </div>
                 </div>
@@ -157,7 +157,7 @@ Ce guide a été coécrit par les concepteurs, les développeurs, les responsabl
                             <a href="text-in-unity.md">Texte dans Unity</a>
                         </p>
                         <p>
-                            <a href="interactable-object.md">Objet sur</a>
+                            <a href="interactable-object.md">Objet avec interaction</a>
                         </p>
                         <p>
                             <a href="object-collection.md">Collection d’objets</a>
@@ -166,7 +166,7 @@ Ce guide a été coécrit par les concepteurs, les développeurs, les responsabl
                             <a href="progress.md">Affichage de la progression</a>
                         </p>
                         <p>
-                            <a href="app-bar-and-bounding-box.md">Barre de l’application et de la zone englobante</a>
+                            <a href="app-bar-and-bounding-box.md">Barre de l’application et cadre englobant</a>
                         </p>
                     </div>
                 </div>
@@ -178,7 +178,7 @@ Ce guide a été coécrit par les concepteurs, les développeurs, les responsabl
 
 ## <a name="sample-apps"></a>Exemples d’applications
 
-Créez des expériences exceptionnelles à partir d’exemples conçu et créé par notre équipe.
+Créez des expériences de qualité à partir d’exemples conçus et créés par notre équipe.
 
 <br>
 <ul id="cardtypes-W" class="cardsW panelContent" style="display: flex; margin-top: 0px;">
@@ -202,7 +202,7 @@ Créez des expériences exceptionnelles à partir d’exemples conçu et créé 
         </a>        
     </li>
     <li>
-        <a href="lunar-module.md" title="Module de lunaire" data-linktype="absolute-path">
+        <a href="lunar-module.md" title="Module lunaire" data-linktype="absolute-path">
             <div class="cardSize">
                 <div class="cardPadding">
                     <div class="card">
@@ -212,8 +212,8 @@ Créez des expériences exceptionnelles à partir d’exemples conçu et créé 
                             </div>
                         </div>
                         <div class="cardText">
-                            <h3>Module de lunaire</h3>
-                            <p>Découvrez comment étendre les mouvements de base de HoloLens avec suivi de deux mains et d’entrée d’un contrôleur Xbox.</p>
+                            <h3>Module lunaire</h3>
+                            <p>Découvrez comment étendre les mouvements de base d’HoloLens avec suivi des deux mains et l’entrée d’un contrôleur Xbox.</p>
                         </div>
                     </div>
                 </div>
@@ -232,7 +232,7 @@ Créez des expériences exceptionnelles à partir d’exemples conçu et créé 
                         </div>
                         <div class="cardText">
                             <h3>Galaxy Explorer</h3>
-                            <p>Le projet de l’Explorateur de Galaxy est prêt. Vous partagé vos idées avec la Communauté, que vous choisissez une application, regardée une équipe générez-le et pouvez désormais obtenir le code source.</p>
+                            <p>Le projet Galaxy Explorer est prêt. Vous avez partagé vos idées avec la communauté, vous avez choisi une application, vous avez regardé une équipe la créer et vous pouvez maintenant en obtenir le code source.</p>
                         </div>
                     </div>
                 </div>
@@ -248,7 +248,7 @@ Créez des expériences exceptionnelles à partir d’exemples conçu et créé 
 
 <ul id="cardtypes-D" class="cardsD panelContent" style="display: flex; margin-top: 0px;">
     <li>
-    <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity" title="Réalité mixte Toolkit - Unity" data-linktype="absolute-path">
+    <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity" title="Mixed Reality Toolkit - Unity" data-linktype="absolute-path">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -258,7 +258,7 @@ Créez des expériences exceptionnelles à partir d’exemples conçu et créé 
                         </div>
                     </div>                    
             <div class="cardText">
-                        <h3>Réalité mixte Toolkit - Unity</h3>
+                        <h3>Mixed Reality Toolkit - Unity</h3>
                         <p> </p>
                     </div>
                 </div>
@@ -267,7 +267,7 @@ Créez des expériences exceptionnelles à partir d’exemples conçu et créé 
       </a>  
     </li>
     <li>
-    <a href="https://github.com/Microsoft/MixedRealityToolkit" title="Kit de ressources de réalité mixte" data-linktype="absolute-path">
+    <a href="https://github.com/Microsoft/MixedRealityToolkit" title="Mixed Reality Toolkit" data-linktype="absolute-path">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -277,7 +277,7 @@ Créez des expériences exceptionnelles à partir d’exemples conçu et créé 
                         </div>
                     </div>                    
             <div class="cardText">
-                        <h3>Kit de ressources de réalité mixte</h3>
+                        <h3>Mixed Reality Toolkit</h3>
                         <p> </p>
                     </div>
                 </div>
@@ -330,7 +330,7 @@ Créez des expériences exceptionnelles à partir d’exemples conçu et créé 
 
 <ul id="cardtypes-D" class="cardsD panelContent" style="display: flex; margin-top: 0px;">
     <li>
-    <a href="http://fluent.microsoft.com" title="Fluent Design System" data-linktype="absolute-path">
+    <a href="http://fluent.microsoft.com" title="Système de conception Fluent" data-linktype="absolute-path">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -368,7 +368,7 @@ Créez des expériences exceptionnelles à partir d’exemples conçu et créé 
       </a>  
     </li>   
         <li>
-    <a href="https://developer.microsoft.com/windows/apps/design" title="Conception d’applications Universal Windows Platform (UWP)" data-linktype="absolute-path">
+    <a href="https://developer.microsoft.com/windows/apps/design" title="Conception d’applications de plateforme Windows universelle (UWP)" data-linktype="absolute-path">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -378,7 +378,7 @@ Créez des expériences exceptionnelles à partir d’exemples conçu et créé 
                         </div>
                     </div>                    
             <div class="cardText">
-                        <h3>Conception d’applications Universal Windows Platform (UWP)</h3>
+                        <h3>Conception d’applications de plateforme Windows universelle (UWP)</h3>
                         <p> </p>
                     </div>
                 </div>

@@ -6,12 +6,12 @@ ms.author: thmignon
 ms.date: 05/04/2018
 ms.topic: article
 keywords: 3D, modèle, sur place à domicile, sur place, monde, modélisation, réalité mixte domestique, web, application
-ms.openlocfilehash: 3a50353aae8e03c3ebb3ee9ec2f642f21836e925
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 954086b79e3614e1b75ceb7560f9fc87435530fa
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59597093"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829735"
 ---
 # <a name="enable-placement-of-3d-models-in-the-mixed-reality-home"></a>Permettre le placement des modèles 3D dans la réalité mixte domestique
 
@@ -25,11 +25,21 @@ Par exemple, si vous développez une application qui fait apparaître un catalog
 ## <a name="device-support"></a>Prise en charge des appareils
 
 <table>
-<tr>
-<th>Fonctionnalité</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Casques IMMERSIFS</a></th>
-</tr><tr>
-<td>Ajouter le protocole de modèle</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
-</tr>
+    <colgroup>
+    <col width="33%" />
+    <col width="33%" />
+    <col width="33%" />
+    </colgroup>
+    <tr>
+        <td><strong>Fonctionnalité</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Casques IMMERSIFS</strong></a></td>
+    </tr>
+     <tr>
+        <td>Ajouter le protocole de modèle</td>
+        <td>✔️</td>
+        <td>✔️</td>
+    </tr>
 </table>
 
 ## <a name="overview"></a>Vue d'ensemble
@@ -84,4 +94,4 @@ private async void launchURI_Click(object sender, RoutedEventArgs e)
 ## <a name="see-also"></a>Voir aussi
 
 * [Création de modèles 3D pour une utilisation dans la page d’accueil Windows Mixed Reality](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md)
-* [Navigation dans Windows Mixed Reality domestique](navigating-the-windows-mixed-reality-home.md)
+* [Exploration de la page d’accueil Windows Mixed Reality](navigating-the-windows-mixed-reality-home.md)

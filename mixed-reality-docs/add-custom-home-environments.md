@@ -6,12 +6,12 @@ ms.author: thmignon
 ms.date: 04/30/2018
 ms.topic: article
 keywords: Windows Mixed Reality, réalité mixte, réalité virtuelle, VR, MR, accueil, les environnements personnalisés, des lieux, maison de cliff, skyloft, utilisateur, créer
-ms.openlocfilehash: ef140efd88aa0d3329ae2aa7e5b202c3bfe77c0a
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
-ms.translationtype: MT
+ms.openlocfilehash: 8f5a3a1bdf5728260b0b7717c74a50f3356ca04a
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59593234"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829642"
 ---
 # <a name="add-custom-home-environments"></a>Ajouter des environnements d’accueil personnalisés
 
@@ -25,11 +25,21 @@ Lorsque vous utilisez un environnement personnalisé, vous remarquerez que telep
 ## <a name="device-support"></a>Prise en charge des appareils
 
 <table>
-<tr>
-<th>Fonctionnalité</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Casques IMMERSIFS</a></th>
-</tr><tr>
-<td> Environnements accueil personnalisés</td><td style="text-align: center;"></td><td style="text-align: center;"> ✔️</td>
-</tr>
+    <colgroup>
+    <col width="33%" />
+    <col width="33%" />
+    <col width="33%" />
+    </colgroup>
+    <tr>
+        <td><strong>Fonctionnalité</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Casques IMMERSIFS</strong></a></td>
+    </tr>
+     <tr>
+        <td>Environnements accueil personnalisés</td>
+        <td>❌</td>
+        <td>✔️</td>
+    </tr>
 </table>
 
 ## <a name="trying-a-sample-environment"></a>Essayez un exemple d’environnement

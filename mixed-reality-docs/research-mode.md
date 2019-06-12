@@ -6,12 +6,12 @@ ms.author: dgedye
 ms.date: 05/03/2018
 ms.topic: article
 keywords: mode de recherche, cv, rs4, vision par ordinateur, recherche, HoloLens
-ms.openlocfilehash: 5feda021bd6a1a90fd98c751b1cea768eed980af
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: e9a7683f8d582b459185066e74655e8f2b236db4
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59593230"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829932"
 ---
 # <a name="hololens-research-mode"></a>Mode de recherche de HoloLens
 
@@ -29,11 +29,21 @@ Mode de recherche est une nouvelle fonctionnalité de HoloLens qui fournit l’a
 ## <a name="device-support"></a>Prise en charge des appareils
 
 <table>
-<tr>
-<th>Fonctionnalité</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Casques IMMERSIFS</a></th>
-</tr><tr>
-<td> Mode de recherche</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"></td>
-</tr>
+    <colgroup>
+    <col width="33%" />
+    <col width="33%" />
+    <col width="33%" />
+    </colgroup>
+    <tr>
+        <td><strong>Fonctionnalité</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Casques IMMERSIFS</strong></a></td>
+    </tr>
+     <tr>
+        <td>Mode de recherche</td>
+        <td>✔️</td>
+        <td>❌</td>
+    </tr>
 </table>
 
 ## <a name="before-using-research-mode"></a>Avant d’utiliser le mode de recherche
@@ -72,4 +82,4 @@ Consultez le [Traqueur](https://github.com/Microsoft/HololensForCV/issues) dans 
 
 * [Microsoft Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197)
 * [Référentiel GitHub de HoloLensForCV](https://github.com/Microsoft/HoloLensForCV)
-* [À l’aide de la Windows Device Portal](using-the-windows-device-portal.md)
+* [Utilisation du portail d’appareil Windows](using-the-windows-device-portal.md)

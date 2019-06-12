@@ -6,58 +6,97 @@ ms.author: shengkait
 ms.date: 04/11/2019
 ms.topic: article
 ms.localizationpriority: high
-keywords: Mixte réalité, les regards, les regards ciblant, interaction, concevez, hololens, MMR, multimodale
-ms.openlocfilehash: d018179e20d26ee8b7b24bc74d7c1711bc788282
-ms.sourcegitcommit: aba33a8ad1416f7598048ac35ae9ab1734bd5c37
-ms.translationtype: MT
+keywords: Mixed Reality, pointage du regard, ciblage avec le regard, interaction, conception, hololens, MMR, multimodal
+ms.openlocfilehash: bea205edf484a55db701e8e0d1a233234882a272
+ms.sourcegitcommit: 9b6949d7cd2e67e6bde9b32aebeaeea325baa6c4
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66270385"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66516019"
 ---
-# <a name="introducing-instinctual-interactions"></a>Présentation des interactions instinctual
+# <a name="introducing-instinctual-interactions"></a>Présentation des interactions instinctuelles
 
-La philosophie d’interactions simples, instinctual nouée tout au long de la plateforme Microsoft mixte réalité (MMR), du matériel au logiciel.
+Les interactions simples et instinctuelles constituent la trame philosophique de la plateforme Microsoft Mixed Reality.  Nous avons suivi trois étapes pour que les développeurs et concepteurs d’applications puissent proposer des interactions faciles et intuitives à leurs clients. 
 
-Ces interactions instinctual utilisent toutes les technologies de d’entrée disponibles, y compris à l’intérieur de suivi main suivi, suivi de le œil et d’extraction du langage naturel, dans les modèles d’interaction multimodale transparente. Selon nos recherches, conception et développement multimodals et non pas sur les entrées uniques, sont essentiel lors de la création d’expériences instinctive.
+Tout d’abord, nous avons veillé à combiner en modèles d’interaction multimodale fluides nos capteurs et notre technologie d’entrée extraordinaires, notamment le suivi de la main, le suivi du regard et le langage naturel.  Selon nos recherches, la conception et le développement sous forme multimodale, plutôt qu’à partir d’entrées uniques, sont essentiels à la création d’expériences instinctuelles.
 
-Les modèles d’Interaction Instinctual alignent également naturellement dans les types d’appareils.  Par exemple, une interaction lointain sur un casque immersive avec un 6 degrés de contrôleur de liberté (DDL) et l’interaction lointain 2 HoloLens utiliser l’intuitivité de même, les modèles et les comportements.  Est non seulement ce pratique pour les développeurs et concepteurs, mais il a l’air normal pour les utilisateurs finaux.
+Deuxièmement, nous sommes conscients que de nombreux développeurs ciblent plusieurs appareils, que ce soit HoloLens 2 et HoloLens (1ère génération) ou HoloLens et VR.  Nous avons donc conçu nos modèles d’interaction pour qu’ils fonctionnent sur tous les appareils (même si la technologie d’entrée varie d’un appareil à l’autre).  Par exemple, une interaction de loin sur un casque immersif Windows avec un contrôleur 6DOF et une interaction de loin sur un appareil HoloLens 2 utilisent toutes deux des affordances et des schémas identiques, ce qui rend les choses plus faciles pour les applications multi-appareils. Cela est pratique pour les développeurs et les concepteurs et naturel pour les utilisateurs finaux. 
 
-
-Enfin, alors que nous reconnaissons qu’il existe des milliers d’effective, attrayantes et interactions magiques possibles dans MR, nous avons trouvé cette intentionnellement utilisant un modèle d’interaction unique bout en bout dans une application est la meilleure façon de garantir aux utilisateurs réussissent et offrir une bonne expérience.  À cette fin, nous avons inclus les trois choses dans ce guide de l’interaction :
-* Nous avons structuré ce guide autour de trois modèles d’interaction principal et les composants et les modèles requis pour chaque
-* Nous avons inclus des conseils supplémentaires sur les autres avantages offerts par notre plateforme
-* Nous avons inclus des conseils pour aider à sélectionner le modèle d’interaction approprié pour votre scénario
+Enfin, face aux milliers d’interactions efficaces, attrayantes et magiques possibles qu’offre la réalité mixte, nous avons trouvé que l’utilisation intentionnelle d’un seul modèle d’interaction de bout en bout dans une application est le meilleur gage de réussite et d’expérience agréable pour les utilisateurs.  À cette fin, nous avons inclus trois choses dans ce guide d’interaction :
+* Nous avons structuré ce guide autour des trois modèles d’interaction principaux et des composants et schémas requis pour chacun
+* Nous avons inclus des conseils supplémentaires sur d’autres avantages qu’offre notre plateforme
+* Nous avons inclus des conseils afin de vous aider à sélectionner le modèle d’interaction approprié pour votre scénario
 
 ## <a name="multimodal-interaction-models"></a>Modèles d’interaction multimodale
 
-Selon notre recherche et la collaboration avec les clients à ce jour, nous avons découvert les trois modèles d’interaction principal qui convient à la majorité des expériences de réalité mixte.  
+D’après nos recherches et la collaboration avec certains clients jusqu’à ce jour, trois modèles d’interaction principaux conviennent pour la majorité des expériences de réalité mixte.
 
-Considérez ces modèles d’interaction comme modèle mental de l’utilisateur pour l’exécution de leurs flux.
+Dans bien des égards, le modèle d’interaction est le modèle mental de l’utilisateur pour l’exécution de ses flux.  Chacun de ces modèles d’interaction est optimisé pour un ensemble de besoins des clients, et chacun est pratique, puissant et utilisable à part entière. 
 
-Chacun de ces modèles d’interaction est pratique, puissant et utilisable à part entière, et tous sont optimisés pour un ensemble de besoins des clients. Afficher le graphique ci-dessous, pour des scénarios, des exemples et des avantages de chaque modèle d’interaction.  
+Le tableau ci-dessous offre une vue d’ensemble simplifiée.  Vous pouvez cliquer sur les liens ci-après pour obtenir des informations détaillées sur l’utilisation de chaque modèle d’interaction, y compris des images et des exemples de code. 
 
-**Modèle** | **[Mains et contrôleurs de mouvement](hands-and-tools.md)** | **[Mains libres](hands-free.md)** | **[Regards de tête et de validation](gaze-and-commit.md)**
-|--------- | --------------| ------------| ---------|
-**Exemples de scénarios** | Du contenu 3D expériences spatiales, par exemple spatiale disposition et conception, de manipulation ou de simulation | Expériences contextuelles, où les mains d’un utilisateur sont occupés, par exemple, sur le travail d’apprentissage, de maintenance| Clic des expériences, par exemple, des présentations 3D, des démonstrations
-**Fit** | Idéal pour les nouveaux utilisateurs, voix couplée wit, des yeux regards suivi ou principal. Courbe d’apprentissage basse. Expérience utilisateur cohérente entre main suivi et 6 contrôleurs DDL. | Certains d’apprentissage nécessaire. Si les mains sont des paires indisponibles bien avec la voix et de langage naturel | Nécessite une formation sur HMDs, mais pas sur mobile. Idéal pour les contrôleurs accessibles. Idéal pour HoloLens (1er gen). |
-**Matériel** | HoloLens 2 <br>Casques immersifs | HoloLens 2 <br>HoloLens (1er gen) <br>Casques immersifs | HoloLens 2 <br>Casques immersifs | HoloLens 2 <br>HoloLens (1er gen) <br>Casques immersifs <br>Mobile AR |
+<br>
+<table>
+    <colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    </colgroup>
+    <tr>
+        <td><strong>Modèle</strong></td>
+        <td><strong>Exemples de scénario</strong></td>
+        <td><strong>Cadre</strong></td>
+        <td><strong>Matériel</strong></td>
+    </tr>
+    <tr>
+        <td><a href="hands-and-tools.md">Mains et contrôleurs de mouvement</a></td>
+        <td>Expériences 3D spatiales, par exemple conception et disposition spatiales, manipulation de contenu ou simulation.</td>
+        <td>Idéal pour les nouveaux utilisateurs, couplé avec la voix, le suivi du regard ou le suivi de la tête. Courbe d’apprentissage basse. Expérience utilisateur cohérente entre le suivi de la main et les contrôleurs 6DOF.</td>
+        <td>HoloLens 2<br>Casques immersifs</td>
+    </tr>
+    <tr>
+        <td><a href="hands-free.md">Mains-libres</a></td>
+        <td>Expériences contextuelles où les mains d’un utilisateur sont occupées, par exemple, dans le cadre d’un apprentissage « sur le tas » ou d’une maintenance.</td>
+        <td>Un apprentissage est requis. Si les mains ne sont pas disponibles, peut être associé à la voix et au langage naturel.</td>
+        <td>HoloLens 2<br>HoloLens (1ère génération)<br>Casques immersifs</td>
+    </tr>
+    <tr>
+        <td><a href="gaze-and-commit.md">Suivre de la tête et valider</a></td>
+        <td>Expériences au moyen de clics, par exemple, présentations 3D et démonstrations.</td>
+        <td>Nécessite une formation sur les appareils HMD, mais pas sur mobile. Idéal pour les contrôleurs accessibles. Idéal pour HoloLens (1ère génération).</td>
+        <td>HoloLens 2<br>HoloLens (1ère génération)<br>Casques immersifs<br>Réalité augmentée mobile</td>
+    </tr>
+</table>
+<br>
 
-Des informations détaillées pour l’utilisation de toutes les entrées disponibles dans chaque modèle d’interaction entre eux se trouve sur les pages qui suivent, ainsi que les illustrations et les liens vers du contenu de l’exemple à partir de notre MRTK Unity.
+Pour que l’interaction de votre expérience soit dépourvue de vides ou de trous, la meilleure approche consiste à suivre le guide pour un modèle unique du début à la fin. 
+
+Pour accélérer le développement et la conception, nous avons inclus des informations détaillées et des liens vers des images et des exemples de code dans la couverture de chaque modèle.
+
+Mais tout d’abord, les sections ci-dessous décrivent les étapes de sélection et d’implémentation de l’un de ces modèles d’interaction.  
+ 
+### <a name="by-the-end-of-this-page-you-will-understand-our-guidance-on"></a>Quand vous parviendrez à la fin de cette page, vous comprendrez nos conseils sur :
+ 
+* Le choix d’un modèle d’interaction pour votre client
+* L’utilisation du guide des modèles d’interaction
+* Le passage d’un modèle d’interaction à un autre
+* Les étapes suivantes de la conception
 
 
 ## <a name="choose-an-interaction-model-for-your-customer"></a>Choisir un modèle d’interaction pour votre client
 
 
-Les développeurs et les créateurs d’également disposent déjà probablement quelques idées à l’esprit des types d’expérience d’interaction qu’ils souhaitent leurs utilisateurs d’avoir.
-Pour encourager une approche axée sur le client pour concevoir, nous vous recommandons de suivre les instructions ci-dessous pour sélectionner le modèle d’interaction qui est optimisé pour votre client.
+Les développeurs et les créateurs ont déjà probablement une idée des types d’expérience d’interaction qu’ils souhaitent proposer à l’utilisateur.
+Pour encourager une approche conceptuelle axée sur le client, nous vous recommandons de suivre les conseils ci-dessous afin de sélectionner le modèle d’interaction qui est optimisé pour votre client.
 
-### <a name="why-follow-this-guidance"></a>Pourquoi suivre ce guide ?
+### <a name="why-follow-this-guidance"></a>Pourquoi suivre ces conseils ?
 
-* Nos modèles d’interaction sont testés pour les objectifs et critères subjectifs tels que des efforts physiques et cognitive, intuitiveness et learnability. 
-* Car diffère de l’interaction, intuitivité audio et visuelles et comportement des objets peuvent également différer entre les modèles d’interaction.  
-* Combinant des parties de plusieurs modèles d’interaction crée le risque de concurrents intuitivité, telles que des rayons main simultanées et un curseur regards de tête, qui submerger et la confusion chez les utilisateurs.
+* Nos modèles d’interaction sont testés en fonction de critères objectifs et subjectifs, tels que les efforts physiques et cognitifs, l’intuitivité et la facilité d’apprentissage. 
+* L’interaction pouvant varier, les affordances visuelles et audio et le comportement des objets peuvent également différer d’un modèle d’interaction à l’autre.  
+* La combinaison de parties de plusieurs modèles d’interaction crée le risque d’affordances concurrentes, à l’image de rayons sortant de la main et d’un curseur de suivi de la tête simultanés, qui peuvent submerger et perturber l’utilisateur.
 
-Voici quelques exemples de la façon dont les intuitivité et comportements sont optimisés pour chaque modèle d’interaction.  Nous le constatons souvent nouveaux utilisateurs en tant que des questions similaires, tels que « comment savoir si le système fonctionne, comment savoir ce que je peux faire, et comment savoir si elle compris ce que je viens de faire ? »
+Voici quelques exemples d’optimisation des affordances et des comportements pour chaque modèle d’interaction.  Nous constatons souvent que les nouveaux utilisateurs ont des questions similaires, telles que « comment savoir si le système fonctionne ? », « comment savoir ce que je peux faire ? » et « comment savoir s’il a compris ce que je viens de faire ? ».
 
 <br>
 
@@ -70,76 +109,76 @@ Voici quelques exemples de la façon dont les intuitivité et comportements sont
     </colgroup>
     <tr>
         <td><strong>Modèle</strong></td>
-        <td><strong>Comment savoir qu’il fonctionne ?</strong></td>
-        <td><strong>Comment savoir que puis-je faire ?</strong></td>
+        <td><strong>Comment savoir si ça fonctionne ?</strong></td>
+        <td><strong>Comment savoir ce que je peux faire ?</strong></td>
         <td><strong>Comment savoir ce que je viens de faire ?</strong></td>
     </tr>
     <tr>
         <td><a href="hands-and-tools.md">Mains et contrôleurs de mouvement</a></td>
-        <td>Je vois une main de maillage, je vois un intuitif du bout des doigts ou une main / contrôleur de rayons.</td>
-        <td>Je vois des handles grabbable ou un rectangle englobant s’affichent lorsque ma main est proche.</td>
-        <td>J’ai entendre des tonalités sonores et voir les animations sur la manipulation et la mise en production.</td>
+        <td>Je vois un maillage de main, je vois une affordance d’extrémité de doigt ou des rayons de contrôleur ou sortant de la main.</td>
+        <td>Des poignées déplaçables ou un rectangle englobant apparaissent quand ma main est proche.</td>
+        <td>J’entends des tonalités et vois des animations quand je saisis ou libère un objet.</td>
     </tr>
     <tr>
         <td><a href="gaze-and-commit.md">Suivre de la tête et valider</a></td>
-        <td>Je vois un curseur dans le centre de mon champ de vision.</td>
-        <td>Le curseur de tête-regards change d’état lorsque sur certains objets.</td>
-        <td>J’ai consultez / entendre les confirmations et sonores quand prendre des mesures.</td>
+        <td>Je vois un curseur au centre de mon champ de vision.</td>
+        <td>Le curseur de suivi de la tête change d’état en fonction de l’objet au-dessus duquel il se trouve.</td>
+        <td>Je vois/entends des confirmations visuelles et sonores quand j’effectue une action.</td>
     </tr>   
     <tr>
-        <td><a href="hands-free.md">Mains libres (Head-regards et durée d’affichage)</a></td>
-        <td>Je vois un curseur dans le centre de mon champ de vision.</td>
-        <td>Je vois un indicateur de progression lorsque je m’attarderai pas sur un objet sur.</td>
-        <td>J’ai consultez / entendre les confirmations et sonores quand prendre des mesures.</td>
+        <td><a href="hands-free.md">Mains-libres (Suivre de la tête et stabiliser)</a></td>
+        <td>Je vois un curseur au centre de mon champ de vision.</td>
+        <td>Je vois un indicateur de progression quand je reste sur un objet avec interaction possible.</td>
+        <td>Je vois/entends des confirmations visuelles et sonores quand j’effectue une action.</td>
     </tr>
     <tr>
-        <td><a href="hands-free.md">Mains libres (exécution des commandes vocales)</a></td>
-        <td>Je vois un indicateur à l’écoute et sous-titres codés qui montrent ce que le système entendu parler.</td>
-        <td>J’obtiens des indicateurs et des invites vocales.  Lorsque je dis « que puis-je dire ? » Je vois des commentaires.</td>
-        <td>J’ai consultez / entendre les confirmations et sonores lorsque j’ai une commande ou obtenir de levée d’ambiguïté l’expérience utilisateur si nécessaire.</a></td>
+        <td><a href="hands-free.md">Mains-libres (commander avec la voix)</a></td>
+        <td>Je vois un indicateur à l’écoute et des légendes qui montrent ce que le système a entendu.</td>
+        <td>J’obtiens des indicateurs et des invites vocales.  Quand je dis « what can I say ? », je vois un retour.</td>
+        <td>Je vois/entends des confirmations visuelles et sonores quand je donne une commande ou obtiens une expérience utilisateur de levée d’ambiguïté si nécessaire.</a></td>
     </tr>
 </table>
 
-### <a name="below-are-the-questions-that-weve-found-help-teams-select-an-interaction-model"></a>Voici les questions que nous avons constaté aide les équipes sélectionnez un modèle d’interaction :
+### <a name="below-are-the-questions-that-weve-found-help-teams-select-an-interaction-model"></a>Voici les questions qui, d’après nous, aident les équipes à sélectionner un modèle d’interaction :
  
-1.  Q :  Mes utilisateurs voulez-vous touch hologrammes et effectuer des manipulations de précision HOLOGRAPHIQUE ?<br><br>
-R :  Dans ce cas, consultez le modèle d’interaction des mains et pour le ciblage de précision et de manipulation avec mains ou contrôleurs de mouvement.
+1.  Q :  Les utilisateurs souhaitent-ils toucher des hologrammes et effectuer des manipulations holographiques de précision ?<br><br>
+R :  Si tel est le cas, consultez le modèle d’interaction Mains et outils pour le ciblage et la manipulation de précision avec les mains ou des contrôleurs de mouvement.
  
-2.  Q :  Mes utilisateurs doivent-ils conserver leurs mains gratuits pour les tâches réelles ?<br><br>
-R :  Dans ce cas, examinons le modèle d’interaction mains-libres, qui fournit une excellente expérience mains libres par le biais du pointage de regard et vocale basée sur les interactions.
+2.  Q :  Les utilisateurs doivent-ils conserver leurs mains libres pour les tâches réelles ?<br><br>
+R :  Si tel est le cas, examinez le modèle d’interaction Mains-libres, qui fournit une excellente expérience mains-libres par le biais d’interactions vocales et par pointage du regard.
  
-3.  Q :  Mes utilisateurs doivent-ils disposer les temps d’apprendre les interactions pour mon application de réalité mixte, ou doivent-elles les interactions avec la courbe d’apprentissage la plus basse possible ?<br><br>
-R :  Nous recommandons le modèle des mains et pour la courbe d’apprentissage la plus faible et des interactions plus intuitives, tant que les utilisateurs sont en mesure d’utiliser leurs mains pour l’interaction.
+3.  Q :  Les utilisateurs ont-ils le temps d’apprendre les interactions pour mon application de réalité mixte ou ont-ils besoin des interactions présentant la courbe d’apprentissage la plus basse possible ?<br><br>
+R :  Nous recommandons le modèle Mains et outils pour la courbe d’apprentissage la plus basse et les interactions les plus intuitives, sous réserve que les utilisateurs puissent recourir à leurs mains pour les interactions.
  
-4.  Q :  Mes utilisateurs utilisent des contrôleurs de mouvement pour pointant et manipulation ?<br><br>
-R :  Le modèle de mains et inclut tous les conseils pour une bonne expérience des contrôleurs de mouvement.
+4.  Q :  Les utilisateurs utilisent-ils des contrôleurs de mouvement pour les opérations de pointage et de manipulation ?<br><br>
+R :  Le modèle Mains et outils inclut tous les conseils pour une bonne expérience des contrôleurs de mouvement.
  
-5.  Q :  Mes utilisateurs utilisent-elles un contrôleur d’accessibilité ou un contrôleur Bluetooth courantes, comme un clicker ?<br><br>
-R :  Nous recommandons le modèle regards de tête et de validation pour tous les contrôleurs non suivies.  Il est conçu pour autoriser un utilisateur à parcourir une expérience entière avec une simple garagiste « cible et validation ». 
+5.  Q :  Les utilisateurs se servent-ils d’un contrôleur d’accessibilité ou d’un contrôleur Bluetooth courant, tel qu’un dispositif de clic ?<br><br>
+R :  Nous recommandons le modèle Suivre de la tête et valider pour tous les contrôleurs non suivis.  Il est conçu pour permettre à un utilisateur de parcourir une expérience entière avec un simple mécanisme de type « ciblage et validation ». 
  
-6.  Q : Mes utilisateurs uniquement la progression via une expérience cliquant « via » (par exemple dans un environnement semblable à diaporama 3d), par opposition à la navigation dans les dispositions denses de contrôles d’interface utilisateur ?<br><br>
-R :  Si les utilisateurs n’ont pas besoin de contrôler un grand nombre de l’interface utilisateur, Head-regards et validation offre une option de demande où les utilisateurs n’ont pas à vous soucier de ciblage. 
+6.  Q : Les utilisateurs progressent-ils dans une expérience uniquement par le biais de clics (comme dans un environnement de type diaporama 3D), par opposition à la navigation dans des dispositions denses de contrôles d’interface utilisateur ?<br><br>
+R :  Si les utilisateurs n’ont pas besoin de contrôler une interface utilisateur conséquente, le modèle Suivre de la tête et valider offre une option accessible où ils n’ont pas besoin de se soucier du ciblage. 
  
-7.  Q :  Mes utilisateurs utilisent-ils les deux HoloLens (1er gen) et HoloLens 2 / Immersive de Windows (casques VR)<br><br>
-R :  Dans la mesure où les regards de tête et de validation est le modèle d’interaction pour HoloLens (1er gen), nous vous recommandons créateurs qui prennent en charge de HoloLens (1er gen) utiliser regards de tête et de validation pour les fonctionnalités ou les modes d’utilisateurs peut se produire sur un HoloLens (1er gen) casque.  Consultez la section suivante ci-dessous sur *transition des modèles d’interaction* pour plus d’informations sur la création d’une expérience optimale pour plusieurs générations de HoloLens.
+7.  Q :  Les utilisateurs utilisent-ils à la fois un appareil HoloLens (1ère génération) et un appareil immersif Windows/HoloLens 2 (casques VR) ?<br><br>
+R :  Dans la mesure où le modèle Suivre de la tête et valider est le modèle d’interaction pour HoloLens (1ère génération), nous recommandons aux créateurs qui prennent en charge HoloLens (1ère génération) d’utiliser ce modèle pour les fonctionnalités ou les modes que les utilisateurs sont susceptibles d’expérimenter sur un casque HoloLens (1ère génération).  Consultez la section ci-dessous *Passage d’un modèle d’interaction à un autre* pour plus d’informations sur la création d’une expérience optimale pour plusieurs générations de dispositifs HoloLens.
  
-8.  Q : Qu’en est-il pour les utilisateurs qui sont généralement mobiles (couvrant un large espace ou de déplacement entre des espaces), et les utilisateurs qui ont tendance à fonctionner dans un seul espace ?<br><br>
-R :  Les modèles d’interaction de fonctionnera pour ces utilisateurs.  
+8.  Q : Qu’en est-il des utilisateurs qui sont généralement mobiles (dans un large espace ou se déplaçant entre des espaces) et des utilisateurs qui ont tendance à travailler dans un seul espace ?<br><br>
+R :  Tous les modèles d’interaction fonctionnent pour ces utilisateurs.  
 
 > [!NOTE]
-> Obtenir des instructions spécifiques à la conception d’applications [bientôt](index.md#news-and-notes).
+> Des conseils spécifiques à la conception d’applications seront [bientôt](index.md#news-and-notes) disponibles.
 
 
-## <a name="transition-interaction-models"></a>Modèles d’interaction de transition
-Il existe également des cas où vos cas d’usage peuvent nécessiter qu’utilisant plus d’un modèle d’interaction.  Par exemple, votre flux d’application « création » utilise le modèle d’interaction des mains et, mais que vous souhaitez employer un mode mains libres pour les techniciens du terrain.  
+## <a name="transition-interaction-models"></a>Passage d’un modèle d’interaction à un autre
+Il peut également arriver que vos cas d’usage nécessitent l’utilisation de plusieurs modèles d’interaction.  Par exemple, le « flux de création » de votre application utilise le modèle d’interaction Mains et contrôleurs de mouvement, mais vous souhaitez employer un mode mains-libres pour les techniciens de terrain.  
 
-Si votre expérience requiert plusieurs modèles d’interaction, nous avons constaté que nombreux utilisateurs finaux peuvent rencontrer des difficultés de transition d’un modèle à un autre, en particulier les utilisateurs finaux qui débutent avec MR.
+Si votre expérience requiert plusieurs modèles d’interaction, nous avons constaté que de nombreux utilisateurs finaux peuvent rencontrer des difficultés pour passer d’un modèle à un autre, en particulier les utilisateurs pour lesquels la réalité mixte est une nouveauté.
 
 > [!Note]
-> Pour aider les concepteurs de guide et les développeurs à travers les choix qui peut s’avérer difficile dans MR, nous travaillons sur plus de conseils pour l’utilisation de plusieurs modèles d’interaction.
+> Pour guider les concepteurs et les développeurs dans les choix éventuellement difficiles dans le domaine de la réalité mixte, nous travaillons à l’approfondissement de l’aide sur l’utilisation de plusieurs modèles d’interaction.
  
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a>Voir également
 * [Suivre de la tête et valider](gaze-and-commit.md)
 * [Suivre de la tête et stabiliser](gaze-and-dwell.md)
 * [Manipulation directe avec les mains](direct-manipulation.md)

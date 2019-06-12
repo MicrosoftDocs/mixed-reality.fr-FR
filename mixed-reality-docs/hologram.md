@@ -6,12 +6,12 @@ ms.author: befolsom
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Réalité mixte Windows, HoloLens, hologrammes, conception, interaction
-ms.openlocfilehash: 5a6cc4df764b1f92f6bea2d7d6e6effe2164e4d6
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 714b08db23aa641252291aebe89fa3059c209a6f
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59593359"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829784"
 ---
 # <a name="what-is-a-hologram"></a>Qu’est-ce qu’un hologramme ?
 
@@ -24,11 +24,24 @@ HoloLens vous permet de créer **hologrammes**, objets effectuée de la lumière
 ## <a name="device-support"></a>Prise en charge des appareils
 
 <table>
-<tr>
-<th>Fonctionnalité</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (1er gen)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Casques IMMERSIFS</a></th>
-</tr><tr>
-<td> Hologrammes</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"></td>
-</tr>
+    <colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    </colgroup>
+    <tr>
+        <td><strong>Fonctionnalité</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens (1er gen)</strong></a></td>
+        <td><strong>HoloLens 2</strong></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Casques IMMERSIFS</strong></a></td>
+    </tr>
+     <tr>
+        <td>Hologrammes</td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>❌</td>
+    </tr>
 </table>
 
 ## <a name="a-hologram-is-made-of-light-and-sound"></a>Un hologramme est constitué de lumière et son
@@ -50,7 +63,7 @@ Quand vous avez un emplacement particulier dans lequel vous souhaitez un hologra
 Certains hologrammes suivent l’utilisateur à la place. Ces hologrammes tag-along se positionnement par rapport à l’utilisateur, peu importe où ils remonter. Vous pouvez même choisir mettre un hologramme avec vous pour un certain temps et les placer sur le mur une fois que vous obtenez une autre salle.
 
 **Bonnes pratiques**
-* Certains scénarios peuvent exiger que hologrammes restent visibles tout au long de l’expérience ou facilement détectables. Il existe deux approches générales pour ce type de positionnement. Appelons-les **« affichage-verrouillé »** et **« corps-verrouillé »**.
+* Certains scénarios peuvent exiger que hologrammes restent visibles tout au long de l’expérience ou facilement détectables. Il existe deux approches générales pour ce type de positionnement. Appelons-les **« affichage-verrouillé »** et **« corps-verrouillé »** .
    * Verrouillé en affichage de contenu est par position « verrouillé » pour l’affichage du périphérique. C’est difficile pour de nombreuses raisons, y compris un sentiment non naturelle de « clingyness », ce qui rend les nombreux utilisateurs frustrés et que vous souhaitiez « renoncer il. » En règle générale, plusieurs concepteurs ont trouvé préférable d’éviter le verrouillage d’écran de contenu.
    * L’approche de verrouillage de corps est beaucoup plus non remboursable sous conditions. Le verrouillage de corps est quand un hologramme est attaché au corps de l’utilisateur ou du pointage de regard vecteur, mais il est positionné dans l’espace 3d autour de l’utilisateur. Nombreuses expériences ont adopté un comportement de verrouillage de corps dans lequel l’hologramme « suit « l’utilisateurs du pointage de regard, ce qui permet à l’utilisateur faire pivoter de leur corps et déplacer dans l’espace sans perdre l’hologramme. Incorporer un délai vous aide à la circulation hologramme sembler plus naturelle. Par exemple, certains core l’interface utilisateur du système d’exploitation Windows HOLOGRAPHIQUE utilise une variante sur le verrouillage par un organisme qui suit le regard de l’utilisateur avec un délai gentiment et élastique de type tandis que l’utilisateur Active leur tête.
 * Placez l’hologramme à distance à l’aise affichage généralement environ 1 à 2 mètres de la tête.
@@ -86,4 +99,4 @@ En tant que HOLOGRAPHIQUE développeur, vous avez la possibilité d’arrêter v
 
 ## <a name="see-also"></a>Voir aussi
 * [Son spatial](spatial-sound.md)
-* [Couleur, clair et supports](color,-light-and-materials.md)
+* [Couleurs, éclairage et matériaux](color,-light-and-materials.md)

@@ -6,12 +6,12 @@ ms.author: hakons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: ggv, voix, cortana, saisie vocale
-ms.openlocfilehash: 7fb5618c13ff1ed446241f744b598cfe2484ea45
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: e21310b940e4a4c3019f61edea695b452e74ab62
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59596981"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829950"
 ---
 # <a name="voice-input"></a>Entrée vocale
 
@@ -26,11 +26,24 @@ Entrée vocale est alimentée par le [même moteur](https://msdn.microsoft.com/l
 ## <a name="device-support"></a>Prise en charge des appareils
 
 <table>
-<tr>
-<th>Fonctionnalité</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (1er gen)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"><a href="immersive-headset-hardware-details.md">Casques IMMERSIFS</a></th>
-</tr><tr>
-<td> Entrée vocale</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️ (avec microphone)</td>
-</tr>
+    <colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    </colgroup>
+    <tr>
+        <td><strong>Fonctionnalité</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens (1er gen)</strong></a></td>
+        <td><strong>HoloLens 2</strong></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Casques IMMERSIFS</strong></a></td>
+    </tr>
+     <tr>
+        <td>Entrée vocale</td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>✔️ (avec microphone)</td>
+    </tr>
 </table>
 
 ## <a name="the-select-command"></a>La commande « select »
@@ -114,4 +127,4 @@ Pour la version de la réalité mixte Windows Developer Edition 2017, la logique
 ## <a name="see-also"></a>Voir aussi
 * [Entrée vocale dans DirectX](voice-input-in-directx.md)
 * [Entrée vocale dans Unity](voice-input-in-unity.md)
-* [Entrée M. 212 : Voix](holograms-212.md)
+* [Réalité mixte - Entrées - Cours 212 : Voix](holograms-212.md)
