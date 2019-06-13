@@ -6,12 +6,12 @@ ms.author: crderr
 ms.date: 03/21/2018
 ms.topic: article
 keywords: critères de qualité des applications, une réalité, mixte mixte des applications en réalité
-ms.openlocfilehash: dfa1390190fad8d84982171dfbcfa101b20501dc
-ms.sourcegitcommit: c2a5bff423feba7d29d5431c870b6017c2fe1bc2
+ms.openlocfilehash: 8e635585c0981d81bf71fb5577232af28f2a0fdd
+ms.sourcegitcommit: 150d258a23130026c8792da383a3993657841fb4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66750319"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67024494"
 ---
 # <a name="app-quality-criteria"></a>Critères de qualité des applications
 
@@ -37,7 +37,7 @@ Fréquence d’images est le premier pilier de confort de la stabilité et l’u
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Casques IMMERSIFS</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Casques immersifs</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -100,7 +100,7 @@ Hologrammes stables augmentera l’utilisation et believability de votre applica
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Casques IMMERSIFS</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Casques immersifs</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -162,7 +162,7 @@ Distorsions de hologrammes avec des objets physiques (si destinés à être mis 
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Casques IMMERSIFS</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Casques immersifs</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -226,7 +226,7 @@ Contrôle les développeurs d’applications où les yeux des utilisateurs conve
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Casques IMMERSIFS</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Casques immersifs</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -283,7 +283,7 @@ Quelle que soit la zone d’affichage des problèmes de confort, les demandes de
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Casques IMMERSIFS</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Casques immersifs</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -326,7 +326,7 @@ En réalité mixte de Windows, le moteur audio fournit le composant auditif de l
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Casques IMMERSIFS</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Casques immersifs</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -385,7 +385,7 @@ Expériences utilisateur bien conçue peuvent créer et gérer un contexte utile
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Casques IMMERSIFS</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Casques immersifs</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -441,7 +441,7 @@ Hologrammes doivent réagir à la position de l’utilisateur dans à peu près 
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Casques IMMERSIFS</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Casques immersifs</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -504,7 +504,7 @@ Clarté de l’interaction d’entrée est essentielle à la facilité d’utili
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Casques IMMERSIFS</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Casques immersifs</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -584,7 +584,7 @@ Un bouton a longtemps été une métaphore utilisée pour déclencher un événe
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Casques IMMERSIFS</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Casques immersifs</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -618,7 +618,7 @@ Un bouton a longtemps été une métaphore utilisée pour déclencher un événe
 
 * [Objet avec interaction possible](interactable-object.md)
 * [Texte dans Unity](text-in-unity.md)
-* [Barre de l’application et cadre englobant](app-bar-and-bounding-box.md)
+* [Rectangle englobant et barre de l’application](app-bar-and-bounding-box.md)
 * [Commander avec la voix](voice-design.md)
 
 #### <a name="tools-and-tutorials"></a>Outils et didacticiels
@@ -639,7 +639,7 @@ Les applications qui requièrent des données de mappage spatial s’appuient su
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Casques IMMERSIFS</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Casques immersifs</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -694,7 +694,7 @@ Dans une application de réalité mixte, le contenu peut être à l’extérieur
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Casques IMMERSIFS</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Casques immersifs</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -737,7 +737,7 @@ Un contrôle de progression offre un retour à l’utilisateur lorsqu’une long
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Casques IMMERSIFS</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Casques immersifs</strong></a></td>
         <td></td>
     </tr>
      <tr>

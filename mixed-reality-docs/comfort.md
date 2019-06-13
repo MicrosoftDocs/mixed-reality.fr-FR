@@ -6,12 +6,12 @@ ms.author: erpau
 ms.date: 04/5/2019
 ms.topic: article
 keywords: Une réalité, conception, mixte confort, HoloLens, 2, HoloLens (1er gen)
-ms.openlocfilehash: 8dea3765f01a6a82fccc002d1cd5c7c9c77d0980
-ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
+ms.openlocfilehash: e3a78e9a990d207b19b287e1897897a5d6dee3ca
+ms.sourcegitcommit: 150d258a23130026c8792da383a3993657841fb4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65974779"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67024444"
 ---
 # <a name="comfort"></a>Confort
 
@@ -63,7 +63,7 @@ IPD fait référence à la distance entre les élèves ou les centres, des yeux 
 
 ### <a name="guidance-for-holographic-devices"></a>Conseils pour les appareils HOLOGRAPHIQUE
 
-#### <a name="hololens-1st-gen"></a>HoloLens (1er gen)
+#### <a name="hololens-1st-gen"></a>HoloLens (1ère génération)
 
 Pour HoloLens (1er gen), IPD est estimé et au cours de l’appareil [étalonnage](calibration.md). Pour les nouveaux utilisateurs à un déjà définie d’appareil, étalonnage doit être exécuté ou IPD doit être défini manuellement. VO dépend entièrement du périphérique ajuster. Plus précisément, pour réduire VO, l’appareil doit être positionné sur la tête de l’utilisateur telles que les affichages sont au niveau de l’axe de ses yeux. 
 
@@ -127,11 +127,13 @@ Une meilleure lisibilité du texte optimal peut aider à alléger la charge de s
 
 En règle générale, nous vous recommandons de tester des applications spécifiques pour une meilleure lisibilité et de rendre les tailles de police aussi grand que possible pour une expérience à l’aise. Ci-dessous, nous proposons des conseils généraux comme point de départ pour le développement. Notez que toutes les tailles de police sont signalés en degrés de [angle visual](https://en.wikipedia.org/wiki/Visual_angle) au lieu de tailles physiques spécifiques, qui fournit des conseils pour n’importe quelle distance dans la zone de sélection élective hologramme optimale, car elle prend en compte la taille de la texte et la distance, il apparaît dans l’Observateur. 
 
+Consultez [typographie](typography.md) et [texte dans Unity](text-in-unity.md) pages pour plus d’instructions.
+
 ### <a name="guidance-for-holographic-devices"></a>Conseils pour les appareils HOLOGRAPHIQUE
 
 Pour les appareils HOLOGRAPHIQUE, rendu du texte noir/sombre sur un arrière-plan blanc/light fournit le niveau de contraste plus cohérente, car l’arrière-plan sera occlude interférence provenant du monde réel derrière le rendu. Rendu de texte/light blanc sur fond noir/sombre permet plus de l’environnement réel de transparaître à travers, qui peut-être interférer avec la lisibilité du texte. 
 
-#### <a name="hololens-1st-gen"></a>HoloLens (1er gen)
+#### <a name="hololens-1st-gen"></a>HoloLens (1ère génération)
 
 La taille de police lisibles minimale (mesure à partir de la ligne de base à ascender) est d’environ 0,35 ° et une taille de police à l’aise est au moins environ 0,5 ° pour lire le contenu présenté à une distance de 2m à l’utilisateur. 
 

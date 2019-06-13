@@ -6,12 +6,12 @@ ms.author: wguyman
 ms.date: 03/21/2018
 ms.topic: article
 keywords: contrôleurs 6DOF, contrôleurs de mouvement
-ms.openlocfilehash: 7db1c16f8243081dc8f53e8722391f102c38e0d3
-ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
+ms.openlocfilehash: fc6b0dcf7f338224af9ea9bc59e07187c33adda2
+ms.sourcegitcommit: 150d258a23130026c8792da383a3993657841fb4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65629111"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67024550"
 ---
 # <a name="motion-controllers"></a>Contrôleurs de mouvement
 
@@ -23,10 +23,23 @@ Contrôleurs de mouvement sont [Accessoires matériels](hardware-accessories.md)
 ## <a name="device-support"></a>Prise en charge des appareils
 
 <table>
+<colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+</colgroup>
 <tr>
-<th>Fonctionnalité</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (1er gen)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Casques IMMERSIFS</a></th>
-</tr><tr>
-<td> Contrôleurs de mouvement</td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"> ✔️</td>
+     <td><strong>Fonctionnalité</strong></td>
+     <td><a href="hololens-hardware-details.md"><strong>HoloLens (1ère génération)</strong></a></td>
+     <td><strong>HoloLens 2</strong></td>
+     <td><a href="immersive-headset-hardware-details.md"><strong>Casques immersifs</strong></a></td>
+</tr>
+<tr>
+     <td>Contrôleurs de mouvement</td>
+     <td>❌</td>
+     <td>❌</td>
+     <td>✔️</td>
 </tr>
 </table>
 
@@ -185,7 +198,7 @@ Les interactions principales entre les mains et les contrôleurs de mouvement so
 
 ## <a name="composite-gestures-high-level-spatial-input"></a>Mouvements composite : Entrée spatiale haut niveau
 
-Les deux [main mouvements](gestures.md) et contrôleurs de mouvement peuvent être suivis au fil du temps pour détecter un ensemble commun de haut niveau  **[mouvements composites](gestures.md#composite-gestures)**. Cela permet à votre application détecter de haut niveau **appuyez sur**, **contenir**, **manipulation** et **navigation** mouvements, si les utilisateurs se retrouvent à l’aide de mains ou les contrôleurs.
+Les deux [main mouvements](gestures.md) et contrôleurs de mouvement peuvent être suivis au fil du temps pour détecter un ensemble commun de haut niveau  **[mouvements composites](gestures.md#composite-gestures)** . Cela permet à votre application détecter de haut niveau **appuyez sur**, **contenir**, **manipulation** et **navigation** mouvements, si les utilisateurs se retrouvent à l’aide de mains ou les contrôleurs.
 
 ## <a name="rendering-the-motion-controller-model"></a>Le modèle de contrôleur de mouvement de rendu
 

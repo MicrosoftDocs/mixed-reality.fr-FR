@@ -6,12 +6,12 @@ ms.author: thmignon
 ms.date: 04/30/2018
 ms.topic: article
 keywords: Windows Mixed Reality, réalité mixte, réalité virtuelle, VR, MR, accueil, les environnements personnalisés, des lieux, maison de cliff, skyloft, utilisateur, créer
-ms.openlocfilehash: 8f5a3a1bdf5728260b0b7717c74a50f3356ca04a
-ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
-ms.translationtype: HT
+ms.openlocfilehash: d0cdb878f1994cb5f898f06b98d74dee3dd4fdf1
+ms.sourcegitcommit: 150d258a23130026c8792da383a3993657841fb4
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66829642"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67024528"
 ---
 # <a name="add-custom-home-environments"></a>Ajouter des environnements d’accueil personnalisés
 
@@ -33,7 +33,7 @@ Lorsque vous utilisez un environnement personnalisé, vous remarquerez que telep
     <tr>
         <td><strong>Fonctionnalité</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Casques IMMERSIFS</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Casques immersifs</strong></a></td>
     </tr>
      <tr>
         <td>Environnements accueil personnalisés</td>
@@ -150,6 +150,5 @@ L’emplacement de génération par défaut se trouve dans 0,0,0 dans l’enviro
 Lorsque vous créez votre environnement personnalisé, il utilisera une simulation de rendu acoustiques qui ne correspond pas à l’espace physique que vous avez créé. Son peuvent provenir les directions incorrectes et peut sembler muffled. 
 
 ## <a name="see-also"></a>Voir aussi
-* [Navigation dans les fenêtres mixte réalité accueil](#navigating-the-windows-mixed-reality-home.md)
 * [Windows mixte réalité Asset convertisseur (sur GitHub)](https://github.com/Microsoft/glTF-Toolkit/releases)
 
