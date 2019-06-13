@@ -8,7 +8,7 @@ ms.topic: article
 keywords: réalité Azure, mixte, academy, unity, didacticiel, api, insights d’application, hololens, immersives, vr
 ms.openlocfilehash: 838dbe38724d29f4c5987e2f6ac7a07231015c82
 ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59596993"
@@ -207,7 +207,7 @@ Ce qui suit est un standard configurée pour le développement avec la réalité
 
     1.  Dans le **autres paramètres** onglet :
 
-        1.  **Écriture de scripts** **Version du Runtime** doit être **expérimental (équivalent .NET 4.6)**, ce qui déclenchera une nécessité de redémarrer l’éditeur.
+        1.  **Écriture de scripts** **Version du Runtime** doit être **expérimental (équivalent .NET 4.6)** , ce qui déclenchera une nécessité de redémarrer l’éditeur.
 
         2.  **Script principal** doit être **.NET**
 
@@ -825,7 +825,7 @@ Pour créer le script :
         }
     ```
 
-6.  Dans le **DataFromAnalytics** class, juste après le **Start()** (méthode), ajoutez la méthode suivante nommée **FetchAnalytics()**. Cette méthode est chargée de remplir la liste des paires clé / valeur, avec un *GameObject* et un numéro de nombre d’événement espace réservé. Il initialise ensuite les **GetWebRequest()** coroutine. La structure de la requête de l’appel à *Application Insights* peut se trouver dans cette méthode, comme le *URL de la requête* point de terminaison.
+6.  Dans le **DataFromAnalytics** class, juste après le **Start()** (méthode), ajoutez la méthode suivante nommée **FetchAnalytics()** . Cette méthode est chargée de remplir la liste des paires clé / valeur, avec un *GameObject* et un numéro de nombre d’événement espace réservé. Il initialise ensuite les **GetWebRequest()** coroutine. La structure de la requête de l’appel à *Application Insights* peut se trouver dans cette méthode, comme le *URL de la requête* point de terminaison.
 
     ```csharp
         private void FetchAnalytics()
@@ -857,7 +857,7 @@ Pour créer le script :
         }
     ```
 
-7.  Juste en dessous du **FetchAnalytics()** (méthode), ajoutez une méthode appelée **GetWebRequest()**, qui retourne un *IEnumerator*. Cette méthode est chargée pour demander le nombre de fois où un événement, correspondant avec un spécifique *GameObject*, a été appelée au sein de *Application Insights*. Lorsque toutes les requêtes envoyées ont été retournés, le **DetermineWinner()** méthode est appelée.
+7.  Juste en dessous du **FetchAnalytics()** (méthode), ajoutez une méthode appelée **GetWebRequest()** , qui retourne un *IEnumerator*. Cette méthode est chargée pour demander le nombre de fois où un événement, correspondant avec un spécifique *GameObject*, a été appelée au sein de *Application Insights*. Lorsque toutes les requêtes envoyées ont été retournés, le **DetermineWinner()** méthode est appelée.
 
     ```csharp
         /// <summary>
@@ -923,7 +923,7 @@ Pour créer le script :
         }
     ```
 
-8.  La méthode suivante est **DetermineWinner()**, qui trie la liste des *GameObject* et *Int* paires, selon le nombre d’événements le plus élevé. Il remplace ensuite la couleur du matériau de qui *GameObject* à *vert* (en tant que commentaires pour lui avoir le nombre le plus élevé). Cela affiche un message avec les résultats d’analytique.
+8.  La méthode suivante est **DetermineWinner()** , qui trie la liste des *GameObject* et *Int* paires, selon le nombre d’événements le plus élevé. Il remplace ensuite la couleur du matériau de qui *GameObject* à *vert* (en tant que commentaires pour lui avoir le nombre le plus élevé). Cela affiche un message avec les résultats d’analytique.
 
     ```csharp
         /// <summary>
