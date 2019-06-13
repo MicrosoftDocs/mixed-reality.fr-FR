@@ -1,43 +1,43 @@
 ---
-title: Oculaire et validation
-description: Vue d’ensemble du modèle d’entrée oculaire et validation
+title: Suivre du regard et valider
+description: Vue d’ensemble du modèle d’entrée Suivre du regard et valider
 author: sostel
 ms.author: sostel
 ms.date: 05/05/2019
 ms.topic: article
 ms.localizationpriority: high
-keywords: Suivi des yeux, mixte réalité, entrée, du pointage de regard yeux, ciblant des yeux, HoloLens 2, sélection basée sur les yeux
+keywords: Suivi du regard, réalité mixte, entrée, suivre du regard, suivi rétinien, suivi du mouvement des yeux, HoloLens 2, sélection basée sur le regard
 ms.openlocfilehash: 9cc27f24e1275223f33becd1ff0ec6bdf5b43a57
-ms.sourcegitcommit: 60060386305eabfac2758a2c861a43c36286b151
-ms.translationtype: MT
+ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/31/2019
+ms.lasthandoff: 06/05/2019
 ms.locfileid: "66455085"
 ---
-# <a name="eye-gaze-and-commit"></a>Oculaire et validation
-Avec 2 HoloLens, nous avons l’occasion idéale pour améliorer les regards & validation plus rapide et plus à l’aise en utilisant des regards de œil au lieu de regards principal. Cela permet d’étendre le commun [regards de tête et de validation](gaze-and-commit.md) modèle d’interaction : 
-1. Consulter simplement une cible et 
-2. Pour confirmer votre intention de sélectionner la cible, effectuez une base de données secondaire explicite d’entrée tels que r :  
-   - Mouvements de main (par exemple, un Air appuyez sur)
-   - Appuyez sur le bouton (par exemple, sur un clavier ou un clicker)
-   - Commande vocale (par exemple, « Select »)
-   - Logement (par exemple, l’utilisateur conserve Examinez simplement la cible pour sélectionner)
+# <a name="eye-gaze-and-commit"></a>Suivre du regard et valider
+Dans HoloLens 2, nous pouvons utiliser le suivi du regard au lieu du suivi de la tête pour rendre les opérations de suivi et de validation plus rapides et plus confortables. Nous étendons ainsi le modèle d’interaction commun [Suivre de la tête et valider](gaze-and-commit.md) : 
+1. Regardez simplement une cible. 
+2. Pour confirmer votre intention de sélectionner cette cible, effectuez une entrée explicite secondaire parmi celles-ci :  
+   - Mouvement de la main (par exemple, un clic dans l’air)
+   - Appui sur un bouton (par exemple, sur un clavier ou un dispositif de clic Bluetooth)
+   - Commande vocale (par exemple, « Sélectionner »)
+   - Stabilisation (par exemple, l’utilisateur continue de regarder la cible pour la sélectionner)
 
-Toutefois, les regards yeux se comportement différemment de regards principal d’une certaine façon et, par conséquent, est fourni avec un nombre de défis uniques. Dans le [yeux utilisation des règles de conception](eye-tracking.md), nous résumons les avantages généraux et les défis à prendre en compte lors de l’utilisation des yeux suivi en tant qu’entrée dans votre application HOLOGRAPHIQUE. Dans cette section, nous nous concentrons sur les considérations de conception spécifiques pour OCULAIRE & validation.
-Tout d’abord, nos yeux extrêmement vite et est donc idéales au ciblage rapidement sur la vue. Cela, yeux les regards parfaits pour des actions du pointage de regard-validation rapides en particulier lorsqu’elles sont combinées avec des validations rapides comme un appui en l’air ou bouton press.
+Cependant, le suivi du regard est différent du suivi de la tête à bien des égards et pose donc un certain nombre de défis uniques. Dans les [directives liées à la conception du suivi du regard](eye-tracking.md), nous résumons les avantages et défis généraux à prendre en compte lors de l’utilisation du suivi du regard comme entrée dans une application holographique. Dans cette section, nous nous penchons sur les considérations de conception spécifiques au suivi du regard et à la validation.
+Premièrement, nos yeux bougent incroyablement vite et sont donc très efficaces pour cibler rapidement un objet dans une scène. Le suivi du regard est donc idéal pour les actions rapides de suivi et de validation, en particulier quand il est combiné à des validations rapides comme un clic dans l’air ou une pression sur un bouton.
    
-Dans l’exemple suivant, nous étudierons les instructions de conception lorsque vous utilisez des yeux d’utilisation de ce type d’interaction et de sera présentent les différences entre la tête et yeux du pointage de regard que vous devez prendre en compte.
+Dans la section suivante, nous allons aborder les directives de conception du suivi du regard dans ce type d’interaction et discuter des différences qu’il convient de garder à l’esprit.
 
-## <a name="design-guidelines-for-eye-gaze-and-commit"></a>Instructions pour oculaire et validation de conception
+## <a name="design-guidelines-for-eye-gaze-and-commit"></a>Directives liées à la conception du suivi du regard et de la validation
 
-**Ne pas afficher un curseur**: S’il est presque impossible d’interagir sans un curseur lors de l’utilisation de tête les regards, le curseur se transforme rapidement parasites et agaçante lors de l’utilisation du pointage de regard yeux. Au lieu d’utiliser un curseur pour informer l’utilisateur si le suivi de le œil fonctionne et a correctement détecté actuellement consultés sur la cible, visual subtiles utilisation met en évidence (plus de détails ci-dessous).
+**Ne pas afficher de curseur** : s’il est presque impossible d’interagir sans curseur dans le cadre du suivi de la tête, le curseur devient rapidement gênant quand vous utilisez le suivi du regard. Au lieu de recourir à un curseur pour indiquer à l’utilisateur si la fonction de suivi du regard fonctionne et si elle a correctement détecté la cible actuellement examinée, utilisez des surlignages visuels subtils (plus de détails ci-dessous).
 
-**Pour envoyer des commentaires de pointage combinées subtile vous efforcer**: Ce qui paraît excellent retour visuel pour les regards principal peut entraîner une terrible, écrasant expériences à l’aide du pointage de regard yeux. N’oubliez pas que les yeux sont extrêmement rapides, darting rapidement entre les points de votre champ de vision. Commentaires flickery peuvent entraîner des modifications de mise en surbrillance soudaine rapide (activé/désactivé) lors de la recherche. Par conséquent, lorsque vous fournissez des commentaires de pointage, nous vous recommandons d’utiliser une mise en surbrillance correctement fusionnés dans (et fusionnée à la sortie lors de la recherche de suite). Cela signifie que dans un premier temps vous à peine remarquerait les commentaires lorsque vous examinez une cible. Au cours de 500 à 1000 ms, la mise en surbrillance augmenterait en intensité. Tandis que les utilisateurs novices peuvent continuer à chercher à la cible pour vous assurer que le système a déterminé correctement la cible ayant le focus, les utilisateurs expérimentés pourraient rapidement les regards & sont validées sans attendre que les commentaires sont à son intensité complète. En outre, nous vous recommandons également d’à l’aide de blend montée lorsque atténuant progressivement les commentaires de pointage. Research a montré que les modifications rapides de mouvement et contraste sont très visibles dans votre vision périphérique (par conséquent, la zone de votre champ visuel où vous cherchez pas). Le fondu ne doit pas être lentes en tant que blend dans. Cela est essentiel uniquement lorsque vous avez un contraste élevé ou des modifications de couleur pour votre mise en surbrillance. Si les commentaires de pointage étaient assez subtile pour commencer, vous ne constaterez certainement une différence.
+**S’efforcer de fournir des retours visuels subtils et intégrés sur le pointage** : ce qui peut être un excellent retour visuel pour le suivi de la tête peut entraîner des expériences déplorables avec le suivi du regard. N’oubliez pas que vos yeux sont extrêmement rapides et qu’ils parcourent rapidement les points de votre champ de vision. Les changements soudains de surlignage (activation/désactivation) peuvent entraîner des effets de scintillement quand vous regardez autour de vous. Nous vous recommandons donc d’utiliser un surlignage qui s’intègre en douceur (et qui disparaît en fondu quand vous regardez ailleurs) pour fournir des retours visuels sur le pointage. Cela signifie que vous remarquez à peine le retour visuel quand vous commencez à regarder une cible. Après 500 à 1000 ms, le surlignage gagne en intensité. Bien que les débutants puissent continuer à regarder la cible pour vérifier qu’elle est correctement sélectionnée par le système, les utilisateurs expérimentés peuvent rapidement suivre du regard une cible et la valider sans attendre un retour visuel à pleine intensité. Nous vous recommandons également d’utiliser un fondu pour faire disparaître le retour visuel sur le pointage. Des recherches ont montré que les changements rapides de mouvement et de contraste sont très perceptibles dans votre vision périphérique (c’est-à-dire la zone de votre champ visuel où vous ne regardez pas). La disparition en fondu n’a pas besoin d’être aussi lente que l’intégration. Ceci n’est critique que si vous avez un contraste élevé ou des changements de couleur pour votre surlignage. Si le retour visuel sur le pointage est assez subtil pour commencer, vous ne remarquerez probablement pas de différence.
 
-**Rechercher des signaux regards et validation de synchronisation**: La synchronisation des signaux d’entrée est peut-être moins difficile pour les regards simple & validation, par conséquent, ne vous inquiétez pas ! Il est quelque chose à prendre en compte au cas où vous souhaitez utiliser des actions de validation plus complexes que qui peut impliquer des commandes vocales long ou mouvements de main compliqué. Imaginez que vous examinez cible et prononcez une commande longue vocale. Prise en compte l’heure à laquelle vous avez besoin de parler et l’heure à laquelle le système nécessaires pour détecter ce que vous l’avez dit, votre regard yeux est généralement long passé à une nouvelle cible dans la scène. Par conséquent, apportez vos utilisateurs qu’ils peuvent pas besoin de continuer à chercher à une cible jusqu'à ce que la commande a été reconnue ou gérer l’entrée de manière à déterminer le début de la commande et ce que l’utilisateur avait été regardez à l’époque.
+**Veiller à synchroniser les signaux de pointage du regard et de validation** : la synchronisation des signaux d’entrée peut présenter un moindre défi pour les opérations de pointage du regard et de validation simples. Il n’y a donc aucune raison de vous inquiéter ! Tenez-en compte au cas où vous souhaiteriez utiliser des actions de validation plus compliquées, même si cela peut impliquer des commandes vocales longues ou des mouvements manuels complexes. Imaginons que vous regardiez une cible et que vous prononciez une commande vocale longue. Si nous tenons compte du temps qu’il faut pour parler et du temps nécessaire au système pour détecter ce que vous avez dit, votre regard est sans doute fixé depuis longtemps sur une nouvelle cible de la scène. Vous pouvez donc soit indiquer à vos utilisateurs de continuer à regarder la cible jusqu’à ce que la commande soit reconnue, soit gérer l’entrée de manière à déterminer le début de la commande et l’objet ciblé par le regard de l’utilisateur au moment de l’émission de la commande.
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a>Voir également
 * [Suivre de la tête et valider](gaze-and-commit.md)
-* [Mouvements de main](gestures.md)
+* [Mouvements de la main](gestures.md)
 * [Entrée vocale](voice-design.md)
 * [Contrôleurs de mouvement](motion-controllers.md)

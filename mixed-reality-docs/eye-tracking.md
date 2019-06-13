@@ -1,138 +1,138 @@
 ---
-title: Suivi de le œil
-description: Suivi de le œil
+title: Eye-tracking
+description: Eye-tracking
 author: sostel
 ms.author: sostel
 ms.date: 04/05/2019
 ms.topic: article
 ms.localizationpriority: high
-keywords: Suivi des yeux, mixte réalité, entrée, surveillez les regards
+keywords: Eye Tracking, eye-tracking, oculométrie, suivi rétinien, suivi du mouvement des yeux, réalité mixte, entrée, suivi du regard, pointage du regard
 ms.openlocfilehash: 7298a34a946f86aaf789cfe44ad971169fc8ece3
-ms.sourcegitcommit: 60060386305eabfac2758a2c861a43c36286b151
-ms.translationtype: MT
+ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/31/2019
+ms.lasthandoff: 06/05/2019
 ms.locfileid: "66453703"
 ---
-# <a name="eye-tracking-on-hololens-2"></a>Yeux sur HoloLens 2
-HoloLens 2 permet un nouveau niveau de contexte et la compréhension humaine dans l’expérience HOLOGRAPHIQUE en fournissant aux développeurs la possibilité d’incroyable de l’utilisation d’informations sur ce que les utilisateurs regardez. Cette page donne un aperçu de comment les développeurs peuvent tirer profit suivi d’oeil pour différents cas d’utilisation et les solutions à prendre en compte lors de la conception d’interfaces utilisateur basées sur des regards yeux. 
+# <a name="eye-tracking-on-hololens-2"></a>Eye-tracking sur HoloLens 2
+HoloLens 2 permet d’accéder à un tout nouveau niveau de compréhension contextuelle et humaine au sein de l’expérience holographique en offrant aux développeurs l’incroyable capacité d’utiliser des informations sur ce que les utilisateurs regardent. Cette page fournit une vue d’ensemble des avantages dont peuvent tirer parti les développeurs dans le domaine de l’eye-tracking pour divers cas d’usage. Elle décrit également les éléments à prendre en compte durant la conception d’interfaces utilisateur basées sur le suivi du regard. 
 
 ## <a name="use-cases"></a>Cas d’utilisation
-Suivi de le œil permet aux applications d’effectuer le suivi de la recherche dans laquelle l’utilisateur en temps réel. Cette section décrit certaines des utilisations potentielles et interactions nouvelle qui devient possibles avec les yeux dans la réalité mixte.
-Avant de commencer, dans l’exemple suivant nous mentionne le [Toolkit de réalité mixte](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Main.html) plusieurs fois car il fournit plusieurs exemples intéressantes et puissantes pour l’utilisation du suivi des yeux comme rapide et sans effort cible pris en charge des yeux sélections et faire défiler automatiquement texte selon où examine l’utilisateur. 
+L’eye-tracking permet aux applications de savoir où l’utilisateur regarde en temps réel. Cette section décrit certains cas d’usage potentiels ainsi que les nouvelles interactions possibles liées à l’eye-tracking dans le domaine de la réalité mixte.
+Avant de commencer, sachez que nous allons mentionner à plusieurs reprises le [Mixed Reality Toolkit](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Main.html), car il fournit de nombreux exemples intéressants et puissants d’utilisation de l’eye-tracking, par exemple le ciblage oculaire rapide et sans effort ainsi que le défilement automatique d’un texte en fonction de l’endroit où l’utilisateur regarde. 
 
 ### <a name="user-intent"></a>Intention de l’utilisateur    
-Plus d’informations sur l’endroit où un utilisateur examine fournit un puissant **contexte pour les autres entrées**, comme la voix, mains et contrôleurs.
-Cela peut servir pour diverses tâches.
-Par exemple, cela peut aller de rapidement et sans effort **ciblant** entre la scène en examinant un hologramme simplement et en indiquant que « select » (voir également [regards de tête et de validation](gaze-and-commit.md)) ou en disant « placez ceci... », puis qui regarde par-dessus où vous voulez placer l’hologramme et dire »... « There ». Vous trouverez des exemples pour ce dans [Toolkit de réalité mixte - sélection de la cible pris en charge des yeux](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_TargetSelection.html) et [Toolkit de réalité mixte - prise en charge des yeux le positionnement de cible](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Positioning.html).
+Les informations relatives aux mouvements oculaires d’un utilisateur fournissent un **contexte puissant pour d’autres entrées**, par exemple la voix, les mains et les contrôleurs.
+Cela peut être utile pour diverses tâches.
+Par exemple, cela peut aller du **ciblage** rapide et sans effort en regardant simplement un hologramme et en disant « sélectionner » (consultez également [Suivre de la tête et valider](gaze-and-commit.md)), ou en disant « mettre ceci... », puis en regardant là où vous souhaitez placer l’hologramme, et en disant « là ». Vous trouverez des exemples à ce sujet dans [Mixed Reality Toolkit - Sélection d’une cible à l’aide du regard](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_TargetSelection.html) et [Mixed Reality Toolkit - Positionnement d’une cible à l’aide du regard](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Positioning.html).
 
-Un exemple supplémentaire pour l’intention de l’utilisateur peut inclure à l’aide des informations sur les utilisateurs ayant consulté pour améliorer l’engagement avec des agents virtuels incorporées et hologrammes interactives. Par exemple, les agents virtuels peuvent adapter les options disponibles et leur comportement selon actuellement affiché le contenu. 
+Il existe un autre exemple possible d’intention de l’utilisateur. Il consiste à tirer parti des informations relatives à ce que recherchent les utilisateurs pour améliorer l’engagement avec les agents virtuels incorporés et les hologrammes interactifs. Par exemple, les agents virtuels peuvent adapter les options disponibles et leur comportement en fonction du contenu visualisé. 
 
 ### <a name="implicit-actions"></a>Actions implicites
-La catégorie d’actions implicites est étroitement lié à l’intention de l’utilisateur.
-L’idée est que hologrammes ou éléments d’interface utilisateur réagissent de manière quelque peu instinctual qui semble ne peut-être pas encore comme vous interagissez avec le système du tout, mais plutôt que le système et l’utilisateur sont synchronisés. Par exemple, un exemple très réussi est **défilement automatique en fonction des regards yeux**. L’idée est aussi simple : L’utilisateur lit un texte et peut simplement continuer la lecture. Le texte progressivement déplace vers le haut informer les utilisateurs dans leurs flux de lecture. Un aspect clé est que la vitesse de défilement s’adapte à la vitesse de lecture de l’utilisateur.
-Un autre exemple est **prise en charge des yeux un zoom avant et panoramique** pour lequel l’utilisateur peut s’apparentent à vous plonger exactement vers qu’il se concentre sur. Déclencher le zoom et en contrôlant la vitesse de zoom peuvent être contrôlés par le biais de voix ou transmettre d’entrée, ce qui est importante à fournir le sentiment de contrôle et éviter de surcharger l’utilisateur (nous aborderons ces instructions de conception plus en détail ci-dessous). Une fois qu’un zoom avant, l’utilisateur peut ensuite sans heurts suivre, par exemple, au cours d’une rue pour Explorer son voisinage simplement à l’aide de leurs regards yeux.
-Vous trouverez des exemples de démonstration pour ces types d’interactions dans les [Toolkit de réalité mixte – Navigation pris en charge des yeux](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Navigation.html) exemple.
+La catégorie des actions implicites est étroitement liée à l’intention de l’utilisateur.
+L’idée consiste à faire en sorte que les hologrammes ou les éléments d’interface utilisateur réagissent de manière plus ou moins instinctive. Ainsi, il n’est plus vraiment question d’une interaction avec le système mais plutôt d’une synchronisation entre le système et l’utilisateur. Dans ce domaine, le **défilement automatique basé sur le suivi du regard** est un exemple très réussi. L’idée est simple : L’utilisateur lit un texte et peut simplement continuer sa lecture. Le texte défile progressivement en permettant aux utilisateurs de conserver leur flux de lecture. La vitesse de défilement est un aspect clé, car elle s’adapte à la vitesse de lecture de l’utilisateur.
+La fonctionnalité de **zoom et défilement panoramique à l’aide du regard** est un autre exemple pour lequel l’utilisateur peut avoir l’impression de plonger exactement vers ce sur quoi il se concentre. Le déclenchement du zoom et le réglage de la vitesse du zoom peuvent être contrôlés par entrée vocale ou manuelle, ce qui est important pour donner une impression de contrôle et éviter de surcharger l’utilisateur (nous en parlerons plus en détail dans les recommandations de conception ci-dessous). Une fois le zoom effectué, l’utilisateur peut suivre en douceur le parcours d’une rue, par exemple, pour explorer son quartier juste par suivi du regard.
+Vous trouverez des démonstrations de ces types d’interaction dans l’exemple [Mixed Reality Toolkit - Navigation à l’aide du regard](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Navigation.html).
 
-Autres utilisations pour _actions implicites_ peuvent inclure :
-- **Notifications actives :** Jamais obtenir aurait ennuyé par les notifications dépilant là où vous concentraient ? En prenant en compte dans lequel un utilisateur est actuellement attention à, vous pouvez l’améliorer ! Afficher les notifications décalée par rapport à où l’utilisateur est actuellement à limiter les distractions et automatiquement les ignorer une fois fini sa lecture. 
-- **Hologrammes attentifs :** Hologrammes légèrement réagissent lorsque regardée. Cela peut aller à partir des éléments d’interface utilisateur légèrement lumineux, une fleur lentement florissant a de départ compagnie virtuel garder à vous ou essayant d’éviter des regards de vos yeux après un fera prolongée. Cela peut indiquer une idée intéressante de satisfaction dans votre application et de connectivité.
+Il existe d’autres cas d’usage supplémentaires pour les _actions implicites_ :
+- **Notifications intelligentes :** Avez-vous déjà été ennuyé par des notifications qui apparaissent juste là où vous concentrez votre attention ? En tenant compte de l’endroit où un utilisateur concentre son attention, vous pouvez améliorer son expérience ! Affichez des notifications décalées par rapport à l’endroit où l’utilisateur concentre son attention pour limiter les distractions et les masquer automatiquement une fois la lecture terminée. 
+- **Hologrammes attentifs :** Hologrammes qui réagissent subtilement quand vous les regardez. Cela peut aller d’éléments d’IU légèrement brillants ou d’une fleur qui éclot lentement à un animal de compagnie virtuel qui vous rend votre regard ou, au contraire, essaie de l’éviter quand vous le fixez avec insistance. Cela peut donner un sentiment intéressant de connectivité et de satisfaction à l’utilisateur de votre application.
 
-### <a name="attention-tracking"></a>Attention de suivi   
-Savoir où rechercher des utilisateurs à est un outil très puissant pour évaluer la facilité d’utilisation de conceptions et à identifier les problèmes de flux de travail efficace. À ce stade, les yeux de visualisation et analytique sont déjà une pratique courante dans différents domaines d’application. Avec 2 HoloLens, nous fournissons une nouvelle dimension à cette présentation comme hologrammes 3D peuvent être placés dans des contextes concrets et évalués en même temps que. Le [Toolkit de réalité mixte](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Main.html) fournit des exemples simples pour la journalisation et le chargement des données de suivi de le œil et pour savoir comment les afficher.
+### <a name="attention-tracking"></a>Suivi de l’attention   
+Les informations sur les endroits où regardent les utilisateurs constituent un outil extrêmement puissant, qui permet d’évaluer la convivialité de la conception d’une interface et d’identifier les problèmes d’efficacité des flux de travail. Aujourd’hui, la visualisation et l’analyse des données d’eye-tracking sont une pratique courante dans divers domaines d’application. Avec HoloLens 2, nous fournissons une nouvelle dimension à cette compréhension, car les hologrammes 3D peuvent être placés dans des contextes concrets et évalués en même temps. [Mixed Reality Toolkit](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Main.html) fournit des exemples de base pour la journalisation et le chargement des données d’eye-tracking ainsi que leur visualisation.
 
-Autres applications dans ce domaine peuvent inclure : 
--   **Visualisation des regards œil à distance :** Visualiser les collaborateurs à distance examinez, par exemple, vérifiez si des instructions sont correctement interprétées et suivies.
--   **Études de recherche d’utilisateur :** Attention suivi peut servir à Explorer la manière dont novice ou les utilisateurs experts analyser visuellement le contenu ou leur coordination yeux disponible pour les tâches complexes (par exemple, pour l’analyse des données médicales ou en exploitant des machines).
--   **Analyse des performances et des simulations de formation :** Entraînez-vous et optimiser l’exécution de tâches en identifiant les goulots d’étranglement plus efficacement dans le flux d’exécution.
--   **Concevoir des évaluations, de publicité et de recherche en marketing :** Suivi de le œil est un outil commun pour plusieurs études de marché évaluer les conceptions de site Web et de produit.
+Autres applications possibles dans ce domaine : 
+-   **Visualisation du suivi du regard à distance :** Visualisez ce que les collaborateurs distants regardent. Par exemple, vérifiez que les instructions sont correctement comprises et suivies.
+-   **Études de recherche sur les utilisateurs :** Le suivi de l’attention permet de comparer les utilisateurs novices aux utilisateurs experts sur la façon dont ils analysent visuellement du contenu ou sur leur coordination œil-main pour des tâches complexes (l’analyse de données médicales ou le maniement de certains appareils, par exemple).
+-   **Simulations d’apprentissage et analyse des performances :** Entraînez-vous et optimisez l’exécution de certaines tâches en identifiant plus efficacement les goulots d’étranglement du flux d’exécution.
+-   **Évaluations de conception, études publicitaires et marketing :** L’eye-tracking (ou « suivi oculaire ») est un outil répandu d’étude de marché qui permet d’évaluer l’ergonomie des sites web et des produits.
 
-### <a name="additional-use-cases"></a>Cas d’utilisation supplémentaires
-- **Jeux :** Avez-vous déjà souhaité avoir super-pouvoirs ? Voici votre chance ! Levitate hologrammes en fixant les. Dépanner des faisceaux laser de vos yeux. Transformer des ennemis en pierre ou figez-les ! Utilisez votre vision x-Ray pour explorer des bâtiments. La limite est de votre imagination !  
+### <a name="additional-use-cases"></a>Cas d’usage supplémentaires
+- **Jeux :** Vous avez toujours souhaité avoir des super pouvoirs ? Voilà votre chance ! Faites léviter les hologrammes en les fixant. Envoyez des rayons laser avec vos yeux. Transformez vos ennemis en pierre ou gelez-les ! Utilisez votre vision à rayons X pour explorer des bâtiments. La seule limite, c’est votre imagination !  
 
-- **Avatars expressifs :** Yeux contribue à la plus expressifs avatars 3D à l’aide de la date de suivi de le œil en direct pour animer les yeux de l’avatar pour indiquer que l’utilisateur est actuellement affiché. Il ajoute également l’expressivité plus en ajoutant clins de œil et clignote. 
+- **Avatars expressifs :** L’eye-tracking contribue à créer des avatars 3D plus expressifs en utilisant des données d’eye-tracking en temps réel pour animer les yeux de l’avatar et indiquer ce que l’utilisateur regarde. Il permet également d’accroître l’expressivité en ajoutant des clins d’œil. 
 
-- **Entrée de texte :** Suivi de le œil utilisable comme une alternative intéressante pour l’entrée de texte de l’effort faible en particulier lors de la reconnaissance vocale ou des mains sont peu pratiques à utiliser. 
-
-
-## <a name="eye-tracking-api"></a>API de suivi des yeux
-Avant d’aborder en détail les règles de conception spécifiques pour l’interaction d’OCULAIRE, nous souhaitons brièvement pointent vers les fonctionnalités qui fournit le dispositif de suivi HoloLens 2 yeux. Le [API de suivi des yeux](https://docs.microsoft.com/en-us/uwp/api/windows.perception.people.eyespose) est accessible via : `Windows.Perception.People.EyesPose`. Il fournit un rayon de regards yeux unique (regards origine et la direction) pour les développeurs.
-Le suivi de l’oeil fournit des données sur _30 i/s_.
-Les regards prédite yeux se trouve dans l’autorité de certification. 1.0-1,5 degrés visual angle autour du texte réel effectue la recherche sur la cible. Légères imprécisions sont normalement, vous devez planifier une marge autour de cette valeur de limite inférieure. Nous aborderons cela plus ci-dessous. Pour les yeux pour fonctionner correctement, chaque utilisateur est requise à passer par un œil suivi d’étalonnage de l’utilisateur. 
-
-![Taille cible optimal à distance de compteur 2](images/gazetargeting-size-1000px.jpg)<br>
-*Taille cible optimal à distance de compteur 2*
+- **Entrée de texte :** L’eye-tracking peut représenter une solution intéressante pour saisir du texte sans effort, en particulier quand l’usage de la voix ou des mains n’est pas pratique. 
 
 
-## <a name="eye-gaze-design-guidelines"></a>Instructions de conception yeux du pointage de regard
-Création d’une interaction qui tire parti de ciblage yeux déplacement rapide peut s’avérer difficile. Dans cette section, nous résumons les principaux avantages et les défis à prendre en compte lors de la conception de votre application. 
+## <a name="eye-tracking-api"></a>API d’eye-tracking
+Avant d’entrer dans les détails des recommandations de conception spécifiques à l’interaction par suivi du regard, nous souhaitons souligner brièvement les capacités offertes par le suiveur oculaire HoloLens 2. L’[API d’eye-tracking](https://docs.microsoft.com/en-us/uwp/api/windows.perception.people.eyespose) est accessible via `Windows.Perception.People.EyesPose`. Elle fournit aux développeurs un seul rayon de suivi du regard (origine et direction du pointage du regard).
+Le suiveur oculaire fournit des données à raison de _30 FPS_ (images par seconde) environ.
+Le suivi du regard prévu se situe dans un angle visuel compris entre 1,0 et 1,5 degrés autour de la cible observée. Comme de légères imprécisions sont attendues, vous devez prévoir une certaine marge autour de cette valeur de limite inférieure. Nous en discuterons plus en détail ci-dessous. Pour que l’eye-tracking fonctionne avec précision, chaque utilisateur doit effectuer un étalonnage. 
 
-### <a name="benefits-of-eye-gaze-input"></a>Avantages de l’entrée des regards œil
-- **Haute vitesse pointe.** Le muscle œil est le muscle réaction plus rapide dans notre corps. 
-
-- **Effort faible.** À peine les mouvements physiques sont nécessaires. 
-
-- **Implicitness.** Souvent décrits par les utilisateurs comme « n’oubliez pas d’informations », plus d’informations sur les mouvements des yeux d’un utilisateur informe le système cible les plans utilisateur de s’engager avec. 
-
-- **Autre canal d’entrée.** Les regards yeux peuvent fournir une entrée de la prise en charge puissante pour la main et la voix d’entrée création sur des années d’expérience à partir des utilisateurs en fonction de leur coordination main noir.
-
-- **Attention visuelle.** Un autre avantage important est la possibilité de déduire ce que l’utilisateur s’intéresse aux. Cela peut être utile dans différents domaines d’application en allant plus efficacement l’évaluation des conceptions différentes pour cadrer dans les Interfaces utilisateur plus intelligentes et améliorée des signaux sociales pour la communication à distance.
-
-En bref, à l’aide du pointage de regard yeux comme une entrée offre potentiellement un signal contextuel rapide et sans effort - c’est particulièrement puissant en combinaison avec d’autres entrées comme *voix* et *manuelle* entrée Confirmer l’intention de l’utilisateur.
+![Taille optimale de la cible à une distance de 2 mètres](images/gazetargeting-size-1000px.jpg)<br>
+*Taille optimale de la cible à une distance de 2 mètres*
 
 
-### <a name="challenges-of-eye-gaze-as-an-input"></a>Défis de œil les regards en tant qu’entrée
-Beaucoup d’énergie, s’accompagne un grand nombre de responsabilité : Si les regards yeux peuvent être utilisé pour créer des expériences utilisateur magique une sensation un super héros, il est également important de savoir qu’il n’est pas judicieux au compte pour ce en conséquence. Dans l’exemple suivant, nous aborderons certaines *défis* à prendre en compte et comment les résoudre lorsque vous travaillez avec une entrée du pointage de regard œil : 
+## <a name="eye-gaze-design-guidelines"></a>Recommandations de conception pour le suivi du regard
+Créer une interaction qui tire parti d’un ciblage oculaire rapide peut être une tâche difficile. Dans cette section, nous récapitulons les principaux avantages et défis à prendre en compte durant la conception de votre application. 
 
-- **Votre regard yeux est « always on »** au moment où vous ouvrez votre couvercles yeux, vos yeux démarrer fixation des choses dans votre environnement. Réagir à chaque rechercher marque et émission d’actions potentiellement accidentellement, car vous avez examiné quelque chose pour trop longtemps entraînerait une expérience terrible !
-C’est pourquoi nous recommandons combinant des regards yeux avec un *commande vocale*, *main mouvement*, *clic* ou la durée d’affichage étendue pour déclencher la sélection d’une cible.
-Cette solution permet également d’un mode dans lequel l’utilisateur peut librement cherchez sans le sentiment écrasant de déclenchement involontaire d’un élément. Ce problème doit également prendre en compte lors de la conception visuelle et auditive commentaires lorsque vous consultez simplement une cible.
-Ne pas surcharger les effets immédiats pop-out à l’utilisateur ou pointez les sons. Subtilité est clé ! Lorsque nous parlons de recommandations de conception, nous allons décrire quelques-unes des meilleures pratiques pour cet élément ci-dessous.
+### <a name="benefits-of-eye-gaze-input"></a>Avantages liés à l’entrée par suivi du regard
+- **Pointage à haute vitesse.** Le muscle oculaire est le muscle le plus réactif de notre corps. 
 
-- **Observation et contrôle** Imaginez que vous souhaitez aligner précisément une photo sur votre mur. Vous examinez ses bordures et ses environs pour voir si elle s’aligne également. Imaginez maintenant comment cela lorsqu’en même temps que vous souhaitez utiliser votre regard œil en tant qu’entrée pour déplacer l’image. Difficile, non ? Cette section décrit le rôle double des regards d’yeux lorsque cela est nécessaire à la fois pour l’entrée et de contrôle. 
+- **Faible effort.** Pratiquement aucun mouvement physique n’est nécessaire. 
 
-- **Laissez cette option avant de cliquer sur :** Pour les sélections de cible rapide, des études ont montré que regards des yeux d’un utilisateur peut passer avant de conclure un manuel, cliquez sur (par exemple, un airtap). Par conséquent, une attention particulière doit être accordée à synchroniser le signal de regards œil rapide avec l’entrée de contrôle plus lente (par exemple, voix, mains, contrôleur).
+- **Implicite.** Souvent décrites par les utilisateurs comme une « lecture de l’esprit », les informations relatives aux mouvements oculaires d’un utilisateur permettent au système de savoir quelle est la cible de l’utilisateur. 
 
-- **Petite cibles :** Connaissez-vous le sentiment lorsque vous tentez de lire le texte qui est juste un peu trop petit pour lire correctement ? Ce sentiment de surcharger les yeux qui provoquent vous se sentir fatigué et hors étant donné que vous essayez de réajuster les yeux de mieux se concentrer ?
-Il s’agit d’un sentiment que vous pouvez appeler vos utilisateurs lorsque les forcer à sélectionner les cibles trop petites dans votre application utilisant le ciblage des yeux.
-Pour votre conception, pour créer une expérience agréable et à l’aise pour vos utilisateurs, nous recommandons que les cibles doivent être au moins 2° dans l’angle visual, de préférence supérieure.
+- **Autre canal d’entrée.** Le suivi du regard peut contribuer de manière importante aux entrées manuelle et vocale grâce aux années d’expérience accumulées dans le domaine de la coordination œil-main des utilisateurs.
 
-- **En drapeau mouvements des regards yeux** nos yeux effectuer des mouvements rapides de fixation à par fixation. Si vous examinez les chemins d’accès de l’analyse des mouvements des yeux enregistrée, vous pouvez voir leur apparence déséquilibrées. Les yeux déplacement rapidement et de sauts spontanés par rapport à *regards principal* ou *les mouvements de main*.  
+- **Attention visuelle.** Pouvoir déduire ce qui intéresse l’utilisateur est un autre avantage important. Cela peut être utile dans divers domaines d’application, allant de l’évaluation plus efficace de différentes conceptions à la création d’interfaces utilisateur plus intelligentes et à l’amélioration des signaux sociaux pour la communication à distance.
 
-- **Fiabilité de suivi :** Suivi de précision de le œil peut dégrader un peu lors de la modification de lumière comme vos yeux adapter aux nouvelles conditions.
-Bien que cela ne doit pas affecter nécessairement la conception de votre application, comme la précision ne doit pas dépasser la limitation à 2° mentionnée ci-dessus. Cela peut signifier que l’utilisateur doit s’exécuter une autre d’étalonnage. 
+En bref, le suivi du regard permet de fournir un signal contextuel rapide et sans effort. Ce signal est particulièrement puissant s’il est utilisé en combinaison avec d’autres entrées telles que les entrées *vocale* et *manuelle* pour confirmer l’intention de l’utilisateur.
+
+
+### <a name="challenges-of-eye-gaze-as-an-input"></a>Les défis de l’entrée par suivi du regard
+Un grand pouvoir implique de grandes responsabilités : Bien que le suivi du regard permette de créer des émotions proches de celles d’un super-héros, il est également important d’en connaître les risques pour l’utiliser de manière appropriée. Dans ce qui suit, nous allons aborder certains *défis* à prendre en compte ainsi que la manière de les résoudre quand vous utilisez l’entrée par suivi du regard : 
+
+- **Votre suivi du regard est « toujours actif »**  : dès que vous ouvrez les paupières, vos yeux fixent les objets de votre environnement. Si tout ce que vous regardez donne lieu à des actions et si votre regard s’attarde trop sur certaines choses, il peut en résulter des effets indésirables et une expérience utilisateur déplaisante !
+C’est la raison pour laquelle nous recommandons de combiner le suivi du regard avec une *commande vocale*, un *mouvement de la main*, un *clic sur un bouton* ou un temps d’arrêt prolongé pour déclencher la sélection d’une cible.
+Cette solution permet également d’accéder à un mode dans lequel l’utilisateur peut librement regarder autour de lui sans avoir l’impression constante de déclencher quelque chose involontairement. Ce problème doit également être pris en compte durant la conception d’une rétroaction visuelle et auditive quand l’utilisateur regarde simplement une cible.
+Ne surchargez pas l’utilisateur avec des effets immédiats d’ouverture dans une nouvelle fenêtre ou des sons de pointage. De la subtilité, voilà la clé ! Nous allons aborder plus loin certaines bonnes pratiques quand nous évoquerons les recommandations de conception.
+
+- **Observation et contrôle** : imaginez que vous souhaitiez aligner avec précision une photo sur un mur. Vous regardez les bords de la photo et ce qui se trouve à proximité pour voir si elle est bien alignée. Maintenant, imaginez comment procéder quand vous souhaitez déplacer l’image par suivi du regard. Difficile, n’est-ce pas ? Cela décrit le double rôle du suivi du regard quand il est nécessaire à la fois pour l’entrée et pour le contrôle. 
+
+- **Quitter avant de cliquer :** Pour les sélections rapides de cibles, des recherches ont montré que le suivi du regard de l’utilisateur se déplace parfois avant un clic manuel (par exemple, un clic aérien). Il est donc nécessaire d’accorder une attention particulière à la synchronisation du signal rapide donné par le suivi du regard avec une entrée de commande plus lente (par exemple la voix, les mains, un contrôleur).
+
+- **Petites cibles :** Avez-vous déjà ressenti cette désagréable sensation quand vous essayez de lire un texte trop petit pour être lu confortablement ? Cette sensation de tension oculaire qui vous fatigue et vous épuise, car vous essayez d’adapter votre vue pour mieux vous concentrer ?
+Vous risquez de provoquer cette sensation chez vos utilisateurs quand vous les obligez à sélectionner des cibles trop petites dans votre application à l’aide du ciblage oculaire.
+Durant la conception, si vous souhaitez créer une expérience utilisateur agréable et confortable, nous vous recommandons de privilégier des cibles ayant un angle de vue d’au moins 2°, sinon plus de préférence.
+
+- **Mouvements de suivi du regard irréguliers** : nos yeux effectuent des mouvements rapides de fixation en fixation. Si vous examinez un enregistrement des mouvements oculaires, vous pouvez voir qu’ils sont irréguliers. Vos yeux bougent rapidement et sautent spontanément par rapport au *suivi de la tête* ou aux *mouvements de la main*.  
+
+- **Fiabilité du suivi :** La précision de l’eye-tracking peut se dégrader légèrement quand la lumière change, car votre œil s’adapte aux nouvelles conditions.
+Bien que cela n’affecte pas nécessairement la conception de votre application, la précision ne doit pas dépasser la limite mentionnée ci-dessus de 2°. Cela peut signifier que l’utilisateur doit exécuter un autre étalonnage. 
 
 
 ### <a name="design-recommendations"></a>Recommandations de conception
-Dans l’exemple suivant, nous indiquons les recommandations de conception spécifiques basées sur les avantages décrits et défis pour les yeux les regards entrée :
+Dans ce qui suit, nous énumérons des recommandations de conception spécifiques basées sur les avantages et les défis relatifs au suivi du regard :
 
-1. **Les regards œil ! = regards de tête :**
-    - **Prenez en compte si rapide encore yeux déséquilibrées mouvements ajuster votre tâche d’entrée :** Bien que notre mouvements d’oeil rapide et déséquilibrées soient très utile de sélectionner rapidement les cibles sur notre champ de vision, il est moins pertinents pour les tâches qui nécessitent des trajectoires lisses d’entrée (par exemple, pour le dessin ou tournant annotations). Dans ce cas, manuellement ou head pointant doit être préféré.
+1. **Suivi du regard != Suivi de la tête :**
+    - **Déterminez si des mouvements oculaires rapides mais irréguliers conviennent à votre tâche de saisie :** Nos mouvements oculaires rapides et irréguliers sont parfaits pour sélectionner rapidement des cibles dans notre champ de vision, mais ils sont moins utiles pour les tâches nécessitant des trajectoires d’entrée lisses (par exemple, dessiner ou entourer des annotations). Dans ce cas, le pointage à la main ou avec la tête est préférable.
   
-    - **Évitez de quelque chose association directe au regard d’yeux de l’utilisateur (par exemple, un slider ou un curseur).**
-Dans le cas d’un curseur, cela peut entraîner l’effet « fuite curseur » en raison des décalages légères dans le signal de regards yeux projetée. Dans le cas d’un curseur, il est en conflit avec le rôle de double de contrôler le curseur avec les yeux tout en voulant également vérifier si l’objet est à l’emplacement correct. En bref, les utilisateurs peuvent rapidement avoir l’impression submergée et gênés, en particulier si le signal est imprécis pour cet utilisateur. 
+    - **Évitez d’associer directement quelque chose au suivi du regard de l’utilisateur (par exemple un curseur).**
+Dans le cas d’un curseur, cela peut entraîner un effet de « curseur fuyant » en raison de légers décalages dans le signal de suivi du regard projeté. Dans le cas d’un curseur, cela entre en conflit avec le double rôle qui consiste à contrôler le curseur à l’aide des yeux tout en souhaitant également vérifier si l’objet se trouve au bon emplacement. En bref, les utilisateurs peuvent rapidement se sentir submergés et gênés, en particulier si le signal est imprécis. 
   
-2. **Combiner les yeux regards avec les autres entrées :** L’intégration de suivi des yeux avec les autres entrées, telles que les mouvements de main, les commandes vocales ou appuie sur le bouton, a plusieurs avantages :
-    - **Autoriser l’observation gratuitement :** Étant donné que le rôle principal de nos yeux consiste à observer notre environnement, il est important de permettre aux utilisateurs d’observer cet onglet sans déclencher une (visuels, auditifs,...) des commentaires ou des actions. 
-    Permet de combiner ET avec un autre contrôle d’entrée pour la transition sans heurts entre les modes de contrôle d’entrée et de d’observation ET.
+2. **Combiner le suivi du regard avec d’autres entrées :** L’intégration de l’eye-tracking à d’autres entrées, par exemple les mouvements des mains, les commandes vocales ou les actions visant à appuyer sur un bouton présente plusieurs avantages :
+    - **Permettre une observation libre :** Étant donné que le rôle principal de nos yeux est d’observer notre environnement, il est important de permettre aux utilisateurs de regarder autour d’eux sans déclencher de rétroactions ou d’actions (visuelles, auditives, etc.). 
+    La combinaison de l’eye-tracking avec un autre contrôle d’entrée permet une transition en douceur entre les modes d’observation par eye-tracking et de contrôle d’entrée.
   
-    - **Fournisseur de contexte puissantes :** À l’aide d’informations sur où l’utilisateur consulte lors de la mise en circulation d’une commande vocale ou effectuant un mouvement de la main permet d’acheminement sans effort de l’entrée dans le champ de vision. Par exemple : « Put qui il » rapidement et aisément sélectionner et positionner un hologramme entre la scène en consultant simplement à une cible et une destination. 
+    - **Fournisseur de contexte puissant :** L’utilisation d’informations liées au regard de l’utilisateur en même temps que l’émission d’une commande vocale ou l’exécution d’un mouvement de la main permet de canaliser sans effort l’entrée dans le champ de vision. Par exemple : « Mettre ça là » pour sélectionner et positionner rapidement et facilement un hologramme dans la scène en regardant simplement une cible et une destination. 
 
-    - **Nécessaire pour la synchronisation des entrées multimodales (« ne pas avant de cliquer sur » problème) :** Combinant les mouvements rapides des yeux avec des entrées supplémentaires plus complexes (par exemple, les commandes vocales long ou les mouvements de main) assume le risque de déplacement avec votre regard yeux avant la fin de la commande d’entrée supplémentaire. Par conséquent, si vous créez vos propres contrôles d’entrée (par exemple, les mouvements de main), veillez à ouvrir une session l’apparition de cette durée d’entrée ou approximative à corréler avec qu’un utilisateur avait fixated sur dans le passé.
+    - **Nécessité de synchroniser les entrées multimodales (problème du « quitter avant de cliquer ») :** Si des mouvements oculaires rapides sont combinés avec des entrées supplémentaires plus complexes (par exemple des commandes vocales longues ou des mouvements des mains), l’utilisateur risque de suivre autre chose du regard avant d’achever la commande d’entrée supplémentaire. Ainsi, si vous créez vos propres contrôles d’entrée (mouvements des mains personnalisés, par exemple), veillez à journaliser le début de cette entrée ou sa durée approximative pour la corréler avec ce que l’utilisateur a fixé antérieurement.
     
-3. **Commentaires subtiles pour l’entrée de suivi de le œil :** Il est utile fournir des commentaires si une cible est examinée (pour indiquer que le système fonctionne comme prévu) mais doit être conservée subtile. Cela peut inclure une fusion lentement en entrée/sortie mises en surbrillance visual ou effectuer d’autres comportements cible subtiles, telles que les mouvements lente (par exemple, légèrement augmentant ainsi la cible) pour indiquer que le système correctement a détecté que l’utilisateur consulte une cible, toutefois, sans inutilement interrompre le flux de travail actuel de l’utilisateur. 
+3. **Rétroaction subtile pour une entrée par eye-tracking :** Il est utile de fournir une rétroaction à l’utilisateur s’il regarde une cible (pour indiquer que le système fonctionne comme prévu), mais celle-ci doit rester subtile. Cela peut inclure des apparitions/disparitions en fondu ou d’autres comportements subtils de la cible, par exemple des mouvements lents (léger grossissement de la cible) pour indiquer que le système a correctement détecté que l’utilisateur regarde une cible, sans toutefois interrompre inutilement son flux de travail. 
 
-4. **Éviter l’application des mouvements des yeux non naturelles en tant qu’entrée :** Ne forcez pas aux utilisateurs d’effectuer des mouvements des yeux spécifique (mouvements regards) pour déclencher des actions dans votre application.
+4. **Évitez d’appliquer des mouvements oculaires artificiels en tant qu’entrées :** Ne forcez pas les utilisateurs à effectuer des mouvements oculaires spécifiques (mouvements par pointage du regard) pour déclencher des actions dans votre application.
 
-5. **Compte pour enregistrer les imprécisions dans :** Nous faisons la distinction deux types d’imprécisions qui sont visibles pour les utilisateurs : Décalage et d’instabilité. Le moyen le plus simple aux décalages de l’adresse est de fournir des cibles suffisamment grands pour interagir avec (2° > dans l’angle visual – en tant que référence : votre miniature est environ 2° dans l’angle visual lorsque vous agrandissez votre arm (1)). Il en résulte les conseils suivants :
-    - Ne forcez pas aux utilisateurs de sélectionner des cibles minuscules : Research a montré que si les cibles sont suffisamment grandes (et le système est bien conçu), les utilisateurs décrivent l’interaction sans effort et magique. Si les cibles deviennent trop petites, les utilisateurs décrivent l’expérience comme fatigante et frustrante.
+5. **Tenez compte des imprécisions :** Nous distinguons deux types d’imprécision perceptibles par les utilisateurs : le décalage et l’instabilité. Le moyen le plus simple de gérer les décalages consiste à fournir des cibles suffisamment grandes pour rendre une interaction possible (angle visuel > 2° : à titre de référence, votre ongle de pouce a un angle visuel d’environ 2° quand vous tendez le bras (1)). Il en résulte les conseils d’aide suivants :
+    - Ne forcez pas les utilisateurs à sélectionner des cibles minuscules : Des recherches ont montré que si les cibles sont suffisamment grandes (et si le système est bien conçu), les utilisateurs décrivent l’interaction comme étant magique et sans effort. Si les cibles deviennent trop petites, les utilisateurs décrivent l’expérience comme étant fatigante et frustrante.
    
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a>Voir également
 * [Suivre de la tête et valider](gaze-and-commit.md)
 * [Suivre de la tête et du regard dans DirectX](gaze-in-directx.md)
-* [Surveillez les regards dans Unity (Toolkit de réalité mixte)](https://aka.ms/mrtk-eyes)
-* [Mouvements de main](gestures.md)
+* [Suivi du regard dans Unity (Mixed Reality Toolkit)](https://aka.ms/mrtk-eyes)
+* [Mouvements des mains](gestures.md)
 * [Entrée vocale](voice-design.md)
 * [Contrôleurs de mouvement](motion-controllers.md)
 * [Confort](comfort.md)
