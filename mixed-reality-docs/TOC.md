@@ -1,9 +1,9 @@
 # [Installer les outils](install-the-tools.md)
 # [Préparer votre application pour HL2](mrtk-porting-guide.md)
-# [Découvrir](index.md)
+# Discover
+## [Documentation sur la réalité mixte](index.md)
 ## [Qu’est-ce que la réalité mixte ?](mixed-reality.md)
 ## [Qu’est-ce qu’un hologramme ?](hologram.md)
-
 ## Matériel
 ### HoloLens
 #### [Informations détaillées sur le casque HoloLens 2](https://www.microsoft.com/hololens/hardware)
@@ -78,7 +78,8 @@
 ### [Notes de publication - Mai 2016](release-notes-may-2016.md)
 ### [Notes de publication - Mars 2016](release-notes-march-2016.md)
 
-# [Concevez](design.md)
+# Concevoir
+## [Conception pour la réalité mixte](design.md)
 ## [À propos de ce guide de conception](about-this-design-guidance.md)
 ## Bien démarrer avec la conception
 ### [Qu’est-ce que la réalité mixte ?](mixed-reality.md)
@@ -129,7 +130,8 @@
 ### [HoloSketch](case-study-building-holosketch,-a-spatial-layout-and-ux-sketching-app-for-hololens.md)
 ### [Processus de création des ressources](asset-creation-process.md)
 
-# [Développer](development.md)
+# Développer
+## [Zone de développement](development.md)
 ## Services cloud de réalité mixte
 ### [Azure Spatial Anchors](https://docs.microsoft.com/azure/spatial-anchors)
 ### [Holographic Remoting Player](holographic-remoting-player.md)

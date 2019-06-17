@@ -6,20 +6,37 @@ ms.author: mazeller
 ms.date: 04/1/2019
 ms.topic: article
 keywords: résoudre les problèmes, problème connu, aide
-ms.openlocfilehash: a92ab52c899de44f9c5c8c86ebb6f9cd8433d395
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 2423c7292e453d97461c299e8bddfa063a29d3cd
+ms.sourcegitcommit: 2f600e5ad00cd447b180b0f89192b4b9d86bbc7e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59597065"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67148697"
 ---
 # <a name="hololens-known-issues"></a>Problèmes connus de HoloLens
 
 Il s’agit de la liste actuelle des problèmes connus pour les développeurs ayant un impact sur HoloLens. Commencez par vérifier ici si vous constatez un comportement étrange. Cette liste restent mis à jour comme nouveau problème détecté ou signalé ou que les problèmes sont traités dans les futures mises à jour de logiciel HoloLens.
 
+## <a name="unable-to-connect-and-deploy-to-hololens-through-visual-studio"></a>Impossible de se connecter et à déployer sur HoloLens via Visual Studio
+
+>[!NOTE]
+>Dernière mise à jour : 6/14 à 18 h 00 - émettre incriminés.
+
+Les équipes HoloLens et Visual Studio sont sur un problème qui peut empêcher les utilisateurs à partir de la déployer sur un appareil HoloLens via Visual Studio.
+ 
+Pendant la phase de déploiement, les utilisateurs signaler le message d’erreur suivant, malgré les appareils HoloLens et développeur machine ayant *mode développeur* activé :
+
+*DEP0100 : Vérifiez que cet appareil cible a le mode développeur est activé. Impossible d’obtenir une licence de développeur sur <device IP> en raison de l’erreur 80004005.*
+ 
+**Solution** : 
+ 
+Les utilisateurs signaler que la réinitialisation de l’appareil résout le problème, mais nous ne pouvons pas garantir que cela ne fonctionne pas dans tous les cas. Vous trouverez des instructions pour réinitialiser votre appareil [ici](https://support.microsoft.com/en-us/help/13452/hololens-restart-reset-or-recover-hololens).
+ 
+Nous fournissons une mise à jour dès que le problème est causé de racine. 
+
 ## <a name="issues-launching-the-microsoft-store-and-apps-on-hololens"></a>Problèmes de lancement du Microsoft Store et les applications sur HoloLens
 
->[!IMPORTANT]
+>[!NOTE]
 >Dernière mise à jour : 4/2 @ 10 h - problème résolu. 
 
 Vous pouvez rencontrer des problèmes lorsque vous tentez de lancer le Microsoft Store et les applications sur HoloLens. Nous avons déterminé que le problème se produit lorsque les mises à jour des applications d’arrière-plan déploiement une version plus récente des packages de framework dans des séquences spécifiques lors d’une ou plusieurs de leurs applications dépendantes sont en cours d’exécution. Dans ce cas, une mise à jour automatiques des applications remis une nouvelle version du Framework .NET Native (version 10.0.25531 à 10.0.27413) a provoqué les applications qui sont exécutent pas correctement mise à jour pour toutes les applications en cours d’exécution consomme la version précédente du framework.  Le flux de mise à jour de l’infrastructure est comme suit :-
@@ -74,7 +91,7 @@ Nous vous recommandons d’utiliser un clavier Bluetooth pour la saisie des mots
 
 ## <a name="visual-studio"></a>Visual Studio
 * Consultez [installer les outils](install-the-tools.md) pour la version la plus récente de Visual Studio recommandé pour le développement de HoloLens.
-* Lorsque vous déployez une application à partir de Visual Studio à votre HoloLens, vous pouvez rencontrer l’erreur : **L’opération demandée ne peut pas être effectuée sur un fichier avec une section mappée utilisateur ouverte. (Exception de HRESULT : 0x800704C8)**. Si cela se produit, essayez à nouveau et votre déploiement généralement réussira.
+* Lorsque vous déployez une application à partir de Visual Studio à votre HoloLens, vous pouvez rencontrer l’erreur : **L’opération demandée ne peut pas être effectuée sur un fichier avec une section mappée utilisateur ouverte. (Exception de HRESULT : 0x800704C8)** . Si cela se produit, essayez à nouveau et votre déploiement généralement réussira.
 
 ## <a name="emulator"></a>Émulateur
 * Pas toutes les applications dans le Microsoft Store sont compatibles avec l’émulateur. Par exemple, Young pétarade et des Fragments ne sont pas lisibles sur l’émulateur.

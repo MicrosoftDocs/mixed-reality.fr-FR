@@ -3,15 +3,15 @@ title: Objet sur
 description: Un bouton a longtemps été une métaphore utilisée pour déclencher un événement dans le monde abstrait 2D. Dans le monde en trois dimensions de réalité mixte, nous n’êtes pas obligé d’être limitées à ce monde d’abstraction plus.
 author: cre8ivepark
 ms.author: jennyk
-ms.date: 02/24/2019
+ms.date: 06/06/2019
 ms.topic: article
 keywords: Réalité mixte, contrôles, interaction, l’interface utilisateur, l’expérience utilisateur
-ms.openlocfilehash: eea7eff6c591a9319b920936ce2be511cecb7496
-ms.sourcegitcommit: c6b59f532a9c5818d9b25c355a174a231f5fa943
+ms.openlocfilehash: b0397e00763f70e4caf55a84b6541085e56fafd4
+ms.sourcegitcommit: 2f600e5ad00cd447b180b0f89192b4b9d86bbc7e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66813807"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67148725"
 ---
 # <a name="interactable-object"></a>Objet sur
 
@@ -84,20 +84,51 @@ Pour tous les objets sur, il est important prendre en charge les options d’aut
 
 <img src="images/640px-interactibleobject-voicecommand.jpg" alt="Tooltip for the voice command" title="Info-bulle pour les commandes vocales" width="350"><br/>*Info-bulle pour les commandes vocales*
 
+## <a name="sizing"></a>Dimensionnement
+Afin de garantir que tous les objets sur peuvent facilement être touchées par les utilisateurs nous suggérons d’assurer le satisfait sur une taille minimale (souvent mesurée dans l’angle visual degrés) en fonction de la distance, qu'il est placé à partir de l’utilisateur. Angle visual degrés est basé sur la distance entre l’utilisateur et de l’objet et reste constant, alors que la taille physique de la cible peut changer en tant que la distance à partir de l’utilisateur change. Pour déterminer la taille physique nécessaires d’un objet basé sur la distance à partir d’un vraiment et du degré angle visual essayez d’utiliser une calculatrice telles que : http://elvers.us/perception/visualAngle/
+
+Voici les recommandations pour les tailles minimale du contenu sur
+
+### <a name="target-size-for-direct-hand-interaction"></a>Taille cible pour l’interaction directe main
+| Distance | Angle de visualisation | Size |
+|---------|---------|---------|
+| 45cm  | non inférieure à 2° | 1.6 1,6 cm |
+
+![Taille cible pour l’interaction directe main](images/TargetSizingNear.jpg)<br>
+*Taille cible pour l’interaction directe main*
+
+Lorsque vous créez des boutons pour l’interaction directe, nous vous recommandons une plus grande taille minimale de cm x 3.2 3.2 pour vous assurer que suffisamment d’espace pour contenir une icône et potentiellement certains texte **
+
+| Distance | Taille minimale |
+|---------|---------|
+| 45cm  | 3.2 x 3.2 cm |
+
+![Taille cible pour les boutons](images/TargetSizingButtons.png)<br>
+*Taille cible pour les boutons*
+
+
+### <a name="target-size-for-hand-ray-or-gaze-interaction"></a>Taille de rayon de main cible ou l’utilisation d’interaction
+| Distance | Angle de visualisation | Size |
+|---------|---------|---------|
+| 2m  | non inférieure à 1° | 3.5 3,5 cm |
+
+![Taille de rayon de main cible ou l’utilisation d’interaction](images/TargetSizingFar.jpg)<br>
+*Taille de rayon de main cible ou l’utilisation d’interaction*
+
 ## <a name="creating-interactable-object-with-mixed-reality-toolkit-mrtk"></a>Création d’objet sur avec le Kit de ressources de réalité mixte (MRTK)
 
 Dans le  **[Toolkit de réalité mixte](https://github.com/Microsoft/MixedRealityToolkit-Unity)** , vous pouvez trouver la série de scripts Unity et prefabs qui vous aideront à créer des objets sur. Vous pouvez les utiliser pour rendre les objets à répondre aux différents types d’états de l’interaction d’entrée.
 
-* **[Interactable](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Interactable.html)**
-* **[Button](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Button.html)**
-* **[Main Interaction exemples scène](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_HandInteractionExamples.md)**
+* [Interactable](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Interactable.html)
+* [Button](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Button.html)
+* [Main Interaction exemples scène](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_HandInteractionExamples.md)
 
 Nuanceur Standard du MixedRealityToolkit offre différentes options telles que **light de proximité** qui vous permet de créer des signaux visuels et audio.
-* **[Nuanceur Standard MRTK](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Documentation/README_MRTKStandardShader.md)**
+* [Nuanceur Standard MRTK](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Documentation/README_MRTKStandardShader.md)
 
 
 ## <a name="see-also"></a>Voir aussi
 
-* **[Zone englobante](app-bar-and-bounding-box.md)**
-* **[Collection d’objets](object-collection.md)**
-* **[Le billboarding et tag-along](billboarding-and-tag-along.md)**
+* [zone englobante](app-bar-and-bounding-box.md)
+* [Collection d’objets](object-collection.md)
+* [Billboarding et tag-along](billboarding-and-tag-along.md)

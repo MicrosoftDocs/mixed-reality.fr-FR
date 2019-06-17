@@ -6,12 +6,12 @@ ms.author: trferrel
 ms.date: 03/26/2019
 ms.topic: article
 keywords: Unity, les paramètres, réalité mixte
-ms.openlocfilehash: a26dbdb63c8bad9bb9659a6a3303c0b0ab418580
-ms.sourcegitcommit: aba33a8ad1416f7598048ac35ae9ab1734bd5c37
+ms.openlocfilehash: c8b5598fa702954ca14b9b013e44ed38cf6075c2
+ms.sourcegitcommit: 2f600e5ad00cd447b180b0f89192b4b9d86bbc7e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66270373"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67148672"
 ---
 # <a name="recommended-settings-for-unity"></a>Paramètres recommandés pour Unity
 
@@ -65,6 +65,12 @@ Pour activer cette fonctionnalité dans votre projet Unity
 
 En outre, il est recommandé de sélectionner **16 bits profondeur** sous le **profondeur Format** configuration dans ce panneau, en particulier pour le développement de Hololens. Sélection de 16 bits par rapport aux 24 bits réduit considérablement la bande passante car moins de données en aurez besoin être déplacée/traité.
 
+Dans l’ordre pour la plateforme Windows Mixed Reality optimiser la stabilité HOLOGRAMME, elle s’appuie sur la mémoire tampon de profondeur pour être précis et correspondre à n’importe quel hologrammes rendus à l’écran. Par conséquent, avec partage de mémoire tampon de profondeur, il est important lors de la couleur, de rendu également restituer de profondeur. Dans Unity, la plupart des matériaux Opaque ou TransparentCutout affichera une profondeur par défaut mais transparent et objets de texte seront affiche généralement pas profondeur bien que cela soit dépendante de nuanceur, etc. 
+
+Si vous utilisez le nuanceur Toolkit réalité mixte Standard, pour restituer la profondeur des objets transparents :
+1) Sélectionnez le matériau transparent qui utilise le nuanceur MRTK Standard et ouvrir la fenêtre d’éditeur inspecteur
+2) Définissez **Mode de rendu** à **personnalisé** puis définissez **Mode** à **Transparent** et enfin définir **profondeur écrire**à **sur**
+
 >[!NOTE]
 > Les développeurs doivent Méfiez-vous des Z fighting lorsque vous modifiez ces valeurs ainsi que les paramètres de plan proche/éloigné de la caméra. Z Fighting se produit lorsque deux gameobjects essayez restituer au même pixel et en raison des limitations de fidélité de la mémoire tampon de profondeur (ex.) profondeur z), Unity ne peut pas déterminer quel objet se trouve devant l’autre. Les développeurs note un scintillement entre deux objets de jeu en tant qu’ils *combattre* pour la même valeur z en profondeur. Pour résoudre ce problème en basculant vers le format de 24 bits profondeur comme il y aura une plus grande plage de valeurs pour chaque objet calculer lors de leur profondeur de z à partir de l’appareil photo.
 >
@@ -85,7 +91,7 @@ Unity a déconseillé la prise en charge des scripts de serveur principal et don
 Veuillez lire [optimiser le temps de Build pour IL2CPP](https://docs.unity3d.com/Manual/IL2CPP-OptimizingBuildTimes.html) pour plus d’informations.
 
 > [!NOTE]
-> En outre, il peut être avantageux du programme d’installation un [serveur de Cache](https://docs.unity3d.com/Manual/CacheServer.html), en particulier pour les projets Unity avec une grande quantité de ressources (à l’exclusion de fichiers de script) ou en permanence modification scènes/ressources. Lorsque vous ouvrez un projet, Unity stocke actifs éligibles dans un format de cache interne sur l’ordinateur du développeur. Éléments doivent être réimportés et donc à nouveau traitées lors de la modification. Ce processus peut effectué qu’une fois et enregistré dans un serveur de Cache et par conséquent partagé avec d’autres développeurs de gagner du temps, au lieu de chaque développeur de traitement de l’importer à nouveau de nouvelles modifications localement.
+> En outre, il peut être avantageux de configurer un [serveur de cache](https://docs.unity3d.com/Manual/CacheServer.html), en particulier pour les projets Unity qui comprennent une grande quantité de ressources (à l’exclusion des fichiers de script), et pour les scènes ou ressources qui changent constamment. Lorsque vous ouvrez un projet, Unity stocke les ressources éligibles dans un format de cache interne sur l’ordinateur de développement. Les éléments doivent être réimportés, et donc retraités, après modification. Ce processus peut être effectué une fois puis enregistré dans un serveur de cache. Pour gagner du temps, vous pouvez le partager avec les autres développeurs, plutôt que de demander à chaque développeur de réimporter localement les éléments modifiés.
 
 ## <a name="publishing-properties"></a>Propriétés de publication
 

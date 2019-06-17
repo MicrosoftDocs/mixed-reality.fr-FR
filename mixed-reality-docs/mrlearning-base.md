@@ -1,17 +1,17 @@
 ---
 title: Présentation du Module MR Learning Base
-description: Terminer ce cours pour apprendre à implémenter la reconnaissance faciale de Azure au sein d’une application de réalité mixte.
+description: Suivez ce cours pour découvrir comment implémenter la reconnaissance faciale Azure au sein d’une application de réalité mixte.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
-keywords: réalité mixte, hololens (didacticiel), unity,
-ms.openlocfilehash: 2fe07efe87086e9a8c06e1953fcef8544b03c80a
-ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
+keywords: réalité mixte, unity, tutoriel, hololens
+ms.openlocfilehash: d4220527a7de8e596f2825fd9d199d536510b972
+ms.sourcegitcommit: 2f600e5ad00cd447b180b0f89192b4b9d86bbc7e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66829886"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67148623"
 ---
 # <a name="mr-learning-base-module-overview--objectives"></a>Objectifs et vue d’ensemble du Module MR Learning Base
 
@@ -26,9 +26,9 @@ ms.locfileid: "66829886"
     </colgroup>
     <tr>
         <td><strong>Cours</strong></td>
-        <td><a href="hololens-hardware-details.md"><strong>HoloLens (1er gen)</strong></a></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens (1ère génération)</strong></a></td>
         <td><a href="https://www.microsoft.com/en-us/hololens/hardware"><strong>HoloLens 2</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Casques IMMERSIFS</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Casques immersifs</strong></a></td>
     </tr>
      <tr>
         <td></td>

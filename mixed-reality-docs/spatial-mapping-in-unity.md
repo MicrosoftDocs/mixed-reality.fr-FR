@@ -1,17 +1,17 @@
 ---
 title: Mappage spatial dans Unity
 description: Rendu et se heurtant à la géométrie réelle autour de vous dans Unity.
-author: thetuvix
-ms.author: alexturn
+author: davidkline-ms
+ms.author: davidkl
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Unity, mappage spatial, convertisseur, collider, maillage, l’analyse, composant
-ms.openlocfilehash: f938f5921cb2c06342a9ebcd376d690c10584df9
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.openlocfilehash: 8f7bad1651ab31b2e83ad9d9c8f465547fbbdc5a
+ms.sourcegitcommit: 2f600e5ad00cd447b180b0f89192b4b9d86bbc7e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59597148"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67148651"
 ---
 # <a name="spatial-mapping-in-unity"></a>Mappage spatial dans Unity
 
@@ -455,7 +455,7 @@ La dll de présentation stocke en interne la playspace sous forme de grille des 
 Pour plus d’informations sur l’utilisation de mappage Spatial avec v2 Toolkit de réalité mixte, consultez le <a href="https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/SpatialAwareness/SpatialAwarenessGettingStarted.html" target="_blank">section de la reconnaissance spatiale</a> des documents MRTK.
 
 ## <a name="see-also"></a>Voir aussi
-* [MR 230 spatiale : Mappage spatial](holograms-230.md)
+* [Réalité mixte - Fonctionnalités spatiales - Cours 230 : Mappage spatial](holograms-230.md)
 * [Systèmes de coordonnées](coordinate-systems.md)
 * [Systèmes de coordonnées dans Unity](coordinate-systems-in-unity.md)
 * <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity" target="_blank">MixedRealityToolkit</a>
