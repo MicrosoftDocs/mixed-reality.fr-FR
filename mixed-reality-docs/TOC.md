@@ -145,6 +145,7 @@
 #### [Mode Lecture Unity](unity-play-mode.md)
 #### [Exportation et création de solutions Unity Visual Studio](exporting-and-building-a-unity-visual-studio-solution.md)
 #### [Bonnes pratiques sur l’utilisation d’Unity et de Visual Studio](best-practices-for-working-with-unity-and-visual-studio.md)
+#### [Débogage managé avec Unity IL2CPP](managed-debugging-with-unity-il2cpp.md)
 ### Fonctionnalités principales
 #### [Appareil photo dans Unity](camera-in-unity.md)
 #### [Systèmes de coordonnées dans Unity](coordinate-systems-in-unity.md)
