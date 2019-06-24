@@ -6,14 +6,14 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, composants, de capteurs, technologie, tech, détruire, destruction,
-ms.openlocfilehash: ddbce274a0573ab72e1ff7b523b6ac4b8fbb6ba2
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 56b10fa9751c626578c697cd370347482a121b2a
+ms.sourcegitcommit: 30246ab9b9be44a3c707061753e53d4bf401eb6b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59596937"
+ms.lasthandoff: 06/22/2019
+ms.locfileid: "67326200"
 ---
-# <a name="hololens-1st-gen-hardware-details"></a>HoloLens (1er gen) détails sur le matériel
+# <a name="hololens-1st-gen-hardware-details"></a>HoloLens (1er Gen) détails sur le matériel
 
 ![Microsoft HoloLens](images/see-through-400px.jpg)
 
@@ -21,7 +21,7 @@ Microsoft HoloLens est le premier ordinateur entièrement librement HOLOGRAPHIQU
 
 ## <a name="how-to-get-microsoft-hololens"></a>Comment obtenir Microsoft HoloLens
 
-Microsoft HoloLens est disponible à l’achat en tant qu’un à la fois un Development Edition et une configuration Commercial Suite (qui inclut une fonctionnalités professionnelles et de garantie pour la gestion de sécurité et de périphérique ajoutés). Si vous êtes en Amérique du Nord, vous pouvez également louer HoloLens via un partenaire.
+Microsoft HoloLens est disponible à l’achat en tant qu’un à la fois un Development Edition et une configuration de Commercial Suite qui inclut une fonctionnalités professionnelles et de garantie pour ajouté gestion des périphériques et de sécurité. Si vous êtes en Amérique du Nord, vous pouvez également louer HoloLens via un partenaire.
 
 [Cliquez ici pour plus d’informations sur l’achat ou de location Microsoft HoloLens](https://www.microsoft.com/hololens/buy).
 
@@ -62,7 +62,7 @@ Microsoft HoloLens est disponible à l’achat en tant qu’un à la fois un Dev
 * État de la batterie LED
 * Wi-Fi 802.11ac
 * Micro USB 2.0
-* 4.1 de Bluetooth LE
+* 4\.1 de Bluetooth LE
 
 ### <a name="power"></a>Alimentation
 * Durée de la batterie
@@ -78,11 +78,11 @@ Microsoft HoloLens est disponible à l’achat en tant qu’un à la fois un Dev
 * Unité de traitement HOLOGRAPHIQUE Microsoft personnalisées (HPU 1.0)
 
 ### <a name="weight"></a>Épaisseur
-* 579g
+* 579 g
 
 ### <a name="memory"></a>Mémoire
 * Flash de 64 Go
-* 2 GO DE RAM
+* 2 Go de RAM
 
 ### <a name="whats-in-the-box"></a>Nouveautés dans la zone
 * HoloLens Development Edition
