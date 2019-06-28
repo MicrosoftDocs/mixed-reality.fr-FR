@@ -6,12 +6,12 @@ ms.author: cmeekhof
 ms.date: 05/09/2019
 ms.topic: article
 keywords: regards, regards principal, chef de suivi, suivi de le œil, directx, entrée, hologrammes
-ms.openlocfilehash: ac72c5305527ed2d68945aeb32051cf2246a736e
-ms.sourcegitcommit: 60060386305eabfac2758a2c861a43c36286b151
+ms.openlocfilehash: edf20a621178d76bfc97477f9f9b2eca200f1318
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66453742"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67414408"
 ---
 # <a name="head-and-eye-gaze-input-in-directx"></a>Principaux et surveiller les regards entrée dans DirectX
 
@@ -149,7 +149,7 @@ Toutefois, pour l’entrée qui traverse le SpatialInteractionManager, il existe
 
 ## <a name="see-also"></a>Voir aussi
 * [Modèle d’entrée principal du pointage de regard et validation](gaze-and-commit.md)
-* [Yeux sur HoloLens 2](eye-tracking.md)
+* [OCULAIRE sur HoloLens 2](eye-tracking.md)
 * [Systèmes de coordonnées dans DirectX](coordinate-systems-in-directx.md)
 * [Entrée vocale dans DirectX](voice-input-in-directx.md)
 * [Mains et contrôleurs de mouvement dans DirectX](hands-and-motion-controllers-in-directx.md)

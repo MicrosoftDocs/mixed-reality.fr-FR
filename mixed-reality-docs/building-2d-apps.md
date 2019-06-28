@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Application 2D, UWP, application plat, HoloLens, immersives casque modèle d’application, nouveau bouton, barre de l’application, PPP, résolution, de mise à l’échelle
-ms.openlocfilehash: 35a2e7774a79e35893821467f7e9ef8c004efa20
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: f9792a7e5fd9729bf9f5f632c699c74c58c10ddf
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59595363"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67414223"
 ---
 # <a name="updating-2d-uwp-apps-for-mixed-reality"></a>La mise à jour des applications UWP 2D pour la réalité mixte
 
@@ -147,7 +147,7 @@ Vues 2D sont décorées avec une barre de l’application au-dessus de leur cont
 
 **Titre :** affiche le *displayname* de la vignette associée à l’instance d’application
 
-**Bouton précédent :** déclenche le *[BackRequested](https://msdn.microsoft.com/library/windows/apps/windows.ui.core.systemnavigationmanager.backrequested.aspx)* événement lorsque enfoncé. Visibilité de bouton précédente est contrôlée par  *[SystemNavigationManager.AppViewBackButtonVisibility](https://msdn.microsoft.com/library/windows/apps/windows.ui.core.systemnavigationmanager.aspx)*.
+**Bouton précédent :** déclenche le *[BackRequested](https://msdn.microsoft.com/library/windows/apps/windows.ui.core.systemnavigationmanager.backrequested.aspx)* événement lorsque enfoncé. Visibilité de bouton précédente est contrôlée par  *[SystemNavigationManager.AppViewBackButtonVisibility](https://msdn.microsoft.com/library/windows/apps/windows.ui.core.systemnavigationmanager.aspx)* .
 
 ![Application barre de l’interface utilisateur dans la vue de l’application 2D](images/12697297-10104100857470613-1470416918759008487-o-500px.jpg)<br>
 *Application barre de l’interface utilisateur dans la vue de l’application 2D*
@@ -177,9 +177,9 @@ Une fois que votre application est en cours d’exécution, empaqueter votre app
 
 ## <a name="see-also"></a>Voir aussi
 * [Modèle d’application](app-model.md)
-* [Gaze](gaze.md)
-* [Mouvement](gestures.md)
+* [Pointage du regard](gaze.md)
+* [mouvement](gestures.md)
 * [Contrôleurs de mouvement](motion-controllers.md)
-* [Voice](voice-input.md)
-* [Soumission d’une application pour le Microsoft Store](submitting-an-app-to-the-microsoft-store.md)
+* [Entrée vocale](voice-input.md)
+* [Envoi d’une application au Microsoft Store](submitting-an-app-to-the-microsoft-store.md)
 * [Utilisation de l’émulateur HoloLens](using-the-hololens-emulator.md)

@@ -7,18 +7,18 @@ ms.author: kurtie
 ms.date: 03/21/2018
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-unity, academy, tutorial
-ms.openlocfilehash: b94f1be256d3373deb5f177be0ee9bc0c8be3180
-ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
+ms.openlocfilehash: 4f1402cb9b91e0d0619c0516de9120302323b799
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64874051"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67415403"
 ---
 # <a name="tutorials-and-sample-apps"></a>Didacticiels et exemples d’applications
 
 Actuellement tous nos didacticiels et les exemples d’applications sont en fonction de Unity.  Comme nous développons le contenu pour les autres moteurs et les plateformes, vous les trouverez sous la rubrique correspondante dans la Table des matières.
 
-## <a name="mr-learning-modules"></a>Modules d’apprentissage MR
+## <a name="mr-learning-modules"></a>Modules d’apprentissage sur la réalité mixte
 
 Les Modules de formation MR sont conçus pour aider les développeurs à la fois techniques et meilleures pratiques pour développer des applications de réalité mixte.  Les modules initiales de HoloLens 2 et implémentent la réalité Toolkit 2.0 mixte (MRTK 2.0).
 * Le module de base est destiné à montrer aux développeurs comment configurer leur projet avec MRTK, ainsi que pour implémenter l’interface utilisateur, le mappage Spatial et interactions de base et avancées
@@ -253,7 +253,7 @@ L’Académie de réalité mixte est un ensemble de didacticiels pas à pas en l
 
 ## <a name="mixed-reality-and-azure-services-tutorials"></a>Tutoriels sur la réalité mixte et les services Azure
 
-Ces didacticiels autonomes sont très utiles pour apprendre à implémenter les différents services Azure dans votre projet Unity.  Ces didacticiels sont toutes basées sur deux HoloLens (1er Gen) ou notre des casques IMMERSIFS, mais les leçons sur l’utilisation des services doivent être transférable à presque n’importe quel appareil.
+Ces didacticiels autonomes sont très utiles pour apprendre à implémenter les différents services Azure dans votre projet Unity.  Ces didacticiels sont toutes basées sur deux HoloLens (1er gen) ou notre des casques IMMERSIFS, mais les leçons sur l’utilisation des services doivent être transférable à presque n’importe quel appareil.
 
 <ul id="cardtypes-W" class="cardsW panelContent" style="display: flex; margin-top: 0px;">
     <li>

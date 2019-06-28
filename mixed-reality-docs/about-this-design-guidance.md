@@ -6,12 +6,12 @@ ms.author: jonwie
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, présentation de conception, des conseils
-ms.openlocfilehash: 6173f7cd2bcc4280f86f8f5ecaae1e90e01b62a0
-ms.sourcegitcommit: 30246ab9b9be44a3c707061753e53d4bf401eb6b
+ms.openlocfilehash: 0e5601898c2b1f351b5ab2aaa491a7c64ae57f7e
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/22/2019
-ms.locfileid: "67326128"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67414161"
 ---
 # <a name="about-this-design-guidance"></a>À propos de ce guide de conception
 
@@ -33,7 +33,7 @@ Voici un aperçu rapide de l’organisation de ce guide de conception. Vous trou
 * **[Commencer à concevoir](mixed-reality.md)**  - lire nos pensées de haut niveau et comprendre les principes nous suivons.
 * **[Interactions instinctual](interaction-fundamentals.md)**  -en savoir plus sur l’entrée, des commandes, la navigation et d’autres principes de base d’interaction pour la conception de vos applications.
 * **[Style](typography.md)**  -rendre votre application plaisante à l’aide de la couleur, la typographie et motion.
-* **[Modèles d’application](types-of-mixed-reality-apps.md)**  -Découvrez comment application ; ications peuvent s’étendre sur des scénarios dans les environnements IMMERSIFS et réels.
+* **[Modèles d’application](types-of-mixed-reality-apps.md)**  -Découvrez comment les applications peuvent s’étendre sur des scénarios dans les environnements IMMERSIFS et réels.
 * **[Contrôles](interactable-object.md)**  -utiliser des contrôles et modèles comme blocs de construction pour créer votre propre expérience d’application.
 * **[Exemples d’applications](design.md#sample-apps)**  -créez des expériences exceptionnelles à partir d’exemples conçu et créé par notre équipe.
 * **[Concevoir des outils et ressources](design.md#design-tools)**  -lancer votre projet avec les outils et les modèles de conception.

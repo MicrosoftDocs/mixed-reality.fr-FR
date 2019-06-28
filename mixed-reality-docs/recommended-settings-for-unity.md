@@ -6,12 +6,12 @@ ms.author: trferrel
 ms.date: 03/26/2019
 ms.topic: article
 keywords: Unity, les paramètres, réalité mixte
-ms.openlocfilehash: c8b5598fa702954ca14b9b013e44ed38cf6075c2
-ms.sourcegitcommit: 2f600e5ad00cd447b180b0f89192b4b9d86bbc7e
+ms.openlocfilehash: 8afcefb49a860d66a372ebd3d0c4bcdb43038813
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67148672"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67415451"
 ---
 # <a name="recommended-settings-for-unity"></a>Paramètres recommandés pour Unity
 
@@ -160,5 +160,5 @@ Les fonctionnalités applicables pour l’activation de l’API couramment utili
 
 ## <a name="see-also"></a>Voir aussi
 * [Vue d’ensemble du développement Unity](unity-development-overview.md)
-* [Performances Understaing pour la réalité mixte](understanding-performance-for-mixed-reality.md)
+* [Comprendre les performances pour la réalité mixte](understanding-performance-for-mixed-reality.md)
 * [Recommandations de performances pour Unity](performance-recommendations-for-unity.md)

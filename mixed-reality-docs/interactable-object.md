@@ -6,12 +6,12 @@ ms.author: jennyk
 ms.date: 06/06/2019
 ms.topic: article
 keywords: Réalité mixte, contrôles, interaction, l’interface utilisateur, l’expérience utilisateur
-ms.openlocfilehash: b0397e00763f70e4caf55a84b6541085e56fafd4
-ms.sourcegitcommit: 2f600e5ad00cd447b180b0f89192b4b9d86bbc7e
+ms.openlocfilehash: 57299cbb758a69603fc68ad5d43af8f2216e5104
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67148725"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67415355"
 ---
 # <a name="interactable-object"></a>Objet sur
 
@@ -85,9 +85,9 @@ Pour tous les objets sur, il est important prendre en charge les options d’aut
 <img src="images/640px-interactibleobject-voicecommand.jpg" alt="Tooltip for the voice command" title="Info-bulle pour les commandes vocales" width="350"><br/>*Info-bulle pour les commandes vocales*
 
 ## <a name="sizing"></a>Dimensionnement
-Afin de garantir que tous les objets sur peuvent facilement être touchées par les utilisateurs nous suggérons d’assurer le satisfait sur une taille minimale (souvent mesurée dans l’angle visual degrés) en fonction de la distance, qu'il est placé à partir de l’utilisateur. Angle visual degrés est basé sur la distance entre l’utilisateur et de l’objet et reste constant, alors que la taille physique de la cible peut changer en tant que la distance à partir de l’utilisateur change. Pour déterminer la taille physique nécessaires d’un objet basé sur la distance à partir d’un vraiment et du degré angle visual essayez d’utiliser une calculatrice telles que : http://elvers.us/perception/visualAngle/
+Pour vous assurer que tous les objets sur peuvent facilement être manipulés par les utilisateurs, nous vous recommandons de vérifier que le satisfait sur une taille minimale (angle visual souvent mesurée en degrés d’arc visual) basé sur la distance, qu'il est placé à partir de l’utilisateur. Angle Visual est basé sur la distance entre les yeux de l’utilisateur et de l’objet et reste constant, alors que la taille physique de la cible peut changer en tant que la distance à partir de l’utilisateur change. Pour déterminer la taille physique nécessaires d’un objet basé sur la distance à partir de l’utilisateur, essayez d’utiliser une calculatrice visual angle comme [celui-ci](http://elvers.us/perception/visualAngle/).
 
-Voici les recommandations pour les tailles minimale du contenu sur
+Voici les recommandations pour les tailles minimale du contenu sur.
 
 ### <a name="target-size-for-direct-hand-interaction"></a>Taille cible pour l’interaction directe main
 | Distance | Angle de visualisation | Size |
@@ -121,7 +121,7 @@ Dans le  **[Toolkit de réalité mixte](https://github.com/Microsoft/MixedRealit
 
 * [Interactable](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Interactable.html)
 * [Button](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Button.html)
-* [Main Interaction exemples scène](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_HandInteractionExamples.md)
+* [Scène d’exemples main interaction](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_HandInteractionExamples.md)
 
 Nuanceur Standard du MixedRealityToolkit offre différentes options telles que **light de proximité** qui vous permet de créer des signaux visuels et audio.
 * [Nuanceur Standard MRTK](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Documentation/README_MRTKStandardShader.md)

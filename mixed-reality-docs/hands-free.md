@@ -6,12 +6,12 @@ ms.author: liamar
 ms.date: 04/20/2019
 ms.topic: article
 keywords: Une réalité mixte, mains libres, utilisation, utilisation de ciblage, interaction, conception
-ms.openlocfilehash: 4d21fa10eabb446565bddebccdbde5e2e7bcc72a
-ms.sourcegitcommit: 30246ab9b9be44a3c707061753e53d4bf401eb6b
+ms.openlocfilehash: 7942192f644a7133335f089cfaaccfaebdd9292e
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/22/2019
-ms.locfileid: "67326155"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67414395"
 ---
 # <a name="hands-free"></a>Mains-libres
 
@@ -39,10 +39,10 @@ Certains scénarios spécifiques peuvent être :
 
 ### <a name="head-gaze-and-dwellgaze-and-dwellmd"></a>[Suivre de la tête et stabiliser](gaze-and-dwell.md)
 
-Dans certaines situations mains-libres, en utilisant votre voix n’est pas idéale ou même possible. Environnements d’usine forte, confidentialité ou normes sociaux peuvent tous être des contraintes. Utilisation de la tête + m’attarderai pas modèle autorise l’utilisateur à parcourir l’application à l’aide de leur vecteur principal pour qu’il pointe, tout en attente, ou logement sur un bouton s’activer après un certain laps de temps, généralement désignée environ 1 seconde ou c’est le cas. 
+Dans certaines situations mains-libres, en utilisant votre voix n’est pas idéale ou même possible. Environnements d’usine forte, confidentialité ou normes sociaux peuvent tous être des contraintes. Utilisation de la tête + m’attarderai pas modèle permet à l’utilisateur à naviguer de l’application à l’aide de leur vecteur principal pour qu’il pointe, tout en attente, ou logement sur un bouton s’activer après une certaine quantité de temps, généralement environ 1 seconde ou ainsi. 
 
 
-## <a name="transitioning-in-and-out-of-hands-freey"></a>Transition vers et depuis des mains-freey
+## <a name="transitioning-in-and-out-of-hands-free"></a>Transition vers et depuis mains libres
 
 Pour ces scénarios, libération vos mains d’interagir avec hologrammes pour la navigation et d’exécution des commandes peut aller d’une exigence absolue jusqu'à l’exploitation de l’application bout, à l’utilisateur peut effectuer la transition et se déconnecte d’à un d’une fonctionnalité supplémentaire heure. 
 
@@ -54,7 +54,7 @@ Si votre utilisateur cible doit être en mesure de passer de mains à mains libr
 Par exemple, si l’utilisateur est en usine, regarder une vidéo référence sur son Hololens et décide de récupérer une clé pour commencer à utiliser, elle très probablement serait commencer à travailler dans les mains libres sans avoir à placer la clé d’appuyer sur un bouton vers le bas. Elle doit être en mesure d’appeler une session vocale avec une commande de voix, m’attarderai pas sur une interface utilisateur déjà visible pour commencer à durée d’affichage, ou que le mot « select ».
 
 L’utilisateur doit avoir la possibilité de : 
-* Basculez vers mains libres tout en mains libres
+* Commutateur de mains libres tandis que mains libres
 * Basculez vers entre les mains avec vos mains
 * Basculez vers le contrôleur à l’aide d’un contrôleur 
 
@@ -96,5 +96,5 @@ L’utilisateur comprend...
 
 ## <a name="see-also"></a>Voir aussi
 * [Suivre de la tête et valider](gaze-and-commit.md)
-* [Manipulation directe](direct-manipulation.md)
-* [Pointer et valider](point-and-commit.md)
+* [Manipulation directe avec les mains](direct-manipulation.md)
+* [Pointer et valider avec les mains](point-and-commit.md)

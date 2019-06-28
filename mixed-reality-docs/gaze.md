@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Mixte réalité, regards, interaction, concevoir
-ms.openlocfilehash: e0c1a925f6faeb37ec35e511cef36f9c06672c8a
-ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
+ms.openlocfilehash: 7e65d26d3e9edabbd01d35a887ffc8622a3c6337
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66829739"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67414369"
 ---
 # <a name="gaze"></a>Pointage du regard
 
@@ -37,9 +37,9 @@ Sur HoloLens (1er gen), les interactions doivent dériver généralement leur ci
     </colgroup>
     <tr>
         <td><strong>Fonctionnalité</strong></td>
-        <td><a href="hololens-hardware-details.md"><strong>HoloLens (1er gen)</strong></a></td>
-        <td><strong>HoloLens 2</strong></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Casques IMMERSIFS</strong></a></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens (1ère génération)</strong></a></td>
+        <td><strong>HoloLens 2</strong></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Casques immersifs</strong></a></td>
     </tr>
      <tr>
         <td>Utilisation de la tête</td>
@@ -84,5 +84,5 @@ Une fois que l’utilisateur a ciblé un hologramme ou un objet réel à l’aid
 * [Réalité mixte - Entrées - Cours 210 : Utilisation de la tête](holograms-210.md)
 * [Suivre de la tête et du regard dans DirectX](gaze-in-directx.md)
 * [Head regards dans Unity](gaze-in-unity.md)
-* [Yeux sur HoloLens 2](eye-tracking.md)
+* [OCULAIRE sur HoloLens 2](eye-tracking.md)
 * [Surveillez les regards dans Unity à l’aide du Kit de ressources de réalité mixte](https://aka.ms/mrtk-eyes)

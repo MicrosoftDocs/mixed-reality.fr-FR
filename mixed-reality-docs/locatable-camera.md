@@ -5,13 +5,13 @@ author: cdedmonds
 ms.author: wguyman, cdedmonds
 ms.date: 06/12/2019
 ms.topic: article
-keywords: appareil photo, hololens, appareil photo de couleur, accessible sur des serveurs frontaux
-ms.openlocfilehash: f661fc82fbeab9a870e8ccf7044c9bb375bed7e3
-ms.sourcegitcommit: 30246ab9b9be44a3c707061753e53d4bf401eb6b
+keywords: appareil photo, hololens, appareil photo de couleur, front face, hololens 2, cv, vision par ordinateur, repère, marqueurs, code qr, qr, photo, vidéo
+ms.openlocfilehash: e4e7fce50ec2865650b6b7cbafa59af8819d220c
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/22/2019
-ms.locfileid: "67326292"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67415265"
 ---
 # <a name="locatable-camera"></a>Appareil photo localisable
 
@@ -21,7 +21,7 @@ HoloLens inclut une caméra world à l’avant de l’appareil qui permet aux ap
 
 ### <a name="hololens-first-generation"></a>HoloLens (première génération)
 
-* Appareil photo de photo/vidéo (PV) fixe le focus, en balance des blancs exposition auto et canal de traitement complet de l’image
+* Focus fixe photo / (PV) caméra vidéo avec balance des blancs, exposition auto et pipeline de traitement complet de l’image.
 * LED de confidentialité blanc accessible sur le monde s’allume chaque fois que l’appareil photo est active
 * L’appareil photo prend en charge les modes suivants (tous les modes sont proportions 16:9) à 30, 24, 20, 15 et 5 i/s :
 
@@ -35,20 +35,32 @@ HoloLens inclut une caméra world à l’avant de l’appareil qui permet aux ap
 
 ### <a name="hololens-2"></a>HoloLens 2
 
-* Appareil photo de photo/vidéo (PV) autofocus, en balance des blancs exposition auto et canal de traitement complet de l’image
-* LED de confidentialité blanc accessible sur le monde s’allume chaque fois que l’appareil photo est active
-* L’appareil photo prend en charge les modes suivants (tous les modes vidéo sont proportions 16:9) :
+* Autofocus photo / (PV) caméra vidéo avec balance des blancs, exposition auto et pipeline de traitement complet de l’image.
+* LED de confidentialité blanc accessible sur le monde s’allume chaque fois que l’appareil photo est active.
+* HoloLens 2 prend en charge les profils d’appareil photo différents. Découvrez comment [découvrir et sélectionner les fonctionnalités d’appareil photo](https://docs.microsoft.com/en-us/windows/uwp/audio-video-camera/camera-profiles).
+* L’appareil photo prend en charge les profils et les résolutions (tous les modes vidéo sont proportions 16:9) suivants :
+  
+  | Profil                                         | Vidéo     | Preview   | Toujours     | Fréquences d’images | Champ de vision horizontal (H-angle d’ouverture) | Utilisation suggérée                             |
+  |-------------------------------------------------|-----------|-----------|-----------|-------------|----------------------------------|---------------------------------------------|
+  | Legacy,0  BalancedVideoAndPhoto,100             | 2272x1278 | 2272x1278 |           | 15,30       | 64.69                            | Enregistrement vidéo de haute qualité                |
+  | Legacy,0  BalancedVideoAndPhoto,100             |           |           | 3904x2196 |             | 64.69                            | Capture d’images de haute qualité                  |
+  | BalancedVideoAndPhoto,120                       | 1952x1100 | 1952x1100 | 1952x1100 | 15,30       | 64.69                            | Scénarios de longue durée                     |
+  | BalancedVideoAndPhoto,120                       | 1504x846  | 1504x846  |           | 15,30       | 64.69                            | Scénarios de longue durée                     |
+  | Vidéoconférence, 100                           | 1952x1100 | 1952x1100 | 1952x1100 | 15,30,60    | 64.69                            | Conférence vidéo, les scénarios de longue durée |
+  | Vidéoconférence, 100                           | 1504x846  | 1504x846  |           | 5,15,30,60  | 64.69                            | Conférence vidéo, les scénarios de longue durée |
+  | Vidéoconférence, 100 BalancedVideoAndPhoto, 120 | 1920x1080 | 1920x1080 | 1920x1080 | 15,30       | 64.69                            | Conférence vidéo, les scénarios de longue durée |
+  | Vidéoconférence, 100 BalancedVideoAndPhoto, 120 | 1280 x 720  | 1280 x 720  | 1280 x 720  | 15,30       | 64.69                            | Conférence vidéo, les scénarios de longue durée |
+  | Vidéoconférence, 100 BalancedVideoAndPhoto, 120 | 1128 x 635  |           |           | 15,30       | 64.69                            | Conférence vidéo, les scénarios de longue durée |
+  | Vidéoconférence, 100 BalancedVideoAndPhoto, 120 | 960 x 540   |           |           | 15,30       | 64.69                            | Conférence vidéo, les scénarios de longue durée |
+  | Vidéoconférence, 100 BalancedVideoAndPhoto, 120 | 760x428   |           |           | 15,30       | 64.69                            | Conférence vidéo, les scénarios de longue durée |
+  | Vidéoconférence, 100 BalancedVideoAndPhoto, 120 | 640 x 360   |           |           | 15,30       | 64.69                            | Conférence vidéo, les scénarios de longue durée |
+  | Vidéoconférence, 100 BalancedVideoAndPhoto, 120 | 500 x 282   |           |           | 15,30       | 64.69                            | Conférence vidéo, les scénarios de longue durée |
+  | Vidéoconférence, 100 BalancedVideoAndPhoto, 120 | 424 x 240   |           |           | 15,30       | 64.69                            | Conférence vidéo, les scénarios de longue durée |
 
-  >[!NOTE]
-  >Ces modes sont susceptibles d’être modifiées avant la disponibilité générale de HoloLens 2.
-
-  |  Vidéo  |  Preview  |  Toujours  |  Fréquences d’images  |  Champ de vision horizontal (H-angle d’ouverture) |  Utilisation suggérée | 
-  |----------|----------|----------|----------|----------|----------|
-  |  1920x1080 |  1920x1080 |  N/A |  30, 15 i/s  |  54deg  |  (mode par défaut avec une stabilisation vidéo) | 
-  |  N/A |  N/A |  3904X2196 |  N/A  |  64deg |  Image toujours la résolution plus élevée | 
-  |  2272x1278 |  2272x1278 |  N/A |  30, 15 i/s  |  64deg |  Résolution de surbalayage (remplissage) avant une stabilisation vidéo | 
-  |  1952x1100 |  1952x1100 |  1952x1100  |  30, 15 i/s  |  64deg |  Qualité de diffusion en continu | 
-  |  1280 x 720 |  1280 x 720 |  N/A |  30, 15, 5 i/s  |  64deg |  Mode alimentation basse/résolution pour la diffusion en continu et les tâches de traitement d’images | 
+>[!NOTE]
+>Les clients peuvent exploiter [mixte de capture de la réalité](mixed-reality-capture.md) à prendre des photos de votre application, notamment hologrammes et stabilisation vidéo ou de vidéos.
+>
+>En tant que développeur, voici les considérations que vous devez prendre en compte lors de la création de votre application si vous souhaitez qu’il recherche aussi bon que possible lorsqu’un client capture le contenu. Vous pouvez également activer (et personnaliser) la capture de réalité mixte de directement au sein de votre application. En savoir plus sur [mixte de capture de la réalité pour les développeurs](mixed-reality-capture-for-developers.md).
 
 ## <a name="locating-the-device-camera-in-the-world"></a>Localisation de l’appareil photo dans le monde
 
