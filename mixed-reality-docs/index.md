@@ -8,12 +8,12 @@ ms.date: 02/24/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: réalité mixte, découvrir, distribuer, index, page d’accueil, conception, développement, tutoriels, exemples d’applications, principes fondamentaux, études de cas, ressources, procédures HoloLens, projets open source
-ms.openlocfilehash: 810d9846fd217cd1acb3ae0060c11f5c9173191e
-ms.sourcegitcommit: c6b59f532a9c5818d9b25c355a174a231f5fa943
+ms.openlocfilehash: cf513cebbbf4f05721811cb82d584f9039e378b7
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66813747"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67415388"
 ---
 # <a name="mixed-reality-documentation"></a>Documentation sur la réalité mixte
 
@@ -151,7 +151,7 @@ La réalité mixte mélange le contenu réel et le contenu virtuel dans des envi
 
 <h2>Actualités et remarques</h2>
 
-<h3>Avril 2019</h3>
+<h3>Juin 2019</h3>
 
 Comme promis, nous allons vous faire découvrir d’incroyables outils de réalité mixte ! Nous sommes impatients de recevoir vos commentaires et nous vous invitons à [participer aux conversations](https://holodevelopersslack.azurewebsites.net/) sur les sujets que vous souhaiteriez nous voir aborder, les personnes qui vous intéressent, les tutoriels et guides pratiques dont vous avez besoin, etc. Vous pouvez également nous contacter via [Twitter](https://twitter.com/MxdRealityDev) et [rejoindre notre programme pour développeurs](https://aka.ms/iwantmr) afin d’obtenir directement des informations sur la nouvelle documentation, les nouveaux outils, les événements et plus encore. Restez connecté, il y a plus à venir !
 
@@ -162,7 +162,7 @@ Comme promis, nous allons vous faire découvrir d’incroyables outils de réali
 <tr>
 <td><b>Guides de portage</b> <br>1. HoloToolKit (HTK)/Mixed Reality Toolkit (MRTK) vers MRTK version 2
 <br>2. HoloLens (1ère génération) vers HoloLens 2 (x86 vers ARM, recommandations relatives aux interactions et à la conception)
-</td></td><td>Mars-Mai 2019</td><td> <ul><li><a href=https://docs.microsoft.com/en-us/windows/mixed-reality/mrtk-porting-guide>Préparation de votre application existante à HoloLens 2</a><li><a href=https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/HTKToMRTKPortingGuide.html>HoloToolKit to MRTK APIs</a></td>
+</td></td><td>Mars-Mai 2019</td><td> <ul><li><a href=https://docs.microsoft.com/en-us/windows/mixed-reality/mrtk-porting-guide>Préparation d’une application existante pour HoloLens 2</a><li><a href=https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/HTKToMRTKPortingGuide.html>HoloToolKit to MRTK APIs</a></td>
 </tr>
 <tr>
 <td>Modules développeur open source mensuels (tutoriels/exemples d’applications)</td><td>Mars-Juin 2019</td><td> <ul><li><a href=https://docs.microsoft.com/en-us/windows/mixed-reality/mrlearning-base-ch1>Module d’apprentissage de base sur la réalité mixte</a></td>
