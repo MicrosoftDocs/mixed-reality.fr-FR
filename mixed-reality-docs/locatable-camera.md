@@ -6,12 +6,12 @@ ms.author: wguyman, cdedmonds
 ms.date: 06/12/2019
 ms.topic: article
 keywords: appareil photo, hololens, appareil photo de couleur, front face, hololens 2, cv, vision par ordinateur, repère, marqueurs, code qr, qr, photo, vidéo
-ms.openlocfilehash: e4e7fce50ec2865650b6b7cbafa59af8819d220c
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: 323c05ca01e000942a6f8ee6dc82de7546578324
+ms.sourcegitcommit: cf9f8ebbca0301e9d277853771ff6e47701ba1c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67415265"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67523315"
 ---
 # <a name="locatable-camera"></a>Appareil photo localisable
 
@@ -43,6 +43,7 @@ HoloLens inclut une caméra world à l’avant de l’appareil qui permet aux ap
   | Profil                                         | Vidéo     | Preview   | Toujours     | Fréquences d’images | Champ de vision horizontal (H-angle d’ouverture) | Utilisation suggérée                             |
   |-------------------------------------------------|-----------|-----------|-----------|-------------|----------------------------------|---------------------------------------------|
   | Legacy,0  BalancedVideoAndPhoto,100             | 2272x1278 | 2272x1278 |           | 15,30       | 64.69                            | Enregistrement vidéo de haute qualité                |
+  | Legacy,0  BalancedVideoAndPhoto,100             | 896x504   | 896x504   |           | 15,30       | 64.69                            | Enregistrement vidéo de haute qualité                |
   | Legacy,0  BalancedVideoAndPhoto,100             |           |           | 3904x2196 |             | 64.69                            | Capture d’images de haute qualité                  |
   | BalancedVideoAndPhoto,120                       | 1952x1100 | 1952x1100 | 1952x1100 | 15,30       | 64.69                            | Scénarios de longue durée                     |
   | BalancedVideoAndPhoto,120                       | 1504x846  | 1504x846  |           | 15,30       | 64.69                            | Scénarios de longue durée                     |

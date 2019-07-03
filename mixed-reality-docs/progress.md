@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, conception, contrôles, l’interface utilisateur, l’expérience utilisateur
-ms.openlocfilehash: d62d86c690233f351b6c156c66eba33cb2687ea6
-ms.sourcegitcommit: c6b59f532a9c5818d9b25c355a174a231f5fa943
+ms.openlocfilehash: 84853a23a73bbece30c1f96b83e586642f3ab762
+ms.sourcegitcommit: cf9f8ebbca0301e9d277853771ff6e47701ba1c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66813728"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67523251"
 ---
 # <a name="displaying-progress"></a>Affichage de la progression
 
@@ -48,7 +48,7 @@ Vous pouvez ajouter à la personnalité et une identité de marque de votre appl
 
 ## <a name="see-also"></a>Voir aussi
 * [Scripts de progression et prefabs sur le Kit de ressources de réalité mixte](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/Features/UX/Prefabs/Loader)
-* [Zone englobante](app-bar-and-bounding-box.md)
+* [zone englobante](app-bar-and-bounding-box.md)
 * [Objet avec interaction possible](interactable-object.md)
 * [Collection d’objets](object-collection.md)
 * [Billboarding et tag-along](billboarding-and-tag-along.md)

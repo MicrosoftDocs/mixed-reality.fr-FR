@@ -6,22 +6,22 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: c120d22f955d366042bbcb9ac73eaa4f13dc20e9
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: fcca828fa228894e0e60986c6c7fd0053b210357
+ms.sourcegitcommit: cf9f8ebbca0301e9d277853771ff6e47701ba1c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67415267"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67523238"
 ---
-# <a name="getting-started-with-azure-spatial-anchors-on-hololens-2"></a>Prise en main Azure les ancres spatiale sur HoloLens 2
+# <a name="1-getting-started-with-azure-spatial-anchors"></a>1. Prise en main Azure les ancres Spatial
 
-Bienvenue dans le deuxième module du didacticiel 2 HoloLens. Avant de commencer, assurez-vous que tous les de la [conditions préalables](https://docs.microsoft.com/en-us/azure/spatial-anchors/quickstarts/get-started-unity-hololens) sont terminées. Si vous n’avez pas terminé la première, [module Base](mrlearning-base.md) encore, il est recommandé que vous effectuez tout d’abord ce module. Si vous démarrez à partir d’un projet Unity, suivez les étapes de la création du nouveau projet dans le [module Base](mrlearning-base.md). 
+Bienvenue dans le deuxième module des didacticiels HoloLens 2. Avant de commencer, assurez-vous que tous les de la [conditions préalables](https://docs.microsoft.com/en-us/azure/spatial-anchors/quickstarts/get-started-unity-hololens) sont terminées. Si vous n’avez pas terminé la première, [module Base](mrlearning-base.md) encore, il est recommandé que vous effectuez tout d’abord ce module. Si vous démarrez à partir d’un projet Unity, suivez les étapes de la création du nouveau projet dans le [module Base](mrlearning-base.md). 
 
 ## <a name="objectives"></a>Objectifs
 
-* Découvrez les principes fondamentaux du développement avec ancres spatiale d’Azure avec la version 2 HoloLens
+* Découvrez les principes fondamentaux du développement avec Azure les ancres spatiales avec HoloLens 2
 
-* Créer, charger et télécharger des ancres Spatial
+* Créer, charger et télécharger des ancres spatiales
 
   
 
@@ -40,7 +40,7 @@ Avant de commencer, téléchargez et importez les ressources suivantes :
 
 > Remarque: Consultez l’étape 5 pour obtenir des instructions spécifiques sur la façon d’importer ancres spatiale d’Azure, étape 6 pour obtenir des instructions spécifiques sur le module de Base de MR Pack de ressources et des étapes 3 à 4 pour obtenir des instructions spécifiques sur le Kit de ressources de réalité mixte (MRKT).
 
-1. créer une nouvelle scène dans votre projet. Cliquez avec le bouton droit sur le dossier de votre scène, cliquez sur « Créer », puis sur scène. Nom de la nouvelle scène ASALearningmodule.
+1. créer une nouvelle scène dans votre projet. Cliquez avec le bouton droit sur le dossier de votre scène, cliquez sur Créer, puis sur scène. Nom de la nouvelle scène ASALearningmodule.
 
 ![module2chapter1step1im](images/module2chapter1step1im.PNG)
 
@@ -49,7 +49,7 @@ Avant de commencer, téléchargez et importez les ressources suivantes :
 
 ![module2chapter1step3im](images/module2chapter1step3im.PNG)
 
-> Remarque: Vous verrez une fenêtre contextuelle qui dit, « Vous devez choisir un fichier pour le Kit de ressources de réalité mixte ». En cliquant sur Ok, vous accédez à l’étape 4.
+> Remarque: Vous verrez une fenêtre contextuelle qui indique, vous devez choisir un fichier pour le Kit de ressources de réalité mixte. En cliquant sur Ok, vous accédez à l’étape 4.
 
 4. Lorsque vous choisissez un fichier pour le MRTK, sélectionnez DefaultMixedRealityToolkitConfigurationProfile.
 
@@ -153,7 +153,7 @@ Maintenant que votre scène est configurée pour illustrer les principes fondame
 
 7. Avant d’effectuer la génération sur votre appareil, vérifiez que ce dernier est en mode développeur. S’il s’agit de votre premier déploiement sur l’appareil HoloLens 2, Visual Studio peut vous demander de l’associer à un code confidentiel. Suivez [ces instructions](https://docs.microsoft.com/en-us/windows/mixed-reality/using-visual-studio) si vous devez activer le mode développeur ou couplé à Visual Studio.
 
-8. Configurer Visual Studio pour la création de votre 2 HoloLens en sélectionnant la configuration Release et l’architecture « RM ».
+8. Configurer Visual Studio pour la création de votre 2 HoloLens en sélectionnant la configuration Release, ainsi que l’architecture du Gestionnaire de ressources.
     ![Lesson1Chapter5Step8](images/Lesson1Chapter5Step8.JPG)
    
 9. L’étape finale consiste à créer pour votre appareil en sélectionnant le débogage > Démarrer sans débogage. Sélectionnez Démarrer sans débogage provoque l’application à démarrer immédiatement sur votre appareil sur une build réussie d’informations de débogage ithout apparaissant dans Visual Studio. Cela signifie également que vous pouvez déconnecter le câble USB pendant que votre application s’exécute sur votre appareil HoloLens 2 sans arrêter celle-ci. Vous pouvez également sélectionner génération > déployer la Solution pour déployer sur votre appareil sans avoir à l’application de démarrer automatiquement.
@@ -176,9 +176,9 @@ Maintenant que votre scène est configurée pour illustrer les principes fondame
     
     7. Démarrez Azure ancres spatial session.
     
-    8. Recherchez Azure Spatial aachors. 
+    8. Recherchez Azure ancres spatiales. 
     
-    e, vous devez revenir à l’emplacement d’origine vous mets lorsque vous avez créé le point d’ancrage).
+    e, vous devez revenir à l’emplacement d’origine vous placer lorsque vous avez créé le point d’ancrage.
     9. Supprimer d’ancrage spatial Azure.
     
     10. Arrêter la session Azure.
@@ -198,7 +198,7 @@ Dans les sections précédentes, vous avez appris les notions de base des ancres
    > Remarque: Il existe une variété de flux d’expérience utilisateur pour le repositionnement des expériences, y compris l’utilisation d’un bouton pour activer/désactiver une zone englobante qui entoure l’expérience, l’utilisation d’un objet repositionnement (par exemple, le cube utilisé dans cette étape), l’utilisation de la rotation et position gizmos et bien plus encore.
 
 ## <a name="congratulations"></a>Félicitations
-Dans cette leçon, vous avez appris les notions de base des ancres spatiale d’Azure. Cette esson fournies vous avec plusieurs boutons qui vous permettent d’Explorer les différentes étapes requises pour démarrer et arrêter une session d’Azure, créer, charger et télécharger azure ancres sur un seul appareil. Dans la leçon suivante, nous allez apprendre comment enregistrer des ID d’ancrage Azure dans votre 2 HoloLens pour la récupération, même après le redémarrage de l’application. Lors de la série, vous allez également apprendre à transférer d’ancrage ID entre plusieurs appareils pour obtenir l’alignement spatial et en savoir plus sur multi-utilisateurs partagé sessions (bientôt disponibles dans le cadre du partage de module).
+Dans ce didacticiel, vous avez appris les notions de base des ancres spatiale d’Azure. Cette esson fournies vous avec plusieurs boutons qui vous permettent d’Explorer les différentes étapes requises pour démarrer et arrêter une session d’Azure, créer, charger et télécharger azure ancres sur un seul appareil. Dans la leçon suivante, nous allez apprendre comment enregistrer des ID d’ancrage Azure dans votre 2 HoloLens pour la récupération, même après le redémarrage de l’application. Lors de la série, vous allez également apprendre à transférer d’ancrage ID entre plusieurs appareils pour réaliser l’alignement spatial et en savoir plus sur plusieurs utilisateurs, sessions, partagées à venir dans le cadre du didacticiel de partage.
 
 [Leçon suivante : ASA leçon 2](mrlearning-asa-ch2.md)
 

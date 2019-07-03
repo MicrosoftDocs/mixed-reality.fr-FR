@@ -6,16 +6,16 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: b729de818dfa21df8fbce782a24a611a365ac795
-ms.sourcegitcommit: 78e21e887bf4357c96c9ab2164559d610e8c041e
+ms.openlocfilehash: 2a4ea599fd4887f30589c2d839be305d3dc8d1bd
+ms.sourcegitcommit: cf9f8ebbca0301e9d277853771ff6e47701ba1c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67465224"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67523196"
 ---
-# <a name="synchronizing-shared-object-movements"></a>Synchronisation des mouvements des objets partagés
+# <a name="4-sharing-object-movements-with-multiple-users"></a>4. Partage des mouvements de l’objet avec plusieurs utilisateurs
 
-Dans cette leçon, nous allez apprendre à partager les mouvements des objets afin que tous les participants d’une session partagée peuvent collaborer et afficher leurs interactions. Cette leçon repose sur le Lanceur lunaire qui a été créé dans le cadre de la [didacticiels de Module de Base](mrlearning-base.md).
+Dans ce didacticiel, nous allez apprendre à partager les mouvements des objets afin que tous les participants d’une session partagée peuvent collaborer et afficher leurs interactions. Cette leçon repose sur le Lanceur lunaire qui a été créé dans le cadre de la [didacticiels de Module de Base](mrlearning-base.md).
 
 Objectifs :
 
@@ -26,7 +26,7 @@ Objectifs :
 ### <a name="instructions"></a>Instructions
 
 
-1. Enregistrer la scène à partir de la leçon précédente (contrôle + S). Vous pouvez le nommer HLSharedProjectMainPart4.unity afin qu’il soit plus facile à trouver lorsque vous en avez besoin.
+1. Enregistrer la scène à partir de la leçon précédente (contrôle + S). Vous pouvez le nommer, HLSharedProjectMainPart4.unity, afin qu’il soit plus facile à trouver lorsque vous en avez besoin.
 
 2. À partir de la fenêtre projet, dans les ressources -> dossier Scripts, double-cliquez sur GenericNetSync pour l’ouvrir dans Visual Studio ou qui vous sont à l’aide de l’éditeur de code jamais.  ![](images/module3chapter4updatestep2.png)
 
