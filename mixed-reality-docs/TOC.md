@@ -71,7 +71,8 @@
 
 
 ## Notes de publication de la réalité mixte
-### [Notes de publication actuelles](release-notes-october-2018.md)
+### [Notes de publication actuelles](release-notes-may-2019.md)
+### [Notes de publication - Octobre 2018](release-notes-october-2018.md)
 ### [Notes de publication - Avril 2018](release-notes-april-2018.md)
 ### [Notes de publication - Octobre 2017](release-notes-october-2017.md)
 ### [Notes de publication - Août 2016](release-notes-august-2016.md)
@@ -194,16 +195,29 @@
 ### [Utilisation de WebVR dans Edge avec Windows Mixed Reality](using-webvr-in-edge-with-windows-mixed-reality.md)
 ## [Tutoriels et exemples d’applications](tutorials.md)
 ### Unity
-#### Modules d’apprentissage sur la réalité mixte
-##### HoloLens 2
-###### Module de base
-####### [Module de base - Vue d’ensemble et objectifs](mrlearning-base.md)
-####### [Initialisation du projet et première application](mrlearning-base-ch1.md)
-####### [Interface utilisateur, suivi manuel et configuration du Kit de ressources de réalité mixte](mrlearning-base-ch2.md)
-####### [Placement de contenu dynamique et solveurs](mrlearning-base-ch3.md)
-####### [Interaction des objets 3D](mrlearning-base-ch4.md)
-####### [Entrée avancée](mrlearning-base-ch5.md)
-####### [Application de démonstration](mrlearning-base-ch6.md)
+#### Tutoriels sur HoloLens 2
+##### Tutoriels de démarrage
+###### [1. Vue d’ensemble et objectifs](mrlearning-base.md)
+###### [2. Initialisation de votre projet et première application](mrlearning-base-ch1.md)
+###### [3. Création de l’interface utilisateur et configuration du kit d’outils de réalité mixte](mrlearning-base-ch2.md)
+###### [4. Placement du contenu dynamique et utilisation de solveurs](mrlearning-base-ch3.md)
+###### [5. Interaction avec les objets 3D](mrlearning-base-ch4.md)
+###### [6. Exploration des options d’entrée avancées](mrlearning-base-ch5.md)
+###### [7. Création d’un exemple d’application Module lunaire](mrlearning-base-ch6.md)
+##### Tutoriels sur les ancres spatiales Azure
+###### [1. Bien démarrer avec les ancres spatiales Azure](mrlearning-asa-ch1.md)
+###### [2. Enregistrement, récupération et partage d’ancres spatiales Azure](mrlearning-asa-ch2.md)
+##### Tutoriels sur les services de reconnaissance vocale Azure
+###### [1. Intégration et utilisation de la reconnaissance vocale et de la transcription](mrlearning-speechSDK-ch1.md)
+###### [2. Ajout d’un mode hors connexion pour la traduction de parole en texte locale](mrlearning-speechSDK-ch2.md)
+###### [3. Ajout du composant de traduction vocale Azure Cognition Services](mrlearning-speechSDK-ch3.md)
+###### [4. Configuration des intentions et compréhension du langage naturel](mrlearning-speechSDK-ch4.md)
+##### Tutoriels sur les fonctionnalités multiutilisateurs
+###### [1. Configuration du réseau Photon Unity](mrlearning-sharing(photon)-ch1.md)
+###### [2. Préparation de Unity pour le développement](mrlearning-sharing(photon)-ch2.md)
+###### [3. Connexion de plusieurs utilisateurs](mrlearning-sharing(photon)-ch3.md)
+###### [4. Partage de mouvements d’objet avec plusieurs utilisateurs](mrlearning-sharing(photon)-ch4.md)
+###### [5. Intégration d’ancres spatiales Azure dans une expérience partagée](mrlearning-sharing(photon)-ch5.md)
 #### Exemples d’applications open source HoloLens (1ère gen)
 ##### [Tableau périodique des éléments](periodic-table-of-the-elements.md)
 ##### [Lunar Module](lunar-module.md)
