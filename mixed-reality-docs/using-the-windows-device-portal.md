@@ -6,18 +6,18 @@ ms.author: jlyons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Windows Device Portal, HoloLens
-ms.openlocfilehash: f4319e1efa94d90bfb8cc4e5815ffa87fc865a7f
-ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
+ms.openlocfilehash: 79a4a1f99125028fcaf71e185eb00093aa8c742f
+ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66830006"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67694585"
 ---
 # <a name="using-the-windows-device-portal"></a>À l’aide de la Windows Device Portal
 
 <table>
 <tr>
-<th>Fonctionnalité</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (1er gen)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"><a href="immersive-headset-hardware-details.md">Casques IMMERSIFS</a></th>
+<th>Fonctionnalité</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (1ère génération)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"><a href="immersive-headset-hardware-details.md">Casques immersifs</a></th>
 </tr><tr>
 <td> Windows Device Portal</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"></td>
 </tr>
@@ -56,7 +56,7 @@ Cette documentation est spécifiquement sur le Windows Device Portal pour HoloLe
 
 ## <a name="connecting-to-an-emulator"></a>Connexion à un émulateur
 
-Vous pouvez également utiliser Device Portal avec votre émulateur. Pour vous connecter au portail de l’appareil, utilisez le [barre d’outils](using-the-hololens-emulator.md). Cliquez sur cette icône : ![Icône d’ouverture de portail de l’appareil](images/emulator-deviceportal.png) **ouvrir le portail de périphérique**: Ouvrez le Windows Device Portal pour le système d’exploitation de HoloLens dans l’émulateur.
+Vous pouvez également utiliser Device Portal avec votre émulateur. Pour vous connecter au portail de l’appareil, utilisez le [barre d’outils](using-the-hololens-emulator.md). Cliquez sur cette icône : ![Icône d’ouverture de portail de l’appareil](images/emulator-deviceportal.png) **ouvrir le portail de périphérique**: ouvre le Portail d’appareil Windows pour le système d’exploitation HoloLens dans l’émulateur.
 
 ## <a name="creating-a-username-and-password"></a>Création d’un nom d’utilisateur et le mot de passe
 
@@ -144,19 +144,29 @@ Utilisez la page Vue 3D pour voir comment HoloLens interprète votre environneme
 ![Page de Capture de réalité mixte dans Windows Device Portal sur Microsoft HoloLens](images/windows-device-portal-mixed-reality-capture-page-1000px.png)<br>
 *Page de Capture de réalité mixte dans Windows Device Portal sur Microsoft HoloLens*
 
-Utilisez le [capturer de réalité mixte](mixed-reality-capture.md) page pour enregistrer des flux multimédias à partir de la HoloLens.
+Utilisez la page MRC pour enregistrer les flux multimédias issus du casque HoloLens.
 * **Paramètres**: Contrôler les flux multimédias qui sont capturés en vérifiant les paramètres suivants :
   * **Hologrammes**: Capture le contenu HOLOGRAPHIQUE dans le flux vidéo. Les hologrammes font l’objet d’un rendu en mono et non en stéréo.
   * **Appareil photo PV**: Capture le flux vidéo à partir de la caméra vidéo/photo.
   * **MIC Audio**: Capture audio à partir du tableau de microphone.
   * **Application Audio**: Capture des données audio à partir de l’application en cours d’exécution.
+  * **Restituer à partir de l’appareil photo**: Aligne la capture pour être du point de vue de la caméra vidéo/photo, si [pris en charge par l’application en cours d’exécution](mixed-reality-capture-for-developers.md#render-from-the-pv-camera-opt-in) (HoloLens 2 uniquement).
   * **Qualité de la version préliminaire de Live**: Sélectionnez la résolution d’écran, la fréquence d’images et le taux de diffusion en continu de l’aperçu en direct.
 * Cliquez ou appuyez sur la **l’aperçu instantané** bouton pour afficher le flux de capture. **Arrêter l’aperçu instantané** arrête le flux de capture.
 * Cliquez ou appuyez sur **enregistrement** pour démarrer l’enregistrement du flux de réalité mixte, en utilisant les paramètres spécifiés. **Arrêter l’enregistrement** met fin à l’enregistrement et l’enregistre.
 * Cliquez ou appuyez sur **Take photo** à prendre une image fixe à partir du flux de capture.
 * **Photos et vidéos**: Affiche une liste de captures vidéo et photo effectuée sur l’appareil.
 
-Notez que les applications HoloLens ne sont pas en mesure de capturer de photo ou de vidéo MRC en cours d’enregistrement ou de diffusion en continu d’un aperçu instantané à partir de Device Portal.
+> [!NOTE]
+> Il existe [limitations MRC simultanée](mixed-reality-capture-for-developers.md#simultaneous-mrc-limitations):
+> * Si une application tente d’accéder à la caméra de photo/vidéo pendant que Windows Device Portal est d’enregistrer une vidéo, l’enregistrement vidéo s’arrête.
+>   * HoloLens 2 n’empêchera pas d’enregistrement vidéo si l’acesses application la caméra vidéo/photo avec le mode de SharedReadOnly.
+> * Si une application utilise activement la caméra vidéo/photo, Windows Device Portal est en mesure de prendre une photo ou un enregistrement d’une vidéo.
+> * Vidéo en flux continu :
+>   * HoloLens (1er gen) empêche l’application d’accéder à la caméra vidéo/photo lors de la diffusion en continu à partir de Windows Device Portal.
+>   * HoloLens (1er gen) ne parviendra pas à flux temps réel si une application utilise activement la caméra vidéo/photo.
+>   * HoloLens 2 s’arrête automatiquement la diffusion en continu quand une application tente d’accéder à la caméra vidéo/photo en mode de ExclusiveControl.
+>   * HoloLens 2 est en mesure de démarrer un flux en direct pendant une application est activement à l’aide de l’appareil photo PV.
 
 ### <a name="performance-tracing"></a>Suivi des performances
 

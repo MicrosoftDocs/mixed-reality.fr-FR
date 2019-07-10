@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: réalité Azure, mixte, academy, unity, didacticiel, api, insights d’application, hololens, immersives, vr
-ms.openlocfilehash: 838dbe38724d29f4c5987e2f6ac7a07231015c82
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
-ms.translationtype: HT
+ms.openlocfilehash: e14a32f9a38e3e8f3054d19310782f7c2d4784a1
+ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59596993"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67694570"
 ---
 >[!NOTE]
 >Les didacticiels Académie de réalité mixte ont été conçus avec HoloLens (1er gen) et des casques IMMERSIFS réalité mixte à l’esprit.  Par conséquent, nous estimons qu’il est important de laisser ces didacticiels en place pour les développeurs qui cherchent toujours pour obtenir des conseils de développement pour ces appareils.  Ces didacticiels seront **_pas_** être mis à jour avec les ensembles d’outils ou les interactions utilisées pour HoloLens 2 dernières.  Ils seront conservées pour continuer à travailler sur les appareils pris en charge. Il y aura une nouvelle série de didacticiels seront publiés dans le futur qui va vous montrer comment développer pour HoloLens 2.  Cet avis sera mis à jour avec un lien vers ces didacticiels lorsqu’elles sont validées.
@@ -34,11 +34,11 @@ Avoir terminé ce cours, vous disposez d’une application de casque immersives 
 
 Ce cours va vous apprendre à obtenir les résultats à partir du Service Application Insights, dans une application basée sur Unity. Il le sera jusqu'à vous permettent d’appliquer ces concepts à une application personnalisée, que vous voudrez peut-être générer.
 
-## <a name="device-support"></a>Prise en charge des appareils
+## <a name="device-support"></a>Périphériques pris en charge
 
 <table>
 <tr>
-<th>Cours</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Casques IMMERSIFS</a></th>
+<th>Cours</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Casques immersifs</a></th>
 </tr><tr>
 <td> MR et Azure 309 : Insights d’application</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
@@ -58,7 +58,7 @@ Nous recommandons le matériel et logiciel pour ce cours suivants :
 - [Windows 10 Fall Creators Update (ou version ultérieure) avec le mode développeur est activé](install-the-tools.md#installation-checklist)
 - [Le SDK Windows 10 dernières](install-the-tools.md#installation-checklist)
 - [Unity 2017.4](install-the-tools.md#installation-checklist)
-- [Visual Studio 2017](install-the-tools.md#installation-checklist)
+- [Visual Studio 2017](install-the-tools.md#installation-checklist)
 - Un [casque (VR) immersif de Windows Mixed Reality](immersive-headset-hardware-details.md) ou [Microsoft HoloLens](hololens-hardware-details.md) avec le mode développeur est activé
 - Un ensemble de casque avec un microphone intégré (si le casque n’a pas un mic intégré et les haut-parleurs)
 - Accès à Internet pour le programme d’installation Azure et l’extraction de données Application Insights
@@ -225,11 +225,11 @@ Ce qui suit est un standard configurée pour le développement avec la réalité
 
         ![Configurer le projet Unity](images/AzureLabs-Lab309-21.png)
 
-9.  Dans **paramètres de Build**, **Unity C\# projets** est n’est plus grisée ; Cochez la case à cocher en regard de cela.
+9.  Dans **paramètres de Build**, **Unity C# projets** est n’est plus grisée ; Cochez la case à cocher en regard de cela.
 
 10.  Fermez la fenêtre Paramètres de Build.
 
-11.  Enregistrer votre projet et la scène (**fichier > Enregistrer la scène / fichier > Enregistrer le projet**).
+11.  Enregistrer votre projet et la scène (**fichier** > **enregistrer la scène / fichier** > **enregistrer le projet**).
 
 
 ## <a name="chapter-3---import-the-unity-package"></a>Chapitre 3 - importer le package Unity
@@ -263,7 +263,7 @@ Pour importer l’Application Insights dans votre propre projet, assurez-vous qu
     > [!NOTE]
     > Marquer les plug-ins comme suit, les configure uniquement à être utilisé dans l’éditeur Unity. Il existe un autre ensemble de DLL dans le dossier WSA qui sera utilisée une fois que le projet est exporté à partir d’Unity.
 
-6.  Ensuite, vous devez ouvrir le **WSA** dossier, en respectant le **Insights** dossier. Vous verrez une copie du même fichier que vous venez de configurer. Sélectionnez ce fichier et dans l’inspecteur, vérifiez que **plateforme Any** est **unchecked**, puis assurez-vous que **uniquement** **WSAPlayer** est **vérifiée**. Cliquez sur **Appliquer**.
+6.  Ensuite, vous devez ouvrir le **WSA** dossier, en respectant le **Insights** dossier. Vous verrez une copie du même fichier que vous venez de configurer. Sélectionnez ce fichier et dans l’inspecteur, vérifiez que **plateforme Any** est **unchecked**, puis assurez-vous que **uniquement** **WSAPlayer** est **vérifiée**. Cliquez sur **Apply** (Appliquer).
 
     ![Importer le package Unity](images/AzureLabs-Lab309-25.png)
 
@@ -275,7 +275,7 @@ Pour importer l’Application Insights dans votre propre projet, assurez-vous qu
 
 Dans ce chapitre, vous allez définir des contrôles et de l’appareil photo pour autoriser l’utilisateur de voir et déplacer dans la scène.
 
-1.  Avec le bouton droit dans une zone vide dans le volet de la hiérarchie, puis sur **créer > vide**.
+1.  Avec le bouton droit dans une zone vide dans le volet de la hiérarchie, puis sur **créer** > **vide**.
 
     ![Configurer l’appareil photo et les contrôles utilisateur](images/AzureLabs-Lab309-26.png)
 
@@ -377,11 +377,11 @@ Le premier script que vous créez est **ApplicationInsightsTracker**, qui est ch
 
 Pour créer cette classe :
 
-1.  Avec le bouton droit dans le *Panneau de configuration de projet*, puis **créer > dossier**. Nommez le dossier **Scripts**.
+1.  Avec le bouton droit dans le *Panneau de configuration de projet*, puis **créer** > **dossier**. Nommez le dossier **Scripts**.
 
     ![Créer la classe ApplicationInsightsTracker](images/AzureLabs-Lab309-46.png)  ![Créer la classe ApplicationInsightsTracker](images/AzureLabs-Lab309-47.png)
 
-2.  Avec le **Scripts** dossier créé, double-cliquez dessus pour ouvrir. Ensuite, dans ce dossier, avec le bouton droit, **créer > C\# Script**. Nommez le script **ApplicationInsightsTracker**.
+2.  Avec le **Scripts** dossier créé, double-cliquez dessus pour ouvrir. Ensuite, dans ce dossier, avec le bouton droit, **créer**  >   **C# Script**. Nommez le script **ApplicationInsightsTracker**.
 
 3.  Double-cliquez sur le nouveau **ApplicationInsightsTracker** script pour l’ouvrir avec **Visual Studio**.
 
@@ -505,7 +505,7 @@ Le script suivant pour créer le **les regards** script. Ce script est chargé d
 
 1.  Double-cliquez sur le **Scripts** dossier, pour l’ouvrir.
 
-2.  Avec le bouton droit à l’intérieur de la **Scripts** dossier, cliquez sur **créer** > **C\# Script**. Nommez le script **les regards**.
+2.  Avec le bouton droit à l’intérieur de la **Scripts** dossier, cliquez sur **créer**  >   **C# Script**. Nommez le script **les regards**.
 
 3.  Double-cliquez sur le script pour l’ouvrir avec Visual Studio.
 
@@ -699,7 +699,7 @@ Pour créer le script :
 
 1.  Double-cliquez sur le **Scripts** dossier, pour l’ouvrir.
 
-2.  Avec le bouton droit à l’intérieur de la **Scripts** dossier, cliquez sur **créer** **C\# > Script**. Nommez le script **ObjectTrigger**.
+2.  Avec le bouton droit à l’intérieur de la **Scripts** dossier, cliquez sur **créer**  >   **C# Script**. Nommez le script **ObjectTrigger**.
 
 3.  Double-cliquez sur le script pour l’ouvrir avec Visual Studio. Remplacez le code existant par le code suivant :
 
@@ -771,7 +771,7 @@ Pour créer le script :
 
 1.  Double-cliquez sur le **Scripts** dossier, pour l’ouvrir.
 
-2.  Avec le bouton droit à l’intérieur de la **Scripts** dossier, cliquez sur **créer** **C\# > Script**. Nommez le script **DataFromAnalytics**.
+2.  Avec le bouton droit à l’intérieur de la **Scripts** dossier, cliquez sur **créer**  >   **C# Script**. Nommez le script **DataFromAnalytics**.
 
 3.  Double-cliquez sur le script pour l’ouvrir avec Visual Studio.
 
@@ -1000,7 +1000,7 @@ Pour créer le script :
 
 1.  Double-cliquez sur le **Scripts** dossier, pour l’ouvrir.
 
-2.  Avec le bouton droit à l’intérieur de la **Scripts** dossier, cliquez sur **créer** > **C\# Script**. Nommez le script **mouvement**.
+2.  Avec le bouton droit à l’intérieur de la **Scripts** dossier, cliquez sur **créer**  >   **C# Script**. Nommez le script **mouvement**.
 
 3.  Double-cliquez sur le script pour l’ouvrir avec *Visual Studio*.
 
@@ -1205,7 +1205,7 @@ Dans ce chapitre, vous devez placer le **mouvement** de script sur le **Parent d
 
 Tous les éléments nécessaires pour la section Unity de ce projet sont maintenant terminée, il est temps de générer à partir de Unity.
 
-1.  Accédez à **les paramètres de génération**, **(fichier > Paramètres de Build...)** .
+1.  Accédez à **les paramètres de génération**, (**fichier** > **paramètres de Build**).
 
 2.  À partir de la **paramètres de Build** fenêtre, cliquez sur **Build**.
 

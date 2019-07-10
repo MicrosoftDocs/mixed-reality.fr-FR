@@ -6,12 +6,12 @@ ms.author: JLyons
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, Windows Device Portal, API
-ms.openlocfilehash: 507ab98734adea80d0aad41d99124e3d91846f28
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 4b5b48c13b1b7ec8bfdf447f42097a8448b6a0e6
+ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59596065"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67694432"
 ---
 # <a name="device-portal-api-reference"></a>Portail de référence de l’API des appareils
 
@@ -278,17 +278,6 @@ Arrêter l’enregistrement actuel. L’enregistrement s’affichera sous forme 
 
 ## <a name="mixed-reality-capture"></a>MRC (Mixed Reality Capture)
 
-**/API/Holographic/MRC/file (DELETE)**
-
-Supprime une réalité mixte enregistrant à partir de l’appareil.
-
-Paramètres
-* nom de fichier : Nom, hex64 encodée du fichier à supprimer
-
-**/API/Holographic/MRC/Settings (GET)**
-
-Obtient la valeur par défaut une réalité mixte paramètres de capture
-
 **/API/Holographic/MRC/file (GET)**
 
 Télécharge un fichier de réalité mixte à partir de l’appareil. Emploi de = le paramètre de requête de flux de diffusion en continu.
@@ -297,6 +286,38 @@ Paramètres
 * nom de fichier : Nom, hex64 encodée du fichier vidéo à obtenir
 * op : flux de données
 
+**/API/Holographic/MRC/file (DELETE)**
+
+Supprime une réalité mixte enregistrant à partir de l’appareil.
+
+Paramètres
+* nom de fichier : Nom, hex64 encodée du fichier à supprimer
+
+**/API/Holographic/MRC/Files (GET)**
+
+Retourne la liste des fichiers de réalité mixte stockées sur l’appareil
+
+**/API/Holographic/MRC/photo (POST)**
+
+Prend une photo de réalité mixte et crée un fichier sur l’appareil
+
+Paramètres
+* Holo : capturer hologrammes : true ou false (false par défaut)
+* PV : capture PV caméra : true ou false (false par défaut)
+* RenderFromCamera : Rendu (HoloLens 2 seulement) du point de vue de la caméra vidéo/photo : true ou false (true par défaut)
+
+**/API/Holographic/MRC/Settings (GET)**
+
+Obtient la valeur par défaut une réalité mixte paramètres de capture
+
+**/API/Holographic/MRC/Settings (POST)**
+
+Définit la valeur par défaut une réalité mixte paramètres de capture.  Certains de ces paramètres sont appliqués à la photo de cette option et la capture vidéo du système.
+
+**/API/Holographic/MRC/Status (GET)**
+
+Obtient l’état de la réalité mixte enregistrée (en cours d’exécution, arrêté)
+
 **/API/Holographic/MRC/Thumbnail (GET)**
 
 Obtient l’image miniature pour le fichier spécifié.
@@ -304,81 +325,56 @@ Obtient l’image miniature pour le fichier spécifié.
 Paramètres
 * nom de fichier : Nom, hex64 encodée du fichier pour lequel la miniature est demandée
 
-**/API/Holographic/MRC/Status (GET)**
-
-Obtient l’état de la réalité mixte enregistrée (en cours d’exécution, arrêté)
-
-**/API/Holographic/MRC/Files (GET)**
-
-Retourne la liste des fichiers de réalité mixte stockées sur l’appareil
-
-**/API/Holographic/MRC/Settings (POST)**
-
-Définit la valeur par défaut une réalité mixte paramètres de capture
-
 **/API/Holographic/MRC/Video/Control/Start (POST)**
 
 Démarre un enregistrement de réalité mixte
 
 Paramètres
-* Holo : capturer hologrammes : true ou false
-* PV : capture PV caméra : true ou false
-* MIC : capture microphone : true ou false
-* bouclage : capturer des données audio app : true ou false
+* Holo : capturer hologrammes : true ou false (false par défaut)
+* PV : capture PV caméra : true ou false (false par défaut)
+* MIC : capture microphone : true ou false (false par défaut)
+* bouclage : capturer des données audio app : true ou false (false par défaut)
+* RenderFromCamera : Rendu (HoloLens 2 seulement) du point de vue de la caméra vidéo/photo : true ou false (true par défaut)
+* Vstab : Activer (HoloLens 2 seulement) une stabilisation vidéo : true ou false (true par défaut)
+* vstabbuffer : Latence de mémoire tampon de stabilisation vidéo (2 HoloLens uniquement) : 0 et 30 frames (15 images par défaut)
 
 **/API/Holographic/MRC/Video/Control/Stop (POST)**
 
 S’arrête en cours mixte d’enregistrement de réalité
 
-**/API/Holographic/MRC/photo (POST)**
+## <a name="mixed-reality-streaming"></a>Réalité mixte de diffusion en continu
 
-Prend une photo de réalité mixte et crée un fichier sur l’appareil
+HoloLens prend en charge l’aperçu instantané de réalité mixte par téléchargement mémorisé en bloc d’un fichier mp4 fragmenté.
 
-Paramètres
+Flux de réalité mixte partagent le même jeu de paramètres pour contrôler ce qui est capturé :
 * Holo : capturer hologrammes : true ou false
 * PV : capture PV caméra : true ou false
+* MIC : capture microphone : true ou false
+* bouclage : capturer des données audio app : true ou false
 
-Réalité mixte de diffusion en continu
+Si aucune d'entre elles sont spécifiées : hologrammes, caméra photo/vidéo et audio de l’application seront capturées<br>
+Si une est spécifiée : false par défaut les paramètres non spécifiés
+
+Paramètres facultatifs (HoloLens 2 uniquement)
+* RenderFromCamera : effectuer le rendu du point de vue de la caméra vidéo/photo : true ou false (true par défaut)
+* Vstab : activer une stabilisation vidéo : true ou false (false par défaut)
+* vstabbuffer : latence de mémoire tampon de stabilisation vidéo : 0 et 30 frames (15 images par défaut)
 
 **/api/holographic/stream/live.mp4 (GET)**
 
-Initie un téléchargement mémorisé en bloc d’un mp4 fragmenté
-
-Paramètres
-* Holo : capturer hologrammes : true ou false
-* PV : capture PV caméra : true ou false
-* MIC : capture microphone : true ou false
-* bouclage : capturer des données audio app : true ou false
+Un flux de 5Mbit 1280x720p 30 i/s.
 
 **/api/holographic/stream/live_high.mp4 (GET)**
 
-Initie un téléchargement mémorisé en bloc d’un mp4 fragmenté
-
-Paramètres
-* Holo : capturer hologrammes : true ou false
-* PV : capture PV caméra : true ou false
-* MIC : capture microphone : true ou false
-* bouclage : capturer des données audio app : true ou false
-
-**/api/holographic/stream/live_low.mp4 (GET)**
-
-Initie un téléchargement mémorisé en bloc d’un mp4 fragmenté
-
-Paramètres
-* Holo : capturer hologrammes : true ou false
-* PV : capture PV caméra : true ou false
-* MIC : capture microphone : true ou false
-* bouclage : capturer des données audio app : true ou false
+Un flux de 5Mbit 1280x720p 30 i/s.
 
 **/api/holographic/stream/live_med.mp4 (GET)**
 
-Initie un téléchargement mémorisé en bloc d’un mp4 fragmenté
+Un flux de 30 i/s 2.5Mbit 854x480p.
 
-Paramètres
-* Holo : capturer hologrammes : true ou false
-* PV : capture PV caméra : true ou false
-* MIC : capture microphone : true ou false
-* bouclage : capturer des données audio app : true ou false
+**/api/holographic/stream/live_low.mp4 (GET)**
+
+Un flux de 15 i/s 0.6Mbit 428x240p.
 
 ## <a name="networking"></a>Mise en réseau
 
@@ -419,7 +415,7 @@ Retourne des statistiques de performances système (e/s en lecture/écriture, et
 Retourner des données
 * JSON avec les informations système : Processeur, processeur, mémoire, réseau, e/s
 
-## <a name="power"></a>Alimentation
+## <a name="power"></a>Marche/Arrêt
 
 **/api/power/battery (GET)**
 
@@ -532,5 +528,5 @@ Retourner des données
 * Au démarrage, retourne l’état de session WPR.
 
 ## <a name="see-also"></a>Voir aussi
-* [À l’aide de la Windows Device Portal](using-the-windows-device-portal.md)
+* [Utilisation du portail d’appareil Windows](using-the-windows-device-portal.md)
 * [Core de portail appareil référence d’API (UWP)](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)

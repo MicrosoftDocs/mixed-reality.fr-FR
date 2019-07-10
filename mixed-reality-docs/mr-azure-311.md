@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: réalité Azure, mixte, academy, unity, didacticiel, api, graph de microsoft, hololens, immersives, vr
-ms.openlocfilehash: 98fe2c872f332a21fff3af6751ae555968073a24
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
-ms.translationtype: HT
+ms.openlocfilehash: 04c72a7ef7724cfcc27867f7f003c171a6f7851f
+ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59593290"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67694525"
 ---
 >[!NOTE]
 >Les didacticiels Académie de réalité mixte ont été conçus avec HoloLens (1er gen) et des casques IMMERSIFS réalité mixte à l’esprit.  Par conséquent, nous estimons qu’il est important de laisser ces didacticiels en place pour les développeurs qui cherchent toujours pour obtenir des conseils de développement pour ces appareils.  Ces didacticiels seront **_pas_** être mis à jour avec les ensembles d’outils ou les interactions utilisées pour HoloLens 2 dernières.  Ils seront conservées pour continuer à travailler sur les appareils pris en charge. Il y aura une nouvelle série de didacticiels seront publiés dans le futur qui va vous montrer comment développer pour HoloLens 2.  Cet avis sera mis à jour avec un lien vers ces didacticiels lorsqu’elles sont validées.
@@ -33,11 +33,11 @@ Avoir terminé ce cours, vous aurez une réalité mixte application HoloLens, qu
 
 Dans votre application, il vous revient à comment vous allez intégrer les résultats avec votre conception. Ce cours est conçu pour vous apprendre à intégrer un Service Azure à votre projet Unity. Il vous revient à utiliser les connaissances acquises à partir de ce cours pour améliorer votre application de réalité mixte.
 
-## <a name="device-support"></a>Prise en charge des appareils
+## <a name="device-support"></a>Périphériques pris en charge
 
 <table>
 <tr>
-<th>Cours</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Casques IMMERSIFS</a></th>
+<th>Cours</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Casques immersifs</a></th>
 </tr><tr>
 <td> MR et Azure 311 : Microsoft Graph</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> </td>
 </tr>
@@ -54,7 +54,7 @@ Nous recommandons le matériel et logiciel pour ce cours suivants :
 - [Windows 10 Fall Creators Update (ou version ultérieure) avec le mode développeur est activé](install-the-tools.md#installation-checklist)
 - [Le SDK Windows 10 dernières](install-the-tools.md#installation-checklist)
 - [Unity 2017.4](install-the-tools.md#installation-checklist)
-- [Visual Studio 2017](install-the-tools.md#installation-checklist)
+- [Visual Studio 2017](install-the-tools.md#installation-checklist)
 - Un [Microsoft HoloLens](hololens-hardware-details.md) avec le mode développeur est activé
 - Accès à Internet pour le programme d’installation Azure et l’extraction de données de Microsoft Graph
 - Valide **Account Microsoft** (personnel ou Professionnel ou scolaire)
@@ -123,15 +123,15 @@ Ce qui suit est un standard configurée pour le développement avec la réalité
 
     ![](images/AzureLabs-Lab311-10.png)
 
-3.  Avec Unity ouvert, il est important de la vérification de la valeur par défaut **Script Editor** a la valeur **Visual Studio**. Accédez à **Modifier > Préférences** et à partir de la nouvelle fenêtre, accédez à **outils externes**. Modification **éditeur de Script externe** à **Visual Studio 2017**. Fermer le **préférences** fenêtre.
+3.  Avec Unity ouvert, il est important de la vérification de la valeur par défaut **Script Editor** a la valeur **Visual Studio**. Accédez à **modifier** > **préférences** et à partir de la nouvelle fenêtre, accédez à **outils externes**. Modification **éditeur de Script externe** à **Visual Studio 2017**. Fermer le **préférences** fenêtre.
 
     ![](images/AzureLabs-Lab311-11.png)
 
-4.  Accédez à **fichier > Paramètres de Build** et sélectionnez **plateforme Windows universelle**, puis cliquez sur le **plateforme de commutation** bouton pour appliquer votre sélection.
+4.  Accédez à **fichier** > **paramètres de Build** et sélectionnez **plateforme Windows universelle**, puis cliquez sur le **plateforme de commutation** bouton pour appliquer votre sélection.
 
     ![](images/AzureLabs-Lab311-12.png)
 
-5.  Lorsque vous êtes toujours dans **fichier > Paramètres de Build**, assurez-vous que :
+5.  Lorsque vous êtes toujours dans **fichier** > **paramètres de Build**, assurez-vous que :
 
     1. **Équipement cible** a la valeur **HoloLens**
     2. **Type de build** a la valeur **D3D**
@@ -187,7 +187,7 @@ Ce qui suit est un standard configurée pour le développement avec la réalité
 
 9.  Fermer le *paramètres de Build* fenêtre.
 
-10.  Enregistrer votre projet et la scène (**fichier > Enregistrer les scènes / fichier > Enregistrer le projet**).
+10.  Enregistrer votre projet et la scène (**fichier** > **enregistrer les scènes / fichier** > **enregistrer le projet**).
 
 ## <a name="chapter-3---import-libraries-in-unity"></a>Chapitre 3 - bibliothèques d’importation dans Unity
 
@@ -205,7 +205,7 @@ Si vous le souhaitez en savoir plus sur l’ajout de DLL personnalisées à votr
 
 Pour importer le package :
 
-1.  Ajouter le Package Unity pour Unity à l’aide de la **actifs* > *importer un Package* > *Package personnalisé** option de menu. Sélectionnez le package que vous venez de télécharger.
+1.  Ajouter le Package Unity pour Unity à l’aide de la **actifs** > **importer un Package** > **Package personnalisé** option de menu. Sélectionnez le package que vous venez de télécharger.
 
 2.  Dans le **importer un Package Unity** emballer qui apparaît, vérifiez tous les éléments sous (y compris) **plug-ins** est sélectionné.
 
@@ -234,7 +234,7 @@ Pour importer le package :
 
         ![](images/AzureLabs-Lab311-23.png)
 
-7.  Cliquez sur **Appliquer**.
+7.  Cliquez sur **Apply** (Appliquer).
 
 ## <a name="chapter-4---camera-setup"></a>Chapitre 4 - programme d’installation de l’appareil photo
 
@@ -266,12 +266,12 @@ Le premier script que vous créez est **MeetingsUI**, qui est responsable de l�
 
 Pour créer cette classe :
 
-1.  Avec le bouton droit sur le **actifs** dossier dans le *panneau projet*, puis sélectionnez **créer* > *dossier**. Nommez le dossier **Scripts**.
+1.  Avec le bouton droit sur le **actifs** dossier dans le *panneau projet*, puis sélectionnez **créer** > **dossier**. Nommez le dossier **Scripts**.
 
     ![](images/AzureLabs-Lab311-26.png)
     ![](images/AzureLabs-Lab311-27.png)
 
-2.  Ouvrez le **Scripts** dossier puis, dans ce dossier, avec le bouton droit, **créer* > *C\# Script**. Nommez le script **MeetingsUI.**
+2.  Ouvrez le **Scripts** dossier puis, dans ce dossier, avec le bouton droit, **créer**  >   **C# Script**. Nommez le script **MeetingsUI.**
 
     ![](images/AzureLabs-Lab311-28.png)
 
@@ -477,7 +477,7 @@ Pour créer cette classe :
     > [!NOTE]
     > Modifier le **appId** valeur soit la **Id d’application** que vous avez déjà notés dans  **[chapitre 1](#chapter-1---create-your-app-in-the-application-registration-portal), étape 4**. Cette valeur doit être identique à celui affiché dans le **portail d’inscription des applications,** dans la page d’inscription de votre application.
 
-8.  Dans le **Graph** de classe, ajoutez les méthodes **SignInAsync()** et **AquireTokenAsync()**, qui invitera l’utilisateur d’insérer les informations de journal.
+8.  Dans le **Graph** de classe, ajoutez les méthodes **SignInAsync()** et **AquireTokenAsync()** , qui invitera l’utilisateur d’insérer les informations de journal.
 
     ```csharp
         /// <summary>
@@ -548,9 +548,9 @@ Pour créer cette classe :
 
 9.  Ajoutez les deux méthodes suivantes :
 
-    1.  **BuildTodayCalendarEndpoint()**, quelles sont les builds l’URI spécifiant le jour et l’intervalle de temps, dans lequel les réunions planifiées sont récupérées.
+    1.  **BuildTodayCalendarEndpoint()** , quelles sont les builds l’URI spécifiant le jour et l’intervalle de temps, dans lequel les réunions planifiées sont récupérées.
 
-    2.  **ListMeetingsAsync()**, qui demande les réunions planifiées à partir de *Microsoft Graph*.
+    2.  **ListMeetingsAsync()** , qui demande les réunions planifiées à partir de *Microsoft Graph*.
 
     ```csharp
         /// <summary>
@@ -628,7 +628,7 @@ Pour créer le script :
 
 3.  Double-cliquez sur le script pour l’ouvrir avec Visual Studio.
 
-4.  Modifier le code des espaces de noms pour correspondre à celui ci-dessous, ainsi que l’ajout de la '**\[System.Serializable\]**' balise ci-dessus votre **GazeInput** classe, afin qu’il puisse être sérialisé :
+4.  Modifier le code des espaces de noms pour correspondre à celui ci-dessous, ainsi que l’ajout de la ' **\[System.Serializable\]** ' balise ci-dessus votre **GazeInput** classe, afin qu’il puisse être sérialisé :
 
     ```csharp
     using UnityEngine;
@@ -955,7 +955,7 @@ Tous les éléments nécessaires pour la section Unity de ce projet sont mainten
 
 Pour déployer sur HoloLens :
 
-1.  Vous devez l’adresse IP de votre HoloLens (pour les déployer à distance) et pour vérifier que votre HoloLens est dans **Mode développeur.** Pour ce faire :
+1.  Vous devez l’adresse IP de votre HoloLens (pour les déployer à distance) et pour vérifier que votre HoloLens est dans **Mode développeur.** Pour cela, procédez comme suit :
 
     1.  Tout en portant vos HoloLens, ouvrez le **paramètres**.
 

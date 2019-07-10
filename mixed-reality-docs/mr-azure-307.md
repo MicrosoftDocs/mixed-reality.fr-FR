@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: réalité Azure, mixte, academy, unity, didacticiel, api, apprentissage automatique, ml studio d’apprentissage machine, hololens, immersives, vr
-ms.openlocfilehash: 93263817df0fd809a09b32c1b34a636eab7026a1
-ms.sourcegitcommit: 9b6949d7cd2e67e6bde9b32aebeaeea325baa6c4
+ms.openlocfilehash: 89d9758dedb6a2389644dda887bfadf5b28f6dd2
+ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66516037"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67694543"
 ---
 >[!NOTE]
 >Les didacticiels Académie de réalité mixte ont été conçus avec HoloLens (1er gen) et des casques IMMERSIFS réalité mixte à l’esprit.  Par conséquent, nous estimons qu’il est important de laisser ces didacticiels en place pour les développeurs qui cherchent toujours pour obtenir des conseils de développement pour ces appareils.  Ces didacticiels seront **_pas_** être mis à jour avec les ensembles d’outils ou les interactions utilisées pour HoloLens 2 dernières.  Ils seront conservées pour continuer à travailler sur les appareils pris en charge. Il y aura une nouvelle série de didacticiels seront publiés dans le futur qui va vous montrer comment développer pour HoloLens 2.  Cet avis sera mis à jour avec un lien vers ces didacticiels lorsqu’elles sont validées.
@@ -36,11 +36,11 @@ Dans votre application, il vous revient à comment vous allez intégrer les rés
 
 Ce cours est un didacticiel autonome, ce qui n’implique pas directement de tous les autres laboratoires réalité mixte.
 
-## <a name="device-support"></a>Prise en charge des appareils
+## <a name="device-support"></a>Périphériques pris en charge
 
 <table>
 <tr>
-<th>Cours</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Casques IMMERSIFS</a></th>
+<th>Cours</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Casques immersifs</a></th>
 </tr><tr>
 <td> MR et Azure 307 : Machine Learning</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
@@ -60,7 +60,7 @@ Nous recommandons le matériel et logiciel pour ce cours suivants :
 - [Windows 10 Fall Creators Update (ou version ultérieure) avec le mode développeur est activé](install-the-tools.md#installation-checklist)
 - [Le SDK Windows 10 dernières](install-the-tools.md#installation-checklist)
 - [Unity 2017.4](install-the-tools.md#installation-checklist)
-- [Visual Studio 2017](install-the-tools.md#installation-checklist)
+- [Visual Studio 2017](install-the-tools.md#installation-checklist)
 - Un [casque (VR) immersif de Windows Mixed Reality](immersive-headset-hardware-details.md) ou [Microsoft HoloLens](hololens-hardware-details.md) avec le mode développeur est activé
 - Accès à Internet pour le programme d’installation Azure et l’extraction de données de ML
 
@@ -144,7 +144,7 @@ Pour utiliser le *Azure Machine Learning*, vous devez configurer une instance du
 
     9.  Vous devez également confirmer que vous avez compris les termes et Conditions appliquées à ce Service.
 
-    10. Cliquez sur **Create (Créer)** .
+    10. Cliquez sur **Créer**.
 
         ![Azure Machine Learning Studio](images/AzureLabs-Lab7-6.png)
 
@@ -220,7 +220,7 @@ Pour commencer à créer une expérience :
 
 2.  Une nouvelle page s’affiche avec une expérience vide :
 
-3.  À partir du Panneau de gauche, développez **jeux de données enregistrés* > *mes jeux de données** et faites glisser le **ProductsTableCSV** sur le **Zone d’expérience**.
+3.  À partir du Panneau de gauche, développez **jeux de données enregistrés** > **mes jeux de données** et faites glisser le **ProductsTableCSV** à la **canevas de l’expérience**.
 
     ![Machine Learning Studio : L’expérience](images/AzureLabs-Lab7-16.png)
 
@@ -236,7 +236,7 @@ Pour commencer à créer une expérience :
 
     ![Machine Learning Studio : L’expérience](images/AzureLabs-Lab7-19.png)
 
-7.  Dans le **expériences** panneau sur le côté gauche, développez **Machine Learning* > * Train **. Faites glisser le **former le modèle** élément arrière dans la zone de dessin. La zone de travail doit se présenter le même que le ci-dessous.
+7.  Dans le **expériences** panneau sur le côté gauche, développez **Machine Learning** > **Train**. Faites glisser le **former le modèle** élément arrière dans la zone de dessin. La zone de travail doit se présenter le même que le ci-dessous.
 
     ![Machine Learning Studio : L’expérience](images/AzureLabs-Lab7-20.png)
 
@@ -252,21 +252,21 @@ Pour commencer à créer une expérience :
 
 11. Vous vous apprêtez à former un **Multiclass Logistic Regression** algorithme pour prédire les plus vendus **produit** selon l’heure de la journée et la date. Il n’entre pas dans le cadre de ce document pour expliquer les détails des différents algorithmes fournis par Azure Machine Learning studio, cependant, vous pouvez trouver plus d’informations à partir de la [Machine Learning aide-mémoire d’algorithme](https://docs.microsoft.com/azure/machine-learning/studio/algorithm-cheat-sheet)
 
-12. Dans le panneau éléments expérience sur la gauche, développez ***Machine Learning* > *initialiser le modèle* > * *** de Classification, puis faites glisser le **Multiclass Logistic Regression**  élément une session sur le canevas d’expérience.
+12. Dans le panneau éléments expérience sur la gauche, développez **Machine Learning** > **initialiser le modèle** > **Classification**et faites glisser le  **Régression logistique multiclasse** élément une session sur le canevas d’expérience.
 
 13. Connectez la sortie, en bas de la **Multiclass Logistic Regression**, à l’entrée de l’angle supérieur gauche de la **former le modèle** élément.
 
     ![Machine Learning Studio : L’expérience](images/AzureLabs-Lab7-23.png)
 
-14. Dans la liste des éléments d’expérience dans le volet gauche, développez **Machine Learning* > * Score **, puis faites glisser le **noter le modèle** élément une session sur le canevas.
+14. Dans la liste des éléments d’expérience dans le volet gauche, développez **Machine Learning** > **Score**et faites glisser le **noter le modèle** élément une session sur le canevas.
 
 15. Connectez la sortie, en bas de la **former le modèle**, à l’entrée de l’angle supérieur gauche de la **noter le modèle**.
 
-16. Connectez la sortie en bas à droite de **fractionner les données**, à l’entrée en haut à droite de la  **noter le modèle* élément*.
+16. Connectez la sortie en bas à droite de **fractionner les données**, à l’entrée en haut à droite de la **noter le modèle** élément.
 
     ![Machine Learning Studio : L’expérience](images/AzureLabs-Lab7-24.png)
 
-17. Dans la liste des **expérience** éléments dans le volet gauche, développez ***Machine Learning* > * évaluer ***, puis faites glisser le **évaluer le modèle** élément sur le canevas.
+17. Dans la liste des **expérience** éléments dans le volet gauche, développez **Machine Learning** > **Evaluate**et faites glisser le **évaluer le modèle** élément sur le canevas.
 
 18. Connectez la sortie à partir de la **noter le modèle** à l’entrée de l’angle supérieur gauche de la **évaluer le modèle**.
 
@@ -334,9 +334,9 @@ Configurer et tester votre casque immersives de réalité mixte.
 
 1.  Ouvrez **Unity** et créez un projet Unity appelé **MR\_MachineLearning.** Assurez-vous que le type de projet est défini sur **3D**.
 
-2.  Avec Unity ouvert, il est important de la vérification de la valeur par défaut **Script Editor** a la valeur **Visual Studio**. Accédez à ***modifier* > *préférences*** et à partir de la nouvelle fenêtre, accédez à **outils externes**. Modification **éditeur de Script externe** à **Visual Studio 2017**. Fermer le **préférences** fenêtre.
+2.  Avec Unity ouvert, il est important de la vérification de la valeur par défaut **Script Editor** a la valeur **Visual Studio**. Accédez à **modifier** > **préférences** et à partir de la nouvelle fenêtre, accédez à **outils externes**. Modification **éditeur de Script externe** à **Visual Studio 2017**. Fermer le **préférences** fenêtre.
 
-3.  Ensuite, accédez à ***fichier* > *paramètres de Build*** et basculer de la plateforme à **plateforme Windows universelle**, en cliquant sur le ***plateforme de commutation*** bouton.
+3.  Ensuite, accédez à **fichier** > **paramètres de Build** et basculer de la plateforme à **plateforme Windows universelle**, en cliquant sur le ***basculer la plateforme***  bouton.
 
 4.  Assurez-vous également que :
 
@@ -527,7 +527,7 @@ Pour créer cette classe :
 
 1.  Accédez à la **Scripts** dossier, dans le **panneau projet**.
 
-2.  Avec le bouton droit dans le dossier, **créer** > **C\# Script**. Appeler le script **ProductPrediction**.
+2.  Avec le bouton droit dans le dossier, **créer**  >   **C# Script**. Appeler le script **ProductPrediction**.
 
 3.  Double-cliquez sur le nouveau **ProductPrediction** script pour l’ouvrir avec **Visual Studio 2017**.
 
@@ -811,7 +811,7 @@ Pour créer cette classe :
 
 14. Faites glisser le **ProductPrediction** classe le script à partir de la **Script** dossier, sur le **Main Camera** objet.
 
-15. Enregistrer votre projet et scène **fichier** >  ***enregistrer la scène* / *fichier***   >  **Enregistrer le projet**.
+15. Enregistrer votre projet et scène **fichier** >  **/fichier de scène enregistrer** > **enregistrer le projet**.
 
 ## <a name="chapter-10---build-the-uwp-solution"></a>Chapitre 10 - générer la Solution UWP
 
@@ -819,11 +819,11 @@ Il est maintenant temps de générer votre projet comme une solution UWP, afin q
 
 Pour générer :
 
-1.  Enregistrer la scène actuelle en cliquant sur **fichier** **enregistrer les scènes**.
+1.  Enregistrer la scène actuelle en cliquant sur **fichier** > **enregistrer les scènes**.
 
-2.  Accédez à **fichier** **les paramètres de génération**
+2.  Accédez à **fichier** > **les paramètres de génération**
 
-3.  Cochez la case appelée **Unity C\# projets** (Ceci est important, car il vous permettra de modifier les classes après de la build est terminée).
+3.  Cochez la case appelée **Unity C# projets** (Ceci est important, car il vous permettra de modifier les classes après de la build est terminée).
 
 4.  Cliquez sur **ajouter des scènes Open**,
 

@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/11/2018
 ms.topic: article
 keywords: réalité Azure, mixte, academy, edge, iot edge, didacticiel, api, notification, fonctions, tables, hololens, immersives, vr, iot, machine virtuelle, ubuntu, python
-ms.openlocfilehash: 1ab7c48ac3cff1cb2283cadb171098af9e148628
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
-ms.translationtype: HT
+ms.openlocfilehash: 93f7dc64426360d2e02b0ee0a9b1796fc8f2b469
+ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59593254"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67694600"
 ---
 >[!NOTE]
 >Les didacticiels Académie de réalité mixte ont été conçus avec HoloLens (1er gen) et des casques IMMERSIFS réalité mixte à l’esprit.  Par conséquent, nous estimons qu’il est important de laisser ces didacticiels en place pour les développeurs qui cherchent toujours pour obtenir des conseils de développement pour ces appareils.  Ces didacticiels seront **_pas_** être mis à jour avec les ensembles d’outils ou les interactions utilisées pour HoloLens 2 dernières.  Ils seront conservées pour continuer à travailler sur les appareils pris en charge. Il y aura une nouvelle série de didacticiels seront publiés dans le futur qui va vous montrer comment développer pour HoloLens 2.  Cet avis sera mis à jour avec un lien vers ces didacticiels lorsqu’elles sont validées.
@@ -45,11 +45,11 @@ Les Services que vous allez utiliser sont les suivantes :
 
 Ce cours va vous apprendre à configurer et utiliser le Service IoT Hub et ensuite visualiser une réponse fournie par un appareil. Il le sera jusqu'à vous permettent d’appliquer ces concepts à une installation de Service IoT Hub personnalisée, vous voudrez peut-être générer.
 
-## <a name="device-support"></a>Prise en charge des appareils
+## <a name="device-support"></a>Périphériques pris en charge
 
 <table>
 <tr>
-<th>Cours</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Casques IMMERSIFS</a></th>
+<th>Cours</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Casques immersifs</a></th>
 </tr><tr>
 <td> MR et Azure 313 : Service IoT Hub</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
@@ -370,7 +370,7 @@ Maintenant vous pouvez passer à la configuration de votre appareil **en cours d
 
 4. Une fois que les extensions sont installées, fermez et rouvrez VS Code.
 
-5. Avec VS Code, ouvrez une fois de plus, accédez à **Affichage > terminal intégré**.
+5. Avec VS Code, ouvrez une fois de plus, accédez à **vue** > **terminal intégré**.
 
 6. Vous allez maintenant installer **Cookiecutter**. Dans le terminal, exécutez la commande bash suivante :
 
@@ -390,7 +390,7 @@ Maintenant vous pouvez passer à la configuration de votre appareil **en cours d
 
 À ce stade, vous devez créer le conteneur, avec le module, pour être placé dans le *Registre de conteneurs*. Une fois que vous avez envoyé votre conteneur, vous allez utiliser le *IoT Hub Edge* Service à la déployer sur votre appareil, ce qui est en cours d’exécution le *runtime IoT Edge*.
 
-1. À partir du Code de Visual Studio, cliquez sur **vue > palette de commandes**.
+1. À partir du Code de Visual Studio, cliquez sur **vue** > **palette de commandes**.
 
 2. Dans la palette, rechercher et exécuter **Azure IoT Edge : Nouvelle Solution Iot Edge**.
 
@@ -744,7 +744,7 @@ Vous allez ensuite créer le *images* dossier, utilisé par le script python pou
 
 ## <a name="chapter-9---package-the-solution-as-a-container"></a>Chapitre 9 - Package de la solution en tant que conteneur
 
-1.  Vous êtes maintenant prêt à « package » de vos fichiers en tant que conteneur et les distribuer à vos **Azure Container Registry**. Dans VS Code, ouvrez le *Terminal intégré* (**Affichage > Terminal intégré / CTRL + '** ) et utilisez la ligne suivante pour vous connecter à **Docker** (remplacez les valeurs de la commande avec les informations d’identification de votre **Azure Container Registry (ACR)** ) :
+1.  Vous êtes maintenant prêt à « package » de vos fichiers en tant que conteneur et les distribuer à vos **Azure Container Registry**. Dans VS Code, ouvrez le *Terminal intégré* (**vue** > **Terminal intégré** ou **Ctrl** + **\`** ) et utilisez la ligne suivante pour vous connecter à **Docker** (remplacez les valeurs de la commande avec les informations d’identification de votre **Azure Container Registry (ACR)** ):
 
     ```bash
         docker login -u <ACR username> -p <ACR password> <ACR login server>
@@ -874,7 +874,7 @@ Accédez à votre portail Azure, où vous allez créer un Service de Tables Azur
 
     10. Laissez **réseaux virtuels** comme **désactivé**, s’il s’agit d’une option pour vous.
 
-    11. Cliquez sur **Create (Créer)** .
+    11. Cliquez sur **Créer**.
 
         ![Renseignez les détails de stockage](images/AzureLabs-Lab313-37.png)
 
@@ -916,7 +916,7 @@ Maintenant que votre **Service de Table** compte de stockage a été configuré,
 
 1. Ouvrez **Visual Studio** (**pas** Visual Studio Code).
 
-2. Dans le menu, cliquez sur **Affichage > Cloud Explorer**.
+2. Dans le menu, cliquez sur **vue** > **Cloud Explorer**.
 
     ![Ouvrez cloud explorer](images/AzureLabs-Lab313-45.png)
 
@@ -1023,7 +1023,7 @@ Vous devez tout d’abord, créez un fichier qui permettra à votre fonction Azu
 
     9. Vous n’aurez pas *Application Insights* dans cette application, par conséquent, n’hésitez pas à laisser **hors**.
 
-    10. Cliquez sur **Create (Créer)** .
+    10. Cliquez sur **Créer**.
 
         ![créer la nouvelle instance](images/AzureLabs-Lab313-55.png)
 

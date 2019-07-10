@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: réalité Azure, mixte, academy, unity, didacticiel, api, notification, fonctions, tables, les concentrateurs de notification, vr immersives, hololens,
-ms.openlocfilehash: ed56c936a0498b6e0ac804da15a2c6ec98239d0c
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
-ms.translationtype: HT
+ms.openlocfilehash: 3b6e930acd81c7d6e3addc107ec0da605d38cad1
+ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59596997"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67694606"
 ---
 >[!NOTE]
 >Les didacticiels Académie de réalité mixte ont été conçus avec HoloLens (1er gen) et des casques IMMERSIFS réalité mixte à l’esprit.  Par conséquent, nous estimons qu’il est important de laisser ces didacticiels en place pour les développeurs qui cherchent toujours pour obtenir des conseils de développement pour ces appareils.  Ces didacticiels seront **_pas_** être mis à jour avec les ensembles d’outils ou les interactions utilisées pour HoloLens 2 dernières.  Ils seront conservées pour continuer à travailler sur les appareils pris en charge. Il y aura une nouvelle série de didacticiels seront publiés dans le futur qui va vous montrer comment développer pour HoloLens 2.  Cet avis sera mis à jour avec un lien vers ces didacticiels lorsqu’elles sont validées.
@@ -42,11 +42,11 @@ Avoir terminé ce cours, vous aurez une réalité mixte casque immersives et l�
 
 Dans votre application, il vous revient à comment vous allez intégrer les résultats avec votre conception. Ce cours est conçu pour vous apprendre à intégrer un Service Azure à votre projet Unity. Il vous revient à utiliser les connaissances acquises à partir de ce cours pour améliorer votre application de réalité mixte. Ce cours est un didacticiel autonome, ce qui n’implique pas directement de tous les autres laboratoires réalité mixte.
 
-## <a name="device-support"></a>Prise en charge des appareils
+## <a name="device-support"></a>Périphériques pris en charge
 
 <table>
 <tr>
-<th>Cours</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Casques IMMERSIFS</a></th>
+<th>Cours</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Casques immersifs</a></th>
 </tr><tr>
 <td> MR et Azure 308 : Notifications entre les périphériques</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
@@ -66,7 +66,7 @@ Nous recommandons le matériel et logiciel pour ce cours suivants :
 - [Windows 10 Fall Creators Update (ou version ultérieure) avec le mode développeur est activé](install-the-tools.md#installation-checklist)
 - [Le SDK Windows 10 dernières](install-the-tools.md#installation-checklist)
 - [Unity 2017.4](install-the-tools.md#installation-checklist)
-- [Visual Studio 2017](install-the-tools.md#installation-checklist)
+- [Visual Studio 2017](install-the-tools.md#installation-checklist)
 - Un [casque (VR) immersif de Windows Mixed Reality](immersive-headset-hardware-details.md) ou [Microsoft HoloLens](hololens-hardware-details.md) avec le mode développeur est activé
 - Accès à Internet pour le programme d’installation Azure et d’accéder à des Hubs de Notification
 
@@ -196,11 +196,11 @@ Après avoir créé votre instance de Service de Notification Hubs, accédez à 
 
     2. Pour **modèle de déploiement**, cliquez sur **Resource manager**.
 
-    3.  Pour **type de compte**, à l’aide de la liste déroulante, sélectionnez **stockage (usage général v1)**.
+    3.  Pour **type de compte**, à l’aide de la liste déroulante, sélectionnez **stockage (usage général v1)** .
 
     4. Sélectionnez un **emplacement**.
     
-    5.  Pour le **réplication** menu déroulant, sélectionnez **en lecture-access-geo-redundant storage (RA-GRS)**.
+    5.  Pour le **réplication** menu déroulant, sélectionnez **en lecture-access-geo-redundant storage (RA-GRS)** .
 
     6.  Pour **performances**, cliquez sur **Standard**.
 
@@ -214,7 +214,7 @@ Après avoir créé votre instance de Service de Notification Hubs, accédez à 
 
     10. Laissez **réseaux virtuels** comme **désactivé** s’il s’agit d’une option pour vous.
 
-    11. Cliquez sur **Create (Créer)**.
+    11. Cliquez sur **Créer**.
 
         ![Renseignez les détails de stockage](images/AzureLabs-Lab8-15.png)
 
@@ -251,7 +251,7 @@ Maintenant que votre **service de Table** compte de stockage a été configuré,
 
 1.  Ouvrez **Visual Studio**.
 
-2.  Dans le menu, cliquez sur **Affichage > Cloud Explorer**.
+2.  Dans le menu, cliquez sur **vue** > **Cloud Explorer**.
 
     ![Ouvrez cloud explorer](images/AzureLabs-Lab8-22.png)
 
@@ -372,7 +372,7 @@ Vous devez tout d’abord, créez un fichier qui permettra à votre fonction Azu
 
     9. Vous n’aurez pas *Application Insights* dans cette application, par conséquent, n’hésitez pas à laisser **hors**.
 
-    10. Cliquez sur **Create (Créer)**.
+    10. Cliquez sur **Créer**.
 
         ![créer la nouvelle instance](images/AzureLabs-Lab8-34.png)
 
@@ -552,7 +552,7 @@ Vous devez tout d’abord, créez un fichier qui permettra à votre fonction Azu
 
 27. Vous pouvez remarquer les paramètres d’entrée que vous venez d’insérer les détails de votre table et de stockage ne peuvent pas correspondre et par conséquent doit être mis à jour avec vos informations. **Ne le faites pas ici**, car il est couvert ensuite. Cliquez simplement sur le **éditeur Standard** lien, dans l’angle supérieur droit de la page, pour revenir en arrière.
 
-28. Dans le **éditeur Standard**, cliquez sur **Azure Table Storage (table)**, sous **entrées**. 
+28. Dans le **éditeur Standard**, cliquez sur **Azure Table Storage (table)** , sous **entrées**. 
     
     ![Entrées de table](images/AzureLabs-Lab8-47-5.png)
 
@@ -599,7 +599,7 @@ Vous devez tout d’abord, créez un fichier qui permettra à votre fonction Azu
 
 ![sorties terminée](images/AzureLabs-Lab8-50.png)
 
-32. À ce stade, vous devez tester la fonction, pour vous assurer qu’il fonctionne. Pour ce faire : 
+32. À ce stade, vous devez tester la fonction, pour vous assurer qu’il fonctionne. Pour cela, procédez comme suit : 
 
     1. Accédez à la page de la fonction une fois de plus :
 
@@ -651,15 +651,15 @@ Configurer et tester votre casque immersives de réalité mixte.
 
     ![créer le projet](images/AzureLabs-Lab8-53.png)
 
-3.  Avec Unity ouvert, il est important de la vérification de la valeur par défaut **Script Editor** a la valeur **Visual Studio**. Accédez à **Modifier > Préférences** et à partir de la nouvelle fenêtre, accédez à **outils externes**. Modification **éditeur de Script externe** à **Visual Studio 2017**. Fermer le **préférences** fenêtre.
+3.  Avec Unity ouvert, il est important de la vérification de la valeur par défaut **Script Editor** a la valeur **Visual Studio**. Accédez à **modifier** > **préférences** et à partir de la nouvelle fenêtre, accédez à **outils externes**. Modification **éditeur de Script externe** à **Visual Studio 2017**. Fermer le **préférences** fenêtre.
 
     ![ensemble des outils externes Visual Studio](images/AzureLabs-Lab8-54.png)
 
-4.  Ensuite, accédez à **fichier > Paramètres de Build** et sélectionnez **plateforme Windows universelle**, puis cliquez sur le **plateforme de commutation** bouton pour appliquer votre sélection.
+4.  Ensuite, accédez à **fichier** > **paramètres de Build** et sélectionnez **plateforme Windows universelle**, puis cliquez sur le **plateforme de commutation**bouton pour appliquer votre sélection.
 
     ![changer de plate-forme](images/AzureLabs-Lab8-55.png)
 
-5.  Lorsque vous êtes toujours dans **fichier > Paramètres de Build**, assurez-vous que :
+5.  Lorsque vous êtes toujours dans **fichier** > **paramètres de Build**, assurez-vous que :
 
     1.  **Équipement cible** a la valeur **n’importe quel appareil**
 
@@ -713,7 +713,7 @@ Configurer et tester votre casque immersives de réalité mixte.
 
 9.  Fermer le **paramètres de Build** fenêtre.
 
-10. Enregistrer votre projet et scène **fichier > Enregistrer la scène* / *fichier > Enregistrer le projet**.
+10. Enregistrer votre projet et scène **fichier** > **enregistrer la scène / fichier** > **enregistrer le projet**.
 
     > [!IMPORTANT]
     > Si vous souhaitez ignorer la *Unity configurer* composant pour ce projet (application de bureau) et toujours directement dans le code, n’hésitez pas à [télécharger cette .unitypackage](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20308%20-%20Cross-device%20notifications/Azure-MR-308-Desktop.unitypackage), importez-le dans votre projet en tant qu’un [ **Package personnalisé**](https://docs.unity3d.com/Manual/AssetPackages.html), puis continuez à partir de [chapitre 9](#chapter-9---create-the-tabletoscene-class-in-the-desktop-unity-project).  Vous devrez toujours ajouter les composants de script.
@@ -780,7 +780,7 @@ Le deuxième script que vous créez est **CloudScene**, qui est chargé de :
 
 Pour créer cette classe :
 
-1.  Avec le bouton droit dans le **Asset** dossier se trouve dans le volet de projet, **créer > dossier**. Nommez le dossier **Scripts**.
+1.  Avec le bouton droit dans le **Asset** dossier se trouve dans le volet de projet, **créer** > **dossier**. Nommez le dossier **Scripts**.
 
     ![créer le dossier de scripts](images/AzureLabs-Lab8-66.png)
 
@@ -788,7 +788,7 @@ Pour créer cette classe :
 
 2.  Double-cliquez sur le dossier venez de créer, pour l’ouvrir.
 
-3.  Avec le bouton droit à l’intérieur de la **Scripts** dossier, cliquez sur **créer** **C\# Script**. Nommez le script **TableToScene**.
+3.  Avec le bouton droit à l’intérieur de la **Scripts** dossier, cliquez sur **créer**  >   **C# Script**. Nommez le script **TableToScene**.
 
     ![script c#](images/AzureLabs-Lab8-68.png)
     ![TableToScene le changement de nom](images/AzureLabs-Lab8-69.png)
@@ -1038,7 +1038,7 @@ Pour créer le deuxième script :
         }
     ```
 
-6.  Dans le **Update()** (méthode), ajoutez le code suivant qui détecte l’entrée de la souris et faites glisser, qui à son tour déplacera GameObjects dans la scène. Si l’utilisateur a glisser -déplacer un objet, il transmet le nom et les coordonnées de l’objet à la méthode **UpdateCloudScene()**, qui appelle le service d’application Azure Function App, qui met à jour la table Azure et le déclencheur le notification.
+6.  Dans le **Update()** (méthode), ajoutez le code suivant qui détecte l’entrée de la souris et faites glisser, qui à son tour déplacera GameObjects dans la scène. Si l’utilisateur a glisser -déplacer un objet, il transmet le nom et les coordonnées de l’objet à la méthode **UpdateCloudScene()** , qui appelle le service d’application Azure Function App, qui met à jour la table Azure et le déclencheur le notification.
 
     ```csharp
         /// <summary>
@@ -1136,7 +1136,7 @@ Pour créer le deuxième script :
 
 Tous les éléments nécessaires pour la section Unity de ce projet sont maintenant terminée.
 
-1.  Accédez à **les paramètres de génération** (**fichier > Paramètres de Build**).
+1.  Accédez à **les paramètres de génération** (**fichier** > **paramètres de Build**).
 
 2.  À partir de la **paramètres de Build** fenêtre, cliquez sur **Build**.
 
@@ -1167,15 +1167,15 @@ Ce qui suit est un standard configurée pour le développement avec la réalité
 
     ![name UnityMRNotifHub](images/AzureLabs-Lab8-80.png)
 
-3.  Avec Unity ouvert, il est important de la vérification de la valeur par défaut **Script Editor** a la valeur **Visual Studio**. Accédez à **Modifier > Préférences** et à partir de la nouvelle fenêtre, accédez à **outils externes**. Modification **éditeur de Script externe** à **Visual Studio 2017**. Fermer le **préférences** fenêtre.
+3.  Avec Unity ouvert, il est important de la vérification de la valeur par défaut **Script Editor** a la valeur **Visual Studio**. Accédez à **modifier** > **préférences** et à partir de la nouvelle fenêtre, accédez à **outils externes**. Modification **éditeur de Script externe** à **Visual Studio 2017**. Fermer le **préférences** fenêtre.
 
     ![éditeur externe de jeu à Visual Studio](images/AzureLabs-Lab8-81.png)
 
-4.  Ensuite, accédez à **fichier > Paramètres de Build** et basculer de la plateforme à **plateforme Windows universelle**, en cliquant sur le **plateforme basculer** bouton.
+4.  Ensuite, accédez à **fichier** > **paramètres de Build** et basculer de la plateforme à **plateforme Windows universelle**, en cliquant sur le **basculer la plateforme**  bouton.
 
     ![plateformes de commutateur vers UWP](images/AzureLabs-Lab8-82.png)
 
-5.  Accédez à **fichier > Paramètres de Build** et vous assurer que :
+5.  Accédez à **fichier** > **paramètres de Build** et vous assurer que :
 
     1.  **Équipement cible** a la valeur **n’importe quel appareil**
 
@@ -1229,11 +1229,11 @@ Ce qui suit est un standard configurée pour le développement avec la réalité
 
             ![client internet de graduation](images/AzureLabs-Lab8-89.png)
 
-8.  Dans **paramètres de Build** *Unity C\# projets* est n’est plus grisée : cochez la case à cocher en regard de cela.
+8.  Dans **paramètres de Build**, **Unity C# projets** est n’est plus grisée : cochez la case à cocher en regard de cela.
 
 9.  Avec ces modifications effectuées, fermez la fenêtre de paramètres de Build.
 
-10. Enregistrer votre projet et scène **fichier* *enregistrer la scène*/ *fichier* *enregistrer projet**.
+10. Enregistrer votre projet et scène **fichier** > **enregistrer la scène / fichier** > **enregistrer le projet**.
 
     > [!IMPORTANT]
     > Si vous souhaitez ignorer la *Unity configurer* composant pour ce projet (mixte réalité application) et toujours directement dans le code, n’hésitez pas à [télécharger cette .unitypackage](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20308%20-%20Cross-device%20notifications/Azure-MR-308-MR.unitypackage), importez-le dans votre projet sous la forme d’un [ **Package personnalisé**](https://docs.unity3d.com/Manual/AssetPackages.html), puis continuez à partir de [chapitre 14](#chapter-14---creating-the-tabletoscene-class-in-the-mixed-reality-unity-project). Vous devrez toujours ajouter les composants de script.
@@ -1245,9 +1245,9 @@ Il est actuellement un problème connu dans Unity qui nécessite des plug-ins à
 
 Pour importer le SDK dans votre propre projet, assurez-vous que vous avez téléchargé la dernière version [.unitypackage](https://aka.ms/azstorage-unitysdk). Ensuite, procédez comme suit :
 
-1.  Ajouter le .unitypackage que vous avez téléchargé à partir de l’exemple ci-dessus, à Unity à l’aide de la **actifs > Importer un Package > Custom Package** option de menu.
+1.  Ajouter le .unitypackage que vous avez téléchargé à partir de l’exemple ci-dessus, à Unity à l’aide de la **actifs** > **importer un Package** > **Package personnalisé** option de menu .
 
-2.  Dans le **importer un Package Unity** zone s’affiche, vous pouvez sélectionner tous les éléments sous **plug-in > stockage**.
+2.  Dans le **importer un Package Unity** zone s’affiche, vous pouvez sélectionner tous les éléments sous **plug-in** > **stockage**.
 
     ![importer un package](images/AzureLabs-Lab8-90.png)
 
@@ -1410,7 +1410,7 @@ Pour créer le **NotificationReceiver** script :
         }
     ```
 
-8.  La méthode suivante, **InitNotificationAsync()**, inscription de l’application avec la Service de Hub de notification lors de l’initialisation. Le code est commenté car Unity ne seront pas en mesure de générer le projet. Vous allez supprimer les commentaires lorsque vous importez le package Nuget de messagerie Azure dans Visual Studio.
+8.  La méthode suivante, **InitNotificationAsync()** , inscription de l’application avec la Service de Hub de notification lors de l’initialisation. Le code est commenté car Unity ne seront pas en mesure de générer le projet. Vous allez supprimer les commentaires lorsque vous importez le package Nuget de messagerie Azure dans Visual Studio.
 
     ```csharp
         /// <summary>
@@ -1433,7 +1433,7 @@ Pour créer le **NotificationReceiver** script :
         }
     ```
 
-9.  Le gestionnaire suivant, **canal\_PushNotificationReceived()**, sera déclenchée chaque fois qu’une notification est reçue. Il désérialise la notification, qui sera l’entité de Table Azure qui a été déplacé sur l’Application de bureau et puis déplacez le GameObject correspondant dans la scène MR vers la même position. 
+9.  Le gestionnaire suivant, **canal\_PushNotificationReceived()** , sera déclenchée chaque fois qu’une notification est reçue. Il désérialise la notification, qui sera l’entité de Table Azure qui a été déplacé sur l’Application de bureau et puis déplacez le GameObject correspondant dans la scène MR vers la même position. 
     
     > [!IMPORTANT]
     > Le code est commenté, car le code fait référence à la bibliothèque de messagerie Azure, vous allez ajouter après la génération du projet Unity à l’aide du Gestionnaire de Package Nuget dans Visual Studio. Par conséquent, le projet Unity ne sera pas en mesure de générer, sauf si elle est commentée. Sachez que devez vous générez votre projet et que vous souhaitez ensuite revenir à Unity, vous devrez **nouveau commentaire** ce code.
@@ -1483,7 +1483,7 @@ Pour créer le **NotificationReceiver** script :
 
 Ce chapitre est identique au processus pour le projet précédent de génération. Tous les éléments nécessaires pour la section Unity de ce projet sont maintenant terminée, il est temps de générer à partir de Unity.
 
-1.  Accédez à **les paramètres de génération** ( **fichier > Paramètres de Build...**  ).
+1.  Accédez à **les paramètres de génération** ( **fichier** > **paramètres de Build** ).
 
 2.  À partir de la **paramètres de Build** menu, vérifiez **Unity C# projets*** est cochée (ce qui vous permettra de modifier les scripts dans ce projet, après génération).
 
@@ -1508,7 +1508,7 @@ Ce chapitre est identique au processus pour le projet précédent de génératio
 ## <a name="chapter-17---add-nuget-packages-to-the-unitymrnotifhub-solution"></a>Chapitre 17 - ajouter des packages NuGet à la UnityMRNotifHub Solution
 
 > [!WARNING] 
-> N’oubliez pas que, une fois que vous ajoutez les Packages NuGet suivants (et les commentaires du code dans les prochains [chapitre](#chapter-18---edit-unitymrnotifhub-application,-notificationreciever-class)), le Code, la réouverture du projet Unity, présentera des erreurs. Si vous souhaitez revenir en arrière et continuer à modifier dans l’éditeur Unity, vous avez besoin de commenter ce code errosome et puis supprimez les commentaires plus tard, une fois que vous êtes de retour dans Visual Studio. 
+> N’oubliez pas que, une fois que vous ajoutez les Packages NuGet suivants (et les commentaires du code dans les prochains [chapitre](#chapter-18---edit-unitymrnotifhub-application-notificationreceiver-class)), le Code, la réouverture du projet Unity, présentera des erreurs. Si vous souhaitez revenir en arrière et continuer à modifier dans l’éditeur Unity, vous avez besoin de commenter ce code errosome et puis supprimez les commentaires plus tard, une fois que vous êtes de retour dans Visual Studio. 
 
 Une fois la build de réalité mixte a été terminée, accédez au projet de réalité mixte, que vous avez créé, et double-cliquez sur le fichier solution (.sln) dans ce dossier, pour ouvrir votre solution avec Visual Studio 2017.
 Vous devrez maintenant ajouter le **WindowsAzure.Messaging.managed** package NuGet ; il s’agit d’une bibliothèque qui est utilisée pour recevoir des Notifications à partir du Hub de Notification.

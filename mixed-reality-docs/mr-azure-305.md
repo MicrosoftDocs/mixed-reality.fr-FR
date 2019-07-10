@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: réalité Azure, mixte, academy, unity, didacticiel, api, fonctions, stockage, hololens, réalité virtuelle immersive,
-ms.openlocfilehash: a828c7f0ac3016462f5c7e874545bf50a2db6771
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
-ms.translationtype: HT
+ms.openlocfilehash: 5f3d0c6990249bc32e4c0f55c72dd884c4c2214e
+ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59593546"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67694557"
 ---
 >[!NOTE]
 >Les didacticiels Académie de réalité mixte ont été conçus avec HoloLens (1er gen) et des casques IMMERSIFS réalité mixte à l’esprit.  Par conséquent, nous estimons qu’il est important de laisser ces didacticiels en place pour les développeurs qui cherchent toujours pour obtenir des conseils de développement pour ces appareils.  Ces didacticiels seront **_pas_** être mis à jour avec les ensembles d’outils ou les interactions utilisées pour HoloLens 2 dernières.  Ils seront conservées pour continuer à travailler sur les appareils pris en charge. Il y aura une nouvelle série de didacticiels seront publiés dans le futur qui va vous montrer comment développer pour HoloLens 2.  Cet avis sera mis à jour avec un lien vers ces didacticiels lorsqu’elles sont validées.
@@ -38,11 +38,11 @@ Avoir terminé ce cours, vous disposez d’une application de casque immersives 
 
 Dans votre application, il vous revient à comment vous allez intégrer les résultats avec votre conception. Ce cours est conçu pour vous apprendre à intégrer un Service Azure à votre projet Unity. Il vous revient à utiliser les connaissances acquises à partir de ce cours pour améliorer votre Application de réalité mixte.
 
-## <a name="device-support"></a>Prise en charge des appareils
+## <a name="device-support"></a>Périphériques pris en charge
 
 <table>
 <tr>
-<th>Cours</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Casques IMMERSIFS</a></th>
+<th>Cours</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Casques immersifs</a></th>
 </tr><tr>
 <td>MR et Azure 305 : Fonctions et stockage</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
@@ -62,7 +62,7 @@ Nous recommandons le matériel et logiciel pour ce cours suivants :
 - [Windows 10 Fall Creators Update (ou version ultérieure) avec le mode développeur est activé](install-the-tools.md#installation-checklist)
 - [Le SDK Windows 10 dernières](install-the-tools.md#installation-checklist)
 - [Unity 2017.4](install-the-tools.md#installation-checklist)
-- [Visual Studio 2017](install-the-tools.md#installation-checklist)
+- [Visual Studio 2017](install-the-tools.md#installation-checklist)
 - Un [casque (VR) immersif de Windows Mixed Reality](immersive-headset-hardware-details.md) ou [Microsoft HoloLens](hololens-hardware-details.md) avec le mode développeur est activé
 - Un abonnement à un compte Azure pour la création de ressources Azure
 - Accès à Internet pour la récupération de données et le programme d’installation Azure
@@ -97,11 +97,11 @@ Pour utiliser le **Service de stockage Azure**, vous devez créer et configurer 
 
     2.  Pour *modèle de déploiement*, sélectionnez **Resource manager**.
 
-    3.  Pour *type de compte*, sélectionnez **stockage (usage général v1)**.
+    3.  Pour *type de compte*, sélectionnez **stockage (usage général v1)** .
 
     4.  Déterminer le *emplacement* pour votre groupe de ressources (si vous créez un nouveau groupe de ressources). Dans l’idéal, l’emplacement serait dans la région où l’application s’exécute. Certaines ressources Azure sont uniquement disponibles dans certaines régions.
 
-    5.  Pour *réplication* sélectionnez **en lecture-access-geo-redundant storage (RA-GRS)**.
+    5.  Pour *réplication* sélectionnez **en lecture-access-geo-redundant storage (RA-GRS)** .
 
     6.  Pour *performances*, sélectionnez **Standard**.
 
@@ -250,15 +250,15 @@ Configurer et tester votre casque immersives de réalité mixte.
 
     ![Donnez un nom à un projet unity](images/AzureLabs-Lab5-18.png)
 
-3.  Avec Unity ouvert, il est important de la vérification de la valeur par défaut **Script Editor** a la valeur **Visual Studio**. Accédez à **modifier* > *préférences** et à partir de la nouvelle fenêtre, accédez à **outils externes**. Modification **éditeur de Script externe** à **Visual Studio 2017**. Fermer le **préférences** fenêtre.
+3.  Avec Unity ouvert, il est important de la vérification de la valeur par défaut **Script Editor** a la valeur **Visual Studio**. Accédez à **modifier** > **préférences** et à partir de la nouvelle fenêtre, accédez à **outils externes**. Modification **éditeur de Script externe** à **Visual Studio 2017**. Fermer le **préférences** fenêtre.
 
     ![ensemble de visual studio comme éditeur de script](images/AzureLabs-Lab5-19.png)
 
-4.  Ensuite, accédez à **fichier > Paramètres de Build** et basculer de la plateforme à **plateforme Windows universelle**, en cliquant sur le **plateforme basculer** bouton.
+4.  Ensuite, accédez à **fichier** > **paramètres de Build** et basculer de la plateforme à **plateforme Windows universelle**, en cliquant sur le **basculer la plateforme**  bouton.
 
     ![plateforme de commutation vers uwp](images/AzureLabs-Lab5-20.png)
 
-5.  Accédez à **fichier > Paramètres de Build** et vous assurer que :
+5.  Accédez à **fichier** > **paramètres de Build** et vous assurer que :
 
     1. **Équipement cible** a la valeur **n’importe quel appareil**.
 
@@ -318,7 +318,7 @@ Configurer et tester votre casque immersives de réalité mixte.
 
 10.  Fermez la fenêtre Paramètres de Build.
 
-11. Enregistrer votre projet et la scène (**fichier > Enregistrer la scène / fichier > Enregistrer le projet**).
+11. Enregistrer votre projet et la scène (**fichier** > **enregistrer la scène / fichier** > **enregistrer le projet**).
 
 ## <a name="chapter-4---setup-main-camera"></a>Chapitre 4 - la caméra principale le programme d’installation
 
@@ -421,7 +421,7 @@ Configurer et tester votre casque immersives de réalité mixte.
 
 6.  Vous allez ensuite créer un **texte 3D** objet pour fournir des commentaires sur l’état du service Azure.
 
-    Cliquez avec le bouton droit sur le **GazeButton** panneau à nouveau dans la hiérarchie et ajoutez un **objet 3D > texte 3D** de l’objet en tant qu’un *enfant*.
+    Cliquez avec le bouton droit sur le **GazeButton** panneau à nouveau dans la hiérarchie et ajoutez un **objet 3D** > **texte 3D** de l’objet en tant qu’un *enfant*.
 
     ![créer le nouvel objet de texte 3D](images/AzureLabs-Lab5-42.png)
 
@@ -467,9 +467,9 @@ Il est actuellement un problème connu dans Unity qui nécessite des plug-ins à
 
 Pour importer le SDK dans votre propre projet, assurez-vous que vous avez téléchargé la dernière version ['.unitypackage' à partir de GitHub](https://aka.ms/azstorage-unitysdk). Ensuite, procédez comme suit :
 
-1.  Ajouter le **.unitypackage** fichier à Unity à l’aide de la **actifs > Importer un Package > Custom Package** option de menu.
+1.  Ajouter le **.unitypackage** fichier à Unity à l’aide de la **actifs** > **importer un Package** > **Package personnalisé**option de menu.
 
-2.  Dans le **importer un Package Unity** zone s’affiche, vous pouvez sélectionner tous les éléments sous **plug-in* > *stockage**. Désactivez tout le reste, qu’il n’est pas nécessaire pour ce cours.
+2.  Dans le **importer un Package Unity** zone s’affiche, vous pouvez sélectionner tous les éléments sous **plug-in** > **stockage**. Désactivez tout le reste, qu’il n’est pas nécessaire pour ce cours.
 
     ![importer dans le package](images/AzureLabs-Lab5-45.png)
 
@@ -519,7 +519,7 @@ Le *AzureServices* classe sera chargée de :
 
 Pour créer cette classe :
 
-1.  Avec le bouton droit dans le *Asset* dossier, situé dans le panneau de configuration de projet, **créer > dossier**. Nommez le dossier **Scripts**.
+1.  Avec le bouton droit dans le *Asset* dossier, situé dans le panneau de configuration de projet, **créer** > **dossier**. Nommez le dossier **Scripts**.
 
     ![créer un nouveau dossier](images/AzureLabs-Lab5-50.png)
 
@@ -527,7 +527,7 @@ Pour créer cette classe :
 
 2.  Double-cliquez sur le dossier venez de créer, pour l’ouvrir.
 
-3.  Avec le bouton droit dans le dossier, **créer > C# Script**. Appeler le script *AzureServices*.
+3.  Avec le bouton droit dans le dossier, **créer**  >   **C# Script**. Appeler le script *AzureServices*.
 
 4.  Double-cliquez sur le nouveau *AzureServices* classe pour l’ouvrir avec *Visual Studio*.
 
@@ -637,7 +637,7 @@ Pour créer cette classe :
     ```
 
     > [!IMPORTANT]
-    > Nous permet de renseigner le code pour *CallAzureFunctionForNextShape()* dans un [chapitre futures](#chapter-10---completing-the-AzureServices-class).
+    > Nous permet de renseigner le code pour *CallAzureFunctionForNextShape()* dans un [chapitre futures](#chapter-10---completing-the-azureservices-class).
 
 9.  Supprimer le *Update()* étant donné que cette classe ne l’utilise pas de méthode.
 
@@ -657,7 +657,7 @@ Pour créer cette classe :
 
 1.  Accédez à la **Scripts** dossier que vous avez créé précédemment.
 
-2.  Avec le bouton droit dans le dossier, **créer > C# Script**. Appeler le script *ShapeFactory*.
+2.  Avec le bouton droit dans le dossier, **créer**  >   **C# Script**. Appeler le script *ShapeFactory*.
 
 3.  Double-cliquez sur le nouveau *ShapeFactory* script pour l’ouvrir avec *Visual Studio*.
 
@@ -767,7 +767,7 @@ Pour créer cette classe :
 
 1.  Accédez à la **Scripts** dossier que vous avez créé précédemment.
 
-2.  Avec le bouton droit dans le volet de projet, **créer > C# Script**. Appeler le script *les regards*.
+2.  Avec le bouton droit dans le volet de projet, **créer**  >   **C# Script**. Appeler le script *les regards*.
 
 3.  Double-cliquez sur le nouveau *les regards* script pour l’ouvrir avec *Visual Studio.*
 
@@ -1033,7 +1033,7 @@ Pour créer cette classe :
 
 Avec les autres scripts en place, il est possible de *complète* le *AzureServices* classe. Cela sera possible via :
 
-1.  Ajout d’une nouvelle méthode nommée *CreateCloudIdentityAsync()*, pour définir les variables de l’authentification nécessaires pour communiquer avec Azure.
+1.  Ajout d’une nouvelle méthode nommée *CreateCloudIdentityAsync()* , pour définir les variables de l’authentification nécessaires pour communiquer avec Azure.
 
     > Cette méthode vérifie également l’existence d’un fichier précédemment stocké qui contient la liste de forme.
     >
@@ -1106,7 +1106,7 @@ Avec les autres scripts en place, il est possible de *complète* le *AzureServic
         }
     ```
 
-3.  Renseignez le code pour la méthode *CallAzureFunctionForNextShape()*. Vous allez utiliser l’élément précédemment créé *Azure Function App* pour demander un index de la forme. Une fois la nouvelle forme est reçue, cette méthode envoie la forme pour le *ShapeFactory* classe pour créer la nouvelle forme dans la scène. Utilisez le code ci-dessous pour terminer le corps de *CallAzureFunctionForNextShape()*.
+3.  Renseignez le code pour la méthode *CallAzureFunctionForNextShape()* . Vous allez utiliser l’élément précédemment créé *Azure Function App* pour demander un index de la forme. Une fois la nouvelle forme est reçue, cette méthode envoie la forme pour le *ShapeFactory* classe pour créer la nouvelle forme dans la scène. Utilisez le code ci-dessous pour terminer le corps de *CallAzureFunctionForNextShape()* .
 
     ```csharp
         /// <summary>
@@ -1197,7 +1197,7 @@ Avec les autres scripts en place, il est possible de *complète* le *AzureServic
 
 Pour commencer le processus de génération :
 
-1.  Accédez à **fichier > Paramètres de Build**.
+1.  Accédez à **fichier** > **les paramètres de génération**.
 
     ![Générez l’application](images/AzureLabs-Lab5-54.png)
 
@@ -1218,8 +1218,8 @@ Pour déployer votre application :
 3.  Dans le **Configuration de la Solution** sélectionnez **déboguer**.
 
     > Pour le Microsoft HoloLens, il peut s’avérer plus facile d’affecter à ce *Machine distante*, de sorte que vous ne sont pas attachés à votre ordinateur. Cependant, vous devez également effectuer les opérations suivantes :
-    > - Connaître le **adresse IP** de votre HoloLens, ce qui se trouve dans le *Paramètres > réseau & Internet > Wi-Fi > Options avancées*; IPv4 est l’adresse que vous devez utiliser. 
-    > - Vérifiez **Mode développeur** est **sur**; trouvé dans *Paramètres > mise à jour & sécurité > pour les développeurs*.
+    > - Connaître le **adresse IP** de votre HoloLens, ce qui se trouve dans le **paramètres** > **réseau & Internet**  >   **Wi-Fi** > **Options avancées**; IPv4 est l’adresse que vous devez utiliser. 
+    > - Vérifiez **Mode développeur** est **sur**; trouvé dans **paramètres** > **mise à jour & sécurité**  >  **Pour les développeurs**.
 
     ![déployer la solution](images/AzureLabs-Lab5-55.png)
 

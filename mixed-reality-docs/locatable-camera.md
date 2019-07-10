@@ -6,12 +6,12 @@ ms.author: wguyman, cdedmonds
 ms.date: 06/12/2019
 ms.topic: article
 keywords: appareil photo, hololens, appareil photo de couleur, front face, hololens 2, cv, vision par ordinateur, repère, marqueurs, code qr, qr, photo, vidéo
-ms.openlocfilehash: 323c05ca01e000942a6f8ee6dc82de7546578324
-ms.sourcegitcommit: cf9f8ebbca0301e9d277853771ff6e47701ba1c1
+ms.openlocfilehash: b80e201723f8f499a6d35008b9d308f93b925b1c
+ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67523315"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67694536"
 ---
 # <a name="locatable-camera"></a>Appareil photo localisable
 
@@ -43,7 +43,7 @@ HoloLens inclut une caméra world à l’avant de l’appareil qui permet aux ap
   | Profil                                         | Vidéo     | Preview   | Toujours     | Fréquences d’images | Champ de vision horizontal (H-angle d’ouverture) | Utilisation suggérée                             |
   |-------------------------------------------------|-----------|-----------|-----------|-------------|----------------------------------|---------------------------------------------|
   | Legacy,0  BalancedVideoAndPhoto,100             | 2272x1278 | 2272x1278 |           | 15,30       | 64.69                            | Enregistrement vidéo de haute qualité                |
-  | Legacy,0  BalancedVideoAndPhoto,100             | 896x504   | 896x504   |           | 15,30       | 64.69                            | Enregistrement vidéo de haute qualité                |
+  | Legacy,0  BalancedVideoAndPhoto,100             | 896x504   | 896x504   |           | 15,30       | 64.69                            | Flux d’aperçu pour la capture de photos de haute qualité |
   | Legacy,0  BalancedVideoAndPhoto,100             |           |           | 3904x2196 |             | 64.69                            | Capture d’images de haute qualité                  |
   | BalancedVideoAndPhoto,120                       | 1952x1100 | 1952x1100 | 1952x1100 | 15,30       | 64.69                            | Scénarios de longue durée                     |
   | BalancedVideoAndPhoto,120                       | 1504x846  | 1504x846  |           | 15,30       | 64.69                            | Scénarios de longue durée                     |
@@ -51,7 +51,7 @@ HoloLens inclut une caméra world à l’avant de l’appareil qui permet aux ap
   | Vidéoconférence, 100                           | 1504x846  | 1504x846  |           | 5,15,30,60  | 64.69                            | Conférence vidéo, les scénarios de longue durée |
   | Vidéoconférence, 100 BalancedVideoAndPhoto, 120 | 1920x1080 | 1920x1080 | 1920x1080 | 15,30       | 64.69                            | Conférence vidéo, les scénarios de longue durée |
   | Vidéoconférence, 100 BalancedVideoAndPhoto, 120 | 1280 x 720  | 1280 x 720  | 1280 x 720  | 15,30       | 64.69                            | Conférence vidéo, les scénarios de longue durée |
-  | Vidéoconférence, 100 BalancedVideoAndPhoto, 120 | 1128 x 635  |           |           | 15,30       | 64.69                            | Conférence vidéo, les scénarios de longue durée |
+  | Vidéoconférence, 100 BalancedVideoAndPhoto, 120 | 1128x636  |           |           | 15,30       | 64.69                            | Conférence vidéo, les scénarios de longue durée |
   | Vidéoconférence, 100 BalancedVideoAndPhoto, 120 | 960 x 540   |           |           | 15,30       | 64.69                            | Conférence vidéo, les scénarios de longue durée |
   | Vidéoconférence, 100 BalancedVideoAndPhoto, 120 | 760x428   |           |           | 15,30       | 64.69                            | Conférence vidéo, les scénarios de longue durée |
   | Vidéoconférence, 100 BalancedVideoAndPhoto, 120 | 640 x 360   |           |           | 15,30       | 64.69                            | Conférence vidéo, les scénarios de longue durée |
@@ -103,7 +103,7 @@ De nombreuses applications de réalité mixte utilisent une image reconnaissable
 Pour reconnaître un modèle visual, puis placer cet objet dans l’espace universel des applications, vous aurez besoin de quelques éléments :
 1. Une image modèle reconnaissance boîte à outils, tels que le code QR, AR balises, visage, de traceurs du cercle, etc. de la reconnaissance optique de caractères.
 2. Collecter les trames d’images lors de l’exécution et les passer à la couche de reconnaissance
-3. Unproject leurs emplacements d’image au monde, ou les positions des rayons world probable. Consultez l'article
+3. Unproject leurs emplacements d’image au monde, ou les positions des rayons world probable. Voir
 4. Placez vos modèles virtuels sur ces emplacements du monde
 
 Certains liens de traitement important d’image :
