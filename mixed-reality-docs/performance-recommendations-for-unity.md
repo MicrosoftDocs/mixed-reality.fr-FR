@@ -6,12 +6,12 @@ ms.author: trferrel
 ms.date: 03/26/2019
 ms.topic: article
 keywords: graphiques, UC, gpu, de rendu, le garbage collection, hololens
-ms.openlocfilehash: 37eac566a0315009330ac7fee96edd82348d6ba3
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: b0821f07184bff8630f6b6af0d0fc461f6fcd133
+ms.sourcegitcommit: 8f3ff9738397d9b9fdf4703b14b89d416f0186a5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59597049"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67843335"
 ---
 # <a name="performance-recommendations-for-unity"></a>Recommandations relatives aux performances pour Unity
 
@@ -72,8 +72,9 @@ public class ExampleClass : MonoBehaviour
 }
 ```
 
->[!NOTE] Éviter GetComponent(string) <br/>
-> Lorsque vous utilisez  *[GetComponent()](https://docs.unity3d.com/ScriptReference/GameObject.GetComponent.html)*, il existe un certain nombre de surcharges différentes. Il est important de toujours utiliser les implémentations de Type en fonction et jamais la surcharge de recherche basé sur chaîne. La recherche par la chaîne dans votre scène est considérablement plus coûteuse que la recherche par Type. <br/>
+>[!NOTE] 
+> Éviter GetComponent(string) <br/>
+> Lorsque vous utilisez  *[GetComponent()](https://docs.unity3d.com/ScriptReference/GameObject.GetComponent.html)* , il existe un certain nombre de surcharges différentes. Il est important de toujours utiliser les implémentations de Type en fonction et jamais la surcharge de recherche basé sur chaîne. La recherche par la chaîne dans votre scène est considérablement plus coûteuse que la recherche par Type. <br/>
 > (Bon) Composant GetComponent (Type type) <br/>
 > (Bon) T GetComponent\<T > () <br/>
 > (Incorrect) Composant GetComponent(string) > <br/>
@@ -225,24 +226,22 @@ En outre, il est généralement préférable de combiner les mailles en un GameO
 
 ## <a name="gpu-performance-recommendations"></a>Recommandations relatives aux performances de GPU
 
-En savoir plus sur [optimisation de rendu de graphiques dans Unity](https://unity3d.com/learn/tutorials/temas/performance-optimization/optimizing-graphics-rendering-unity-games)
+En savoir plus sur [optimisation de rendu de graphiques dans Unity](https://unity3d.com/learn/tutorials/temas/performance-optimization/optimizing-graphics-rendering-unity-games) 
 
-#### <a name="reduce-poly-count"></a>Réduire le nombre de poly
+### <a name="optimize-depth-buffer-sharing"></a>Optimiser le partage de mémoire tampon de profondeur
+
+Il est généralement recommandé d’activer **partage de mémoire tampon de profondeur** sous **paramètres du lecteur XR** afin d’optimiser [la stabilité hologramme](Hologram-stability.md). Lors de l’activation basée sur une profondeur de reprojection minute avec ce paramètre Toutefois, il est recommandé de sélectionner **format de la profondeur de 16 bits** au lieu de **format de 24 bits profondeur**. La volonté de mémoires tampons de profondeur de 16 bits réduit considérablement la bande passante (et par conséquent, l’alimentation) associé au trafic de mémoire tampon de profondeur. Cela peut s’avérer efficace en puissance, mais il est uniquement applicable pour les expériences avec une plage de profondeur petit comme [z lutte](https://en.wikipedia.org/wiki/Z-fighting) est susceptible de se produire avec 16 bits à 24 bits. Pour éviter ces artefacts, modifier les plans de découpage près/lointain de le [appareil photo Unity](https://docs.unity3d.com/Manual/class-Camera.html) pour prendre en compte pour la précision inférieure. Pour les applications basées sur HoloLens, un plan de découpage lointain de 50 millions au lieu de la valeur par défaut de Unity 1000 m peut éliminer généralement un z fighting.
+
+### <a name="reduce-poly-count"></a>Réduire le nombre de poly
 
 Nombre de polygone est généralement réduite à l’aide
 1) Suppression d’objets dans une scène
 2) Décimalisation Asset ce qui réduit le nombre de polygones pour une maille donnée
 3) Implémentation d’un [système de niveau de détail (LOD)](https://docs.unity3d.com/Manual/LevelOfDetail.html) dans votre application qui restitue éloigné des objets avec une version inférieure-polygone de la même géométrie
 
-#### <a name="limit-overdraw"></a>Limite de superposition
+### <a name="understanding-shaders-in-unity"></a>Nuanceurs de présentation dans Unity
 
-Dans Unity, un peut afficher superposition pour leur scène, en basculant le [ **dessiner menu mode** ](https://docs.unity3d.com/Manual/ViewModes.html) dans le coin supérieur gauche de la **vue de la scène** et en sélectionnant **superpositions** .
-
-En règle générale, la superposition peut être atténuée à l’élimination des objets à l’avance avant leur envoi vers le GPU. Unity fournit des détails sur l’implémentation de [coupe d’Occlusion](https://docs.unity3d.com/Manual/OcclusionCulling.html) pour leur moteur.
-
-#### <a name="understanding-shaders-in-unity"></a>Nuanceurs de présentation dans Unity
-
-Une approximation facile à comparer les nuanceurs de performances est d’identifier le nombre moyen d’opérations chaque s’exécute lors de l’exécution. Vous pouvez faire assez facilement dans Unity.
+Une approximation facile à comparer les nuanceurs de performances est d’identifier le nombre moyen d’opérations chaque s’exécute lors de l’exécution. Cela est possible facilement dans Unity.
 
 1) Sélectionnez votre ressource de nuanceur ou sélectionnez un matériau, puis dans le coin supérieur droit de la fenêtre Inspecteur, sélectionnez l’icône d’engrenage, puis **« Sélectionnez nuanceur »**
 
@@ -255,11 +254,29 @@ Une approximation facile à comparer les nuanceurs de performances est d’ident
 
     ![Opérations Standard de nuanceur Unity](images/unity-standard-shader-compilation.png)
 
-##### <a name="unity-standard-shader-alternatives"></a>Alternatives de nuanceur Standard Unity
+#### <a name="optmize-pixel-shaders"></a>Optimisation des nuanceurs
 
-Au lieu d’utiliser un rendu physiquement en (PBR) ou autres nuanceur de haute qualité, rechercher l’utilisation d’un plus performant et plus économique nuanceur. [Mixte réalité Toolkit](https://github.com/Microsoft/MixedRealityToolkit-Unity) fournit un [nuanceur standard](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Assets/MixedRealityToolkit/StandardAssets/Shaders/MixedRealityStandard.shader) qui a été optimisé pour les projets de réalité mixte.
+Regarder les résultats statistiques compilées à l’aide de la méthode ci-dessus, le [fragment shader](https://en.wikipedia.org/wiki/Shader#Pixel_shaders) exécutera généralement des opérations plus que le [nuanceur de sommets](https://en.wikipedia.org/wiki/Shader#Vertex_shaders) en moyenne. Le nuanceur de fragment, également connu sous le nuanceur de pixels est exécuté par pixel sur l’écran pendant que le nuanceur de sommets est uniquement exécutée par vertex de toutes les mailles dessinés à l’écran de sortie. 
+
+Par conséquent, non seulement les nuanceurs de fragment ont plus d’instructions que des nuanceurs de sommets en raison de tous les calculs d’éclairage, les nuanceurs de fragment sont presque toujours exécutés dans un dataset plus volumineux. Par exemple, si la sortie de l’écran est un 2k par 2 image k, le nuanceur de fragment peut obtenir exécutée 2 000 * 2, = 4,000,000 000 fois. Si deux yeux de rendu, ce nombre double dans la mesure où il existe deux écrans. Si une application de réalité mixte a plusieurs passes, plein écran post-traitement effets ou rendre plusieurs mailles au même pixel, ce nombre augmente considérablement. 
+
+Par conséquent, ce qui réduit le nombre d’opérations dans le nuanceur de fragment généralement permettent bien plus des gains de performances sur les optimisations dans le nuanceur de sommets.
+
+#### <a name="unity-standard-shader-alternatives"></a>Alternatives de nuanceur Standard Unity
+
+Au lieu d’utiliser un rendu physiquement en (PBR) ou autres nuanceur de haute qualité, rechercher l’utilisation d’un plus performant et plus économique nuanceur. Le [Toolkit de réalité mixte](https://github.com/Microsoft/MixedRealityToolkit-Unity) fournit le [nuanceur standard MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_MRTKStandardShader.html) qui a été optimisé pour les projets de réalité mixte.
 
 Unity fournit également un éteint, vertex allumée et les options de nuanceur simplifiée diffuse et d’autres qui sont considérablement plus rapide que le nuanceur Unity Standard. Consultez [l’utilisation et les performances de nuanceurs intégrés](https://docs.unity3d.com/Manual/shader-Performance.html) pour des informations plus détaillées.
+
+#### <a name="shader-preloading"></a>Le préchargement de nuanceur
+
+Utilisez *nuanceur préchargement* et autres astuces pour optimiser [temps de chargement du nuanceur](http://docs.unity3d.com/Manual/OptimizingShaderLoadTime.html). En particulier, le préchargement de nuanceur signifie que vous ne voyez pas toutes eu de problèmes en raison de la compilation de nuanceur de runtime.
+
+### <a name="limit-overdraw"></a>Limite de superposition
+
+Dans Unity, un peut afficher superposition pour leur scène, en basculant le [ **dessiner menu mode** ](https://docs.unity3d.com/Manual/ViewModes.html) dans le coin supérieur gauche de la **vue de la scène** et en sélectionnant **superpositions** .
+
+En règle générale, la superposition peut être atténuée à l’élimination des objets à l’avance avant leur envoi vers le GPU. Unity fournit des détails sur l’implémentation de [coupe d’Occlusion](https://docs.unity3d.com/Manual/OcclusionCulling.html) pour leur moteur.
 
 ## <a name="memory-recommendations"></a>Recommandations de mémoire
 
