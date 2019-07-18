@@ -1,75 +1,76 @@
 ---
-title: MR Learning partage Module pour HoloLens 2
-description: Terminer ce cours pour apprendre à implémenter plusieurs utilisateurs les expériences partagées au sein d’une application de HoloLens 2.
+title: Module de partage d’apprentissage MR pour HoloLens 2
+description: Suivez ce cours pour apprendre à implémenter des expériences partagées multi-utilisateur dans une application HoloLens 2.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: 44cc41b10ed79d3085ec601ec9cf21af47b0fea5
-ms.sourcegitcommit: cf9f8ebbca0301e9d277853771ff6e47701ba1c1
+ms.openlocfilehash: 92bea1f3130f67645c10e36fe40cd4bc6f8b9151
+ms.sourcegitcommit: 611af6ff7a2412abad80c0c7d4decfc0c3a0e8c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67523305"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68293671"
 ---
-# <a name="connecting-multiple-users"></a>Plusieurs utilisateurs qui se connectent
+# <a name="connecting-multiple-users"></a>Connexion de plusieurs utilisateurs
 
-Dans cette leçon, nous Découvrez comment connecter plusieurs utilisateurs dans le cadre de l’expérience partagée en direct. À la fin de cette leçon, vous serez en mesure d’ouvrir l’application sur plusieurs appareils et consultez avatar, représenté par une sphère, les représentations sous forme de chaque personne qui joint. 
+Dans cette leçon, nous allons apprendre à connecter plusieurs utilisateurs dans le cadre d’une expérience partagée en direct. À la fin de cette leçon, vous serez en mesure d’ouvrir l’application sur plusieurs appareils, et de voir un avatar, représenté par une sphère, des représentations de chaque personne qui rejoint. 
 
-Objectifs :
+Cherché
 
-- Configurer le jeu de mots dans votre application
-- Configurer des joueurs
-- Découvrez comment vous connecter à plusieurs utilisateurs dans une expérience partagée
+- Configurer retentissante dans votre application
+- Configurer les joueurs
+- Découvrez comment connecter plusieurs utilisateurs dans un environnement partagé
 
 ### <a name="instructions"></a>Instructions
 
-1. Dans les ressources -> ressources -> dossier Prefabs dans le panneau de configuration de projet, faites glisser le préfabriqué NetworkLobby dans à la hiérarchie comme indiqué dans l’image ci-dessous.
+1. Dans le dossier Ressources-> Ressources-> Prefabs dans le panneau projet, glissez-déposez le Prefab NetworkLobby dans la hiérarchie, comme indiqué dans l’image ci-dessous.
 
+![Module3Chapter3step1im](images/module3chapter3step1im.PNG)
 
-   ![Module3Chapter3step1im](images/module3chapter3step1im.PNG)
+2. Lorsque vous développez NetworkLobby, vous voyez un objet enfant appelé NetworkRoom. Avec NetworkRoom sélectionné, accédez au panneau de l’inspecteur, puis cliquez sur Ajouter un composant. Recherchez PhotonView et ajoutez le composant.
 
-2. Lorsque vous développez NetworkLobby, vous verrez un objet enfant appelé NetworkRoom. Avec NetworkRoom sélectionné, accédez au volet d’inspecteur, puis cliquez sur Ajouter un composant. Recherchez PhotonView et ajouter le composant.
+![Module3Chapter3tep2im](images/module3chapter3step2im.PNG)
 
-   ![Module3Chapter3tep2im](images/module3chapter3step2im.PNG)
+3. Créez un nouvel objet de jeu vide dans la hiérarchie. Cliquez avec le bouton droit dans la hiérarchie, puis sélectionnez vide dans le menu contextuel. Assurez-vous que le positionnement est défini sur x = 0, y = 0, z = 0 et nommez l’objet, PhotonUser.
 
-3. Créer un nouvel objet de jeu vide dans la hiérarchie. Cliquez avec le bouton droit dans la hiérarchie, puis sélectionnez vide dans le menu contextuel. Vérifiez le positionnement est défini sur x = 0, y = 0, z = 0 et nommer l’objet, PhotonUser.
+![Module3Chapter3step3im](images/module3chapter3step3im.PNG)
 
-   ![Module3Chapter3step3im](images/module3chapter3step3im.PNG)
+4. Cliquez sur Ajouter un composant, puis tapez Generic net Sync. Sélectionnez la classe Generic net Sync. Lorsque la classe s’affiche, cliquez sur la case à cocher utilisateur pour l’activer. 
 
-4. Cliquez sur Ajouter un composant, puis tapez synchronisation Net générique. Sélectionnez la classe générique synchronisation Net. Lorsque la classe s’affiche, cliquez sur la case à cocher pour l’activer. 
+![module3chapter3updateStep4im](images/module3chapter3updateStep4im.png)
 
-   ![module3chapter3updateStep4im](images/module3chapter3updateStep4im.png)
+5. Cliquez à nouveau sur Ajouter un composant, puis tapez vue photon. Sélectionnez la classe de vue photons qui apparaît dans la liste déroulante.
 
-5. Cliquez sur Ajouter un composant à nouveau et tapez Photon View. Sélectionnez la classe d’affichage de Photon qui s’affiche dans la liste déroulante.
+![module3chapter3updateStep5im](images/module3chapter3updateStep5im.png)
 
-   ![module3chapter3updateStep5im](images/module3chapter3updateStep5im.png)
+6. Cliquez sur l’icône de fichier de la classe Generic net Sync. Faites-le glisser et déposez-le dans le champ composants observés de la vue photons. 
 
-6. Cliquez sur l’icône de fichier pour la classe générique synchronisation Net. Faites glisser dans le champ d’observé les composants de la vue Photon. ![module3chapter3updateStep6im.png](images/module3chapter3updateStep6im.png) 
+![module3chapter3updateStep6im. png](images/module3chapter3updateStep6im.png) 
 
-7. Ensuite, nous créer sphères pour représenter chaque personne qui rejoint une expérience partagée. Avec le bouton droit sur l’objet de PhotonUser que vous venez de créer et scrolldown à « sphère objet 3D, puis cliquez sur. Cela créera un objet de jeu sphère en tant qu’enfant de l’objet PhotonUser.
+7. Ensuite, nous créons des sphères pour représenter chaque personne qui rejoint une expérience partagée. Cliquez avec le bouton droit sur l’objet PhotonUser que vous venez de créer et scrolldown sur «objet 3D», puis cliquez sur sphère. Cela permet de créer un objet de jeu Sphere en tant qu’enfant de l’objet PhotonUser.
 
-   ![Module3Chapter3step4im](images/module3chapter3step4im.PNG)
+![Module3Chapter3step4im](images/module3chapter3step4im.PNG)
 
-8. Mettre à l’échelle de la sphère à x = 0,06, y = 0,06, ad z = 0,06.
+8. Mettez à l’échelle la sphère jusqu’à x = 0.06, y = 0.06, ad z = 0.06.
 
-   ![Module3hapter3step5im](images/module3chapter3step5im.PNG)
+![Module3hapter3step5im](images/module3chapter3step5im.PNG)
 
-9. Faites glisser l’objet de jeu PhotonUser dans le dossier Prefabs dans le panneau de configuration de projet, puis supprimez-le de la scène. Nous avons maintenant créé un préfabriqué qui peut être utilisé lors de la génération dynamique ou instanciation de nouveaux lecteurs dans un environnement partagé.
+9. Faites glisser l’objet de jeu PhotonUser dans le dossier Prefabs du panneau projet, puis supprimez-le de la scène. Nous avons maintenant créé un Prefab qui peut être utilisé lors de la génération ou de l’instanciation de nouveaux joueurs dans un environnement partagé.
 
-   ![Module3Chapter3step6im](images/module3chapter3step6im.PNG)
+![Module3Chapter3step6im](images/module3chapter3step6im.PNG)
 
-> Remarque : Assurez-vous que l’objet de jeu a correctement copié dans le dossier Prefabs avant de le supprimer à partir de votre hiérarchie.
+> Remarque: Assurez-vous que l’objet de jeu a été copié dans le dossier Prefabs avant de le supprimer de votre hiérarchie.
 
-10. Créer un nouvel objet dans la hiérarchie en suivant les instructions à l’étape 3 et nommez-le SharedPlayground. Ensuite, cliquez sur Ajouter un composant, recherchez le Gestionnaire de réseau générique et cliquez dessus pour ajouter le composant Gestionnaire de réseau générique. Modifier la position de l’objet à x = 0, y = 0 et z = 0.
+10. Créez un nouvel objet dans la hiérarchie en suivant les instructions de l’étape 3, puis nommez-le SharedPlayground. Ensuite, cliquez sur Ajouter un composant et recherchez gestionnaire de réseau générique, puis cliquez dessus pour ajouter le composant Generic Network Manager. Remplacez la position de l’objet par x = 0, y = 0 et z = 0.
 
-    ![Module3Chapter3step7im](images/module3chapter3step7im.PNG)
+![Module3Chapter3step7im](images/module3chapter3step7im.PNG)
 
 
 ## <a name="congratulations"></a>Félicitations
 
-Une fois toutes les étapes ci-dessus sont terminées, et le processus de génération est également terminé, appuyez sur le bouton de lecture et connecter votre 2 HoloLens. Vous devez voir une sphère déplaçant à mesure que vous déplacez votre tête. Elle sera visible pour tous les utilisateurs qui se joint à votre projet Unity !
+Une fois que toutes les étapes ci-dessus sont terminées et que le processus de génération est également terminé, appuyez sur le bouton de lecture et connectez votre HoloLens 2. Vous devriez voir une sphère se déplaçant au fur et à mesure que vous déplacez votre tête. Celui-ci s’affiche pour tout utilisateur qui rejoint votre projet Unity.
 
-[Leçon suivante : Sharing(Photon) leçon 4](mrlearning-sharing(photon)-ch4.md)
+[Leçon suivante : Leçon 4 sur le partage (photon)](mrlearning-sharing(photon)-ch4.md)
 

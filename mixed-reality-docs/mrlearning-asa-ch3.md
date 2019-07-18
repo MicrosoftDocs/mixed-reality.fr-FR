@@ -1,88 +1,77 @@
 ---
-title: Module MR Learning ASA Azure spatiale de point d’ancrage sur HoloLens 2
+title: Module ASA d’apprentissage de la fonction d’ancrage spatial Azure sur HoloLens 2
 description: Suivez ce cours pour découvrir comment implémenter la reconnaissance faciale Azure au sein d’une application de réalité mixte.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: 4aabb4a35efebdd893cbb248365e534abd60f684
-ms.sourcegitcommit: 30246ab9b9be44a3c707061753e53d4bf401eb6b
+ms.openlocfilehash: c6e902710eebe205b9e944b1bf95a9ddd3bd9044
+ms.sourcegitcommit: 611af6ff7a2412abad80c0c7d4decfc0c3a0e8c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/22/2019
-ms.locfileid: "67327094"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68293808"
 ---
-# <a name="displaying-azure-spatial-anchor-feedback"></a>Affichage des commentaires d’ancrage Spatial Azure
+# <a name="displaying-azure-spatial-anchor-feedback"></a>Affichage des commentaires sur l’ancrage spatial Azure
 
-Dans cette leçon, vous allez découvrir comment fournir aux utilisateurs avec des commentaires sur la découverte de point d’ancrage, événements et l’état lors de l’utilisation des ancres spatiale d’Azure.
+Dans cette leçon, vous allez apprendre à fournir aux utilisateurs des commentaires sur la détection d’ancrage, les événements et l’état lors de l’utilisation d’ancres spatiales Azure.
 
-Objectifs :
+Cherché
 
-* Découvrez comment configurer un panneau de l’interface utilisateur qui affiche des informations importantes sur la session active de ASA
+* Découvrez comment configurer un panneau d’interface utilisateur qui affiche des informations importantes sur la session ASA actuelle.
 
-* Comprendre et Explorer les éléments de commentaires qui le SDK ASA rend disponible pour les utilisateurs
-
-  
+* Comprendre et explorer les éléments de commentaires que le kit de développement logiciel (SDK) ASA met à la disposition des utilisateurs
 
 ## <a name="instructions"></a>Instructions
 
-### <a name="set-up-asa-feedback-ui-panel"></a>Configurer le volet de l’interface utilisateur de commentaires ASA
+### <a name="set-up-asa-feedback-ui-panel"></a>Panneau de l’interface utilisateur de configuration des commentaires ASA
 
-1. Dans cette leçon, nous n’utilisons pas le « SaveAnchorToDisk » et les boutons « ShareAnchor », par conséquent, sélectionnez les deux boutons et décochez la case à cocher dans le panneau Inspecteur (comme indiqué ci-dessous) pour masquer ces boutons.
+1. Dans cette leçon, nous n’utilisons pas les boutons «SaveAnchorToDisk» et «ShareAnchor». pour ce faire, sélectionnez les deux boutons et désactivez la case à cocher dans le panneau inspecteur (comme indiqué ci-dessous) pour masquer ces boutons.
    
 
 ![module2chapter3step1im](images/module2chapter3step1im.PNG)
 
-2. Ensuite, créez le panneau d’instructions. Démarrez en cliquant avec le bouton avec le bouton droit sur le bouton « instructions », placez le curseur sur le « objet 3D » et sélectionnez « textmeshpro-texte ».
+2. Ensuite, créez le panneau d’instructions. Commencez par cliquer avec le bouton droit sur le bouton «instructions», pointez sur «objet 3D», puis sélectionnez «textmeshpro-Text».
 
-   
+![module2chapter3step2im](images/module2chapter3step2im.PNG)
 
-   ![module2chapter3step2im](images/module2chapter3step2im.PNG)
-
-   3. Ajuster l’échelle et le positionnement du texte afin qu’elle corresponde avec les instructions de votre scène. En outre, vérifiez que l’alignement pour tout le texte est centré. Puis supprimez le texte d’exemple à partir de l’éditeur de texte, comme illustré dans l’image ci-dessous.
-
+3. Ajustez l’échelle et le positionnement du texte afin qu’il corresponde aux instructions de votre scène. En outre, assurez-vous que l’alignement de tout le texte est centré. Ensuite, supprimez l’exemple de texte de l’éditeur de texte, comme indiqué dans l’image ci-dessous.
 
 ![module2chapter3step3im](images/module2chapter3step3im.PNG)
 
-4. Remplacez le nom de l’objet TextMeshPro « FeedbackPanel ».
+4. Remplacez le nom de l’objet TextMeshPro par «FeedbackPanel».
    
-   ![module2chapter3step4im](images/module2chapter3step4im.PNG)
-   
-5. Dans le volet de projet, sélectionnez « actifs » et avec le bouton droit, puis sur « Afficher dans l’Explorateur de ».
+
+![module2chapter3step4im](images/module2chapter3step4im.PNG)
+
+5. Dans le panneau projet, sélectionnez «ressources», cliquez avec le bouton droit, puis sélectionnez «Afficher dans l’Explorateur».
    
 
 ![module2chapter3step4im](images/module2chapter3step5im.PNG)
 
-Maintenant, cliquez sur [ici](https://onedrive.live.com/?authkey=%21ABXEC8PvyQu8Qd8&id=5B7335C4342BCB0E%21395636&cid=5B7335C4342BCB0E) pour télécharger les fichiers nécessaires dans les prochains quelques étapes.
+Cliquez [ici](https://onedrive.live.com/?authkey=%21ABXEC8PvyQu8Qd8&id=5B7335C4342BCB0E%21395636&cid=5B7335C4342BCB0E) pour télécharger les fichiers nécessaires dans les étapes suivantes.
 
-6. Une fois que l’Explorateur s’ouvre, sélectionnez le dossier assets, puis le dossier « ASAmodulesAssets » et copiez le script de commentaires d’ancrage et les fichiers de script de module d’ancrage dans le dossier. 
-   
+6. Une fois que l’Explorateur s’ouvre, sélectionnez le dossier ressources, puis le dossier «ASAmodulesAssets» et copiez le script de commentaires d’ancrage et les fichiers de script du module d’ancrage dans le dossier. 
 
 ![module2chapter3step5im](images/module2chapter3step6im.PNG)
 
-> Remarque : Si vous obtenez une fenêtre contextuelle vous demandant si vous souhaitez remplacer l’ancien ou de conserver l’ancien veillez à sélectionner le remplacement.
+> Remarque: Si vous recevez un message vous demandant si vous souhaitez remplacer l’ancien ou conserver l’ancien, veillez à sélectionner remplacer.
 
-7. Revenez dans le dossier de ressources. Ensuite, accédez dans le dossier « AzureSpatialAnchorsPlugin », puis le dossier d’exemples et enfin le dossier scripts et copiez le wrapper de démonstration ancres Spatial Azure dans ce dossier. 
-   
+7. Revenez à présent au dossier Assets. Ensuite, accédez au dossier «AzureSpatialAnchorsPlugin», puis au dossier exemples et enfin au dossier scripts, et copiez le wrapper de démonstration des ancres spatiales Azure dans ce dossier. 
 
 ![module2chapter3step8im](images/module2chapter3step7im.PNG)
 
-8. Maintenant que les fichiers sont chargés, vérifiez que le texte « feedbackpanel » est sélectionné, dans la hiérarchie ASA_feedback et cliquez sur « Ajouter un composant » et ajouter le script de commentaires d’ancrage en recherchant et en le sélectionnant qu’il apparaît. 
-   
-   
+8. Maintenant que les fichiers sont téléchargés, assurez-vous que le texte «feedbackpanel» est sélectionné, dans la hiérarchie ASA_feedback et cliquez sur «Ajouter un composant», puis ajoutez le script de commentaires d’ancrage en le recherchant et en le sélectionnant une fois qu’il apparaît. 
 
 ![module2chapter3step8im](images/module2chapter3step8im.PNG)
 
-9. Faites glisser l’objet de texte « feedbackPanel » à partir de la hiérarchie ASA_Feedback dans l’emplacement vide sous le script comme indiqué dans l’image ci-dessous. 
-   
+9. Faites glisser l’objet de texte «feedbackPanel» de la hiérarchie ASA_Feedback vers l’emplacement vide sous le script, comme indiqué dans l’image ci-dessous. 
 
 ![module2chapter3step9im](images/module2chapter3step9im.PNG)
 
-   
-
 ## <a name="congratulations"></a>Félicitations
 
-Dans cette leçon, nous avons appris à créer un panneau de l’interface utilisateur pour afficher l’état actuel de l’expérience d’ancrage Spatial Azure pour fournir l’utilisateur avec des commentaires en temps réel.
+Dans cette leçon, nous avons appris à créer un panneau d’interface utilisateur pour afficher l’état actuel de l’expérience d’ancrage spatial Azure pour fournir à l’utilisateur des commentaires en temps réel.
 
 
