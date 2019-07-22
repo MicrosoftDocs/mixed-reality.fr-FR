@@ -939,7 +939,7 @@ Pour créer la balise :
 
 Tous les éléments nécessaires pour la section Unity de ce projet sont maintenant terminée, il est temps de générer à partir de Unity.
 
-1.  Accédez à *les paramètres de génération* (**fichier* > *Build paramètres**).
+1.  Accédez à *les paramètres de génération* (**fichier* >* Build paramètres**).
 
     ![](images/AzureLabs-Lab311-33.png)
 
