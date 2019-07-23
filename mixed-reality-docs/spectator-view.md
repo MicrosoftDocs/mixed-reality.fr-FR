@@ -6,12 +6,12 @@ ms.author: chriba
 ms.date: 02/11/2019
 ms.topic: article
 keywords: Vue spectateur, iPhone, iOS, iPad, OpenCV, Camera, ARKit, HoloLens, realer, MixedRealityToolkit, Demo, record
-ms.openlocfilehash: 02088d7b218a25c72f2eb98ae24c85a90e6e5b86
-ms.sourcegitcommit: 611af6ff7a2412abad80c0c7d4decfc0c3a0e8c8
+ms.openlocfilehash: 135a566456f1000669d2033edcf0d0b4649ccdf3
+ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68293607"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68387667"
 ---
 # <a name="spectator-view-for-hololens-and-hololens-2"></a>Vue spectateur pour HoloLens et HoloLens 2
 
@@ -20,7 +20,7 @@ ms.locfileid: "68293607"
 ## <a name="overview"></a>Vue d'ensemble
 
 Lors de l’ajout d’un HoloLens, nous oublions souvent qu’une personne qui ne l’a pas n’est pas en mesure de découvrir les merveilles que nous pouvons. La vue spectateur permet à d’autres utilisateurs de voir sur un écran 2D ce qu’un utilisateur HoloLens voit dans son monde.
-La vue spectateur offre une approche rapide et abordable pour l’enregistrement d’hologrammes en HD avec des appareils mobiles. Il offre également un enregistrement de qualité professionnelle des hologrammes avec les caméras DSLR.
+La vue spectateur offre une approche rapide et abordable pour l’enregistrement d’hologrammes en HD avec des appareils mobiles. Il offre également un enregistrement de qualité professionnelle des hologrammes avec les caméras vidéo.
 
 ## <a name="key-resources"></a>Ressources clés
 
@@ -28,7 +28,7 @@ La vue spectateur offre une approche rapide et abordable pour l’enregistrement
 * [**SOA**](https://github.com/microsoft/MixedReality-SpectatorView/blob/master/doc/SpectatorView.Architecture.md)
 * [**Extraits**](https://github.com/microsoft/MixedReality-SpectatorView/tree/master/samples)
 * [**Instructions d’installation de mobile**](https://github.com/microsoft/MixedReality-SpectatorView/blob/master/doc/SpectatorView.Setup.md)
-* [**Instructions d’installation de DSLR**](https://github.com/microsoft/MixedReality-SpectatorView/blob/master/doc/SpectatorView.Setup.DSLR.md)
+* [**Instructions d’installation de la caméra vidéo**](https://github.com/microsoft/MixedReality-SpectatorView/blob/master/doc/SpectatorView.Setup.VideoCamera.md)
 
 ## <a name="use-cases"></a>Cas d’usage
 * Vous pouvez enregistrer une expérience de réalité mixte à l’aide d’un appareil iPhone ou Android. Enregistrez en HD entièrement et appliquez l’anticrénelage aux hologrammes et même aux ombres. Il s’agit d’un moyen économique et rapide de capturer la vidéo des hologrammes.
@@ -48,15 +48,15 @@ Partager la feuille pour pouvoir enregistrer la vidéo, la envoyer par courrier 
 
 Le tableau suivant présente différentes fonctionnalités de vue de spectateur et leurs fonctionnalités. Choisissez l’option qui correspond le mieux à vos besoins d’enregistrement vidéo:
 
-|                                      | Mobile                  |                    Appareil photo DSLR              |
+|                                      | Mobile                  |                    Caméra vidéo              |
 |--------------------------------------|:-----------------------:|:-------------------------------------------:|
-| Qualité HD                           |         Full HD         |        Filming de qualité professionnelle (tel que déterminé par DSLR)      |
+| Qualité HD                           |         Full HD         |        Filming de qualité professionnelle (tel que déterminé par la caméra vidéo)      |
 | Mouvement facile de l’appareil photo                 |            ✔            |                      ✔                      |
 | Vue de la troisième personne                    |            ✔            |                      ✔                      |
 | Peut être diffusé en continu vers des écrans           |            ✔            |                      ✔                      |
 | Portatif                             |            ✔            |                                             |
 | Sans fil                             |            ✔            |                                             |
-| Matériel supplémentaire requis         |     Téléphone Android, iPhone    | HoloLens + plate-forme + trépied + DSLR + PC + Unity |
+| Matériel supplémentaire requis         |     Téléphone Android, iPhone    | HoloLens + plate-forme + trépied + caméra vidéo + PC + Unity |
 | Investissement matériel                  |           Faible            |                     Élevé                    |
 | Système multiplateforme                       |           Android, iOS   |                                             |
 | Contenu synchronisé                 |            ✔            |                      ✔                      |
