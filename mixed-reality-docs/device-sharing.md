@@ -1,6 +1,6 @@
-# <a name="device-sharing"></a>Partage de périphériques
+# <a name="device-sharing"></a>Partage d’appareils
 
 
 # <a name="session-sharing"></a>Partage de session
 
-APPAREIL Hololens 2 peut être partagé entre les personnes, sans besoin de chaque personne accéder via le programme d’installation de l’appareil et créer un compte. Plusieurs personnes peuvent partager un appareil Hololens 2 et, pour des raisons pratiques, utilisez le même compte pour vous connecter. Lorsqu’un utilisateur partage l’appareil (par l’intermédiaire de son ouverture de session) avec un autre utilisateur, le périphérique invite au nouvel utilisateur étalonner rapidement et de personnaliser l’affichage. Cet étalonnage peut être alors stocké sur l’appareil s’ajuste automatiquement pour la qualité et de confort à l’avenir, en évitant le réétalonnage. Il est sans modification du compte entre les utilisateurs dans ce cas. 
+L’appareil Hololens 2 peut être partagé entre les personnes, sans qu’il soit nécessaire que chaque personne parcoure le programme d’installation de l’appareil et crée un compte. Plusieurs personnes peuvent partager un appareil Hololens 2 et, pour des raisons pratiques, utiliser le même compte pour se connecter. Lorsqu’un utilisateur partage l’appareil (par le biais de sa session de connexion) avec un autre utilisateur, ce dernier invite le nouvel utilisateur à étalonner et à personnaliser rapidement l’expérience d’affichage. Cet étalonnage peut ensuite être stocké sur l’appareil pour ajuster automatiquement la qualité et l’expérience de visualisation à l’avenir, ce qui évite le réétalonnage. Il n’y a pas de changement de compte entre les utilisateurs dans ce cas. 

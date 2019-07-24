@@ -1,80 +1,80 @@
 ---
 title: Notes de publication-août 2016
-description: HoloLens les notes de version pour les 10 anniversaire de publication de Windows (automne 2016)
+description: Notes de publication HoloLens pour la version anniversaire de Windows 10 (automne 2016)
 author: mattzmsft
 ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
-keywords: HoloLens, release notes, système d’exploitation, plate-forme, fonctionnalités, suite commerciale
+keywords: HoloLens, notes de publication, système d’exploitation, plateforme, fonctionnalités, suite commerciale
 ms.openlocfilehash: 2fde8665f3572589abd3dcdfb3747ca487b66afb
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59596358"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63524288"
 ---
 # <a name="release-notes---august-2016"></a>Notes de publication-août 2016
 
-L’équipe HoloLens est écouté les développeurs dans le programme Insider de Windows pour hiérarchiser son travail. Continuez à [envoyez-nous vos commentaires](give-us-feedback.md) via le Hub de commentaires, la [forums de développeurs](https://forums.hololens.com) et [Twitter via @HoloLens ](https://twitter.com/hololens). Comme Windows 10 intègre que la mise à jour anniversaire, l’équipe de HoloLens est heureux de vous fournir améliore davantage l’expérience HOLOGRAPHIQUE. Dans cette mise à jour, nous nous sommes concentrés sur les principaux correctifs, améliorations et présentation des fonctionnalités demandées par les entreprises et disponible dans la Suite de commerciaux Microsoft HoloLens.
+L’équipe HoloLens écoute les commentaires des développeurs du programme Windows Insider pour hiérarchiser notre travail. Continuez à [nous faire part de vos commentaires](give-us-feedback.md) via le hub de commentaires, les [Forums des développeurs](https://forums.hololens.com) et [Twitter via @HoloLens ](https://twitter.com/hololens). Étant donné que Windows 10 adopte la mise à jour anniversaire, l’équipe HoloLens est ravie de fournir davantage d’améliorations à l’expérience holographique. Dans cette mise à jour, nous nous sommes concentrés sur les principaux correctifs, les améliorations et l’introduction des fonctionnalités demandées par les entreprises et disponibles dans la suite commerciale Microsoft HoloLens.
 
-**Version la plus récente :** Mise à jour de Windows HOLOGRAPHIQUE août 2016 (**10.0.14393.0**, version d’anniversaire Windows 10)
+**Dernière version:** Mise à jour 2016 de Windows holographique août (**10.0.14393.0**, version anniversaire Windows 10)
 
 >[!VIDEO https://www.youtube.com/embed/tNd0e2CiAkE]
 
-Pour [mise à jour vers la version actuelle](updating-hololens.md), ouvrez le *paramètres* application, accédez à *mise à jour & sécurité*, puis sélectionnez le *vérifier les mises à jour* bouton.
+Pour effectuer une [mise à jour vers la version actuelle](updating-hololens.md), ouvrez l’application *paramètres* , accédez à *mettre à jour & sécurité*, puis sélectionnez le bouton *Rechercher les mises à jour* .
 
 ## <a name="new-features"></a>Nouvelles fonctionnalités
 
-**Attacher au débogage d’un processus** HoloLens prend désormais en charge le débogage de l’attacher au processus. Vous pouvez utiliser Visual Studio 2015 Update 3 pour se connecter à une application en cours d’exécution sur un HoloLens et [commencer à le déboguer](using-visual-studio.md#debugging-an-installed-or-running-app). Cela fonctionne sans avoir à déployer à partir d’un projet Visual Studio.
+**Attacher au débogage de processus** HoloLens prend désormais en charge le débogage d’attachement-à-processus. Vous pouvez utiliser Visual Studio 2015 Update 3 pour vous connecter à une application en cours d’exécution sur un HoloLens et [Démarrer le débogage](using-visual-studio.md#debugging-an-installed-or-running-app). Cela fonctionne sans qu’il soit nécessaire de procéder au déploiement à partir d’un projet Visual Studio.
 
-**Mise à jour de HoloLens émulateur** nous avons également publié une version mise à jour de l’émulateur HoloLens.
+**Émulateur HoloLens mis à jour** Nous avons également publié une version mise à jour de l’émulateur HoloLens.
 
-**Prise en charge de Gamepad** vous pouvez maintenant associer et utiliser des boîtiers de commande Bluetooth avec HoloLens ! Le qui vient d’être publiées Xbox sans fil contrôleur propose les fonctionnalités Bluetooth et peut être utilisé pour lire vos applications et jeux prenant en charge gamepad favoris. Un [mise à jour du contrôleur](http://support.xbox.com/xbox-one/accessories/update-controller-for-stereo-headset-adapter) doivent être appliquées avant de pouvoir connecter le S de contrôleur sans fil Xbox avec HoloLens. Les opérations de mappage contrôleur Xbox sans fil est pris en charge par [XInput](https://msdn.microsoft.com/library/windows/desktop/hh405053(v=vs.85).aspx) et [Windows.Gaming.Input](https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.aspx) API. Les modèles supplémentaires de contrôleurs de Bluetooth est accessible via la [Windows.Gaming.Input](https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.aspx) API.
+**Prise en charge du boîtier de manette** Vous pouvez maintenant coupler et utiliser des manette Bluetooth avec HoloLens! La nouvelle version du contrôleur Xbox Wireless S offre des fonctionnalités Bluetooth et peut être utilisée pour jouer à vos jeux et applications préférés. Une [mise à jour du contrôleur](http://support.xbox.com/xbox-one/accessories/update-controller-for-stereo-headset-adapter) doit être appliquée avant de pouvoir connecter les contrôleurs Xbox Wireless S avec HoloLens. Le contrôleur Xbox Wireless S est pris en charge par les API [XInput](https://msdn.microsoft.com/library/windows/desktop/hh405053(v=vs.85).aspx) et [Windows. Gaming. Input](https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.aspx) . Il est possible d’accéder à d’autres modèles de contrôleurs Bluetooth via l’API [Windows. Gaming. Input](https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.aspx) .
 
 ## <a name="improvements-and-fixes"></a>Améliorations et correctifs
 
-Nous sont synchronisées avec le reste de la mise à jour anniversaire Windows 10, donc en plus des correctifs spécifiques Hololens, vous recevez également tous les bienfaits à partir de la mise à jour de Windows pour augmenter les performances et la fiabilité de la plateforme. Vos commentaires sont hautement valued et par ordre de priorité pour les corrections apportées à la version.
+Nous sommes synchronisés avec le reste de la mise à jour anniversaire Windows 10. par conséquent, en plus des correctifs spécifiques à Hololens, vous bénéficiez également de tous les avantages de Windows Update pour améliorer la fiabilité et les performances de la plateforme. Vos commentaires sont très appréciés et classés par ordre de priorité pour les correctifs de la version.
 
-Nous avons amélioré les expériences suivantes :
-* Ouvrez une session dans les expériences.
-* jonction d’espace.
-* l’efficacité des transitions d’état de périphérique d’alimentation de l’alimentation.
-* stabilité avec la capture de réalité mixte.
-* fiabilité pour la connectivité Bluetooth
-* persistance hologramme dans un scénario d’application multiples.
+Nous avons amélioré les expériences suivantes:
+* Connectez-vous à l’expérience.
+* jonction d’espace de travail.
+* efficacité énergétique des transitions d’état d’alimentation des appareils.
+* stabilité avec les captures de la réalité mixte.
+* fiabilité de la connectivité Bluetooth
+* persistance des hologrammes dans un scénario à plusieurs applications.
 
-Nous avons résolu les problèmes suivants :
-* les profileurs Visual Studio et le débogueur graphics pas pouvoir se connecter.
-* photos et documents ne s’affichent pas dans l’Explorateur de fichiers dans le portail de l’appareil.
-* la barre des applications peut clignoter lorsque le curseur est placé au-dessus de lui en mode de réglage.
-* En mode de réglage, l’yeux regards point curseur se transforme le curseur en flèche de 4 dans quelques instants plus lentement.
-* « Hey Cortana écouter de la musique » ne lance pas de Groove.
-* après la mise à jour précédente, indiquant que « Go Home » n’affiche pas le panneau de codes confidentiels correctement.
+Nous avons résolu les problèmes suivants:
+* les profileurs Visual Studio et le débogueur graphique ne parviennent pas à se connecter.
+* les photos & documents ne sont pas affichés dans l’Explorateur de fichiers dans le portail de l’appareil.
+* la barre d’application peut clignoter lorsque le curseur est placé au-dessus de lui en mode ajuster.
+* En mode d’ajustement, le curseur en forme de point de regard de l’œil passe au curseur à quatre flèches plus lentement.
+* «Hey Cortana Play Music» ne lance pas Groove.
+* après la mise à jour précédente, la section «Go à l’origine» n’affiche pas correctement le panneau pin.
 
-## <a name="introducing-microsoft-hololens-commercial-suite"></a>Présentation de la Suite du Commercial de Microsoft HoloLens
+## <a name="introducing-microsoft-hololens-commercial-suite"></a>Présentation de Microsoft HoloLens commercial suite
 
-Microsoft HoloLens Commercial Suite est prête pour le déploiement de l’entreprise. Nous avons ajouté plusieurs demandés [fonctionnalités commerciales](commercial-features.md) à partir de nos partenaires commerciaux anticipée.
+Microsoft HoloLens commercial suite est prêt pour le déploiement d’entreprise. Nous avons ajouté plusieurs [fonctionnalités commerciales](commercial-features.md) très demandées auprès de nos premiers partenaires commerciaux.
 
-Veuillez contacter votre responsable de compte Microsoft pour acheter Microsoft HoloLens Commercial Suite.
+Veuillez contacter votre gestionnaire de compte Microsoft local pour acheter la suite commerciale Microsoft HoloLens.
 
-### <a name="key-commercial-features"></a>Fonctionnalités commerciales clées 
+### <a name="key-commercial-features"></a>Principales fonctionnalités commerciales 
 
-* **Mode plein écran.** Avec le mode plein écran HoloLens, vous pouvez limiter les applications à exécuter pour permettre des expériences de démonstration ou de présentation.<br>
-  ![Avec le mode plein écran, HoloLens lance directement dans l’application de votre choix.](images/201608-kioskmode-400px.png)
+* **Mode plein écran.** Avec le mode plein écran HoloLens, vous pouvez limiter les applications à exécuter pour activer les expériences de démonstration ou de démonstration.<br>
+  ![Avec le mode plein écran, HoloLens démarre directement dans l’application de votre choix.](images/201608-kioskmode-400px.png)
 * **Gestion des appareils mobiles (MDM) pour HoloLens.** Votre service informatique peut gérer plusieurs appareils HoloLens simultanément à l’aide de solutions telles que Microsoft Intune. Vous serez en mesure de gérer les paramètres, de sélectionner les applications à installer et de définir les configurations de sécurité adaptées aux besoins de votre entreprise.<br>
-  ![Gestion des appareils mobiles sur HoloLens fournit la gestion des appareils grade enterprise sur plusieurs appareils.](images/201608-enterprisemanagement-400px.png)
-* **Mise à jour de Windows pour les entreprises.** Contrôler les mises à jour du système d’exploitation sur des appareils et de prise en charge pour long-term servicing branch.
-* **Sécurité des données.** Le chiffrement de données BitLocker est activé sur HoloLens pour fournir le même niveau de protection de sécurité comme tout autre périphérique de Windows.
-* **Accès Professionnel.** Toute personne de votre organisation peut se connecter à distance au réseau d’entreprise via un réseau privé virtuel sur un HoloLens. HoloLens peut accéder également à des réseaux Wi-Fi qui nécessitent des informations d’identification.
-* **Microsoft Store pour entreprises.** Votre service informatique peut également configurer un magasin privé d’entreprise, contenant uniquement des applications de votre entreprise pour votre utilisation de HoloLens spécifiques. Distribuer en toute sécurité vos logiciels d’entreprise à un groupe sélectionné d’utilisateurs en entreprise.
+  ![La gestion des appareils mobiles sur HoloLens fournit une gestion des appareils de niveau entreprise sur plusieurs appareils.](images/201608-enterprisemanagement-400px.png)
+* **Windows Update pour les entreprises.** Mises à jour contrôlées du système d’exploitation sur les appareils et prise en charge de la branche de maintenance à long terme.
+* **Sécurité des données.** BitLocker Data Encryption est activé sur HoloLens pour fournir le même niveau de protection de sécurité qu’un autre appareil Windows.
+* **Accès professionnel.** Toute personne de votre organisation peut se connecter à distance au réseau d’entreprise via un réseau privé virtuel sur un HoloLens. HoloLens peut également accéder aux réseaux Wi-Fi qui requièrent des informations d’identification.
+* **Microsoft Store pour les entreprises.** Votre service informatique peut également configurer un magasin privé d’entreprise, contenant uniquement les applications de votre entreprise pour votre utilisation HoloLens spécifique. Distribuez en toute sécurité vos logiciels d’entreprise au groupe sélectionné d’utilisateurs d’entreprise.
 
-### <a name="development-edition-vs-commercial-suite"></a>Édition de développement Visual Studio. Commercial Suite
+### <a name="development-edition-vs-commercial-suite"></a>Édition Development et Suite commerciale
 
 <table>
 <tr>
-<th>Fonctionnalités</th><th>Development Edition</th><th>Commercial Suite</th>
+<th>Fonctionnalités</th><th>Édition Development</th><th>Suite commerciale</th>
 </tr><tr>
-<td>Chiffrement (Bitlocker) de l’appareil</td><td></td><td style="text-align: center;">✔️</td>
+<td>Chiffrement de l’appareil (BitLocker)</td><td></td><td style="text-align: center;">✔️</td>
 </tr><tr>
 <td>Réseau privé virtuel (VPN)</td><td></td><td style="text-align: center;">✔️</td>
 </tr><tr>
@@ -86,38 +86,38 @@ Veuillez contacter votre responsable de compte Microsoft pour acheter Microsoft 
 </tr><tr>
 <td>Possibilité de bloquer l’annulation de l’inscription</td><td></td><td style="text-align: center;">✔️</td>
 </tr><tr>
-<td>Certificat en fonction d’accès Wi-Fi d’entreprise</td><td></td><td style="text-align: center;">✔️</td>
+<td>Accès Wi-Fi d’entreprise basé sur un certificat</td><td></td><td style="text-align: center;">✔️</td>
 </tr><tr>
-<td>Microsoft Store (consommateur)</td><td style="text-align: center;">Consommateur</td><td style="text-align: center;">Filtrage par le biais de gestion des appareils mobiles</td>
+<td>Microsoft Store (consommateur)</td><td style="text-align: center;">Télévision</td><td style="text-align: center;">Filtrage via MDM</td>
 </tr><tr>
-<td><a href="https://technet.microsoft.com/itpro/windows/manage/working-with-line-of-business-apps">Portail d’entreprise Store</a></td><td></td><td style="text-align: center;">✔️</td>
+<td><a href="https://technet.microsoft.com/itpro/windows/manage/working-with-line-of-business-apps">Portail Business Store</a></td><td></td><td style="text-align: center;">✔️</td>
 </tr><tr>
 <th colspan="3" style="text-align: left;"> Sécurité et identité</th>
 </tr><tr>
-<td>Connexion avec Azure Active Directory (AAD)</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
+<td>Se connecter avec Azure Active Directory (AAD)</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
 </tr><tr>
-<td>Connectez-vous avec le compte Microsoft (MSA)</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
+<td>Se connecter avec un compte Microsoft (MSA)</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
 </tr><tr>
-<td>Déverrouiller des informations d’identification de prochaine génération avec code PIN</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
+<td>Informations d’identification de prochaine génération avec déverrouillage du code confidentiel</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
 </tr><tr>
 <td><a href="https://msdn.microsoft.com/windows/hardware/commercialize/manufacture/desktop/secure-boot-overview">Démarrage sécurisé</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
 </tr><tr>
-<th colspan="3" style="text-align: left;"> Prise en charge et de maintenance</th>
+<th colspan="3" style="text-align: left;"> Maintenance et support</th>
 </tr><tr>
-<td>Système automatique des mises à jour dès leur arrivée</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
+<td>Mises à jour automatiques du système au fur et à mesure de leur arrivée</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
 </tr><tr>
-<td><a href="https://technet.microsoft.com/itpro/windows/plan/windows-update-for-business">Mise à jour de Windows pour les entreprises</a></td><td></td><td style="text-align: center;">✔️</td>
+<td><a href="https://technet.microsoft.com/itpro/windows/plan/windows-update-for-business">Windows Update pour les entreprises</a></td><td></td><td style="text-align: center;">✔️</td>
 </tr><tr>
 <td>Branche de maintenance à long terme</td><td></td><td style="text-align: center;">✔️</td>
 </tr>
 </table>
 
-## <a name="prior-release-notes"></a>Notes de version antérieure
-* [Notes de publication-mai 2016](release-notes-may-2016.md)
-* [Notes de publication-mars 2016](release-notes-march-2016.md)
+## <a name="prior-release-notes"></a>Notes de publication antérieures
+* [Notes de publication - Mai 2016](release-notes-may-2016.md)
+* [Notes de publication - Mars 2016](release-notes-march-2016.md)
 
 ## <a name="see-also"></a>Voir aussi
-* [Problèmes connus de HoloLens](hololens-known-issues.md)
+* [Problèmes connus concernant HoloLens](hololens-known-issues.md)
 * [Fonctionnalités commerciales](commercial-features.md)
 * [Installer les outils](install-the-tools.md)
 * [Utilisation de l’émulateur HoloLens](using-the-hololens-emulator.md)

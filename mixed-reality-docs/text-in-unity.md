@@ -1,11 +1,11 @@
 ---
 title: Texte dans Unity
-description: 'Pour afficher du texte dans Unity, il existe deux types de composants de texte que vous pouvez utiliser : texte d’interface utilisateur et le maillage de texte 3D.'
+description: 'Pour afficher du texte dans Unity, il existe deux types de composants de texte que vous pouvez utiliser: le texte de l’interface utilisateur et le maillage de texte 3D.'
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 06/03/2019
 ms.topic: article
-keywords: Windows Mixed Reality, conception, des contrôles, police, typographie, l’interface utilisateur, l’expérience utilisateur
+keywords: Windows Mixed Reality, conception, contrôles, police, typographie, UI, UX
 ms.openlocfilehash: f57b04c7d57219b7426793879004ef010d2b1ea8
 ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
@@ -15,89 +15,89 @@ ms.locfileid: "67415438"
 ---
 # <a name="text-in-unity"></a>Texte dans Unity
 
-Texte est un des composants plus importants dans les applications HOLOGRAPHIQUE. Pour afficher du texte dans Unity, il existe trois types de composants de texte que vous pouvez utiliser : texte d’interface utilisateur, le maillage de texte 3D et texte de maillage Pro. Par défaut de textes d’interface utilisateur et de maillage de texte 3D floues et sont trop volumineux. Vous devez modifier quelques variables pour obtenir sharp, qualité de texte qui a une taille gérable dans HoloLens. En appliquant un facteur d’échelle pour obtenir des dimensions correctes lorsque vous utilisez le texte de l’interface utilisateur et les composants de texte de maillage 3D, vous pouvez obtenir une meilleure qualité de rendu.
+Le texte est l’un des composants les plus importants des applications holographiques. Pour afficher du texte dans Unity, il existe trois types de composants de texte que vous pouvez utiliser: texte de l’interface utilisateur, maillage de texte 3D et maillage Pro. Par défaut, le texte de l’interface utilisateur et le maillage de texte 3D apparaissent flous et sont trop grands. Vous devez ajuster quelques variables pour obtenir un texte clair et de haute qualité qui a une taille gérable dans HoloLens. En appliquant le facteur d’échelle pour obtenir des dimensions appropriées lorsque vous utilisez les composants texte de l’interface utilisateur et maillage de texte 3D, vous pouvez obtenir une meilleure qualité de rendu.
 
-![Comment obtenir le texte sharp et magnifiques](images/hug-text-02-640px.png)<br>
-*Texte par défaut floue dans Unity*
+![Comment faire du texte clair et merveilleux](images/hug-text-02-640px.png)<br>
+*Texte par défaut flou dans Unity*
 
-## <a name="working-with-unitys-3d-texttext-mesh-and-ui-text"></a>Utilisation de texte 3D (maillage de texte) et le texte de l’interface utilisateur d’Unity
+## <a name="working-with-unitys-3d-texttext-mesh-and-ui-text"></a>Utilisation du texte 3D de Unity (maillage de texte) et du texte de l’interface utilisateur
 
-Unity suppose que tous les nouveaux éléments ajoutés à une scène sont 1 unité de Unity dans la taille ou d’échelle de transformation de 100 %, ce qui se traduit par environ 1 mètre sur HoloLens. Dans le cas des polices, la zone englobante pour un TextMesh 3D est fourni par défaut à environ 1 mètre en hauteur.
+Unity part du principe que tous les nouveaux éléments ajoutés à une scène sont d’une taille de 1 unité Unity, ou de l’échelle de transformation 100%, qui se traduit par environ 1 mètre sur HoloLens. Dans le cas des polices, le cadre englobant d’un TextMesh 3D est fourni par défaut à environ 1 mètre en hauteur.
 
 ![Utilisation des polices dans Unity](images/640px-hug-text-03.png)<br>
-*Par défaut Unity 3D Text (texte de maillage) occupe 1 unité de Unity qui est de 1 mètre*
+*Le texte 3D Unity par défaut (maillage de texte) occupe 1 unité Unity qui est 1 mètre*
 
 <br>
-La plupart des concepteurs visuels utilisent des points pour définir des tailles de police dans le monde réel. Il existe environ 2835 (2,834.645666399962) points dans 1 mètre. En fonction de la conversion point système 1 mètre et par défaut de maillage texte taille de police 13 d’Unity, les mathématiques simples de 13 divisé par 2835 equals 0.0046 (0.004586111116 pour être exact) fournit une bonne évolutivité standard pour commencer (Certains voudraient arrondir à 0,005). Mise à l’échelle de l’élément textuel ou le conteneur à ces valeurs offrira non seulement pour la conversion de 1:1 de police tailles dans un programme de conception, mais fournit également une norme afin de maintenir la cohérence tout au long de votre expérience.
+La plupart des concepteurs visuels utilisent des points pour définir les tailles de police dans le monde réel. Il y a environ 2835 (2 834.645666399962) points dans 1 mètre. En fonction de la conversion du système de point à 1 mètre et de la taille de police de la maille du texte par défaut de l’unité de mesure 13, la simple mathématique de 13 divisée par 2835 est égale à 0,0046 (0.004586111116 0,005). La mise à l’échelle de l’objet ou du conteneur de texte à ces valeurs n’autorise pas seulement la conversion de 1:1 de tailles de police dans un programme de conception, mais fournit également une norme pour vous permettre de maintenir la cohérence tout au long de votre expérience.
 
-![Unity 3D texte de maillage avec des tailles de police](images/Text_In_Unity_Measurements1.png)<br>
-*Mise à l’échelle de valeurs pour le texte 3D Unity et le texte de l’interface utilisateur*
+![Maillage de texte 3D Unity avec différentes tailles de police](images/Text_In_Unity_Measurements1.png)<br>
+*Mise à l’échelle des valeurs pour le texte 3D Unity et texte de l’interface utilisateur*
 
-![Unity 3D texte de maillage avec des tailles de police](images/hug-text-05-1000px.png)<br>
-*Unity 3D texte de maillage avec des valeurs optimisés*
+![Maillage de texte 3D Unity avec différentes tailles de police](images/hug-text-05-1000px.png)<br>
+*Maillage de texte 3D Unity avec des valeurs optimisées*
 
 <br>
-Lorsque vous ajoutez un élément de texte en fonction de l’interface utilisateur ou de la zone de dessin à une scène, les différences de taille est toujours supérieure. Les différences dans les deux tailles est environ 1000 %, ce qui pourrait apporter le facteur d’échelle pour l’interface utilisateur en fonction des composants de texte à 0.00046 (0.0004586111116 pour être exact) ou 0,0005 pour la valeur arrondie.
+Quand vous ajoutez un élément de texte basé sur une interface utilisateur ou un canevas à une scène, la disparité de taille est encore plus importante. Les différences entre les deux tailles sont d’environ 1000%, ce qui fait passer le facteur d’échelle pour les composants de texte basés sur l’interface utilisateur à 0,00046 (0.0004586111116 est exact) ou 0,0005 pour la valeur arrondie.
 
-![Texte de l’interface utilisateur de Unity avec différents pixels dynamiques par les valeurs d’unité](images/hug-text-04-1000px.png)<br>
-*Texte de l’interface utilisateur de Unity avec valeurs optimisées*
+![Texte de l’interface utilisateur Unity avec différents pixels dynamiques par valeur unitaire](images/hug-text-04-1000px.png)<br>
+*Texte de l’interface utilisateur Unity avec des valeurs optimisées*
 
 <br>
 
 >[!NOTE]
->La valeur par défaut de toutes les polices peut-être être affectée par la taille de texture de cette police ou la façon dont la police a été importée dans Unity. Ces tests ont été effectuées en fonction de la police Arial par défaut dans Unity, ainsi que d’une autre police importée.
+>La valeur par défaut de toute police peut être affectée par la taille de la texture de cette police ou la manière dont la police a été importée dans Unity. Ces tests ont été exécutés en fonction de la police Arial par défaut dans Unity, ainsi que d’une autre police importée.
 
-## <a name="working-with-text-mesh-pro"></a>Utilisation de texte de maillage Pro
+## <a name="working-with-text-mesh-pro"></a>Utilisation de Text Mesh Pro
 
-Avec texte de maillage Pro du Unity, vous pouvez sécuriser la qualité de rendu de texte. Il prend en charge le contour du texte clair, quel que soit la distance à l’aide de la [SDF (champ de Distance Signed)](https://steamcdn-a.akamaihd.net/apps/valve/2007/SIGGRAPH2007_AlphaTestedMagnification.pdf) technique. À l’aide de la même méthode de calcul que nous avons utilisé ci-dessus pour le maillage de texte 3D et le texte de l’interface utilisateur, nous pouvons trouver les valeurs de mise à l’échelle appropriées à utiliser le Point typographique conventionnel. Étant donné que la police de texte de maillage Pro 3D par défaut avec la taille de 36 montre le cadre englobant de 2,5 Unit(2.5m) Unity, nous pouvons utiliser la valeur mise à l’échelle 0,005 pour utiliser la taille de Point. Le texte de maillage Pro sous le menu de l’interface utilisateur a la valeur par défaut englobant la taille de 25 Unit(25m) Unity. Cela nous donne 0,0005 pour la valeur mise à l’échelle.
+Avec le texte de la maille Pro de Unity, vous pouvez sécuriser la qualité de rendu du texte. Elle prend en charge la structure du texte clair indépendamment de la distance à l’aide de la technique [SDF (champ à distance signée)](https://steamcdn-a.akamaihd.net/apps/valve/2007/SIGGRAPH2007_AlphaTestedMagnification.pdf) . À l’aide de la méthode de calcul que nous avons utilisée ci-dessus pour le texte 3D et le texte de l’interface utilisateur, nous pouvons trouver des valeurs de mise à l’échelle appropriées pour utiliser le point typographique conventionnel. Étant donné que la police par défaut de la maille Pro de texte 3D avec la taille 36 indique la limite de 2,5 unité Unity (2,5 millions), nous pouvons utiliser la valeur de mise à l’échelle 0,005 pour utiliser la taille de point. La taille de la limite par défaut de 25 unités Unity (25m) est définie dans le maillage de texte Pro du menu de l’interface utilisateur. Cela nous donne 0,0005 pour la valeur de mise à l’échelle.
 
-![Unity 3D texte de maillage avec des tailles de police](images/Text_In_Unity_Measurements2.png)<br>
-*Mise à l’échelle de valeurs pour le texte 3D Unity et le texte de l’interface utilisateur*
+![Maillage de texte 3D Unity avec différentes tailles de police](images/Text_In_Unity_Measurements2.png)<br>
+*Mise à l’échelle des valeurs pour le texte 3D Unity et texte de l’interface utilisateur*
 
-## <a name="recommended-text-size"></a>Taille du texte recommandée
-Comme vous pouvez l’imaginer, les tailles de type que nous utilisons sur un PC ou une tablette (en général entre 12 – 32 points) Examinez relativement petites une distance de 2 mètres. Il dépend des caractéristiques de chaque police, mais en général le minimum recommandé affichage angle et la hauteur de police pour une meilleure lisibilité concernent 0.35°-0.4°/12.21-13.97mm selon nos études de recherche utilisateur. Il s’agit 35-40pt avec le facteur d’échelle présentée ci-dessus. 
+## <a name="recommended-text-size"></a>Taille de texte recommandée
+Comme vous pouvez vous y attendre, les tailles de type que nous utilisons sur un PC ou un appareil tablette (généralement entre 12 et 32 points) semblent très petites à une distance de 2 mètres. Elle dépend des caractéristiques de chaque police, mais en général, l’angle de visualisation minimal recommandé et la hauteur de police pour la lisibilité sont autour de 0.35 °-0,4 °/12.21-13.97mm en fonction des études de recherche des utilisateurs. Il s’agit d’environ 35 40pt avec le facteur de mise à l’échelle présenté ci-dessus. 
 
-Pour l’interaction proche à 0.45m(45cm), angle de visualisation de la police lisibles minimale et la hauteur sont 0,4 °-0,5 ° / 3.14 – 3.9 mm. Il s’agit 9-12 pt avec le facteur d’échelle présentée ci-dessus.
+Pour l’approche near interaction à 0.45 m (45cm), l’angle d’affichage de la police à la hauteur minimale et la hauteur sont de 0,4 °-0,5 °/3.14 – 3,9 mm. Elle est d’environ 9 à 12 PT avec le facteur d’échelle présenté ci-dessus.
 
-![NEAR et far plage d’interaction](images/typography-distance-1000px.jpg)
-*plage de contenu à proximité et lointain interaction*
+![Contenu de plage](images/typography-distance-1000px.jpg)
+d’interaction near et Far*dans une plage d’interaction proche et éloignée*
 
-### <a name="the-minimum-legible-font-size"></a>La taille de police lisibles minimale
-| Distance | Angle de visualisation | Hauteur du texte | Taille de police |
+### <a name="the-minimum-legible-font-size"></a>Taille de police minimale lisible
+| distance | Angle d’affichage | Hauteur du texte | Taille de police |
 |---------|---------|---------|---------|
-| 45 centimètres (distance manipulation directe) | 0.4°-0.5° | 3.14 – 3.9 mm | 8.9 – 11.13pt |
-| 2m | 0.35°-0.4° | 12.21 – 13.97 mm | 34.63-39.58pt |
+| 45cm (distance de manipulation directe) | 0,4 °-0,5 ° | 3.14 – 3,9 mm | 8,9 – 11.13 PT |
+| dollars | 0.35 °-0,4 ° | 12.21 – 13.97 mm | 34.63-39.58 PT |
 
 
-### <a name="the-comfortably-legible-font-size"></a>La taille de police confortablement lisibles
-| Distance | Angle de visualisation | Hauteur du texte | Taille de police |
+### <a name="the-comfortably-legible-font-size"></a>Taille de police lisible
+| distance | Angle d’affichage | Hauteur du texte | Taille de police |
 |---------|---------|---------|---------|
-| 45 centimètres (distance manipulation directe) | 0.65°-0.8° | 5.1-6.3 mm | 14.47-17.8pt |
-| 2m | 0.6°-0.75° | 20,9-26,2 mm | 59.4-74.2pt |
+| 45cm (distance de manipulation directe) | 0,65 °-0,8 ° | 5.1-6.3 mm | 14.47-17.8 PT |
+| dollars | 0,6 °-0,75 ° | 20.9-26.2 mm | 59.4-74.2 PT |
 
-Segoe UI (la police par défaut pour Windows) fonctionne bien dans la plupart des cas. Toutefois, évitez d’utiliser les familles de polices clair light ou semi de petite taille dans la mesure où les traits verticaux minces seront vibration et cela dégradera la lisibilité. Polices modernes avec suffisamment épaisseur du trait fonctionnent bien. Par exemple, Helvetica et Arial rechercher exceptionnelles et sont très lisible en HoloLens avec des poids réguliers ou en gras.
+Segoe UI (police par défaut pour Windows) fonctionne bien dans la plupart des cas. Toutefois, évitez d’utiliser des familles de polices légères ou semi-claires en petite taille, car les traits verticaux fins vibreront et la lisibilité sera dégradée. Les polices modernes avec suffisamment d’épaisseur de trait fonctionnent bien. Par exemple, Helvetica et Arial semblent exceptionnels et sont très lisibles dans HoloLens avec des pondérations standard ou en gras.
 
 
-![Angle d’affichage](images/Text_In_Unity_ViewingAngle.jpg)
-*affichage hauteur distance et angle de texte*
+![Affichage de](images/Text_In_Unity_ViewingAngle.jpg)
+la*distance d’affichage de l’angle, angle et hauteur du texte*
 
-## <a name="sharp-text-rendering-quality-with-proper-dimension"></a>Précise la qualité de rendu de texte avec la dimension appropriée
+## <a name="sharp-text-rendering-quality-with-proper-dimension"></a>Qualité de rendu de texte précise avec une dimension appropriée
 
-En fonction de ces facteurs d’échelle, nous avons créé [prefabs de texte avec le texte de l’interface utilisateur et le maillage de texte 3D](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Prefabs/Text). Les développeurs peuvent utiliser ces prefabs pour obtenir le texte sharp et taille de police cohérente.
+En fonction de ces facteurs de mise à l’échelle, nous avons créé le [texte prefabs avec le texte de l’interface utilisateur et le maillage de texte 3D](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Prefabs/Text). Les développeurs peuvent utiliser ces prefabs pour optimiser le texte et la taille de police.
 
-![Précise la qualité de rendu de texte avec la dimension appropriée](images/hug-text-06-1000px.png)<br>
-*Précise la qualité de rendu de texte avec la dimension appropriée*
+![Qualité de rendu de texte précise avec une dimension appropriée](images/hug-text-06-1000px.png)<br>
+*Qualité de rendu de texte précise avec une dimension appropriée*
 
-## <a name="shader-with-occlusion-support"></a>Nuanceur avec prise en charge de l’occlusion
+## <a name="shader-with-occlusion-support"></a>Nuanceur avec prise en charge d’occlusion
 
-Matériau de police par défaut d’Unity ne prend pas en charge l’occlusion. Pour cette raison, vous verrez le texte situé derrière les objets par défaut. Nous avons inclus une simple [nuanceur qui prend en charge de l’occlusion](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Assets/MixedRealityToolkit/StandardAssets/Shaders/Text3DShader.shader). L’image ci-dessous montre le texte des documents de police par défaut (à gauche) et le texte avec occlusion approprié (à droite).
+La matière de police par défaut d’Unity ne prend pas en charge l’occlusion. Pour cette raison, le texte derrière les objets s’affiche par défaut. Nous avons inclus un nuanceur simple [qui prend en charge l’occlusion](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Assets/MixedRealityToolkit/StandardAssets/Shaders/Text3DShader.shader). L’image ci-dessous montre le texte avec les éléments de police par défaut (à gauche) et le texte avec une occlusion appropriée (à droite).
 
-![Nuanceur avec prise en charge de l’occlusion](images/hug-text-07-1000px.png)<br>
-*Nuanceur avec prise en charge de l’occlusion*
+![Nuanceur avec prise en charge d’occlusion](images/hug-text-07-1000px.png)<br>
+*Nuanceur avec prise en charge d’occlusion*
 
 
 ## <a name="see-also"></a>Voir aussi
-* [Préfabriqué de texte dans le MRTK](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Prefabs/Text)
+* [Texte Prefab dans le MRTK](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Prefabs/Text)
 * [Typographie](typography.md)
 
  

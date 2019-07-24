@@ -1,7 +1,7 @@
-# <a name="mr-dev-days-labs"></a>Jours de développement MR Labs
+# <a name="mr-dev-days-labs"></a>Ateliers de développement MR
 
-## <a name="hololens-2-mr-learning-base-modulehttpsdocsmicrosoftcomen-uswindowsmixed-realitymrlearning-base-ch1"></a>[Module de Base de Learning MR HoloLens 2](https://docs.microsoft.com/en-us/windows/mixed-reality/mrlearning-base-ch1)
-## <a name="azure-kinect-dk-labshttpsgithubcommicrosoftdocsmixed-realitytreedevdaysmixed-reality-docslabssetupmd"></a>[Laboratoires Azure DK Kinect](https://github.com/MicrosoftDocs/mixed-reality/tree/DevDays/mixed-reality-docs/Labs/Setup.md)
+## <a name="hololens-2-mr-learning-base-modulehttpsdocsmicrosoftcomen-uswindowsmixed-realitymrlearning-base-ch1"></a>[Module de base de l’apprentissage HoloLens 2](https://docs.microsoft.com/en-us/windows/mixed-reality/mrlearning-base-ch1)
+## <a name="azure-kinect-dk-labshttpsgithubcommicrosoftdocsmixed-realitytreedevdaysmixed-reality-docslabssetupmd"></a>[Laboratoires Azure Kinect DK](https://github.com/MicrosoftDocs/mixed-reality/tree/DevDays/mixed-reality-docs/Labs/Setup.md)
 ## <a name="azure-computer-visionhttpsdocsmicrosoftcomen-usazurecognitive-servicescomputer-visionvision-api-how-to-topicshowtocallvisionapi"></a>[Vision par ordinateur Azure](https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/vision-api-how-to-topics/howtocallvisionapi)
 ## <a name="azure-face-detectionhttpsdocsmicrosoftcomen-usazurecognitive-servicesfaceface-api-how-to-topicshowtoidentifyfacesinimage"></a>[Détection de visage Azure](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/howtoidentifyfacesinimage)
 ## <a name="azure-custom-vision-servicehttpsdocsmicrosoftcomen-usazurecognitive-servicescustom-vision-servicegetting-started-build-a-classifier"></a>[Service Vision personnalisée Azure](https://docs.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/getting-started-build-a-classifier)

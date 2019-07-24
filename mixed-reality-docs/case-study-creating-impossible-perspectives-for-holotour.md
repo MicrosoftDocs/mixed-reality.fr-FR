@@ -1,95 +1,95 @@
 ---
-title: Étude de cas - création de perspectives impossibles pour HoloTour
-description: Nous voulions vos expériences dans HoloTour pour Microsoft HoloLens être inoubliable. Outre les taquets de tourisme traditionnelle, nous avions décidé out des « perspectives impossibles ».
+title: Étude de cas-création de perspectives impossibles pour HoloTour
+description: Nous souhaitons que vos expériences dans HoloTour pour Microsoft HoloLens soient Unforgettable. En plus des arrêts traditionnels du tourisme, nous avons prévu des «perspectives impossibles».
 author: DannyAskew
 ms.author: daaske
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Windows HoloTour, HoloLens, une réalité mixte
+keywords: HoloTour, HoloLens, Windows Mixed Reality
 ms.openlocfilehash: be00df73543aa295e1e0dbe1462a888d6bb24954
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59594271"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63523593"
 ---
-# <a name="case-study---creating-impossible-perspectives-for-holotour"></a>Étude de cas - création de perspectives impossibles pour HoloTour
+# <a name="case-study---creating-impossible-perspectives-for-holotour"></a>Étude de cas-création de perspectives impossibles pour HoloTour
 
-Nous voulions vos expériences dans HoloTour pour Microsoft HoloLens être inoubliable. Outre les taquets de tourisme traditionnel, nous avions décidé out des « perspectives impossibles » – instants qui seraient impossibles à rencontrer sur n’importe quel visite guidée, mais qui, par le biais de la technologie de HoloLens, nous pouvons mettre directement à votre salon. Création du contenu de ces expériences requis certaines techniques différents à notre processus de capture standard.
+Nous souhaitons que vos expériences dans HoloTour pour Microsoft HoloLens soient Unforgettable. En plus des arrêts traditionnels du tourisme, nous avons prévu des «perspectives impossibles», qui seraient impossibles à expérimenter sur une visite guidée, mais qui, grâce à la technologie de HoloLens, nous pourrions apporter directement votre salon. La création du contenu pour ces expériences nécessitait des techniques différentes par rapport à notre processus de capture standard.
 
-## <a name="the-content-challenge"></a>Le défi de contenu
+## <a name="the-content-challenge"></a>Défi du contenu
 
-Il existe certaines scènes dans l’expérience de HoloTour, telles que l’info-bulle de l’air chaud pour aller au fil du temps modernes Rome et la lutte basée sur le Colosseum dans Rome antique, qui fournissent des vues uniques, vous ne verrez nulle part ailleurs. Ces instants sont censées Motivez et épater vous, ce qui votre voyage à travers de HoloTour plus qu’une expérience de formation. Elles se trouvent les moments que nous voulons à mémoriser et à rester indifférent face informer les autres personnes. Étant donné que nous n’avons pas pu prendre notre plateforme d’appareil photo dans le ciel et nous n’avons pas (encore) maîtrisé voyage, chacun de ces « perspectives impossibles » est appelée pour une approche spéciale à la création de contenu.
+Il y a certaines scènes dans l’expérience HoloTour, telles que la bulle d’air chaud, sur une fête moderne et la lutte gladiatorial au Colosseum à l’ancien Rome, qui fournissent des vues uniques que vous ne voyez nulle part ailleurs. Ces moments sont censés exciter et amAze vous, ce qui vous permet de vous faire passer des HoloTour plus qu’une simple expérience pédagogique. C’est le moment que nous souhaitons vous souvenir et que vous êtes heureux d’en informer d’autres personnes. Étant donné que nous n’avons pas pu faire passer notre caméra dans le ciel et que nous n’avons pas (encore) de temps, chacun de ces «perspectives impossibles» est appelé pour une approche spéciale de la création de contenu.
 
 ## <a name="behind-the-scenes"></a>En arrière-plan
 
-Création de ces instants uniques et des perspectives requis plus que filmer et la modification. Il a fallu énormément de temps, les personnes en situation de nombreuses compétences différentes et un peu de magie de Hollywood.
+La création de ces moments et perspectives uniques nécessitait plus que la simple pelliculeisation et la modification. Il a fallu beaucoup de temps, des personnes ayant de nombreuses compétences différentes et un peu de magie Hollywood.
 
-### <a name="viewing-rome-from-a-hot-air-balloon"></a>Affichage Rome à partir d’une info-bulle de l’air chaud
+### <a name="viewing-rome-from-a-hot-air-balloon"></a>Affichage de Rome à partir d’une bulle d’air chaud
 
-À partir de nos premiers jours de planification, nous savions que nous voulions vues aériennes dans HoloTour. Voir que Rome du ciel vous donne une perspective que la plupart des gens jamais à voir et un sens de points de repère la popularité se trouvent dans l’espace. Essayez de capturer cette nous-mêmes avec notre caméra existante et le microphone plate-forme aurait été extrêmement difficile, mais heureusement, nous n’avons.
+Depuis nos premiers jours de planification, nous savions que nous souhaitions faire des vues aériennes dans HoloTour. La consultation de Rome à partir du ciel vous donne un point de vue que la plupart des gens ne voient jamais et un sens de la localisation spatiale des points de repère populaires. Nous n’avons pas eu à nous faire part de notre caméra existante et de notre plate-forme de microphone.
 
-Tout d’abord, il est important expliquer que tous les emplacements que vous visitez dans HoloTour contiennent le déplacement. Notre objectif était de vous faire « ont l’impression vous y êtes vraiment » et dans la mesure où vous êtes entouré par déplacement où que vous soyez dans la vie réelle, notre destinations virtuelles nécessaire pour transmettre ainsi le déplacement d’ambiant. Par exemple, lorsque vous visitez le Pantheon sur votre trajet, vous verrez des personnes dont y tout au long de la plaza et rassemblées sur les étapes. Le mouvement d’arrière-plan permet de vous rendre à la sensation vous êtes vraiment permanent dans l’emplacement, plutôt que dans un environnement intermédiaire, statique.
+Tout d’abord, il est important d’expliquer que tous les emplacements que vous visitez dans HoloTour y sont déplacés. Notre objectif était de vous faire savoir que vous êtes vraiment là et, étant donné que vous êtes entouré d’un mouvement où que vous soyez en temps réel, nos destinations virtuelles devaient également transmettre des mouvements ambiants. Par exemple, lorsque vous visitez le Pantheon à votre voyage, vous verrez que les gens s’importent dans le Plaza et congregating sur les étapes. Le mouvement d’arrière-plan vous aide à vous sentir à l’aise avec l’emplacement, plutôt que dans un environnement statique intermédiaire.
 
-Pour créer des vues aériennes accrochez-vous info-bulle, nous avons collaboré avec d’autres équipes chez Microsoft pour accéder à une imagerie aérienne panoramique de Rome. La qualité de ces images était une excellente et la vue a été impressionnante, mais lorsque nous avons utilisé les dans les coulisses sans modification, ils ont pensé distorsions par rapport aux autres parties de la visite guidée et l’absence de mouvement était perturbante. 
+Pour créer les vues aériennes pour l’info-bulle, nous avons travaillé avec d’autres équipes chez Microsoft pour obtenir l’accès à l’image panoramique aérienne de Rome. La qualité de ces images était excellente et la vue était remarquable, mais quand nous les avions utilisés dans les coulisses sans modification, elles ont pensé Lifeless par rapport aux autres parties de la visite guidée et l’absence de mouvement s’est dérangée. 
 
 
-![L’air chaud info-bulle du panier d’achat, flotte au-dessus des Rome.](images/hotairballoon1-300px.png)<br>
-*Le panier de bulle air chaud flotte au-dessus des Rome*
+![Le panier d’air chaud, flottant à Rome.](images/hotairballoon1-300px.png)<br>
+*Le panier d’air chaud, flottant à Rome*
 
-Pour garantir que les emplacements aériens remplie de la même barre de qualité en tant que d’autres destinations, nous avons décidé transformer les photographies statiques vivant, déplacement de séquences. La première étape consistait à modifier l’image et le mouvement composite dedans. Nous contractées un artiste effets visuels pour faciliter ceci. Modification a été effectuée pour afficher les clouds dérivantes lentement, oiseaux battant par et un plan occasionnel ou l’hélicoptère parcourant le skyline. Sur le terrain, un nombre de voitures ont été apportée pour piloter les rues. Si vous avez participé à la visite guidée de Rome dans HoloTour, il est peu probable que vous avez explicitement connaissance d’une de ce déplacement. C’est en fait un excellent ! Le mouvement subtil n’est pas destiné à intercepter vos yeux, mais sans ces touches peu, personnes remarqué immédiatement qu’il s’agissait d’une image statique dans la scène.
+Pour vous assurer que les emplacements aériens remplissent la même barre de qualité que les autres destinations, nous avons décidé de transformer les photographies statiques en scènes vivantes et en déplacement. La première étape consistait à modifier l’image et le mouvement composite. Nous avons contracté un artiste des effets visuels pour nous aider. La modification a été apportée pour montrer des clouds dérivent lentement, des oiseaux volants de et un plan occasionnel ou un hélicoptère traversant l’horizon. Au fond, un certain nombre de voitures ont été prises pour conduire les rues. Si vous êtes dans la visite guidée de Rome dans HoloTour, il est peu probable que vous ayez explicitement conscience de l’un de ces mouvements. C’est vraiment parfait! Le mouvement subtil n’est pas destiné à attirer l’attention, mais sans ces petites touches, les gens ont remarqué immédiatement qu’il s’agissait d’une image statique dans la scène.
 
-La deuxième chose que nous l’avons fait a été de vous donner un point de vue à partir de laquelle afficher la scène. Vous ne le sentiment vous y êtes vraiment si apparemment, vous êtes simplement flottante en plein ciel alors, donc nous avons créé un modèle 3D d’une info-bulle et vous placé à l’intérieur. Cela vous permet de parcourir l’info-bulle et de rechercher sur le bord pour obtenir un meilleur point de vue. Nous avons trouvé il s’agit d’une façon naturelle et amusant pour expérimenter l’imagerie aérienne.
+La deuxième chose que nous avons fait vous donne un point de bourré à partir duquel vous pouvez afficher la scène. Vous n’avez pas l’impression que vous y êtes vraiment, s’il semble que vous soyez simplement flottant dans Midair, nous avons donc créé un modèle 3D d’une bulle et vous l’avez placé dans celui-ci. Cela vous permet de vous familiariser avec l’info-bulle et d’examiner le bord pour obtenir un meilleur point de vue. Nous avons trouvé qu’il s’agit d’une façon naturelle et amusante d’expérimenter l’image aérienne.
 
-L’expérience de bulle d’air chaud présenté des défis uniques pour notre équipe audio, comme la logistique nous a empêchés d’avoir des microphones survole des milliers de pieds Rome. Heureusement, nous avions une grande quantité de la capture audio ambiante de partout dans la ville que nous avons pu utiliser au cours de post-production. Nous avons placé les émetteurs audio à leurs emplacements relatifs à partir d’où ils ont été capturés à partir de zéro. L’audio est ensuite filtrée pour son éloigné, comme si vous ont été entendre du point de vue d’une personne équitation dans l’info-bulle de l’air chaud, fournissant une soundscape authentique, directionnel de la scène.
+L’expérience de l’air chaud a présenté des défis uniques pour notre équipe audio, car la logistique nous a empêché d’avoir des microphones qui pointent vers des milliers de mètres sur Rome. Heureusement, nous avions un grand nombre de captures audio ambiantes à travers la ville que nous avons pu utiliser pendant la publication. Nous avons placé les émetteurs audio à leur emplacement relatif à partir duquel ils ont été capturés à partir du sol. L’audio a ensuite été filtré pour le son à distance, comme si vous l’écoutiez du point de vue d’une personne dans la bulle d’air chaud, en fournissant un Soundscape authentique et directionnel pour la scène.
 
-### <a name="time-traveling-to-ancient-rome"></a>En déplacement à Rome antique
+### <a name="time-traveling-to-ancient-rome"></a>Temps de voyage à l’ancien Rome
 
-Les restes de monuments et de bâtiments tout au long de Rome sont impressionnants voire années deux mille après leur construction, mais nous savions que nous avions une opportunité unique pour vous montrer à ce qu’elle serait comme à revenir en arrière et consultez ces structures comme ils apparaissent dans Rome antique.
+Les restes de monuments et de bâtiments tout à Rome sont impressionnants même 2000 ans après leur construction, mais nous savions que nous avions une occasion unique de vous montrer ce qu’il serait possible de revenir en arrière et de voir ces structures telles qu’elles apparaissaient à l’ancien Rome.
 
-Naturellement, il n’est pas que n’importe quel tournage vidéo ou les images statiques) de la Colosseum tel qu’il figurait lorsqu’il a été créé, par conséquent, nous avions besoin créer notre propre. Nous avons dû faire beaucoup de recherche pour en savoir plus sur la structure que nous pourrions ; comprendre les documents qu’il a été effectuée à partir, examen des diagrammes d’architecture et la lecture des descriptions de l’historique pour obtenir des informations suffisantes pour être en mesure d’établir une recréation virtuelle. 
+Naturellement, il n’y a pas de métrage vidéo ou d’image statique du Colosseum tel qu’il apparaissait au moment de sa création. nous avons donc dû créer notre propre image. Nous avons dû faire un grand nombre de recherches pour en savoir plus sur la structure. la compréhension des documents, la consultation des diagrammes architecturaux et la lecture des descriptions historiques pour obtenir suffisamment d’informations pour pouvoir créer une recréation virtuelle. 
 
-![Les ruins actuelles de la Colosseum avec une superposition montrant le plancher arena comme il serait présenté dans Rome antique.](images/rome-colosseum-overlay-500px.png)<br>
-*Les ruins actuelles de la Colosseum avec une superposition montrant le plancher arena comme il serait présenté dans Rome antique*
+![La journée moderne Ruins du Colosseum avec une superposition présentant le plancher de la porte, telle qu’elle aurait été recherchée à l’ancien Rome.](images/rome-colosseum-overlay-500px.png)<br>
+*La journée moderne Ruins du Colosseum avec une superposition qui indique le plancher comme il aurait été regardé à l’ancien Rome*
 
-La première chose que nous voulions était améliorer visites traditionnels avec des superpositions éducatives. Dans HoloTour lorsque vous visitez le ruins de la Colosseum semble aujourd'hui, la valeur plancher arena est transformé pour vous montrer comment il serait présenté lors de l’utilisation, y compris les zones de transit underground élaborés. Une visite guidée normal, vous pouvez avoir ces informations décrites pour vous et vous pourriez tenter l’imaginer, mais vous pouvez le voir réellement dans HoloTour.
+La première chose que nous souhaitions faire était d’améliorer les visites traditionnelles avec des superpositions de formation. Dans HoloTour, lorsque vous visitez le Ruins du Colosseum tel qu’il est aujourd’hui, le plancher est transformé pour vous montrer comment il s’est trouvé en cours d’utilisation, y compris les zones de préproduction souterraines élaborées. Dans une visite guidée normale, vous pouvez avoir ces informations qui vous sont décrites et vous pouvez essayer de l’imaginer, mais dans HoloTour, vous pouvez le voir.
 
-Pour un segment de recouvrement ainsi nous avions notre artistes faire correspondre le point de vue de notre métrage capture et de créer l’image de superposition manuellement. Le point de vue doit correspondre afin que lorsque nous remplacent la vidéo avec notre image à la fois seront aligne pas correctement.
+Pour une superposition comme celle-ci, nous avions nos artistes qui correspondent au point de vue de notre métrage de capture et à créer l’image de superposition à la main. La perspective doit correspondre afin que lorsque nous remplaçons la vidéo avec notre image, les deux s’alignent correctement.
 
-### <a name="staging-the-gladiator-fight"></a>Mise en lots de la lutte gladiator
+### <a name="staging-the-gladiator-fight"></a>Mise en œuvre de la lutte contre la Gladiator
 
-Tandis que les superpositions sont un moyen attrayant d’apprendre aux gens sur historique, ce qui nous ont été plus enthousiastes a été transporter vous dans le temps. La superposition était simplement une image fixe à partir d’un point de vue particulière, mais temps en vous déplaçant nécessiterait la Colosseum entière à modéliser et que, comme expliqué ci-dessus, nous avions besoin d’avoir un mouvement dans la scène pour que tout semble actif. Atteindre qui a eu un effort considérable.
+Alors que les superpositions sont un moyen attrayant d’enseigner à l’histoire, ce que nous étions le plus enthousiaste pour le transport de retour dans le temps. La superposition était juste une image d’un point de vue particulier, mais l’heure à laquelle la création de l’ensemble de Colosseum devait être modelée, et, comme nous l’avons vu plus haut, nous avions besoin d’un mouvement dans la scène pour l’amener à l’aise. La réalisation d’un effort considérable a été nécessaire.
 
-Cette opération est trop volumineuse pour notre équipe d’effectuer seuls, afin que notre équipe d’art travaillé avec Whiskytree, une société externe effets généralement fonctionne sur les effets visuels pour les films Hollywood. Whiskytree aidé à recréer le Colosseum dans son heyday, ce qui nous permet de vous présenter la structure en restant sur le sol arena et pour créer une vue d’une lutte gladiator à partir de la boîte de l’Empereur. Encouragements foule les drapeaux bannières ajoutent le mouvement subtil nécessaire pour faire penser que ce sont des endroits réels et pas seulement les images.
+Cette entreprise était trop grande pour que notre équipe soit en mesure de la faire, donc notre équipe de dessin a travaillé avec Whiskytree, une société d’effets externes qui travaille généralement sur des effets visuels pour les films d’Hollywood. Whiskytree nous a aidé à recréer le Colosseum dans son Heyday, ce qui nous permet de vous enseigner sur la structure tout en étant debout sur le plancher et de créer une vue d’un combat Gladiator à partir de la boîte de l’empereur. Les retards et les bannières d’ambiance ajoutent le mouvement subtil nécessaire pour que ces derniers soient des emplacements réels et pas seulement des images.
 
-![Colosseum recréée tels que présentés à partir de la valeur plancher arena. Lorsqu’ils sont affichés dans HoloTour, les bannières flottement dans le breeze, ce qui donne un sentiment de mouvement.](images/recreated-colosseum-holotour-500px.png)<br>
-*Colosseum recréée tels que présentés à partir de la valeur plancher arena. Lorsqu’ils sont affichés dans HoloTour, les bannières flottement dans le breeze, ce qui donne un sentiment de mouvement.*
+![Colosseum recréé comme vu à partir du plancher. En cas d’affichage dans HoloTour, les bannières sont flottantes dans le Breeze, ce qui donne un sentiment de mouvement.](images/recreated-colosseum-holotour-500px.png)<br>
+*Colosseum recréé comme vu à partir du plancher. En cas d’affichage dans HoloTour, les bannières sont flottantes dans le Breeze, ce qui donne un sentiment de mouvement.*
 
-La visite guidée de Rome aboutit à la lutte gladiator. Whiskytree offrait l’arène et les simulations de réactions 3D rendues sous forme de vidéo, mais nous devions ajouter dans les gladiators sur le sol arena. Cette partie de notre processus ressemble plus à une production vidéo Hollywood à un projet à partir d’une studio de jeu d’incubation en informatique. Membres de notre équipe mappé une séquence de lutte approximative et puis l’affiné avec un choreographer. Nous embauché des acteurs à utiliser pour stocker nos bataille fictif et acheté armor afin qu’ils seraient présenterait de la partie. Enfin, nous filmé la scène entière par rapport à un écran vert.
+La visite guidée de Rome culmine avec la lutte Gladiator. Whiskytree nous a fourni une vidéo et des simulations de foule en 3D, mais nous avions besoin d’ajouter des Gladiators sur le plancher. Cette partie de notre processus ressemble davantage à une production vidéo d’Hollywood qu’à un projet d’un studio de jeu d’incubation. Les membres de notre équipe ont mis en correspondance une séquence de combat approximative, puis l’ont affiné avec un Choreographer. Nous avons recruté des acteurs pour organiser notre bataille factice et acheté le blindage afin qu’ils recherchent la partie. Enfin, nous avons filmé l’ensemble de la scène sur un écran vert.
 
-![Notre gladiators, instructions entre prend pour bien.](images/green-screen-gladiators-holotour-500px.jpg)<br>
-*Notre gladiatiors, instructions entre prend pour bien*
+![Notre Gladiators, en obtenant des instructions entre les différentes procédures.](images/green-screen-gladiators-holotour-500px.jpg)<br>
+*Notre gladiatiors, obtenir des instructions entre les différentes*
 
-Cette scène vous place dans la zone de l’Empereur, ce qui signifiait que tout le tournage que se devait d’être à partir de ce point de vue. Si nous avons été filmé en train de lutte où les gladiators sur le sol arena, nous n’aurait pas encore parvenus à composite correctement la lutte de séquence dans une version ultérieure, nous mettons donc notre opérateur caméra dans un ascenseur ciseaux très haut, recherche vers le bas sur la séquence de lutte pour filmer.
+Cette scène vous place dans le cadre de l’empereur, ce qui signifiait que tout le métrage devait provenir de cette perspective. Si nous sommes à l’origine de la lutte contre la Gladiators à l’étage, nous n’aurions pas pu correctement répartir la séquence de lutter par la suite. nous avons donc placé notre opérateur d’appareil photo dans une belle levée à la verticale, en observant la séquence de lutte pour la pellicule.
 
-![Obtention de la perspective de droite : filmer à partir d’un ascenseur ciseaux.](images/scissor-lift-holotour-500px.jpg)<br>
-*Obtention de la perspective de droite : filmer à partir d’un ascenseur ciseaux*
+![Obtention de la bonne perspective: filmer à partir d’une levée de ciseaux.](images/scissor-lift-holotour-500px.jpg)<br>
+*Obtention de la bonne perspective: filmer à partir d’une levée de ciseaux*
 
-Post-production, les gladiators étaient composées sur le sol arena et la perspective est correcte, mais un problème est resté : les ombres des gladiators sur l’écran vert ont été supprimés dans le cadre du processus de composition. Sans les ombres, il semblait les gladiators ont été flottant dans l’air. Heureusement, Whiskytree est très utile à résoudre simplement ce type de problème et un peu de technique leur permettant d’ajouter des ombres dans notre scène. Le résultat est ce que vous voyez dans la visite guidée dès aujourd'hui.
+Dans la suite de la production, les Gladiators ont été composites dans le plancher et la perspective était correcte, mais un problème est resté: les ombres du Gladiators sur l’écran vert ont été supprimées dans le cadre du processus de composition. Sans Shadows, les Gladiators étaient flottantes à l’air. Heureusement, Whiskytree est parfait pour résoudre ce type de problème et il a utilisé un peu de encadrement technique pour rajouter des ombres à notre scène. Le résultat est ce que vous voyez dans la visite du jour.
 
 ## <a name="about-the-authors"></a>À propos des auteurs
 
 <table style="border:0">
 <tr>
 <td style="border:0" width="60px"> <img alt="David Haley" width="60" height="60" src="images/haley.png" /></td>
-<td style="border:0" width="408"> <b>David Haley</b> est développeur Senior qui ont appris le plus d’informations sur les plateformes d’appareil photo et de lecture vidéo qu’il pensait possible de travailler sur HoloTour.</td>
+<td style="border:0" width="408"> <b>David Haley</b> est un développeur senior qui a appris plus sur les plates-formes de caméra et la lecture vidéo que de travailler sur HoloTour.</td>
 
 <td style="border:0" width="60px"> <img alt="Jason Syltebo" width="60" height="60" src="images/syltebo.png" /></td>
-<td style="border:0" width="408"> <b>Jason Syltebo</b> est un concepteur Audio qui fait en sorte que vous pouvez constater la soundscape de chaque destination que vous visitez, même lorsque vous revenez en arrière dans le temps.</td>
+<td style="border:0" width="408"> <b>Jason Syltebo</b> est un concepteur audio qui a fait en sorte que vous pouviez expérimenter les Soundscape de chaque destination que vous visitez, même lorsque vous revenez dans le temps.</td>
 </tr>
 <tr>
 <td style="border:0" width="60px"> <img alt="Danny Askew" width="60" height="60" src="images/askew.png" /></td>
-<td style="border:0" width="408"> <b>Danny Askew</b> est un artiste de vidéo qui a fait en sorte que votre parcours dans Rome a été comme exempt de failles que possible.</td>
+<td style="border:0" width="408"> <b>Danny Askew</b> est un artiste qui a fait en sorte que votre parcours de Rome était aussi irréprochable que possible.</td>
 
 <td style="border:0" width="60px"></td>
 <td style="border:0" width="408"></td>

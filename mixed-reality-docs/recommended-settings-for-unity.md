@@ -1,11 +1,11 @@
 ---
 title: Paramètres recommandés pour Unity
-description: Unity propose certains comportements spécifiques à une réalité mixte qui peut être activé ou désactivée par le biais des paramètres de projet.
+description: Unity offre des comportements spécifiques à la réalité mixte qui peuvent être activés via les paramètres du projet.
 author: Troy-Ferrell
 ms.author: trferrel
 ms.date: 03/26/2019
 ms.topic: article
-keywords: Unity, les paramètres, réalité mixte
+keywords: Unity, paramètres, réalité mixte
 ms.openlocfilehash: 8afcefb49a860d66a372ebd3d0c4bcdb43038813
 ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
@@ -15,148 +15,148 @@ ms.locfileid: "67415451"
 ---
 # <a name="recommended-settings-for-unity"></a>Paramètres recommandés pour Unity
 
-Unity fournit un ensemble d’options par défaut qui sont généralement le cas moyen pour toutes les plateformes. Toutefois, Unity propose certains comportements spécifiques à une réalité mixte qui peut être activé ou désactivée par le biais des paramètres de projet.
+Unity fournit un ensemble d’options par défaut qui sont généralement le cas moyen pour toutes les plateformes. Toutefois, Unity offre des comportements spécifiques à la réalité mixte qui peuvent être activés via les paramètres du projet.
 
-## <a name="performant-environment-set-up"></a>Configuration d’environnement performant
+## <a name="performant-environment-set-up"></a>Configuration de l’environnement performante
 
-### <a name="low-quality-settings"></a>Paramètres de basse qualité
+### <a name="low-quality-settings"></a>Paramètres de qualité inférieure
 
-Il est important de modifier le **les paramètres de qualité de Unity** pour votre environnement à **très faible**. Cela permet de s’assurer que votre application s’exécute efficacement à la fréquence d’images appropriée. Ceci est extrêmement important pour le développement de Hololens. Pour le développement sur des casques IMMERSIFS, selon les spécifications du bureau mise sous tension de l’expérience de réalité virtuelle, un peut toujours obtenir une fréquence d’images sans les paramètres de qualité la plus basse. 
+Il est important de modifier les **paramètres de qualité** des Unity pour votre environnement afin qu’ils soient **très faibles**. Cela permet de s’assurer que votre application exécute efficacement à la fréquence appropriée. Cela est extrêmement important pour le développement Hololens. Pour le développement sur des casques immersifs, selon les spécifications du bureau qui alimente l’expérience VR, vous pouvez toujours obtenir une fréquence d’images sans les paramètres de qualité la plus basse. 
 
-Dans Unity 2018 LTS +, le niveau de qualité du projet peut être défini :
+Dans Unity 2018 LTS +, le niveau de qualité du projet peut être défini par:
 
-Sous **modifier** > **paramètres du projet** > **qualité** > définir le **par défaut** en cliquant sur le flèche vers le bas pour le **très faible** niveau de qualité
+Sous **modifier** > lesparamètres > du projet **> définir** la **valeur par défaut** en cliquant sur la flèche vers le bas jusqu’au niveau de qualité **très faible**
 
 ### <a name="lighting-settings"></a>Paramètres d’éclairage
 
-Comme pour les paramètres de scène de qualité, il est important de définir des paramètres d’éclairage optimaux pour votre application de réalité mixte. Dans Unity, le paramètre d’éclairage qui aura généralement le plus grand impact sur les performances de votre scène est **Illumination globale en temps réel**. Cela peut être désactivée en accédant **fenêtre** > **rendu** > **paramètres d’éclairage** > **en temps réel Illumination globale**. 
+À l’instar des paramètres de scène de qualité, il est important de définir des paramètres d’éclairage optimaux pour votre application de réalité mixte. Dans Unity, le paramètre d’éclairage qui aura généralement le plus grand impact sur les performances de votre scène est l' **éclairage global en temps réel**. Vous pouvez désactiver cette option en sélectionnant**paramètres** > d’éclairage de l'**affichage** > de la **fenêtre** > **éclairage global en temps réel**. 
 
-Il existe un autre paramètre d’éclairage, **intégrées d’Illumination globale**. Ce paramètre peut fournir performante et résultats visuellement frappante sur des casques IMMERSIFS mais n’est généralement pas applicable pour le développement de HoloLens. **Intégrées Global Illumniation** est calculée uniquement pour les GameObjects statiques qui ne figurent généralement pas dans les scènes HoloLens en raison de la nature d’un environnement inconnu et variable.
+Il existe un autre paramètre d’éclairage, un **éclairage global cuit**. Ce paramètre peut fournir des résultats performants et visuellement sur les casques immersifs, mais il n’est généralement pas applicable au développement HoloLens. Le **Illumniation global cuit** est calculé uniquement pour les GameObjects statiques qui sont généralement introuvables dans les scènes HoloLens en raison de la nature d’un environnement inconnu et en cours de modification.
 
-Veuillez lire [Illumination globale à partir d’Unity](https://docs.unity3d.com/Manual/GIIntro.html) pour plus d’informations. 
+Pour plus d’informations, consultez [illumination globale à partir d’Unity](https://docs.unity3d.com/Manual/GIIntro.html) . 
 
 >[!NOTE]
-> **Illumination globale en temps réel** a la valeur **par scène** et les développeurs doivent économiser ainsi cette propriété pour chaque scène Unity dans leur projet. 
+> L' **éclairage global en temps réel** est défini **par scène** et les développeurs doivent donc enregistrer cette propriété pour chaque scène Unity dans leur projet. 
 
-### <a name="single-pass-instancing-rendering-path"></a>Chemin d’accès de rendu instanciation unique pass
+### <a name="single-pass-instancing-rendering-path"></a>Chemin de rendu d’instanciation à passage unique
 
-Dans les applications de réalité mixte, la scène est affichée à deux reprises, une fois pour chaque œil à l’utilisateur. Par rapport au développement 3D traditionnel, cela double efficacement la quantité de travail qui doit être calculée. Par conséquent, il est important de sélectionner le chemin d’accès plus efficace de rendu dans Unity pour enregistrer les deux sur le temps CPU et GPU. Rendu instanciées passage unique optimise le pipeline de rendu Unity pour les applications de réalité mixte et par conséquent, il est recommandé d’activer ce paramètre par défaut pour chaque projet. 
+Dans les applications de réalité mixte, la scène est restituée deux fois, une fois pour chaque œil à l’utilisateur. Comparé au développement 3D traditionnel, cela double la quantité de travail qui doit être calculée. Par conséquent, il est important de sélectionner le chemin de rendu le plus efficace dans Unity pour enregistrer les temps processeur et GPU. Le rendu d’instance à passage unique optimise le pipeline de rendu Unity pour les applications de réalité mixte. par conséquent, il est recommandé d’activer ce paramètre par défaut pour chaque projet. 
 
 Pour activer cette fonctionnalité dans votre projet Unity
-1)  Ouvrez **paramètres du lecteur XR** (accédez à **modifier** > **paramètres du projet** > **Player**  >  **XR paramètres**)
-2) Sélectionnez **unique passer une instance créée** à partir de la **méthode de rendu stéréo** menu déroulant (**virtuel pris en charge de réalité** case doit être cochée)
+1)  Ouvrez **les paramètres du XR de lecteur** (accédez à **modifier** > les paramètres du**projet** >  > paramètres du**XR**de lecteur)
+2) Sélectionnez **une instance de passe unique** dans le menu déroulant **méthode de rendu stéréo** (la case à cocher de**la réalité virtuelle** doit être activée)
 
-Pour plus d’informations avec cette approche de rendu, lisez les articles suivants à partir d’Unity.
-- [Comment optimiser les performances des AR et VR avec rendu stéréo avancé](https://blogs.unity3d.com/2017/11/21/how-to-maximize-ar-and-vr-performance-with-advanced-stereo-rendering/)
-- [L’instanciation unique Pass](https://docs.unity3d.com/Manual/SinglePassInstancing.html) 
+Lisez les articles suivants sur Unity pour plus d’informations sur cette approche de rendu.
+- [Optimisation des performances de l’AR et du VR avec un rendu stéréo avancé](https://blogs.unity3d.com/2017/11/21/how-to-maximize-ar-and-vr-performance-with-advanced-stereo-rendering/)
+- [Instanciation à passage unique](https://docs.unity3d.com/Manual/SinglePassInstancing.html) 
 
 >[!NOTE]
-> Un problème courant avec unique passer instancié rendu se produit si les développeurs ont déjà des nuanceurs personnalisés existants non écrits pour l’instanciation. Après avoir activé cette fonctionnalité, les développeurs remarquerez certains rendu uniquement GameObjects d’un oeil. Il s’agit comme les nuanceurs personnalisés associés n’ont pas les propriétés appropriées pour l’instanciation.
+> Un problème courant avec un rendu d’instance à passage unique se produit si les développeurs possèdent déjà des nuanceurs personnalisés existants non écrits pour l’instanciation. Une fois cette fonctionnalité activée, les développeurs peuvent remarquer que certains GameObjects ne s’affichent qu’en un seul œil. Cela est dû au fait que les nuanceurs personnalisés associés n’ont pas les propriétés appropriées pour l’instanciation.
 >
-> Consultez [unique passer stéréo rendu pour HoloLens](https://docs.unity3d.com/Manual/SinglePassStereoRenderingHoloLens.html) à partir d’Unity pour savoir comment résoudre le problème
+> Consultez [rendu stéréo à passage unique pour HoloLens](https://docs.unity3d.com/Manual/SinglePassStereoRenderingHoloLens.html) à partir d’Unity pour savoir comment résoudre ce problème
 
 ### <a name="enable-depth-buffer-sharing"></a>Activer le partage de mémoire tampon de profondeur
 
-Pour obtenir une meilleure stabilité hologramme à partir de la perception de l’utilisateur, il est recommandé d’activer le **partage de mémoire tampon de profondeur** propriété dans Unity. En activant cette, Unity partageront la carte de profondeur générée par votre application avec la plateforme Windows Mixed Reality. La plateforme sera ensuite en mesure de mieux optimiser la stabilité hologramme spécifiquement pour votre scène pour une image donnée restituée par votre application.
+Pour obtenir une meilleure stabilité de l’hologramme à partir de la perception de l’utilisateur, il est recommandé d’activer la propriété de partage de la **mémoire tampon de profondeur** dans Unity. Si vous activez cette fonction, Unity partagera la carte de profondeur produite par votre application avec la plateforme Windows Mixed Reality. La plateforme sera alors en mesure de mieux optimiser la stabilité des hologrammes pour votre scène pour toute image donnée rendue par votre application.
 
 Pour activer cette fonctionnalité dans votre projet Unity
-1) Ouvrez **paramètres du lecteur XR** (accédez à **modifier** > **paramètres du projet** > **Player**  >  **XR paramètres**)
-2) Activez la case à cocher pour **activer le partage de mémoire tampon de profondeur** sous **SDK de réalité virtuelle** > **Windows Mixed Reality** expansion (**virtuelle Prise en charge de la réalité** case doit être cochée)
+1) Ouvrez **les paramètres du XR de lecteur** (accédez à **modifier** > les paramètres du**projet** >  > paramètres du**XR**de lecteur)
+2) Activez la case à cocher **activer le partage** de tampons de profondeur dans les kits de développement logiciel ( **SDK** > ) Virtual Real expansion**Windows Mixed realisation** (la case à cocher**Virtual Really Supported**
 
-En outre, il est recommandé de sélectionner **16 bits profondeur** sous le **profondeur Format** configuration dans ce panneau, en particulier pour le développement de Hololens. Sélection de 16 bits par rapport aux 24 bits réduit considérablement la bande passante car moins de données en aurez besoin être déplacée/traité.
+En outre, il est recommandé de sélectionner **profondeur de 16 bits** sous le paramètre **format de profondeur** dans ce panneau, en particulier pour le développement Hololens. La sélection de 16 bits comparée à 24 bits réduit considérablement les besoins en bande passante, car moins de données devront être déplacées/traitées.
 
-Dans l’ordre pour la plateforme Windows Mixed Reality optimiser la stabilité HOLOGRAMME, elle s’appuie sur la mémoire tampon de profondeur pour être précis et correspondre à n’importe quel hologrammes rendus à l’écran. Par conséquent, avec partage de mémoire tampon de profondeur, il est important lors de la couleur, de rendu également restituer de profondeur. Dans Unity, la plupart des matériaux Opaque ou TransparentCutout affichera une profondeur par défaut mais transparent et objets de texte seront affiche généralement pas profondeur bien que cela soit dépendante de nuanceur, etc. 
+Pour que la plateforme Windows Mixed realisation optimise la stabilité des hologrammes, elle s’appuie sur la mémoire tampon de profondeur pour être exacte et correspond à n’importe quel hologramme rendu sur l’écran. Ainsi, avec le partage de mémoire tampon de profondeur sur, il est important d’effectuer un rendu des couleurs, également une profondeur de rendu. Dans Unity, la plupart des matériaux opaques ou TransparentCutout restituent la profondeur par défaut, mais les objets transparents et textuels n’affichent généralement pas de profondeur, bien qu’il s’agisse d’un nuanceur dépendant, etc. 
 
-Si vous utilisez le nuanceur Toolkit réalité mixte Standard, pour restituer la profondeur des objets transparents :
-1) Sélectionnez le matériau transparent qui utilise le nuanceur MRTK Standard et ouvrir la fenêtre d’éditeur inspecteur
-2) Définissez **Mode de rendu** à **personnalisé** puis définissez **Mode** à **Transparent** et enfin définir **profondeur écrire**à **sur**
+Si vous utilisez le nuanceur standard de la boîte à outils de la réalité mixte, pour restituer la profondeur des objets transparents:
+1) Sélectionner la matière tranparent qui utilise le nuanceur MRTK standard et ouvrir la fenêtre de l’éditeur de l’inspecteur
+2) Définir **le mode de rendu** sur **personnalisé** puis définir le **mode** sur **transparent** et enfin définir l' **écriture de profondeur** **sur activé**
 
 >[!NOTE]
-> Les développeurs doivent Méfiez-vous des Z fighting lorsque vous modifiez ces valeurs ainsi que les paramètres de plan proche/éloigné de la caméra. Z Fighting se produit lorsque deux gameobjects essayez restituer au même pixel et en raison des limitations de fidélité de la mémoire tampon de profondeur (ex.) profondeur z), Unity ne peut pas déterminer quel objet se trouve devant l’autre. Les développeurs note un scintillement entre deux objets de jeu en tant qu’ils *combattre* pour la même valeur z en profondeur. Pour résoudre ce problème en basculant vers le format de 24 bits profondeur comme il y aura une plus grande plage de valeurs pour chaque objet calculer lors de leur profondeur de z à partir de l’appareil photo.
+> Les développeurs doivent être attentifs à la lutte Z lors de la modification de ces valeurs avec les paramètres du plan proche/Far de l’appareil photo. Z-combat se produit lorsque deux Gameobjects essaient de s’afficher sur le même pixel et en raison de limitations de fidélité du tampon de profondeur (par exemple, profondeur z), Unity ne peut pas déterminer quel objet est devant l’autre. Les développeurs notent un scintillement entre deux objets de jeu lorsqu’ils *luttent contre* la même valeur de profondeur z. Cela peut être résolu en basculant au format de profondeur 24 bits, car il y aura une plus grande plage de valeurs pour chaque objet à calculer pour la profondeur z de l’appareil photo.
 >
-> Toutefois, il est recommandé, en particulier pour Hololens développement, pour modifier l’appareil photo de près et beaucoup des plans à une plage plus petite à la place et en conservant la profondeur de 16 bits formater. La profondeur de z est non linéaire mappée à la plage de valeurs le long de l’appareil photo proches plans. Ce paramètre peut être modifié en sélectionnant le *Main Camera* dans votre scène et, sous **inspecteur**, modifier le **proche & beaucoup de plan de coupe** valeurs afin de réduire leur plage (ex.) à partir de 1 000 m à 100 m ou autre valeur x, etc.)
+> Toutefois, il est recommandé, en particulier pour le développement Hololens, de modifier les plans presque et Far de l’appareil photo vers une plage plus petite plutôt que de conserver le format de profondeur 16 bits. La profondeur z est mappée de manière non linéaire à la plage de valeurs le long des plans de caméra near et Far. Vous pouvez modifier cette valeur en sélectionnant la *caméra principale* dans votre scène et sous **Inspector**, en remontant le plan de découpage **proche & FAR** pour réduire leur plage (c.-à-d. de 1000MD à 100 m ou à une autre valeur x, etc.)
 
-### <a name="building-for-il2cpp"></a>Création pour IL2CPP
+### <a name="building-for-il2cpp"></a>Génération pour IL2CPP
 
-Unity a déconseillé la prise en charge des scripts de serveur principal et donc aux développeurs il est recommandé d’utiliser .NET **IL2CPP** pour leur UWP visual studio génère. Bien que cela introduit des différents avantages, création de votre solution visual studio à partir d’Unity pour **Il2CPP** peut être plus lent que l’ancienne méthode .NET de façon significative. Par conséquent, il est vivement recommandé de suivre les pratiques recommandées pour bâtir **IL2CPP** à enregistrer sur le temps d’itération de développement.
+Unity a déconseillé la prise en charge du backend de script .NET et recommande donc aux développeurs d’utiliser **IL2CPP** pour leurs builds Visual Studio UWP. Bien que cela offre différents avantages, la génération de votre solution Visual Studio à partir d’Unity pour **Il2CPP** peut être signficantly plus lente que l’ancienne méthode .net. Par conséquent, il est fortement recommandé de suivre les meilleures pratiques en matière de création de **IL2CPP** pour économiser l’heure de l’itération de développement.
 
-1) Génération incrémentielle de tirer parti en créant votre projet dans le même répertoire chaque fois, réutiliser des il les fichiers prédéfinis
-2) Désactiver les analyses de logiciels anti-programmes malveillants pour votre projet et créer des dossiers
-   - Ouvrez **protection de Virus et menaces** sous votre application de paramètres de Windows 10
-   - Sélectionnez **gérer les paramètres** sous **les paramètres de protection de Virus et menaces**
-   - Sélectionnez **ajouter ou supprimer des exclusions** sous le **Exclusions** section
-   - Cliquez sur **ajoutez une exclusion** et sélectionnez le dossier contient le code de votre projet Unity et générer fournit en sortie
-3) Utiliser un disque SSD pour la génération
+1) Tirez parti de la création incrémentielle en générant votre projet dans le même répertoire à chaque fois, en réutilisant les fichiers prédéfinis
+2) Désactiver les analyses logicielles anti-programme malveillant pour votre projet & les dossiers de build
+   - Ouvrir la **protection contre les menaces contre les Virus &** sous votre application Paramètres Windows 10
+   - Sélectionnez **gérer les paramètres** sous **virus & les paramètres de protection contre les menaces**
+   - Sélectionnez **Ajouter ou supprimer** des exclusions sous  la section exclusions.
+   - Cliquez sur **Ajouter une exclusion** , puis sélectionnez le dossier qui contient le code de votre projet Unity et les sorties de génération
+3) Utiliser un SSD pour la génération
 
-Veuillez lire [optimiser le temps de Build pour IL2CPP](https://docs.unity3d.com/Manual/IL2CPP-OptimizingBuildTimes.html) pour plus d’informations.
+Pour plus d’informations, consultez [optimisation des durées de génération pour IL2CPP](https://docs.unity3d.com/Manual/IL2CPP-OptimizingBuildTimes.html) .
 
 > [!NOTE]
 > En outre, il peut être avantageux de configurer un [serveur de cache](https://docs.unity3d.com/Manual/CacheServer.html), en particulier pour les projets Unity qui comprennent une grande quantité de ressources (à l’exclusion des fichiers de script), et pour les scènes ou ressources qui changent constamment. Lorsque vous ouvrez un projet, Unity stocke les ressources éligibles dans un format de cache interne sur l’ordinateur de développement. Les éléments doivent être réimportés, et donc retraités, après modification. Ce processus peut être effectué une fois puis enregistré dans un serveur de cache. Pour gagner du temps, vous pouvez le partager avec les autres développeurs, plutôt que de demander à chaque développeur de réimporter localement les éléments modifiés.
 
 ## <a name="publishing-properties"></a>Propriétés de publication
 
-### <a name="holographic-splash-screen"></a>Écran de démarrage HOLOGRAPHIQUE
+### <a name="holographic-splash-screen"></a>Écran de démarrage holographique
 
-HoloLens a un mobile-classe CPU et GPU, ce qui signifie que les applications peuvent prendre un peu plus de temps à charger. Pendant le chargement de l’application, les utilisateurs voient seulement les noir, et donc, ils peuvent se demandent ce qui se passe. Pour les convaincre pendant le chargement, que vous pouvez ajouter un écran de démarrage HOLOGRAPHIQUE.
+HoloLens possède un processeur et un GPU de classe mobile, ce qui signifie que le chargement des applications peut prendre un peu plus de temps. Pendant le chargement de l’application, les utilisateurs voient simplement le noir et, par conséquent, peuvent se demander ce qui se passe. Pour les rassurer pendant le chargement, vous pouvez ajouter un écran de démarrage holographique.
 
-Pour activer/désactiver l’écran de démarrage HOLOGRAPHIQUE :
-1) Accédez à **modifier** > **paramètres du projet** > **Player** page
-2) Cliquez sur le **Windows Store** onglet et ouvrez le **Image de démarrage** section
-3) Appliquer votre image de votre choix sous le **Windows HOLOGRAPHIQUE > Image de démarrage HOLOGRAPHIQUE** propriété.
-    - Activation/désactivation du **afficher un écran de démarrage de Unity** option active ou désactive l’écran de démarrage personnalisée de Unity. Si vous n’avez pas une licence Pro Unity, l’écran de démarrage de la marque de Unity sera toujours affichée.
-    - Si un **HOLOGRAPHIQUE Image de démarrage** est appliqué, il sera toujours affichée que la case à cocher Afficher un écran de démarrage de Unity soit activé ou désactivé. Spécification d’une image de démarrage HOLOGRAPHIQUE personnalisé est uniquement disponible pour les développeurs avec une licence Pro Unity.
+Pour activer/désactiver l’écran de démarrage holographique:
+1) Aller à la page **modifier** > les**paramètres** > du projet, page du**lecteur**
+2) Cliquez sur l’onglet **Windows Store** et ouvrez la section **image de démarrage** .
+3) Appliquez l’image souhaitée sous la propriété **image de démarrage holographique Windows holographique >** .
+    - Le fait de basculer l’option **afficher l’écran de démarrage Unity** active ou désactive l’écran de démarrage de la personnalisation Unity. Si vous ne disposez pas d’une licence Pro Unity, l’écran de démarrage de la personnalisation Unity s’affiche toujours.
+    - Si une **image de démarrage holographique** est appliquée, elle s’affiche toujours, que la case à cocher Afficher l’écran de démarrage Unity soit activée ou désactivée. La spécification d’une image de démarrage holographique personnalisée est disponible uniquement pour les développeurs disposant d’une licence Unity Pro.
 
-|  Afficher l’écran de démarrage d’Unity  |  Image de démarrage HOLOGRAPHIQUE  |  Comportement |
+|  Afficher l’écran de démarrage Unity  |  Image de démarrage holographique  |  Comportement |
 |----------|----------|----------|
-|  Activé  |  Aucune  |  Afficher l’écran de démarrage par défaut Unity 5 secondes ou jusqu'à ce que l’application est chargée, la plus longue étant retenue. | 
-|  Activé  |  Custom  |  Afficher l’écran de démarrage personnalisé pendant 5 secondes, ou jusqu'à ce que l’application est chargée, la plus longue étant retenue. | 
-|  Désactivé  |  Aucune  |  Afficher le noir transparent (nothing) jusqu'à ce que l’application est chargée. | 
-|  Désactivé  |  Custom  |  Afficher l’écran de démarrage personnalisé pendant 5 secondes, ou jusqu'à ce que l’application est chargée, la plus longue étant retenue. | 
+|  Activé  |  Aucun  |  Affiche l’écran de démarrage Unity par défaut pendant 5 secondes ou jusqu’à ce que l’application soit chargée, selon la valeur la plus longue. | 
+|  Activé  |  Custom  |  Affichez l’écran de démarrage personnalisé pendant 5 secondes ou jusqu’à ce que l’application soit chargée, selon la valeur la plus longue. | 
+|  Désactivé  |  Aucun  |  Affichez le noir transparent (rien) jusqu’à ce que l’application soit chargée. | 
+|  Désactivé  |  Custom  |  Affichez l’écran de démarrage personnalisé pendant 5 secondes ou jusqu’à ce que l’application soit chargée, selon la valeur la plus longue. | 
 
-Veuillez lire [documentation d’écran de démarrage d’Unity](https://docs.unity3d.com/Manual/class-PlayerSettingsSplashScreen.html) pour plus d’informations.
+Pour plus d’informations, consultez la [documentation de l’écran de démarrage d’Unity](https://docs.unity3d.com/Manual/class-PlayerSettingsSplashScreen.html) .
 
-### <a name="tracking-loss"></a>Suivi de la perte
+### <a name="tracking-loss"></a>Perte de suivi
 
-Un casque de réalité mixte dépend de l’affichage de l’environnement autour de lui pour construire [systèmes de coordonnées world-verrouillé](coordinate-systems-in-unity.md), qui permettent à hologrammes reste en place. Quand le casque est incapable de localiser lui-même dans le monde, le casque est dite avoir *perdu suivi*. Dans ce cas, les fonctionnalités qui dépendent de systèmes de coordonnées world-verrouillé, tels qu’étapes spatiales, ancres spatiales et mappage spatial, ne fonctionnent pas.
+Un casque de réalité mixte dépend de l’environnement qui l’entoure pour construire des [systèmes de coordonnées à verrouillage universel](coordinate-systems-in-unity.md), qui permettent aux hologrammes de rester en position. Lorsque le casque ne parvient pas à se trouver dans le monde, le casque est dit qu’il a *perdu le suivi*. Dans ces cas, les fonctionnalités dépendantes des systèmes de coordonnées universels, tels que les étapes spatiales, les ancres spatiales et le mappage spatial, ne fonctionnent pas.
 
-Si une perte de suivi se produit, par défaut d’Unity consiste à arrêter hologrammes de rendu, de suspendre le [boucle du jeu](http://docs.unity3d.com/Manual/ExecutionOrder.html), et l’affichage de suivi perdu notification autrement confortablement suit le regard des utilisateurs. Notifications personnalisées peuvent également être fournies sous la forme d’un suivi image de perte. Pour les applications qui dépendent de suivi pour leur intégralité de l’expérience, il suffit d’Unity permettent de gérer cette situation complètement jusqu'à ce suivi est récupéré. Les développeurs peuvent fournir une image personnalisée à afficher pendant le suivi de la perte. 
+Si une perte de suivi se produit, le comportement par défaut d’Unity consiste à arrêter le rendu des hologrammes, à suspendre la [boucle de jeu](http://docs.unity3d.com/Manual/ExecutionOrder.html)et à afficher une notification de perte de suivi qui suit confortablement le point de vue des utilisateurs. Des notifications personnalisées peuvent également être fournies sous la forme d’une image de perte de suivi. Pour les applications qui dépendent du suivi pour leur expérience complète, il est suffisant pour permettre à Unity de la gérer entièrement jusqu’à ce que le suivi soit récupéré. Les développeurs peuvent fournir une image personnalisée à afficher pendant la perte de suivi. 
 
-Pour personnaliser l’image de perte de suivi :
-1) Accédez à **modifier** > **paramètres du projet** > **Player** page
-2) Cliquez sur le **Windows Store** onglet et ouvrez le **Image de démarrage** section
-3) Appliquer votre image de votre choix sous le **Windows HOLOGRAPHIQUE > Image de perte de suivi** propriété.
+Pour personnaliser l’image de suivi perdu:
+1) Aller à la page **modifier** > les**paramètres** > du projet, page du**lecteur**
+2) Cliquez sur l’onglet **Windows Store** et ouvrez la section **image de démarrage** .
+3) Appliquez l’image souhaitée sous la propriété image de la **perte de suivi de > Windows holographique** .
 
-#### <a name="opt-out-of-automatic-pause"></a>Annulations de pause automatique
+#### <a name="opt-out-of-automatic-pause"></a>Désactiver la pause automatique
 
-Certaines applications peuvent ne pas exiger de suivi (par exemple, [applications orientation seule](coordinate-systems-in-unity.md) telles que les visionneuses de vidéo à 360 degrés) ou peut-être à continuer sans interruption pendant le suivi du traitement n’est perdu. Dans ces cas, les applications peuvent refuser la perte de valeur par défaut du comportement de suivi. Les développeurs qui choisissent cette sont responsables de masquage/la désactivation de tous les objets qui affichait pas correctement dans un scénario de perte de suivi. Dans la plupart des cas, seul le contenu qui est recommandé pour être rendu dans la mesure cas est verrouillé de corps de contenu, centrée autour de la caméra principale.
+Certaines applications peuvent ne pas nécessiter de suivi (par exemple, des [applications d’orientation uniquement](coordinate-systems-in-unity.md) telles que des visionneuses vidéo de 360 degrés) ou doivent peut-être continuer le traitement sans interruption pendant que le suivi est perdu. Dans ces cas, les applications peuvent refuser la perte par défaut du comportement de suivi. Les développeurs qui choisissent cela sont responsables du masquage/désactivation de tous les objets qui ne s’affichent pas correctement dans un scénario de perte de suivi. Dans la plupart des cas, le seul contenu qui est recommandé pour être rendu dans ce cas est le contenu verrouillé, centré autour de l’appareil photo principal.
 
-Pour désactiver le comportement de pause automatique :
-1) Accédez à **modifier** > **paramètres du projet** > **Player** page
-2) Cliquez sur le **Windows Store** onglet et ouvrez le **Image de démarrage** section
-3) Modifier le **Windows HOLOGRAPHIQUE > sur Pause de perte de suivi et afficher l’Image** case à cocher.
+Pour refuser le comportement de pause automatique:
+1) Aller à la page **modifier** > les**paramètres** > du projet, page du**lecteur**
+2) Cliquez sur l’onglet **Windows Store** et ouvrez la section **image de démarrage** .
+3) Modifiez la case à cocher **Windows holographique > en cas de suspension de perte de suivi et d’affichage d’image** .
 
-#### <a name="tracking-loss-events"></a>Le suivi des événements de perte
+#### <a name="tracking-loss-events"></a>Suivi des événements de perte
 
-Pour définir un comportement personnalisé en cas de perte de suivi, gérer global [le suivi des événements de perte](tracking-loss-in-unity.md).
+Pour définir un comportement personnalisé lorsque le suivi est perdu, gérez les [événements de perte de suivi](tracking-loss-in-unity.md)global.
 
 ### <a name="capabilities"></a>Fonctionnalités
 
-Pour une application tirer parti de certaines fonctionnalités, il doit déclarer les fonctionnalités appropriées dans son manifeste. Les déclarations de manifeste peuvent être rendues Unity, ils sont inclus dans chaque exportation ultérieures du projet. 
+Pour qu’une application tire parti de certaines fonctionnalités, elle doit déclarer les fonctionnalités appropriées dans son manifeste. Les déclarations de manifeste peuvent être effectuées dans Unity afin qu’elles soient incluses dans chaque exportation de projet suivante. 
 
-Fonctionnalités peuvent être activées pour une application de réalité mixte par :
-1) Accédez à **modifier** > **paramètres du projet** > **Player** page
-2) Cliquez sur le **Windows Store** onglet et ouvrez le **paramètres de publication** section et recherchez le **fonctionnalités** liste
+Les fonctionnalités peuvent être activées pour une application de réalité mixte en:
+1) Aller à la page **modifier** > les**paramètres** > du projet, page du**lecteur**
+2) Cliquez sur l’onglet **Windows Store** et ouvrez la section **paramètres de publication** et recherchez la liste des **fonctionnalités** .
 
-Les fonctionnalités applicables pour l’activation de l’API couramment utilisées pour les applications HOLOGRAPHIQUE sont :
+Les fonctionnalités applicables pour activer les API couramment utilisées pour les applications holographiques sont les suivantes:
 <br>
 
-|  Fonctionnalité  |  API nécessitant une fonctionnalité |
+|  Fonctionnalité  |  API nécessitant des fonctionnalités |
 |----------|----------|
 |  SpatialPerception  |  SurfaceObserver | 
 |  WebCam  |  PhotoCapture et VideoCapture | 
-|  Bibliothèque d’images / VideosLibrary  |  PhotoCapture ou VideoCapture, respectivement (lorsque vous stockez le contenu capturé) | 
-|  Microphone  |  VideoCapture (lors de la capture audio), DictationRecognizer, GrammarRecognizer et KeywordRecognizer | 
-|  InternetClient  |  DictationRecognizer (et à utiliser le Profiler Unity) | 
+|  PicturesLibrary/VideosLibrary  |  PhotoCapture ou VideoCapture, respectivement (lors du stockage du contenu capturé) | 
+|  Microphone  |  VideoCapture (lors de la capture de l’audio), DictationRecognizer, GrammarRecognizer et KeywordRecognizer | 
+|  InternetClient  |  DictationRecognizer (et pour utiliser le profileur Unity) | 
 
 ## <a name="see-also"></a>Voir aussi
 * [Vue d’ensemble du développement Unity](unity-development-overview.md)

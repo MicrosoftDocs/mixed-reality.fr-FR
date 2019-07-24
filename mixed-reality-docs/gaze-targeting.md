@@ -1,11 +1,11 @@
 ---
-title: Ciblage des regards
-description: Toutes les interactions reposent sur la capacité d’un utilisateur à cibler l’élément qu'ils souhaitent interagir, quelle que soit la modalité d’entrée.
+title: Cible du visage
+description: Toutes les interactions reposent sur la capacité d’un utilisateur à cibler l’élément avec lequel il souhaite interagir, quelle que soit la modalité d’entrée.
 author: cre8ivepark
 ms.author: jennyk
 ms.date: 02/24/2019
 ms.topic: article
-keywords: Mixte réalité, les regards, les regards ciblant, interaction, concevoir
+keywords: La réalité mixte, le point de présence, le regard, l’interaction et la conception
 ms.openlocfilehash: eddc832456b2ba0c6bc8955157d2c8e1a268e893
 ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
@@ -13,29 +13,29 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 06/11/2019
 ms.locfileid: "66829840"
 ---
-# <a name="gaze-and-dwell"></a>Regards et durée d’affichage
-Il existe un grand nombre de différentes façons pour confirmer une _validation_ telles que la combinaison des regards avec _voix_ ou _main mouvements_.
-Il existe plusieurs scénarios utilisateur Cependant, dans lequel les utilisateurs peuvent être occupés ou ne peut pas être suivies (par exemple, les travailleurs de fabrique avec des gants lourds volumineux). Entrée vocale également peut-être pas disponible en raison des préférences de l’utilisateur, contexte de réseaux sociaux ou environnements bruyants.
-Comme une solution de secours, une autre option pour effectuer un _validation_ consiste simplement à conserver fixant un élément d’interface utilisateur que nous appelons _m’attarderai pas_.
-Un _m’attarderai pas_ peuvent être effectuées avec des regards head ou yeux. L’idée est simple et peut être décomposée dans les phases suivantes : 
-1. Utilisateur démarre gazing à un bouton HOLOGRAPHIQUE
+# <a name="gaze-and-dwell"></a>Point de regard
+Il existe de nombreuses façons de confirmer une _validation_ , par exemple la combinaison de point de présence avec des gestes de _voix_ ou de _main_.
+Toutefois, il existe plusieurs scénarios utilisateur, dans lesquels les mains des utilisateurs peuvent être occupées ou ne peuvent pas être suivies (par exemple, les travailleurs de l’usine avec des gants de plus grande taille). L’entrée vocale n’est pas non plus disponible en raison des préférences de l’utilisateur, du contexte social ou des environnements bruyants.
+En guise de solution de secours, une autre option pour effectuer une _validation_ consiste simplement à conserver les étoiles dans un élément d’interface utilisateur auquel nous faisons référence en tant que _logement_.
+Un _logement_ peut être effectué en tête ou en regard. L’idée est simple et peut être décomposée selon les phases suivantes: 
+1. L’utilisateur démarre Gazing à un bouton holographique
 
-2. Après un délai bref apparition (par exemple, 150 ms), une animation de rétroaction visuelle est démarrée. Le délai de début est utilisé pour éviter de surcharger l’utilisateur en affichant immédiatement des commentaires tout le temps.
-    - Pour _les regards yeux_, nous vous recommandons de commentaires m’attarderai pas les éléments suivants pour la conception de l’élément visuel :
-      - **Blend il**: Fondre dans les commentaires à partir d’à peine visible à tout d’abord à totalement opaque. Les commentaires est ainsi moins de détourner votre attention et overwhleming et bien s’aligne avec la certitude que le système que l’utilisateur souhaite collaborer avec ce bouton.
-      - **Tirez-la**: Créer une rétroaction visuelle que diminue en taille et la déplace vers le centre de la cible, en extrayant des attention visuelle de l’utilisateur. 
+2. Après un bref délai d’apparition (par exemple, 150 MS), une animation de commentaires visuels est lancée. Le délai d’apparition est utilisé pour éviter de submerger l’utilisateur en affichant immédiatement des commentaires en permanence.
+    - Pour les _yeux oculaires_, nous vous recommandons les éléments suivants pour la conception de commentaires sur le logement visuel:
+      - **Mélanger**: Fusionnez en douceur les commentaires à partir de la première à la pleine opacité. Cela rend les commentaires moins gênants et overwhlemings et s’alignent avec la certitude que l’utilisateur veut vraiment s’associer à ce bouton.
+      - **Extrayez-** la: Créez un retour visuel au-delà de la taille des sorties et évolue vers le centre de la cible, en tirant l’attention de l’utilisateur. 
 
-3. Après une durée de la durée d’affichage prédéfinis (par exemple, 800 ms), la durée d’affichage se termine et déclenchement d’un événement associé.
-    - Fournir certains finalisation auditifs ou des commentaires visuels à réellement mettre accueil que l’élément a été sélectionné maintenant.
+3. Après une durée de remplissage prédéfinie (par exemple, 800 ms), le logement se termine et un événement associé est déclenché.
+    - Fournissez des commentaires d’audit ou visuels de finalisation afin de faire en sorte que l’élément soit sélectionné maintenant.
 
-![M’attarderai pas États](images/eyes_dwellstate_recommendation.png)
+![États du logement](images/eyes_dwellstate_recommendation.png)
 
 
-# <a name="gaze-targeting"></a>Ciblage des regards
+# <a name="gaze-targeting"></a>Cible du visage
 
-Toutes les interactions reposent sur la capacité d’un utilisateur à cibler l’élément qu'ils souhaitent interagir, quelle que soit la modalité d’entrée. En réalité mixte Windows, cela s’effectue en général à l’aide regard de l’utilisateur.
+Toutes les interactions reposent sur la capacité d’un utilisateur à cibler l’élément avec lequel il souhaite interagir, quelle que soit la modalité d’entrée. Dans Windows Mixed Reality, cette opération fait généralement appel au pointage du regard de l’utilisateur.
 
-Pour permettre aux utilisateurs de travailler avec une expérience avec succès, présentation de calculée du système de l’intention de l’utilisateur et l’intention de réelle de l’utilisateur, doit être alignées aussi près que possible. Dans la mesure que le système interprète les actions prévues de l’utilisateur correctement, la satisfaction des augmentations et les performances améliore.
+Pour procurer une expérience efficace à un utilisateur, il est nécessaire que la compréhension de son intention telle que la calcule le système et son intention réelle soient alignées aussi étroitement que possible. Plus le système interprète les actions prévues de l’utilisateur correctement, plus la satisfaction augmente et les performances s’améliorent.
 
 ## <a name="device-support"></a>Prise en charge des appareils
 
@@ -48,18 +48,18 @@ Pour permettre aux utilisateurs de travailler avec une expérience avec succès,
     </colgroup>
     <tr>
         <td><strong>Fonctionnalité</strong></td>
-        <td><a href="hololens-hardware-details.md"><strong>HoloLens (1er gen)</strong></a></td>
-        <td><strong>HoloLens 2</strong></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Casques IMMERSIFS</strong></a></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens (1ère génération)</strong></a></td>
+        <td><strong>HoloLens 2</strong></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Casques immersifs</strong></a></td>
     </tr>
      <tr>
-        <td>Ciblage des regards</td>
+        <td>Cible du visage</td>
         <td>✔️</td>
         <td>✔️</td>
         <td>✔️</td>
     </tr>
      <tr>
-        <td>Ciblage des yeux</td>
+        <td>Ciblage oculaire</td>
         <td>❌</td>
         <td>✔️</td>
         <td>❌</td>
@@ -67,52 +67,52 @@ Pour permettre aux utilisateurs de travailler avec une expérience avec succès,
 </table>
 
 > [!NOTE]
-> Obtenir des instructions spécifiques pour HoloLens 2 [bientôt](index.md).
+> Plus d’instructions spécifiques à HoloLens 2 bientôt [disponible](index.md).
 
-## <a name="target-sizing-and-feedback"></a>Commentaires et dimensionnement de la cible
+## <a name="target-sizing-and-feedback"></a>Dimensionnement des cibles et retour
 
-Le vecteur du pointage de regard a été démontré à plusieurs reprises pour être utilisable pour le ciblage précis, mais souvent convient le mieux brutes ciblage (lors de l’acquisition un tantinet supérieure cibles). Les tailles cible minimale de 1 à 1.5 degrés doivent autoriser les actions utilisateur réussie dans la plupart des scénarios, bien que les cibles de degrés 3 permettent souvent pour améliorer la vitesse. Notez que la taille que les cibles de l’utilisateur est effectivement une zone 2D même pour les éléments 3D--quelle que soit la projection est accessible sur les doit correspondre à la zone pouvant être ciblée. Fournissant certains cue marquants qu’un élément est « actif » (que l’utilisateur cible il) est extrêmement utile : il peut s’agir traitements tels que des effets visibles « pointage », mises en surbrillance audio ou clics, ou désactivez l’alignement d’un curseur avec un élément.
+Il a été démontré à plusieurs reprises que le vecteur du pointage du regard peut être utilisé pour le ciblage précis, mais qu’il convient souvent le mieux pour le ciblage brut (acquisition de cibles un peu plus grandes). Les tailles de cible minimales de 1 à 1,5 degré doivent permettre le bon déroulement des actions utilisateur dans la plupart des scénarios, bien que des cibles de 3 degrés puissent souvent générer un gain de vitesse. Notez que la taille que cible l’utilisateur est une zone 2D même pour les éléments 3D ; la projection qui lui fait face, quelle qu’elle soit, doit être la zone pouvant être ciblée. Il est extrêmement utile de fournir à l’utilisateur des indicateurs marquants montrant qu’un élément est « actif » (qu’il est en train de le cibler) ; il peut s’agir de traitements tels que des effets de « pointage » visibles, des mises en évidence audio, des clics ou de l’alignement clair d’un curseur avec un élément.
 
-![Taille cible optimal à distance de compteur 2](images/gazetargeting-size-1000px.jpg)<br>
-*Taille cible optimal à distance de compteur 2*
+![Taille de cible optimale à une distance de 2 mètres](images/gazetargeting-size-1000px.jpg)<br>
+*Taille de cible optimale à une distance de 2 mètres*
 
-![Un exemple de mise en surbrillance d’un objet ciblé du pointage de regard](images/gazetargeting-highlighting-640px.jpg)<br>
-*Un exemple de mise en surbrillance d’un objet ciblé du pointage de regard*
+![Exemple de mise en surbrillance d’un objet ciblé avec le regard](images/gazetargeting-highlighting-640px.jpg)<br>
+*Exemple de mise en surbrillance d’un objet ciblé avec le regard*
 
 ## <a name="target-placement"></a>Placement de la cible
 
-Utilisateurs échouent souvent rechercher des éléments d’interface utilisateur sont positionnés très élevé ou très faible dans leur champ de vision, se concentrant la majeure partie de leur attention sur des zones autour de leur vue principale (généralement à peu près yeux). Peut aider à placer la plupart des cibles dans certaines bande raisonnable autour des yeux. Étant donné la tendance pour les utilisateurs pour vous concentrer sur une zone visual relativement réduite à tout moment (cône l’attention de vision est à peu près 10 degrés), regroupement des éléments d’interface utilisateur au degré que qu’ils sont conceptuellement associés peut exploiter le chaînage l’attention des comportements à partir de élément à un autre en tant qu’utilisateur empruntant leurs regards une zone. Lorsque vous concevez l’interface utilisateur, gardez à l’esprit les grandes variations dans le champ de vision entre HoloLens et des casques IMMERSIFS potentielles.
+Les utilisateurs ne parviennent pas souvent à trouver les éléments d’interface utilisateur qui sont positionnés très haut ou très bas dans leur champ de vision, concentrant la majeure partie de leur attention sur des zones autour de leur vue principale (généralement au niveau des yeux). Le fait de placer la plupart des cibles dans une bande raisonnable autour des yeux peut s’avérer utile. Etant donné que les utilisateurs ont tendance à se concentrer sur un champ visuel relativement étroit (le cône de vision lié à l’attention est à peu près de 10 degrés), ils sont davantage susceptibles de passer d’un élément à l’autre à mesure qu’ils déplacent leur regard si les éléments d’interface utilisateur d’un même concept sont regroupés dans ce champ de vision. Quand vous concevez l’interface utilisateur, gardez à l’esprit les grandes variations potentielles du champ de vision entre les casques immersifs et HoloLens.
 
-![Un exemple d’éléments de l’interface utilisateur groupés pour des regards plus facile de ciblage dans l’Explorateur de Galaxy](images/gazetargeting-grouping-1000px.jpg)<br>
-*Un exemple d’éléments de l’interface utilisateur groupés pour des regards plus facile de ciblage dans l’Explorateur de Galaxy*
+![Exemple d’éléments d’interface utilisateur groupés pour faciliter le ciblage avec le regard dans Galaxy Explorer](images/gazetargeting-grouping-1000px.jpg)<br>
+*Exemple d’éléments d’interface utilisateur groupés pour faciliter le ciblage avec le regard dans Galaxy Explorer*
 
 ## <a name="improving-targeting-behaviors"></a>Amélioration des comportements de ciblage
 
-Si l’intention de l’utilisateur pour cibler un élément peut être déterminée (ou approximative étroitement), il peut être très utile accepter les tentatives de « near miss » à l’interaction comme s’ils ont été correctement ciblés. Il existe un certain nombre de méthodes réussites qui peuvent être incorporées dans les expériences de réalité mixte :
+Si l’intention de l’utilisateur de cibler un élément peut être déterminée (ou approchée étroitement), il peut être très utile d’accepter comme correctes les tentatives d’interaction échouant de peu. Il existe un certain nombre de méthodes utiles pouvant être incorporées dans les expériences de réalité mixte :
 
-### <a name="gaze-stabilization-gravity-wells"></a>Utilisation de stabilisation (« wells gravité »)
+### <a name="gaze-stabilization-gravity-wells"></a>Stabilisation du regard («puits de gravité»)
 
-Cela doit être allumé/all de la plupart du temps. Cette technique supprime le gigues du tête/cou naturel que les utilisateurs devront peut-être. Également le déplacement en raison de comportements de recherche/parler.
+Cette technique doit être activée tout le temps ou la plupart du temps. Elle supprime les petits mouvements naturels de la tête ou du cou que l’utilisateur peut faire. Il en va de même des comportements liés à l’observation et à l’élocution.
 
-### <a name="closest-link-algorithms"></a>Algorithmes de lien le plus proche
+### <a name="closest-link-algorithms"></a>Algorithmes du lien le plus proche
 
-Ceux-ci fonctionnent le mieux dans les zones épars contenu interactif. S’il existe une forte probabilité que vous pouvez déterminer qu’un utilisateur a tenté d’interagir avec, vous pouvez compléter leurs capacités de ciblage par simplement en supposant que certain niveau d’objectif.
+Ces derniers fonctionnent le mieux dans les zones dont le contenu interactif est clairsemé. S’il existe une forte probabilité que vous puissiez déterminer ce avec quoi un utilisateur a tenté d’interagir, vous pouvez compléter ses capacités de ciblage simplement en supposant un certain niveau d’intention.
 
-### <a name="backdatingpostdating-actions"></a>Actions postdatage/postdating
+### <a name="backdatingpostdating-actions"></a>Actions d’antidatage et de postdatage
 
-Ce mécanisme est utile dans les tâches nécessitant de vitesse. Lorsqu’un utilisateur se déplace à travers une série de manœuvres/activation ciblant à la vitesse, il peut être utile pour supposent une intention et permettre *manqué étapes* pour agir sur les cibles de l’utilisateur avait le focus légèrement avant ou peu après le (appuyez sur 50 ms avant/après était en vigueur dans les premiers tests).
+Ce mécanisme est utile dans les tâches nécessitant de la vitesse. Lorsqu’un utilisateur parcourt une série de manoeuvres de ciblage/activation à la vitesse, il peut être utile d’avoir un intérêt et d’autoriser les *étapes manquées* à agir sur les cibles que l’utilisateur a placées plus légèrement avant ou légèrement après le TAP (50 ms avant/après). efficace dans les premiers tests).
 
-### <a name="smoothing"></a>Lissage
+### <a name="smoothing"></a>Adoucissage
 
-Ce mécanisme est utile pour les mouvements de chemins, en réduisant l’instabilité/OSCILLANT légère en raison des caractéristiques physiques mouvement de la tête. Lorsque le lissage sur les mouvements des chemins, smooth par taille/distance de mouvements plutôt qu’au fil du temps
+Ce mécanisme est utile pour les mouvements de déplacement, réduisant les petits mouvements et les tremblements naturels de la tête. Quand vous adoucissez les mouvements de déplacement, agissez sur la taille/distance des mouvements plutôt que sur leur durée.
 
 ### <a name="magnetism"></a>Magnétisme
 
-Ce mécanisme peut être considéré comme une version plus générale d’algorithmes de « Lier le plus proche », un curseur vers une cible de dessin ou l’augmentation simplement hitboxes (qu’il soit visible ou non) que les utilisateurs s’approcher des objectifs probables, à l’aide de la disposition interactive à une certaine connaissance intention de l’utilisateur une meilleure approche. Cela peut être particulièrement efficace pour les petites cibles.
+Ce mécanisme peut être considéré comme une version plus générale des algorithmes du « lien le plus proche » ; il consiste à déplacer un curseur vers une cible ou simplement à agrandir les zones de ciblage (visibles ou non) à mesure que l’utilisateur s’approche de cibles probables, en s’appuyant sur la disposition interactive pour mieux interpréter l’intention de l’utilisateur. Il peut être particulièrement efficace pour les petites cibles.
 
-### <a name="focus-stickiness"></a>Le focus adhérence
+### <a name="focus-stickiness"></a>Adhérence du focus
 
-Lorsque vous déterminez ce qui les plus proches des éléments interactifs pour donner le focus à, fournir un décalage à l’élément ayant le focus. Cela vous aidera à réduire le focus erratique commutation des comportements flottant à un point médian entre deux éléments avec bruit naturelle.
+Quand vous déterminez à quels éléments interactifs proches donner le focus, déportez-vous de l’élément qui a actuellement le focus. Cette approche aide à réduire les comportements erratiques liés aux changements de focus quand l’utilisateur se trouve entre deux éléments avec un bruit normal.
 
 ## <a name="see-also"></a>Voir aussi
 * [Mouvements](gestures.md)

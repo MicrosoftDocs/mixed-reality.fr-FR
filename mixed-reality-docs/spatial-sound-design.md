@@ -1,11 +1,11 @@
 ---
-title: Sonorisation spatiale
-description: Son spatial est un outil puissant pour immersion, d’accessibilité et la conception de l’expérience utilisateur dans les applications de réalité mixte.
+title: Conception de son spatial
+description: Le son spatial est un outil puissant pour la conception de l’immersion, de l’accessibilité et de l’expérience utilisateur dans les applications de réalité mixte.
 author: joekellyms
 ms.author: joekelly
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Windows Mixed Reality, son spatial, de conception, de style
+keywords: Windows Mixed Reality, son spatial, design, style
 ms.openlocfilehash: c758037300392d9365c16933677fb0f026976c2a
 ms.sourcegitcommit: c2a5bff423feba7d29d5431c870b6017c2fe1bc2
 ms.translationtype: MT
@@ -13,11 +13,11 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 06/06/2019
 ms.locfileid: "66750305"
 ---
-# <a name="spatial-sound-design"></a>Sonorisation spatiale
+# <a name="spatial-sound-design"></a>Conception de son spatial
 
-Son spatial est un outil puissant pour immersion, d’accessibilité et la conception de l’expérience utilisateur dans les applications de réalité mixte.
+Le son spatial est un outil puissant pour la conception de l’immersion, de l’accessibilité et de l’expérience utilisateur dans les applications de réalité mixte.
 
-Si vous avez déjà lu [Marco Polo](https://en.wikipedia.org/wiki/Marco_Polo_(game)), ou quelqu'un avait à appeler votre téléphone pour vous aider à vous la localiser, vous êtes déjà familiarisé avec l’importance de son spatial. Nous utilisons des signaux audio dans nos vies quotidiennes pour rechercher des objets, l’attention d’une personne ou obtenir une meilleure compréhension de notre environnement. Plus étroitement les sons de votre application se comportement comme il le fait dans le monde réel, les plus convaincantes et attrayantes que votre monde virtuel sera.
+Si vous avez déjà joué à [Marco Polo](https://en.wikipedia.org/wiki/Marco_Polo_(game))ou si quelqu’un a appelé votre téléphone pour vous aider à le localiser, vous êtes déjà familiarisé avec l’importance du son spatial. Nous utilisons des signaux sonores dans nos vies quotidiennes pour localiser des objets, attirer l’attention d’une personne ou obtenir une meilleure compréhension de notre environnement. Plus le son de votre application se comporte de la même façon que dans le monde réel, plus votre monde virtuel est convaincant et attrayant.
 
 <br>
 
@@ -34,77 +34,77 @@ Si vous avez déjà lu [Marco Polo](https://en.wikipedia.org/wiki/Marco_Polo_(ga
     <tr>
         <td><strong>Fonctionnalité</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Casques IMMERSIFS</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Casques immersifs</strong></a></td>
     </tr>
      <tr>
-        <td>Sonorisation spatiale</td>
+        <td>Conception de son spatial</td>
         <td>✔️</td>
         <td>✔️</td>
     </tr>
 </table>
 
 
-## <a name="four-key-things-spatial-sound-does-for-mixed-reality-development"></a>Quatre éléments clés son spatial fait pour le développement de la réalité mixte
+## <a name="four-key-things-spatial-sound-does-for-mixed-reality-development"></a>Quatre points clés pour le développement de la réalité spatiale
 
-Par défaut, les sons sont lus en stéréo. Cela signifie que le son est lu avec aucune position spatiale, afin de l’utilisateur ne sait pas d'où provenance le son. Son spatial effectue quatre points clés pour le développement de réalité mixte :
+Par défaut, les sons sont lus en stéréo. Cela signifie que le son est lu sans position spatiale, de sorte que l’utilisateur ne sait pas où provient le son. Le son spatial fait quatre choses clés pour le développement de réalité mixte:
 
-**Mise à la terre**
+**Terre**
 
-Sans le son, des objets virtuels efficacement cessent d’exister lorsque nous activons les notre tête. Comme des objets réels, que vous souhaitez être en mesure d’écouter ces objets, même lorsque vous ne pouvez pas les voir, et que vous souhaitez être en mesure de les localiser n’importe où autour de vous. Tout comme les objets virtuels doivent être mis à la terre visuellement pour fusionner avec votre monde réel, ils doivent également être ancrée de façon audible. Son spatial fusionne en toute transparence votre environnement audio du monde réel avec l’environnement audio numérique.
+Sans son, les objets virtuels cessent d’exister quand nous éloigneons notre tête. Tout comme les objets réels, vous souhaitez être en mesure d’entendre ces objets même si vous ne les voyez pas et que vous souhaitez être en mesure de les localiser partout. Tout comme les objets virtuels doivent être visuellement mis en terre pour être mélangés à votre monde réel, ils doivent également être mis en terre de manière audible. Le son spatial fusionne en toute transparence votre environnement audio réel avec l’environnement audio numérique.
 
 **Attention de l’utilisateur**
 
-Dans les expériences de réalité mixte, vous ne peut pas supposer où votre utilisateur recherche et s’attendre à les voir quelque chose que vous placez dans le monde visuellement. Mais les utilisateurs peuvent toujours entendez une lire même lorsque l’objet qui joue le son est derrière eux. Gens sont habitués à avoir leur attention dessinée par son, nous allons instinctually vers un objet que nous entendons qui nous entoure. Lorsque vous souhaitez diriger regards de vos utilisateurs à une place particulière, plutôt qu’à l’aide d’une flèche pour pointer les visuellement, placez un son dans la mesure où emplacement est un moyen très naturels et rapide pour guider les.
+Dans les expériences de réalité mixte, vous ne pouvez pas supposer où votre utilisateur regarde et s’attendre à ce que vous puissiez voir un aspect que vous placez dans le monde visuellement. Toutefois, les utilisateurs peuvent toujours entendre un son audible même lorsque l’objet qui lit le son est derrière. Les gens sont utilisés pour attirer l’attention du son. nous instinctuallyons à un objet que nous entendons nous. Lorsque vous souhaitez diriger le regard de votre utilisateur vers un endroit particulier, plutôt que d’utiliser une flèche pour les pointer visuellement, le fait de placer un son dans cet emplacement est un moyen très naturel et rapide de les guider.
 
 **Immersion**
 
-Lorsque des objets déplacent ou sont en conflit, nous entendons généralement ces interactions entre les documents. Par conséquent, lorsque vos objets n’effectuez pas le même son qu'elles le feraient dans le monde réel, un niveau d’immersion est perdu, à regarder un film effrayant avec le volume vers le bas. Tous les sons dans le monde réel proviennent d’un point particulier dans l’espace - lorsque nous activons nos têtes, nous entendons la modification de ces sons provenance par rapport à nos oreilles, et nous pouvons suivre l’emplacement de son de cette façon. Sons spatialized composent le « impression » d’un emplacement au-delà de ce que nous pouvons voir.
+Lorsque des objets sont déplacés ou en conflit, nous entendons généralement ces interactions entre les matériaux. Ainsi, lorsque vos objets n’ont pas le même son qu’ils le ferait dans le monde réel, un niveau d’immersion est perdu, en regardant un film effrayant avec le volume tout le temps. Tous les sons du monde réel proviennent d’un point particulier dans l’espace, lorsque nous transmettons nos têtes, nous entendons la modification de l’emplacement des sons par rapport à nos oreilles, et nous pouvons suivre l’emplacement de tout son de cette façon. Les sons spatiaux constituent la «sensation» d’un point au-delà de ce que nous pouvons voir.
 
-**Conception de l’interaction**
+**Conception d’interaction**
 
-Dans la plupart des expériences interactives, les sons interaction tels que les effets de son interface utilisateur sont lus dans standard mono ou stéréo. Mais étant donné que tous les éléments de réalité mixte existe dans l’espace 3D, y compris l’interface utilisateur - ces objets tirer parti des sons spatialized. Lorsque vous appuyez sur un bouton dans le monde réel, le son, que nous entendons provient de ce bouton. Par spatializing sons d’interaction, nous fournissons à nouveau une expérience utilisateur plus naturelle et réaliste.
+Dans la plupart des expériences interactives traditionnelles, les sons d’interaction sont lus en mono ou stéréo standard. Toutefois, étant donné que tout en réalité mixte existe dans l’espace 3D, y compris l’interface utilisateur, ces objets tirent parti des sons spatiaux. Quand vous appuyez sur un bouton dans le monde réel, le son que nous entendons provient de ce bouton. En spatialeant les sons d’interaction, nous fournissons encore une expérience utilisateur plus naturelle et plus réaliste.
 
-## <a name="best-practices-when-using-spatial-sound"></a>Meilleures pratiques lors de l’utilisation de son spatial
+## <a name="best-practices-when-using-spatial-sound"></a>Meilleures pratiques lors de l’utilisation d’un son spatial
 
-**Sons réels fonctionnent mieux que les sons de synthèse ou non naturelles**
+**Des sons réels fonctionnent mieux que des sons synthétisés ou non naturels**
 
-Votre utilisateur est plus familiers avec un type de son, le vrai plus sembleront, et plus facilement qu’ils pourront rechercher dans leur environnement. Une voix humaine, par exemple, est un type très courant du son et vos utilisateurs seront localiser aussi rapidement comme une personne réelle dans la salle leur parler.
+Plus votre utilisateur est familiarisé avec un type de son, plus il semblera réaliste et plus il sera facile de le localiser dans son environnement. Une voix humaine, par exemple, est un type de son très courant, et vos utilisateurs la trouveront aussi rapidement qu’une personne réelle dans la salle.
 
-**Attente prévaut sur la simulation**
+**Simulation des atouts de l’attente**
 
-Si vous êtes habitué à un son provenant d’une orientation particulière, vous serez guidée votre attention dans cette direction, quel que soit les signaux spatiales. Par exemple, la plupart du temps que nous entendons oiseaux, ils sont au-dessus de nous. Lecture du son d’un oiseau provoquera très probablement votre utilisateur à rechercher, même si vous placez le son au-dessous. Il s’agit généralement de confusion, et il est recommandé que vous travailliez avec les attentes comme ceux-ci, sans devoir contre eux pour une expérience plus naturelle.
+Si vous êtes utilisé comme un son provenant d’une direction particulière, votre attention sera guidée dans cette direction, indépendamment des indications spatiales. Par exemple, la plupart du temps, nous entendons les oiseaux au-dessus des États-Unis. Le fait de toucher le son d’un oiseau entraînera très probablement la recherche de l’utilisateur, même si vous placez le son en dessous. Ce processus est généralement confus et il est recommandé de travailler avec des attentes comme celles-ci plutôt que de vous en rendre compte pour une expérience plus naturelle.
 
-**La plupart des sons doivent être spatialized**
+**La plupart des sons doivent être spatiaux**
 
-Comme mentionné ci-dessus, tous les éléments de réalité mixte existe dans l’espace 3D - votre sons doivent également. Même de la musique peut parfois profiter de spatialisation, en particulier lorsque celle-ci est liée à un menu ou une autre interface utilisateur.
+Comme indiqué ci-dessus, il existe des sons en réalité dans la réalité mixte. Même la musique peut parfois tirer parti de Spatialization, en particulier lorsqu’elle est liée à un menu ou à une autre interface utilisateur.
 
 **Éviter les émetteurs invisibles**
 
-Étant donné que nous avons été conditionnées à examiner les sons que nous entendons autour de nous, il peut être une expérience non naturelle et même énervant pour localiser un son qui n’a aucune présence visuelle. Sons dans le monde réel ne proviennent pas d’espace vide, par conséquent, vérifiez que si un émetteur audio est placé dans un environnement immédiat de l’utilisateur qu’il est également visible.
+Étant donné que nous avons eu l’air d’examiner les sons que nous avons appris, il peut s’agir d’une expérience inégalée et même unnerving pour localiser un son sans présence visuelle. Les sons dans le monde réel ne proviennent pas d’un espace vide. Assurez-vous que si un émetteur audio est placé dans l’environnement immédiat de l’utilisateur, il peut également être consulté.
 
-**Éviter les masques spatial**
+**Éviter le masquage spatial**
 
-Son spatial s’appuie sur des signaux acoustiques très subtiles qui peuvent être overpowered par d’autres sons. Si vous n’avez pas son stéréo ou sons ambiantes, assurez-vous qu’ils sont suffisamment faibles dans la combinaison de donner à la place pour les détails de votre sons spatialized qui permettre aux utilisateurs de les localiser facilement, laissez-les sonne réaliste et naturelle.
+Le son spatial repose sur des signaux acoustiques très subtiles qui peuvent être suralimentés par d’autres sons. Si vous avez de la musique stéréo ou des sons ambiants, assurez-vous qu’ils sont suffisamment faibles dans la combinaison pour libérer de l’espace pour les détails de vos sons spatiaux qui permettront à vos utilisateurs de les localiser facilement et de les maintenir réalistes et naturels.
 
-## <a name="general-concepts-to-keep-in-mind-when-using-spatial-sound"></a>Concepts généraux à prendre en compte lors de l’utilisation de son spatial
+## <a name="general-concepts-to-keep-in-mind-when-using-spatial-sound"></a>Concepts généraux à prendre en compte lors de l’utilisation d’un son spatial
 
-**Son spatial est une simulation**
+**Le son spatial est une simulation**
 
-L’utilisation la plus fréquente de son spatial fait un bruit croire qu’émanant d’un objet réel ou virtuel dans le monde. Par conséquent, les sons spatialized peuvent les plus pertinentes provenant de ces objets.
+L’utilisation la plus fréquente du son spatial fait apparaître un son comme s’il s’agissait d’un objet réel ou virtuel dans le monde. Par conséquent, les sons spatiaux peuvent prendre le plus de sens en provenance de tels objets.
 
-Notez que la précision perçue de moyens spatiales qui ne doivent pas nécessairement émettent d’un son à partir du centre d’un objet, comme la différence est notable selon la taille de l’objet et la distance à partir de l’utilisateur. Avec petits objets, le point central de l’objet est généralement suffisant. Pour des objets plus volumineux, vous souhaiterez peut-être un émetteur audio ou plusieurs émetteurs à l’emplacement spécifique dans l’objet qui est supposé pour être produire le son.
+Notez que la précision perçue du son spatial signifie qu’un son ne doit pas nécessairement émettre à partir du centre d’un objet, car la différence sera perceptible en fonction de la taille de l’objet et de la distance de l’utilisateur. Avec les petits objets, le point central de l’objet est généralement suffisant. Pour les objets plus grands, vous pouvez souhaiter un émetteur de sons ou plusieurs émetteurs à l’emplacement spécifique au sein de l’objet qui est supposé produire le son.
 
-**Normaliser toutes les sons**
+**Normaliser tous les sons**
 
-Atténuation de la distance se produit rapidement dans le premier compteur à partir de l’utilisateur, comme il le fait dans le monde réel. Tous les fichiers audio doivent être normalisées pour garantir une atténuation distance physiquement précis et vous assurer qu’un entendre lorsque plusieurs mètres (le cas échéant). Le moteur audio spatial gérera la nécessaire pour un son à « sentir » comme il se trouve à une certaine distance (avec une combinaison d’atténuation et des « signaux à distance »), et appliquer toute atténuation en cela peut réduire l’effet d’atténuation. En dehors de la simulation d’un objet réel, initial de DÉSINTÉGRATION de distance *son spatial* sons seront sans doute plus que suffisant pour une une bonne combinaison du son.
+L’atténuation de la distance se produit rapidement dans le premier compteur de l’utilisateur, comme il le fait dans le monde réel. Tous les fichiers audio doivent être normalisés pour garantir une atténuation physique exacte des distances et garantir qu’un signal sonore peut être entendu quand plusieurs mètres sont éloignés (le cas échéant). Le moteur audio spatial gère l’atténuation nécessaire pour qu’un son ressemble à une distance donnée (avec une combinaison d’atténuation et de «signaux de distance») et en appliquant une atténuation en plus de cela peut réduire l’effet. En dehors de la simulation d’un objet réel, l’atténuation de la distance initiale des sons *spatiaux* sera probablement plus que suffisante pour une combinaison correcte de votre audio.
 
-**Objet découverte et des interfaces utilisateur**
+**Détection d’objets et interfaces utilisateur**
 
-Lorsque vous utilisez des signaux audio pour diriger l’attention des utilisateurs au-delà de leur vue actuelle, le son doit être audible et mis en évidence dans la combinaison, bien au-dessus des sons stéréo, tous les autres sons spatialized qui peuvent vous détournera pas de la pile audio directionnelle. Pour les sons et la musique qui sont associés à un élément de l’interface utilisateur (par exemple, un menu), l’émetteur audio doit être attaché à cet objet. Stéréo et autres lecture audio non positionnels peuvent compliquer les éléments spatialized permettant aux utilisateurs de localiser (voir ci-dessus : Évitez de masquage spatial).
+Lorsque vous utilisez des signaux audio pour attirer l’attention de l’utilisateur au-delà de la vue actuelle, le son doit être audible et apparent dans la combinaison, bien au-dessus de tout son stéréo et tout autre son spatial qui peut gêner le signal audio directionnel. Pour les sons et la musique associés à un élément de l’interface utilisateur (par exemple, un menu), l’émetteur audio doit être attaché à cet objet. Le stéréo et autre lecture audio non positionnel peut rendre les éléments spatiaux difficiles à localiser pour les utilisateurs (voir ci-dessus: Évitez le masquage spatial).
 
-**Utiliser le son spatial sur son 3D standard autant que possible**
+**Utiliser le son spatial sur le son 3D standard le plus possible**
 
-En réalité mixte, pour une expérience utilisateur optimale, audio 3D doit être obtenue à l’aide de son spatial plutôt que des technologies audio 3D héritées. En général, l’amélioration spatialisation dépasse vaut-elle le coût UC small 3D standard audio. Audio 3D standard peut être utilisé pour les sons de faible priorité, les sons spatialized mais pas nécessairement liés à un objet physique ou virtuel et les objets que l’utilisateur devez localiser jamais pour interagir avec l’application.
+En réalité mixte, pour une expérience utilisateur optimale, les données audio 3D doivent être obtenues à l’aide de sons spatiaux plutôt que de technologies audio 3D héritées. En général, le Spatialization amélioré mérite le faible coût de l’UC par rapport au son 3D standard. L’audio 3D standard peut être utilisé pour les sons de faible priorité, les sons qui sont spatiaux mais pas nécessairement liés à un objet physique ou virtuel, et les objets que l’utilisateur n’a jamais besoin de localiser pour interagir avec l’application.
 
 ## <a name="see-also"></a>Voir aussi
 * [Son spatial](spatial-sound.md)

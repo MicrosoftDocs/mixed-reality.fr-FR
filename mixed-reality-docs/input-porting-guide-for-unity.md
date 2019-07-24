@@ -1,56 +1,56 @@
 ---
-title: Entrée portage guide pour Unity
-description: Découvrez comment gérer l’entrée pour la réalité mixte de Windows dans Unity.
+title: Guide de Portage d’entrée pour Unity
+description: Apprenez à gérer les entrées pour Windows Mixed Reality dans Unity.
 author: thetuvix
 ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
-keywords: entrée, unity, portage
+keywords: entrée, Unity, Portage
 ms.openlocfilehash: 20e8efa09d20b0a9eaa246015d9c185884f9c216
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59595728"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63515497"
 ---
-# <a name="input-porting-guide-for-unity"></a>Entrée portage guide pour Unity
+# <a name="input-porting-guide-for-unity"></a>Guide de Portage d’entrée pour Unity
 
-Vous pouvez porter votre logique d’entrée à une réalité mixte Windows à l’aide d’une des deux approches, API Input.GetButton/GetAxis général d’Unity qui s’étendent sur plusieurs plateformes, ou le XR spécifiques à Windows. WSA. API d’entrée qui envoient des données plus riches spécifiquement pour les contrôleurs de mouvement et HoloLens mains.
+Vous pouvez porter votre logique d’entrée vers Windows Mixed Reality à l’aide de l’une des deux approches, les API d’entrée générales d’Unity. GetButton/GetAxis qui s’étendent sur plusieurs plateformes ou sur le XR spécifique à Windows. WSA. API d’entrée qui offrent des données plus riches pour les contrôleurs de mouvement et les mains de HoloLens.
 
-## <a name="general-inputgetbuttongetaxis-apis"></a>API de Input.GetButton/GetAxis général
+## <a name="general-inputgetbuttongetaxis-apis"></a>Entrées générales. GetButton/GetAxis API
 
-Unity utilise actuellement ses API Input.GetButton/Input.GetAxis général pour exposer une entrée pour [le SDK Oculus](https://docs.unity3d.com/Manual/OculusControllers.html) et [le SDK OpenVR](https://docs.unity3d.com/Manual/OpenVRControllers.html). Si vos applications sont déjà à l’aide de ces API pour l’entrée, il s’agit de la plus simple pour prendre en charge des contrôleurs de mouvement en réalité mixte Windows : vous devez simplement remapper les boutons et les axes dans le Gestionnaire d’entrée.
+Unity utilise actuellement ses API d’entrée. GetButton/Input. GetAxis pour exposer l’entrée pour [le kit de développement logiciel (SDK) Oculus](https://docs.unity3d.com/Manual/OculusControllers.html) et [le kit de développement logiciel (SDK) OpenVR](https://docs.unity3d.com/Manual/OpenVRControllers.html). Si vos applications utilisent déjà ces API pour l’entrée, il s’agit du chemin le plus simple pour la prise en charge des contrôleurs de mouvement dans Windows Mixed Reality: vous devez simplement remapper les boutons et les axes dans le gestionnaire d’entrée.
 
-Pour plus d’informations, consultez le [table de mappage de bouton/axe Unity](gestures-and-motion-controllers-in-unity.md#unity-buttonaxis-mapping-table) et [vue d’ensemble de l’API Unity courantes](gestures-and-motion-controllers-in-unity.md#common-unity-apis-inputgetbuttongetaxis).
+Pour plus d’informations, consultez le [tableau des mappages bouton Unity/AXIS](gestures-and-motion-controllers-in-unity.md#unity-buttonaxis-mapping-table) et [vue d’ensemble des API Unity courantes](gestures-and-motion-controllers-in-unity.md#common-unity-apis-inputgetbuttongetaxis).
 
-## <a name="windows-specific-xrwsainput-apis"></a>Windows spécifiques XR. WSA. API d’entrée
+## <a name="windows-specific-xrwsainput-apis"></a>XR spécifique à Windows. WSA. API d’entrée
 
-Si votre application génère déjà la logique d’entrée personnalisée pour chaque plateforme, vous pouvez choisir d’utiliser les API d’entrée spatiales spécifiques à Windows sous la **UnityEngine.XR.WSA.Input** espace de noms. Cela vous permet d’accéder à des informations supplémentaires, telles que de la précision de la position ou le type de source, ce qui vous permet d’indiquer les mains et contrôleurs éloignés sur HoloLens.
+Si votre application crée déjà une logique d’entrée personnalisée pour chaque plateforme, vous pouvez choisir d’utiliser les API d’entrée spatiale spécifiques à Windows sous l’espace de noms **UnityEngine. XR. WSA. Input** . Cela vous permet d’accéder à des informations supplémentaires, telles que la précision de la position ou le genre de source, vous permettant de distinguer les mains et les contrôleurs de HoloLens.
 
-Pour plus d’informations, consultez le [vue d’ensemble des APIs UnityEngine.XR.WSA.Input](gestures-and-motion-controllers-in-unity.md#windows-specific-apis-xrwsainput).
+Pour plus d’informations, consultez la [vue d’ensemble des API UnityEngine. XR. WSA. Input](gestures-and-motion-controllers-in-unity.md#windows-specific-apis-xrwsainput).
 
-## <a name="grip-pose-vs-pointing-pose"></a>Pose de poignée et pose de pointage
+## <a name="grip-pose-vs-pointing-pose"></a>Poignée de pose et pose de pointage
 
-Réalité mixte Windows prend en charge les contrôleurs de mouvements dans un large éventail de facteurs de forme, avec la conception de chaque contrôleur qui se différencie par sa relation entre la position des utilisateurs manuellement et naturel « transférer » direction que les applications doit utiliser pour le pointage lors du rendu de la contrôleur.
+Windows Mixed Reality prend en charge les contrôleurs de mouvement dans un large éventail de facteurs de forme, la conception de chaque contrôleur étant différente dans sa relation entre la position de l’utilisateur et la direction «avant» naturelle que les applications doivent utiliser pour pointer lors du rendu de la SideWinder.
 
-Pour mieux représenter ces contrôleurs, il existe deux types de risque de poser que vous pouvez examiner pour chaque source de l’interaction :
+Pour mieux représenter ces contrôleurs, il existe deux types de poses que vous pouvez examiner pour chaque source d’interaction:
 
-* Le **pose de poignée**, représentant l’emplacement de la portée de main détectée par un HoloLens ou palm contenant un contrôleur de mouvement.
-    * Sur des casques IMMERSIFS, cette pose mieux permet de restituer **main de l’utilisateur** ou **détenues par un objet à portée de main de l’utilisateur**, tel qu’un mot de passe ou les électrons.
-    * Le **Attrapez position**: Le centroïde de palm naturellement, tout en maintenant le contrôleur ajustée gauche ou droite pour centrer la position au sein de la poignée.
-    * Le **Attrapez axe de droite de l’orientation**: Lorsque vous ouvrez totalement la main pour former une pose plat 5-doigt, le rayon qui est normal pour votre palm (en avant à partir de la gauche palm, vers l’arrière de palm droite)
-    * Le **Attrapez axe vers l’avant de l’orientation**: Lorsque vous fermez votre main partiellement (comme le cas maintenant le contrôleur), le rayon pointe « forward » via le tube formé par vos doigts non curseur.
-    * Le **Attrapez orientation d’axe**: L’axe à distance impliqué par les définitions de droite, en avant.
-    * Vous pouvez accéder à la pose de poignée via une entrée soit Unity entre fournisseurs API (**[XR. InputTracking](https://docs.unity3d.com/ScriptReference/XR.InputTracking.html). GetLocalPosition/Rotation**) ou via l’API Windows spécifique (**sourceState.sourcePose.TryGetPosition/Rotation**, demandant la pose de poignée).
-* Le **pose de pointeur**, qui représente l’info-bulle du contrôleur qui pointe vers l’avant.
-    * Cette pose est mieux utilisé pour raycast lorsque **vers l’interface utilisateur** lorsque vous restituez le modèle de contrôleur lui-même.
-    * Actuellement, la pose de pointeur est uniquement disponible via l’API Windows spécifique (**sourceState.sourcePose.TryGetPosition/Rotation**, demandant la pose de pointeur).
+* La **poignée pose**, représentant l’emplacement de la paume d’une main détectée par un HoloLens, ou la paume contenant un contrôleur de mouvement.
+    * Sur les casques immersifs, cette pose est idéale pour afficher **la main de l’utilisateur** ou **un objet détenu par l’utilisateur**, tel qu’un arme ou un pistolet.
+    * Position de la **poignée**: Le centre de la poche quand il maintient le contrôleur naturellement, ajusté à gauche ou à droite pour centrer la position au sein de la poignée.
+    * **Axe droit de l’orientation de la poignée**: Lorsque vous ouvrez complètement votre main pour former une pose plate à 5 doigts, le rayon normal à votre Palm (à partir de la poche de gauche, en arrière depuis la paume de droite)
+    * **Axe vers l’avant de l’orientation de la poignée**: Lorsque vous fermez partiellement votre main (comme si vous détenir le contrôleur), le rayon qui pointe vers l’avant dans le tube formé par vos doigts non thumbs.
+    * **Axe vers le haut de l’orientation de la poignée**: Axe vers le haut impliqué par les définitions Right et Forward.
+    * Vous pouvez accéder à la poignée à l’aide de l’API d’entrée entre fournisseurs de l’unité Unity ( **[XR. InputTracking](https://docs.unity3d.com/ScriptReference/XR.InputTracking.html). GetLocalPosition/rotation**) ou par le biais de l’API spécifique à Windows (**SourceState. SourcePose. TryGetPosition/rotation**, demandant la poignée pose).
+* Le **pointeur se pose**, représentant l’extrémité du contrôleur pointant vers l’avant.
+    * Ce modèle est mieux utilisé pour raycast quand vous **pointez sur l’interface utilisateur** lorsque vous rendez le modèle de contrôleur lui-même.
+    * Actuellement, le pointeur pose est disponible uniquement par le biais de l’API spécifique à Windows (**sourceState. sourcePose. TryGetPosition/rotation**, demandant le pointeur pose).
 
-Ces pose les coordonnées sont exprimées en coordonnées universelles de Unity.
+Ces coordonnées de pose sont toutes exprimées en coordonnées universelles Unity.
 
 ## <a name="see-also"></a>Voir aussi
 * [Contrôleurs de mouvement](motion-controllers.md)
-* [Mouvements et les contrôleurs de mouvement dans Unity](gestures-and-motion-controllers-in-unity.md)
-* [UnityEngine.XR.WSA.Input](https://docs.unity3d.com/ScriptReference/XR.WSA.Input.InteractionManager.html)
-* [UnityEngine.XR.InputTracking](https://docs.unity3d.com/ScriptReference/XR.InputTracking.html)
-* [Portage des repères](porting-guides.md)
+* [Mouvements et contrôleurs de mouvement dans Unity](gestures-and-motion-controllers-in-unity.md)
+* [UnityEngine. XR. WSA. Input](https://docs.unity3d.com/ScriptReference/XR.WSA.Input.InteractionManager.html)
+* [UnityEngine. XR. InputTracking](https://docs.unity3d.com/ScriptReference/XR.InputTracking.html)
+* [Guides de Portage](porting-guides.md)

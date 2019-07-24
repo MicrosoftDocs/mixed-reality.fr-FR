@@ -1,18 +1,18 @@
 ---
 Layout: LandingPage
 title: Projets open source
-description: Ces projets open source offrent des scripts, des composants, des exemples et des exemples de développement de réalité mixte chez Microsoft qui peut aider à accélérer votre développement de réalité mixte.
+description: Ces projets open source proposent des scripts, des composants, des exemples et des exemples du développement de réalité mixte chez Microsoft qui peuvent vous aider à accélérer votre développement de réalité mixte.
 author: mattzmsft
 ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
-keywords: modèle de code, exemple, extrait de code, script, composant open source, projet
+keywords: modèle, code, exemple, extrait, script, composant, open source, projet
 ms.openlocfilehash: b9f48dad3ef918faea79b3a13019400cc522a332
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59595735"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63524999"
 ---
 # <a name="open-source-projects"></a>Projets open source
 
@@ -22,45 +22,45 @@ ms.locfileid: "59595735"
 
 ### <a name="mixed-reality-toolkithttpsgithubcommicrosoftholotoolkit"></a>[Kit de ressources de réalité mixte](https://github.com/microsoft/HoloToolkit)
 
-Le Toolkit de réalité mixte est une collection de scripts et les composants destinés à accélérer le développement d’applications qui ciblent Microsoft HoloLens et Windows Mixed Reality casques. Le projet est destiné à réduire les barrières à l’entrée à créer des applications de réalité mixte et contribuer à la Communauté, tous les besoins d’évolution. 
+La boîte à outils de réalité mixte est un ensemble de scripts et de composants destinés à accélérer le développement d’applications ciblant Microsoft HoloLens et les casques de réalité mixte Windows. Le projet a pour but de réduire le nombre d’obstacles qui gênent la création d’applications de réalité mixte et d’apporter une contribution à la Communauté de la réalité mixte. 
 
-### <a name="mixed-reality-toolkit---unity-mrtkhttpsgithubcommicrosoftholotoolkit-unity"></a>[Réalité mixte Toolkit - Unity (MRTK)](https://github.com/microsoft/HoloToolkit-Unity)
+### <a name="mixed-reality-toolkit---unity-mrtkhttpsgithubcommicrosoftholotoolkit-unity"></a>[Boîte à outils de réalité mixte-Unity (MRTK)](https://github.com/microsoft/HoloToolkit-Unity)
 
-Mixte réalité Toolkit - Unity utilise du code à partir de la base Toolkit de réalité mixte et le rend plus faciles à utiliser dans Unity. 
+La boîte à outils de réalité mixte-Unity utilise du code du Toolkit de réalité mixte de base et facilite son utilisation dans Unity. 
 
-### <a name="mixed-reality-companion-kithttpsgithubcommicrosofthololenscompanionkit"></a>[Kit d’accompagnement de réalité mixte](https://github.com/Microsoft/HoloLensCompanionKit)
+### <a name="mixed-reality-companion-kithttpsgithubcommicrosofthololenscompanionkit"></a>[Kit d’accompagnement de la réalité mixte](https://github.com/Microsoft/HoloLensCompanionKit)
 
-Il s’agit d’un référentiel de réalité mixte Toolkit-style bits de code et de composants qui peuvent pas directement exécuté sur Microsoft HoloLens ou des casques IMMERSIFS mais au lieu de cela jumelé avec eux pour créer des expériences ciblant Windows Mixed Reality. 
+Il s’agit d’un référentiel de style Toolkit de réalité mixte pour les bits de code et les composants qui peuvent ne pas s’exécuter directement sur Microsoft HoloLens ou sur des casques immersifs, mais plutôt avec eux pour créer des expériences ciblant Windows Mixed Reality. 
 
 ### <a name="windows-device-portal-wrapperhttpsgithubcommicrosoftwindowsdeviceportalwrapper"></a>[Wrapper du Portail d'appareil Windows](https://github.com/Microsoft/WindowsDevicePortalWrapper)
 
-Une bibliothèque de client qui encapsule les API REST de Windows Device Portal.
+Bibliothèque cliente qui encapsule les API REST du portail d’appareils Windows.
 
 ![Logo MRDL](images/MRDL_Logo_Rev.png)
 
 ### <a name="mixed-reality-design-labs-mrdlhttpsgithubcommicrosoftmrdesignlabsunity"></a>[Laboratoires de conception de réalité mixte (MRDL)](https://github.com/Microsoft/MRDesignLabs_Unity)
 
-Les laboratoires de conception de réalité mixte (MRDL) est une collection d’exemples bien documentés, open source, basé sur les fondations de [Toolkit de réalité mixte - Unity (MRTK)](https://github.com/microsoft/HoloToolkit-Unity). L’objectif est d’inspirer les créateurs et les aider à développer la réalité mixte attrayants et efficaces des expériences.
+Les laboratoires de conception de la réalité mixte (MRDL) sont un ensemble d’exemples Open source bien documentés, basés sur la Fondation de la [réalité mixte Toolkit-Unity (MRTK)](https://github.com/microsoft/HoloToolkit-Unity). L’objectif est d’inspirer les créateurs et de les aider à créer des expériences de réalité mixte efficaces et attrayantes.
 
-MRTK propose des composants de blocs de construction et MRDL s’appuie sur les pour offrir des expériences et des exemples plus complets. Comme son nom l’indique, ces exemples sont expérimentales / « works en cours », dus à la conception de l’expérience, qui fournissent des créateurs avec des exemples concrets de meilleures pratiques pour des expériences d’application, l’expérience utilisateur, et l’implémentation de MRTK. Par « expérimental », nous entendons que MRDL n’est pas officiellement pris en charge/gérée par Microsoft (par exemple, mise à jour aux versions plus récentes de Unity), tandis que MRTK est officiellement pris en charge/conservés.
+MRTK offre des composants de bloc de construction et MRDL les utilise pour offrir des expériences et des exemples plus complets. Comme son nom l’indique, ces exemples sont expérimentaux/«opérationnels en cours», pilotés par l’expérience de conception, qui fournissent aux créateurs des exemples concrets de pratiques recommandées pour les expériences d’applications, l’expérience utilisateur et l’implémentation de MRTK. Par «expérimental», nous entendons que MRDL n’est pas officiellement pris en charge/géré par Microsoft (par exemple, mis à jour vers les dernières versions d’Unity), tandis que MRTK est officiellement pris en charge/géré.
 
 
 ## <a name="sample-apps"></a>Exemples d’applications
 
-![Exemple d’application Galaxy Explorer](images/galaxyexplorer-tile.jpg)
+![Exemple d’application de l’Explorateur Galaxy](images/galaxyexplorer-tile.jpg)
 ### <a name="galaxy-explorergalaxy-explorermd"></a>[Galaxy Explorer](galaxy-explorer.md)
 
-Le projet de l’Explorateur de Galaxy est prêt. Vous partagé vos idées avec la Communauté, que vous choisissez une application, regardée une équipe générez-le et pouvez désormais obtenir le code source. 
+Le projet Galaxy Explorer est prêt. Vous avez partagé vos idées avec la communauté, vous avez choisi une application, vous avez regardé une équipe la créer et vous pouvez maintenant en obtenir le code source. 
 
-![Tableau périodique de l’exemple d’application éléments](images/periodictableofelementsapp-tile.jpg)
+![Table périodique de l’exemple d’application d’éléments](images/periodictableofelementsapp-tile.jpg)
 ### <a name="periodic-table-of-the-elementsperiodic-table-of-the-elementsmd"></a>[Tableau périodique des éléments](periodic-table-of-the-elements.md)
 
 Découvrez comment composer un tableau d’objets dans l’espace 3D avec différents types de surface à l’aide d’une collection d’objets.
 
-![Exemple d’application lunaire Module](images/lunar-module-tile.png)
-### <a name="lunar-modulelunar-modulemd"></a>[Module de lunaire](lunar-module.md)
+![Exemple d’application de module lunaire](images/lunar-module-tile.png)
+### <a name="lunar-modulelunar-modulemd"></a>[Lunar Module](lunar-module.md)
 
-Découvrez comment étendre les mouvements de base de HoloLens avec suivi de deux mains et d’entrée d’un contrôleur Xbox.
+Découvrez comment étendre les mouvements de base d’HoloLens avec suivi des deux mains et l’entrée d’un contrôleur Xbox.
 
 
 

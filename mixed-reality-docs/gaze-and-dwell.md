@@ -5,14 +5,13 @@ author: liamartinez
 ms.author: liamar
 ms.date: 05/13/2019
 ms.topic: article
-ms.localizationpriority: high
 keywords: Mixed Reality, pointer du regard, stabiliser, interaction, concevoir
-ms.openlocfilehash: 70b25949380679d2edc81b07ab54f24fa20e3f3d
-ms.sourcegitcommit: 9b6949d7cd2e67e6bde9b32aebeaeea325baa6c4
-ms.translationtype: HT
+ms.openlocfilehash: d522ca3a6f36995959e8e6e87482279d05bf0aa3
+ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66516008"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68387542"
 ---
 # <a name="head-gaze-and-dwell"></a>Suivre de la tête et stabiliser
 
@@ -90,7 +89,8 @@ Utilisez un court délai avant de démarrer le retour visuel afin d’éviter le
 ## <a name="ui-patterns"></a>Schémas de l’interface utilisateur
 
 ### <a name="high-frequency-buttons"></a>Boutons à haute fréquence
-![Bouton Suivant dans Microsoft Dynamics 365 Guides](images/GuideNextButton.png "Bouton Suivant dans Microsoft Dynamics 365 Guides") Les boutons à haute fréquence sont les boutons qui sont couramment utilisés tout au long d’une application. Les boutons Suivant et Précédent dans Microsoft Dynamics 365 Guides constituent un bon exemple.
+![Bouton suivant de Microsoft Dynamics 365 guides](images/GuideNextButton.png "Bouton suivant de Microsoft Dynamics 365 guides")<br>
+*Les boutons à fréquence élevée sont des boutons utilisés couramment dans une application. Les boutons suivant et précédent dans les guides Microsoft Dynamics 365 sont un bon exemple.*
 
 Les boutons à haute fréquence doivent :
 * Être des boutons plus grands et plus faciles à atteindre avec un suivi de la tête
@@ -114,7 +114,8 @@ Quand une action a un impact significatif, telle que le prélèvement d’une so
 Les boutons bascule nécessitent une logique nuancée pour fonctionner correctement. Quand l’utilisateur reste sur un bouton bascule et l’active, il doit quitter le bouton, puis revenir pour redémarrer la logique de stabilisation. Il est important que l’utilisateur puisse clairement identifier si un bouton bascule est à l’état actif ou inactif. 
 
 ### <a name="list-views"></a>Affichages de liste
-![Boîte de dialogue de confirmation dans Microsoft Dynamics 365 Guides](images/GuidesListView.png "Boîte de dialogue de confirmation dans Microsoft Dynamics 365 Guides") les vues de liste présentent un défi particulier pour l’entrée par suivi de la tête et stabilisation. L’utilisateur doit être en mesure de balayer le contenu sans avoir le sentiment de devoir tâtonner autour des cibles de stabilisation. 
+![Boîte de dialogue de confirmation dans Microsoft Dynamics 365 Guides](images/GuidesListView.png "Boîte de dialogue de confirmation dans Microsoft Dynamics 365 Guides")<br>
+*Les affichages de liste présentent un défi particulier pour les entrées de point de vue et de point d’entrée. Les utilisateurs doivent être en mesure d’analyser le contenu sans avoir à se sentir Tiptoe autour des cibles du logement.*
 
 Quelques conseils pour la conception des vues de liste :
 * Mettre en surbrillance toute la ligne quand elle est suivie de la tête, mais ne commencer la stabilisation que si le suivi de la tête se trouve sur la cible de stabilisation souhaitée
@@ -123,7 +124,7 @@ Quelques conseils pour la conception des vues de liste :
 * Ne pas afficher toutes les cibles de stabilisation à la fois pour éviter que l’interface utilisateur ait un caractère répétitif
 * Réutiliser le même schéma aussi souvent que possible pour procurer une expérience utilisateur familière
  
- ## <a name="see-also"></a>Voir également
+ ## <a name="see-also"></a>Voir aussi
 * [Manipulation directe avec les mains](direct-manipulation.md)
 * [Pointer et valider avec les mains](point-and-commit.md)
 * [Interactions instinctuelles](interaction-fundamentals.md)

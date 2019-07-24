@@ -1,247 +1,247 @@
 ---
-title: MR et 310 Azure - détection d’objets
-description: Effectuez ce cours pour apprendre à former un modèle d’apprentissage, puis utilisez le modèle formé pour reconnaître des objets similaires et leur position dans le monde réel à partir d’une application de réalité mixte.
+title: MR et Azure 310-détection d’objets
+description: Suivez ce cours pour apprendre à former un modèle de Machine Learning, puis à utiliser le modèle formé pour reconnaître des objets similaires et leur position dans le monde réel à partir d’une application de réalité mixte.
 author: drneil
 ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
-keywords: Azure, vision personnalisée, l’objet de détection, mixte réalité academy, unity, didacticiel, api, hololens
+keywords: Azure, vision personnalisée, détection d’objets, réalité mixte, Académie, Unity, didacticiel, API, hololens
 ms.openlocfilehash: 89ee79943a88de8a34c679ae33621db5770908b0
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59593286"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63544458"
 ---
 >[!NOTE]
->Les didacticiels Académie de réalité mixte ont été conçus avec HoloLens (1er gen) et des casques IMMERSIFS réalité mixte à l’esprit.  Par conséquent, nous estimons qu’il est important de laisser ces didacticiels en place pour les développeurs qui cherchent toujours pour obtenir des conseils de développement pour ces appareils.  Ces didacticiels seront **_pas_** être mis à jour avec les ensembles d’outils ou les interactions utilisées pour HoloLens 2 dernières.  Ils seront conservées pour continuer à travailler sur les appareils pris en charge. Il y aura une nouvelle série de didacticiels seront publiés dans le futur qui va vous montrer comment développer pour HoloLens 2.  Cet avis sera mis à jour avec un lien vers ces didacticiels lorsqu’elles sont validées.
+>Les didacticiels d’Académie de la réalité mixte ont été conçus avec les casques immersif (1er génération) et de réalité mixte à l’esprit.  Par conséquent, nous pensons qu’il est important de ne pas mettre en place ces didacticiels pour les développeurs qui cherchent toujours des conseils en matière de développement pour ces appareils.  Ces didacticiels ne seront **_pas_** mis à jour avec les derniers ensembles d’outils ou interactions utilisés pour HoloLens 2.  Ils seront conservés pour continuer à travailler sur les appareils pris en charge. Une nouvelle série de didacticiels sera publiée à l’avenir qui vous montrera comment développer pour HoloLens 2.  Cet avis sera mis à jour avec un lien vers ces didacticiels lors de leur publication.
 
-# <a name="mr-and-azure-310-object-detection"></a>MR et Azure 310 : Détection d’objets
+# <a name="mr-and-azure-310-object-detection"></a>Mr et Azure 310: Détection d’objet
 
-Dans ce cours, vous allez apprendre à reconnaître le contenu visuel personnalisé et sa position spatiale dans une image fournie, à l’aide de Vision personnalisée Azure des fonctionnalités de « Détection d’objets » dans une application de réalité mixte.
+Dans ce cours, vous allez apprendre à reconnaître le contenu visuel personnalisé et sa position spatiale dans une image fournie, en utilisant les fonctionnalités de «détection d’objets» d’Azure Custom Vision dans une application de réalité mixte.
 
-Ce service vous permettra de former un modèle d’apprentissage automatique à l’aide d’images de l’objet. Vous allez utiliser ensuite le modèle formé pour reconnaître des objets similaires et se rapprocher de leur emplacement dans le monde réel, tel que fourni par la capture de l’appareil photo de Microsoft HoloLens ou une caméra de se connecter à un PC pour des casques IMMERSIFS (VR).
+Ce service vous permet d’effectuer l’apprentissage d’un modèle de Machine Learning à l’aide d’images d’objet. Vous allez ensuite utiliser le modèle formé pour reconnaître des objets similaires et se rapprocher de leur emplacement dans le monde réel, tel que fourni par la capture de l’appareil photo de Microsoft HoloLens ou d’une caméra qui se connecte à un PC pour les casques immersifs (VR).
 
-![résultat de cours](images/AzureLabs-Lab310-00.png)
+![résultat du cours](images/AzureLabs-Lab310-00.png)
 
-**Vision personnalisée Azure, la détection d’objets** est un Service Microsoft qui permet aux développeurs de créer des classifieurs de l’image personnalisée. Ces classifieurs peuvent ensuite servir avec les nouvelles images pour détecter des objets au sein de cette nouvelle image, en fournissant **limites de la zone** dans l’image elle-même. Le Service fournit un portail en ligne simple et facile à utiliser, pour simplifier ce processus. Pour plus d’informations, consultez les liens suivants :
+**Azure Custom vision, la détection d’objets** est un service Microsoft qui permet aux développeurs de créer des classifieurs d’images personnalisées. Ces classifieurs peuvent ensuite être utilisés avec de nouvelles images pour détecter des objets dans cette nouvelle image, en fournissant des **limites de zone** au sein de l’image elle-même. Le service fournit un portail en ligne simple et facile à utiliser pour simplifier ce processus. Pour plus d’informations, consultez les liens suivants:
 
-* [Page de Vision personnalisée Azure](https://docs.microsoft.com/azure/cognitive-services/custom-vision-service/home)
-* [Limites et Quotas](https://docs.microsoft.com/azure/cognitive-services/custom-vision-service/limits-and-quotas)
+* [Page Custom Vision Azure](https://docs.microsoft.com/azure/cognitive-services/custom-vision-service/home)
+* [Limites et quotas](https://docs.microsoft.com/azure/cognitive-services/custom-vision-service/limits-and-quotas)
 
-À la fin de ce cours, vous disposez d’une application de réalité mixte qui sera en mesure d’effectuer les opérations suivantes :
+À la fin de ce cours, vous disposerez d’une application de réalité mixte qui sera en mesure d’effectuer les opérations suivantes:
 
-1. L’utilisateur sera en mesure de *les regards* à un objet, ils ont formé à l’aide de Azure Custom Vision Service, détection d’objets. 
-2. L’utilisateur utilisera la *appuyez sur* mouvement à capturer une image de ce qu’ils cherchent à.
-3. L’application envoie l’image à Azure Custom Vision Service.
-4. Il y aura une réponse à partir du Service qui affiche le résultat de la reconnaissance en tant que texte de l’espace universel. Cela doit être effectué via l’utilisation spatiale de suivi du Microsoft HoloLens, comme un moyen de comprendre la position du monde de l’objet reconnu, puis en utilisant le *balise* associé à ce qui est détecté dans l’image, à fournir le texte d’étiquette.
+1. L’utilisateur sera en *mesure de* pointer vers un objet, qu’il a formé à l’aide du service vision personnalisée Azure, détection d’objet. 
+2. L’utilisateur utilise le geste *Tap* pour capturer une image de ce qu’il examine.
+3. L’application enverra l’image à la Service Vision personnalisée Azure.
+4. Il y aura une réponse du service qui affichera le résultat de la reconnaissance sous forme de texte d’espace universel. Pour ce faire, vous devez utiliser le suivi spatial de Microsoft HoloLens, afin de comprendre la position universelle de l’objet reconnu, puis l’utilisation de la *balise* associée à ce qui est détecté dans l’image, pour fournir le texte de l’étiquette.
 
-Ce cours couvre également manuellement durant le chargement d’images, création de balises, et de formation au Service, à reconnaître différents objets (dans l’exemple fourni, une tasse), en définissant le *boîte limite* au sein de l’image que vous envoyez. 
+Ce cours couvre également le chargement manuel d’images, la création de balises et l’apprentissage du service, pour reconnaître différents objets (dans l’exemple fourni, une tasse), en définissant la *zone limite* dans l’image que vous envoyez. 
 
 > [!IMPORTANT]
-> Après la création et l’utilisation de l’application, le développeur doit revenir à Azure Custom Vision Service et d’identifier les prédictions générées par le Service et déterminer si elles ont été correctes ou non (par le biais de balisage quoi que ce soit le Service manquée, et ajuster la *englobants*). Le Service peut ensuite être ré-formé, ce qui augmente la probabilité qu’il reconnaissance des objets du monde réel.
+> Après la création et l’utilisation de l’application, le développeur doit revenir à la Service Vision personnalisée Azure, identifier les prédictions effectuées par le service et déterminer si elles sont correctes ou non (en marquant tout ce que le service a manqué) et réglage des *zones englobantes*). Le service peut ensuite être réformé, ce qui augmente la probabilité qu’il reconnaisse les objets réels.
 
-Ce cours va vous apprendre à obtenir les résultats à partir de Azure Custom Vision Service, détection d’objets, dans une application basée sur Unity. Il le sera jusqu'à vous permettent d’appliquer ces concepts à une application personnalisée, que vous voudrez peut-être générer.
+Ce cours vous apprend à obtenir les résultats de la Service Vision personnalisée Azure, la détection d’objets, dans un exemple d’application à base d’Unity. Il vous faudra appliquer ces concepts à une application personnalisée que vous pouvez générer.
 
 ## <a name="device-support"></a>Prise en charge des appareils
 
 <table>
 <tr>
-<th>Cours</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Casques IMMERSIFS</a></th>
+<th>Course</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Casques immersifs</a></th>
 </tr><tr>
-<td> MR et Azure 310 : Détection d’objets</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> </td>
+<td> MR et Azure 310: Détection d’objet</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> </td>
 </tr>
 </table>
 
 ## <a name="prerequisites"></a>Prérequis
 
 > [!NOTE]
-> Ce didacticiel est conçu pour les développeurs qui ont une expérience basique avec Unity et C#. Veuillez également être conscient que les conditions préalables et les instructions écrites dans ce document représentent ce qui a été testé et vérifié au moment de l’écriture (juillet 2018). Vous êtes libre d’utiliser la dernière version du logiciel, comme indiqué dans le [installer les outils](https://docs.microsoft.com/windows/mixed-reality/install-the-tools) article, même si elle pas supposer que les informations contenues dans ce cours seront parfaitement correspondre à ce que vous trouverez dans le logiciel plus récent que celui indiqué ci-dessous.
+> Ce didacticiel est conçu pour les développeurs qui ont une expérience de base C#avec Unity et. Sachez également que les conditions préalables et les instructions écrites dans ce document représentent les éléments qui ont été testés et vérifiés au moment de la rédaction (juillet 2018). Vous êtes libre d’utiliser le logiciel le plus récent, tel qu’indiqué dans l’article [installer les outils](https://docs.microsoft.com/windows/mixed-reality/install-the-tools) , bien qu’il ne soit pas supposé que les informations de ce cours correspondent parfaitement à ce que vous trouverez dans les logiciels plus récents que ceux répertoriés ci-dessous.
 
-Nous recommandons le matériel et logiciel pour ce cours suivants :
+Nous vous recommandons d’utiliser le matériel et les logiciels suivants pour ce cours:
 
 - Un PC de développement
-- [Windows 10 Fall Creators Update (ou version ultérieure) avec le mode développeur est activé](https://docs.microsoft.com/windows/mixed-reality/install-the-tools#installation-checklist-for-hololens)
-- [Le SDK Windows 10 dernières](https://docs.microsoft.com/windows/mixed-reality/install-the-tools#installation-checklist-for-hololens)
-- [Unity 2017.4 LTS](https://docs.microsoft.com/windows/mixed-reality/install-the-tools#installation-checklist-for-hololens)
-- [Visual Studio 2017](https://docs.microsoft.com/windows/mixed-reality/install-the-tools#installation-checklist-for-hololens)
-- Un [Microsoft HoloLens](https://docs.microsoft.com/windows/mixed-reality/hololens-hardware-details) avec le mode développeur est activé
-- Accès à Internet pour le programme d’installation Azure et de récupération du Service Vision personnalisée
--  Une série d’images au moins quinze (15) sont nécessaires) pour chaque objet que vous souhaitez que la Vision personnalisée pour reconnaître. Si vous le souhaitez, vous pouvez utiliser les images déjà fournis avec ce cours, [une série de tasses](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20310%20-%20Object%20detection/Cup%20Images.zip)).
+- [Windows 10 automne Creators Update (ou version ultérieure) avec le mode développeur activé](https://docs.microsoft.com/windows/mixed-reality/install-the-tools#installation-checklist-for-hololens)
+- [Le dernier Kit de développement logiciel Windows 10](https://docs.microsoft.com/windows/mixed-reality/install-the-tools#installation-checklist-for-hololens)
+- [Unity 2017,4 LTS](https://docs.microsoft.com/windows/mixed-reality/install-the-tools#installation-checklist-for-hololens)
+- [Visual Studio 2017](https://docs.microsoft.com/windows/mixed-reality/install-the-tools#installation-checklist-for-hololens)
+- [Microsoft HoloLens](https://docs.microsoft.com/windows/mixed-reality/hololens-hardware-details) avec mode développeur activé
+- Accès à Internet pour l’installation d’Azure et la récupération de Service Vision personnalisée
+-  Une série d’au moins quinze (15) images sont requises) pour chaque objet que vous souhaitez que le Custom Vision reconnaître. Si vous le souhaitez, vous pouvez utiliser les images déjà fournies dans ce cours, [une série de tasses](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20310%20-%20Object%20detection/Cup%20Images.zip)).
 
 ## <a name="before-you-start"></a>Avant de commencer
 
-1.  Pour éviter de rencontrer des problèmes de création de ce projet, il est fortement recommandé que vous créez le projet mentionné dans ce didacticiel dans un dossier racine ou près de racine (chemins d’accès de dossier long peuvent entraîner des problèmes au moment de la génération).
-2.  Configurer et tester votre HoloLens. Si vous avez besoin de prendre en charge de la configuration de votre HoloLens, [veillez à consulter l’article le programme d’installation de HoloLens](https://docs.microsoft.com/hololens/hololens-setup). 
-3.  Il est judicieux d’effectuer l’étalonnage et le réglage de capteur lorsque vous commencez le développement d’une nouvelle application HoloLens (parfois, il peut aider à effectuer ces tâches pour chaque utilisateur). 
+1.  Pour éviter de rencontrer des problèmes lors de la création de ce projet, il est fortement recommandé de créer le projet mentionné dans ce didacticiel dans un dossier racine ou dans un dossier racine (les chemins de dossiers longs peuvent entraîner des problèmes au moment de la génération).
+2.  Configurez et testez votre HoloLens. Si vous avez besoin de la prise en charge de la configuration de votre HoloLens, [consultez l’article Configuration de hololens](https://docs.microsoft.com/hololens/hololens-setup). 
+3.  Il est judicieux d’effectuer un réglage de l’étalonnage et du capteur au début du développement d’une nouvelle application HoloLens (parfois, il peut être utile d’effectuer ces tâches pour chaque utilisateur). 
 
-Aide sur l’étalonnage, veuillez suivre ce [lien vers l’article d’étalonnage HoloLens](calibration.md#hololens).
+Pour obtenir de l’aide sur l’étalonnage, veuillez suivre ce [lien vers l’article d’étalonnage HoloLens](calibration.md#hololens).
 
-Pour une aide sur le réglage de capteur, veuillez suivre ce [lien vers l’article réglage de capteur HoloLens](sensor-tuning.md).
+Pour obtenir de l’aide sur le réglage du capteur, veuillez suivre ce [lien vers l’article sur le paramétrage du capteur HoloLens](sensor-tuning.md).
 
-## <a name="chapter-1---the-custom-vision-portal"></a>Chapitre 1 : le portail de Vision personnalisée
+## <a name="chapter-1---the-custom-vision-portal"></a>Chapitre 1-portail Custom Vision
 
-Pour utiliser le **Azure Custom Vision Service**, vous devez configurer une instance de celle-ci à la disposition de votre application.
+Pour utiliser le **service vision personnalisée Azure**, vous devez configurer une instance de ce dernier pour qu’il soit mis à la disposition de votre application.
 
-1.  Accédez [à la **Service Vision personnalisée** page principale](https://azure.microsoft.com/services/cognitive-services/custom-vision-service/).
+1.  Accédez [à la page principale de **service vision personnalisée** ](https://azure.microsoft.com/services/cognitive-services/custom-vision-service/).
 
-2.  Cliquez sur **mise en route**.
+2.  Cliquez sur **prise en main**.
 
     ![](images/AzureLabs-Lab310-01.png)
 
-3.  Connectez-vous au portail de Vision personnalisée.
+3.  Connectez-vous au portail Custom Vision.
 
     ![](images/AzureLabs-Lab310-02.png)
 
-4.  Si vous n’avez pas déjà un compte Azure, vous devrez créer un. Si vous suivez ce didacticiel dans une situation de laboratoire ou salle de classe, demandez à votre formateur ou celui des surveillants pour la configuration de votre nouveau compte.
+4.  Si vous n’avez pas encore de compte Azure, vous devez en créer un. Si vous suivez ce didacticiel dans une situation de classe ou de laboratoire, demandez à votre formateur ou à l’un des prostructors de vous aider à configurer votre nouveau compte.
 
-5.  Une fois que vous êtes connecté pour la première fois, vous serez invité au *termes du contrat de Service* Panneau de configuration. Cliquez sur la case à cocher pour *accepte les termes du contrat*. Puis cliquez sur **J’accepte**.
+5.  Une fois que vous êtes connecté pour la première fois, vous êtes invité à entrer dans le panneau *des conditions d’accès* . Cochez la case pour *accepter les termes du contrat*. Cliquez ensuite sur **J’accepte**.
 
     ![](images/AzureLabs-Lab310-03.png)
 
-6.  Ayant accepté les termes du contrat, vous êtes maintenant dans le *Mes projets* section. Cliquez sur **nouveau projet**.
+6.  Après avoir accepté les termes, vous vous trouvez maintenant dans la section *mes projets* . Cliquez sur **nouveau projet**.
 
     ![](images/AzureLabs-Lab310-04.png)
 
-7.  Un onglet s’affiche sur le côté droit, qui vous invite à spécifier des champs pour le projet.
+7.  Un onglet s’affiche sur le côté droit, ce qui vous invite à spécifier certains champs pour le projet.
 
     1.  Insérer un nom pour votre projet
 
     2.  Insérer une description pour votre projet (**facultatif**)
 
-    3.  Choisissez un **groupe de ressources** ou créez-en un. Un groupe de ressources offre un moyen pour surveiller, contrôler l’accès, approvisionner et gérer la facturation pour une collection de ressources Azure. Il est recommandé de garder tous les services Azure associés à un projet unique (par exemple, par exemple, ces cours) sous un groupe de ressources communs).
+    3.  Choisissez un **groupe de ressources** ou créez-en un. Un groupe de ressources permet de surveiller, de contrôler l’accès, de configurer et de gérer la facturation d’un regroupement de ressources Azure. Il est recommandé de conserver tous les services Azure associés à un seul projet (par exemple, ces cours) dans un groupe de ressources commun.
 
         ![](images/AzureLabs-Lab310-05.png)
 
         > [!NOTE]
-        > Si vous souhaitez [en savoir plus sur les groupes de ressources Azure, accédez à la documentation associée](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-portal)
+        > Si vous souhaitez [en savoir plus sur les groupes de ressources Azure, accédez aux documents associés](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-portal) .
 
-    4.  Définir le **Types de projets** comme **détection d’objets (version préliminaire)**.
+    4.  Définissez les **types de projets** en tant que **détection d’objet (** préversion).
 
-8.  Une fois que vous avez terminé, cliquez sur **créer un projet**, et vous êtes redirigé vers la page de projet de Service Vision personnalisée.
+8.  Une fois que vous avez terminé, cliquez sur **créer un projet**. vous êtes alors redirigé vers la page du projet service vision personnalisée.
 
 
-## <a name="chapter-2---training-your-custom-vision-project"></a>Chapitre 2 - formation de votre projet de Vision personnalisée
+## <a name="chapter-2---training-your-custom-vision-project"></a>Chapitre 2-formation de votre projet Custom Vision
 
-Une fois dans le portail de Vision personnalisée, votre objectif principal est pour l’apprentissage de votre projet pour reconnaître des objets spécifiques dans des images.
+Une fois dans le portail Custom Vision, votre objectif principal est de former votre projet à la reconnaissance d’objets spécifiques dans les images.
 
-Vous devez au moins quinze (15) les images pour chaque objet que vous souhaitez que votre application à reconnaître. Vous pouvez utiliser les images fournies avec ce cours ([une série de tasses](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20310%20-%20Object%20detection/Cup%20Images.zip)).
+Vous avez besoin d’au moins quinze (15) images pour chaque objet que vous souhaitez que votre application reconnaisse. Vous pouvez utiliser les images fournies avec ce cours ([une série de tasses](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20310%20-%20Object%20detection/Cup%20Images.zip)).
 
-Pour l’apprentissage de votre projet de Vision personnalisée :
+Pour former votre projet Custom Vision:
 
-1.  Cliquez sur le **+** situé en regard **balises**.
+1.  Cliquez sur le **+** bouton en regard de balises.
 
     ![](images/AzureLabs-Lab310-06.png)
 
-2.  Ajouter un **nom** pour la balise qui sera utilisée pour associer vos images avec. Dans cet exemple, nous utilisons des images de tasses de reconnaissance, afin d’avoir nommé la balise pour ce faire, **Cup**. Cliquez sur **enregistrer** une fois terminé.
+2.  Ajoutez un **nom** pour la balise qui sera utilisée pour associer vos images à. Dans cet exemple, nous utilisons des images de tasses pour la reconnaissance, vous avez donc nommé la balise pour This, **Cup**. Cliquez sur **Enregistrer** une fois l’opération terminée.
 
     ![](images/AzureLabs-Lab310-07.png)
 
-3.  Vous remarquerez votre **balise** a été ajouté (vous devrez peut-être recharger votre page pour qu’il apparaisse). 
+3.  Vous remarquerez  que votre balise a été ajoutée (vous devrez peut-être recharger votre page pour qu’elle apparaisse). 
 
     ![](images/AzureLabs-Lab310-08.png)
 
-4.  Cliquez sur **ajouter des images** dans le centre de la page.
+4.  Cliquez sur **Ajouter des images** au centre de la page.
 
     ![](images/AzureLabs-Lab310-09.png)
 
-5.  Cliquez sur **parcourir les fichiers locaux**et cliquez sur Parcourir pour les images que vous voulez charger un objet, avec le minimum étant quinze (15).
+5.  Cliquez sur **Parcourir les fichiers locaux**et recherchez les images que vous souhaitez télécharger pour un objet, avec un minimum de 15 (15).
 
     > [!TIP]
     >  Vous pouvez sélectionner plusieurs images à la fois, à télécharger.
 
     ![](images/AzureLabs-Lab310-10.png)
 
-6.  Appuyez sur **charger des fichiers** une fois que vous avez sélectionné toutes les images vous souhaitez effectuer le projet avec l’apprentissage. Les fichiers de lancer le chargement. Une fois que vous avez la confirmation du téléchargement, cliquez sur **fait**.
+6.  Appuyez sur **charger les fichiers** une fois que vous avez sélectionné toutes les images avec lesquelles vous souhaitez former le projet. Le chargement des fichiers va commencer. Une fois que vous avez confirmé le téléchargement, cliquez sur **terminé**.
 
     ![](images/AzureLabs-Lab310-11.png)
 
-7.  À ce stade vos images sont téléchargées, mais pas marquées.
+7.  À ce stade, vos images sont chargées, mais elles ne sont pas marquées.
 
     ![](images/AzureLabs-Lab310-12.png)
 
-8.  Pour marquer vos images, utilisez votre souris. Lorsque vous pointez sur votre image, une mise en surbrillance de sélection vous aider en dessinant automatiquement une sélection autour de votre objet. Si elle n’est pas exacte, vous pouvez dessiner vos propres. Pour cela, en maintenant le clic gauche sur la souris, en faisant glisser la zone sélectionnée pour votre objet. 
+8.  Pour baliser vos images, utilisez la souris. Au fur et à mesure que vous pointez sur votre image, une sélection de sélection vous aidera en dessinant automatiquement une sélection autour de votre objet. Si ce n’est pas exact, vous pouvez créer les vôtres. Pour ce faire, vous devez maintenir le bouton gauche de la souris enfoncé et faire glisser la région de sélection pour englober votre objet. 
 
     ![](images/AzureLabs-Lab310-13.png) 
 
-9. Après la sélection de votre objet dans l’image, une petite invite vous demandera vous *ajouter les balises Region*. Sélectionnez votre balise créé précédemment ('Cup', dans l’exemple ci-dessus), ou si vous ajoutez des balises de plus, dans le type et cliquez sur le **+ (plus)** bouton.
+9. Après la sélection de votre objet dans l’image, une petite invite vous demande d’ajouter une *balise de région*. Sélectionnez votre balise créée précédemment («Cup», dans l’exemple ci-dessus), ou si vous ajoutez d’autres balises, tapez ce qui se trouve dans et cliquez sur le bouton **+ (plus)** .
 
     ![](images/AzureLabs-Lab310-14.png) 
 
-10. Pour marquer l’image suivante, cliquez sur la flèche à droite du panneau, ou fermez le panneau de balise (en cliquant sur le **X** dans l’angle supérieur droit du panneau) puis cliquez sur l’image suivante. Une fois que vous avez l’image suivante prêt, répétez la même procédure. Pour toutes les images que vous avez chargé, jusqu'à ce qu’elles sont marquées pour cela. 
+10. Pour baliser l’image suivante, vous pouvez cliquer sur la flèche à droite du panneau ou fermer le panneau des balises (en cliquant sur le **X** dans le coin supérieur droit du panneau), puis sur l’image suivante. Une fois que l’image suivante est prête, répétez la même procédure. Procédez ainsi pour toutes les images que vous avez chargées, jusqu’à ce qu’elles soient toutes marquées. 
 
     > [!NOTE]
-    >  Vous pouvez sélectionner plusieurs objets dans la même image, comme dans l’image ci-dessous : 
+    >  Vous pouvez sélectionner plusieurs objets dans la même image, comme l’image ci-dessous: 
     > 
     > ![](images/AzureLabs-Lab310-15.png)
 
-11. Une fois que vous avez marqué toutes les, cliquez sur le **avec balises** bouton, sur la gauche de l’écran, pour afficher les images avec balises. 
+11. Une fois que vous les avez balisées, cliquez sur le bouton **balisé** , à gauche de l’écran, pour afficher les images avec balises. 
 
     ![](images/AzureLabs-Lab310-16.png)
 
-12. Vous êtes maintenant prêt à former votre Service. Cliquez sur le **Train** bouton et la première itération d’entraînement commencera.
+12. Vous êtes maintenant prêt à former votre service. Cliquez sur le bouton **former** et la première itération d’apprentissage commencera.
 
     ![](images/AzureLabs-Lab310-17.png)
 
     ![](images/AzureLabs-Lab310-18.png)
 
-13. Une fois qu’il est créé, vous serez en mesure de voir les deux boutons nommés **par défaut** et **prédiction URL**. Cliquez sur **par défaut** tout d’abord, puis cliquez sur **prédiction URL**.
+13. Une fois qu’elle est créée, vous pouvez voir deux boutons nommés **créer par défaut** et **URL**de prédiction. Cliquez d’abord sur **créer par défaut** , puis sur **URL**de prédiction.
 
     ![](images/AzureLabs-Lab310-19.png)
 
     > [!NOTE] 
-    > Le point de terminaison qui est fourni à partir de ce problème, selon ce qui a *itération* a été marquée comme valeur par défaut. Par conséquent, si vous apportez ultérieurement un nouveau *itération* et mettez-le à jour comme valeur par défaut, vous ne devez pas modifier votre code.
+    > Le point de terminaison fourni à partir de ce est défini sur l' *itération* qui a été marquée comme valeur par défaut. Par conséquent, si vous effectuez ultérieurement une nouvelle *itération* et la mettez à jour par défaut, vous n’aurez pas besoin de modifier votre code.
 
-14. Une fois que vous avez cliqué sur **prédiction URL**, ouvrez *le bloc-notes*, puis copiez et collez le **URL** (également appelé votre **prédiction-point de terminaison**) et le **prédiction-clé du Service**, de sorte que vous pouvez les récupérer lorsque vous en avez besoin plus loin dans le code.
+14. Une fois que vous avez cliqué **sur URL**de prédiction, ouvrez le *bloc-notes*, puis copiez et collez l' **URL** (également appelée « **prédiction-point de terminaison»** ) et la **clé de prédiction de service**, afin de pouvoir la récupérer lorsque vous en aurez besoin ultérieurement dans le code.
 
     ![](images/AzureLabs-Lab310-20.png)
 
-## <a name="chapter-3---set-up-the-unity-project"></a>Chapitre 3 - configurer le projet Unity
+## <a name="chapter-3---set-up-the-unity-project"></a>Chapitre 3-configurer le projet Unity
 
-Ce qui suit est un standard configurée pour le développement avec la réalité mixte et par conséquent, est un bon modèle pour d’autres projets.
+Ce qui suit est une configuration classique pour le développement avec une réalité mixte, et, par conséquent, est un bon modèle pour d’autres projets.
 
-1.  Ouvrez **Unity** et cliquez sur **New**.
+1.  Ouvrez **Unity** et cliquez sur **nouveau**.
 
     ![](images/AzureLabs-Lab310-21.png)
 
-2.  Maintenant, vous devez fournir un nom de projet Unity. Insérer **CustomVisionObjDetection**. Assurez-vous que le type de projet est défini sur **3D**et définissez le **emplacement** à un emplacement approprié pour vous (n’oubliez pas, plus proche de répertoires racine est préférable). Ensuite, cliquez sur **créer un projet**.
+2.  Vous devez maintenant fournir un nom de projet Unity. Insérez **CustomVisionObjDetection**. Assurez-vous que le type de projet est défini sur **3D**et définissez l’emplacement sur un **emplacement** approprié (n’oubliez pas que les répertoires racine sont plus proches). Ensuite, cliquez sur **créer un projet**.
 
     ![](images/AzureLabs-Lab310-22.png)
 
-3.  Avec Unity ouvert, il est important de la vérification de la valeur par défaut **Script Editor** a la valeur **Visual Studio**. Accédez à **modifier* > *préférences** et à partir de la nouvelle fenêtre, accédez à **outils externes**. Modification **éditeur de Script externe** à **Visual Studio**. Fermer le **préférences** fenêtre.
+3.  Si Unity est ouvert, il est conseillé de vérifier que l' **éditeur de script** par défaut est défini sur **Visual Studio**. Accédez à **modifier* > les*Préférences** , puis à partir de la nouvelle fenêtre, accédez à **outils externes**. Remplacez l' **éditeur de script externe** par **Visual Studio**. Fermez la fenêtre **Préférences** .
 
     ![](images/AzureLabs-Lab310-23.png)
 
-4.  Ensuite, accédez à **fichier > Paramètres de Build** et basculez le **plateforme** à *plateforme Windows universelle*, puis en cliquant sur le **basculer plateforme** bouton.
+4.  Accédez ensuite à **fichier > paramètres de build** et basculez la **plateforme** sur *plateforme Windows universelle*, puis cliquez sur le bouton **changer de plateforme** .
 
     ![](images/AzureLabs-Lab310-24.png)
 
-5.  Dans le même **paramètres de Build** fenêtre, vérifiez les éléments suivants sont définis :
+5.  Dans la même fenêtre **paramètres de build** , vérifiez que les éléments suivants sont définis:
 
-    1.  **Équipement cible** a la valeur **HoloLens**        
-    2.  **Type de build** a la valeur **D3D**
-    3.  **Kit de développement logiciel** a la valeur **dernière installé**
-    4.  **Version de Visual Studio** a la valeur **dernière installé**
-    5.  **Générez et exécutez** est défini sur **ordinateur Local**            
-    6.  Les autres paramètres, dans **paramètres de Build**, doit être conservé comme valeur par défaut pour l’instant.
+    1.  L' **appareil cible** est défini sur **HoloLens**        
+    2.  Le **type de build** est **D3D**
+    3.  Le **SDK** est configuré sur le **dernier installé**
+    4.  **Version de Visual Studio** définie sur le **dernier installé**
+    5.  La **génération et l’exécution** sont définies sur l' **ordinateur local**            
+    6.  Les paramètres restants, dans **paramètres de build**, doivent être laissés par défaut pour le moment.
 
         ![](images/AzureLabs-Lab310-25.png)
 
-6.  Dans le même **paramètres de Build** fenêtre, cliquez sur le **paramètres du lecteur** bouton, le panneau de configuration associée s’ouvre dans l’espace où le **inspecteur** se trouve.
+6.  Dans la même fenêtre **paramètres de build** , cliquez sur le bouton Paramètres du **lecteur** pour ouvrir le panneau correspondant dans l’espace où se trouve l' **inspecteur** .
 
-7. Dans ce panneau, quelques paramètres doivent être vérifiées :
+7. Dans ce volet, quelques paramètres doivent être vérifiés:
 
-    1.  Dans le **autres paramètres** onglet :
+    1.  Sous l’onglet **autres paramètres** :
 
-        1.  **Version du Runtime de script** doit être **expérimental** (.NET 4.6 équivalent), ce qui déclenchera une nécessité de redémarrer l’éditeur.
+        1.  La **version du runtime de script** doit être **expérimentale** (.net 4,6 équivalent), ce qui déclenche la nécessité de redémarrer l’éditeur.
 
-        2. **Script principal** doit être **.NET**.
+        2. Le **serveur principal de script** doit être **.net**.
 
-        3. **Niveau de compatibilité d’API** doit être **.NET 4.6**.
+        3. Le **niveau de compatibilité** de l’API doit être **.net 4,6**.
 
             ![](images/AzureLabs-Lab310-26.png)
 
-    2.  Dans le **paramètres de publication** sous l’onglet sous **fonctionnalités**, vérifiez :
+    2.  Dans l’onglet **paramètres de publication** , sous **fonctionnalités**, activez la case à cocher:
 
         1. **InternetClient**
 
@@ -251,95 +251,95 @@ Ce qui suit est un standard configurée pour le développement avec la réalité
 
             ![](images/AzureLabs-Lab310-27.png) ![](images/AzureLabs-Lab310-28.png)
 
-    3.  Le panneau de configuration, plus loin dans **XR paramètres** (située sous **paramètres de publication**), graduation **virtuel pris en charge de réalité**, puis assurez-vous que le **mixte Windows Réalité SDK** est ajouté.
+    3.  Plus bas dans le volet, dans les **paramètres XR** (situés sous **paramètres de publication**), cochez la **réalité virtuelle prise en charge**, puis assurez-vous que le **Kit de développement logiciel (SDK) Windows Mixed Reality** est ajouté.
 
         ![](images/AzureLabs-Lab310-29.png)
 
-8.  Dans **paramètres de Build**, *Unity C\# projets* est n’est plus grisée : cochez la case à cocher en regard de cela.
+8.  De retour dans les **paramètres de build**, les *projets Unity C\#*  ne sont plus grisés: cochez la case en regard de celle-ci.
 
-9.  Fermer le **paramètres de Build** fenêtre.
+9.  Fermez la fenêtre **paramètres de build** .
 
-10. Dans le **éditeur**, cliquez sur **modifier** > **paramètres du projet** > **graphiques**.
+10. Dans l' **éditeur**, cliquez sur **modifier** > les**paramètres** > du projet**graphiques**.
 
     ![](images/AzureLabs-Lab310-30.png)
 
-11. Dans le **panneau Inspecteur** le *paramètres graphiques* seront ouvertes. Défiler vers le bas jusqu'à ce que vous voyiez un tableau appelé **incluent toujours les nuanceurs**. Ajouter un emplacement en augmentant la **taille** variable d’une unité (dans cet exemple, il avait la valeur 8 pourquoi nous fait il 9). Un nouvel emplacement s’affiche, dans la dernière position du tableau, comme indiqué ci-dessous :
+11. Dans le **panneau Inspecteur** , les *paramètres graphiques* sont ouverts. Faites défiler jusqu’à ce que vous voyez un tableau appelé **toujours inclure**des nuanceurs. Ajoutez un emplacement en accroissant la variable de **taille** d’une unité (dans cet exemple, il s’agissait de 8, nous l’avons rendu 9). Un nouvel emplacement s’affiche à la dernière position du tableau, comme indiqué ci-dessous:
 
     ![](images/AzureLabs-Lab310-31.png)
 
-12. Dans l’emplacement, cliquez sur le cercle de cible de petite taille en regard de l’emplacement pour ouvrir une liste des nuanceurs. Recherchez le **hérité nuanceurs/Transparent/diffusion** nuanceur et double-cliquez dessus. 
+12. Dans l’emplacement, cliquez sur le petit cercle cible en regard de l’emplacement pour ouvrir une liste de nuanceurs. Recherchez les nuanceurs **hérités/transparent/diffus** , puis double-cliquez dessus. 
 
     ![](images/AzureLabs-Lab310-32.png)
 
-## <a name="chapter-4---importing-the-customvisionobjdetection-unity-package"></a>Chapitre 4 - Importation du package CustomVisionObjDetection Unity
+## <a name="chapter-4---importing-the-customvisionobjdetection-unity-package"></a>Chapitre 4-importation du package CustomVisionObjDetection Unity
 
-Pour ce cours vous sont fournis avec un Package de ressource Unity appelé **Azure-MR-310.unitypackage**. 
+Pour ce cours, vous disposez d’un package d’actifs Unity appelé **Azure-Mr-310. pour Unity**. 
 
-> [CONSEIL] Tous les objets pris en charge par Unity, notamment des scènes, peuvent être empaquetés dans un **.unitypackage** de fichiers et exportés / importés dans d’autres projets. C’est le moyen le plus sûr et plus efficace, pour déplacer des ressources entre différents **projets Unity**.
+> ACCÉLÉRATRICE Tous les objets pris en charge par Unity, y compris les scènes entières, peuvent être empaquetés dans un fichier **. pour Unity** , et exportés/importés dans d’autres projets. Il s’agit du moyen le plus sûr et le plus efficace de déplacer des éléments multimédias entre différents **projets Unity**.
 
-Vous pouvez trouver la [package Azure-MR-310 dont vous avez besoin pour télécharger ici](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20310%20-%20Object%20detection/Azure-MR-310.unitypackage).
+Vous trouverez le [package Azure-Mr-310 que vous devez télécharger ici](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20310%20-%20Object%20detection/Azure-MR-310.unitypackage).
 
-1.  Avec le tableau de bord Unity devant vous, cliquez sur **actifs** dans le menu en haut de l’écran, puis cliquez sur **importer un Package > Custom Package**.
+1.  Avec le tableau de bord Unity devant vous, cliquez sur **ressources** dans le menu en haut de l’écran, puis sur **importer le package > package personnalisé**.
 
     ![](images/AzureLabs-Lab310-33.png)
 
-2.  Utilisez le sélecteur de fichiers pour sélectionner le **Azure-MR-310.unitypackage** du package et cliquez sur **Open**. Une liste des composants de cette ressource s’affichera pour vous. Confirmez l’importation en cliquant sur le **importer** bouton.
+2.  Utilisez le sélecteur de fichiers pour sélectionner le package **Azure-Mr-310. pour Unity** , puis cliquez sur **ouvrir**. La liste des composants de cet élément multimédia vous est présentée. Confirmez l’importation en cliquant sur le bouton **Importer** .
 
     ![](images/AzureLabs-Lab310-34.png)
 
-3.  Une fois l’importation terminée, vous remarquerez que les dossiers à partir du package ont désormais été ajoutées à votre **actifs** dossier. Ce type de structure de dossiers est généralement utilisé pour un projet Unity.
+3.  Une fois l’importation terminée, vous remarquerez que les dossiers du package ont été ajoutés à votre dossier de **ressources** . Ce type de structure de dossiers est courant pour un projet Unity.
 
     ![](images/AzureLabs-Lab310-35.png)
 
-    1.  Le **matériaux** dossier contient le matériel utilisé par le **curseur les regards**. 
+    1.  Le  dossier Materials contient les éléments utilisés par le **curseur en regard**. 
 
-    2.  Le **plug-ins** dossier contient la DLL Newtonsoft utilisé par le code pour désérialiser la réponse du Service web. Les deux (2) différentes versions contenues dans le dossier et un sous-dossier, sont nécessaires pour que la bibliothèque à utiliser et généré par l’éditeur Unity et de la build UWP. 
+    2.  Le dossier **plug-ins** contient la dll Newtonsoft utilisée par le code pour désérialiser la réponse Web du service. Les deux (2) différentes versions contenues dans le dossier, et sous-dossier, sont nécessaires pour permettre à la bibliothèque d’être utilisée et construite à la fois par l’éditeur Unity et par la build UWP. 
 
-    3.  Le **Prefabs** dossier contient les prefabs contenues dans la scène. Ce sont :
+    3.  Le dossier **Prefabs** contient le Prefabs contenu dans la scène. Celles-ci sont les suivantes:
 
-        1.  Le **GazeCursor**, le curseur utilisé dans l’application. Fonctionne avec le préfabriqué SpatialMapping pour pouvoir être placé dans la scène au-dessus des objets physiques.
-        2.  Le **étiquette**, qui est l’objet d’interface utilisateur permettant d’afficher la balise object dans la scène lorsque nécessaire.
-        3.  Le **SpatialMapping**, qui est l’objet qui permet à l’application à utiliser crée une carte virtuelle, à l’aide de suivi spatial du Microsoft HoloLens.
+        1.  **GazeCursor**, le curseur utilisé dans l’application. Fonctionne conjointement avec le Prefab SpatialMapping pour pouvoir être placé dans la scène au-dessus des objets physiques.
+        2.  L' **étiquette**, qui est l’objet d’interface utilisateur utilisé pour afficher la balise d’objet dans la scène, si nécessaire.
+        3.  **SpatialMapping**, qui est l’objet qui permet à l’application d’utiliser la création d’une carte virtuelle, à l’aide du suivi spatial Microsoft HoloLens.
 
-    4.  Le **scènes** dossier qui contient actuellement la scène prédéfinie pour ce cours.
+    4.  Le  dossier scenes qui contient actuellement la scène prédéfinie pour ce cours.
 
-4.  Ouvrir le **scènes** dossier, dans le **panneau projet**et double-cliquez sur le **ObjDetectionScene**, pour charger la scène que vous allez utiliser pour ce cours.
+4.  Ouvrez le  dossier scenes, dans le **panneau Projet**, puis double-cliquez sur **ObjDetectionScene**pour charger la scène que vous allez utiliser pour ce cours.
 
     ![](images/AzureLabs-Lab310-36.png)
 
     > [!NOTE] 
     >  **Aucun code n’est inclus**, vous allez écrire le code en suivant ce cours.
 
-## <a name="chapter-5---create-the-customvisionanalyser-class"></a>Chapitre 5 : créer la classe CustomVisionAnalyser.
+## <a name="chapter-5---create-the-customvisionanalyser-class"></a>Chapitre 5-créer la classe CustomVisionAnalyser.
 
-À ce stade, vous êtes prêt à écrire du code. Vous allez commencer avec le **CustomVisionAnalyser** classe.
+À ce stade, vous êtes prêt à écrire du code. Vous allez commencer par la classe **CustomVisionAnalyser** .
 
 > [!NOTE]
-> Les appels à la **Service Vision personnalisée**, effectuée dans le code indiqué ci-dessous, sont effectuées à l’aide de la **API REST de Vision personnalisée**. Via l’utilisant, vous verrez comment implémenter et utiliser cette API (utile pour comprendre comment implémenter quelque chose de similaire sur votre propre). Sachez que Microsoft propose un **Custom Vision SDK** qui peut également être utilisé pour effectuer des appels au Service. Pour plus d’informations, visitez le [article du Kit de développement logiciel Custom Vision](https://github.com/Microsoft/Cognitive-CustomVision-Windows/).
+> Les appels à la **service vision personnalisée**, effectués dans le code ci-dessous, sont effectués à l’aide de l' **API REST Custom vision**. À l’aide de ce guide, vous allez apprendre à implémenter et à utiliser cette API (utile pour comprendre comment implémenter des éléments similaires). Sachez que Microsoft propose un **Kit de développement logiciel (SDK) Custom vision** qui peut également être utilisé pour effectuer des appels au service. Pour plus d’informations, consultez l' [article du kit de développement logiciel (SDK) Custom vision](https://github.com/Microsoft/Cognitive-CustomVision-Windows/).
 
-Cette classe est chargée de :
+Cette classe est chargée des opérations suivantes:
 
 - Chargement de la dernière image capturée sous la forme d’un tableau d’octets.
 
-- Envoyer le tableau d’octets à votre Azure **Service Vision personnalisée** instance pour l’analyse.
+- Envoi du tableau d’octets à votre instance Azure **service vision personnalisée** à des fins d’analyse.
 
-- Recevoir une réponse sous forme de chaîne JSON.
+- Réception de la réponse sous forme de chaîne JSON.
 
-- La désérialisation de la réponse et en passant résultant **prédiction** à la **SceneOrganiser** (classe), qui se chargera de la façon dont la réponse doit être affichée.
+- La désérialisation de la réponse et le passage  de la prédiction résultante à la classe **SceneOrganiser** , qui s’occupera du mode d’affichage de la réponse.
 
-Pour créer cette classe :
+Pour créer cette classe:
 
-1.  Avec le bouton droit dans le **dossier composants**, situé dans le **panneau projet**, puis cliquez sur **créer** > **dossier**. Appelez le dossier **Scripts**.
+1.  Cliquez avec le bouton droit sur le **dossier Asset**, situé dans le **panneau Projet**, puis cliquez sur **créer** > un**dossier**. Appelez le dossier **scripts**.
 
     ![](images/AzureLabs-Lab310-37.png)
 
-2.  Double-cliquez sur le dossier nouvellement créé, pour l’ouvrir.
+2.  Double-cliquez sur le dossier nouvellement créé pour l’ouvrir.
 
-3.  Avec le bouton droit dans le dossier, puis cliquez sur **créer** > **C\# Script**. Nommez le script **CustomVisionAnalyser.**
+3.  Cliquez avec le bouton droit dans le dossier, puis cliquez sur **créer** > un**script C\#** . Nommez le script **CustomVisionAnalyser.**
 
-4.  Double-cliquez sur le nouveau **CustomVisionAnalyser** script pour l’ouvrir avec **Visual Studio.**
+4.  Double-cliquez sur le nouveau script **CustomVisionAnalyser** pour l’ouvrir avec **Visual Studio.**
 
-5.  Vérifiez que vous disposez des espaces de noms suivants référencé au début du fichier :
+5.  Assurez-vous que les espaces de noms suivants sont référencés en haut du fichier:
 
     ```csharp
     using Newtonsoft.Json;
@@ -349,7 +349,7 @@ Pour créer cette classe :
     using UnityEngine.Networking;
     ```
 
-6.  Dans le **CustomVisionAnalyser** de classe, ajoutez les variables suivantes :
+6.  Dans la classe **CustomVisionAnalyser** , ajoutez les variables suivantes:
 
     ```csharp
         /// <summary>
@@ -374,9 +374,9 @@ Pour créer cette classe :
     ```
 
     > [!NOTE]
-    > Assurez-vous que vous insérez votre **prédiction-clé du Service** dans le **predictionKey** variable et votre **prédiction-point de terminaison** dans le **predictionEndpoint**  variable. Vous avez copié à [le bloc-notes précédemment, dans le chapitre 2, l’étape 14](#chapter-2---training-your-custom-vision-project).
+    > Veillez à insérer votre **clé de prédiction de service** dans la variable **PredictionKey** et votre **point de terminaison de prédiction** dans la variable **predictionEndpoint** . Vous les avez copiées [précédemment dans le bloc-notes, au chapitre 2, étape 14](#chapter-2---training-your-custom-vision-project).
 
-7.  Code pour **Awake()** doit maintenant être ajouté pour initialiser la variable d’Instance :
+7.  Le code pour **éveillé ()** doit maintenant être ajouté pour initialiser la variable d’instance:
 
     ```csharp
         /// <summary>
@@ -389,10 +389,10 @@ Pour créer cette classe :
         }
     ```
 
-8.  Ajouter la coroutine (avec la méthode statique **GetImageAsByteArray()** méthode en dessous), qui obtient les résultats de l’analyse de l’image capturée par le **ImageCapture** classe.
+8.  Ajoutez la Coroutine (avec la méthode statique **GetImageAsByteArray ()** en dessous de celle-ci), qui obtiendra les résultats de l’analyse de l’image, capturés par la classe **ImageCapture** .
 
     > [!NOTE]
-    > Dans le **AnalyseImageCapture** coroutine, il existe un appel à la **SceneOrganiser** classe que vous êtes encore à créer. Par conséquent, **laisser les lignes commentées pour l’instant**.
+    > Dans la Coroutine **AnalyseImageCapture** , il y a un appel à la classe **SceneOrganiser** que vous êtes encore en cours de création. Par conséquent, **laissez ces lignes commentées pour l’instant**.
 
     ```csharp    
         /// <summary>
@@ -453,26 +453,26 @@ Pour créer cette classe :
         }
     ```
 
-9. Supprimer le **Start()** et **Update()** méthodes, car ils ne seront pas utilisés. 
+9. Supprimez les méthodes **Start ()** et **Update ()** , car elles ne seront pas utilisées. 
 
-10.  Veillez à enregistrer vos modifications dans **Visual Studio**, avant de retourner à **Unity**.
+10.  Veillez à enregistrer vos modifications dans **Visual Studio**avant de revenir à **Unity**.
 
 > [!IMPORTANT]
-> Comme mentionné précédemment, ne vous inquiétez pas sur le code qui peut sembler avoir une erreur, comme vous fournit des classes plus rapidement, ce qui résoudra ces.
+> Comme mentionné précédemment, ne vous inquiétez pas du code qui peut sembler avoir une erreur, car vous fournirez bientôt d’autres classes, ce qui les corrigera.
 
-## <a name="chapter-6---create-the-customvisionobjects-class"></a>Chapitre 6 : créer la classe CustomVisionObjects
+## <a name="chapter-6---create-the-customvisionobjects-class"></a>Chapitre 6-créer la classe CustomVisionObjects
 
-La classe que vous allez créer est maintenant le **CustomVisionObjects** classe.
+La classe que vous allez créer est maintenant la classe **CustomVisionObjects** .
 
-Ce script contient un nombre d’objets utilisés par d’autres classes pour sérialiser et désérialiser les appels effectués vers le Service Vision personnalisée.
+Ce script contient un certain nombre d’objets utilisés par d’autres classes pour sérialiser et désérialiser les appels passés au Service Vision personnalisée.
 
-Pour créer cette classe :
+Pour créer cette classe:
 
-1.  Avec le bouton droit à l’intérieur de la **Scripts** dossier, puis cliquez sur **créer** > **C\# Script**. Appeler le script **CustomVisionObjects.**
+1.  Cliquez avec le bouton droit dans le dossier **scripts** , puis cliquez sur **créer** > un**script C\#** . Appelez le script **CustomVisionObjects.**
 
-2.  Double-cliquez sur le nouveau **CustomVisionObjects** script pour l’ouvrir avec **Visual Studio.**
+2.  Double-cliquez sur le nouveau script **CustomVisionObjects** pour l’ouvrir avec **Visual Studio.**
 
-3.  Vérifiez que vous disposez des espaces de noms suivants référencé au début du fichier :
+3.  Assurez-vous que les espaces de noms suivants sont référencés en haut du fichier:
 
     ```csharp
     using System;
@@ -481,12 +481,12 @@ Pour créer cette classe :
     using UnityEngine.Networking;
     ```
 
-4.  Supprimer le **Start()** et **Update()** méthodes à l’intérieur de la **CustomVisionObjects** classe, cette classe doit maintenant être vide.
+4.  Supprimez les méthodes **Start ()** et **Update ()** à l’intérieur de la classe **CustomVisionObjects** , cette classe doit maintenant être vide.
 
     > [!WARNING]
-    > Il est important que vous suivez la prochaine instruction avec précaution. Si vous placez les déclarations de classe nouvelle à l’intérieur de la **CustomVisionObjects** (classe), vous obtiendrez des erreurs de compilation [chapitre 10](#chapter-10---create-the-imagecapture-class), indiquant que **AnalysisRootObject** et  **BoundingBox** sont introuvables.
+    > Il est important de suivre attentivement l’instruction suivante. Si vous placez les nouvelles déclarations de classe à l’intérieur de la classe **CustomVisionObjects** , vous obtiendrez des erreurs de compilation dans le [chapitre 10](#chapter-10---create-the-imagecapture-class), indiquant que **AnalysisRootObject** et **BoundingBox** sont introuvables.
 
-5.  Ajoutez les classes suivantes *en dehors de* le **CustomVisionObjects** classe. Ces objets sont utilisés par le **Newtonsoft** bibliothèque pour sérialiser et désérialiser les données de réponse :
+5.  Ajoutez les classes suivantes *en dehors* de la classe **CustomVisionObjects** . Ces objets sont utilisés par la bibliothèque **Newtonsoft** pour sérialiser et désérialiser les données de réponse:
 
     ```csharp
     // The objects contained in this script represent the deserialized version
@@ -616,26 +616,26 @@ Pour créer cette classe :
     }
     ```
 
-6.  Veillez à enregistrer vos modifications dans **Visual Studio**, avant de retourner à **Unity**.
+6.  Veillez à enregistrer vos modifications dans **Visual Studio**avant de revenir à **Unity**.
 
-## <a name="chapter-7---create-the-spatialmapping-class"></a>Chapitre 7 - créer la classe SpatialMapping
+## <a name="chapter-7---create-the-spatialmapping-class"></a>Chapitre 7-créer la classe SpatialMapping
 
-Cette classe définira le **Collider de mappage Spatial** dans la scène. ainsi, pour être en mesure de détecter les collisions entre des objets virtuels et des objets réels.
+Cette classe définit le **conflit de mappage spatial** dans la scène afin de pouvoir détecter les collisions entre les objets virtuels et les objets réels.
 
-Pour créer cette classe :
+Pour créer cette classe:
 
-1.  Avec le bouton droit à l’intérieur de la **Scripts** dossier, puis cliquez sur **créer** > **C\# Script**. Appeler le script **SpatialMapping.**
+1.  Cliquez avec le bouton droit dans le dossier **scripts** , puis cliquez sur **créer** > un**script C\#** . Appelez le script **SpatialMapping.**
 
-2.  Double-cliquez sur le nouveau **SpatialMapping** script pour l’ouvrir avec **Visual Studio.**
+2.  Double-cliquez sur le nouveau script **SpatialMapping** pour l’ouvrir avec **Visual Studio.**
 
-3.  Vérifiez que vous disposez des espaces de noms suivants mentionnés ci-dessus le **SpatialMapping** classe :
+3.  Assurez-vous que les espaces de noms suivants sont référencés au-dessus de la classe **SpatialMapping** :
 
     ```csharp
     using UnityEngine;
     using UnityEngine.XR.WSA;
     ```
 
-4.  Ensuite, ajoutez les variables suivantes à l’intérieur de la **SpatialMapping** classe ci-dessus le **Start()** méthode :
+4.  Ensuite, ajoutez les variables suivantes à l’intérieur de la classe **SpatialMapping** , au-dessus de la méthode **Start ()** :
 
     ```csharp
         /// <summary>
@@ -659,7 +659,7 @@ Pour créer cette classe :
         private SpatialMappingCollider spatialMappingCollider;
     ```
 
-5.  Ajouter le **Awake()** et **Start()**:
+5.  Ajoutez les éléments **éveillé ()** et **Start ()** :
 
     ```csharp
         /// <summary>
@@ -690,28 +690,28 @@ Pour créer cette classe :
         }
     ```
 
-6.  Supprimer le **Update()** (méthode).
+6.  Supprimez la méthode **Update ()** .
 
-7.  Veillez à enregistrer vos modifications dans **Visual Studio**, avant de retourner à **Unity**.
+7.  Veillez à enregistrer vos modifications dans **Visual Studio**avant de revenir à **Unity**.
 
 
-## <a name="chapter-8---create-the-gazecursor-class"></a>Chapitre 8 - créer la classe GazeCursor
+## <a name="chapter-8---create-the-gazecursor-class"></a>Chapitre 8-créer la classe GazeCursor
 
-Cette classe est responsable de la configuration du curseur à l’emplacement approprié dans l’espace réel, en utilisant le **SpatialMappingCollider**, créé dans le chapitre précédent.
+Cette classe est chargée de configurer le curseur à l’emplacement approprié dans l’espace réel, en utilisant le **SpatialMappingCollider**créé dans le chapitre précédent.
 
-Pour créer cette classe :
+Pour créer cette classe:
 
-1.  Avec le bouton droit à l’intérieur de la **Scripts** dossier, puis cliquez sur **créer** > **C\# Script**. Appeler le script **GazeCursor**
+1.  Cliquez avec le bouton droit dans le dossier **scripts** , puis cliquez sur **créer** > un**script C\#** . Appeler le script **GazeCursor**
 
-2.  Double-cliquez sur le nouveau **GazeCursor** script pour l’ouvrir avec **Visual Studio.**
+2.  Double-cliquez sur le nouveau script **GazeCursor** pour l’ouvrir avec **Visual Studio.**
 
-3.  Vérifiez que vous disposez de l’espace de noms suivant référencé ci-dessus le **GazeCursor** classe :
+3.  Assurez-vous que l’espace de noms suivant est référencé au-dessus de la classe **GazeCursor** :
 
     ```csharp
     using UnityEngine;
     ```
 
-4.  Puis ajoutez la variable suivante à l’intérieur de la **GazeCursor** de classe, au-dessus du **Start()** (méthode). 
+4.  Ajoutez ensuite la variable suivante à l’intérieur de la classe **GazeCursor** , au-dessus de la méthode **Start ()** . 
 
     ```csharp
         /// <summary>
@@ -720,7 +720,7 @@ Pour créer cette classe :
         private MeshRenderer meshRenderer;
     ```
 
-5.  Mise à jour le **Start()** méthode avec le code suivant :
+5.  Mettez à jour la méthode **Start ()** avec le code suivant:
 
     ```csharp
         /// <summary>
@@ -740,7 +740,7 @@ Pour créer cette classe :
         }
     ```
 
-6.  Mise à jour le **Update()** méthode avec le code suivant :
+6.  Mettez à jour la méthode **Update ()** avec le code suivant:
 
     ```csharp
         /// <summary>
@@ -771,25 +771,25 @@ Pour créer cette classe :
     ```
 
     > [!NOTE]
-    > Ne vous inquiétez pas sur l’erreur pour le **SceneOrganiser** classe introuvable, vous allez le créer dans le chapitre suivant.
+    > Ne vous inquiétez pas de l’erreur pour la classe **SceneOrganiser** introuvable, vous allez la créer dans le chapitre suivant.
 
-7. Veillez à enregistrer vos modifications dans **Visual Studio**, avant de retourner à **Unity**.
+7. Veillez à enregistrer vos modifications dans **Visual Studio**avant de revenir à **Unity**.
 
-## <a name="chapter-9---create-the-sceneorganiser-class"></a>Chapitre 9 - créer la classe SceneOrganiser
+## <a name="chapter-9---create-the-sceneorganiser-class"></a>Chapitre 9-créer la classe SceneOrganiser
 
-Cette classe sera :
+Cette classe effectuera les opérations suivantes:
 
--   Configurer le *Main Camera* en joignant les composants appropriés à ce dernier.
+-   Configurez la *caméra principale* en y joignant les composants appropriés.
 
--   Lorsqu’un objet est détecté, il sera responsable du calcul de sa position dans le monde réel et place un **étiquette** près d’avec le bon **nom de balise**.    
+-   Lorsqu’un objet est détecté, il est chargé de calculer sa position dans le monde réel et de placer une **étiquette** de balise près de celui-ci avec le **nom**de balise approprié.    
 
-Pour créer cette classe :
+Pour créer cette classe:
 
-1.  Avec le bouton droit à l’intérieur de la **Scripts** dossier, puis cliquez sur **créer** > **C\# Script**. Nommez le script **SceneOrganiser**.
+1.  Cliquez avec le bouton droit dans le dossier **scripts** , puis cliquez sur **créer** > un**script C\#** . Nommez le script **SceneOrganiser**.
 
-2.  Double-cliquez sur le nouveau **SceneOrganiser** script pour l’ouvrir avec **Visual Studio.**
+2.  Double-cliquez sur le nouveau script **SceneOrganiser** pour l’ouvrir avec **Visual Studio.**
 
-3.  Vérifiez que vous disposez des espaces de noms suivants mentionnés ci-dessus le **SceneOrganiser** classe :
+3.  Assurez-vous que les espaces de noms suivants sont référencés au-dessus de la classe **SceneOrganiser** :
 
     ```csharp
     using System.Collections.Generic;
@@ -797,7 +797,7 @@ Pour créer cette classe :
     using UnityEngine;
     ```
 
-4.  Puis ajoutez les variables suivantes à l’intérieur de la **SceneOrganiser** classe ci-dessus le **Start()** méthode :
+4.  Ajoutez ensuite les variables suivantes à l’intérieur de la classe **SceneOrganiser** , au-dessus de la méthode **Start ()** :
 
     ```csharp
         /// <summary>
@@ -842,9 +842,9 @@ Pour créer cette classe :
         internal Renderer quadRenderer;
     ```
 
-5.  Supprimer le **Start()** et **Update()** méthodes.
+5.  Supprimez les méthodes **Start ()** et **Update ()** .
 
-6.  Sous les variables, ajoutez le **Awake()** (méthode), qui initialisent la classe et configurer la scène.
+6.  Sous les variables, ajoutez la méthode **éveillé ()** , qui initialisera la classe et configurera la scène.
 
     ```csharp
         /// <summary>
@@ -866,7 +866,7 @@ Pour créer cette classe :
         }
     ```
 
-7.  Ajouter le **PlaceAnalysisLabel()** (méthode), qui sera *instancier* l’étiquette dans la scène (qui est à ce stade invisible à l’utilisateur). Il place également les quatre cœurs (également invisibles) où l’image est placée et se chevauche avec le monde réel. Ceci est important, car les coordonnées de la zone est récupéré à partir du Service après l’analyse sont remonter dans cette quadruple déterminé l’emplacement approximatif de l’objet dans le monde réel. 
+7.  Ajoutez la méthode **PlaceAnalysisLabel ()** , qui *instanciera* l’étiquette dans la scène (qui, à ce stade, est invisible pour l’utilisateur). Il place également le quadruple (également invisible) où l’image est placée et chevauche le monde réel. Cela est important, car les coordonnées de la zone récupérées à partir du service après l’analyse sont retracées dans ce Quad pour déterminer l’emplacement approximatif de l’objet dans le monde réel. 
 
     ```csharp
         /// <summary>
@@ -903,12 +903,12 @@ Pour créer cette classe :
         }
     ```
 
-8.  Ajouter le **FinaliseLabel()** (méthode). Il est chargé de :
+8.  Ajoutez la méthode **FinaliseLabel ()** . Il est responsable des tâches suivantes:
 
-    *   Définition de la *étiquette* texte avec le *balise* de la prédiction en toute confiance le plus élevé.
-    *   Le calcul de l’appel le *le rectangle englobant* sur l’objet processeur quadruple, positionné précédemment et la placer l’étiquette dans la scène.
-    *   Ajustement de la profondeur de l’étiquette à l’aide d’un Raycast vers le *le rectangle englobant*, qui doit entrer en conflit par rapport à l’objet dans le monde réel.
-    * Réinitialiser le processus de capture pour autoriser l’utilisateur à capturer une autre image.
+    *   Définition du texte de l' *étiquette* avec la *balise* de la prédiction avec la confiance la plus élevée.
+    *   Appel du calcul du *cadre englobant* sur l’objet quadruple, positionné précédemment, et placement de l’étiquette dans la scène.
+    *   Ajustement de la profondeur des étiquettes à l’aide d’un Raycast vers le *cadre englobant*, qui doit entrer en conflit avec l’objet dans le monde réel.
+    * Réinitialisation du processus de capture pour permettre à l’utilisateur de capturer une autre image.
 
     ```csharp
         /// <summary>
@@ -959,7 +959,7 @@ Pour créer cette classe :
         }
     ```
 
-9.  Ajouter le **CalculateBoundingBoxPosition()** (méthode), qui héberge un nombre de calculs nécessaires pour traduire le *le rectangle englobant* coordonnées extraites du Service et les recréer proportionnellement sur les quatre cœurs.
+9.  Ajoutez la méthode **CalculateBoundingBoxPosition ()** , qui héberge un certain nombre de calculs nécessaires pour convertir les coordonnées du *cadre englobant* récupérées à partir du service et les recréer proportionnellement sur le quadruple.
 
     ```csharp
         /// <summary>
@@ -986,10 +986,10 @@ Pour créer cette classe :
         }
     ```
 
-10. Veillez à enregistrer vos modifications dans **Visual Studio**, avant de retourner à **Unity**.
+10. Veillez à enregistrer vos modifications dans **Visual Studio**avant de revenir à **Unity**.
 
     > [!IMPORTANT]
-    > Avant de continuer, ouvrez le **CustomVisionAnalyser** (classe) et dans le **AnalyseLastImageCaptured()** (méthode), *Décommentez* les lignes suivantes :
+    > Avant de continuer, ouvrez la classe **CustomVisionAnalyser** et, dans la méthode **AnalyseLastImageCaptured ()** , *supprimez les marques de commentaire* des lignes suivantes:
     >
     >   ```csharp
     >   // Create a texture. Texture size does not matter, since 
@@ -1006,27 +1006,27 @@ Pour créer cette classe :
     >   ```
 
 > [!NOTE]
-> Ne vous inquiétez pas sur le **ImageCapture** classe message « est introuvable », vous allez le créer dans le chapitre suivant.
+> Ne vous inquiétez pas du message «Impossible de trouver la classe **ImageCapture** », vous allez le créer dans le chapitre suivant.
 
 
-## <a name="chapter-10---create-the-imagecapture-class"></a>Chapitre 10 - créer la classe ImageCapture
+## <a name="chapter-10---create-the-imagecapture-class"></a>Chapitre 10-créer la classe ImageCapture
 
-La classe suivante, vous allez créer est la **ImageCapture** classe.
+La classe suivante que vous allez créer est la classe **ImageCapture** .
 
-Cette classe est chargée de :
+Cette classe est chargée des opérations suivantes:
 
-*   Capture d’une image à l’aide de l’appareil photo HoloLens et en le stockant dans le *application* dossier.
-*   Gestion des *appuyez sur* mouvements de l’utilisateur.
+*   Capture d’une image à l’aide de la caméra HoloLens et stockage dans le dossier de l' *application* .
+*   Gestion des gestes *Tap* de l’utilisateur.
 
-Pour créer cette classe :
+Pour créer cette classe:
 
-1.  Accédez à la **Scripts** dossier que vous avez créé précédemment.
+1.  Accédez au dossier **scripts** que vous avez créé précédemment.
 
-2.  Avec le bouton droit dans le dossier, puis cliquez sur **créer** > **C\# Script**. Nommez le script **ImageCapture**.
+2.  Cliquez avec le bouton droit dans le dossier, puis cliquez sur **créer** > un**script C\#** . Nommez le script **ImageCapture**.
 
-3.  Double-cliquez sur le nouveau **ImageCapture** script pour l’ouvrir avec **Visual Studio.**
+3.  Double-cliquez sur le nouveau script **ImageCapture** pour l’ouvrir avec **Visual Studio.**
 
-4.  Remplacez les espaces de noms en haut du fichier avec les éléments suivants :
+4.  Remplacez les espaces de noms en haut du fichier par les éléments suivants:
 
     ```csharp
     using System;
@@ -1037,7 +1037,7 @@ Pour créer cette classe :
     using UnityEngine.XR.WSA.WebCam;
     ```
 
-5.  Puis ajoutez les variables suivantes à l’intérieur de la **ImageCapture** classe ci-dessus le **Start()** méthode :
+5.  Ajoutez ensuite les variables suivantes à l’intérieur de la classe **ImageCapture** , au-dessus de la méthode **Start ()** :
 
     ```csharp
         /// <summary>
@@ -1071,7 +1071,7 @@ Pour créer cette classe :
         internal string filePath = string.Empty;
     ```
 
-6.  Code pour **Awake()** et **Start()** méthodes doit maintenant être ajouté :
+6.  Vous devez maintenant ajouter le code des méthodes **éveillés ()** et **Start ()** :
 
     ```csharp
         /// <summary>
@@ -1110,7 +1110,7 @@ Pour créer cette classe :
         }
     ```
 
-7.  Implémenter un gestionnaire qui sera appelé lorsqu’une action d’appuyer se produit :
+7.  Implémentez un gestionnaire qui sera appelé quand un mouvement TAP se produit:
 
     ```csharp
         /// <summary>
@@ -1132,9 +1132,9 @@ Pour créer cette classe :
     ```
 
     > [!IMPORTANT]
-    > Lorsque le curseur se trouve **vert**, cela signifie que l’appareil photo est disponible pour la prise de l’image. Lorsque le curseur se trouve **rouge**, cela signifie que l’appareil photo est occupé.
+    > Lorsque le curseur est **vert**, cela signifie que l’appareil photo est disponible pour prendre l’image. Lorsque le curseur est **rouge**, cela signifie que l’appareil photo est occupé.
 
-8.  Ajoutez la méthode que l’application utilise pour démarrer le processus de capture d’image et de stocker l’image :
+8.  Ajoutez la méthode utilisée par l’application pour démarrer le processus de capture d’image et stocker l’image:
 
     ```csharp
         /// <summary>
@@ -1176,7 +1176,7 @@ Pour créer cette classe :
         }
     ```
 
-9.  Ajoutez les gestionnaires qui seront appelées lorsque la photo a été capturée et quand il est prêt à être analysés. Le résultat est ensuite transmis à la **CustomVisionAnalyser** pour l’analyse.
+9.  Ajoutez les gestionnaires qui seront appelés lorsque la photo a été capturée et le moment où elle sera prête à être analysée. Le résultat est ensuite transmis à **CustomVisionAnalyser** pour l’analyse.
 
     ```csharp
         /// <summary>
@@ -1226,121 +1226,121 @@ Pour créer cette classe :
         }
     ```
 
-10. Veillez à enregistrer vos modifications dans **Visual Studio**, avant de retourner à **Unity**.
+10. Veillez à enregistrer vos modifications dans **Visual Studio**avant de revenir à **Unity**.
 
-## <a name="chapter-11---setting-up-the-scripts-in-the-scene"></a>Chapitre 11 - configurer les scripts dans la scène
+## <a name="chapter-11---setting-up-the-scripts-in-the-scene"></a>Chapitre 11-configuration des scripts dans la scène
 
-Maintenant que vous avez écrit tout le code nécessaire pour ce projet, est le temps pour configurer les scripts dans la scène et sur les prefabs, pour qu’ils se comportent correctement.
+Maintenant que vous avez écrit l’ensemble du code nécessaire pour ce projet, il est temps de configurer les scripts dans la scène et, sur le prefabs, pour qu’ils se comportent correctement.
 
-1.  Dans le **éditeur Unity**, dans le **hiérarchie panneau**, sélectionnez le **Main Camera**.
-2.  Dans le **panneau Inspecteur**, avec le **Main Camera** sélectionné, cliquez sur **ajouter un composant**, puis recherchez **SceneOrganiser** script et Double-cliquez sur pour l’ajouter.
+1.  Dans l' **éditeur Unity**, dans le **panneau hiérarchie**, sélectionnez l' **appareil photo principal**.
+2.  Dans le **panneau Inspecteur**, avec l' **appareil photo principal** sélectionné, cliquez sur **Ajouter un composant**, puis recherchez le script **SceneOrganiser** et double-cliquez dessus pour l’ajouter.
 
     ![](images/AzureLabs-Lab310-38.png)
 
-3.  Dans le **panneau projet**, ouvrez le **dossier Prefabs**, faites glisser le **étiquette** prefab dans le *étiquette* zone, d’entrée cible de référence vide dans le **SceneOrganiser** script que vous venez d’ajouter à la *Main Camera*, comme illustré dans l’image ci-dessous :
+3.  Dans le **panneau Projet**, ouvrez le **dossier Prefabs**, faites glisser l' **étiquette** Prefab dans la zone d’entrée cible de référence de l' *étiquette* vide, dans le script **SceneOrganiser** que vous venez d’ajouter à la *caméra principale*, comme illustré dans l’image ci-dessous:
 
     ![](images/AzureLabs-Lab310-39.png)
 
-4.  Dans le **hiérarchie panneau**, sélectionnez le **GazeCursor** enfant de la **Main Camera**.
-5.  Dans le **panneau Inspecteur**, avec le **GazeCursor** sélectionné, cliquez sur **ajouter un composant**, puis recherchez **GazeCursor** script et Double-cliquez sur pour l’ajouter.
+4.  Dans le **volet hiérarchie**, sélectionnez l’enfant **GazeCursor** de l' **appareil photo principal**.
+5.  Dans le **volet**de l’inspecteur, avec le **GazeCursor** sélectionné, cliquez sur **Ajouter un composant**, puis recherchez le script **GazeCursor** et double-cliquez dessus pour l’ajouter.
 
     ![](images/AzureLabs-Lab310-40.png)
 
-6.  Là encore, dans le **hiérarchie panneau**, sélectionnez le **SpatialMapping** enfant de la **Main Camera**.
-7.  Dans le **panneau Inspecteur**, avec le **SpatialMapping** sélectionné, cliquez sur **ajouter un composant**, puis recherchez **SpatialMapping** script et le double-clic, pour l’ajouter.
+6.  Là encore, dans le **panneau hiérarchie**, sélectionnez l’enfant **SpatialMapping** de l' **appareil photo principal**.
+7.  Dans le **volet**de l’inspecteur, avec le **SpatialMapping** sélectionné, cliquez sur **Ajouter un composant**, puis recherchez le script **SpatialMapping** et double-cliquez dessus pour l’ajouter.
 
     ![](images/AzureLabs-Lab310-41.png)
 
-Les scripts restants que vous n’ont pas jeu est ajouté par le code dans le **SceneOrganiser** script, pendant l’exécution.
+Les scripts restants que vous n’avez pas définis seront ajoutés par le code dans le script **SceneOrganiser** , pendant l’exécution.
 
-## <a name="chapter-12---before-building"></a>Chapitre 12 - avant la génération
+## <a name="chapter-12---before-building"></a>Chapitre 12-avant génération
 
-Pour effectuer une analyse minutieuse de votre application vous en aurez besoin pour effectuer un chargement indépendant sur votre Microsoft HoloLens.
+Pour effectuer un test minutieux de votre application, vous devez l’chargement sur votre Microsoft HoloLens.
 
-Avant de procéder, assurez-vous que :
+Avant cela, assurez-vous que:
 
--  Tous les paramètres mentionnés dans le [chapitre 3](#chapter-3---set-up-the-unity-project) sont correctement définies.
-- Le script **SceneOrganiser** est attaché à la **Main Camera** objet.
-- Le script **GazeCursor** est attaché à la **GazeCursor** objet.
-- Le script **SpatialMapping** est attaché à la **SpatialMapping** objet.
-- Dans [chapitre 5](#chapter-5---create-the-customvisionanalyser-class), étape 6 :
+-  Tous les paramètres mentionnés dans le [chapitre 3](#chapter-3---set-up-the-unity-project) sont correctement définis.
+- Le script **SceneOrganiser** est attaché à l’objet **Camera principal** .
+- Le script **GazeCursor** est attaché à l’objet **GazeCursor** .
+- Le script **SpatialMapping** est attaché à l’objet **SpatialMapping** .
+- Dans le [Chapitre 5](#chapter-5---create-the-customvisionanalyser-class), étape 6:
 
-    - Assurez-vous que vous insérez votre **Service prédiction clé** dans le **predictionKey** variable.
-    - Vous avez inséré votre **point de terminaison de prédiction** dans le **predictionEndpoint** classe.
+    - Veillez à insérer votre **clé** de prédiction de service dans la variable **predictionKey** .
+    - Vous avez inséré votre **point de terminaison** de prédiction dans la classe **predictionEndpoint** .
 
-## <a name="chapter-13---build-the-uwp-solution-and-sideload-your-application"></a>Chapitre 13 - générez la solution UWP et le chargement de version test, votre application
+## <a name="chapter-13---build-the-uwp-solution-and-sideload-your-application"></a>Chapitre 13: créer la solution UWP et chargement votre application
 
-Vous êtes maintenant prêt à créer votre application en tant que UWP Solution auxquelles vous serez en mesure de déployer une session sur le Microsoft HoloLens. Pour commencer le processus de génération :
+Vous êtes maintenant prêt à créer votre application en tant que solution UWP que vous pourrez déployer sur Microsoft HoloLens. Pour commencer le processus de génération:
 
-1.  Accédez à **fichier > Paramètres de Build**.
+1.  Accédez à **fichier > paramètres de build**.
 
-2.  Graduation **Unity C\# projets**.
+2.  **Projets Tick Unity C\#** .
 
-3.  Cliquez sur **ajouter des scènes Open**. Cette opération ajoute la scène actuellement ouverte à la build.
+3.  Cliquez sur **Ajouter des scènes ouvertes**. Cette opération ajoute la scène actuellement ouverte à la Build.
 
     ![](images/AzureLabs-Lab310-42.png)
 
-4.  Cliquez sur **Build**. Unity lancera un *Explorateur de fichiers* fenêtre, où vous avez besoin pour créer, puis sélectionnez un dossier pour générer l’application dans. Créez ce dossier, puis nommez-le **application**. Ensuite avec le **application** dossier sélectionné, cliquez sur **sélectionner le dossier**.
+4.  Cliquez sur **Build**. Unity lance une fenêtre de l' *Explorateur de fichiers* , dans laquelle vous devez créer, puis sélectionner un dossier dans lequel générer l’application. Créez ce dossier maintenant, puis nommez-le **application**. Ensuite, avec le dossier d' **application** sélectionné, cliquez sur **Sélectionner un dossier**.
 
-5.  Unity commencera à générer votre projet pour le **application** dossier.
+5.  Unity commence à générer votre projet dans le dossier de l' **application** .
 
-6.  Une fois Unity a fini de construction (il peut prendre un certain temps), celui-ci s’ouvre un **Explorateur de fichiers** fenêtre à l’emplacement de votre build (Vérifiez votre barre des tâches, tel qu’il ne peut pas toujours apparaître au-dessus de vos fenêtres, mais vous informera de l’ajout d’un nouveau fenêtre).
+6.  Une fois la génération de Unity terminée (cela peut prendre un certain temps), une fenêtre de l' **Explorateur de fichiers** s’ouvre à l’emplacement de votre Build (Vérifiez la barre des tâches, car elle ne s’affiche pas toujours au-dessus de votre Windows, mais vous informera de l’ajout d’une nouvelle fenêtre).
 
-7.  Pour déployer une session sur Microsoft HoloLens, vous devez l’adresse IP de cet appareil (pour les déployer à distance) et pour vous assurer qu’elle également a **Mode développeur** définie. Pour ce faire :
+7.  Pour effectuer un déploiement sur Microsoft HoloLens, vous aurez besoin de l’adresse IP de cet appareil (pour le déploiement à distance) et pour vous assurer qu’il est également défini **en mode développeur** . Pour ce faire :
 
-    1.  Tout en portant vos HoloLens, ouvrez le **paramètres**.
+    1.  Tout en portant votre HoloLens, ouvrez les **paramètres**.
 
-    2.  Accédez à **réseau & Internet** > **Wi-Fi** > **les Options avancées**
+    2.  Accéder au **réseau &**  > **Options avancées** **de Wi-Fi** > Internet
 
-    3.  Remarque la **IPv4** adresse.
+    3.  Notez l’adresse **IPv4** .
 
-    4.  Ensuite, accédez à **paramètres**, puis à **mise à jour & sécurité** > **pour les développeurs**
+    4.  Ensuite, revenez aux **paramètres**, puis pour **mettre à jour & sécurité** > **pour les développeurs**
 
-    5.  Définissez **Mode développeur** *sur*.
+    5.  Définissez le **mode développeur** *sur*.
 
-8.  Accédez à votre nouvelle build Unity (le **application** dossier) et ouvrez le fichier solution avec **Visual Studio**.
+8.  Accédez à votre nouvelle build Unity (le dossier de l' **application** ) et ouvrez le fichier solution avec **Visual Studio**.
 
-9.  Dans, sélectionnez la Configuration de Solution **déboguer**.
+9.  Dans la configuration de la solution, sélectionnez Déboguer.
 
-10. Dans la plateforme de Solution, sélectionnez **x86, ordinateur distant**. Vous devrez insérer le **adresse IP** d’un appareil distant (le Microsoft HoloLens, dans ce cas, que vous avez notée).
+10. Dans la plateforme de la solution, sélectionnez **x86, ordinateur distant**. Vous serez invité à insérer l' **adresse IP** d’un périphérique distant (le Microsoft HoloLens, dans ce cas, que vous avez noté).
 
     ![](images/AzureLabs-Lab310-43.png)
 
-11. Accédez à la **Build** menu et cliquez sur **déployer la Solution** à chargement indépendant de l’application à votre HoloLens.
+11. Accédez au menu **générer** , puis cliquez sur **déployer la solution** pour chargement l’application à votre HoloLens.
 
-12. Votre application doit maintenant apparaître dans la liste des applications installées sur votre Microsoft HoloLens, prêt à être lancé !
+12. Votre application doit maintenant apparaître dans la liste des applications installées sur votre Microsoft HoloLens, prête à être lancée.
 
-### <a name="to-use-the-application"></a>Pour utiliser l’application :
+### <a name="to-use-the-application"></a>Pour utiliser l’application:
 
-* Examiner un objet, vous avez formé avec votre **Azure Custom Vision Service, la détection d’objets**et utiliser le **mouvement d’appui**.
-* Si l’objet est détecté, un espace universel *texte de l’étiquette* s’affiche avec le nom de balise.
+* Examinez un objet, que vous avez formé avec votre **service vision personnalisée Azure, la détection d’objets**et utilisez le **geste TAP**.
+* Si l’objet est correctement détecté, un *texte d’étiquette* de l’espace universel apparaît avec le nom de la balise.
 
 > [!IMPORTANT]
-> Chaque fois que vous capturez une photo et l’envoyez au Service, vous pouvez revenir à la page du Service et reformer le Service avec les images qui vient d’être capturées. Au début, vous allez probablement également être amené à corriger le *englobants* pour être plus précis et de reformer le Service.
+> Chaque fois que vous capturez une photo et que vous l’envoyez au service, vous pouvez revenir à la page du service et reformer le service avec les images nouvellement capturées. Au début, vous devrez probablement corriger les *zones englobantes* pour qu’elles soient plus précises et reformer le service.
 
 > [!NOTE]
-> Le texte d’étiquette placée peuvent ne pas apparaître près de l’objet quand les capteurs Microsoft HoloLens et/ou le SpatialTrackingComponent dans Unity ne parvient pas à placer les colliders appropriés, par rapport aux objets du monde réel. Essayez d’utiliser l’application sur une surface différente si tel est le cas.
+> Le texte de l’étiquette placée peut ne pas apparaître près de l’objet lorsque les capteurs Microsoft HoloLens et/ou SpatialTrackingComponent dans Unity ne peuvent pas placer les conflits appropriés, par rapport aux objets réels. Si c’est le cas, essayez d’utiliser l’application sur une autre surface.
 
-## <a name="your-custom-vision-object-detection-application"></a>Votre Vision personnalisée, application de détection d’objets
+## <a name="your-custom-vision-object-detection-application"></a>Votre Custom Vision, application de détection d’objets
 
-Félicitations, vous avez créé une application de réalité mixte qui tire parti de la Vision personnalisée Azure, API de détection de l’objet, qui peut reconnaître un objet à partir d’une image, puis indiquent une position approximative pour cet objet dans l’espace 3D.
+Félicitations, vous avez créé une application de réalité mixte qui tire parti de l’API de détection d’objets Azure Custom Vision, qui peut reconnaître un objet d’une image, puis fournir une position approximative pour cet objet dans l’espace 3D.
 
 ![](images/AzureLabs-Lab310-00.png)
 
-## <a name="bonus-exercises"></a>Exercices de bonus
+## <a name="bonus-exercises"></a>Exercices bonus
 
 ### <a name="exercise-1"></a>Exercice 1
 
-Ajout à l’étiquette de texte, utilisez un cube semi-transparent pour encapsuler l’objet réel dans une 3D *le rectangle englobant*.
+En ajoutant à l’étiquette de texte, utilisez un cube semi-transparent pour encapsuler l’objet réel dans un *rectangle englobant*3D.
 
 ### <a name="exercise-2"></a>Exercice 2
 
-Formez votre Service de Vision personnalisée pour reconnaître des objets plus.
+Formez votre Service Vision personnalisée pour qu’il reconnaisse plus d’objets.
 
 ### <a name="exercise-3"></a>Exercice 3
 
-Un signal sonore lorsqu’un objet est reconnu.
+Émettre un signal sonore lorsqu’un objet est reconnu.
 
 ### <a name="exercise-4"></a>Exercice 4
 
-Utiliser l’API pour recalculer votre Service avec les mêmes images de l’analyse de votre application, par conséquent, pour rendre le Service plus précis (effectuer la prédiction et la formation simultanément).
+Utilisez l’API pour reformer votre service avec les mêmes images que celles que votre application analyse, afin de rendre le service plus précis (effectuer la prédiction et la formation simultanément).

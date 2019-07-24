@@ -1,36 +1,36 @@
 ---
-title: Mode de jeu Unity
-description: Utilise le Mode de lecture dans l’éditeur Unity pour prévisualiser vos modifications sur un appareil sans déploiement d’une application.
+title: Mode de lecture Unity
+description: Utilisation du mode lecture dans l’éditeur Unity pour afficher un aperçu de vos modifications sur un appareil sans déployer une application.
 author: JonMLyons
 ms.author: jlyons
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Unity, communication à distance, communication à distance HOLOGRAPHIQUE, lecteur de communication à distance HOLOGRAPHIQUE
+keywords: Unity, communication à distance, communication à distance holographique, lecteur de communication à distance holographique
 ms.openlocfilehash: c118c4af61c6eb2706ef851a6654c18ff7313453
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59593355"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63548730"
 ---
-# <a name="unity-play-mode"></a>Mode de jeu Unity
+# <a name="unity-play-mode"></a>Mode de lecture Unity
 
-Un moyen rapide pour travailler sur votre projet Unity consiste à utiliser le « Mode de lecture ». Il s’exécute votre application localement dans l’éditeur Unity sur votre PC. Unity utilise holographique de communication à distance pour fournir un moyen rapide pour afficher un aperçu de votre contenu sur un appareil HoloLens réel.
+Un moyen rapide de travailler sur votre projet Unity consiste à utiliser le «mode lecture». Cela exécute votre application localement dans l’éditeur Unity sur votre PC. Unity utilise la communication à distance holographique pour offrir un moyen rapide d’afficher un aperçu de votre contenu sur un appareil HoloLens réel.
 
-## <a name="unity-play-mode-with-holographic-remoting"></a>Mode de jeu Unity avec Remoting HOLOGRAPHIQUE
+## <a name="unity-play-mode-with-holographic-remoting"></a>Mode de lecture Unity avec accès distant holographique
 
-Avec la communication à distance HOLOGRAPHIQUE, vous pouvez tester votre application sur le HoloLens, pendant son exécution dans l’éditeur Unity sur votre PC. Regards, mouvement, voix et entrée de mappage spatial est envoyé à partir de votre HoloLens à votre PC. Restituées sont ensuite renvoyées à votre HoloLens. Il s’agit d’un excellent moyen de déboguer rapidement votre application sans générer et déployer un projet complet.
-1. Sur votre HoloLens, accédez à la **Microsoft Store** et installer le **[HOLOGRAPHIQUE Player de communication à distance](https://www.microsoft.com/store/p/holographic-remoting-player/9nblggh4sv40)** application.
-2. Sur votre HoloLens, démarrez le **HOLOGRAPHIQUE Player de communication à distance** application.
-3. Dans Unity, accédez à la **fenêtre** menu et sélectionnez **émulation HOLOGRAPHIQUE**.
-4. Définissez **Mode d’émulation** à **à distance au périphérique**.
-5. Pour **Machine distante**, entrez l’adresse IP de votre HoloLens.
-6. Cliquer sur **Se connecter**. Vous devriez voir **état de la connexion** modifier à **connecté** et voir l’écran vide dans le HoloLens.
-7. Cliquez sur le **lire** bouton pour démarrer le Mode de lecture et l’expérience de l’application sur votre HoloLens.
+Avec la communication à distance holographique, vous pouvez expérimenter votre application sur le HoloLens, pendant qu’elle s’exécute dans l’éditeur Unity sur votre PC. L’entrée de pointage, de mouvement, de voix et de mappage spatial est envoyée de votre HoloLens à votre PC. Les frames rendus sont ensuite renvoyés à votre HoloLens. C’est un excellent moyen de déboguer rapidement votre application sans générer et déployer un projet complet.
+1. Sur votre HoloLens, accédez à la **Microsoft Store** et installez l’application de **[lecteur de communication à distance holographique](https://www.microsoft.com/store/p/holographic-remoting-player/9nblggh4sv40)** .
+2. Sur votre HoloLens, démarrez l’application de **lecteur de communication à distance holographique** .
+3. Dans Unity, accédez au menu **fenêtre** et sélectionnez **émulation holographique**.
+4. Définissez le **mode d’émulation** à **distant sur appareil**.
+5. Pour **ordinateur distant**, entrez l’adresse IP de votre HoloLens.
+6. Cliquer sur **Se connecter**. Le changement d' **État** de la connexion doit être défini sur **connecté** et l’écran s’affichera vide dans HoloLens.
+7. Cliquez sur le bouton **lecture** pour démarrer le mode lecture et tester l’application sur votre HoloLens.
 
-Remoting HOLOGRAPHIQUE requiert une connexion rapide de PC et Wi-Fi. Consultez [HOLOGRAPHIQUE Player de communication à distance](holographic-remoting-player.md) pour plus d’informations.
+La communication à distance holographique requiert une connexion rapide PC et Wi-Fi. Pour plus d’informations, consultez [lecteur de communication à distance holographique](holographic-remoting-player.md) .
 
-Pour de meilleurs résultats, assurez-vous que votre application définit correctement le [concentrer point](focus-point-in-unity.md). Cela permet une communication à distance HOLOGRAPHIQUE pour mieux adapter votre scène à la latence de votre connexion sans fil.
+Pour de meilleurs résultats, assurez-vous que votre application définit correctement le [point de focus](focus-point-in-unity.md). Cela permet à la communication à distance holographique d’adapter au mieux votre scène à la latence de votre connexion sans fil.
 
 ## <a name="see-also"></a>Voir aussi
-* [Lecteur de communication à distance HOLOGRAPHIQUE](holographic-remoting-player.md)
+* [Holographic Remoting Player](holographic-remoting-player.md)

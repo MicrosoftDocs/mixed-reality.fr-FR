@@ -5,14 +5,13 @@ author: shentan
 ms.author: shentan
 ms.date: 04/21/2019
 ms.topic: article
-ms.localizationpriority: high
 keywords: Windows Mixed Reality, conception, interaction, voix
-ms.openlocfilehash: f2362400cba2946c3e97a7128c410ddcd17b4362
-ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
-ms.translationtype: HT
+ms.openlocfilehash: 724ef87dae1c731289af51504a518193c20b7d96
+ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66402369"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68387646"
 ---
 # <a name="voice-commanding"></a>Commander avec la voix
 
@@ -22,11 +21,24 @@ Lorsque vous utilisez des commandes vocales, le regard est généralement utilis
 ## <a name="device-support"></a>Prise en charge des appareils
 
 <table>
-<tr>
-<th>Fonctionnalité</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (1ère génération)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Casques immersifs</a></th>
-</tr><tr>
-<td>Commander avec la voix</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️ (avec casque)</td>
-</tr>
+    <colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    </colgroup>
+    <tr>
+        <td><strong>Fonctionnalité</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens (1ère génération)</strong></a></td>
+        <td><strong>HoloLens 2</strong></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Casques immersifs</strong></a></td>
+    </tr>
+     <tr>
+        <td>Commander avec la voix</td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>✔️ (avec casque)</td>
+    </tr>
 </table>
 
 
@@ -35,7 +47,7 @@ Lorsque vous utilisez des commandes vocales, le regard est généralement utilis
 
 Il est recommandé d’ajouter des commandes vocales à toutes les expériences que vous créez. La voix est un moyen puissant et pratique de contrôler le système et les applications. Étant donné le nombre de dialectes et d’accents qui peuvent être utilisés, il est important de bien choisir les mots clés de reconnaissance vocale, afin de garantir que les commandes de vos utilisateurs seront correctement interprétées.
 
-### <a name="best-practices"></a>Meilleures pratiques
+### <a name="best-practices"></a>Bonnes pratiques
 
 Voici quelques bonnes pratiques qui faciliteront la reconnaissance vocale.
 * **Utilisez des commandes concises** : dans la mesure du possible, choisissez des mots clés de deux syllabes minimum. Les mots d’une syllabe comprennent souvent des voyelles qui peuvent être prononcées différemment selon l’accent de la personne. Exemple : « Lire la vidéo » est mieux que « Lire la vidéo actuellement sélectionnée »
@@ -53,7 +65,7 @@ Voici quelques bonnes pratiques qui faciliteront la reconnaissance vocale.
 
 La prononciation de la commande « Sélectionner » activera systématiquement l’élément qui est pointé par le curseur de pointage. 
 
->Remarque: Dans HoloLens 2, le curseur de pointage doit d’abord être appelé en prononçant la commande « Sélectionner ». Pour activer l’élément, vous devez prononcer une nouvelle fois la commande « Sélectionner ». Pour masquer le curseur de pointage, un mouvement suffit. Vous pouvez cliquer dans l’air ou appuyer sur un objet. 
+>Remarque : Dans HoloLens 2, le curseur de pointage doit d’abord être appelé en prononçant la commande « Sélectionner ». Pour activer l’élément, vous devez prononcer une nouvelle fois la commande « Sélectionner ». Pour masquer le curseur de pointage, un mouvement suffit. Vous pouvez cliquer dans l’air ou appuyer sur un objet. 
 
 ### <a name="see-it-say-it"></a>Voir, prononcer
 
@@ -101,6 +113,6 @@ Lorsque la voix est utilisée correctement, l’utilisateur **comprend ce qu’i
 * Comment choisir l’application ou la commande d’application à laquelle adresser mes commandes vocales ?
 * Puis-je utiliser la voix pour contrôler les éléments holographiques sur HoloLens ?
 
-## <a name="see-also"></a>Voir également
+## <a name="see-also"></a>Voir aussi
 * [Mouvements](gestures.md)
 * [Suivre de la tête et stabiliser](gaze-and-dwell.md)

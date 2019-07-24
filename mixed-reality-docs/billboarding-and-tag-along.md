@@ -1,11 +1,11 @@
 ---
-title: Le billboarding et tag-along
-description: Objets avec le billboarding intérimaires toujours pour faire face à l’utilisateur.
+title: Billboarding et tag-avec
+description: Les objets avec des panneaux s’orientent toujours pour être confrontés à l’utilisateur.
 author: radicalad
 ms.author: adlinv
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Réalité mixte de Windows, le billboarding, tag-along
+keywords: Windows Mixed Reality, billboarding, balise
 ms.openlocfilehash: e33ab0121398742b2e48553c9cbf2c1debdc6abf
 ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
@@ -13,27 +13,27 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 05/21/2019
 ms.locfileid: "65974786"
 ---
-# <a name="billboarding-and-tag-along"></a>Le billboarding et tag-along
+# <a name="billboarding-and-tag-along"></a>Billboarding et tag-avec
 
-Le billboarding est un concept de comportement qui peut être appliqué aux objets dans la réalité mixte. Objets avec le billboarding intérimaires toujours pour faire face à l’utilisateur. Ceci est particulièrement utile avec le texte et les systèmes de rentrer où les objets statiques sont placés dans l’environnement utilisateur (verrouillé au monde) serait sinon masquées ou illisibles si un utilisateur à déplacer.
+Le billboarding est un concept comportemental qui peut être appliqué aux objets en réalité mixte. Les objets avec des panneaux s’orientent toujours pour être confrontés à l’utilisateur. Cela s’avère particulièrement utile avec les systèmes de texte et de menu où les objets statiques placés dans l’environnement de l’utilisateur (verrouillé) seraient autrement masqués ou illisibles si un utilisateur se déplace.
 
-![HoloLens de point de vue d’un système de menus qui toujours est confronté l’utilisateur](images/billboarding-fragments.gif)<br>
-*HoloLens de point de vue d’un système de menus qui toujours est confronté l’utilisateur*
+![Perspective HoloLens d’un système de menu qui rencontre toujours l’utilisateur](images/billboarding-fragments.gif)<br>
+*Perspective HoloLens d’un système de menu qui rencontre toujours l’utilisateur*
 
-Objets avec le billboarding activée peuvent faire pivoter librement dans l’environnement utilisateur. Ils peuvent également être limités à un seul axe en fonction des considérations de conception. N’oubliez pas, les objets billboarded peuvent découper ou occlude eux-mêmes s’ils sont placés trop près d’autres objets, ou dans HoloLens, trop près analysés surfaces. Pour éviter ce problème, pensez à l’encombrement total à qu'un objet peut produire lors de rotation sur l’axe est activé pour le billboarding.
+Les objets avec le billboarding activé peuvent pivoter librement dans l’environnement de l’utilisateur. Ils peuvent également être limités à un seul axe en fonction des considérations de conception. Gardez à l’esprit que les objets superposés peuvent découper ou occultait eux-mêmes s’ils sont placés trop près d’autres objets, ou dans HoloLens, trop proches des surfaces numérisées. Pour éviter cela, réfléchissez à l’encombrement total qu’un objet peut produire en cas de rotation sur l’axe activé pour le billboarding.
 
-## <a name="what-is-a-tag-along"></a>Qu’est un tag-along ?
+## <a name="what-is-a-tag-along"></a>Qu’est-ce qu’une balise?
 
-Tag-Along est un concept de comportement qui peut être ajouté à hologrammes, y compris les objets billboarded. Cette interaction est un moyen plus naturel et convivial de la réalisation de l’effet du contenu de tête verrouillée. Un objet tag-along tente ne quittent jamais vue de l’utilisateur. Cela permet à l’utilisateur d’interagir librement avec ce qui est avant tout profitant toujours également les hologrammes en dehors de leur vue directe.
+La balise est un concept comportemental qui peut être ajouté à des hologrammes, y compris des objets de panneaux. Cette interaction est un moyen plus naturel et plus convivial d’obtenir l’effet d’un contenu verrouillé. Une balise, le long d’un objet, tente de ne jamais sortir de la vue de l’utilisateur. Cela permet à l’utilisateur d’interagir librement avec ce qui est avant, tout en continuant à voir les hologrammes en dehors de leur vue directe.
 
-![Le panneau de codes confidentiels HoloLens constitue un excellent exemple de comment se comporte tag-along](images/tagalong-1000px.jpg)<br>
-*Le menu Démarrer de HoloLens constitue un excellent exemple de comportement de tag-along*
+![Le panneau broches HoloLens est un bon exemple de la façon dont les balises se comportent](images/tagalong-1000px.jpg)<br>
+*Le menu Démarrer HoloLens est un excellent exemple de comportement avec balises*
 
-Les objets Tag-Along ont des paramètres qui peuvent ajuster le comportement. Contenu peut être dans ou hors d’une visibilité de l’utilisateur comme vous le souhaitez, tandis que l’utilisateur se déplace sur leur environnement. Lorsque l’utilisateur se trouve, le contenu va tenter de rester au sein de la périphérie de l’utilisateur en faisant glisser vers le bord de la vue, selon la vitesse à laquelle un utilisateur déplace peut laisser le contenu temporairement hors de la vue. Lorsque l’utilisateur son rapprocher de l’objet tag-along, il s’agit plus en détail dans la vue. Réfléchir contenu toujours en cours « un coup de œil absent » pour les utilisateurs oublient jamais quel sens leur contenu est dans.
+Les objets avec balise ont des paramètres qui peuvent affiner la façon dont ils se comportent. Le contenu peut être dans ou en dehors de la ligne de vue de l’utilisateur, au fur et à mesure que l’utilisateur se déplace dans son environnement. Au fur et à mesure que l’utilisateur se déplace, le contenu tente de rester au sein de la périphérie de l’utilisateur en faisant glisser vers le bord de la vue, en fonction de la vitesse à laquelle un utilisateur se déplace, en laissant le contenu temporairement hors de l’affichage. Lorsque l’utilisateur fait un regard sur l’objet tag, il est plus complet à afficher. Imaginez que le contenu est toujours «un coup d’œil», de sorte que les utilisateurs n’oublient jamais de la direction dans laquelle ils se trouvent.
 
-Paramètres supplémentaires peuvent rendre l’objet tag-along se sentent attaché au début de l’utilisateur par un élastique. Blocage de l’accélération ou la décélération donne de poids à l’objet environnement plus physiquement présent. Ce comportement spring est un intuitif qui permet à l’utilisateur de créer un modèle mental précis du fonctionnement de tag-along. Audio contribue à supplémentaires permettant de lorsque les utilisateurs disposent des objets en mode de tag-along. Audio doit renforcer la vitesse du mouvement ; un tour rapide principal doit fournir un effet audio plus notable tandis que parcours à une vitesse naturelle doivent présenter des effets audio dans le cas échéant minimaux du tout.
+Des paramètres supplémentaires peuvent faire en sorte que l’objet de la balise soit attaché à la tête de l’utilisateur par une bande de caoutchouc. Le blocage de l’accélération ou de la décélération donne du poids à l’objet, ce qui le rend plus physiquement présent. Ce comportement de printemps est une offre qui permet à l’utilisateur de créer un modèle mental précis sur le fonctionnement de la balise. L’audio aide à fournir des intuitivité supplémentaires quand les utilisateurs disposent d’objets en mode balise. L’audio doit renforcer la vitesse de déplacement. un tour rapide doit fournir un effet sonore plus notable tout en passant à une vitesse naturelle, en cas de tout effet.
 
-Comme contenu véritablement tête verrouillée, les objets tag-along peuvent s’avérer surcharger ou nauseating s’ils connaissent un formidable de déplacer ou printemps trop en vue de l’utilisateur. Comme un utilisateur recherche et puis rapidement stop, leurs sens en leur indiquant qu’ils ont arrêté. Leur solde les informe que leur tête a cessé de tournage, ainsi que leurs voit vision l’arrêt du monde activation. Toutefois, si tag-along à déplacer dans lorsque l’utilisateur s’est arrêté, il risque de perturber leurs sens.
+À l’instar du contenu véritablement verrouillé, les objets de balise peuvent se révéler insurmontables ou nauseating s’ils se déplacent de manière incomplète dans la vue de l’utilisateur. À mesure qu’un utilisateur regarde et s’arrête rapidement, ses sens les indiquent qu’il a cessé. Leur solde les informe que leur tête a cessé de tourner et que leur vision voit que le monde cesse de tourner. Toutefois, si tag-with continue à se déplacer lorsque l’utilisateur s’est arrêté, il peut confondre leurs sens.
 
 ## <a name="see-also"></a>Voir aussi
 * [Curseurs](cursors.md)

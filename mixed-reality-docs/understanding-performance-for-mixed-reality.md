@@ -1,65 +1,65 @@
 ---
-title: Comprendre les performances pour la réalité mixte
-description: Avancée des rubriques et des détails sur l’optimisation des performances pour les applications de réalité mixte Windows
+title: Comprendre les performances de la réalité mixte
+description: Rubriques avancées et détails sur l’optimisation des performances pour les applications Windows Mixed Reality
 author: Troy-Ferrell
 ms.author: trferrel
 ms.date: 3/26/2019
 ms.topic: article
-keywords: Windows mixte réalité, réalité mixte, réalité virtuelle, VR, MR, les performances, l’optimisation, UC, GPU
+keywords: Windows Mixed Reality, la réalité mixte, la réalité virtuelle, VR, MR, performances, optimisation, UC, GPU
 ms.openlocfilehash: ce59f9023c21dc7c981a2bb97d9fbd0c57622dbf
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59596076"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63548844"
 ---
-# <a name="understanding-performance-for-mixed-reality"></a>Comprendre les performances pour la réalité mixte
+# <a name="understanding-performance-for-mixed-reality"></a>Comprendre les performances de la réalité mixte
 
-Cet article est une introduction au rationalisation de l’importance des performances pour votre application de réalité mixte.  Expérience utilisateur peut se dégrader considérablement si votre application ne s’exécute pas à la fréquence d’images optimale. Hologrammes apparaîtront instables et principal suivi de l’environnement sera inexact conduisant à une mauvaise expérience pour l’utilisateur. En effet, les performances doivent être considérée comme une fonctionnalité de première classe pour le développement de réalité mixte et pas une stabilisation, à la fin de la tâche de cycle.
+Cet article est une introduction à la rationalisation de l’importance des performances pour votre application de réalité mixte.  L’expérience utilisateur peut être très détériorée si votre application n’est pas exécutée à la fréquence d’images optimale. Les hologrammes apparaissent instables et le suivi des têtes de l’environnement est incorrect, conduisant à une expérience médiocre pour l’utilisateur. En effet, les performances doivent être considérées comme une fonctionnalité de première classe pour le développement de la réalité mixte et non une tâche de stabilisation, de fin de cycle.
 
-Pour la révision, les valeurs de fréquence d’images performante pour chaque plateforme cible sont répertoriées ci-dessous.
+À des fins de révision, les valeurs de fréquence d’images performante pour chaque plateforme cible sont répertoriées ci-dessous.
 
 | Plateforme | Fréquence d’images cible |
 |----------|-------------------|
 | [HoloLens](hololens-hardware-details.md) | 60 FPS |
-| [Windows Mixed Reality Ultra PC](immersive-headset-hardware-details.md) | 90 FPS |
-| [Windows mixte réalité PC](immersive-headset-hardware-details.md) | 60 FPS |
+| [Windows Mixed Reality ultra PC](immersive-headset-hardware-details.md) | 90 FPS |
+| [PC Windows Mixed Reality](immersive-headset-hardware-details.md) | 60 FPS |
 
-Le framework ci-dessous donne un aperçu général pour les meilleures pratiques et une vue différente pour atteindre cible des fréquences d’images. Pour Explorer plus en détail, vous pouvez lire le [recommandations relatives aux performances pour l’article de Unity](performance-recommendations-for-unity.md). En particulier, cet article connexe explique comment mesurer la fréquence d’images dans votre application de réalité mixte Windows de Unity, ainsi que les étapes à suivre dans l’environnement Unity pour améliorer les performances.
+Le cadre ci-dessous fournit un plan général pour les meilleures pratiques et des compréhensions pour atteindre les fréquences d’images cibles. Pour approfondir vos connaissances, prenez connaissance [des recommandations relatives aux performances de l’article Unity](performance-recommendations-for-unity.md). En particulier, cet article décrit comment mesurer la fréquence d’images dans votre application Windows Mixed Reality Unity, ainsi que les étapes à suivre dans l’environnement Unity pour améliorer les performances.
 
-## <a name="understanding-performance-bottlenecks"></a>Comprendre les goulots d’étranglement de performances
+## <a name="understanding-performance-bottlenecks"></a>Comprendre les goulots d’étranglement des performances
 
-Si votre application a une fréquence d’images peu performantes, la première étape consiste à analyser et à comprendre où votre application est intensif. Il existe deux processeurs principales responsable de travail pour afficher votre scène : le processeur et le GPU. Chacun de ces deux composants gérer différentes opérations et les étapes de votre application de réalité mixte. Il existe trois endroits où les goulots d’étranglement peuvent se produire. 
+Si votre application comporte une cadence de trames, la première étape consiste à analyser et à comprendre où votre application est gourmande en calculs. Deux processeurs principaux sont responsables du travail de rendu de votre scène: l’UC et le GPU. Chacun de ces deux composants gère différentes opérations et étapes de votre application de réalité mixte. Il existe trois emplacements clés où les goulots d’étranglement peuvent se produire. 
 
-1. **Application UC pour ce Thread -** -ce thread est responsable de votre logique d’application. Cela comprend le traitement d’entrée, des animations, physique et autres logique/état de l’application
-2. **Rendre Thread - UC à GPU** -ce thread est chargé d’envoyer vos appels de dessin vers le GPU. Lorsque votre application veut afficher un objet tel qu’un cube ou modèle, ce thread envoie une demande au GPU, qui possède une architecture optimisée pour le rendu, pour effectuer ces opérations.
+1. **Thread d’application-UC** : ce thread est responsable de la logique de votre application. Cela comprend le traitement des entrées, des animations, de la physique et d’autres logiques/États de l’application.
+2. **Rendu thread-CPU au GPU** : ce thread est chargé d’envoyer vos appels de dessin au GPU. Lorsque votre application souhaite effectuer le rendu d’un objet tel qu’un cube ou un modèle, ce thread envoie une requête au GPU, qui a une architecture optimisée pour le rendu, pour effectuer ces opérations.
 3. **GPU** - 
-    ce processeur gère généralement du pipeline graphique de votre application pour transformer des données 3D (modèles, des textures, etc.) en pixels et produisent finalement une image 2D à envoyer à l’écran votre appareil.
+    Le plus souvent, ce processeur gère le pipeline graphique de votre application pour transformer des données 3D (modèles, textures, etc.) en pixels et produire une image 2D à envoyer à l’écran de votre appareil.
 
-![Durée de vie d’un Frame](images/lifetime-of-a-frame.png)
+![Durée de vie d’un frame](images/lifetime-of-a-frame.png)
 
-En règle générale, les applications de HoloLens seront limitée de GPU. Toutefois, cela n’est pas vrai dans chaque application et par conséquent, il est recommandé d’utiliser les outils et les techniques ci-dessous pour accéder à réelles pour votre application.
+En règle générale, les applications HoloLens sont limitées par GPU. Toutefois, ce n’est pas vrai dans chaque application. il est donc recommandé d’utiliser les outils & techniques ci-dessous pour obtenir une application spécifique.
 
 ## <a name="how-to-analyze-your-application"></a>Comment analyser votre application
 
-Il existe de nombreux outils qui vous permettent en tant que développeur de comprendre le profil de performance de votre application de réalité mixte. Ceux-ci vous permettront pour les deux cibles où vous avez les goulots d’étranglement et comment ils sont prend forme eux-mêmes pour déboguer les.
+De nombreux outils vous permettent de comprendre le profil de performances de votre application de réalité mixte en tant que développeur. Ils vous permettront de cibler à la fois les goulots d’étranglement et la façon dont ils se manifestent pour les déboguer.
 
-Il s’agit d’une liste des outils puissants et populaires pour obtenir des informations de profilage approfondies pour votre application.
+Il s’agit d’une liste d’outils populaires et puissants pour obtenir des informations de profilage détaillés pour votre application.
 - [Analyseurs de performances graphiques Intel](https://software.intel.com/gpa)
-- [Débogueurs de Visual Studio Graphics](https://docs.microsoft.com/visualstudio/debugger/graphics/visual-studio-graphics-diagnostics?view=vs-2017)
-- [Unity Profiler](https://docs.unity3d.com/Manual/Profiler.html)
-- [Débogueur Unity Frame](https://docs.unity3d.com/Manual/FrameDebugger.html)
+- [Débogueurs graphiques Visual Studio](https://docs.microsoft.com/visualstudio/debugger/graphics/visual-studio-graphics-diagnostics?view=vs-2017)
+- [Profileur Unity](https://docs.unity3d.com/Manual/Profiler.html)
+- [Débogueur de frames Unity](https://docs.unity3d.com/Manual/FrameDebugger.html)
 
-### <a name="how-to-profile-in-any-environment"></a>Comment profiler dans n’importe quel environnement
+### <a name="how-to-profile-in-any-environment"></a>Comment Profiler dans n’importe quel environnement
 
-Il est un simple test pour déterminer rapidement que si vous êtes susceptible de GPU délimité ou un processeur limité dans votre application. Si vous diminuez la résolution de la sortie de cible de rendu, il existe moins pixels pour calculer et par conséquent, moins de travail GPU doit effectuer pour restituer une image. Fenêtre d’affichage de la mise à l’échelle (résolution dynamique mise à l’échelle) est la pratique de rendu de votre image à un petit cible de rendu, puis votre périphérique de sortie peut afficher. L’appareil sera jusqu'à l’échantillon à partir du plus petit jeu de pixels pour afficher votre image finale.
+Un test simple permet de déterminer rapidement si vous êtes susceptible de délimiter le GPU ou d’être limité par l’UC dans votre application. Si vous réduisez la résolution de la sortie de la cible de rendu, il y a moins de pixels à calculer et, par conséquent, moins de travail que le GPU doit effectuer pour afficher une image. La mise à l’échelle de la fenêtre d’affichage (mise à l’échelle dynamique) est la pratique qui consiste à rendre votre image sur une cible de rendu plus petite, alors que votre périphérique de sortie peut s’afficher. L’appareil dispose de l’échantillon de l’ensemble de pixels le plus petit pour afficher votre image finale.
 
-Après réduction de la résolution de rendu, si :
-1) Fréquence d’images de l’application **augmente**, puis vous êtes susceptible de **GPU délimité**
-1) Fréquence d’images de l’application **inchangé**, puis vous êtes susceptible de **limitées de l’UC**
+Après une réduction de la résolution de rendu, si:
+1) L’application de fréquence d’images **augmente**, vous êtes probablement limité par le **GPU**
+1) Fréquence d’application inchangée, vous êtes probablement limité par l' **UC**
 
 >[!NOTE]
->Unity fournit la possibilité de modifier facilement la résolution de cible de rendu de votre application lors de l’exécution via le *[XRSettings.renderViewportScale](https://docs.unity3d.com/ScriptReference/XR.XRSettings-renderViewportScale.html)* propriété. L’image finale présentée sur l’appareil a une résolution fixe. La plateforme va échantillonner pour créer une image de résolution plus élevée pour le rendu sur les écrans de sortie une résolution inférieure. 
+>Unity offre la possibilité de modifier facilement la résolution de la cible de rendu de votre application au moment de l’exécution via la propriété *[XRSettings. renderViewportScale](https://docs.unity3d.com/ScriptReference/XR.XRSettings-renderViewportScale.html)* . La résolution de l’image finale présentée sur l’appareil est fixe. La plateforme échantillonne la sortie de résolution inférieure pour générer une image de résolution supérieure pour le rendu sur les affichages. 
 >
 >```CS
 >UnityEngine.XR.XRSettings.renderScale = 0.7f;
@@ -67,72 +67,72 @@ Après réduction de la résolution de rendu, si :
 
 ## <a name="how-to-improve-your-application"></a>Comment améliorer votre application
 
-### <a name="cpu-performance-recommendations"></a>Recommandations relatives aux performances de processeur
+### <a name="cpu-performance-recommendations"></a>Recommandations relatives aux performances de l’UC
 
-En règle générale, la plupart du travail dans une application de réalité mixte sur le processeur implique de « simulation » de la scène et la logique d’application unique approfondis de traitement. Par conséquent, les domaines suivants sont généralement ciblés pour l’optimisation.
+En règle générale, la plupart des travaux dans une application de réalité mixte sur l’UC impliquent la «simulation» de la scène et le traitement d’une logique d’application unique et complète. Par conséquent, les zones suivantes sont généralement destinées à l’optimisation.
 
 - Animations
-- Simplifier physique
+- Simplifier la physique
 - Allocations de mémoire
-- Algorithmes complexes (ex.) cinématique inverse, la recherche de chemin d’accès)
+- Algorithmes complexes (c.-à-d. cinématique inverse, recherche de chemin d’accès)
 
-### <a name="gpu-performance-recommendations"></a>Recommandations relatives aux performances de GPU
+### <a name="gpu-performance-recommendations"></a>Recommandations relatives aux performances GPU
 
-#### <a name="understanding-bandwidth-vs-fill-rate"></a>Taux de remplissage de comprendre la bande passante vs
-Lors du rendu d’un frame sur le GPU, une application est généralement limitée par le taux de remplissage ou de la bande passante de mémoire.
+#### <a name="understanding-bandwidth-vs-fill-rate"></a>Fonctionnement de la bande passante et du taux de remplissage
+Lors du rendu d’une trame sur le GPU, une application est généralement limitée par la bande passante de mémoire ou le taux de remplissage.
 
-- **Bande passante de mémoire** est le taux de lectures et écritures le GPU peut effectuer à partir de la mémoire
-    - Pour identifier les limitations de bande passante, réduire la qualité de la texture et vérifiez si le taux de trames améliorées.
-    - Dans Unity, cela est possible en modifiant **qualité de la Texture** dans **modifier** > **paramètres du projet**  >   **[ Paramètres de qualité](https://docs.unity3d.com/Manual/class-QualitySettings.html)**.
-- **Taux de remplissage** fait référence au débit de pixels rendus qui peuvent être dessinées par seconde par le GPU.
-    - Pour identifier les limites de taux de remplissage, diminuez la résolution d’affichage et vérifiez si le taux de trames améliorées. 
-    - Dans Unity, cela est possible le *[XRSettings.renderViewportScale](https://docs.unity3d.com/ScriptReference/XR.XRSettings-renderViewportScale.html)* propriété
+- La **bande passante** de la mémoire est le taux de lectures et d’écritures que le GPU peut exécuter à partir de la mémoire
+    - Pour identifier les limitations de bande passante, réduisez la qualité de la texture et vérifiez si les images sont améliorées.
+    - Dans Unity, vous pouvez effectuer cette opération en modifiant la qualité de la **texture** dans **modifier** > les paramètres de la **[qualité paramètres](https://docs.unity3d.com/Manual/class-QualitySettings.html)** du**projet** > .
+- Le **taux de remplissage** fait référence au débit des pixels rendus qui peuvent être dessinés par seconde par le GPU.
+    - Pour identifier les limitations du taux de remplissage, diminuez la résolution de l’affichage et vérifiez si les images sont améliorées. 
+    - Dans Unity, cette opération peut être effectuée via la propriété *[XRSettings. renderViewportScale](https://docs.unity3d.com/ScriptReference/XR.XRSettings-renderViewportScale.html)*
 
-Bande passante de mémoire implique généralement des optimisations soit
-1) diminuer les résolutions de texture
-2) utiliser moins de textures (ex.) etc. spéculaire, Normals)
+La bande passante de la mémoire implique généralement des optimisations pour
+1) réduire les résolutions de texture
+2) Utilisez moins de textures (par exemple, Normals, spéculaire, etc.)
 
-Taux de remplissage est principalement axé sur ce qui réduit le nombre d’opérations qui doivent être calculés pour un pixel de rendu final. Exemples de ce appartiennent généralement à ce qui réduit
-1) nombre d’objets au rendu/processus
-2) nombre d’opérations par le nuanceur
-3) nombre d’étapes GPU pour résultat final (Nuanciers Géométrie post-traitement effets, etc.)
-4) nombre de pixels à restituer (ex.) résolution d’affichage)
+Le taux de remplissage est principalement axé sur la réduction du nombre d’opérations qui doivent être calculées pour un pixel rendu final. Des exemples de ce qui se limitent généralement à la réduction
+1) nombre d’objets à restituer/traiter
+2) nombre d’opérations par nuanceur
+3) nombre d’étapes du GPU vers le résultat final (nuanceurs Geometry, effets de la postérieure au traitement, etc.)
+4) nombre de pixels à afficher (c.-à-d. résolution d’affichage)
 
 #### <a name="reduce-poly-count"></a>Réduire le nombre de poly
-Polygone supérieur compte résultat dans des opérations plus pour le GPU et réduisant le nombre de polygones dans votre scène réduit la quantité de temps à rendre cette géométrie. D’autres facteurs impliqués ainsi lors de l’ombrage de la géométrie qui peut toujours être coûteuse, mais le compte de polygones est la mesure de base pour déterminer comment onéreux une scène sera à restituer.
+Des nombres de polygones plus élevés entraînent davantage d’opérations pour le GPU et la réduction du nombre de polygones dans votre scène réduira la durée de rendu de cette géométrie. D’autres facteurs sont impliqués dans l’ombrage de la géométrie qui peut toujours être coûteuse, mais le nombre de polygones est la mesure de base pour déterminer le coût de l’affichage d’une scène.
 
-#### <a name="limit-overdraw"></a>Limite de superposition
+#### <a name="limit-overdraw"></a>Limiter le surdessin
 
-Superposition haut se produit lorsque plusieurs objets sont rendus, mais pas générés à l’écran comme ils sont masqués par un autre objet OCCLUSION généralement plus près. Imaginez examinant un mur ayant plusieurs salles et geometry derrière lui. Tous de la géométrie seraient traitée pour le rendu, mais uniquement le mur opaque doit vraiment être affiché comme il occludes l’affichage de tout autre contenu. Cela entraîne des opérations peu rentable qui ne sont pas nécessaires pour l’affichage actuel.
+Un surdessin élevé se produit lorsque plusieurs objets sont rendus mais non générés à l’écran, car ils sont masqués par un autre objet, en général plus proche de l’objet obturon. Imaginez qu’il s’agit d’un mur qui avait plusieurs pièces et une géométrie en arrière-plan. Toute la géométrie est traitée pour le rendu, mais seul le mur opaque doit vraiment être rendu, car il occludes la vue de tout autre contenu. Cela entraîne des opérations inutiles qui ne sont pas nécessaires pour l’affichage actuel.
 
 #### <a name="shaders"></a>Nuanceurs
 
-Nuanceurs sont de petits programmes qui s’exécutent sur le GPU et déterminent généralement deux étapes importantes de rendu :
-1) les sommets de l’objet doivent être dessinées sur l’écran et où elles se trouvent dans l’espace à l’écran (ex.) le nuanceur de sommets)
-    - Le nuanceur de sommets est généralement exécuté par vertex pour chaque GameObject
-2) les éléments à la couleur des pixels (ex.) le nuanceur de pixels)
-    - Le nuanceur de pixels est exécuté par pixel pour la texture restituée pour périphérique présent
+Les nuanceurs sont de petits programmes qui s’exécutent sur le GPU et déterminent généralement deux étapes importantes du rendu:
+1) les sommets de l’objet qui doivent être dessinés à l’écran et l’emplacement où ils se trouvent dans l’espace à l’écran (c.-à-d. nuanceur de sommets)
+    - Le nuanceur vertex est généralement exécuté par vertex pour chaque GameObject
+2) comment colorer ces pixels (c.-à-d. nuanceur de pixels)
+    - Le nuanceur de pixels est exécuté par pixel pour la texture rendue pour l’appareil présent
 
-Nuanceurs effectuent généralement de nombreuses transformations et les calculs d’éclairage. Bien que les modèles d’éclairage complexes, des ombres et autres opérations peuvent générer des résultats fantastiques, ils s’accompagnent également un prix. En réduisant le nombre d’opérations calculées dans les nuanceurs peut réduire considérablement le travail global à effectuer par un GPU par trame.
+En général, les nuanceurs effectuent de nombreuses transformations et des calculs d’éclairage. Bien que les modèles d’éclairage complexes, les ombres et les autres opérations puissent générer des résultats fantastiques, ils sont également fournis avec un prix. La réduction du nombre d’opérations calculées dans les nuanceurs peut réduire considérablement le travail global nécessaire à la réalisation d’un GPU par trame.
 
-##### <a name="shader-coding-recommendations"></a>Recommandations de codage de nuanceur
+##### <a name="shader-coding-recommendations"></a>Recommandations en matière de codage de nuanceur
 
-- Utiliser le filtrage bilinéaire autant que possible
-- Réorganiser des expressions pour utiliser des fonctions intrinsèques MAD pour effectuer une multiplication et un ajout en même temps
-- Précalculent autant que possible sur l’UC et de transmettre en tant que constantes à la documentation
-- **Favoriser les opérations de déplacement à partir du nuanceur de pixels au nuanceur de sommets**
-    - En règle générale, le nombre de vertex << # de pixels (ex.) 720p == 921,600 pixels, 1080p == 2,073,600 pixels, etc)
+- Utiliser le filtrage bilinéaire dans la mesure du possible
+- Réorganiser les expressions pour utiliser des intrinsèques MAD afin d’effectuer une multiplication et un ajout en même temps
+- Précalculez autant que possible sur le processeur et transmettez-les en tant que constantes au matériel.
+- **Privilégier les opérations de déplacement du nuanceur de pixels vers le nuanceur de sommets**
+    - En général, le nombre de vertex < < nombre de pixels (c.-à-d. 720p = = 921 600 pixels, 1080p = = 2 073 600 pixels, etc.)
 
-#### <a name="remove-gpu-stages"></a>Supprimer des étapes GPU
-Effets de post-traitement peut s’avérer très coûteuse et généralement inhiber le taux de remplissage de votre application. Cela inclut également des techniques de l’anticrénelage, telles que MSAA. Sur HoloLens, il est recommandé d’éviter ces techniques entièrement. En outre, les étapes du nuanceur supplémentaires telles que geometry, convexe et nuanceurs de calcul doivent être évitées lorsque cela est possible.
+#### <a name="remove-gpu-stages"></a>Supprimer les étapes du GPU
+Les effets de la postérieure au traitement peuvent être très coûteux et, en général, inhiber le taux de remplissage de votre application. Cela comprend également des techniques d’anticrénelage telles que MSAA. Sur HoloLens, il est recommandé d’éviter ces techniques entièrement. En outre, des étapes de nuanceur supplémentaires, telles que Geometry, coque et les nuanceurs de calcul, doivent être évitées lorsque cela est possible.
 
 ## <a name="memory-recommendations"></a>Recommandations de mémoire
-Opérations d’allocation et désallocation de mémoire excessive peuvent avoir des effets négatifs sur votre application holographique avec performances incohérent, cadres figés et autres comportements nuisibles. Il est particulièrement important de comprendre les considérations relatives à la mémoire lors du développement dans Unity, étant donné que la gestion de la mémoire est contrôlée par le garbage collector.
+L’allocation de mémoire excessive & les opérations de désallocation peuvent avoir des effets négatifs sur votre application holographique, ce qui se traduit par des performances incohérentes, des trames figées et d’autres comportements nuisibles. Il est particulièrement important de comprendre les considérations relatives à la mémoire lors du développement dans Unity, car la gestion de la mémoire est contrôlée par le garbage collector.
 
-#### <a name="object-pooling"></a>Pool d’objets
+#### <a name="object-pooling"></a>Mise en pool d’objets
 
-Le pool d’objets est une technique répandue qui permet de réduire le coût des allocations continues & désallocations d’objets. Pour cela, en allouant un grand nombre d’objets identiques et en réutilisant les instances inactives, disponibles à partir de ce pool au lieu de constamment lors de la génération et la destruction d’objets au fil du temps. Les pools d’objet sont idéales pour des composants réutilisables qui possèdent la durée de vie des variable au cours d’une application.
+Le mise en pool d’objets est une technique populaire pour réduire le coût des allocations continues & des désallocations d’objets. Pour ce faire, vous devez allouer un grand pool d’objets identiques et réutiliser les instances inactives de ce pool au lieu de générer et de détruire constamment des objets dans le temps. Les pools d’objets sont idéaux pour les composants réutilisables qui ont une durée de vie variable pendant une application.
 
 ## <a name="see-also"></a>Voir aussi
-- [Recommandations relatives aux performances pour Unity](performance-recommendations-for-unity.md)
+- [Recommandations de performances pour Unity](performance-recommendations-for-unity.md)
 - [Paramètres recommandés pour Unity](recommended-settings-for-unity.md)

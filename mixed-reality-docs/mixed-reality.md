@@ -1,11 +1,11 @@
 ---
-title: Ce qui est une réalité mixte ?
-description: Cet article définit la réalité mixte et montre où les appareils AR et VR simples, ainsi que les appareils de réalité mixte Windows tels que Microsoft HoloLens et des casques IMMERSIFS Windows Mixed Reality, se trouvent dans le spectre de réalité mixte.
+title: Qu’est-ce que la réalité mixte?
+description: Cet article définit la réalité mixte et démontre où les périphériques simples de type AR et VR, ainsi que les appareils Windows Mixed Reality, tels que Microsoft HoloLens et les casques immersifs de la réalité mixte Windows, se trouvent dans le spectre de la réalité mixte.
 author: BrandonBray
 ms.author: branbray
 ms.date: 03/21/2018
 ms.topic: article
-keywords: réalité mixte, HOLOGRAPHIQUE, ar, vr, mr, xr, réalité augmentée, réalité virtuelle, explication
+keywords: réalité mixte, holographique, AR, VR, Mr, XR, réalité augmentée, réalité virtuelle, explication
 ms.openlocfilehash: fbac8176b36cf28673dd9633cc059e5856a50296
 ms.sourcegitcommit: 30246ab9b9be44a3c707061753e53d4bf401eb6b
 ms.translationtype: MT
@@ -13,70 +13,70 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 06/22/2019
 ms.locfileid: "67326313"
 ---
-# <a name="what-is-mixed-reality"></a>Ce qui est une réalité mixte ?
+# <a name="what-is-mixed-reality"></a>Qu’est-ce que la réalité mixte?
 
-Réalité mixte est le résultat du mélange du monde physique avec le monde numérique. Réalité mixte est la prochaine évolution de l’interaction homme, ordinateur et l’environnement et déverrouille les possibilités qui jusqu'à présent étaient limitées à notre imaginations. Il est rendu possible par des améliorations dans la vision par ordinateur, de puissance de traitement graphique, la technologie d’affichage et les systèmes d’entrée. Le terme *une réalité mixte* a été introduite initialement dans un livre de 1994 par Paul Milgram et Fumio Kishino, «[une taxonomie de mixte affiche Visual réalité](http://etclab.mie.utoronto.ca/people/paul_dir/IEICE94/ieice.html). » Leur livre a introduit le concept de la *continuum de virtuality*et axée sur l’affichage de la catégorisation de classification appliquée à. Depuis lors, l’application de réalité mixte va au-delà d’affiche. Il inclut également l’entrée de l’environnement, son spatial et emplacement.
+La réalité mixte est le résultat de la fusion du monde physique avec l’univers numérique. La réalité mixte est la prochaine évolution de l’interaction de l’utilisateur, de l’ordinateur et de l’environnement. elle permet de déverrouiller les possibilités qui étaient auparavant limitées à nos imagination. Elle est rendue possible grâce à l’évolution de la vision par ordinateur, de la puissance de traitement graphique, de la technologie d’affichage et des systèmes d’entrée. Le terme « *réalité mixte* » a été introduit à l’origine dans un document de 1994 par Paul Milgram et Fumio Kishino, «[une taxonomie du visuel de la réalité mixte» s’affiche](http://etclab.mie.utoronto.ca/people/paul_dir/IEICE94/ieice.html). Leur document a introduit le concept de *continuum de virtualisation*et s’est concentré sur la manière dont la catégorisation de taxonomie appliquée s’affiche. Depuis, l’application de la réalité mixte va au-delà des affichages. Il comprend également les entrées environnementales, le son spatial et l’emplacement.
 
-## <a name="environmental-input-and-perception"></a>Perception et l’entrée de l’environnement
+## <a name="environmental-input-and-perception"></a>Entrée et perception environnementales
 
 ![Diagramme de Venn montrant les interactions entre les ordinateurs, les êtres humains et les environnements](images/mixed-reality-venn-diagram-300px.png)<br> 
 
-Dernières décennies, la relation entre l’homme et d’entrée a été bien explorée. Il a même une discipline étudiée appelée *interaction humaine ordinateur* ou HCL. Une entrée humaine se produit via une variété de moyens, notamment les claviers, souris, tactile, l’encre, voix et même le suivi de squelette Kinect.
+Au cours des dernières décennies, la relation entre les entrées de l’homme et de l’ordinateur a été bien explorée. Il a même une discipline largement étudiée appelée *interaction des ordinateurs humains* ou HCI. L’entrée humaine s’effectue par le biais de différents moyens, y compris les claviers, les souris, les fonctions tactiles, l’encre, la voix et même le suivi squelettique Kinect.
 
-Des améliorations dans les capteurs et de traitement sont donnant lieu à une nouvelle zone d’entrée de l’ordinateur à partir d’environnements. L’interaction entre les environnements et les ordinateurs est compréhension efficacement l’environnement ou *perception*. Par conséquent, les noms d’API dans Windows qui révèlent des informations de l’environnement sont appelés les [perception API](https://docs.microsoft.com/uwp/api/Windows.Perception). Entrée environnementale capture des éléments tels que de la position d’une personne dans le monde (par exemple, [suivi principal](coordinate-systems.md)), des limites et des surfaces (par exemple, [mappage spatial](spatial-mapping.md) et [compréhension spatiale](case-study-expanding-the-spatial-mapping-capabilities-of-hololens.md)), d’éclairage ambiant, son environnement, reconnaissance d’objet et l’emplacement.
+Les avancées dans les capteurs et le traitement sont une nouvelle zone d’entrée d’ordinateur à partir d’environnements. L’interaction entre les ordinateurs et les environnements est une compréhension ou une *perception*efficace de l’environnement. Par conséquent, les noms d’API dans Windows qui révèlent des informations environnementales sont appelés des [API de perception](https://docs.microsoft.com/uwp/api/Windows.Perception). Les entrées environnementales capturent des éléments tels que la position d’une personne dans le monde (par exemple, le [suivi des têtes](coordinate-systems.md)), les surfaces et les limites (par exemple, le [mappage spatial](spatial-mapping.md) et la [compréhension spatiale](case-study-expanding-the-spatial-mapping-capabilities-of-hololens.md)), l’éclairage ambiant, le son ambiant, l’objet reconnaissance et emplacement.
 
-À présent, la combinaison de tous les ordinateurs de trois--traitement, une entrée humaine et l’environnement entrée--définit la possibilité de créer des expériences de réalité mixte true. Mouvement à travers le monde physique peut se traduire pour le déplacement dans le monde numérique. Limites dans le monde physique peuvent influencer les expériences d’applications, telles que la partie, le monde numérique. Sans intervention de l’environnement, les expériences ne peut pas blend entre réalités physiques et numériques.
+À présent, la combinaison de la totalité du traitement des ordinateurs, de l’entrée humaine et de l’environnement d’entrée, définit la possibilité de créer de véritables expériences de réalité mixte. Le déplacement dans le monde physique peut se traduire par le mouvement dans le monde numérique. Les limites du monde physique peuvent influencer l’expérience des applications, telles que la lecture du jeu, dans le monde numérique. Sans entrée environnementale, les expériences ne peuvent pas être mélangées entre les réalités physiques et numériques.
 
-## <a name="the-mixed-reality-spectrum"></a>Le spectre de réalité mixte
+## <a name="the-mixed-reality-spectrum"></a>Le spectre de la réalité mixte
 
-Étant donné que la réalité mixte fusionne les mondes physique et numérique, ces deux réalités définissent les terminaisons polaires spectre appelé le continuum virtuality. Par souci de simplicité, nous faisons référence à ce que le *spectre de réalité mixte*. Sur le côté gauche, nous avons réalité physique dans lequel nous, humains, existe ; dans la partie droite, nous avons la réalité numérique correspondante.
+Étant donné que la réalité mixte fusionne des mondes physiques et numériques, ces deux réalités définissent les extrémités polaires d’un spectre appelé continuum de virtualisation. Pour plus de simplicité, nous faisons référence à ceci comme le spectre de la *réalité mixte*. Sur le côté gauche, nous avons une réalité physique dans laquelle nous avons des êtres humains; sur le côté droit, nous avons la réalité numérique correspondante.
 
 <br>
 
 >[!VIDEO https://www.youtube.com/embed/_xpI0JosYUk]
 
-Aujourd'hui, la plupart des téléphones mobiles sur le marché n’ont peu à aucuns possibilités de présentation de l’environnement. Par conséquent, les expériences que proposent-ils Impossible de mélanger entre réalités physiques et numériques. Les expériences superposer des graphiques sur les flux vidéo du monde physique sont *une réalité augmentée*. Les expériences occlude votre vue pour présenter une expérience numérique sont *réalité virtuelle*. Comme vous pouvez le voir, les expériences activées entre ces deux extrêmes est *une réalité mixte*:
-* En commençant par le monde physique, placer un objet numérique, comme un hologramme, comme si elle est vraiment là.
-* En commençant par le monde physique, une représentation numérique d’une autre personne--un avatar--indique l’emplacement où ils ont été permanent en quittant les notes de publication. En d’autres termes, les expériences qui représentent une collaboration asynchrone à différents moments dans le temps.
-* Les limites physiques du monde physique, tels que des murs et meubles, en commençant avec un monde numérique, apparaissent numériquement au sein de l’expérience pour aider les utilisateurs à éviter des objets physiques.
+La plupart des téléphones portables sur le marché n’ont pas de capacités de compréhension de l’environnement. Ainsi, les expériences qu’ils offrent ne peuvent pas se mélanger entre les réalités physiques et numériques. Les expériences qui superposent des graphiques sur les flux vidéo du monde physique sont une *réalité augmentée*. Les expériences qui occultait votre vue pour présenter une expérience numérique sont la *réalité virtuelle*. Comme vous pouvez le voir, les expériences activées entre ces deux extrêmes sont la *réalité mixte*:
+* En commençant par le monde physique, en plaçant un objet numérique, tel qu’un hologramme, comme s’il était vraiment là.
+* À partir de l’univers physique, une représentation numérique d’une autre personne (un avatar) indique l’emplacement où ils se trouvaient lors de la sortie des notes. En d’autres termes, les expériences qui représentent la collaboration asynchrone à différents moments.
+* À partir d’un monde numérique, les limites physiques du monde physique, telles que les murs et les meubles, apparaissent numériquement dans l’expérience pour aider les utilisateurs à éviter les objets physiques.
 
-![Le spectre de réalité mixte](images/mixed-reality-spectrum-550px.png)
+![Le spectre de la réalité mixte](images/mixed-reality-spectrum-550px.png)
 
-Plus la réalité augmentée et offres de réalité virtuelle disponibles aujourd'hui représentent une très petite partie de cette gamme. Ils sont, toutefois, des sous-ensembles de la plus grande gamme de réalité mixte. Windows 10 est généré avec la gamme complète à l’esprit et permet la fusion des représentations numériques des personnes, des lieux et des objets avec le monde réel.
+La plupart des offres de réalité et de réalité virtuelle disponibles aujourd’hui représentent une très petite partie de ce spectre. Ils sont, toutefois, des sous-ensembles du plus grand spectre de réalité mixte. Windows 10 est conçu en tenant compte de l’ensemble du spectre et permet de fusionner des représentations numériques de personnes, de lieux et d’objets dans le monde réel.
 
-![Types d’appareils dans le spectre de réalité mixte](images/mixed-reality-spectrum-device-types-550px.png)
+![Types d’appareils dans le spectre de la réalité mixte](images/mixed-reality-spectrum-device-types-550px.png)
 
-Il existe deux principaux types d’appareils qui délivrent des expériences Windows Mixed Reality :
-1. **Appareils HOLOGRAPHIQUE.** Ceux-ci sont caractérisés par la capacité du périphérique pour placer le contenu numérique dans le monde réel comme s’il s’agissait vraiment il.
-2. **Appareils immersives.** Ceux-ci sont caractérisés par la capacité du périphérique pour créer une idée de la « présence »--masquage du monde physique et en la remplaçant par une expérience numérique.
+Il existe deux types principaux d’appareils qui proposent des expériences Windows Mixed Reality:
+1. **Appareils holographiques.** Celles-ci sont caractérisées par la capacité de l’appareil à placer du contenu numérique dans le monde réel comme s’il existait vraiment.
+2. **Périphériques immersifs.** Celles-ci sont caractérisées par la capacité de l’appareil à créer un sens de «présence»: masquer le monde physique et le remplacer par une expérience numérique.
 
 <table>
 <tr>
-<th width="20%"> Caractéristique</th><th width="40%"> Appareils HOLOGRAPHIQUE</th><th width="40%"> Appareils immersives</th>
+<th width="20%"> Caractéristique</th><th width="40%"> Appareils holographiques</th><th width="40%"> Appareils immersifs</th>
 </tr><tr>
-<td> Appareil de l’exemple</td><td> Microsoft HoloLens<br /> <img alt="Microsoft HoloLens image" width="300" height="169" src="images/mshololens-hero1-whitbg-rgb-300px.png" /></td><td> Windows Acer mixte réalité Development Edition<br /> <img alt="Acer Windows Mixed Reality Development Edition image" width="300" height="169" src="images/acer-windows-mixed-reality-development-edition-headset-300px.jpg" /></td>
+<td> Exemple d’appareil</td><td> Microsoft HoloLens<br /> <img alt="Microsoft HoloLens image" width="300" height="169" src="images/mshololens-hero1-whitbg-rgb-300px.png" /></td><td> Windows Mixed Reality Development Edition<br /> <img alt="Acer Windows Mixed Reality Development Edition image" width="300" height="169" src="images/acer-windows-mixed-reality-development-edition-headset-300px.jpg" /></td>
 </tr><tr>
-<td> Écran</td><td> <i>Affichage transparente.</i> Permet à l’utilisateur afficher l’environnement physique tout en portant le casque.</td><td> <i>Affichage opaque.</i> Blocs de l’environnement physique tout en portant le casque.</td>
+<td> Écran</td><td> <i>Voir affichage.</i> Permet à l’utilisateur de voir l’environnement physique tout en portant le casque.</td><td> <i>Affichage opaque.</i> Bloque l’environnement physique tout en portant le casque.</td>
 </tr><tr>
-<td> Déplacement</td><td> Complète le déplacement des six degrés de liberté, rotation et traduction.</td><td> Complète le déplacement des six degrés de liberté, rotation et traduction.</td>
+<td> Trésorerie</td><td> Déplacement complet à six degrés de liberté, à la fois pour la rotation et la translation.</td><td> Déplacement complet à six degrés de liberté, à la fois pour la rotation et la translation.</td>
 </tr>
 </table>
 
-Notez que, si un appareil est connecté à ou attaché à un PC distinct (via un câble USB ou Wi-Fi), soit il autonome ne (illimité) ne reflète pas si un appareil est HOLOGRAPHIQUE ou immersives. Certainement, responsable des fonctionnalités qui améliorent la mobilité pour une meilleure expérience et HOLOGRAPHIQUES et immersives appareils peut être attachés ou disposerez.
+Notez qu’un appareil est connecté à un PC distinct (via un câble USB ou un réseau Wi-Fi) ou qu’il est attaché à un autre ordinateur (à l’aide d’un câble USB ou Wi-Fi) qui ne reflète pas si un appareil est holographique ou immersif. En fait, les fonctionnalités qui améliorent la mobilité conduisent à de meilleures expériences, et les appareils holographiques et immersifs peuvent être attachés ou déattachés.
 
 ## <a name="devices-and-experiences"></a>Appareils et expériences
 
-Progrès technologique est ce qui a activé les expériences de réalité mixte. Il n’existe aucun appareil aujourd'hui qui permettre exécuter des expériences dans tout le spectre entier. Toutefois, Windows 10 fournit une plateforme commune de réalité mixte pour les développeurs et les fabricants d’appareils. Appareils aujourd'hui peuvent prendre en charge une plage spécifique dans le spectre de réalité mixte. Au fil du temps, les nouveaux appareils seront développe cette plage. À l’avenir, HOLOGRAPHIQUE appareils sera plus riche, et appareils immersives deviendront plus HOLOGRAPHIQUES.
+La progression technologique est celle qui a permis l’expérience de réalité mixte. Aucun appareil n’est actuellement capable d’exécuter des expériences sur tout le spectre. Toutefois, Windows 10 offre une plateforme de réalité mixte commune pour les fabricants de périphériques et les développeurs. Les appareils actuels peuvent prendre en charge une plage spécifique dans le spectre de la réalité mixte. Au fil du temps, de nouveaux appareils vont augmenter cette plage. À l’avenir, les appareils holographiques deviendront plus immersifs et les appareils immersifs seront plus holographiques.
 
-![Où les périphériques de disposer de la gamme de réalité mixte](images/mixed-reality-spectrum-device-placement-550px.png)
+![Où les appareils présentent le spectre de la réalité mixte](images/mixed-reality-spectrum-device-placement-550px.png)
 
-Souvent, il est préférable d’envisager le type d’expérience d’une application ou développeur de jeux souhaite créer. Les expériences ciblera généralement un point spécifique ou une partie de la gamme. Ensuite, les développeurs doivent envisager les capacités des appareils, qu'ils souhaitent cibler. Par exemple, les expériences qui s’appuient sur le monde physique exécutera meilleures sur HoloLens.
-* **Vers la gauche (en réalité physique).** Les utilisateurs sont toujours présents dans leur environnement physique et ne sont jamais effectués de croire qu’ils ont quitté cet environnement.
-* **L’intercepteur (réalité mixte entièrement).** Ces expériences blend le monde réel et le monde numérique. Les personnes ont vu le film [Jumanji](https://en.wikipedia.org/wiki/Jumanji) peuvent également rapprocher la façon dont la structure physique de la maison où l’histoire a eu lieu a été fusionnée avec un environnement de jungle.
-* **Vers la droite (en réalité numérique).** Les utilisateurs rencontrer un environnement totalement au numérique et n’ont pas conscience de ce qui se produit dans l’environnement physique autour d’elles.
+Souvent, il est préférable de réfléchir au type d’expérience qu’une application ou un développeur de jeux souhaite créer. En général, l’expérience cible un point ou une partie spécifique sur le spectre. Les développeurs doivent ensuite prendre en compte les fonctionnalités des appareils qu’ils souhaitent cibler. Par exemple, les expériences qui reposent sur le monde physique s’exécuteront mieux sur HoloLens.
+* **Vers la gauche (quasi-réalité physique).** Les utilisateurs restent présents dans leur environnement physique et ne pensent pas qu’ils ont quitté cet environnement.
+* **Au milieu (réalité entièrement mixte).** Ces expériences fusionnent le monde réel et le monde numérique. Les utilisateurs qui ont vu le film [Jumanji](https://en.wikipedia.org/wiki/Jumanji) peuvent concilier la manière dont la structure physique de la maison où l’histoire a eu lieu a été mélangée à un environnement de jungle.
+* **Vers la droite (presque Digital Reality).** Les utilisateurs bénéficient d’un environnement entièrement numérique et ignorent ce qui se passe dans l’environnement physique qui les entoure.
 
 
 ## <a name="see-also"></a>Voir aussi
-* [Référence de l’API : Windows.Perception](https://docs.microsoft.com/uwp/api/Windows.Perception)
-* [Référence de l’API : Windows.Perception.Spatial](https://docs.microsoft.com/uwp/api/Windows.Perception.Spatial)
-* [Référence de l’API : Windows.Perception.Spatial.Surfaces](https://docs.microsoft.com/uwp/api/Windows.Perception.Spatial.Surfaces)
+* [Référence de l’API: Windows. perception](https://docs.microsoft.com/uwp/api/Windows.Perception)
+* [Référence de l’API: Windows. perception. spatial](https://docs.microsoft.com/uwp/api/Windows.Perception.Spatial)
+* [Référence de l’API: Windows. perception. spatial. surfaces](https://docs.microsoft.com/uwp/api/Windows.Perception.Spatial.Surfaces)

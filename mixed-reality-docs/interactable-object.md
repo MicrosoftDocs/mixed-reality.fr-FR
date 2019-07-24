@@ -1,11 +1,11 @@
 ---
-title: Objet sur
-description: Un bouton a longtemps été une métaphore utilisée pour déclencher un événement dans le monde abstrait 2D. Dans le monde en trois dimensions de réalité mixte, nous n’êtes pas obligé d’être limitées à ce monde d’abstraction plus.
+title: Objet interagi
+description: Un bouton a longtemps été une métaphore utilisée pour déclencher un événement dans le monde abstrait en 2D. Dans le monde de la réalité mixte en trois dimensions, nous n’avons plus à limiter le monde de l’abstraction.
 author: cre8ivepark
 ms.author: jennyk
 ms.date: 06/06/2019
 ms.topic: article
-keywords: Réalité mixte, contrôles, interaction, l’interface utilisateur, l’expérience utilisateur
+keywords: Réalité mixte, contrôles, interaction, interface utilisateur, expérience utilisateur
 ms.openlocfilehash: 57299cbb758a69603fc68ad5d43af8f2216e5104
 ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
@@ -13,122 +13,122 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 06/27/2019
 ms.locfileid: "67415355"
 ---
-# <a name="interactable-object"></a>Objet sur
+# <a name="interactable-object"></a>Objet interagi
 
-Un bouton a longtemps été une métaphore utilisée pour déclencher un événement dans le monde abstrait 2D. Dans le monde en trois dimensions de réalité mixte, nous n’êtes pas obligé d’être limitées à ce monde d’abstraction plus. Quoi que ce soit peut être un **sur objet** qui déclenche un événement. Un objet sur peut être représenté en tant que quoi que ce soit à partir d’une tasse de café sur la table à une info-bulle flottante en l’air. Que nous apporterons toujours l’utilisation de boutons traditionnel dans certains cas, par exemple, dans la boîte de dialogue interface utilisateur. La représentation visuelle du bouton dépend du contexte.
+Un bouton a longtemps été une métaphore utilisée pour déclencher un événement dans le monde abstrait en 2D. Dans le monde de la réalité mixte en trois dimensions, nous n’avons plus à limiter le monde de l’abstraction. Tout peut être un **objet** pouvant être utilisé qui déclenche un événement. Un objet pouvant être en interaction peut être représenté sous la forme d’un objet à partir d’une tasse de café sur la table. Nous utilisons toujours les boutons traditionnels dans certaines situations, par exemple dans l’interface utilisateur du dialogue. La représentation visuelle du bouton dépend du contexte.
 
-![Objets interactible](images/640px-interactibleobject-hero-640px.jpg)
+![Objets Interactible](images/640px-interactibleobject-hero-640px.jpg)
 
 
-## <a name="important-properties-of-the-interactable-object"></a>Propriétés importantes de l’objet sur
+## <a name="important-properties-of-the-interactable-object"></a>Propriétés importantes de l’objet interagiable
 
-### <a name="visual-cue"></a>Signal visuel
+### <a name="visual-cue"></a>Indicateur visuel
 
-Signaux visuels sont des signaux sensoriels reçus par le œil sous la forme de la lumière et traités par le système visual au cours de la perception visuelle. Étant donné que le système visual est dominant de nombreuses espèces, en particulier les humains, signaux visuels sont une grande source d’informations dans la façon dont le monde est perçu.
+Les signaux visuels sont des signaux sensorielles reçus par l’oeil sous forme de lumière et traités par le système visuel lors de la perception visuelle. Étant donné que le système visuel est dominant dans de nombreuses espèces, en particulier les êtres humains, les signaux visuels constituent une source d’informations importante dans la manière dont le monde est perçu.
 
-En réalité mixte, étant donné que les objets HOLOGRAPHIQUE sont combinées avec l’environnement réel, il pourrait être difficile de comprendre quels objets sont sur. Pour les objets sur votre expérience, il est important de fournir des indice visuel différenciée pour chaque d’entrée d’état. Cela permet à l’utilisateur de comprendre quelle partie de votre expérience est sur et fait certain de l’utilisateur avec la méthode d’interaction cohérent.
+En réalité mixte, étant donné que les objets holographiques sont mélangés à l’environnement réel, il peut être difficile de comprendre quels objets sont interactifs. Pour tous les objets interactifs dans votre expérience, il est important de fournir un signal visuel différencié pour chaque État d’entrée. Cela permet à l’utilisateur de comprendre quelle partie de votre expérience est interactive et de faire en sorte que l’utilisateur soit confiant avec la méthode d’interaction cohérente.
 
-#### <a name="far-interactions"></a>Interactions lointain
+#### <a name="far-interactions"></a>Interactions lointaines
 
-Pour tous les objets que l’utilisateur peut interagir avec pointage de regard, ray de main et ray du contrôleur de mouvement, nous vous recommandons d’avoir différents visuelle de ces trois états d’entrée :
-* **Par défaut (Observation)** : État d’inactivité par défaut de l’objet.
-* **Ciblé (pointage)** : Pointeur de contrôleur proximité ou de mouvement doigt par quand l’objet est ciblé avec regards curseur.
-* **Enfoncé**: Lorsque l’objet est activé avec le geste d’appui de l’air, appuyez sur le doigt ou bouton de sélection du contrôleur de mouvement.
+Pour tous les objets que l’utilisateur peut interagir avec le point de vue du point de vue du regard, du rayon de la main et du contrôleur de mouvement, nous vous recommandons d’avoir un signal visuel différent pour ces trois États d’entrée:
+* **Valeur par défaut (observation)** : État d’inactivité par défaut de l’objet.
+* **Ciblé (pointage)** : Lorsque l’objet est ciblé avec un curseur en forme de pointage, le pointeur de proximité d’un doigt ou d’un contrôleur de mouvement.
+* **Enfoncé**: Quand l’objet est enfoncé avec un mouvement d’appui sur l’air, appuyez sur le bouton de sélection du contrôleur de mouvement ou de doigt.
 
-Vous pouvez utiliser des techniques telles que la mise en surbrillance ou de mise à l’échelle pour fournir une indication visuelle aux États d’entrée de l’utilisateur. Dans Windows Mixed Reality, vous pouvez trouver les exemples de visualiser les différents États d’entrée sur le menu Démarrer et des boutons de barre de l’application. 
+Vous pouvez utiliser des techniques telles que la mise en surbrillance ou la mise à l’échelle pour fournir un signal visuel aux États d’entrée de l’utilisateur. Dans Windows Mixed Reality, vous trouverez des exemples de visualisation de différents États d’entrée sur les boutons du menu Démarrer et de la barre de l’application. 
 
-![Exemple de visualiser l’état de l’observation, ciblées d’état et état enfoncé](images/640px-interactibleobject-states.png)<br>
-*Exemple de visualiser l’état de l’observation, ciblées d’état et état enfoncé*
+![Exemple de visualisation de l’état d’observation, de l’État ciblé et de l’état appuyé](images/640px-interactibleobject-states.png)<br>
+*Exemple de visualisation de l’état d’observation, de l’État ciblé et de l’état appuyé*
 
-![État de l’observation, ciblées état et état enfoncé sur bouton HOLOGRAPHIQUE](images/MRTK_InteractableState.png)<br>
-*État de l’observation, ciblées état et état enfoncé sur bouton HOLOGRAPHIQUE*
+![État d’observation, état ciblé et état appuyé sur un bouton holographique](images/MRTK_InteractableState.png)<br>
+*État d’observation, état ciblé et état appuyé sur un bouton holographique*
 
-#### <a name="neardirect-interactions"></a>Interactions de NEAR(direct)
+#### <a name="neardirect-interactions"></a>Interactions près (directe)
 
-HoloLens 2 prend en charge la main articulé d’entrée qui vous permet d’interagir avec les objets de suivi. Sans retour haptique et perception de profondeur parfaite parfois, il peut être difficile de déterminer l’éloignement votre main provient d’un objet, ou si vous touche. Il est important de fournir des aides visuelles suffisamment pour communiquer l’état de l’objet et en particulier vos mains par rapport à hologrammes.
+HoloLens 2 prend en charge l’entrée de suivi articulée qui vous permet d’interagir avec les objets. Sans commentaires haptique et perception parfaite de la profondeur, il peut être difficile de savoir à quel moment votre main provient d’un objet, ou si vous êtes en contact avec vous. Il est important de fournir suffisamment de signaux visuels pour communiquer l’état de l’objet et, en particulier, de vos mains par rapport aux hologrammes.
 
-Utiliser des commentaires visuels pour communiquer les éléments suivants :
-* **Par défaut (Observation)** : État d’inactivité par défaut de l’objet.
-* **Placez le curseur**: Lorsque main près un hologramme, modification des éléments visuels pour communiquer la main est ciblé par hologramme. 
-* **Distance et le point d’interaction**: Main approche HOLOGRAMME, concevoir des commentaires pour communiquer le point projeté d’interaction, ainsi que la manière dont loin d’être l’objet est le doigt
-* **Contactez Begin**: Modification des éléments visuels (clair, couleur) pour communiquer ce tactile s’est produite
-* **Fait saisi en**: Modifier les éléments visuels (clair, couleur) lorsque l’objet est saisi.
-* **Contactez fin**: Modifier les éléments visuels (clair, couleur) lorsque tactile est terminée.
+Utilisez les commentaires visuels pour communiquer les éléments suivants:
+* **Valeur par défaut (observation)** : État d’inactivité par défaut de l’objet.
+* **Pointage**: Lorsque la main est proche d’un hologramme, modifiez les éléments visuels pour indiquer que la main cible l’hologramme. 
+* **Distance et point d’interaction**: À l’approche de l’hologramme, les commentaires de conception pour communiquer le point d’interaction projeté, ainsi que la distance entre l’objet et le doigt
+* **Début du contact**: Modifier les éléments visuels (Light, Color) pour indiquer que la fonction tactile s’est produite
+* **Saisi**: Modifiez les éléments visuels (clair, couleur) lorsque l’objet est saisi.
+* **Fin du contact**: Modifiez les éléments visuels (Light, Color) quand Touch est terminé.
 
-![Exemple de visualisation de près les États d’interaction](images/640px-interactibleobject-states-near.jpg)<br>
-*Exemple de visualisation de près les États d’interaction*
+![Exemple de visualisation des États near interaction](images/640px-interactibleobject-states-near.jpg)<br>
+*Exemple de visualisation des États near interaction*
 
-Le [bouton HoloLens 2](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Button.html) montre l’exemple de visualiser l’interaction d’entrée différents états.
+Le [bouton dans HoloLens 2](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Button.html) montre l’exemple de visualisation de différents États d’interaction d’entrée.
 
-![Exemple de bouton PRESSEE dans HoloLens 2](images/640px-interactibleobject-pressablebutton-650px2.jpg)<br>
-*Exemple de bouton PRESSEE dans HoloLens 2*
+![Exemple de bouton enfoncé dans HoloLens 2](images/640px-interactibleobject-pressablebutton-650px2.jpg)<br>
+*Exemple de bouton enfoncé dans HoloLens 2*
 
-Dans 2 HoloLens, il existe un indice visuel supplémentaire, ce qui améliore le niveau de confiance de l’utilisateur sur la perception de profondeur. L’anneau extérieur sur le bout des doigts s’affiche et met à l’échelle vers le bas comme le bout des doigts se rapproche davantage à l’objet. L’anneau recouvre dans un point sur l’état de la presse. Ce visuel intuitif aide l’utilisateur à comprendre la distance à partir de l’objet.
+Dans HoloLens 2, il existe un indice visuel supplémentaire qui améliore la perception de la profondeur de l’utilisateur. L’anneau à la main s’affiche et est mis à l’échelle à mesure que le doigt se rapproche de l’objet. L’anneau finit par converger vers un point à l’état d’appui. Cet accord visuel aide l’utilisateur à comprendre la distance de l’objet.
 
-![Visualisation d’anneau le bout des doigts](images/640px-interactibleobject-pressablebutton-650px3.jpg)<br>
-*Visualisation d’anneau le bout des doigts dans HoloLens 2*
+![Visualisation de la sonnerie à portée de main](images/640px-interactibleobject-pressablebutton-650px3.jpg)<br>
+*Visualisation de la sonnerie de doigt dans HoloLens 2*
 
-![Commentaires visuels sur la proximité de main](images/HoloLens2_Proximity.gif)<br>
-*Exemple d’une rétroaction visuelle en fonction de la proximité - le rectangle englobant*
+![Commentaires visuels à proximité](images/HoloLens2_Proximity.gif)<br>
+*Exemple de retour visuel basé sur le cadre englobant de proximité*
 
 
 ### <a name="audio-cue"></a>Signal audio
-Pour les interactions directes main, des commentaires audio approprié peuvent améliorer considérablement l’expérience utilisateur. Utiliser des commentaires audio pour communiquer les éléments suivants :
-* **Contact commencer**: Émettre un son lorsque touch commence
-* **Fin de contact**: Émettre un son sur tactile principal
-* **Manipulation commencer**: Émettre un son au démarrage de manipulation
-* **Saisir fin**: Lire le son sur la fin de la manipulation
+Pour les interactions directes, les retours audio corrects peuvent améliorer considérablement l’expérience utilisateur. Utilisez les commentaires audio pour communiquer les éléments suivants:
+* **Début du contact**: Émettre un signal sonore lors du démarrage de Touch
+* **Fin du contact**: Jouer un son à l’extrémité tactile
+* **Début**de la manipulation: Émettre un signal sonore lors du démarrage de la manipulation
+* **Extraire la fin**: Lire le son à l’extrémité de la capture
 
 ### <a name="voice-command"></a>Commande vocale
-Pour tous les objets sur, il est important prendre en charge les options d’autre interaction. Par défaut, il est recommandé pour prendre en charge les commandes vocales pour tous les objets qui sont sur. Pour améliorer la détectabilité, vous pouvez fournir des info-bulle sur l’état de pointage.
+Pour tous les objets interactifs, il est important de prendre en charge d’autres options d’interaction. Par défaut, il est recommandé de prendre en charge la commande vocale pour tous les objets qui sont interactifs. Pour améliorer la détectabilité, vous pouvez fournir une info-bulle sur l’état de survol.
 
-<img src="images/640px-interactibleobject-voicecommand.jpg" alt="Tooltip for the voice command" title="Info-bulle pour les commandes vocales" width="350"><br/>*Info-bulle pour les commandes vocales*
+<img src="images/640px-interactibleobject-voicecommand.jpg" alt="Tooltip for the voice command" title="Info-bulle pour la commande vocale" width="350"><br/>*Info-bulle pour la commande vocale*
 
 ## <a name="sizing"></a>Dimensionnement
-Pour vous assurer que tous les objets sur peuvent facilement être manipulés par les utilisateurs, nous vous recommandons de vérifier que le satisfait sur une taille minimale (angle visual souvent mesurée en degrés d’arc visual) basé sur la distance, qu'il est placé à partir de l’utilisateur. Angle Visual est basé sur la distance entre les yeux de l’utilisateur et de l’objet et reste constant, alors que la taille physique de la cible peut changer en tant que la distance à partir de l’utilisateur change. Pour déterminer la taille physique nécessaires d’un objet basé sur la distance à partir de l’utilisateur, essayez d’utiliser une calculatrice visual angle comme [celui-ci](http://elvers.us/perception/visualAngle/).
+Pour vous assurer que tous les objets interactifs peuvent facilement être manipulés par les utilisateurs, nous vous recommandons de vous assurer que l’interagissant est conforme à une taille minimale (l’angle visuel souvent mesuré en degrés d’arc visuel) en fonction de la distance qu’il est placée par l’utilisateur. L’angle visuel est basé sur la distance entre les yeux de l’utilisateur et l’objet et reste constant, tandis que la taille physique de la cible peut changer en fonction de la distance entre les modifications de l’utilisateur. Pour déterminer la taille physique nécessaire d’un objet en fonction de la distance de l’utilisateur, essayez d’utiliser une calculatrice d’angle visuel telle que celle- [ci](http://elvers.us/perception/visualAngle/).
 
-Voici les recommandations pour les tailles minimale du contenu sur.
+Vous trouverez ci-dessous les recommandations relatives aux tailles minimales de contenu exploitable.
 
-### <a name="target-size-for-direct-hand-interaction"></a>Taille cible pour l’interaction directe main
-| Distance | Angle de visualisation | Size |
+### <a name="target-size-for-direct-hand-interaction"></a>Taille cible pour l’interaction directe
+| distance | Angle d’affichage | Size |
 |---------|---------|---------|
-| 45cm  | non inférieure à 2° | 1.6 1,6 cm |
+| 45cm  | non inférieur à 2 ° | 1,6 x 1,6 cm |
 
-![Taille cible pour l’interaction directe main](images/TargetSizingNear.jpg)<br>
-*Taille cible pour l’interaction directe main*
+![Taille cible pour l’interaction directe](images/TargetSizingNear.jpg)<br>
+*Taille cible pour l’interaction directe*
 
-Lorsque vous créez des boutons pour l’interaction directe, nous vous recommandons une plus grande taille minimale de cm x 3.2 3.2 pour vous assurer que suffisamment d’espace pour contenir une icône et potentiellement certains texte **
+Lorsque vous créez des boutons pour une interaction directe, nous vous recommandons une taille minimale supérieure de 3,2 x 3,2 cm pour garantir qu’il y a suffisamment d’espace pour contenir une icône et éventuellement du texte * *
 
-| Distance | Taille minimale |
+| distance | Taille minimale |
 |---------|---------|
-| 45cm  | 3.2 x 3.2 cm |
+| 45cm  | 3,2 x 3,2 cm |
 
 ![Taille cible pour les boutons](images/TargetSizingButtons.png)<br>
 *Taille cible pour les boutons*
 
 
-### <a name="target-size-for-hand-ray-or-gaze-interaction"></a>Taille de rayon de main cible ou l’utilisation d’interaction
-| Distance | Angle de visualisation | Size |
+### <a name="target-size-for-hand-ray-or-gaze-interaction"></a>Taille cible pour un rayon de la main ou une interaction du regard
+| distance | Angle d’affichage | Size |
 |---------|---------|---------|
-| 2m  | non inférieure à 1° | 3.5 3,5 cm |
+| dollars  | inférieur à 1 ° | 3,5 x 3,5 cm |
 
-![Taille de rayon de main cible ou l’utilisation d’interaction](images/TargetSizingFar.jpg)<br>
-*Taille de rayon de main cible ou l’utilisation d’interaction*
+![Taille cible pour un rayon de la main ou une interaction du regard](images/TargetSizingFar.jpg)<br>
+*Taille cible pour un rayon de la main ou une interaction du regard*
 
-## <a name="creating-interactable-object-with-mixed-reality-toolkit-mrtk"></a>Création d’objet sur avec le Kit de ressources de réalité mixte (MRTK)
+## <a name="creating-interactable-object-with-mixed-reality-toolkit-mrtk"></a>Création d’un objet interactif avec Mixed Reality Toolkit (MRTK)
 
-Dans le  **[Toolkit de réalité mixte](https://github.com/Microsoft/MixedRealityToolkit-Unity)** , vous pouvez trouver la série de scripts Unity et prefabs qui vous aideront à créer des objets sur. Vous pouvez les utiliser pour rendre les objets à répondre aux différents types d’états de l’interaction d’entrée.
+Dans la **[boîte à outils de réalité mixte](https://github.com/Microsoft/MixedRealityToolkit-Unity)** , vous trouverez la série de scripts Unity et de prefabs qui vous aideront à créer des objets interactifs. Vous pouvez les utiliser pour faire en sorte que les objets répondent à différents types d’États d’interaction d’entrée.
 
-* [Interactable](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Interactable.html)
+* [Sur](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Interactable.html)
 * [Button](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Button.html)
-* [Scène d’exemples main interaction](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_HandInteractionExamples.md)
+* [Scène d’exemples d’interaction manuelle](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_HandInteractionExamples.md)
 
-Nuanceur Standard du MixedRealityToolkit offre différentes options telles que **light de proximité** qui vous permet de créer des signaux visuels et audio.
-* [Nuanceur Standard MRTK](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Documentation/README_MRTKStandardShader.md)
+Le nuanceur standard de MixedRealityToolkit fournit diverses options telles que la **lumière de proximité** qui vous aide à créer des signaux visuels et audio.
+* [Nuanceur standard MRTK](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Documentation/README_MRTKStandardShader.md)
 
 
 ## <a name="see-also"></a>Voir aussi
 
-* [zone englobante](app-bar-and-bounding-box.md)
+* [Cadre englobant](app-bar-and-bounding-box.md)
 * [Collection d’objets](object-collection.md)
 * [Billboarding et tag-along](billboarding-and-tag-along.md)

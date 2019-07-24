@@ -1,161 +1,161 @@
 ---
-title: Étude de cas - la poursuite de l’informatique plus personnelle
-description: Les opportunités de demain non traitées par la création de produits aujourd'hui. Les solutions de que ces produits fournissent révèlent ce qui est nécessaire pour faire avancer l’avenir.
+title: 'Étude de cas: la poursuite de l’informatique plus personnelle'
+description: Les opportunités de demain sont découvertes en créant des produits dès aujourd’hui. Les solutions fournies par ces produits révèlent ce qui est nécessaire pour faire progresser le futur.
 author: mavitazk
 ms.author: mavitazk
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Réalité mixte Windows, HoloLens, étude de cas, vision, des scénarios
+keywords: Windows Mixed Reality, HoloLens, étude de cas, vision, scénarios
 ms.openlocfilehash: 64ec4b9e55758b760c294d933fb80a2a638e0088
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59597048"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63522961"
 ---
-# <a name="case-study---the-pursuit-of-more-personal-computing"></a>Étude de cas - la poursuite de l’informatique plus personnelle
+# <a name="case-study---the-pursuit-of-more-personal-computing"></a>Étude de cas: la poursuite de l’informatique plus personnelle
 
-Les opportunités de demain non traitées par la création de produits aujourd'hui. Les solutions de que ces produits fournissent révèlent ce qui est nécessaire pour faire avancer l’avenir. Dans la réalité mixte, cela est particulièrement vrai : Vision d’ensemble provient bien pratique avec le véritable travail, des appareils réels, des clients réels, des problèmes réels.
+Les opportunités de demain sont découvertes en créant des produits dès aujourd’hui. Les solutions fournies par ces produits révèlent ce qui est nécessaire pour faire progresser le futur. Avec la réalité mixte, ceci est particulièrement vrai: Une connaissance significative vient de l’utilisation du travail réel (appareils réels, clients réels et problèmes réels).
 
-Chez Microsoft, je fais partie de l’équipe de conception aider les partenaires de l’entreprise à créer des expériences de leur entreprise à l’aide de Windows Mixed Reality. Ces dernières années, notre équipe s’est concentré sur HoloLens et comprendre comment phare HOLOGRAPHIQUE périphérique Microsoft peut livrer valeur aux clients dès aujourd'hui. Travailler en étroite collaboration avec les concepteurs et les développeurs à partir de ces sociétés, notre équipe se concentre sur les solutions découvrant qui seraient techniquement irréalisable, financièrement impossibles ou sinon impossibles sans HoloLens.
+Chez Microsoft, je fais partie de l’équipe de conception aidant les partenaires de l’entreprise à créer des expériences pour leur entreprise à l’aide de Windows Mixed Reality. Au cours de l’année écoulée, notre équipe s’est concentrée sur HoloLens et a compris comment l’appareil holographique phare de Microsoft peut fournir de la valeur aux clients dès aujourd’hui. En étroite collaboration avec les concepteurs et les développeurs de ces sociétés, notre équipe se concentre sur la découverte des solutions qui seraient techniquement irréalisable, financièrement impraticables ou impossibles sans HoloLens.
 
-![Cas Western Reserve University](images/case-western-reserve-university.jpg)<br>
-*HoloAnatomy à partir de cas Western Reserve University*
+![Cas de l’Université de réserve occidentale](images/case-western-reserve-university.jpg)<br>
+*HoloAnatomy de l’Université de réserve occidentale*
 
-Création de ces solutions prépare les équipes internes de Microsoft de la prochaine génération de l’informatique. Comment les particuliers et les entreprises interagissent avec les principales technologies telles que la réalité mixte, voix et l’intelligence artificielle, de formation aide Microsoft à créer une meilleure périphériques, plates-formes et outils pour les développeurs. Si vous êtes un concepteur ou un développeur d’exploration de cet espace, de comprendre ce que nos équipes apprennent à partir de partenaires est aujourd'hui essentiel de préparation pour les opportunités de réalité mixte de demain.
+La création de ces solutions aide les équipes internes de Microsoft à se préparer à la prochaine génération de calcul. Découvrez comment les individus et les entreprises interagissent avec les technologies principales telles que la réalité mixte, la voix et l’intelligence artificielle, permet à Microsoft de créer de meilleurs appareils, plateformes et outils pour les développeurs. Si vous êtes un concepteur ou un développeur qui explore cet espace, il est essentiel de comprendre ce que nos équipes apprennent aux partenaires aujourd’hui pour se préparer aux opportunités de réalité mixte de demain.
 
-## <a name="microsofts-ambition-for-mixed-reality"></a>Ambition de Microsoft pour la réalité mixte
+## <a name="microsofts-ambition-for-mixed-reality"></a>L’ambition de Microsoft en matière de réalité mixte
 
-Nous vivons nos vies entre deux mondes : physique et la numérique. Les deux offrent des fonctions fondamentales que nous exploiter pour compléter et étendre nos capacités. Nous pourrons alors passer en direct avec un ami, à l’aide de nos sens physiques pour comprendre les choses comme langage du corps, ou nous pouvons améliorer notre capacité à parler en vidéo-discuter avec un ami à plusieurs kilomètres de suite. Jusqu'à maintenant ces deux mondes et leurs points forts respectifs, ont été fondamentalement séparés.
+Nous vivons notre vie entre deux mondes: physique et numérique. Les deux ont des atouts fondamentaux que nous utilisons pour augmenter et étendre nos capacités. Nous pouvons parler en personne avec un ami, en utilisant nos sens physiques pour comprendre les choses comme le langage du corps, ou nous pouvons améliorer notre capacité à parler par conversation vidéo avec un ami à distance de kilomètres. Jusqu’à présent, ces deux mondes, et leurs forces respectives, ont été fondamentalement séparés.
 
-**Le monde physique est un des atomes et physique.** Nous utilisons nos sens pour prendre des décisions, en tirant parti des années de comportement appris pour interagir avec les objets et des personnes dans nos environnements. En dépit de la facilité de ces interactions, nous avons limités par nos capacités physiques et les lois de nature.
+**Le monde physique est l’un des atomes et physique.** Nous utilisons nos sens pour prendre des décisions, en tirant parti des années de comportement appris pour interagir avec les objets et les personnes de nos environnements. Malgré la facilité de ces interactions, nous sommes limités par nos capacités physiques et les lois de nature.
 
-**Le monde numérique est un des bits et logique.** Bien que les informations peuvent être distribuées sans effort les calculs sont effectués instantanément. Malgré la vitesse et le flux d’informations, les interactions sont trop souvent limitées pour les petits écrans, les entrées abstraites et les flux bruyants.
+**L’univers numérique est l’un des bits et de la logique.** Les calculs sont effectués instantanément, tandis que les informations peuvent être distribuées sans effort. Malgré la vitesse et le flux d’informations, les interactions sont trop souvent limitées aux petits écrans, aux entrées abstraites et aux flux bruyants.
 
 ![HoloStudio](images/holostudio-450px.jpg)<br>
 *HoloStudio*
 
-Que se passe-t-il si nous pouvons combiner les avantages des deux mondes physiques et numériques ? Ceci est la pierre angulaire des expériences sur la gamme de réalité mixte : un support où physique et numérique coexistent et d’interagir en toute transparence. Combinaison de ces mondes génère une nouvelle Fondation permettant d’interagir plus naturellement avec la technologie, une évolution de l’informatique personnelle.
+Que se passe-t-il si nous pouvions combiner les avantages des mondes physiques et numériques? Il s’agit de la pierre angulaire des expériences dans le spectre de la réalité mixte: un support dans lequel les coexistences physique et numérique et interagissent en toute transparence. La combinaison de ces mondes crée une nouvelle base pour interagir plus naturellement avec la technologie, une évolution de l’informatique personnelle.
 
-Le spectre de réalité mixte a éclaté comme les développeurs ont commencé à Explorer les opportunités d’immersion et de présence. Importez les utilisateurs dans le monde numérique offrant une expérience immersive (réalité virtuelle) et la création des objets numériques dans le monde physique offrant une expérience HOLOGRAPHIQUE (réalité augmentée). Mais quels sont les avantages de mappage du monde physique au monde numérique ? Que se passe-t-il quand nous donnons des yeux d’ordinateurs pour voir ?
+Le spectre de la réalité mixte s’est éclaté lorsque les développeurs ont commencé à explorer les possibilités d’immersion et de présence. Intégrer des utilisateurs dans le monde numérique à des expériences immersifs (Really Virtual Reality) et créer des objets numériques dans le monde physique avec des expériences holographiques (en réalité augmentée). Mais quels sont les avantages de la mise en correspondance du monde physique avec l’univers numérique? Que se passe-t-il quand nous donnons des yeux aux ordinateurs?
 
-La technologie de vision caméra fondamentaux hologrammes agit comme une paire d’yeux de l’ordinateur voir l’environnement autour de vous : Objets dans le monde, les gens autour de vous, les modifications apportées lorsqu’ils surviennent. Une compréhension numérique de votre contexte dans le monde physique. Cela conduit à une énorme quantité d’informations, que les conséquences que nous entamons uniquement à comprendre.
+La technologie de vision principale de l’appareil photo derrière les hologrammes agit comme une paire d’yeux pour l’ordinateur afin de voir l’environnement autour de vous: Les objets dans le monde, les personnes qui vous entourent, changent à mesure qu’elles se produisent. Une compréhension numérique de votre contexte dans le monde physique. Cela donne lieu à une grande quantité d’informations, à savoir les implications dont nous commençons par le début.
 
-### <a name="culminating-core-technologies"></a>Upgrades technologies principales
+### <a name="culminating-core-technologies"></a>L’aboutissement des technologies principales
 
-L’informatique est trop souvent un élément tangible. En saisissant nos périphériques pour indiquer les qui sommes-nous et nous le souhaitons. Je déformais nos réflexions et d’alignement de ce que nous disons que correspondre à ce que nous pensons que l’ordinateur doivent écouter.
+L’informatique est trop souvent un élément tangible. En saisissant nos appareils pour leur dire qui nous sommes et ce que nous voulons. Le fait de réfléchir à notre pensée et à aligner ce que nous disons pour qu’il corresponde à ce que nous pensons que l’ordinateur doit connaître.
 
-La promesse de réalité mixte, en particulier dans le monde réel avec des expériences HOLOGRAPHIQUE, est d’alléger le fardeau de l’interaction avec la technologie. Réduire la charge cognitive comme les utilisateurs accèdent les couches d’abstraction inhérente à l’informatique dès aujourd'hui. Comment nous pouvons pour concevoir des expériences qui non seulement tirer parti de la compréhension contextuelle, mais est plus facile à tirer le meilleur et prendre des mesures ? Essayez également de deux technologies contribue à résoudre ce problème :
-* **Voix**, en termes de reconnaissance vocale et de la conversation, est de permettre aux utilisateurs de communiquer avec les ordinateurs via des moyens plus naturels, répondre aux robots dans le texte ou d’émettre des commandes vers le matériel de conversation.
-* **Intelligence artificielle** alimente les expériences de diffuser des informations à partir de jeux de données de plus en plus complexes. Tandis que l’intelligence artificielle est un sujet très vaste, progression récente a fourni le point de départ pour les appareils qui s’appuient sur la vision par ordinateur, les assistants numériques plus naturelles et recommander des actions aux utilisateurs.
+La promesse de la réalité mixte, en particulier dans le monde réel avec des expériences holographiques, est de réduire la charge liée à l’interaction avec la technologie. Réduction de la charge cognitive quand les utilisateurs parcourent les couches d’abstraction inhérentes au calcul aujourd’hui. Comment pouvons-nous concevoir des expériences qui non seulement tirent parti d’une compréhension contextuelle, mais qui facilitent la création d’informations et l’action? Deux technologies qui contribuent à la résolution de ce problème sont également les suivantes:
+* La **voix**, en termes de discours et de conversation, permet aux utilisateurs de communiquer avec des ordinateurs par le biais de moyens plus naturels, en répondant à des robots via du texte ou en émettant des commandes au matériel de conversation.
+* **Ai** alimente les expériences qui les Insights de jeux de données de plus en plus complexes. L’intelligence artificielle est un sujet énorme, tandis que la progression récente a fourni les bases des appareils qui reposent sur la vision par ordinateur, les assistants numériques naturels et la recommandation d’actions pour les utilisateurs.
 
-Réalité mixte fournit un support pour combiner ces technologies en une expérience utilisateur unique. Voix devient une méthode puissante, naturelle pour l’entrée lors de la porte un casque HOLOGRAPHIQUE. Intelligence artificielle agit comme un chiffrement de critique à contextualiser les énormes quantités d’informations de connexion les mondes physiques et numériques. C’est pourquoi Sataya Nadella fait référence à HoloLens en tant que « l’ordinateur ultimate », est un périphérique culminating pour trois principales technologies. Une plateforme pour permettre aux humains d’interagir plus facilement avec la complexité croissante des périphériques et services.
+La réalité mixte fournit un moyen de combiner ces technologies dans une expérience utilisateur unique. La voix devient une méthode puissante et naturelle pour les entrées lors de l’usure d’un casque holographique. IA agit comme un chiffrement critique pour contextueliser les énormes quantités d’informations qui connectent les mondes physique et numérique. C’est pourquoi Sataya Nadella fait référence à HoloLens comme «l’ordinateur ultime», c’est un appareil culminant pour trois technologies de base. Plateforme permettant aux humains d’interagir plus facilement avec la complexité croissante des appareils et des services.
 
-### <a name="less-interface-in-your-face"></a>Moins d’interface dans votre visage
+### <a name="less-interface-in-your-face"></a>Moins d’interfaces dans votre visage
 
-Un appareil culminating qui se connecte au monde physique au monde numérique permet de conception des expériences qui tiennent plus naturellement, sans les abstractions fastidieuses. Prenez en compte les expériences que vous avez créé : Lorsque les barrières d’abstraction sont supprimées, la quantité de votre interface reste-t-il ? Les parties de votre flux d’application modifier lorsque vous connaissez l’utilisateur et leur contexte ? Le nombre de menus et boutons restent ?
+Un appareil culminant qui connecte le monde physique au monde numérique nous permet de concevoir des expériences qui s’ajustent plus naturellement, sans abstractions fastidieuses. Prenez en compte les expériences que vous avez créées: Quand les barrières d’abstraction sont supprimées, quelle est la quantité d’interface restante? Quelles parties de votre application changent lorsque vous connaissez l’utilisateur et son contexte? Combien de menus et de boutons reste-t-il?
 
-Par exemple, pensez à expériences partagées en réalité mixte comme l’outil OnSight Jet Propulsion Laboratory la NASA destiné aux scientifiques. Au lieu de créer un système de consulter les données Martian (en faisant abstraction des données sur les écrans ou affiche), elles affichent les scientifiques des données, efficacement en les plaçant sur la surface de Mars qu’ils ont collaboré.
+Par exemple, réfléchissez aux expériences partagées dans la réalité mixte, comme le laboratoire de propulsion jet de l’outil OnSight, conçu pour les scientifiques. Au lieu de créer un système pour examiner les données Martian (en extrayant les données sur les écrans ou les affichages), ils ont mis des scientifiques à l’intérieur des données, en les plaçant efficacement sur la surface de mars au fur et à mesure de leur collaboration.
 
 ![NASA OnSight](images/nasa-onsight.jpg)<br>
 *NASA/JPL OnSight*
 
-Au lieu de rechercher le bouton pour attirer l’attention sur certains géologie Martian, scientifiques peuvent pointer dessus directement. Aucun menu, aucune stylets, aucune courbe d’apprentissage à l’aide de l’outil efficacement. En tirant parti de nos capacités connues du monde physique, des interactions plus naturelles dans la réalité mixte peuvent contourner alphabétisation technique approfondie dans les même outils les plus avancés du secteur.
+Au lieu de trouver le bouton pour attirer l’attention sur une géologie Martian, les scientifiques peuvent y pointer directement. Aucun menu, aucun stylet, aucune courbe d’apprentissage n’utilise l’outil efficacement. En tirant parti de nos capacités connues du monde physique, les interactions plus naturelles en réalité mixte peuvent contourner les connaissances techniques approfondies dans les outils de l’industrie les plus avancés.
 
-De même, voix et l’intelligence artificielle peuvent étendre l’interaction naturelle dans une telle expérience. Lorsque les assistants numériques peuvent « voir » dans le monde qui nous entoure, conversations semblera plus conviviale. Un bot dans l’outil de la NASA peut extraire les scientifiques conférant sur géologie Martian, agissant en tant que prête (et CONVERSATIONNELLE) source d’informations lorsque scientifiques des mouvement et poser sur 'this' ou 'ce contexte. Un ordinateur capable de votre contexte est prêt à utiliser avec les informations appropriées, via une méthode d’interaction plus appropriée à votre contexte.
+De même, les fonctionnalités vocales et IA peuvent étendre l’interaction naturelle dans une expérience similaire à celle-ci. Lorsque les assistants numériques peuvent «voir» dans le monde autour des États-Unis, les conversations se sentiront moins fastidieuses. Un bot de l’outil de NASA peut extraire le contexte des scientifiques conférant une géologie Martian, agissant comme une source d’information prête (et conversationnel), lorsque des scientifiques sont en mouvement et demandent «This» ou «this». Un ordinateur connaissant votre contexte est prêt à accéder aux informations qui vous conviennent, par le biais d’une méthode d’interaction la plus appropriée à votre contexte.
 
-### <a name="building-on-a-foundation"></a>Création d’une base
+### <a name="building-on-a-foundation"></a>Création sur une base
 
-Dans ce monde des expériences contextuelles, la restauration pour la mobilité de l’utilisateur est clé. Déplacement avec fluidité entre appareils et services, avec des contextes hautement personnalisées, les utilisateurs seront déplacent sur le monde physique en toute transparence, création d’un *massive* défi de la plateforme. Lorsque le monde physique devient un point de terminaison numérique, l’interopérabilité produit universellement employé.
+Dans ce monde d’expériences contextuelles, la restauration de la mobilité de l’utilisateur est essentielle. En passant de manière fluide entre les appareils et les services, avec des contextes hautement personnalisés, les utilisateurs se déplaceront du monde physique en toute transparence, en créant un défi de plateforme *massive* . Lorsque le monde physique devient un point de terminaison numérique, l’interopérabilité règne des mondes suprême.
 
 
-> *« Rassemblant les univers numérique et le monde physique déverrouillera potentiel humain... l’activation de chaque personne et l’entreprise dans le monde aller plus loin. »*<br>
+> *«Rassembler l’univers numérique et le monde physique permet de déverrouiller le potentiel humain... permettre à chaque personne et organisation sur la planète d’en obtenir plus.»*<br>
 > — Satya Nadella
 
-Windows Mixed Reality vise à créer une plate-forme pour un écosystème de périphériques, permettant aux développeurs de créer des expériences immersives, abordables et compatibles pour l’audience la plus grande possible. L’avenir ne seront pas limité à un seul fabricant, sans parler d’un seul appareil. Casques, accessoires des appareils mobiles, PC... toutes ces opérations physiques doivent interagir (ainsi que des éléments numériques tels que des graphiques et des services) via une plateforme sous-jacente pour répondre correctement à la promesse de réalité mixte.
+Windows Mixed Reality est un effort pour créer une plateforme pour un écosystème d’appareils, permettant aux développeurs de créer des expériences immersifs, abordables et compatibles pour le plus grand public possible. L’avenir ne sera pas limité à un seul fabricant, ne serait-ce qu’un seul appareil. Casques, appareils mobiles, PC, accessoires... tous ces éléments physiques doivent interopérer (ainsi que des éléments numériques tels que des graphiques et des services) via une plateforme sous-jacente pour remettre avec succès la promesse de la réalité mixte.
 
-## <a name="designing-for-tomorrows-experiences-today"></a>Conception pour des expériences de demain dès aujourd'hui
+## <a name="designing-for-tomorrows-experiences-today"></a>Conception pour les expériences de demain aujourd’hui
 
-![Conception pour des expériences de demain dès aujourd'hui](images/designing-for-tomorrows-experiences-today-450px.jpg) 
+![Conception pour les expériences de demain aujourd’hui](images/designing-for-tomorrows-experiences-today-450px.jpg) 
 <br>
-Permettez à chacune des principales technologies derrière cette nouvelle classe d’expériences concepteurs et aux développeurs de créer des expériences attrayants et réussites dès aujourd'hui. En réduisant l’abstraction, nous pouvons interagir plus directement avec le monde numérique, ce qui nous permet de concevoir de manière à augmenter et amplifie les capacités humaines. Technologie vocale (via les robots et les assistants numériques tels que Cortana) est permettant aux utilisateurs d’effectuer des conversations plus en plus complexes et scénarios, tandis que la technologie d’intelligence artificielle (via des outils comme Microsoft Cognitive Services) est à l’origine des entreprises à repenser comment les utilisateurs interagit avec tous les éléments à partir de médias sociaux pour fournir la gestion de la chaîne.
+Chacune des technologies principales de cette nouvelle classe d’expérience permet aux concepteurs et aux développeurs de créer des expériences attrayantes et réussies dès aujourd’hui. En réduisant l’abstraction, nous pouvons interagir plus directement avec le monde numérique, ce qui nous permet de concevoir des méthodes qui augmentent et amplifient les capacités humaines. La technologie vocale (par le biais des robots et des assistants numériques comme Cortana) permet aux utilisateurs d’effectuer des conversations et des scénarios de plus en plus complexes, tandis que la technologie AI (via des outils comme Microsoft Cognitive Services) est à l’origine de repenser les utilisateurs interagira avec tous les éléments du réseau social à la gestion de la chaîne logistique.
 
-Ces types d’interactions seront fie d’une nouvelle classe de conception fondamentaux ainsi des outils prennent en charge à partir de la plateforme. Création de ces outils et la création de cette plateforme pour les appareils et services s’appuie sur comprendre comment les expériences de demain résoudra des problèmes réels, tangibles. Nous avons identifié cinq zones d’opportunité où nos partenaires de l’entreprise ont proposé des solutions précieuses et nous pensons que d’investissement continu nous aideront à préparer pour cette nouvelle classe de l’informatique. 
+Ces types d’interactions s’appuient sur une nouvelle classe d’outils de conception, ainsi que sur la prise en charge fondamentale de la plateforme. La création de ces outils et la création de cette plateforme pour les appareils et les services s’appuient sur la compréhension de la façon dont les expériences de demain vont résoudre les problèmes réels et tangibles. Nous avons identifié cinq domaines d’opportunités où nos partenaires d’entreprise ont des solutions précieuses et où nous pensons que l’investissement continu nous aidera à nous préparer à cette nouvelle classe d’informatique. 
 
 ## <a name="areas-of-opportunity"></a>Zones d’opportunité
 
-L’année dernière de partenariats de développeur n’est pas couvert les zones d’opportunité qui parlent avec les clients et créer des solutions d’entreprise efficace. À partir de scientifiques et les techniciens aux concepteurs et aux clients, les cinq zones d’opportunité ont émergé où partenaires de Microsoft sont la valeur de recherche avec la réalité mixte. Ces zones sont déjà massif en donnant un aperçu besoins futurs des plateformes telles que Windows Mixed Reality et peuvent vous aider à comprendre comment ces nouvelles expériences aura un impact sur les façons nous en savoir plus, à collaborer, communiquer et créer.
+L’année précédente des partenariats de développeurs a des zones d’opportunité non couvertes qui résonnent avec les clients et créent des solutions d’entreprise efficaces. Des scientifiques et des techniciens aux concepteurs et aux clients, cinq domaines d’opportunités ont été découverts, où les partenaires de Microsoft trouvent une valeur de réalité mixte. Ces zones fournissent déjà des informations importantes sur les besoins futurs des plateformes telles que Windows Mixed Reality et peuvent vous aider à comprendre comment ces nouvelles expériences auront un impact sur les méthodes d’apprentissage, de collaboration, de communication et de création.
 
 ### <a name="1-creation-and-design"></a>1. Création et conception
 
-Une des opportunités en chef de réalité mixte est la possibilité de voir et de manipuler des conceptions 3D en temps réel, dans un environnement réel, à grande échelle et taille réelle. Outils de conception et de prototypage ont échappé les limites des écrans, retour à un domaine de la conception généralement réservé pour les documents tangibles, physiques comme bois et argile.
+L’une des principales opportunités de la réalité mixte est la possibilité de voir et de manipuler des conceptions 3D en temps réel, dans un environnement réel, à la taille réelle et à l’échelle. Les outils de conception et de prototypage ont échappé aux confins des écrans, ce qui revient à un domaine de conception généralement réservé à des matériaux tangibles et physiques tels que le bois et l’argile.
 
 <br>
 
 >[!VIDEO https://www.youtube.com/embed/Hx6biWE2VsM]
 
-[Autodesk](https://www.youtube.com/watch?v=Hx6biWE2VsM) créé une expérience de réalité mixte visant à améliorer la collaboration entre le processus de développement complète de produits. La possibilité pour les ingénieurs et aux concepteurs de l’enquête et des modèles 3D dans leur environnement de critiquer autorisait à effectuer une itération sur une conception en temps réel. Non seulement, cela activé un prototypage plus rapide mais a donné de façon à prendre des décisions plus confiants dans le processus.
+[Autodesk](https://www.youtube.com/watch?v=Hx6biWE2VsM) a créé une expérience de réalité mixte visant à améliorer la collaboration dans l’ensemble du processus de développement de produits. La capacité des ingénieurs et des concepteurs à étudier et à critiquer les modèles 3D dans leur environnement leur permettait d’effectuer des itérations sur une conception en temps réel. Cela permettait non seulement d’accélérer le prototypage, mais de prendre des décisions plus pertinentes dans le processus.
 
-Expériences comme cette mise en surbrillance le besoin de collaboration de core des expériences, la possibilité pour les utilisateurs puissent voir et communiquer avec des objets partagés. D’Autodesk vise à développer les produits à partir de conception professionnelle et les ingénieurs aux amateurs, étudiants et artistes du numérique. Comme le niveau d’expertise 3D d’utilisateurs diminue, la capacité d’interagir avec les objets naturellement devient cruciale.
+Les expériences de ce type mettent en évidence le besoin d’expériences de travail de base, la possibilité pour les utilisateurs de voir et de communiquer avec des objets partagés. L’objectif d’Autodesk est de développer le produit de la conception professionnelle et des ingénieurs aux artistes, étudiants et amateurs numériques. Au fur et à mesure que le niveau d’expertise en 3D des utilisateurs diminue, la possibilité d’interagir naturellement avec des objets devient crucial.
 
 ### <a name="2-assembly-and-manufacturing"></a>2. Assembly et fabrication
 
-À partir de la quantité croissante de spécialisation sur ateliers pour les avancées rapides de gestion de la chaîne, un accès transparent aux informations pertinentes est la clé. Réalité mixte offre la possibilité de synthétiser des ensembles de données et fournir des indicateurs visuels qui aident à en matière de navigation et les opérations. Il s’agit souvent très techniques, les champs de niche où intégré aux jeux de données personnalisés et les services sont cruciaux pour réduire la complexité et en fournissant une expérience réussie.
+De la plus grande part de la spécialisation sur les étages en usine aux avancées rapides de la gestion de la chaîne logistique, l’accès transparent aux informations pertinentes est essentiel. La réalité mixte offre la possibilité de synthétiser des jeux de données étendus et de fournir des affichages visuels qui facilitent la navigation et les opérations. Il s’agit souvent de champs de niche très techniques, où l’intégration aux jeux de données et services personnalisés est essentielle pour réduire la complexité et permettre une expérience réussie.
 
 <br>
 
 >[!VIDEO https://www.youtube.com/embed/8OWhGiyR4Ns]
 
-Fabricant de l’ascenseur [ThyssenKrupp](https://www.youtube.com/watch?v=8OWhGiyR4Ns) créé une expérience de l’ascenseur techniciens de service, ce qui leur permet de visualiser et identifier les problèmes de préparation d’un travail. Avec une équipe de plus de 24 000 techniciens, les appareils que HoloLens autorise ces techniciens d’avoir à distance, mains libres accès aux informations techniques et experts.
+Le fabricant d’ascenseurs [ThyssenKrupp](https://www.youtube.com/watch?v=8OWhGiyR4Ns) a créé une expérience pour les techniciens de service élévateur, ce qui leur permet de visualiser et d’identifier les problèmes de préparation d’un travail. Avec une équipe couvrant plus de 24 000 techniciens, les appareils tels que HoloLens permettent à ces techniciens d’accéder à distance à des informations techniques et d’experts.
 
-ThyssenKrupp met en évidence ici un concept puissant qui les informations critiques CONTEXTUELLEMENT pertinent peuvent être remises rapidement aux utilisateurs. Nous sommes tournés vers une nouvelle classe d’expériences, l’extraction de grandes quantités d’informations possible vers du contenu qui s’applique à l’utilisateur sera clé.
+ThyssenKrupp met en évidence un concept puissant dans lequel les informations critiques et pertinentes peuvent être fournies rapidement aux utilisateurs. À mesure que nous nous intéressons à une nouvelle classe d’expériences, les grandes quantités d’informations possibles sur le contenu qui sont pertinentes pour l’utilisateur sont essentielles.
 
 ### <a name="3-training-and-development"></a>3. Formation et développement
 
-Représentant les objets et toutes les informations en trois dimensions offrent de nouvelles façons d’expliquer des scénarios visuellement et comprendre spatiale. Formation devient un aspect clé de l’opportunité, en tirant parti de la possibilité de numériquement représentent des objets énormes et complexes (tels que les moteurs à réaction) pour créer des simulations de formation pour une fraction du coût d’une solution physique.
+La représentation d’objets et d’informations dans trois dimensions offre de nouvelles façons d’expliquer les scénarios visuellement et avec une compréhension spatiale. La formation devient un domaine clé d’opportunités, tirant parti de la possibilité de représenter numériquement des objets énormes et complexes (tels que les moteurs jet) pour créer des simulations de formation pour une fraction du coût d’une solution physique.
 
 <br>
 
 >[!VIDEO https://www.youtube.com/embed/GjZgI2oDcwM]
 
-[Japon Airlines](https://www.youtube.com/watch?v=GjZgI2oDcwM&t=158s) a testé avec des programmes de concept pour fournir une formation supplémentaire pour le moteur de mécanismes et vol de groupes. Les moteurs de jet massives (en taille et la complexité) peuvent être représentés en 3D, en ignorant les limitations du monde physique pour déplacer et faire pivoter des objets virtuels autour des participants, ce qui leur permet de voir comment les composants de compagnies aériennes fonctionnent en temps réel.
+Le [Japon Airlines](https://www.youtube.com/watch?v=GjZgI2oDcwM&t=158s) a fait des essais avec les programmes de concept pour fournir une formation supplémentaire à la mécanique des moteurs et aux équipes de vol. Les moteurs jet volumineux (à la fois en taille et en complexité) peuvent être représentés en 3D, en ignorant les limitations du monde physique pour déplacer et faire pivoter des objets virtuels autour des participants, ce qui leur permet de voir comment les composants de la compagnie aérienne fonctionnent en temps réel.
 
-Formation avec composants virtuels (et réduisant la nécessité pour les simulateurs d’entraînement physique coûteux,) sont un moyen de fournir de la valeur dans les scénarios d’entreprise dès aujourd'hui. Comme ce scénario se développe (comme nous l’avons vu en matière de médicament), la vision par ordinateur devient particulièrement important reconnaître des objets uniques dans l’environnement, de comprendre le contexte de l’utilisateur et de fournir des instructions appropriées.
+La formation avec des composants virtuels (et la réduction de la nécessité de créer des simulateurs de formation physiques onéreux) est un moyen clé de fournir de la valeur dans les scénarios d’entreprise dès aujourd’hui. Comme ce scénario s’étend (comme nous l’avons vu dans des domaines tels que la médecine), la vision de l’ordinateur devient particulièrement importante pour reconnaître des objets uniques dans l’environnement, comprendre le contexte de l’utilisateur et fournir des instructions pertinentes.
 
 ### <a name="4-communication-and-understanding"></a>4. Communication et compréhension
 
-Interactions entre les deux personnes (si les deux participants se trouvent dans des appareils de réalité mixte, ou un est sur un PC ou un téléphone traditionnel) peut fournir à la fois une idée d’immersion au sein d’un nouvel environnement ou une idée de présence lors de la communication pratiquement avec d’autres utilisateurs. Dans les scénarios d’entreprise ce sens de la présence est une aubaine pour les équipes mobiles, permettant d’augmenter la compréhension des projets et de réduire la nécessité de voyage.
+Les interactions entre deux personnes (que les deux participants se trouvent dans des appareils de réalité mixte ou une autre sur un PC ou un téléphone traditionnel) peuvent fournir un sens d’immersion dans un nouvel environnement ou un sens de la présence lorsqu’ils communiquent virtuellement avec d’autres personnes. Dans les scénarios d’entreprise, ce sens de la présence est une aubaine pour les équipes mobiles, ce qui contribue à améliorer la compréhension des projets et à réduire le besoin de voyage.
 
 <br>
 
 >[!VIDEO https://www.youtube.com/embed/kXVW4sUsh3A]
 
-Fabricant de tech commerciales [Trimble](https://www.youtube.com/watch?v=kXVW4sUsh3A) développé une solution pour l’architecture et la construction des professionnels du secteur collaborer et passez en revue le travail durant la création de développement. Les professionnels de le peuvent à distance se plonger dans un projet pour discuter de la progression ou se trouver sur l’emplacement et passez en revue les plans tel qu’il apparaîtrait (sous leur forme finale) dans l’environnement autour d’elles.
+Le fabricant du Tech [Trimble](https://www.youtube.com/watch?v=kXVW4sUsh3A) a développé une solution destinée aux professionnels de l’industrie de la construction et de l’architecture pour collaborer et examiner le travail pendant le développement. Les professionnels peuvent naviguer à distance dans un projet pour discuter de la progression ou se trouver sur l’emplacement et les plans d’examen tels qu’ils apparaissent (dans leur forme finale) dans l’environnement qui les entoure.
 
-Expériences partagées sont une zone principale des investissements de Microsoft, avec les applications telles que Skype Explorer de nouvelles façons de représenter les personnes impliquées dans l’espace numérique. Les équipes sont exploration volumétriques enregistrements vidéo, les avatars et recréations de l’espace physique d’un participant.
+Les expériences partagées sont un domaine d’investissement majeur pour Microsoft, avec des applications comme Skype qui explorent de nouvelles façons de représenter les êtres humains dans l’espace numérique. Les équipes explorent les enregistrements de vidéo volumétriques, les avatars et les recréations de l’espace physique d’un participant.
 
 ### <a name="5-entertainment-and-engagement"></a>5. Divertissement et engagement
 
-La nature d’immersion dans la réalité mixte peut avoir un impact considérable sur la façon dont les clients s’engager avec le département entertainment and marketing. Artistes et les studios de divertissement ont exploré la réalité mixte comme un moyen incontournable pour narration, tandis que les entreprises explorent les implications en matière de marketing de marque. À partir de démonstrations de produits dans les salles d’exposition privés pour les éléments de vision informés au sponsorise de commerce, contenu peut être fourni de façon plus IMMERSIFS et personnalisées.
+La nature de l’immersion dans la réalité mixte peut avoir un impact considérable sur la façon dont les clients s’orientent vers le divertissement et le marketing. Les graphistes et les Studios de divertissement ont exploré la réalité mixte en tant que support attrayant pour les récits, tandis que les entreprises explorent les implications pour le marketing de la qualité. Des démonstrations de produit dans les salles d’exposition privées aux parties de vision transmises à l’expos du commerce, le contenu peut être fourni de manière plus immersive et personnalisée.
 
 <br>
 
 >[!VIDEO https://www.youtube.com/embed/DilzwF90vec]
 
-Volvo créé une expérience de présentation de leur dernière voiture modèles (surpasse les utilisateurs dans différentes couleurs et les configurations) lors de la mise en surbrillance les capteurs fonctionnent pour créer une expérience de conduite meilleure et plus sûre. En prenant les clients via une expérience guidée salle d’exposition permet Volvo à raconter l’histoire derrière la fonctionnalité de voiture pointe tout en fournissant une image facile à retenir de leur histoire de marque.
+Volvo a créé une expérience de présentation de ses derniers modèles de voitures (en plongeant dans différentes couleurs et configurations) tout en mettant en évidence le fonctionnement des capteurs avancés pour créer une expérience de conduite plus sûre. La mise en œuvre d’une expérience de salle d’exposition guidée permet à Volvo de dire à l’histoire des fonctionnalités de la voiture de pointe tout en disposant d’une vision mémorable de leur histoire.
 
-Divertissement est à bien des égards pousser les limites de réalité mixte (réalité virtuelle en particulier) et la plupart des attrayantes dans cet espace est peut-être comment il interagira combiner avec le domaine précédent d’opportunité : communication et la compréhension. Avec plusieurs utilisateurs, chacun avec leur propre variante des appareils et des méthodes d’interface, vous pouvez imaginer un futur vast de personnalisation dans le domaine du divertissement.
+Le divertissement est de nombreuses façons de pousser les limites de la réalité mixte (notamment la réalité virtuelle) et peut-être la plus intéressante dans cet espace est la manière dont il interagit avec le domaine d’opportunités précédent: communication et compréhension. Avec plusieurs utilisateurs, chacun avec sa propre variante d’appareils et de méthodes d’interface, vous pouvez imaginer une vaste personnalisation dans le domaine du divertissement.
 
-## <a name="start-building-today"></a>Commencez à créer aujourd'hui
+## <a name="start-building-today"></a>Commencez à créer dès aujourd’hui
 
-Il est difficile de dire beaucoup à venir de réalité mixte aspect pour les consommateurs, mais en se concentrant sur uniques difficultés, ateliers pratiques sur vrai matériel, et **expérimentation *aujourd'hui* avec l’intersection entre mixte réalité, voix et l’intelligence artificielle est la clé**. Microsoft est uniquement prise en main réalité mixte mais learning à partir de la réussite réalisé par les entreprises aujourd'hui vous aideront à créer les expériences de demain.
+Il est difficile de savoir à quoi ressemblera le plus loin de la réalité mixte pour les consommateurs, mais qui se concentrent sur des problèmes uniques, se familiarise avec le matériel réel et **expérimente *aujourd’hui* avec l’intersection entre la réalité mixte, la voix et l’intelligence artificielle est clé**. Microsoft s’est tout simplement mis en route avec la réalité mixte, mais l’apprentissage des succès réalisés par les entreprises vous aidera à créer les expériences de demain.
 
 ## <a name="about-the-author"></a>À propos de l’auteur
 
 <table style="border-collapse:collapse">
 <tr>
 <td style="border-style: none" width="60" padding-left="0px"><img alt="Picture of Mark Vitazko" width="60" height="60" src="images/mark-vitazko.jpg"></td>
-<td style="border-style: none"><b>Mark Vitazko</b><br>Concepteur UX @Microsoft</td>
+<td style="border-style: none"><b>Marquer Vitazko</b><br>Concepteur UX@Microsoft</td>
 </tr>
 </table>
  

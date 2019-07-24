@@ -1,48 +1,48 @@
 ---
 title: Persistance dans Unity
-description: Persistance permet aux utilisateurs d’épingler hologrammes individuels ou un espace de travail, où qu’ils veulent et puis recherchez il où qu’elles attendent de plusieurs utilise de votre application.
+description: La persistance permet à vos utilisateurs d’épingler des hologrammes individuels ou un espace de travail où qu’ils le souhaitent, puis de les trouver plus tard là où ils s’attendent à plusieurs utilisations de votre application.
 author: thetuvix
 ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: HoloLens, persistance, Unity
 ms.openlocfilehash: b6a67e52b3a5ce724a90eb1a479c5eda74b0c4cb
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59597116"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63524788"
 ---
 # <a name="persistence-in-unity"></a>Persistance dans Unity
 
-**Namespace :** *UnityEngine.XR.WSA.Persistence*<br>
-**Classe :** *WorldAnchorStore*
+**Espace de noms :** *UnityEngine. XR. WSA. persistance*<br>
+**Type** *WorldAnchorStore*
 
-Le WorldAnchorStore est essentiel à la création d’expériences HOLOGRAPHIQUE où hologrammes restent dans les positions du monde réel spécifique entre les instances de l’application. Vous pouvez ainsi vos utilisateurs épinglent hologrammes individuels ou un espace de travail, où qu’ils le souhaitent il et ensuite les retrouver ultérieurement où qu’elles attendent sur nombreuses utilisations de votre application.
+Le WorldAnchorStore est la clé de la création d’expériences holographiques dans lesquelles les hologrammes restent dans des positions réelles spécifiques entre les instances de l’application. Cela permet à vos utilisateurs d’épingler des hologrammes individuels ou un espace de travail où qu’ils le souhaitent, puis de les trouver plus tard là où ils s’attendent à plusieurs utilisations de votre application.
 
-## <a name="how-to-persist-holograms-across-sessions"></a>Comment conserver hologrammes entre les sessions
+## <a name="how-to-persist-holograms-across-sessions"></a>Comment conserver des hologrammes entre les sessions
 
-Le WorldAnchorStore permettent de conserver l’emplacement de WorldAnchor entre les sessions. Pour conserver réellement hologrammes entre les sessions, vous devrez effectuer séparément le suivi de votre GameObjects qui utilisent un point d’ancrage du monde particulier. Il est souvent judicieux pour créer une racine GameObject avec un point d’ancrage du monde et avoir des enfants hologrammes ancrée par celui-ci avec un décalage de position local.
+Le WorldAnchorStore vous permet de conserver l’emplacement des WorldAnchor entre les sessions. Pour conserver les hologrammes entre les sessions, vous devez effectuer un suivi séparé de vos GameObjects qui utilisent une ancre mondiale particulière. Il est souvent judicieux de créer une racine GameObject avec une ancre mondiale et de faire en sorte que les hologrammes enfants soient ancrés avec un décalage de position local.
 
-Pour charger hologrammes provenant des sessions précédentes :
-1. Obtenir le WorldAnchorStore
-2. Charger des données d’application sur le point d’ancrage du monde qui vous donne l’id de l’ancrage du monde
-3. Charger un point d’ancrage du monde entier à partir de son id
+Pour charger des hologrammes à partir de sessions précédentes:
+1. Obtient le WorldAnchorStore
+2. Charger les données d’application relatives à l’ancre mondiale qui vous donne l’ID de l’ancre mondiale
+3. Charger une ancre universelle à partir de son ID
 
-Pour enregistrer les hologrammes pour les sessions ultérieures :
-1. Obtenir le WorldAnchorStore
-2. Enregistrer un point d’ancrage du monde spécifiant un id
-3. Enregistrer les données relatives à l’ancrage du monde avec un id d’application
+Pour enregistrer des hologrammes pour les sessions à venir:
+1. Obtient le WorldAnchorStore
+2. Enregistrer une ancre mondiale en spécifiant un ID
+3. Enregistrer les données d’application relatives à l’ancre mondiale avec un ID
 
-### <a name="getting-the-worldanchorstore"></a>Obtention de la WorldAnchorStore
+### <a name="getting-the-worldanchorstore"></a>Obtention du WorldAnchorStore
 
-Nous souhaitons conserver une référence à la WorldAnchorStore autour donc nous savons que nous sommes prêts à exécuter une fois que nous souhaitons effectuer une opération. S’agissant d’un appel asynchrone, potentiellement dès le début, nous voulons appeler
+Nous souhaitons conserver une référence à WorldAnchorStore pour nous assurer que nous sommes prêts à travailler lorsque nous souhaitons effectuer une opération. Étant donné qu’il s’agit d’un appel asynchrone, éventuellement dès le démarrage, nous souhaitons appeler
 
 ```
 WorldAnchorStore.GetAsync(StoreLoaded);
 ```
 
-Dans ce cas, StoreLoaded est notre gestionnaire pour lorsque le WorldAnchorStore le chargement est terminé :
+Dans ce cas, StoreLoaded est notre gestionnaire pour la fin du chargement du WorldAnchorStore:
 
 ```
 private void StoreLoaded(WorldAnchorStore store)
@@ -51,11 +51,11 @@ private void StoreLoaded(WorldAnchorStore store)
 }
 ```
 
-Nous disposons désormais d’une référence à la WorldAnchorStore que nous utiliserons pour enregistrer et charger les ancres monde spécifique.
+Nous disposons maintenant d’une référence au WorldAnchorStore que nous allons utiliser pour enregistrer et charger des ancres universelles spécifiques.
 
-### <a name="saving-a-worldanchor"></a>L’enregistrement d’un WorldAnchor
+### <a name="saving-a-worldanchor"></a>Enregistrement d’un WorldAnchor
 
-Pour enregistrer, nous devons simplement nommer nous enregistrez et transmettez-le dans le WorldAnchor soulevées avant lorsque vous souhaitez enregistrer. Remarque : la tentative d’enregistrement de deux points d’ancrage à la même chaîne échoue (magasin. Enregistrer retournera la valeur false). Vous devez supprimer l’enregistrement précédent avant d’enregistrer une nouvelle :
+Pour ce faire, nous devons simplement nommer ce que nous enregistrons et le transférer dans le WorldAnchor que nous avons reçu avant l’enregistrement. Remarque: la tentative d’enregistrement de deux ancres dans la même chaîne échoue (Store. L’enregistrement retourne la valeur false). Vous devez supprimer le précédent enregistrement avant d’enregistrer le nouveau fichier:
 
 ```
 private void SaveGame()
@@ -69,9 +69,9 @@ private void SaveGame()
 }
 ```
 
-### <a name="loading-a-worldanchor"></a>Le chargement d’un WorldAnchor
+### <a name="loading-a-worldanchor"></a>Chargement d’un WorldAnchor
 
-Et à charger :
+Et pour charger:
 
 ```
 private void LoadGame()
@@ -85,11 +85,11 @@ private void LoadGame()
 }
 ```
 
-Nous pouvons en outre utiliser le magasin. Delete() pour supprimer un point d’ancrage que nous avons précédemment enregistré et store. Clear() supprimer toutes les données précédemment enregistrées.
+Nous pouvons également utiliser le Store. Delete () pour supprimer une ancre précédemment enregistrée et stockée. Clear () pour supprimer toutes les données précédemment enregistrées.
 
-### <a name="enumerating-existing-anchors"></a>Énumération des ancres existants
+### <a name="enumerating-existing-anchors"></a>Énumération des ancres existantes
 
-Pour découvrir les ancres précédemment stockés, appelez GetAllIds.
+Pour découvrir les ancres précédemment stockées, appelez GetAllIds.
 
 ```
 string[] ids = this.store.GetAllIds();
@@ -99,15 +99,15 @@ for (int index = 0; index < ids.Length; index++)
 }
 ```
 
-## <a name="persisting-holograms-for-multiple-devices"></a>Hologrammes persistantes pour plusieurs appareils
+## <a name="persisting-holograms-for-multiple-devices"></a>Persistance des hologrammes pour plusieurs appareils
 
-Vous pouvez utiliser <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">ancres Spatial Azure</a> pour créer un point d’ancrage cloud durable à partir d’un WorldAnchor local, lequel votre application peut ensuite localiser dans plusieurs HoloLens, appareils iOS et Android, même si ces appareils ne sont pas présents dans le même heure.  Étant donné que les ancres cloud sont persistants, plusieurs périphériques au fil du temps peuvent chacun voir le contenu restitué par rapport à ce point d’ancrage dans le même emplacement physique.
+Vous pouvez utiliser des <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">ancres spatiales Azure</a> pour créer une ancre Cloud durable à partir d’un WorldAnchor local, que votre application peut ensuite localiser sur plusieurs appareils HoloLens, iOS et Android, même si ces appareils ne sont pas présents simultanément.  Étant donné que les ancres Cloud sont persistantes, plusieurs périphériques peuvent voir le contenu affiché par rapport à cette ancre dans le même emplacement physique.
 
-Pour commencer à créer des expériences partagées dans Unity, essayez les 5 minutes <a href="https://docs.microsoft.com/azure/spatial-anchors/unity-overview" target="_blank">Démarrages rapides Azure Spatial ancres Unity</a>.
+Pour commencer à créer des expériences partagées dans Unity, essayez les Démarrages rapides de 5 minutes d' <a href="https://docs.microsoft.com/azure/spatial-anchors/unity-overview" target="_blank">Unity spatiales Azure Unity</a>.
 
-Une fois que vous êtes en cours d’exécution ancres spatiale d’Azure, vous pouvez ensuite <a href="https://docs.microsoft.com/azure/spatial-anchors/concepts/create-locate-anchors-unity" target="_blank">créer et localiser les points d’ancrage dans Unity</a>.
+Une fois que vous êtes opérationnel avec les ancres spatiales Azure, vous pouvez <a href="https://docs.microsoft.com/azure/spatial-anchors/concepts/create-locate-anchors-unity" target="_blank">créer et localiser des ancres dans Unity</a>.
 
 ## <a name="see-also"></a>Voir aussi
-* [Persistance de l’ancre spatial](coordinate-systems.md#spatial-anchor-persistence)
-* <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Ancres Spatial Azure</a>
-* <a href="https://docs.microsoft.com/dotnet/api/Microsoft.Azure.SpatialAnchors" target="_blank">Ancres Spatial Azure SDK pour Unity</a>
+* [Persistance d’ancrage spatial](coordinate-systems.md#spatial-anchor-persistence)
+* <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure Spatial Anchors</a>
+* <a href="https://docs.microsoft.com/dotnet/api/Microsoft.Azure.SpatialAnchors" target="_blank">Kit de développement logiciel (SDK) d’ancre spatiale Azure pour Unity</a>

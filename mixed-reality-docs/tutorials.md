@@ -6,7 +6,7 @@ author: keveleigh
 ms.author: kurtie
 ms.date: 03/21/2018
 ms.topic: article
-keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-unity, academy, tutorial
+keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, Academy, didacticiel
 ms.openlocfilehash: 4f1402cb9b91e0d0619c0516de9120302323b799
 ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
@@ -16,32 +16,32 @@ ms.locfileid: "67415403"
 ---
 # <a name="tutorials-and-sample-apps"></a>Didacticiels et exemples d’applications
 
-Actuellement tous nos didacticiels et les exemples d’applications sont en fonction de Unity.  Comme nous développons le contenu pour les autres moteurs et les plateformes, vous les trouverez sous la rubrique correspondante dans la Table des matières.
+Actuellement, tous nos didacticiels et nos exemples d’applications sont basés sur Unity.  Au fur et à mesure que nous développons du contenu pour d’autres moteurs et plateformes, vous les trouverez sous l’en-tête approprié dans la table des matières.
 
 ## <a name="mr-learning-modules"></a>Modules d’apprentissage sur la réalité mixte
 
-Les Modules de formation MR sont conçus pour aider les développeurs à la fois techniques et meilleures pratiques pour développer des applications de réalité mixte.  Les modules initiales de HoloLens 2 et implémentent la réalité Toolkit 2.0 mixte (MRTK 2.0).
-* Le module de base est destiné à montrer aux développeurs comment configurer leur projet avec MRTK, ainsi que pour implémenter l’interface utilisateur, le mappage Spatial et interactions de base et avancées
+Les modules de formation MR sont conçus pour aider les développeurs à apprendre les techniques et les meilleures pratiques pour le développement d’applications de réalité mixte.  Les modules initiaux sont destinés à HoloLens 2 et implémentent la réalité mixte Toolkit 2,0 (MRTK 2,0).
+* Le module de base est destiné à montrer aux développeurs comment configurer leur projet avec MRTK, ainsi qu’à implémenter l’interface utilisateur, le mappage spatial et les interactions de base et avancées
 
-## <a name="open-source-sample-apps"></a>Exemples d’applications Open Source
+## <a name="open-source-sample-apps"></a>Exemples d’applications open source
 
-Les exemples d’applications open source sont des applications qui ont été créées par nos équipes et nous avons fourni le code source afin que les développeurs pourraient Regardez et apprenez à partir de nos projets.
+Les exemples d’applications open source sont des applications qui ont été créées par nos équipes et nous avons fourni le code source pour que les développeurs puissent les examiner et tirer des connaissances de nos projets.
 
-## <a name="mixed-reality-academy-tutorials"></a>Didacticiels de l’Académie de réalité mixte
+## <a name="mixed-reality-academy-tutorials"></a>Didacticiels d’Académie de la réalité mixte
 
-L’Académie de réalité mixte est un ensemble de didacticiels pas à pas en ligne avec des fichiers de projet correspondante : 
-* Les didacticiels abordent 100, 200 et 300 rubriques niveau, dans lequel : principes fondamentaux de projet couvre de niveau 100, niveau 200 couvre principaux blocs de construction MR et l’intégration de service cloud couvre de niveau 300.
-* La plupart des didacticiels traitent des concepts applicables aux HoloLens et des casques IMMERSIFS (VR). 
-* Chaque didacticiel est organisé par chapitre et inclure plus de vidéos de démonstration des concepts clés. 
-* Un PC Windows 10 avec le bon [outils installés](install-the-tools.md) est un prérequis courants pour effectuer chaque didacticiel.
+La réalité mixte Academy est un ensemble de didacticiels pas à pas en ligne avec les fichiers projet correspondants: 
+* Les didacticiels couvrent les sujets de niveau 100, 200 et 300, dans lesquels: 100-niveau de base des projets, 200-niveau couvre les blocs de construction de base, et 300-niveau couvre l’intégration du service Cloud.
+* La plupart des cours couvrent les concepts applicables aux écouteurs HoloLens et immersif (VR). 
+* Chaque Didacticiel est organisé par chapitre, et la plupart incluent des démonstrations vidéo des concepts clés. 
+* Un PC Windows 10 avec les outils corrects [installés](install-the-tools.md) est un prérequis courant pour suivre chaque didacticiel.
 
 >[!NOTE]
->Les didacticiels Académie de réalité mixte ont été conçus avec HoloLens (1er gen) et des casques IMMERSIFS réalité mixte à l’esprit.  Par conséquent, nous estimons qu’il est important de laisser ces didacticiels en place pour les développeurs qui cherchent toujours pour obtenir des conseils de développement pour ces appareils.  Ces didacticiels seront **_pas_** être mis à jour avec les ensembles d’outils ou les interactions utilisées pour HoloLens 2 dernières.  Ils seront conservées pour continuer à travailler sur les appareils pris en charge. Il y aura une nouvelle série de didacticiels seront publiés dans le futur qui va vous montrer comment développer pour HoloLens 2.  Cet avis sera mis à jour avec un lien vers ces didacticiels lorsqu’elles sont validées.
+>Les didacticiels d’Académie de la réalité mixte ont été conçus avec les casques immersif (1er génération) et de réalité mixte à l’esprit.  Par conséquent, nous pensons qu’il est important de ne pas mettre en place ces didacticiels pour les développeurs qui cherchent toujours des conseils en matière de développement pour ces appareils.  Ces didacticiels ne seront **_pas_** mis à jour avec les derniers ensembles d’outils ou interactions utilisés pour HoloLens 2.  Ils seront conservés pour continuer à travailler sur les appareils pris en charge. Une nouvelle série de didacticiels sera publiée à l’avenir qui vous montrera comment développer pour HoloLens 2.  Cet avis sera mis à jour avec un lien vers ces didacticiels lors de leur publication.
 
 <br>
 <ul id="cardtypes-W" class="cardsW panelContent" style="display: flex; margin-top: 0px;">
                             <li>
-                                    <a href="holograms-100.md" title="Principes de base MR 100" data-linktype="absolute-path">
+                                    <a href="holograms-100.md" title="Notions de base de MR 100" data-linktype="absolute-path">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -51,8 +51,8 @@ L’Académie de réalité mixte est un ensemble de didacticiels pas à pas en l
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Principes de base MR 100 : Mise en route avec Unity</h3>
-                                                    <p>Créer une application de base de réalité mixte avec Unity. Ce projet peut ensuite servir d’un modèle de départ pour n’importe quelle application MR que vous souhaiterez peut-être générer dans Unity.</p>
+                                                    <h3>Notions de base de m. 100: Prise en main d’Unity</h3>
+                                                    <p>Créer une application de réalité mixte de base avec Unity. Ce projet peut ensuite servir de modèle de départ pour toutes les applications MR que vous souhaitez créer dans Unity.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -60,7 +60,7 @@ L’Académie de réalité mixte est un ensemble de didacticiels pas à pas en l
                                </a>
                             </li>
                             <li>
-                                  <a href="holograms-101.md" title="Principes de base MR 101" data-linktype="absolute-path">
+                                  <a href="holograms-101.md" title="Notions de base de MR 101" data-linktype="absolute-path">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -70,8 +70,8 @@ L’Académie de réalité mixte est un ensemble de didacticiels pas à pas en l
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Principes de base MR 101 : Projet complet avec l’appareil</h3>
-                                                    <p>Configurer un projet complet, présentation de core mixte des fonctionnalités de réalité (regards mouvement, voix, son spatial et mappage spatial) à l’aide d’un appareil HoloLens.</p>
+                                                    <h3>Notions de base de m. 101: Terminer le projet avec l’appareil</h3>
+                                                    <p>Configurez un projet complet, en introduisant des fonctionnalités principales de réalité mixte (point de présence, geste, voix, son spatial et mappage spatial) à l’aide d’un appareil HoloLens.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -79,7 +79,7 @@ L’Académie de réalité mixte est un ensemble de didacticiels pas à pas en l
                                </a>
                             </li>
                             <li>
-                                <a href="holograms-101e.md" title="Principes de base MR 101E" data-linktype="absolute-path">
+                                <a href="holograms-101e.md" title="Notions de base de m. 101E" data-linktype="absolute-path">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -89,8 +89,8 @@ L’Académie de réalité mixte est un ensemble de didacticiels pas à pas en l
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Principes de base MR 101E : Projet complet avec l’émulateur</h3>
-                                                    <p>Configurer un projet complet, présentation de core mixte des fonctionnalités de réalité (regards mouvement, voix, son spatial et mappage spatial) à l’aide de l’émulateur HoloLens.</p>
+                                                    <h3>Notions de base de m. 101E: Terminer le projet avec l’émulateur</h3>
+                                                    <p>Configurez un projet complet, en introduisant des fonctionnalités principales de réalité mixte (point de présence, geste, voix, son spatial et mappage spatial) à l’aide de l’émulateur HoloLens.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -98,7 +98,7 @@ L’Académie de réalité mixte est un ensemble de didacticiels pas à pas en l
                                   </a>
                             </li>
                             <li>
-                             <a href="holograms-210.md" title="Entrée M. 210" data-linktype="absolute-path">
+                             <a href="holograms-210.md" title="Entrée MR 210" data-linktype="absolute-path">
                               <div class="cardSize">
                                   <div class="cardPadding">
                                       <div class="card">
@@ -108,8 +108,8 @@ L’Académie de réalité mixte est un ensemble de didacticiels pas à pas en l
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>Entrée M. 210 : Pointage du regard</h3>
-                                              <p>Regards est la première forme d’entrée et révèle intention et la reconnaissance de l’utilisateur. Vous allez ajouter la reconnaissance contextuelle et votre curseur hologrammes, tirant pleinement parti de ce que votre application connaît des regards de l’utilisateur.</p>
+                                              <h3>Monsieur 210: Pointage du regard</h3>
+                                              <p>Le point de présence est la première forme d’entrée et révèle l’intention et la sensibilisation de l’utilisateur. Vous allez ajouter une sensibilisation contextuelle à votre curseur et à vos hologrammes, en tirant pleinement parti de ce que votre application connaît sur le regard de l’utilisateur.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -117,7 +117,7 @@ L’Académie de réalité mixte est un ensemble de didacticiels pas à pas en l
                                </a>
                             </li>
                             <li>
-                            <a href="holograms-211.md" title="Entrée M. 211" data-linktype="absolute-path">
+                            <a href="holograms-211.md" title="Entrée MR 211" data-linktype="absolute-path">
                               <div class="cardSize">
                                   <div class="cardPadding">
                                       <div class="card">
@@ -127,8 +127,8 @@ L’Académie de réalité mixte est un ensemble de didacticiels pas à pas en l
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>Entrée M. 211 : Mouvement</h3>
-                                              <p>Mouvements transforment intention de l’utilisateur en action. Les gestes, les utilisateurs peuvent interagir avec hologrammes. Dans ce cours, vous allez apprendre à les suivre les mains de l’utilisateur, répondre aux entrées d’utilisateur et envoyer des commentaires en fonction de l’état de la main et l’emplacement.</p>
+                                              <h3>Monsieur 211: Mouvement</h3>
+                                              <p>Les gestes transforment l’intention de l’utilisateur en action. Avec les gestes, les utilisateurs peuvent interagir avec des hologrammes. Dans ce cours, vous apprendrez à suivre les mains de l’utilisateur, à répondre aux entrées de l’utilisateur et à fournir des commentaires sur l’État et l’emplacement de la main.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -136,7 +136,7 @@ L’Académie de réalité mixte est un ensemble de didacticiels pas à pas en l
                               </a>
                             </li>         
                             <li>
-                             <a href="holograms-212.md" title="Entrée M. 212" data-linktype="absolute-path">
+                             <a href="holograms-212.md" title="Entrée MR 212" data-linktype="absolute-path">
                               <div class="cardSize">
                                   <div class="cardPadding">
                                       <div class="card">
@@ -146,8 +146,8 @@ L’Académie de réalité mixte est un ensemble de didacticiels pas à pas en l
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>Entrée M. 212 : Voix</h3>
-                                              <p>Voix nous permet d’interagir avec notre hologrammes de façon simple et naturelle. Dans ce cours, vous allez apprendre à informer les utilisateurs des commandes vocales disponibles, envoyer des commentaires qu’une commande vocale a été émises et utiliser la dictée pour comprendre ce que l’utilisateur dit.</p>
+                                              <h3>Monsieur 212: Voix</h3>
+                                              <p>La voix nous permet d’interagir avec nos hologrammes de manière simple et naturelle. Dans ce cours, vous apprendrez à informer les utilisateurs des commandes vocales disponibles, à faire part de leurs commentaires qu’une commande vocale a été écoutée et à utiliser la dictée pour comprendre ce que l’utilisateur dit.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -155,7 +155,7 @@ L’Académie de réalité mixte est un ensemble de didacticiels pas à pas en l
                               </a>
                             </li>
                              <li>
-                              <a href="mixed-reality-213.md" title="Entrée M. 213" data-linktype="absolute-path">
+                              <a href="mixed-reality-213.md" title="Entrée MR 213" data-linktype="absolute-path">
                               <div class="cardSize">
                                   <div class="cardPadding">
                                       <div class="card">
@@ -165,8 +165,8 @@ L’Académie de réalité mixte est un ensemble de didacticiels pas à pas en l
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>Entrée M. 213 : Contrôleurs de mouvement</h3>
-                                              <p>Ce cours explorerons les façons de visualisation des contrôleurs de mouvement dans des casques IMMERSIFS (VR), gestion des événements d’entrée et y attacher des éléments d’interface utilisateur personnalisées pour les contrôleurs.</p>
+                                              <h3>Monsieur 213: Contrôleurs de mouvement</h3>
+                                              <p>Ce cours explore les différentes façons de visualiser les contrôleurs de mouvement dans des casques immersifs, de gérer des événements d’entrée et d’attacher des éléments d’interface utilisateur personnalisés aux contrôleurs.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -174,7 +174,7 @@ L’Académie de réalité mixte est un ensemble de didacticiels pas à pas en l
                               </a>
                             </li>   
                               <li>
-                              <a href="holograms-220.md" title="MR 220 Spatial" data-linktype="absolute-path">
+                              <a href="holograms-220.md" title="MR spatial 220" data-linktype="absolute-path">
                               <div class="cardSize">
                                   <div class="cardPadding">
                                       <div class="card">
@@ -184,8 +184,8 @@ L’Académie de réalité mixte est un ensemble de didacticiels pas à pas en l
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>MR 220 spatiale : Son spatial</h3>
-                                              <p>Son spatial breathes vie dans hologrammes et leur donne la présence. Dans ce cours, vous allez apprendre à les utiliser son spatial à hologrammes de bout en bout dans le monde environnant, envoyer des commentaires lors des interactions et utiliser audio pour trouver votre hologrammes.</p>
+                                              <h3>Monsieur spatial 220: Son spatial</h3>
+                                              <p>Le son spatial passe la vie à des hologrammes et leur donne la présence. Dans ce cours, vous apprendrez à utiliser un son spatial pour des hologrammes à la terre dans le monde environnant, à envoyer des commentaires pendant les interactions et à utiliser de l’audio pour rechercher vos hologrammes.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -193,7 +193,7 @@ L’Académie de réalité mixte est un ensemble de didacticiels pas à pas en l
                               </a>
                             </li>      
                                <li>
-                               <a href="holograms-230.md" title="MR 230 Spatial" data-linktype="absolute-path">
+                               <a href="holograms-230.md" title="MR spatial 230" data-linktype="absolute-path">
                               <div class="cardSize">
                                   <div class="cardPadding">
                                       <div class="card">
@@ -203,8 +203,8 @@ L’Académie de réalité mixte est un ensemble de didacticiels pas à pas en l
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>MR 230 spatiale : Mappage spatial</h3>
-                                              <p>Mappage spatial réunit le monde réel et le monde virtuel. Vous allez explorer les nuanceurs et utilisez-les pour visualiser votre espace. Puis, vous allez apprendre à simplifier la maille de salle dans les plans simples, envoyer des commentaires sur le placement des hologrammes sur les surfaces du monde réel et Explorer les effets visuels occlusion.</p>
+                                              <h3>Monsieur spatial 230: Mappage spatial</h3>
+                                              <p>Le mappage spatial fait ensemble le monde réel et le monde virtuel. Vous allez explorer les nuanceurs et les utiliser pour visualiser votre espace. Vous apprendrez ensuite à simplifier le maillage de la pièce en plans simples, à envoyer des commentaires sur la mise en place d’hologrammes sur des surfaces réelles et à explorer les effets visuels de l’occlusion.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -212,7 +212,7 @@ L’Académie de réalité mixte est un ensemble de didacticiels pas à pas en l
                              </a>
                             </li> 
                                 <li>
-                                <a href="holograms-240.md" title="MR partage 240" data-linktype="absolute-path">
+                                <a href="holograms-240.md" title="RM partageant 240" data-linktype="absolute-path">
                               <div class="cardSize">
                                   <div class="cardPadding">
                                       <div class="card">
@@ -222,8 +222,8 @@ L’Académie de réalité mixte est un ensemble de didacticiels pas à pas en l
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>MR 240 de partage : Plusieurs appareils HoloLens</h3>
-                                              <p>Notre projet //Build 2016 ! Configurer un projet complet avec les systèmes de coordonnées partagés entre les appareils HoloLens, permettant aux utilisateurs de prendre part à un monde HOLOGRAPHIQUE partagé.</p>
+                                              <h3>RM partageant 240: Plusieurs appareils HoloLens</h3>
+                                              <p>Notre projet//Build 2016! Configurez un projet complet avec des systèmes de coordonnées partagés entre les appareils HoloLens, ce qui permet aux utilisateurs de participer à un monde holographique partagé.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -231,7 +231,7 @@ L’Académie de réalité mixte est un ensemble de didacticiels pas à pas en l
                              </a>
                             </li> 
                                  <li>
-                                   <a href="mixed-reality-250.md" title="MR partage 250" data-linktype="absolute-path">
+                                   <a href="mixed-reality-250.md" title="RM partageant 250" data-linktype="absolute-path">
                               <div class="cardSize">
                                   <div class="cardPadding">
                                       <div class="card">
@@ -241,8 +241,8 @@ L’Académie de réalité mixte est un ensemble de didacticiels pas à pas en l
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>MR 250 de partage : HoloLens et des casques IMMERSIFS</h3>
-                                              <p>Dans notre projet //Build 2017, nous montrons les atouts uniques de HoloLens et des casques IMMERSIFS (VR) au sein d’une expérience partagée entre les périphériques tire parti de la création d’une application.</p>
+                                              <h3>RM partageant 250: HoloLens et casques immersifs</h3>
+                                              <p>Dans notre projet//Build 2017, nous présentons la création d’une application qui tire parti des avantages uniques des casques HoloLens et immersifs (VR) au sein d’une expérience multipériphérique partagée.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -253,7 +253,7 @@ L’Académie de réalité mixte est un ensemble de didacticiels pas à pas en l
 
 ## <a name="mixed-reality-and-azure-services-tutorials"></a>Tutoriels sur la réalité mixte et les services Azure
 
-Ces didacticiels autonomes sont très utiles pour apprendre à implémenter les différents services Azure dans votre projet Unity.  Ces didacticiels sont toutes basées sur deux HoloLens (1er gen) ou notre des casques IMMERSIFS, mais les leçons sur l’utilisation des services doivent être transférable à presque n’importe quel appareil.
+Ces didacticiels autonomes sont très utiles pour apprendre à implémenter différents services Azure dans votre projet Unity.  Ces didacticiels sont tous basés sur HoloLens (1re génération) ou sur nos casques immersifs, mais les leçons sur l’utilisation des services doivent être transférables à la plupart des appareils.
 
 <ul id="cardtypes-W" class="cardsW panelContent" style="display: flex; margin-top: 0px;">
     <li>
@@ -267,8 +267,8 @@ Ces didacticiels autonomes sont très utiles pour apprendre à implémenter les 
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>MR et Azure 301 : Traduction linguistique</h3>
-                                              <p>À l’aide de l’API Azure Translator Text, votre application de réalité mixte peut traduire la reconnaissance vocale dans un autre langage. Découvrez comment dans ce cours !</p>
+                                              <h3>MR et Azure 301: Traduction linguistique</h3>
+                                              <p>À l’aide de la API de traduction de texte Translator Text Azure, votre application de réalité mixte peut traduire la parole en texte dans une autre langue. Découvrez comment dans ce cours.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -286,8 +286,8 @@ Ces didacticiels autonomes sont très utiles pour apprendre à implémenter les 
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>MR et Azure 302 : Vision par ordinateur</h3>
-                                              <p>Utiliser les API de vision par ordinateur Azure dans une application de réalité mixte pour traitement d’image et l’analyse, sans l’apprentissage d’un modèle.</p>
+                                              <h3>MR et Azure 302: Vision par ordinateur</h3>
+                                              <p>Utilisez les API Azure Vision par ordinateur dans une application de réalité mixte pour le traitement et l’analyse des images, sans l’apprentissage d’un modèle.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -295,7 +295,7 @@ Ces didacticiels autonomes sont très utiles pour apprendre à implémenter les 
                               </a>
                             </li>
                                  <li>
-                                   <a href="mr-azure-302b.md" title="MR et 302b Azure" data-linktype="absolute-path">
+                                   <a href="mr-azure-302b.md" title="MR et Azure 302b" data-linktype="absolute-path">
                               <div class="cardSize">
                                   <div class="cardPadding">
                                       <div class="card">
@@ -305,8 +305,8 @@ Ces didacticiels autonomes sont très utiles pour apprendre à implémenter les 
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>MR et 302b Azure : Vision personnalisée</h3>
-                                              <p>Apprendre à former un modèle d’apprentissage et utiliser le modèle formé pour l’analyse et de traitement d’image.</p>
+                                              <h3>RM et Azure 302b: Vision personnalisée</h3>
+                                              <p>Apprenez à former un modèle Machine Learning et à utiliser le modèle formé pour le traitement et l’analyse des images.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -324,8 +324,8 @@ Ces didacticiels autonomes sont très utiles pour apprendre à implémenter les 
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>MR et Azure 303 : Compréhension du langage naturel</h3>
-                                              <p>Ce cours va vous apprendre à utiliser le service Azure LUIS (Language Understanding) pour ajouter la compréhension du langage naturel dans votre application de réalité mixte.</p>
+                                              <h3>MR et Azure 303: Compréhension du langage naturel</h3>
+                                              <p>Ce cours vous apprend à utiliser le service Azure Language Understanding (LUIS) pour ajouter une compréhension du langage naturel à votre application de réalité mixte.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -343,8 +343,8 @@ Ces didacticiels autonomes sont très utiles pour apprendre à implémenter les 
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>MR et Azure 304 : Reconnaissance faciale</h3>
-                                              <p>Découvrez comment utiliser l’API visage de Azure pour effectuer la détection de visage et reconnaissance dans votre application de réalité mixte.</p>
+                                              <h3>MR et Azure 304: Reconnaissance faciale</h3>
+                                              <p>Découvrez comment utiliser la API Visage Azure pour effectuer la détection et la reconnaissance des visages dans votre application de réalité mixte.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -362,8 +362,8 @@ Ces didacticiels autonomes sont très utiles pour apprendre à implémenter les 
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>MR et Azure 305 : Fonctions et stockage</h3>
-                                              <p>Dans ce cours, vous allez apprendre à créer et utiliser Azure Functions et stocker des données dans le stockage Azure, dans une application de réalité mixte.</p>
+                                              <h3>MR et Azure 305: Fonctions et stockage</h3>
+                                              <p>Dans ce cours, vous allez apprendre à créer et à utiliser des Azure Functions et à stocker des données dans le stockage Azure, au sein d’une application de réalité mixte.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -381,8 +381,8 @@ Ces didacticiels autonomes sont très utiles pour apprendre à implémenter les 
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>MR et Azure 306 : Diffusion en continu de vidéo</h3>
-                                              <p>Découvrez comment utiliser Azure Media Services pour diffuser vidéo à 360 degrés au sein d’une réalité mixte Windows expérience immersive (VR).</p>
+                                              <h3>MR et Azure 306: Diffusion vidéo en continu</h3>
+                                              <p>Découvrez comment utiliser Azure Media Services pour diffuser une vidéo de 360 degrés au sein d’une expérience immersif Windows Mixed Reality (VR).</p>
                                           </div>
                                       </div>
                                   </div>
@@ -400,8 +400,8 @@ Ces didacticiels autonomes sont très utiles pour apprendre à implémenter les 
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>MR et Azure 307 : Machine Learning</h3>
-                                              <p>Tirer parti de Azure Machine Learning Studio au sein de votre application de réalité mixte pour déployer un grand nombre d’algorithmes de machine learning (ML).</p>
+                                              <h3>MR et Azure 307: Machine Learning</h3>
+                                              <p>Tirez parti de Azure Machine Learning Studio dans votre application de réalité mixte pour déployer un grand nombre d’algorithmes de Machine Learning (ML).</p>
                                           </div>
                                       </div>
                                   </div>
@@ -419,8 +419,8 @@ Ces didacticiels autonomes sont très utiles pour apprendre à implémenter les 
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>MR et Azure 308 : Notifications entre les périphériques</h3>
-                                              <p>Dans ce cours, vous allez apprendre à utiliser plusieurs services Azure pour fournir des notifications push et nous passons à partir d’une application de PC à une application de réalité mixte.</p>
+                                              <h3>MR et Azure 308: Notifications entre appareils</h3>
+                                              <p>Dans ce cours, vous allez apprendre à utiliser plusieurs services Azure pour envoyer des notifications push et des modifications de scène d’une application PC à une application de réalité mixte.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -438,8 +438,8 @@ Ces didacticiels autonomes sont très utiles pour apprendre à implémenter les 
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>MR et Azure 309 : Insights d’application</h3>
-                                              <p>Utiliser le service Azure Application Insights pour collecter les analytique sur le comportement des utilisateurs au sein d’une application de réalité mixte.</p>
+                                              <h3>MR et Azure 309: Application Insights</h3>
+                                              <p>Utilisez le service Azure Application Insights pour collecter des analyses sur le comportement des utilisateurs au sein d’une application de réalité mixte.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -457,8 +457,8 @@ Ces didacticiels autonomes sont très utiles pour apprendre à implémenter les 
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>MR et Azure 310 : Détection d’objets</h3>
-                                              <p>Former un modèle d’apprentissage et utiliser le modèle formé pour reconnaître des objets similaires et leurs positions dans le monde physique.</p>
+                                              <h3>MR et Azure 310: Détection d’objet</h3>
+                                              <p>Former un modèle de Machine Learning et utiliser le modèle formé pour reconnaître des objets similaires et leurs positions dans le monde physique.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -476,8 +476,8 @@ Ces didacticiels autonomes sont très utiles pour apprendre à implémenter les 
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>MR et Azure 311 : Microsoft Graph</h3>
-                                              <p>Découvrez comment vous connecter à des services de Microsoft Graph à partir d’une application de réalité mixte.</p>
+                                              <h3>MR et Azure 311: Microsoft Graph</h3>
+                                              <p>Découvrez comment vous connecter à Microsoft Graph services à partir d’une application de réalité mixte.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -495,8 +495,8 @@ Ces didacticiels autonomes sont très utiles pour apprendre à implémenter les 
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>MR et Azure 312 : Intégration de robot</h3>
-                                              <p>Créer et déployer un robot à l’aide de Microsoft Bot Framework v4 et communiquer avec lui dans une application de réalité mixte.</p>
+                                              <h3>MR et Azure 312: Intégration de bot</h3>
+                                              <p>Créez et déployez un bot à l’aide de Microsoft bot Framework v4 et communiquez avec lui dans une application de réalité mixte.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -514,8 +514,8 @@ Ces didacticiels autonomes sont très utiles pour apprendre à implémenter les 
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>MR et Azure 313 : Service IoT Hub</h3>
-                                              <p>Découvrez comment implémenter un service Azure IoT Hub sur une machine virtuelle et visualiser les données sur HoloLens.</p>
+                                              <h3>MR et Azure 313: Service IoT Hub</h3>
+                                              <p>Apprenez à implémenter Azure IoT Hub service sur une machine virtuelle et à visualiser les données sur HoloLens.</p>
                                           </div>
                                       </div>
                                   </div>

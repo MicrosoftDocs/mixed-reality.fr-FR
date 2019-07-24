@@ -1,11 +1,11 @@
 ---
 title: Fonctionnalités commerciales
-description: Microsoft HoloLens Commercial Suite inclut des fonctionnalités qui le rendent plus facile pour les entreprises gérer les appareils HoloLens.  HoloLens 2 sont equipt avec des fonctionnalités commerciales par défaut.
+description: La suite commerciale Microsoft HoloLens offre des fonctionnalités qui facilitent la gestion des appareils HoloLens pour les entreprises.  HoloLens 2 est l’équipement avec les fonctionnalités commerciales par défaut.
 author: scooley
 ms.author: scooley
 ms.date: 05/23/2019
 ms.topic: article
-keywords: HoloLens, commercial et fonctionnalités, gestion des appareils mobiles, gestion des appareils mobiles, mode plein écran
+keywords: HoloLens, commercial, fonctionnalités, MDM, gestion des appareils mobiles, mode plein écran
 ms.openlocfilehash: 4da540072fd32ac99692f0a13eb5852337c493bb
 ms.sourcegitcommit: aba33a8ad1416f7598048ac35ae9ab1734bd5c37
 ms.translationtype: MT
@@ -15,36 +15,36 @@ ms.locfileid: "66270360"
 ---
 # <a name="commercial-features"></a>Fonctionnalités commerciales
 
-Microsoft HoloLens Commercial Suite inclut des fonctionnalités qui le rendent plus facile pour les entreprises gérer les appareils HoloLens.
+La suite commerciale Microsoft HoloLens offre des fonctionnalités qui facilitent la gestion des appareils HoloLens pour les entreprises.
 
-HoloLens fournie avec deux options de licences, la licence de développeur et une licence commerciale.  Mettre à niveau le liense développeur vers une licence commerciale pour déverrouiller capabilitis commercial de HoloLens.  Contactez votre responsable de compte Microsoft pour acheter Microsoft HoloLens Commercial Suite.
+HoloLens est fourni avec deux options de licence, la licence de développeur et une licence commerciale.  Mise à niveau de la licence du développeur vers une licence commerciale pour déverrouiller les capabilitis commerciales de l’HoloLens.  Contactez votre gestionnaire de compte Microsoft local pour acheter la suite commerciale Microsoft HoloLens.
 
-**Nouveautés de HoloLens 2** -2 HoloLens tous les sont fournis avec des fonctionnalités commerciales disponibles sur chaque appareil.
+Les **Nouveautés de hololens 2** -hololens 2 sont toutes fournies avec des fonctionnalités commerciales disponibles sur chaque appareil.
 
 >[!VIDEO https://www.youtube.com/embed/tNd0e2CiAkE]
 
-## <a name="key-commercial-features"></a>Fonctionnalités commerciales clées
+## <a name="key-commercial-features"></a>Principales fonctionnalités commerciales
 
-* **Mode plein écran.** Avec le mode plein écran HoloLens, vous pouvez limiter les applications à exécuter pour permettre des expériences de démonstration ou de présentation.
+* **Mode plein écran.** Avec le mode plein écran HoloLens, vous pouvez limiter les applications à exécuter pour activer les expériences de démonstration ou de démonstration.
 
-  ![Avec le mode plein écran, HoloLens lance directement dans l’application de votre choix.](images/201608-kioskmode-400px.png)
+  ![Avec le mode plein écran, HoloLens démarre directement dans l’application de votre choix.](images/201608-kioskmode-400px.png)
 
 * **Gestion des appareils mobiles (MDM) pour HoloLens.** Votre service informatique peut gérer plusieurs appareils HoloLens simultanément à l’aide de solutions telles que Microsoft Intune. Vous serez en mesure de gérer les paramètres, de sélectionner les applications à installer et de définir les configurations de sécurité adaptées aux besoins de votre entreprise.
 
-  ![Gestion des appareils mobiles sur HoloLens fournit la gestion des appareils grade enterprise sur plusieurs appareils.](images/201608-enterprisemanagement-400px.png)
+  ![La gestion des appareils mobiles sur HoloLens fournit une gestion des appareils de niveau entreprise sur plusieurs appareils.](images/201608-enterprisemanagement-400px.png)
    
-* **Mise à jour de Windows pour les entreprises.** Contrôler les mises à jour du système d’exploitation sur des appareils et de prise en charge pour long-term servicing branch.
-* **Sécurité des données.** Le chiffrement de données BitLocker est activé sur HoloLens pour fournir le même niveau de protection de sécurité comme tout autre périphérique de Windows.
-* **Accès Professionnel.** Toute personne de votre organisation peut se connecter à distance au réseau d’entreprise via un réseau privé virtuel sur un HoloLens. HoloLens peut accéder également à des réseaux Wi-Fi qui nécessitent des informations d’identification.
-* **Microsoft Store pour entreprises.** Votre service informatique peut également configurer un magasin privé d’entreprise, contenant uniquement des applications de votre entreprise pour votre utilisation de HoloLens spécifiques. Distribuer en toute sécurité vos logiciels d’entreprise à un groupe sélectionné d’utilisateurs en entreprise.
+* **Windows Update pour les entreprises.** Mises à jour contrôlées du système d’exploitation sur les appareils et prise en charge de la branche de maintenance à long terme.
+* **Sécurité des données.** BitLocker Data Encryption est activé sur HoloLens pour fournir le même niveau de protection de sécurité qu’un autre appareil Windows.
+* **Accès professionnel.** Toute personne de votre organisation peut se connecter à distance au réseau d’entreprise via un réseau privé virtuel sur un HoloLens. HoloLens peut également accéder aux réseaux Wi-Fi qui requièrent des informations d’identification.
+* **Microsoft Store pour les entreprises.** Votre service informatique peut également configurer un magasin privé d’entreprise, contenant uniquement les applications de votre entreprise pour votre utilisation HoloLens spécifique. Distribuez en toute sécurité vos logiciels d’entreprise au groupe sélectionné d’utilisateurs d’entreprise.
 
-## <a name="development-edition-vs-commercial-suite"></a>Édition de développement Visual Studio. Commercial Suite
+## <a name="development-edition-vs-commercial-suite"></a>Édition Development et Suite commerciale
 
 <table>
 <tr>
-<th>Fonctionnalités</th><th>HoloLens Development Edition</th><th>HoloLens Commercial Suite</th><th>HoloLens 2</th>
+<th>Fonctionnalités</th><th>Édition du développement HoloLens</th><th>HoloLens Commercial Suite</th><th>HoloLens 2</th>
 </tr><tr>
-<td>Chiffrement (Bitlocker) de l’appareil</td><td></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
+<td>Chiffrement de l’appareil (BitLocker)</td><td></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
 </tr><tr>
 <td>Réseau privé virtuel (VPN)</td><td></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
 </tr><tr>
@@ -56,27 +56,27 @@ HoloLens fournie avec deux options de licences, la licence de développeur et un
 </tr><tr>
 <td>Possibilité de bloquer l’annulation de l’inscription</td><td></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
 </tr><tr>
-<td>Certificat en fonction d’accès Wi-Fi d’entreprise</td><td></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
+<td>Accès Wi-Fi d’entreprise basé sur un certificat</td><td></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
 </tr><tr>
-<td>Microsoft Store (consommateur)</td><td style="text-align: center;">Consommateur</td><td style="text-align: center;">Filtrage par le biais de gestion des appareils mobiles</td><td style="text-align: center;">Filtrage par le biais de gestion des appareils mobiles</td>
+<td>Microsoft Store (consommateur)</td><td style="text-align: center;">Télévision</td><td style="text-align: center;">Filtrage via MDM</td><td style="text-align: center;">Filtrage via MDM</td>
 </tr><tr>
-<td><a href="https://technet.microsoft.com/itpro/windows/manage/working-with-line-of-business-apps">Portail d’entreprise Store</a></td><td></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
+<td><a href="https://technet.microsoft.com/itpro/windows/manage/working-with-line-of-business-apps">Portail Business Store</a></td><td></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
 </tr><tr>
 <th colspan="3" style="text-align: left;"> Sécurité et identité</th>
 </tr><tr>
-<td>Connexion avec Azure Active Directory (AAD)</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
+<td>Se connecter avec Azure Active Directory (AAD)</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
 </tr><tr>
-<td>Connectez-vous avec le compte Microsoft (MSA)</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
+<td>Se connecter avec un compte Microsoft (MSA)</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
 </tr><tr>
-<td>Déverrouiller des informations d’identification de prochaine génération avec code PIN</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
+<td>Informations d’identification de prochaine génération avec déverrouillage du code confidentiel</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
 </tr><tr>
 <td><a href="https://msdn.microsoft.com/windows/hardware/commercialize/manufacture/desktop/secure-boot-overview">Démarrage sécurisé</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
 </tr><tr>
-<th colspan="3" style="text-align: left;"> Prise en charge et de maintenance</th>
+<th colspan="3" style="text-align: left;"> Maintenance et support</th>
 </tr><tr>
-<td>Système automatique des mises à jour dès leur arrivée</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
+<td>Mises à jour automatiques du système au fur et à mesure de leur arrivée</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
 </tr><tr>
-<td><a href="https://technet.microsoft.com/itpro/windows/plan/windows-update-for-business">Mise à jour de Windows pour les entreprises</a></td><td></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
+<td><a href="https://technet.microsoft.com/itpro/windows/plan/windows-update-for-business">Windows Update pour les entreprises</a></td><td></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
 </tr><tr>
 <td>Branche de maintenance à long terme</td><td></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
 </tr>
@@ -84,13 +84,13 @@ HoloLens fournie avec deux options de licences, la licence de développeur et un
 
 
 
-## <a name="enabling-commercial-features"></a>L’activation des fonctionnalités commerciales
+## <a name="enabling-commercial-features"></a>Activation des fonctionnalités commerciales
 
-Fonctionnalités commerciales telles que Microsoft Store pour entreprises, mode plein écran, et d’accès Wi-Fi d’entreprise sont configurés par une organisation administrateur informatique. Le [centre informatique de Windows pour HoloLens](https://docs.microsoft.com/hololens) fournit des instructions étape par étape pour l’inscription d’appareils et d’installation d’applications Microsoft Store pour entreprises.
+Les fonctionnalités commerciales comme les Microsoft Store pour les entreprises, le mode plein écran et l’accès Wi-Fi d’entreprise sont configurées par l’administrateur informatique d’une organisation. Le [Centre informatique Windows pour HoloLens](https://docs.microsoft.com/hololens) fournit des instructions pas à pas pour l’inscription d’appareils et l’installation d’applications à partir de Microsoft Store pour l’entreprise.
 
 ## <a name="see-also"></a>Voir aussi
-* [IT Pro Guide pour HoloLens](https://technet.microsoft.com/itpro/hololens/index)
+* [Guide du professionnel de l’informatique pour HoloLens](https://technet.microsoft.com/itpro/hololens/index)
 * [Mode plein écran](using-the-windows-device-portal.md#kiosk-mode)
-* [Fournisseurs pris en charge dans Windows HOLOGRAPHIQUE pour entreprises](https://msdn.microsoft.com/library/windows/hardware/dn920025(v=vs.85).aspx#HoloLens)
-* [Microsoft Store pour entreprises et applications métier](https://blogs.technet.microsoft.com/sbucci/2016/04/13/windows-store-for-business-and-line-of-business-applications/)
-* [Travailler avec des applications line-of-business](https://technet.microsoft.com/itpro/windows/manage/working-with-line-of-business-apps)
+* [Fournisseurs de services de chiffrement pris en charge dans Windows holographique pour entreprises](https://msdn.microsoft.com/library/windows/hardware/dn920025(v=vs.85).aspx#HoloLens)
+* [Microsoft Store pour les applications métier et sectorielles](https://blogs.technet.microsoft.com/sbucci/2016/04/13/windows-store-for-business-and-line-of-business-applications/)
+* [Utilisation d’applications métier](https://technet.microsoft.com/itpro/windows/manage/working-with-line-of-business-apps)

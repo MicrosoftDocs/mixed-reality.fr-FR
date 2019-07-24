@@ -5,52 +5,52 @@ author: ''
 ms.author: toddly
 ms.date: 03/21/2018
 ms.topic: article
-keywords: HoloLens, utilisateur, compte, aad, adfs, compte microsoft, msa, informations d’identification
+keywords: HoloLens, utilisateur, compte, AAD, ADFS, compte Microsoft, MSA, informations d’identification
 ms.openlocfilehash: 14f43b08b6ccb396bcf39c4082c840c65ac78cf9
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59594158"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63516816"
 ---
 # <a name="accounts-on-hololens"></a>Comptes sur HoloLens
 
-Pendant l’installation de HoloLens initiale, les utilisateurs doivent se connecter avec le compte qu’ils souhaitent utiliser sur l’appareil. Ce compte peut être un compte Microsoft de consommateur ou un compte d’entreprise qui a été configuré dans Azure Active Directory (AAD) ou Active Directory Federation Services (ADFS).
+Lors de la configuration de HoloLens initiale, les utilisateurs doivent se connecter avec le compte qu’ils souhaitent utiliser sur l’appareil. Ce compte peut être un client compte Microsoft ou un compte d’entreprise configuré dans Azure Active Directory (AAD) ou Services ADFS (ADFS).
 
-Connexion à ce compte lors de l’installation crée un profil utilisateur sur l’appareil sur lequel l’utilisateur peut utiliser pour se connecter, et contre les toutes les applications doivent stocker leurs données. Ce même compte fournit également l’authentification unique pour les applications telles que Edge ou Skype via les API du Gestionnaire de compte Windows.
+La connexion à ce compte pendant l’installation crée un profil utilisateur sur l’appareil que l’utilisateur peut utiliser pour se connecter, et pour lequel toutes les applications stockent leurs données. Ce même compte fournit également une authentification unique pour les applications telles que Edge ou Skype via les API du gestionnaire de comptes Windows.
 
-En outre, lorsque vous vous connectez à une entreprise ou d’un compte professionnel sur l’appareil, il peut-être également s’appliquer stratégie de gestion des appareils mobiles (MDM), si configuré par votre administrateur informatique.
+En outre, lorsque vous vous connectez à un compte d’entreprise ou d’entreprise sur l’appareil, il peut également appliquer la stratégie de gestion des appareils mobiles (MDM), si elle est configurée par votre administrateur informatique.
 
-Chaque fois que l’appareil redémarre ou sort de veille, les informations d’identification pour ce compte sont utilisées pour se connecter à nouveau. Si l’option appliquer une connexion à explicite est activée dans les paramètres, l’utilisateur devra saisir à nouveau leurs informations d’identification. Chaque fois que l’appareil redémarre après réception et en appliquant une mise à jour du système d’exploitation, un signe additionnel explicit est nécessaire.
+Chaque fois que le périphérique redémarre ou reprend à partir de la veille, les informations d’identification de ce compte sont utilisées pour se connecter à nouveau. Si l’option permettant d’appliquer une connexion explicite est activée dans les paramètres, l’utilisateur sera obligé de taper à nouveau ses informations d’identification. Chaque fois que l’appareil redémarre après la réception et l’application d’une mise à jour du système d’exploitation, une connexion explicite est requise.
 
 ## <a name="multi-user-support"></a>Prise en charge multi-utilisateur
 
 >[!NOTE]
->Prise en charge multi-utilisateur nécessite Commercial Suite, comme il s’agit d’un [Windows Holographic for Business](https://docs.microsoft.com/hololens/hololens-upgrade-enterprise) fonctionnalité.
+>La prise en charge de plusieurs utilisateurs requiert la suite commerciale, car il s’agit d’une fonctionnalité [Windows holographique for Business](https://docs.microsoft.com/hololens/hololens-upgrade-enterprise) .
 
-En commençant par le [mettre à jour du 10 avril 2018 Windows](release-notes-april-2018.md), HoloLens prend en charge plusieurs utilisateurs au sein du même client AAD. Pour l’utiliser, vous devez configurer l’appareil initialement avec un compte qui appartient à votre organisation. Par la suite, les autres utilisateurs à partir du même client sera en mesure de se connecter à l’appareil à partir de l’écran de connexion ou en appuyant sur la vignette de l’utilisateur sur le panneau de démarrage pour déconnecter l’utilisateur existant. 
+À compter de la [mise à jour 2018 de Windows 10 avril](release-notes-april-2018.md), HoloLens prend en charge plusieurs utilisateurs au sein du même locataire AAD. Pour ce faire, vous devez d’abord configurer l’appareil à l’aide d’un compte qui appartient à votre organisation. Par la suite, les autres utilisateurs du même locataire pourront se connecter à l’appareil à partir de l’écran de connexion ou en appuyant sur la vignette de l’utilisateur dans le panneau Démarrer pour déconnecter l’utilisateur existant. 
 
-Applications installées sur l’appareil sera disponibles pour tous les autres utilisateurs, mais chacune aura leurs propres données d’application et les préférences. Suppression d’une application supprimera également il pour tous les autres utilisateurs cependant. 
+Les applications installées sur l’appareil seront disponibles pour tous les autres utilisateurs, mais chacune aura leurs propres données et préférences d’application. Si vous supprimez une application, elle est également supprimée pour tous les autres utilisateurs. 
 
-Vous pouvez supprimer les utilisateurs d’appareils à partir de l’appareil à récupérer de l’espace en cliquant sur Paramètres > comptes > autres personnes. Cela supprime également toutes les données d’application les autres utilisateurs à partir de l’appareil. 
+Vous pouvez supprimer des utilisateurs d’appareils de l’appareil pour récupérer de l’espace en accédant à paramètres > comptes > autres personnes. Cette opération supprime également toutes les données d’application des autres utilisateurs de l’appareil. 
 
 ## <a name="linked-accounts"></a>Comptes liés
 
-Dans un compte d’appareil unique, les utilisateurs peuvent lier des informations d’identification du compte de serveur web supplémentaire pour les besoins de l’accès plus facile au sein des applications (par exemple, le Store) ou pour combiner l’accès aux ressources des données personnelles et professionnelles, similaires à la version bureau de Windows. Connexion à un compte supplémentaire de cette façon ne sépare pas les données utilisateur créées sur l’appareil, telles que des images ou les téléchargements. Une fois qu’un compte a été connecté à un appareil, les applications puissent effectuer utiliser avec votre autorisation pour réduire d’avoir à se connecter individuellement à chaque application.
+Dans un compte d’appareil unique, les utilisateurs peuvent lier des informations d’identification de compte Web supplémentaires pour faciliter l’accès au sein des applications (par exemple, le Store) ou associer l’accès à des ressources personnelles et professionnelles, comme la version de bureau de Windows. La connexion à un compte supplémentaire de cette manière ne sépare pas les données utilisateur créées sur l’appareil, telles que les images ou les téléchargements. Une fois qu’un compte a été connecté à un appareil, les applications peuvent l’utiliser avec votre autorisation afin de réduire la connexion individuelle à chaque application.
 
-## <a name="using-single-sign-on-within-an-app"></a>À l’aide de l’authentification unique au sein d’une application
+## <a name="using-single-sign-on-within-an-app"></a>Utilisation de l’authentification unique dans une application
 
-En tant que développeur d’applications, vous pouvez tirer parti d’avoir une identité connecté sur HoloLens avec la [responsable de compte Windows API](https://msdn.microsoft.com/library/windows/apps/xaml/windows.security.authentication.web.core.aspx), tout comme vous le feriez sur d’autres appareils Windows. Des exemples de code de ces API sont disponibles [ici](http://go.microsoft.com/fwlink/p/?LinkId=620621).
+En tant que développeur d’applications, vous pouvez tirer parti d’une identité connectée à HoloLens avec les [API du gestionnaire de compte Windows](https://msdn.microsoft.com/library/windows/apps/xaml/windows.security.authentication.web.core.aspx), comme vous le feriez sur d’autres appareils Windows. Des exemples de code pour ces API sont disponibles [ici](http://go.microsoft.com/fwlink/p/?LinkId=620621).
 
-Les interruptions de compte qui peuvent se produire telles que l’utilisateur demande de consentement pour les informations de compte, l’authentification à deux facteurs etc. doit être traitée lorsque l’application demande un jeton d’authentification.
+Les interruptions de compte qui peuvent se produire, telles que la demande de consentement de l’utilisateur pour les informations de compte, l’authentification à deux facteurs, etc., doivent être gérées lorsque l’application demande un jeton d’authentification.
 
-Si votre application nécessite un type de compte spécifique n’a pas été lié précédemment, votre application peut demandons au système d’inviter l’utilisateur à ajouter un. Cette opération déclenche le volet de paramètres de compte à utiliser comme un enfant modal de votre application. Pour les applications 2D, cette fenêtre s’affiche directement via le centre de votre application et pour les applications Unity, cela prendra brièvement l’utilisateur de votre application HOLOGRAPHIQUE afin que cette fenêtre enfant peut être rendue. Personnalisation des commandes et des actions sur ce volet est décrite [ici](https://msdn.microsoft.com/library/windows/apps/windows.ui.applicationsettings.webaccountcommand.aspx).
+Si votre application nécessite un type de compte spécifique qui n’a pas été lié précédemment, votre application peut demander au système d’inviter l’utilisateur à en ajouter une. Le volet Paramètres du compte sera alors lancé comme un enfant modal de votre application. Pour les applications 2D, cette fenêtre est restituée directement au centre de votre application et pour les applications Unity, l’utilisateur est extrait brièvement de votre application holographique afin que cette fenêtre enfant puisse être rendue. La personnalisation des commandes et des actions sur ce volet est décrite [ici](https://msdn.microsoft.com/library/windows/apps/windows.ui.applicationsettings.webaccountcommand.aspx).
 
-## <a name="enterprise-and-other-authentication"></a>Enterprise et autres d’authentification
+## <a name="enterprise-and-other-authentication"></a>Authentification d’entreprise et autres
 
-Si votre application effectue utiliser d’autres types d’authentification, tels que NTLM, Basic ou Kerberos, vous pouvez utiliser [l’interface utilisateur des informations d’identification Windows](https://msdn.microsoft.com/library/windows/apps/windows.security.credentials.ui.aspx) pour collecter, traiter et stocker des informations d’identification de l’utilisateur. L’expérience utilisateur pour la collecte de ces informations d’identification est très similaire à d’autres cloud piloté par les interruptions de compte et apparaissent sous la forme d’une application enfant sur votre application 2D ou brièvement suspendre une application Unity pour afficher l’interface utilisateur.
+Si votre application utilise d’autres types d’authentification, tels que NTLM, de base ou Kerberos, vous pouvez utiliser l' [interface utilisateur des informations d’identification Windows](https://msdn.microsoft.com/library/windows/apps/windows.security.credentials.ui.aspx) pour collecter, traiter et stocker les informations d’identification de l’utilisateur. L’expérience utilisateur pour la collecte de ces informations d’identification est très similaire à celle d’autres interruptions de compte pilotées par le Cloud. elle apparaîtra en tant qu’application enfant sur votre application 2D ou suspendra brièvement une application Unity pour afficher l’interface utilisateur.
 
 ## <a name="deprecated-apis"></a>API déconseillées
 
-Une différence pour le développement sur HoloLens de bureau est que [OnlineIDAuthenticator](https://msdn.microsoft.com/library/windows/apps/windows.security.authentication.onlineid.onlineidauthenticator.aspx) API n’est pas entièrement pris en charge. Bien qu’elle retournera qu'un jeton si le compte principal est en bonne autonome, interrompt tels que ceux décrits ci-dessus n’affichera pas d’interface utilisateur pour l’utilisateur et échouent à s’authentifier correctement le compte.
+L’une des différences de développement sur HoloLens à partir du Bureau est que l’API [OnlineIDAuthenticator](https://msdn.microsoft.com/library/windows/apps/windows.security.authentication.onlineid.onlineidauthenticator.aspx) n’est pas entièrement prise en charge. Bien qu’elle retourne un jeton si le compte principal est en bonne position, les interruptions telles que celles décrites ci-dessus n’affichent pas d’interface utilisateur pour l’utilisateur et ne parviennent pas à authentifier correctement le compte.
 

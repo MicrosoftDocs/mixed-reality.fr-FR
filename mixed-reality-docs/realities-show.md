@@ -1,41 +1,41 @@
 ---
-title: Calendrier d’événements SF réacteur Academy
-description: Calendrier d’événements de développeur de réalité mixte à du réacteur à San Francisco.
+title: Calendrier des événements de l’Académie du reacteur SF
+description: Calendrier des événements de développeurs de réalité mixte au niveau du réacteur à San Francisco.
 author: danielescudero
 ms.author: daescu
 ms.date: 04/06/2019
 ms.topic: article
-keywords: Réalités, afficher, calendrier, academy, planification, df, san francisco, réacteur
-ms.openlocfilehash: 0387f7871361db2eecca9738ac301e6a87b16670
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+keywords: Réalités, Show, calendrier, Academy, Schedule, DF, San Francisco, réacteur
+ms.openlocfilehash: 462d4fbb8a6aaf1ee643a6fa1f0f4ed04c0cefed
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59595662"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63524750"
 ---
-# <a name="the-realities-show"></a>Le réalités Show
+# <a name="the-realities-show"></a>Les réalités montrent
 ![Conception pour la réalité mixte](images/therealitiesshow.jpg)
 
-**Afficher les réalités est une diffusion en continu mensuel de 30 minutes sur les technologies HoloLens 2, les Services de réalité mixte et MR. Dans chaque épisode, que nous nous plongerons dans les fonctionnalités, les fonctionnalités, les technologies derrière lui, comment développer pour les différents appareils, recommandons les meilleures pratiques et bien sûr de répondre aux questions à partir de notre public. Diffusé en continu pour les développeurs du monde entier à partir de notre programme d’installation de phase réacteur de San Francisco comme un environnement salon (et parfois d’autres sites).**
+**L’affichage des réalités est une diffusion en continu de 30 minutes sur HoloLens 2, les services de réalité mixte et les technologies MR. Dans chaque épisode, nous nous pencherons sur les fonctionnalités, les fonctionnalités, la technique du service informatique, sur la façon de développer pour les différents appareils, recommander les meilleures pratiques et, bien sûr, répondre aux questions de notre public. Transmis aux développeurs du monde entier à partir de notre configuration de la phase du réacteur San Francisco en tant qu’environnement de salon (et occasionnellement à partir d’autres sites).**
 
-<a name="watch-live-and-past-episodes-herehttpakamstrs"></a>**[Regarder en direct et passées des épisodes ici](http://aka.ms/trs)**
+<a name="watch-live-and-past-episodes-herehttpakamstrs"></a>**[Regardez les épisodes en direct et les épisodes précédents ici](http://aka.ms/trs)**
 ---
 
-## <a name="hololens-2-and-mixed-reality-services---march-12-2019-8-am-pdt"></a>**Services de réalité mixte et 2 HoloLens** : le 12 mars 2019, 8 h 00 (heure du Pacifique)
-Le premier épisode de The réalités Show vise essentiellement HoloLens 2 et les Services de réalité mixte. Nous allons parler les principales fonctionnalités, la vision derrière lui, le nouveau modèle d’interaction et super pouvoirs du cloud !
+## <a name="hololens-2-and-mixed-reality-services---march-12-2019-8-am-pdt"></a>**Services HoloLens 2 et de réalité mixte** -12 mars, 2019, 8 heures (PDT)
+Le premier épisode de la réalité s’affiche: à propos des services HoloLens 2 et de la réalité mixte. Nous allons parler des principales fonctionnalités, de la vision qui en est à l’appui, du nouveau modèle d’interaction et des superalimentations du Cloud.
 
 ---
 This episode is all about Human Understanding: 'near interactions, far interactions, eye-tracking and voice.'
 ---
-## <a name="world-understanding---may-10-2019-8-am-pdt"></a>**Compréhension du monde** : 10 mai 2019, 8 h 00 (heure du Pacifique)
-Comment intelligent leveredge de périphériques de périmètre calcul du cloud power pour comprendre le monde. Vision notamment HoloLens 2, ordinateur, Service de partage de point d’ancrage, d’étiquetage sémantique et de Azure Kinect DK.
+## <a name="world-understanding---coming-soon"></a>**Compréhension mondiale** -bientôt disponible
+Comment les appareils de périphérie intelligent leveredgeent la puissance de calcul du Cloud pour comprendre le monde. Y compris HoloLens 2, vision par ordinateur, service d’ancrage partagé, étiquetage sémantique et Azure Kinect DK.
 
 ---
-## <a name="mixedrealitytoolkit---may-29-2019-8-am-pdt"></a>**MixedRealityToolkit** - 29 mai 2019, 8 h 00 (heure du Pacifique)
-MixedRealityToolkit (MRTK) fournit un ensemble de fonctionnalités pour accélérer le développement d’applications MR et les composants fondamentaux. La dernière version de MRTK-Unity (V2) prend en charge les plateformes 2 de HoloLens/HoloLens, réalité mixte Windows et OpenVR. Prenons une présentation approfondie avec les endineers et les concepteurs derrière lui.
+## <a name="mixedrealitytoolkit---coming-soon"></a>**MixedRealityToolkit** -bientôt disponible
+Le MixedRealityToolkit (MRTK) fournit un ensemble de composants et fonctionnalités fondamentaux pour accélérer le développement d’applications RM. La dernière version de MRTK-Unity (v2) prend en charge les plateformes HoloLens/HoloLens 2, Windows Mixed Reality et OpenVR. Commençons par une présentation approfondie des endineers et des concepteurs en arrière-plan.
 
 ---
-## <a name="designing-for-hololens-2---june-17-2019-8-am-pdt"></a>**Conception pour HoloLens 2** - 17 juin 2019, 8 h 00 (heure du Pacifique)
-Le défi le plus important dans le développement de réalité mixte est créé pour celui-ci. Il est donc de nouveau, donc sans écran et tellement réelle, que conception traditionnelle n’applique pas nécessairement. Jetons un œil à la conception pour HoloLens 2 et découvrez les outils de conception que le MixedRealityToolkit nous donne.
+## <a name="designing-for-hololens-2---coming-soon"></a>**Conception pour HoloLens 2** -bientôt disponible
+Le défi le plus important dans le développement de la réalité mixte est la conception. C’est tellement nouveau, donc moins d’écran, donc réel, que la conception traditionnelle ne s’applique pas nécessairement. Jetons un coup d’œil sur la conception de l’outil HoloLens 2 et découvrez les outils de conception que le MixedRealityToolkit nous apporte.
 
 

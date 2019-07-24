@@ -1,39 +1,39 @@
 ---
-title: Transferts d’ancrage local dans DirectX
-description: Explique comment synchroniser deux appareils HoloLens en transférant les ancres spatiales.
+title: Transferts d’ancrage locaux dans DirectX
+description: Explique comment synchroniser deux appareils HoloLens en transférant des ancres spatiales.
 author: MikeRiches
 ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
-keywords: HoloLens, synchroniser, ancre spatiale, transfert, mode multijoueur, afficher, scénario, procédure pas à pas, exemple de code, transfert, transfert de local d’ancrage, exportation de point d’ancrage, importation de point d’ancrage
+keywords: HoloLens, synchroniser, ancrage spatial, transfert, multijoueur, vue, scénario, procédure pas à pas, exemple de code, transfert, transfert d’ancrage local, exportation d’ancrage, importation d’ancrage
 ms.openlocfilehash: 5d03f4bfa764b9948ec4718bce86127cfcc3e303
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59597112"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63515450"
 ---
-# <a name="local-anchor-transfers-in-directx"></a>Transferts d’ancrage local dans DirectX
+# <a name="local-anchor-transfers-in-directx"></a>Transferts d’ancrage locaux dans DirectX
 
-Dans les situations où vous ne pouvez pas utiliser <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">ancres Spatial Azure</a>, les transferts d’ancrage local activer un appareil HoloLens exporter un point d’ancrage doivent être importées par un deuxième appareil HoloLens.
-
->[!NOTE]
->Les transferts d’ancrage local fournissent moins fiable rappel d’ancrage que <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">ancres Spatial Azure</a>, et les appareils iOS et Android ne sont pas pris en charge par cette approche.
+Dans les situations où vous ne pouvez pas utiliser les <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">ancres spatiales Azure</a>, les transferts d’ancrage locaux permettent à un appareil hololens d’exporter une ancre à importer par un deuxième appareil hololens.
 
 >[!NOTE]
->Actuellement les extraits de code dans cet article illustrent l’utilisation de C++/CX plutôt que C ++ 17-conformes C++/WinRT tel qu’utilisé dans le [ C++ modèle de projet HOLOGRAPHIQUE](creating-a-holographic-directx-project.md).  Les concepts sont équivalentes pour un C++/WinRT de projet, même si vous devez traduire le code.
+>Les transferts d’ancrage locaux fournissent un rappel d’ancrage moins fiable que les <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">ancres spatiales Azure</a>, et les appareils iOS et Android ne sont pas pris en charge par cette approche.
+
+>[!NOTE]
+>Les extraits de code de cet article illustrent actuellement l' C++utilisation de/CX plutôt que de C++/WinRT conforme C + +17, comme utilisé dans le [ C++ modèle de projet holographique](creating-a-holographic-directx-project.md).  Les concepts sont équivalents pour C++un projet/WinRT, bien que vous deviez traduire le code.
 
 ## <a name="transferring-spatial-anchors"></a>Transfert des ancres spatiales
 
-Vous pouvez transférer des ancres spatiales entre les appareils de réalité mixte Windows à l’aide de la [SpatialAnchorTransferManager](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchortransfermanager.aspx). Cette API vous permet de regrouper un point d’ancrage avec toutes les données de capteur de prise en charge nécessaires pour rechercher cet emplacement exact dans le monde et ensuite importer cette offre groupée sur un autre appareil. Une fois que l’application sur le deuxième a importé ce point d’ancrage, chaque application peut rendre hologrammes à l’aide qui partagé du système de coordonnées spatiales de l’ancre, qui apparaîtra au même endroit dans le monde réel.
+Vous pouvez transférer des ancres spatiales entre des appareils Windows Mixed Reality à l’aide de [SpatialAnchorTransferManager](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchortransfermanager.aspx). Cette API vous permet de regrouper une ancre avec toutes les données de capteur de prise en charge nécessaires pour trouver cet emplacement exact dans le monde, puis d’importer cette offre groupée sur un autre appareil. Une fois que l’application sur le deuxième appareil a importé cette ancre, chaque application peut restituer des hologrammes à l’aide du système de coordonnées de cette ancre spatiale partagée, qui apparaît alors au même endroit dans le monde réel.
 
-Notez que les ancres spatiales ne sont pas en mesure de transférer entre différents types d’appareil, par exemple un point d’ancrage spatial HoloLens est peut-être pas localisable à l’aide d’un casque immersif.  Également les ancres transférées ne sont pas compatibles avec les appareils iOS ou Android.
+Notez que les ancres spatiales ne peuvent pas être transférées entre différents types d’appareils, par exemple une ancre spatiale HoloLens peut ne pas être localisable à l’aide d’un casque immersif.  Les ancres transférées ne sont pas non plus compatibles avec les appareils iOS ou Android.
 
 ## <a name="set-up-your-app-to-use-the-spatialperception-capability"></a>Configurer votre application pour utiliser la fonctionnalité spatialPerception
 
-Votre application doit être autorisée à utiliser la fonctionnalité de spatialPerception avant qu’il puisse utiliser le [SpatialAnchorTransferManager](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchortransfermanager.aspx). Cela est nécessaire, car transfert d’un point d’ancrage spatial concerne le partage des images de capteur collectées au fil du temps à proximité de ce point d’ancrage, ce qui peut inclure des informations sensibles.
+Pour pouvoir utiliser le [SpatialAnchorTransferManager](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchortransfermanager.aspx), votre application doit avoir l’autorisation d’utiliser la fonctionnalité spatialPerception. Cela est nécessaire, car le transfert d’une ancre spatiale implique le partage d’images de capteur collectées au fil du temps à proximité de cette ancre, qui peut inclure des informations sensibles.
 
-Déclarez cette fonctionnalité dans le fichier package.appxmanifest pour votre application. Voici un exemple :
+Déclarez cette fonctionnalité dans le fichier Package. appxmanifest pour votre application. Voici un exemple :
 
 ```
 <Capabilities>
@@ -41,7 +41,7 @@ Déclarez cette fonctionnalité dans le fichier package.appxmanifest pour votre 
 </Capabilities>
 ```
 
-La fonctionnalité provient de la **uap2** espace de noms. Pour accéder à cet espace de noms dans votre manifeste, inclure un *xlmns* d’attribut dans le &lt;Package > élément. Voici un exemple :
+La fonctionnalité provient de l’espace de noms **UAP2** . Pour accéder à cet espace de noms dans votre manifeste, incluez-  le en tant qu' &lt;attribut xlmns dans l’élément > du package. Voici un exemple :
 
 ```
 <Package
@@ -53,11 +53,11 @@ La fonctionnalité provient de la **uap2** espace de noms. Pour accéder à cet 
     >
 ```
 
-**REMARQUE :** Votre application a besoin demander la fonctionnalité au runtime qu’il puisse accéder SpatialAnchor exportation/importation API. Consultez [RequestAccessAsync](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchortransfermanager.requestaccessasync.aspx) dans les exemples ci-dessous.
+**REMARQUE :** Votre application devra demander la fonctionnalité au moment de l’exécution avant de pouvoir accéder aux API d’exportation/importation SpatialAnchor. Consultez [RequestAccessAsync](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchortransfermanager.requestaccessasync.aspx) dans les exemples ci-dessous.
 
-## <a name="serialize-anchor-data-by-exporting-it-with-the-spatialanchortransfermanager"></a>Sérialiser les données de point d’ancrage en les exportant avec la SpatialAnchorTransferManager
+## <a name="serialize-anchor-data-by-exporting-it-with-the-spatialanchortransfermanager"></a>Sérialisez les données d’ancrage en les exportant avec SpatialAnchorTransferManager
 
-Une fonction d’assistance est incluse dans l’exemple de code pour exporter (sérialiser) [SpatialAnchor](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchor.aspx) données. Cette API d’exportation sérialise tous les points d’ancrage dans une collection de paires clé-valeur associant des chaînes avec des points d’ancrage.
+Une fonction d’assistance est incluse dans l’exemple de code pour exporter (sérialiser) des données [SpatialAnchor](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchor.aspx) . Cette API d’exportation sérialise toutes les ancres dans une collection de paires clé-valeur associant des chaînes à des points d’ancrage.
 
 ```
 // ExportAnchorDataAsync: Exports a byte buffer containing all of the anchors in the given collection.
@@ -72,7 +72,7 @@ task<bool> SpatialAnchorImportExportHelper::ExportAnchorDataAsync(
 {
 ```
 
-Tout d’abord, nous devons configurer le flux de données. Cela nous permettra à 1.) Utilisez TryExportAnchorsAsync pour placer les données dans une mémoire tampon détenue par l’application et 2). lire les données à partir du flux de mémoire tampon d’octets exporté, qui est un flux de données WinRT - dans notre propre mémoire tampon, qui est un std::vector&lt;octets >.
+Tout d’abord, nous devons configurer le flux de données. Cela nous permettra de 1.) Utilisez TryExportAnchorsAsync pour placer les données dans une mémoire tampon appartenant à l’application, et 2.) lire les données du flux de mémoire tampon d’octets exporté, qui est un flux de données WinRT-dans notre propre mémoire tampon, qui est un&lt;> d’octets std:: Vector.
 
 ```
 // Create a random access stream to process the anchor byte data.
@@ -81,7 +81,7 @@ InMemoryRandomAccessStream^ stream = ref new InMemoryRandomAccessStream();
 IOutputStream^ outputStream = stream->GetOutputStreamAt(0);
 ```
 
-Nous avons besoin de demander l’autorisation d’accéder aux données spatiales, y compris les points d’ancrage qui sont exportés par le système.
+Nous devons demander l’autorisation d’accéder aux données spatiales, y compris les ancres exportées par le système.
 
 ```
 // Request access to spatial data.
@@ -104,7 +104,7 @@ auto accessRequestedTask = create_taskSpatialAnchorTransferManager::RequestAcces
 });
 ```
 
-Si nous obtenons bien autorisation et points d’ancrage sont exportés, nous pouvons lire le flux de données. Ici, nous montrons également comment créer le DataReader et InputStream, nous allons utiliser pour lire les données.
+Si nous obtenons l’autorisation et que les ancres sont exportées, nous pouvons lire le flux de données. Ici, nous vous montrons également comment créer le DataReader et le InputStream que nous utiliserons pour lire les données.
 
 ```
 // Get the input stream for the anchor byte stream.
@@ -129,7 +129,7 @@ return accessRequestedTask.then([anchorByteDataOut, stream, reader](bool nchorsE
     }
 ```
 
-Une fois que nous lire les octets à partir du flux, nous pouvons les enregistrer dans notre propre mémoire tampon de données comme suit.
+Une fois que nous avons lu octets à partir du flux, nous pouvons les enregistrer dans notre propre mémoire tampon de données, comme c’est le cas.
 
 ```
 }).then([anchorByteDataOut, reader](size_t bytesRead)
@@ -148,9 +148,9 @@ Une fois que nous lire les octets à partir du flux, nous pouvons les enregistre
 };
 ```
 
-## <a name="deserialize-anchor-data-by-importing-it-into-the-system-using-the-spatialanchortransfermanager"></a>Désérialiser des données de point d’ancrage en l’important dans le système à l’aide de la SpatialAnchorTransferManager
+## <a name="deserialize-anchor-data-by-importing-it-into-the-system-using-the-spatialanchortransfermanager"></a>Désérialiser les données d’ancrage en les important dans le système à l’aide de SpatialAnchorTransferManager
 
-Une fonction d’assistance est incluse dans l’exemple de code pour charger des données précédemment exportées. Cette fonction de la désérialisation fournit une collection de paires clé-valeur, similaires à ce que fournit le SpatialAnchorStore -, à ceci près que nous avons ces données à partir d’une autre source, comme un socket réseau. Vous pouvez traiter et analyser ces données avant de les stocker en mémoire dans l’application en mode hors connexion, à l’aide, ou (le cas échéant) SpatialAnchorStore de votre application.
+Une fonction d’assistance est incluse dans l’exemple de code pour charger des données précédemment exportées. Cette fonction de désérialisation fournit une collection de paires clé-valeur, similaire à ce que le SpatialAnchorStore fournit, sauf que nous obtenons ces données à partir d’une autre source, telle qu’un socket réseau. Vous pouvez traiter et motifr ces données avant de les stocker hors connexion, à l’aide de la mémoire dans l’application ou (le cas échéant) de l’SpatialAnchorStore de votre application.
 
 ```
 // ImportAnchorDataAsync: Imports anchors from a byte buffer that was previously exported.
@@ -166,7 +166,7 @@ task<bool> SpatialAnchorImportExportHelper::ImportAnchorDataAsync(
 {
 ```
 
-Tout d’abord, nous devons créer des objets de flux de données pour accéder aux données d’ancrage. Nous doit écrire les données à partir de notre mémoire tampon dans une mémoire tampon du système, donc nous allons créer un DataWriter qui écrit dans un flux de données en mémoire afin d’atteindre notre objectif de l’obtention des points d’ancrage à partir d’une mémoire tampon d’octets dans le système en tant que SpatialAnchors.
+Tout d’abord, nous devons créer des objets de flux pour accéder aux données d’ancrage. Nous allons écrire les données de notre tampon dans une mémoire tampon système. nous allons donc créer une DataWriter qui écrit dans un flux de données en mémoire afin d’atteindre notre objectif d’obtenir des ancres à partir d’une mémoire tampon d’octets dans le système en tant que SpatialAnchors.
 
 ```
 // Create a random access stream for the anchor data.
@@ -177,7 +177,7 @@ IOutputStream^ outputStream = stream->GetOutputStreamAt(0);
 DataWriter^ writer = ref new DataWriter(outputStream);
 ```
 
-Une fois encore, nous avons besoin pour vous assurer de que l’application a l’autorisation d’exporter des données spatiales d’ancrage, qui peut inclure des informations confidentielles relatives à l’environnement utilisateur.
+Là encore, nous devons nous assurer que l’application a l’autorisation d’exporter les données d’ancrage spatiale, ce qui peut inclure des informations privées sur l’environnement de l’utilisateur.
 
 ```
 // Request access to transfer spatial anchors.
@@ -189,7 +189,7 @@ return create_task(SpatialAnchorTransferManager::RequestAccessAsync()).then(
         // Access is allowed.
 ```
 
-Si l’accès est autorisé, nous pouvons écrire des octets à partir de la mémoire tampon dans un flux de données système.
+Si l’accès est autorisé, nous pouvons écrire des octets de la mémoire tampon dans un flux de données système.
 
 ```
 // Write the bytes to the stream.
@@ -206,7 +206,7 @@ Si l’accès est autorisé, nous pouvons écrire des octets à partir de la mé
     }
 ```
 
-Si nous avons réussies à stocker des octets dans le flux de données, nous pouvons essayer d’importer ces données à l’aide de la SpatialAnchorTransferManager.
+Si nous avons réussi à stocker les octets dans le flux de données, nous pouvons essayer d’importer ces données à l’aide de SpatialAnchorTransferManager.
 
 ```
 }).then([writer, stream](unsigned int bytesWritten)
@@ -235,7 +235,7 @@ Si nous avons réussies à stocker des octets dans le flux de données, nous pou
     }
 ```
 
-Si les données peuvent être importés, nous obtenons une vue cartographique de paires clé-valeur associant des chaînes avec des points d’ancrage. Nous pouvons charger cela dans notre propre collection de données en mémoire et utiliser cette collection pour rechercher des points d’ancrage qui nous intéressent.
+Si les données peuvent être importées, nous obtenons une vue cartographique des paires clé-valeur associant des chaînes à des points d’ancrage. Nous pouvons charger cela dans notre propre collecte de données en mémoire et utiliser cette collection pour rechercher les ancres que nous souhaitons utiliser.
 
 ```
 }).then([anchorMapOut](task<Windows::Foundation::Collections::IMapView<String^, SpatialAnchor^>^>  previousTask)
@@ -270,33 +270,33 @@ Si les données peuvent être importés, nous obtenons une vue cartographique de
 }
 ```
 
-**REMARQUE :** Parce que vous pouvez importer une ancre, ne signifie pas nécessairement que vous pouvez l’utiliser immédiatement. Le point d’ancrage est peut-être dans un espace différent ou à un autre emplacement physique entièrement ; le point d’ancrage n’est pas localisable jusqu'à ce que l’appareil ayant reçue a suffisamment d’informations sur l’environnement que le point d’ancrage a été créé, pour restaurer la position de l’ancre par rapport à l’environnement actuel connu visual. L’implémentation du client doit essayer de localiser le point d’ancrage par rapport à votre système de coordonnées local ou d’un cadre de référence avant de continuer sur tente d’utiliser pour le contenu en direct. Par exemple, essayez de localiser le point d’ancrage par rapport à un système de coordonnées actuel régulièrement jusqu'à ce que le point d’ancrage commence à être localisable.
+**REMARQUE :** La seule raison pour laquelle vous pouvez importer une ancre ne signifie pas nécessairement que vous pouvez l’utiliser immédiatement. Le point d’ancrage peut se trouver dans une salle différente, ou dans un autre emplacement physique. le point d’ancrage ne peut pas être localisé tant que l’appareil qui l’a reçu n’a pas suffisamment d’informations visuelles sur l’environnement dans lequel l’ancre a été créée, afin de restaurer la position de l’ancre par rapport à l’environnement actuel connu. L’implémentation du client doit essayer de localiser le point d’ancrage par rapport au système de coordonnées local ou au frame de référence avant de continuer à essayer de l’utiliser pour du contenu dynamique. Par exemple, essayez de localiser l’ancre par rapport à un système de coordonnées actif régulièrement jusqu’à ce que le point d’ancrage commence à être localisable.
 
 ## <a name="special-considerations"></a>Considérations spéciales
 
-Le [TryExportAnchorsAsync](https://msdn.microsoft.com/library/windows/apps/mt592763.aspx) API permet plusieurs [SpatialAnchors](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchor.aspx) pour être exportés dans le même objet binaire blob opaque. Toutefois, il est une différence subtile dans les données qui inclut l’objet blob, en fonction de si un SpatialAnchor unique ou plusieurs SpatialAnchors sont exportés dans un seul appel.
+L’API [TryExportAnchorsAsync](https://msdn.microsoft.com/library/windows/apps/mt592763.aspx) permet d’exporter plusieurs [SpatialAnchors](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchor.aspx) dans le même objet blob binaire opaque. Toutefois, il existe une différence subtile entre les données que l’objet BLOB doit inclure, selon qu’un seul SpatialAnchor ou plusieurs SpatialAnchors sont exportés dans un seul appel.
 
-### <a name="export-of-a-single-spatialanchor"></a>Exportation d’un seul SpatialAnchor
+### <a name="export-of-a-single-spatialanchor"></a>Exportation d’un SpatialAnchor unique
 
-L’objet blob contient une représentation de l’environnement à proximité de la SpatialAnchor afin que l’environnement peut être reconnu sur l’appareil qui importe le SpatialAnchor. Une fois l’importation terminée, le nouveau SpatialAnchor seront disponible sur l’appareil. En supposant que l’utilisateur a été récemment à proximité de l’ancre, il sera localisable et hologrammes attachés à la SpatialAnchor peuvent être rendus. Ces hologrammes seront affichera dans le même emplacement physique sur l’appareil d’origine qui a exporté le SpatialAnchor c’était le cas.
+L’objet BLOB contient une représentation de l’environnement à proximité du SpatialAnchor afin que l’environnement puisse être reconnu sur l’appareil qui importe le SpatialAnchor. Une fois l’importation terminée, la nouvelle SpatialAnchor sera disponible pour l’appareil. En supposant que l’utilisateur a récemment été à proximité de l’ancre, il sera localisable et les hologrammes attachés au SpatialAnchor peuvent être rendus. Ces hologrammes s’affichent dans l’emplacement physique où ils se trouvaient sur l’appareil d’origine, ce qui a exporté le SpatialAnchor.
 
-![Exportation d’un seul SpatialAnchor](images/singleanchor.png)
+![Exportation d’un SpatialAnchor unique](images/singleanchor.png)
 
 ### <a name="export-of-multiple-spatialanchors"></a>Exportation de plusieurs SpatialAnchors
 
-Comme l’exportation d’un SpatialAnchor unique, l’objet blob contient une représentation de l’environnement à proximité de tous les SpatialAnchors spécifiés. En outre, l’objet blob contient des informations sur les connexions entre le SpatialAnchors inclus, s’ils sont situés dans le même espace physique. Cela signifie que si deux SpatialAnchors à proximité sont importés, puis un hologramme attaché à la *deuxième* SpatialAnchor serait localisable même si le périphérique reconnaît uniquement l’environnement autour de la *premier* Étant donné que suffisamment de données pour calculer transformation entre les deux SpatialAnchors SpatialAnchor, a été inclus dans l’objet blob. Si les deux SpatialAnchors ont été exportés individuellement (deux des appels distincts à TryExportSpatialAnchors) il peut ne pas être suffisamment de données inclus dans l’objet blob pour hologrammes attaché à la deuxième SpatialAnchor à localisables quand le premier d'entre eux se trouve.
+À l’instar de l’exportation d’un seul SpatialAnchor, l’objet BLOB contient une représentation de l’environnement à proximité de tous les SpatialAnchors spécifiés. En outre, l’objet BLOB contient des informations sur les connexions entre les SpatialAnchors inclus, s’ils se trouvent dans le même espace physique. Cela signifie que si deux SpatialAnchors à proximité sont importés, un hologramme attaché au *second* SpatialAnchor serait localisable même si l’appareil reconnaît uniquement l’environnement autour du *premier* SpatialAnchor, car il y a suffisamment de données pour la transformation de calcul entre les deux SpatialAnchors a été incluse dans l’objet BLOB. Si les deux SpatialAnchors ont été exportés individuellement (deux appels distincts à TryExportSpatialAnchors), il se peut que le nombre de données incluses dans l’objet BLOB soit insuffisant pour les hologrammes attachés au deuxième SpatialAnchor à localiser lorsque le premier est localisé.
 
-![Plusieurs points d’ancrage exportés à l’aide d’un seul appel TryExportAnchorsAsync](images/multipleanchors.png) ![Plusieurs points d’ancrage exportés à l’aide d’un appel TryExportAnchorsAsync distinct pour chaque point d’ancrage](images/separateanchors.png)
+![Plusieurs ancres exportées à l’aide d’un seul appel TryExportAnchorsAsync](images/multipleanchors.png) ![Plusieurs ancres exportées à l’aide d’un appel TryExportAnchorsAsync distinct pour chaque ancre](images/separateanchors.png)
 
-## <a name="example-send-anchor-data-using-a-windowsnetworkingstreamsocket"></a>Exemple : Envoyer des données de point d’ancrage à l’aide d’un Windows::Networking::StreamSocket
+## <a name="example-send-anchor-data-using-a-windowsnetworkingstreamsocket"></a>Exemple : Envoyer des données d’ancrage à l’aide d’un Windows:: Networking:: StreamSocket
 
-Ici, nous fournissons un exemple montrant comment utiliser les données exportées d’ancrage en lui envoyant un réseau TCP. Il s’agit de la HolographicSpatialAnchorTransferSample.
+Ici, nous fournissons un exemple d’utilisation des données d’ancrage exportées en les envoyant à travers un réseau TCP. C’est à partir du HolographicSpatialAnchorTransferSample.
 
-La classe StreamSocket de WinRT utilise la bibliothèque de tâches PPL. Dans le cas d’erreurs réseau, l’erreur est retournée à la tâche suivante dans la chaîne à l’aide d’une exception est levée de nouveau. L’exception contient une valeur HRESULT indiquant l’état d’erreur.
+La classe StreamSocket WinRT utilise la bibliothèque de tâches PPL. Dans le cas d’erreurs réseau, l’erreur est retournée à la tâche suivante dans la chaîne à l’aide d’une exception qui est levée à nouveau. L’exception contient un HRESULT indiquant l’état de l’erreur.
 
-### <a name="use-a-windowsnetworkingstreamsocketlistener-with-tcp-to-send-exported-anchor-data"></a>Utiliser un Windows::Networking::StreamSocketListener avec TCP pour envoyer des données de point d’ancrage exporté
+### <a name="use-a-windowsnetworkingstreamsocketlistener-with-tcp-to-send-exported-anchor-data"></a>Utiliser un Windows:: Networking:: StreamSocketListener avec TCP pour envoyer des données d’ancrage exportées
 
-Créer une instance de serveur qui écoute pour une connexion.
+Créez une instance de serveur qui écoute une connexion.
 
 ```
 void SampleAnchorTcpServer::ListenForConnection()
@@ -326,7 +326,7 @@ void SampleAnchorTcpServer::ListenForConnection()
 }
 ```
 
-Lors de la réception d’une connexion, utilisez la connexion de socket client pour envoyer des données de point d’ancrage.
+Quand une connexion est reçue, utilisez la connexion de socket client pour envoyer des données d’ancrage.
 
 ```
 void SampleAnchorTcpServer::OnConnectionReceived(StreamSocketListener^ listener, StreamSocketListenerConnectionReceivedEventArgs^ args)
@@ -340,7 +340,7 @@ void SampleAnchorTcpServer::OnConnectionReceived(StreamSocketListener^ listener,
 }
 ```
 
-Maintenant, nous pouvons commencer à envoyer un flux de données qui contient les données exportées d’ancrage.
+À présent, nous pouvons commencer à envoyer un flux de données qui contient les données d’ancrage exportées.
 
 ```
 void SampleAnchorTcpServer::OutputToClientSocket(IMap<String^, SpatialAnchor^>^ anchorsToSend)
@@ -370,7 +370,7 @@ void SampleAnchorTcpServer::OutputToClientSocket(IMap<String^, SpatialAnchor^>^ 
 }
 ```
 
-Avant que nous pouvons envoyer le flux de données lui-même, nous devons tout d’abord envoyer un paquet d’en-tête. Ce paquet d’en-tête doit être de longueur fixe, et il doit également indiquer la longueur de la variable tableau d’octets qui est le flux de données d’ancrage ; dans le cas de cet exemple, nous ne disposons d’aucune autre donnée d’en-tête à envoyer, par conséquent, notre en-tête de 4 octets et contient un entier non signé 32 bits.
+Avant de pouvoir envoyer le flux lui-même, nous devons d’abord envoyer un paquet d’en-tête. Ce paquet d’en-tête doit avoir une longueur fixe et doit également indiquer la longueur du tableau de variables d’octets qui est le flux de données d’ancrage; dans le cas de cet exemple, nous n’avons pas d’autres données d’en-tête à envoyer. par conséquent, notre en-tête a une longueur de 4 octets et contient un entier non signé 32 bits.
 
 ```
 Concurrency::task<bool> SampleAnchorTcpServer::SendAnchorDataLengthMessage(size_t dataStreamLength)
@@ -413,7 +413,7 @@ Concurrency::task<bool> SampleAnchorTcpServer::SendAnchorDataStreamIMap<String^,
         return task_from_result<bool>(false);
 ```
 
-Une fois que la longueur du flux, en octets, a été envoyée au client, nous pouvons passer à écrire le flux de données lui-même dans le flux de socket. Cela entraîne les octets de la Boutique à soient envoyées au client.
+Une fois que la longueur du flux, en octets, a été envoyée au client, nous pouvons continuer à écrire le flux de données lui-même dans le flux de Socket. Les octets du magasin d’ancrage sont alors envoyés au client.
 
 ```
 }).then([this](bool dataLengthSent)
@@ -447,7 +447,7 @@ Une fois que la longueur du flux, en octets, a été envoyée au client, nous po
 }
 ```
 
-Comme indiqué plus haut dans cette rubrique, nous devons être préparés à gérer les exceptions contenant des messages d’état erreur réseau. Pour les erreurs qui ne sont pas attendues, nous pouvons écrire les informations d’exception à la console de débogage comme suit. Cela nous donnera un doute sur ce qui est arrivé si notre exemple de code ne peut pas terminer la connexion, ou s’il est impossible de terminer l’envoi des données d’ancrage.
+Comme indiqué précédemment dans cette rubrique, nous devons être prêts à gérer les exceptions contenant les messages d’état d’erreur réseau. Pour les erreurs qui ne sont pas attendues, nous pouvons écrire les informations sur l’exception dans la console de débogage, comme c’est le cas. Cela nous donne un indice sur ce qui s’est produit si notre exemple de code ne parvient pas à terminer la connexion, ou s’il ne parvient pas à terminer l’envoi des données d’ancrage.
 
 ```
 void SampleAnchorTcpServer::HandleException(Exception^ exception)
@@ -460,11 +460,11 @@ void SampleAnchorTcpServer::HandleException(Exception^ exception)
 }
 ```
 
-### <a name="use-a-windowsnetworkingstreamsocket-with-tcp-to-receive-exported-anchor-data"></a>Utiliser un Windows::Networking::StreamSocket avec TCP pour recevoir les données exportées d’ancrage
+### <a name="use-a-windowsnetworkingstreamsocket-with-tcp-to-receive-exported-anchor-data"></a>Utiliser un Windows:: Networking:: StreamSocket avec TCP pour recevoir les données d’ancrage exportées
 
-Nous devons tout d’abord, connectez-vous au serveur. Cet exemple de code montre comment créer et configurer un StreamSocket et créer un objet DataReader que vous pouvez utiliser pour acquérir les données de réseau à l’aide de la connexion de socket.
+Tout d’abord, nous devons nous connecter au serveur. Cet exemple de code montre comment créer et configurer un StreamSocket et créer un DataReader que vous pouvez utiliser pour acquérir des données réseau à l’aide de la connexion de Socket.
 
-**REMARQUE :** Si vous exécutez cet exemple de code, assurez-vous que vous allez configurer et lancer le serveur avant de démarrer le client.
+**REMARQUE :** Si vous exécutez cet exemple de code, assurez-vous de configurer et de lancer le serveur avant de démarrer le client.
 
 ```
 task<bool> SampleAnchorTcpClient::ConnectToServer()
@@ -530,9 +530,9 @@ task<bool> SampleAnchorTcpClient::ConnectToServer()
 }
 ```
 
-Une fois que nous disposons d’une connexion, nous pouvons attend le serveur envoyer des données. Pour cela, nous appelant LoadAsync sur le lecteur de flux de données.
+Une fois que nous disposons d’une connexion, nous pouvons attendre que le serveur envoie des données. Pour ce faire, nous appelons LoadAsync sur le lecteur de données de flux.
 
-Le premier jeu d’octets que nous recevons doit toujours être le paquet d’en-tête, ce qui indique le point d’ancrage data stream longueur d’octet comme décrit dans la section précédente.
+Le premier jeu d’octets que nous recevons doit toujours être le paquet d’en-tête, qui indique la longueur en octets du flux de données d’ancrage comme décrit dans la section précédente.
 
 ```
 void SampleAnchorTcpClient::WaitForAnchorDataStream()
@@ -581,7 +581,7 @@ task<size_t> SampleAnchorTcpClient::ReceiveAnchorDataLengthMessage()
 }
 ```
 
-Une fois que nous avons bien reçu le paquet d’en-tête, nous savons combien d’octets de données de point d’ancrage nous devons nous attendre. Nous pouvons passer à lire ces octets dans le flux.
+Une fois que nous avons reçu le paquet d’en-tête, nous savons combien d’octets de données d’ancrage devraient s’attendre. Nous pouvons continuer à lire ces octets dans le flux.
 
 ```
 }).then([this](size_t dataStreamLength)
@@ -608,9 +608,9 @@ Une fois que nous avons bien reçu le paquet d’en-tête, nous savons combien d
 }
 ```
 
-Voici notre code pour la réception du flux de données de point d’ancrage. Là encore, nous chargera tout d’abord les octets à partir du flux ; Cette opération peut prendre un certain temps pour terminer, comme le StreamSocket attend de recevoir cette quantité en octets à partir du réseau.
+Voici notre code pour recevoir le flux de données d’ancrage. Là encore, nous allons d’abord charger les octets à partir du flux. l’exécution de cette opération peut prendre un certain temps, car le StreamSocket attend de recevoir ce nombre d’octets à partir du réseau.
 
-Lorsque l’opération de chargement est terminée, nous pouvons lire ce nombre d’octets. Si nous avons reçu le nombre d’octets qui nous pensons que pour le flux de données de point d’ancrage, nous pouvons continuer et importer les données d’ancrage ; Si ce n’est pas le cas, il doit vous avoir été une sorte d’erreur. Par exemple, cela peut se produire lorsque l’instance de serveur se termine avant de pouvoir terminer envoyant le flux de données ou le réseau tombe en panne avant que le flux de données entier peut être reçu par le client.
+Lorsque l’opération de chargement est terminée, nous pouvons lire ce nombre d’octets. Si nous avons reçu le nombre d’octets attendu pour le flux de données d’ancrage, nous pouvons importer les données d’ancrage. Si ce n’est pas le cas, il doit y avoir une erreur. Par exemple, cela peut se produire lorsque l’instance de serveur se termine avant de terminer l’envoi du flux de données, ou que le réseau tombe en panne avant que le client ne puisse recevoir la totalité du flux de données.
 
 ```
 task<bool> SampleAnchorTcpClient::ReceiveAnchorDataStream()
@@ -660,7 +660,7 @@ task<bool> SampleAnchorTcpClient::ReceiveAnchorDataStream()
 }
 ```
 
-Là encore, nous devons être préparés à gérer les erreurs de réseau inconnue.
+Là encore, vous devez être prêt à gérer les erreurs réseau inconnues.
 
 ```
 void SampleAnchorTcpClient::HandleException(Exception^ exception)
@@ -672,9 +672,9 @@ void SampleAnchorTcpClient::HandleException(Exception^ exception)
 }
 ```
 
-C’est tout ! Maintenant, vous devez disposer de suffisamment d’informations pour essayer de rapprocher les ancres reçus sur le réseau. Là encore, notez que le client doit avoir suffisamment de données suivi visuel de l’espace à trouver le point d’ancrage ; Si elle ne fonctionne pas immédiatement, essayez de vous épargne pendant un certain temps. Si cela ne fonctionne toujours pas, que le serveur envoyer plusieurs points d’ancrage et utiliser des communications réseau se pour accorder sur une solution qui fonctionne pour le client. Vous pouvez tester cela en téléchargeant le HolographicSpatialAnchorTransferSample, configuration de votre client et les adresses IP de serveur et déployez-le sur des appareils HoloLens client et serveur.
+C’est tout ! Maintenant, vous devez disposer de suffisamment d’informations pour essayer de localiser les ancres reçues sur le réseau. Là encore, Notez que le client doit disposer d’un nombre suffisant de données de suivi visuel pour l’espace pour la localisation de l’ancre. Si cela ne fonctionne pas immédiatement, essayez de vous lancer pendant un certain temps. Si cela ne fonctionne toujours pas, faites en sorte que le serveur envoie davantage d’ancres et qu’il utilise des communications réseau pour s’en contenter. Vous pouvez essayer cela en téléchargeant le HolographicSpatialAnchorTransferSample, en configurant les adresses IP du client et du serveur, et en le déployant sur des appareils HoloLens client et serveur.
 
 ## <a name="see-also"></a>Voir aussi
 * [Bibliothèque de modèles parallèles (PPL)](https://msdn.microsoft.com/library/dd492418.aspx)
-* [Windows.Networking.StreamSocket](https://msdn.microsoft.com/library/windows/apps/windows.networking.sockets.streamsocket.aspx)
-* [Windows.Networking.StreamSocketListener](https://msdn.microsoft.com/library/windows/apps/windows.networking.sockets.streamsocketlistener.aspx)
+* [Windows. Networking. StreamSocket](https://msdn.microsoft.com/library/windows/apps/windows.networking.sockets.streamsocket.aspx)
+* [Windows. Networking. StreamSocketListener](https://msdn.microsoft.com/library/windows/apps/windows.networking.sockets.streamsocketlistener.aspx)

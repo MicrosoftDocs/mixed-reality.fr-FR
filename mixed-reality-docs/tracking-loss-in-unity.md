@@ -1,43 +1,43 @@
 ---
-title: Suivi de la perte dans Unity
-description: Gestion du suivi de la perte d’une application Unity.
+title: Suivi des pertes dans Unity
+description: Gestion des pertes de suivi dans une application Unity.
 author: thetuvix
 ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Unity, suivi de la perte, l’image de la perte de suivi
+keywords: Unity, perte de suivi, image de perte de suivi
 ms.openlocfilehash: eb675860d67e9cad0d1129b3a6f61343990a4179
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59595716"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63548741"
 ---
-# <a name="tracking-loss-in-unity"></a>Suivi de la perte dans Unity
+# <a name="tracking-loss-in-unity"></a>Suivi des pertes dans Unity
 
-Lorsque l’appareil ne peut pas localiser lui-même dans le monde, l’application rencontre « perte de suivi ». Par défaut, Unity s’interrompre la boucle de mise à jour et afficher une image de démarrage à l’utilisateur. Lorsque le suivi est récupéré, l’image de démarrage disparaît et continue la boucle de mise à jour.
+Lorsque l’appareil ne peut pas se trouver dans le monde entier, l’application rencontre une «perte de suivi». Par défaut, Unity met en pause la boucle de mise à jour et affiche une image de démarrage pour l’utilisateur. Lorsque le suivi est retrouvé, l’image de démarrage disparaît et la boucle de mise à jour se poursuit.
 
-Comme alternative, l’utilisateur peut gérer manuellement cette transition en n’optant pas le paramètre. Tout le contenu vous sembleront pour devenir corps verrouillés pendant le suivi de la perte si rien n’est fait pour le gérer.
+En guise d’alternative, l’utilisateur peut gérer manuellement cette transition en désactivant le paramètre. Tout le contenu semblera être verrouillé pendant le suivi de la perte si rien n’est fait pour le gérer.
 
-## <a name="default-handling"></a>La gestion par défaut
+## <a name="default-handling"></a>Gestion par défaut
 
-Par défaut, la boucle de mise à jour de l’application, ainsi que tous les messages et les événements s’arrête pendant la durée de suivi de la perte. À ce moment même, une image sera affichée à l’utilisateur. Vous pouvez personnaliser cette image en accédant à modifier -> Paramètres -> lecteur, en cliquant sur Image de démarrage et définition de l’image holographique suivi de la perte.
+Par défaut, la boucle de mise à jour de l’application, ainsi que tous les messages et événements, s’arrête pendant la durée du suivi des pertes. En même temps, une image sera affichée à l’utilisateur. Vous pouvez personnaliser cette image en accédant à modifier > Paramètres-> Player, en cliquant sur image de l’écran de démarrage et en définissant l’image de perte de suivi holographique.
 
 ## <a name="manual-handling"></a>Gestion manuelle
 
-Pour gérer manuellement une perte de suivi, vous devez accéder à **modifier** > **paramètres du projet** > **Player**  >   **Onglet Paramètres de plateforme de Windows Universal** > **Image de démarrage** > **Windows HOLOGRAPHIQUE** et décochez la case « sur le suivi des pertes Pause et afficher l’Image ". Après quoi, vous devez gérer le suivi des modifications avec les API spécifiées ci-dessous.
+Pour gérer manuellement le suivi des pertes, vous devez accéder à **modifier** > les**paramètres** > du projet**lecteur** > **plateforme Windows universelle onglet** > paramètres**image** dedémarrage >  **Windows holographique** et décochez «en cas de suspension du suivi et d’affichage de l’image». Après quoi, vous devez gérer les modifications de suivi avec les API spécifiées ci-dessous.
 
-**Namespace :** *UnityEngine.XR.WSA*<br>
-**Type :** *WorldManager*
+**Espace de noms :** *UnityEngine. XR. WSA*<br>
+**Type :** *WorldManager*
 
-* World Manager expose un événement pour détecter le suivi perdu/acquise (*WorldManager.OnPositionalLocatorStateChanged*) et une propriété pour interroger l’état actuel (*WorldManager.state*)
-* Lorsque l’état de suivi n’est pas actif, l’appareil photo n’apparaîtra pas traduire dans le monde virtuel, même si l’utilisateur est traduit. Cela signifie que les objets ne sont plus correspond à n’importe quel emplacement physique et tous apparaissent corps verrouillé.
+* World Manager expose un événement pour détecter le suivi des pertes/gains (*WorldManager. OnPositionalLocatorStateChanged*) et une propriété pour interroger l’état actuel (*WorldManager. State*)
+* Lorsque l’état de suivi n’est pas actif, l’appareil photo n’apparaît pas dans le monde virtuel, même lorsque l’utilisateur se traduit. Cela signifie que les objets ne correspondent plus à aucun emplacement physique et que tous les corps sont verrouillés.
 
-Lors du traitement de suivi des modifications sur votre propre vous devez soit pour l’interrogation de la propriété state chaque frame ou la poignée de la *OnPositionalLocatorStateChanged* événement.
+Lors du traitement des modifications de suivi, vous devez interroger la propriété d’état de chaque trame ou gérer l’événement *OnPositionalLocatorStateChanged* .
 
 ### <a name="polling"></a>Interrogation
 
-L’état plus importantes est *PositionalLocatorState.Active* ce qui signifie que le suivi est entièrement fonctionnels. N’importe quel autre état entraînent uniquement les deltas de rotation de la caméra principale. Exemple :
+L’état le plus important est *PositionalLocatorState. active* , ce qui signifie que le suivi est entièrement fonctionnel. Tous les autres États entraînent uniquement des deltas de rotation vers la caméra principale. Exemple :
 
 ```cs
 void Update()
@@ -60,7 +60,7 @@ void Update()
 
 ### <a name="handling-the-onpositionallocatorstatechanged-event"></a>Gestion de l’événement OnPositionalLocatorStateChanged
 
-Vous pouvez également et plus facilement, vous pouvez également vous abonner à *OnPositionalLocatorStateChanged* pour gérer les transitions :
+En guise d’alternative et de commodité, vous pouvez également vous abonner à *OnPositionalLocatorStateChanged* pour gérer les transitions:
 
 ```cs
 void Start()
@@ -82,4 +82,4 @@ private void WorldManager_OnPositionalLocatorStateChanged(PositionalLocatorState
 ```
 
 ## <a name="see-also"></a>Voir aussi
-* [Gérer le suivi de la perte dans DirectX](coordinate-systems-in-directx.md#handling-tracking-loss)
+* [Gestion des pertes de suivi dans DirectX](coordinate-systems-in-directx.md#handling-tracking-loss)

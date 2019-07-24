@@ -1,31 +1,31 @@
 ---
-title: Caméra localisable dans DirectX
-description: Explique comment utiliser l’appareil photo (PDV) de point de vue dans une application de HoloLens.
+title: Appareil photo localisable dans DirectX
+description: Explique comment utiliser l’appareil photo de point de vue dans une application HoloLens.
 author: MikeRiches
 ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
-keywords: HoloLens, appareil photo localisable, le point de vue, des PDV, unporoject, foundation media, MF, canal personnalisé, procédure pas à pas, exemple de code
+keywords: HoloLens, appareil photo localisable, point de vue, PDV, unporoject, Media Foundation, MF, récepteur personnalisé, procédure pas à pas, exemple de code
 ms.openlocfilehash: 374b61e3d9bb0e97d5f0c5c8e17a5c882a4ebcd3
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59595303"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63516869"
 ---
-# <a name="locatable-camera-in-directx"></a>Caméra localisable dans DirectX
+# <a name="locatable-camera-in-directx"></a>Appareil photo localisable dans DirectX
 
-Cette rubrique décrit comment configurer un [Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197(v=vs.85).aspx) de pipeline pour accéder à la [caméra](locatable-camera.md) dans une application DirectX, y compris les métadonnées d’image qui vous permet de localiser les images de produits dans le monde réel.
+Cette rubrique explique comment configurer un pipeline [Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197(v=vs.85).aspx) pour accéder à l' [appareil photo](locatable-camera.md) dans une application DirectX, y compris les métadonnées de frame qui vous permettent de localiser les images produites dans le monde réel.
 
-## <a name="windows-media-capture-and-media-foundation-development-imfattributes"></a>Capture de média de Windows et le développement de Media Foundation : IMFAttributes
+## <a name="windows-media-capture-and-media-foundation-development-imfattributes"></a>Développement Windows Media capture et Media Foundation: IMFAttributes
 
-Chaque trame d’image [inclut un système de coordonnées](locatable-camera.md#images-with-coordinate-systems) , ainsi que les deux transformations importantes. La « vue » transformer des mappages depuis le système de coordonnées fourni à l’appareil photo et « projection » est mappé à partir de l’appareil photo pixels dans l’image. Le système de coordonnées et 2 transformations sont incorporées en tant que métadonnées dans chaque trame d’image par le biais de Media Foundation [IMFAttributes](https://msdn.microsoft.com/library/windows/desktop/ms704598(v=vs.85).aspx).
+Chaque frame [d’image comprend un système de coordonnées](locatable-camera.md#images-with-coordinate-systems) , ainsi que deux transformations importantes. La transformation «vue» est mappée à partir du système de coordonnées fourni à l’appareil photo, et la «projection» est mappée de l’appareil photo aux pixels de l’image. Les transformations système de coordonnées et 2 sont incorporées en tant que métadonnées dans chaque frame d’image via le [IMFAttributes](https://msdn.microsoft.com/library/windows/desktop/ms704598(v=vs.85).aspx)de Media Foundation.
 
-### <a name="sample-usage-of-reading-attributes-with-mf-custom-sink-and-doing-projection"></a>Exemple d’utilisation de la lecture des attributs de récepteur personnalisée MF et faire de projection
+### <a name="sample-usage-of-reading-attributes-with-mf-custom-sink-and-doing-projection"></a>Exemple d’utilisation des attributs de lecture avec récepteur personnalisé MF et projection
 
-Dans votre flux MF récepteur personnalisée ([IMFStreamSink](https://msdn.microsoft.com/library/windows/desktop/ms705657(v=vs.85).aspx)), vous obtiendrez [IMFSample](https://msdn.microsoft.com/library/windows/desktop/ms702192(v=vs.85).aspx) avec des attributs de l’exemple :
+Dans votre flux de récepteur MF personnalisé ([IMFStreamSink](https://msdn.microsoft.com/library/windows/desktop/ms705657(v=vs.85).aspx)), vous obtiendrez [IMFSample](https://msdn.microsoft.com/library/windows/desktop/ms702192(v=vs.85).aspx) avec des attributs d’exemple:
 
-Les MediaExtensions suivantes doit être définies pour le code de WinRT en :
+Le MediaExtensions suivant doit être défini pour le code basé sur WinRT:
 
 ```
 EXTERN_GUID(MFSampleExtension_Spatial_CameraViewTransform, 0x4e251fa4, 0x830f, 0x4770, 0x85, 0x9a, 0x4b, 0x8d, 0x99, 0xaa, 0x80, 0x9b);
@@ -33,7 +33,7 @@ EXTERN_GUID(MFSampleExtension_Spatial_CameraCoordinateSystem, 0x9d13c82f, 0x2199
 EXTERN_GUID(MFSampleExtension_Spatial_CameraProjectionTransform, 0x47f9fcb5, 0x2a02, 0x4f26, 0xa4, 0x77, 0x79, 0x2f, 0xdf, 0x95, 0x88, 0x6a);
 ```
 
-Vous ne peut pas accéder à ces attributs à partir de WinRT APIs, mais nécessite l’implémentation d’Extension de support de [IMFTransform](https://msdn.microsoft.com/library/windows/desktop/ms696260(v=vs.85).aspx) (pour l’effet) ou [IMFMediaSink](https://msdn.microsoft.com/library/windows/desktop/ms694262(v=vs.85).aspx) et [IMFStreamSink](https://msdn.microsoft.com/library/windows/desktop/ms705657(v=vs.85).aspx) () pour le récepteur personnalisé). Lorsque vous traitez l’exemple dans cette extension soit dans [IMFTransform::ProcessInput()](https://msdn.microsoft.com/library/windows/desktop/ms703131(v=vs.85).aspx)/[IMFTransform::ProcessOutput()](https://msdn.microsoft.com/library/windows/desktop/ms704014(v=vs.85).aspx) ou [IMFStreamSink::ProcessSample() ](https://msdn.microsoft.com/library/windows/desktop/ms696208(v=vs.85).aspx), vous pouvez interroger les attributs tels que cet exemple.
+Vous ne pouvez pas accéder à ces attributs à partir des API WinRT, mais nécessite l’implémentation d’extension de média de [IMFTransform](https://msdn.microsoft.com/library/windows/desktop/ms696260(v=vs.85).aspx) (pour Effect) ou [IMFMediaSink](https://msdn.microsoft.com/library/windows/desktop/ms694262(v=vs.85).aspx) et [IMFStreamSink](https://msdn.microsoft.com/library/windows/desktop/ms705657(v=vs.85).aspx) (pour un récepteur personnalisé). Lorsque vous traitez l’exemple dans cette extension dans [IMFTransform::P rocessinput ()](https://msdn.microsoft.com/library/windows/desktop/ms703131(v=vs.85).aspx)/[IMFTransform::P rocessoutput ()](https://msdn.microsoft.com/library/windows/desktop/ms704014(v=vs.85).aspx) ou [IMFStreamSink::P rocesssample ()](https://msdn.microsoft.com/library/windows/desktop/ms696208(v=vs.85).aspx), vous pouvez interroger des attributs comme cet exemple.
 
 ```
 ComPtr<IUnknown> spUnknown;
@@ -81,7 +81,7 @@ if (SUCCEEDED(hr))
 }
 ```
 
-Pour accéder à la texture à partir de l’appareil photo, vous avez besoin d’un même périphérique D3D qui crée la texture de frame d’appareil photo. Ce périphérique D3D est [IMFDXGIDeviceManager](https://msdn.microsoft.com/library/windows/desktop/hh447906(v=vs.85).aspx) dans le pipeline de capture. Pour obtenir le Gestionnaire de périphériques de DXGI à partir de la Capture de média que vous pouvez utiliser [IAdvancedMediaCapture](https://msdn.microsoft.com/library/windows/desktop/hh802709(v=vs.85).aspx) et [IAdvancedMediaCaptureSettings](https://msdn.microsoft.com/library/windows/desktop/hh802712(v=vs.85).aspx) interfaces.
+Pour accéder à la texture à partir de l’appareil photo, vous avez besoin d’un même appareil D3D qui crée la texture du cadre de l’appareil photo. Ce périphérique D3D est dans [IMFDXGIDeviceManager](https://msdn.microsoft.com/library/windows/desktop/hh447906(v=vs.85).aspx) dans le pipeline de capture. Pour obtenir DXGI Device Manager à partir de la capture multimédia, vous pouvez utiliser les interfaces [IAdvancedMediaCapture](https://msdn.microsoft.com/library/windows/desktop/hh802709(v=vs.85).aspx) et [IAdvancedMediaCaptureSettings](https://msdn.microsoft.com/library/windows/desktop/hh802712(v=vs.85).aspx) .
 
 ```
 Microsoft::WRL::ComPtr<IAdvancedMediaCapture> spAdvancedMediaCapture;
@@ -97,4 +97,4 @@ if (SUCCEEDED(((IUnknown *)(mediaCapture))->QueryInterface(IID_PPV_ARGS(&spAdvan
 }
 ```
 
-Vous pouvez également activer la souris et clavier d’entrée en tant que les méthodes d’entrée facultatifs pour votre application Windows Mixed Reality. Cela peut également être une fonctionnalité intéressante de débogage pour les appareils tels que HoloLens et peut être souhaitable pour l’entrée d’utilisateur dans les applications de réalité mixte qui s’exécutent dans des casques IMMERSIFS attachés au PC.
+Vous pouvez également activer l’entrée de la souris et du clavier en tant que méthodes d’entrée facultatives pour votre application Windows Mixed Reality. Il peut également s’agir d’une fonctionnalité de débogage idéale pour les appareils tels que HoloLens, et peut être souhaitable pour une entrée d’utilisateur dans des applications de réalité mixte s’exécutant dans des casques immersifs attachés à des PC.

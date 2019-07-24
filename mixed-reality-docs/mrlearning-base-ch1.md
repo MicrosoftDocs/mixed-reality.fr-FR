@@ -5,18 +5,17 @@ author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
-ms.localizationpriority: high
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: c5490e6a3b542a5ca677b309e5ed1171f8666fe7
-ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
-ms.translationtype: HT
+ms.openlocfilehash: 51cfc123f7da8d25a53eecfb730f60cf10fe7377
+ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "65814012"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68387784"
 ---
-# <a name="mr-learning-base-module---project-initialization-and-first-application"></a>Module d’apprentissage de base sur la réalité mixte - Initialisation du projet et première application
+# <a name="2-initializing-your-project-and-first-application"></a>2. Initialisation de votre projet et de la première application
 
-Dans cette première leçon, vous allez apprendre certaines des fonctionnalités qu’offre le Kit de ressources de réalité mixte, démarrer votre première application pour HoloLens 2 et la déployer sur l’appareil.
+Dans cette première leçon, vous découvrirez certaines des fonctionnalités que le MRTK (Mixed Reality Toolkit) doit offrir, commencez votre première application pour HoloLens 2 et déployez-la sur l’appareil.
 
 ## <a name="objectives"></a>Objectifs
 
@@ -42,72 +41,75 @@ Dans cette première leçon, vous allez apprendre certaines des fonctionnalités
 
 ### <a name="configure-the-unity-project-for-windows-mixed-reality"></a>Configurer le projet Unity pour Windows Mixed Reality
 
-1. Ouvrez la fenêtre Build Settings (Paramètres de génération) en choisissant File>Build Settings.
+1. Ouvrez la fenêtre Paramètres de build en accédant à fichier > paramètres de Build.
 ![Leçon 1 Chapitre 4 Étape 1](images/Lesson1Chapter4Step1.JPG)
-2. Basculez vers « Plateforme Windows universelle » en sélectionnant « Universal Windows Platform », puis en cliquant sur le bouton « Switch Platform » (Changer de plateforme). Les applications qui s’exécutent sur HoloLens 2 doivent être de type UWP (plateforme Windows universelle).
+2. Basculez vers plateforme Windows universelle en sélectionnant plateforme Windows universelle. Cliquez sur le bouton changer de plateforme pour basculer entre les plateformes. Les applications qui s’exécutent sur HoloLens 2 doivent être compatibles plateforme Windows universelle (UWP).
 ![Leçon 1 Chapitre 4 Étape 2](images/Lesson1Chapter4Step2.JPG)
-3. Activez la réalité virtuelle en cliquant sur Player Settings (Paramètres du lecteur) dans la fenêtre Build (Générer) puis, dans le panneau de l’inspecteur, cochez la case « Virtual Reality Supported » (Prise en charge de la réalité virtuelle), sous XR Settings (Paramètres XR), comme indiqué dans l’image ci-dessous. Veuillez noter que vous devrez peut-être faire glisser la fenêtre « Build Settings » pour voir le panneau de l’inspecteur. La case à cocher « Virtual Reality Supported » s’applique également aux casques de réalité mixte/réalité augmentée, car elle fait référence à l’activation de la vision stéréoscopique (rendu d’images différentes pour chaque œil). ![Leçon 1 Chapitre 4 Étape 3](images/Lesson1Chapter4Step3.JPG)
-4. Dans le même panneau de l’inspecteur, sous Publishing Settings (Paramètres de publication), dans la section des fonctionnalités, vérifiez que la case « Spatial Perception » (Perception spatiale) est cochée. La perception spatiale nous permettra de visualiser le maillage du mappage spatial sur un appareil de réalité mixte tel que HoloLens 2. Les paramètres de publication se trouvent dans le panneau Inspector, au-dessus de « XR Settings » et sous « Other Settings » (Autres paramètres).
+3. Activez la réalité virtuelle en cliquant sur paramètres du lecteur dans la fenêtre générer, puis activez la case à cocher réalité virtuelle prise en charge sous paramètres XR dans le panneau Inspecteur, comme indiqué dans l’image ci-dessous. Notez que vous devrez peut-être faire glisser la fenêtre Paramètres de build pour voir le panneau Inspecteur. La case à cocher de réalité virtuelle prise en charge s’applique également à la réalité mixte et aux casques de la réalité augmentée, car elle fait référence à l’activation de la vision stéréoscopique (rendu de différentes images pour chaque oeil). ![Leçon 1 Chapitre 4 Étape 3](images/Lesson1Chapter4Step3.JPG)
+4. Dans le même volet de l’inspecteur, vérifiez que la case à cocher perception spatiale de la section fonctionnalités est activée sous paramètres de publication. La perception spatiale nous permet de visualiser le maillage de mappage spatial sur un appareil de réalité mixte, tel que HoloLens 2. Les paramètres de publication se trouvent dans le panneau Inspecteur, au-dessus des paramètres XR et sous autres paramètres.
 ![Leçon 1 Chapitre 4 Étape 4](images/Lesson1Chapter4Step4.JPG)
 
-> REMARQUE : Bien qu’elles ne soient pas utilisées dans cette section, certaines autres fonctionnalités courantes que vous pouvez être amené à activer incluent Microphone (pour les commandes vocales) et InternetClient (pour la connexion aux services qui requièrent une connexion réseau).
+> REMARQUE : Bien qu’il ne soit pas utilisé dans cette section, d’autres fonctionnalités courantes que vous pouvez souhaiter activer incluent le microphone pour les commandes vocales et InternetClient pour la connexion aux services qui requièrent une connexion réseau.
 
 ### <a name="import-the-mixed-reality-toolkit"></a>Importer le Kit de ressources de réalité mixte
 
-1. Téléchargez le package Unity du [Kit de ressources de réalité mixte](https://github.com/Microsoft/MixedRealityToolkit-Unity/releases/download/v2.0.0-RC1/Microsoft.MixedReality.Toolkit.Unity.Foundation-v2.0.0-RC1.unitypackage) et enregistrez-le dans un dossier sur votre PC.
+1. Téléchargez le package Unity du [Kit d’outils de réalité mixte](https://github.com/Microsoft/MixedRealityToolkit-Unity/releases/download/v2.0.0-RC1/Microsoft.MixedReality.Toolkit.Unity.Foundation-v2.0.0-RC1.unitypackage) et enregistrez-le dans un dossier sur votre ordinateur.
 
 2. Importez le package du Kit de ressources de réalité mixte en cliquant sur Assets (Ressources)> Import > Custom Package (Package personnalisé). Recherchez le package du Kit de ressources de réalité mixte téléchargé à l’étape 1 et ouvrez-le pour commencer le processus d’importation. Patientez quelques minutes, le temps que le processus d’importation se termine.
     ![Leçon 1 Chapitre 2 Étape 2a](images/Lesson1Chapter2Step2a.JPG) ![Leçon 1 Chapitre 2 Étape 2b](images/Lesson1Chapter2Step2b.JPG)
 
-3. Dans la fenêtre contextuelle suivante, cliquez sur « Import » pour commencer l’importation du Kit de ressources de réalité mixte. Vérifiez que tous les éléments sont cochés, comme illustré dans l’image. Si apparaît une boîte de dialogue contextuelle demandant s’il faut appliquer les paramètres par défaut du Kit de ressources de réalité mixte, cliquez sur « Apply ».
+3. Dans la fenêtre contextuelle suivante, cliquez sur Importer pour commencer l’importation de la boîte à outils de la réalité mixte. Vérifiez que tous les éléments sont vérifiés comme indiqué dans l’image. Si une boîte de dialogue contextuelle s’affiche et vous invite à appliquer les paramètres par défaut de la mise en page d’outils de la réalité mixte, cliquez sur appliquer.
     ![Leçon 1 Chapitre 2 Étape 3](images/Lesson1Chapter2Step3.JPG) ![Leçon 1 Chapitre 2 Étape 3](images/Lesson1Chapter2Step3b.JPG)
 
 ### <a name="configure-the-mixed-reality-toolkit"></a>Configurer le Kit de ressources de réalité mixte
 
-1. Configurez le Kit de ressources de réalité mixte en sélectionnant dans la barre de menus Mixed Reality Toolkit > Configure. Si vous ne voyez pas cet élément de menu après avoir importé le Kit de ressources de réalité mixte, redémarrez Unity.
-![Leçon 1 Chapitre 3 Étape 1](images/Lesson1Chapter3Step1.JPG)
-2. Votre scène contient maintenant plusieurs nouveaux éléments et modifications issus du Kit de ressources de réalité mixte. Enregistrez votre scène sous un autre nom en cliquant sur File>Save As (Fichier > Enregistrer sous) et donnez un nom à votre scène, par exemple BaseScene. Dans un souci d’organisation, enregistrez la scène dans le dossier « Scenes » du dossier Assets (Ressources) de votre projet.
-![Leçon 1 Chapitre 3 Étape2a](images/Lesson1Chapter3Step2a.JPG)
-![Leçon 1 Chapitre 3 Étape2b](images/Lesson1Chapter3Step2b.JPG)
+1. Configurez le MRTK en sélectionnant la boîte à outils de réalité mixte > configurer à partir de la barre de menus. Si vous ne voyez pas cet élément de menu après avoir importé le Kit de ressources de réalité mixte, redémarrez Unity.
+  ![Leçon 1 Chapitre 3 Étape 1](images/Lesson1Chapter3Step1.JPG)
+
+  > Remarque : Une boîte de dialogue contextuelle peut s’afficher pour vous demander de sélectionner un profil pour la boîte à outils de la réalité mixte. Si c’est le cas, sélectionnez OK, puis choisissez le profil nommé «DefaultMixedRealityToolkitConfigurationProfile».
+
+2. Votre scène aura plusieurs nouveaux éléments et modifications dans le MRTK. Enregistrez votre scène sous un nom différent en cliquant sur fichier > Enregistrer sous et donnez un nom à votre scène, par exemple BaseScene. Gardez votre scène organisée en l’enregistrant dans le dossier scenes du dossier de ressources de votre projet.
+  ![Leçon 1 Chapitre 3 Étape2a](images/Lesson1Chapter3Step2a.JPG)
+  ![Leçon 1 Chapitre 3 Étape2b](images/Lesson1Chapter3Step2b.JPG)
 
 ### <a name="build-your-application-to-your-device"></a>Générer votre application sur votre appareil
 
-1. Si vous avez fermé la fenêtre Build Settings dans les sections précédentes, rouvrez-la en choisissant File>Build Settings.
+1. Si vous avez fermé la fenêtre Paramètres de génération à partir des sections précédentes, ouvrez à nouveau la fenêtre Paramètres de build en accédant à fichier > paramètres de Build.
     ![Leçon 1 Chapitre 5 Étape 1](images/Lesson1Chapter5Step1.JPG)
 
-2. Vérifiez que la scène que vous souhaitez essayer figure dans la liste « Scenes in Build » (Scènes dans la génération) en cliquant sur le bouton « Add Open Scenes » (Ajouter des scènes ouvertes).
+2. Vérifiez que la scène que vous souhaitez essayer se trouve dans la liste scenes dans la build, en cliquant sur le bouton Ajouter des scènes en cours.
 
 3. Appuyez sur le bouton Build (Générer) pour commencer le processus de génération.
     ![Leçon 1 Chapitre 5 Étape 3](images/Lesson1Chapter5Step3.JPG)
 
-4. Créez un dossier pour votre application et nommez-le. Dans l’image ci-dessous, un dossier portant le nom « App » a été créé pour contenir l’application. Cliquez sur « Select Folder » (Sélectionner le dossier) pour commencer la génération dans le dossier que vous venez de créer. Une fois la génération terminée, vous pouvez fermer la fenêtre « Build Settings » dans Unity. 
+4. Créez un dossier pour votre application et nommez-le. Dans l’image ci-dessous, un dossier avec le nom de l’application a été créé pour contenir l’application. Cliquez sur Sélectionner un dossier pour commencer à créer le dossier nouvellement créé. Une fois la génération terminée, vous pouvez fermer la fenêtre Paramètres de build dans Unity. 
     ![Leçon 1 Chapitre 5 Étape 4](images/Lesson1Chapter5Step4.JPG)
 
-  > REMARQUE : Si la génération échoue, essayez de renouveler l’opération, éventuellement après avoir redémarré Unity. Si vous voyez une erreur comme « Error : CS0246 = The type or namespace name “XX” could not be found (are you missing a using directive or an assembly reference?) » (CS0246 = le type ou le nom de l’espace de noms « XX » est introuvable (une directive using ou une référence d’assembly est-elle manquante ?) », vous devrez peut-être installer [SDK Windows 10 (10.0.18362.0)](<https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk>)
+  > REMARQUE : Si la génération échoue, essayez de renouveler l’opération, éventuellement après avoir redémarré Unity. Si une erreur s’affiche, telle que «erreur: CS0246 = le type ou le nom d’espace de noms «XX» est introuvable (vous manque-t-il une directive using ou une référence d’assembly?). Si c’est le cas, vous devrez peut-être installer le [Kit de développement logiciel (SDK) Windows 10 (10.0.18362.0)](<https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk>)
   >
 
-5. Une fois la génération terminée, ouvrez le dossier créé qui contient vos fichiers d’application nouvellement générés. Double-cliquez sur la solution « MixedRealityBase.sln » (ou le nom correspondant, si vous avez utilisé un autre nom pour votre projet) pour ouvrir le fichier solution dans Visual Studio.
+5. Une fois la génération terminée, ouvrez le dossier créé qui contient vos fichiers d’application nouvellement générés. Double-cliquez sur la solution MixedRealityBase. sln, ou le nom correspondant, si vous avez utilisé un autre nom pour votre projet, pour ouvrir le fichier solution dans Visual Studio.
 
-  > Remarque: Veillez à ouvrir le dossier créé (par exemple, le dossier « App », si vous avez suivi les conventions de nommage indiquées aux étapes précédentes), car il existe un fichier .sln portant le même nom en dehors de ce dossier qui ne doit pas être confondu avec le fichier .sln situé dans le dossier de génération. 
+  > Remarque : Veillez à ouvrir le dossier nouvellement créé (c’est-à-dire, le dossier de l’application, si vous respectez les conventions d’affectation des noms des étapes précédentes), dans la mesure où il y aura un fichier. sln portant le même nom en dehors de ce dossier, à ne pas confondre avec le fichier. sln dans le dossier Build. 
 
 ![Leçon 1 Chapitre 5 Étape 5](images/Lesson1Chapter5Step5.JPG)
 
-  > Remarque: Si Visual Studio vous invite à installer de nouveaux composants, prenez un moment pour vous assurer que tous les composants requis sont installés comme spécifié dans la [page « Installer les outils »](install-the-tools.md).
+  > Remarque : Si Visual Studio vous invite à installer de nouveaux composants, prenez un moment pour vous assurer que tous les composants requis sont installés comme spécifié dans la [page « Installer les outils »](install-the-tools.md).
 
-6. Branchez l’appareil HoloLens 2 à votre PC avec le câble USB. Bien que les instructions de cette leçon supposent que vous déployez un test avec un appareil HoloLens 2, vous pouvez choisir d’effectuer le déploiement sur l’[émulateur HoloLens 2](using-the-hololens-emulator.md) ou de créer un [package d’application pour effectuer un chargement indépendant](<https://docs.microsoft.com/en-us/windows/uwp/packaging/packaging-uwp-apps>).
+6. Connectez votre HoloLens 2 à votre PC. Bien que ces instructions partent du principe que vous allez déployer un test avec un appareil HoloLens 2, vous pouvez également choisir de déployer vers l' [émulateur hololens 2](using-the-hololens-emulator.md) ou de créer un [package d’application pour chargement](<https://docs.microsoft.com/en-us/windows/uwp/packaging/packaging-uwp-apps>)
 
-7. Avant d’effectuer la génération sur votre appareil, vérifiez que ce dernier est en mode développeur. S’il s’agit de votre premier déploiement sur l’appareil HoloLens 2, Visual Studio peut vous demander de l’associer à un code confidentiel. Veuillez suivre [ces instructions](https://docs.microsoft.com/en-us/windows/mixed-reality/using-visual-studio) si vous devez activer le mode développeur ou associer l’appareil à Visual Studio.
+7. Avant d’effectuer la génération sur votre appareil, vérifiez que ce dernier est en mode développeur. Si c’est la première fois que vous déployez sur le HoloLens 2, Visual Studio peut vous demander d’associer votre HoloLens 2 avec un code confidentiel. Veuillez suivre [ces instructions](https://docs.microsoft.com/en-us/windows/mixed-reality/using-visual-studio) si vous devez activer le mode développeur ou associer l’appareil à Visual Studio.
 
-8. Configurez Visual Studio en vue d’effectuer la génération sur votre appareil HoloLens 2 en sélectionnant la configuration « Release » et l’architecture « ARM ».
+8. Configurez Visual Studio pour la création dans votre HoloLens 2 en sélectionnant la configuration Release et l’architecture ARM.
     ![Leçon 1 Chapitre 5 Étape 8](images/Lesson1Chapter5Step8.JPG)
 
-9. L’étape finale consiste à effectuer la génération sur votre appareil en sélectionnant Déboguer > Démarrer sans débogage. Quand vous sélectionnez « Démarrer sans débogage », l’application démarre immédiatement sur votre appareil si la génération réussit, mais les informations de débogage n’apparaissent pas dans Visual Studio. Cela signifie également que vous pouvez déconnecter le câble USB pendant que votre application s’exécute sur votre appareil HoloLens 2 sans arrêter celle-ci. Vous pouvez également sélectionner Générer > Déployer la solution pour effectuer le déploiement sur votre appareil sans que l’application démarre automatiquement.
+9. La dernière étape consiste à créer sur votre appareil en sélectionnant Déboguer > Exécuter sans débogage. Si vous sélectionnez l’option Exécuter sans débogage, l’application démarre immédiatement sur votre appareil lors d’une génération réussie, mais sans informations de débogage dans Visual Studio. Cela signifie également que vous pouvez déconnecter le câble USB pendant que votre application s’exécute sur votre appareil HoloLens 2 sans arrêter celle-ci. Vous pouvez également sélectionner générer > déployer la solution pour déployer sur votre appareil sans démarrer automatiquement l’application.
     ![Leçon 1 Chapitre 5 Étape 9](images/Lesson1Chapter5Step9.JPG)
 
 ## <a name="congratulations"></a>Félicitations
 
-Vous venez de déployer votre première application HoloLens 2. À mesure que vous vous déplacez, vous devez voir un maillage spatial couvrir toutes les surfaces qui ont été perçues par l’appareil HoloLens 2. En outre, vous devez voir des indicateurs sur vos mains et doigts pour le suivi de la main et un compteur de fréquence d’images pour vous tenir informé des performances de l’application. Ce ne sont là que quelques-uns des éléments fondamentaux immédiatement disponibles dans le Kit de ressources de réalité mixte. Au cours des leçons à venir, vous commencerez à ajouter du contenu et une interactivité à votre scène afin de pouvoir explorer pleinement les fonctionnalités de l’appareil HoloLens 2 et du Kit de ressources de réalité mixte.
+Vous avez maintenant déployé votre première application HoloLens 2. Au fur et à mesure que vous parcourez, vous devriez voir un maillage spatial couvrant toutes les surfaces qui ont été perçues par le HoloLens 2. En outre, vous devriez voir des indicateurs sur vos mains et vos doigts pour le suivi de la main et un compteur de fréquence d’images pour garder un œil sur les performances de l’application. Ce ne sont là que quelques-uns des éléments fondamentaux immédiatement disponibles dans le Kit de ressources de réalité mixte. Dans les leçons à venir, vous commencerez à ajouter du contenu et de l’interactivité à votre scène afin de pouvoir explorer pleinement les fonctionnalités de HoloLens 2 et de la boîte à outils de la réalité mixte.
 
->Remarque: Vous découvrirez comment afficher/masquer le compteur de fréquence d’images à l’aide d’une commande vocale dans la [Leçon 5](mrlearning-base-ch5.md).
+>Remarque : Vous découvrirez comment afficher/masquer le compteur de fréquence d’images à l’aide d’une commande vocale dans la [Leçon 5](mrlearning-base-ch5.md).
 
 [Leçon suivante : Interface utilisateur, suivi manuel et configuration du Kit de ressources de réalité mixte](mrlearning-base-ch2.md)

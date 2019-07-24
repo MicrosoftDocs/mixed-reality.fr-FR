@@ -1,11 +1,11 @@
 ---
 title: Mains-libres
-description: Optimisation de votre application pour mains libres
+description: Optimisation de votre application pour des mains libres
 author: liamar
 ms.author: liamar
 ms.date: 04/20/2019
 ms.topic: article
-keywords: Une réalité mixte, mains libres, utilisation, utilisation de ciblage, interaction, conception
+keywords: La réalité mixte, mains libres, point d’interposition, le regard, l’interaction et la conception
 ms.openlocfilehash: 7942192f644a7133335f089cfaaccfaebdd9292e
 ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
@@ -19,79 +19,79 @@ ms.locfileid: "67414395"
 
 ## <a name="scenarios"></a>Scénarios
 
-Comme indiqué dans le [vue d’ensemble du modèle d’Interaction](interaction-fundamentals.md), une fois que vous avez identifié les utilisateurs et leurs objectifs, demandez-vous quel environnementales ou connaissance défis liés peut qu’ils testent pour accomplir leurs tâches. Par exemple, les nombreux utilisateurs ont besoin d’utiliser les mains à atteindre leurs objectifs du monde réel et vous aurez des difficultés à interagir avec une interface en mains et contrôleurs. 
+Comme indiqué dans la [vue d’ensemble du modèle d’interaction](interaction-fundamentals.md), une fois que vous avez identifié les utilisateurs et leurs objectifs, posez-vous les difficultés environnementales ou de situation auxquelles ils peuvent faire face lorsqu’ils travaillent pour accomplir leurs tâches. Par exemple, de nombreux utilisateurs ont besoin d’utiliser leurs mains pour atteindre leurs objectifs réels, et auront des difficultés à interagir avec une interface basée sur les mains et les contrôleurs. 
 
-Certains scénarios spécifiques peuvent être : 
-* Être guidés dans une tâche, tandis que les mains sont occupés
-* Faisant référence à des documents tandis que vos mains sont occupés
+Certains scénarios spécifiques peuvent être: 
+* Guidée par le biais d’une tâche, tandis que les mains sont occupées
+* Référencement des matériaux lorsque vos mains sont occupées
 * Fatigue de main
-* Gants qui ne peut pas être suivis.
-* Exécution d’un élément
+* Gants qui ne peuvent pas être suivis
+* Transporter un événement
 
 
-## <a name="hands-free-modalities"></a>Modalités de mains libres
+## <a name="hands-free-modalities"></a>Modalités des mains libres
 
 ### <a name="voice-commandingvoice-designmd"></a>[Commander avec la voix](voice-design.md)
 
-À l’aide de votre voix à la commande et de contrôle de qu'une interface peut non seulement autoriser l’utilisateur à mains libres de fonctionner, mais également ignorer plusieurs étapes. L’utilisation de cette modalité peut varier d’autorisant l’utilisateur à lire simplement le nom de n’importe quel bouton audio pour l’activer, comme dans Voir-it-say-it, à converser avec un agent qui peut effectuer des tâches pour vous.
+L’utilisation de votre voix pour commander et contrôler une interface peut non seulement permettre à l’utilisateur d’utiliser Handsfree, mais également passer plusieurs étapes. L’utilisation de cette modalité peut aller de permettre à l’utilisateur de simplement lire le nom du bouton à haute voix pour l’activer, comme c’est le cas dans la section Voir-le-dit-IT, pour converser avec un agent qui peut accomplir des tâches pour vous.
 
 
 
 ### <a name="head-gaze-and-dwellgaze-and-dwellmd"></a>[Suivre de la tête et stabiliser](gaze-and-dwell.md)
 
-Dans certaines situations mains-libres, en utilisant votre voix n’est pas idéale ou même possible. Environnements d’usine forte, confidentialité ou normes sociaux peuvent tous être des contraintes. Utilisation de la tête + m’attarderai pas modèle permet à l’utilisateur à naviguer de l’application à l’aide de leur vecteur principal pour qu’il pointe, tout en attente, ou logement sur un bouton s’activer après une certaine quantité de temps, généralement environ 1 seconde ou ainsi. 
+Dans certaines situations mains libres, l’utilisation de votre voix n’est pas idéale, voire possible. Les environnements en usine bruyants, la confidentialité ou les normes sociales peuvent être des contraintes. Le modèle de point de vue du point de vue de la tête permet à l’utilisateur de parcourir l’application à l’aide de son vecteur d’en-tête pour pointer, tout en étant en attente ou le logement sur un bouton, l’active après un certain laps de temps, en général environ 1 seconde. 
 
 
-## <a name="transitioning-in-and-out-of-hands-free"></a>Transition vers et depuis mains libres
+## <a name="transitioning-in-and-out-of-hands-free"></a>Transition vers et à l’extérieur des mains libres
 
-Pour ces scénarios, libération vos mains d’interagir avec hologrammes pour la navigation et d’exécution des commandes peut aller d’une exigence absolue jusqu'à l’exploitation de l’application bout, à l’utilisateur peut effectuer la transition et se déconnecte d’à un d’une fonctionnalité supplémentaire heure. 
+Pour ces scénarios, le fait de libérer des mains de l’interaction avec les hologrammes pour les commandes et la navigation peut aller de l’exigence absolue à l’exploitation de l’application, de bout en bout, à un confort supplémentaire que l’utilisateur peut passer dans simultanément. 
 
-Si la configuration requise de l’application est qu’il sera toujours utilisé mains-libres, en utilisant la durée d’affichage, les commandes vocales ou les commandes vocales unique, « select », puis veillez à l’hébergement approprié dans votre interface utilisateur. 
+Si la spécification de l’application est qu’elle sera toujours utilisée librement, que ce soit à l’aide de son, de commandes vocales ou de la commande vocale unique, «Select», veillez à créer les logements appropriés dans votre interface utilisateur. 
 
-Si votre utilisateur cible doit être en mesure de passer de mains à mains libres à leur discrétion, il est important de tenir compte des principes suivants.
+Si votre utilisateur cible doit être en mesure de passer d’un mains à l’autre mains libres à sa discrétion, il est important de prendre en compte les principes suivants.
 
-### <a name="assume-the-user-is-already-in-the-mode-that-they-want-to-switch-to"></a>Supposons que l’utilisateur est déjà dans le mode qu’ils souhaitent pour basculer vers
-Par exemple, si l’utilisateur est en usine, regarder une vidéo référence sur son Hololens et décide de récupérer une clé pour commencer à utiliser, elle très probablement serait commencer à travailler dans les mains libres sans avoir à placer la clé d’appuyer sur un bouton vers le bas. Elle doit être en mesure d’appeler une session vocale avec une commande de voix, m’attarderai pas sur une interface utilisateur déjà visible pour commencer à durée d’affichage, ou que le mot « select ».
+### <a name="assume-the-user-is-already-in-the-mode-that-they-want-to-switch-to"></a>Supposons que l’utilisateur est déjà dans le mode vers lequel il souhaite passer
+Par exemple, si l’utilisateur se trouve en usine, regarde une référence vidéo sur son Hololens et décide de sélectionner une clé pour commencer à travailler, elle commence probablement à travailler dans Handsfree sans avoir à appuyer sur un bouton. Elle doit être en mesure d’appeler une session vocale avec une commande vocale, son logement sur une interface utilisateur déjà visible pour commencer son logement ou le mot «Select».
 
-L’utilisateur doit avoir la possibilité de : 
-* Commutateur de mains libres tandis que mains libres
-* Basculez vers entre les mains avec vos mains
-* Basculez vers le contrôleur à l’aide d’un contrôleur 
+L’utilisateur doit avoir la possibilité d’effectuer les opérations suivantes: 
+* Passez à l’option mains libres pendant les mains libres
+* Passez aux mains avec vos mains
+* Basculer vers le contrôleur à l’aide d’un contrôleur 
 
-### <a name="create-redundant-ways-to-switch-modes"></a>Créer pour basculer entre les modes redondant
-Bien que le premier principe soit sur l’accès, le second est sur la disponibilité. Il ne doit pas simplement être un moyen simple pour la transition vers et depuis un mode. 
+### <a name="create-redundant-ways-to-switch-modes"></a>Créer des méthodes redondantes pour basculer entre les modes
+Tandis que le premier principe concerne l’accès, la seconde concerne la disponibilité. Il ne doit pas s’agir simplement d’un moyen unique de transition vers et à partir d’un mode. 
 
-Il peut s’agir : 
-* Un bouton pour lancer des interactions vocales
-* Une commande de la voix pour effectuer la transition à l’utilisation du pointage de regard + durée d’affichage
+Voici quelques exemples: 
+* Un bouton pour commencer les interactions vocales
+* Commande vocale à utiliser pour la transition en utilisant le point de vue du regard
 
-### <a name="add-a-dash-of-drama"></a>Ajoutez un peu de pièces de théâtre
-Un commutateur de mode n’est pas anodin--il est important que lorsque ces transitions produisent à qui ils être un commutateur explicit, même considérable, pour informer l’utilisateur que s’est-il passé. 
+### <a name="add-a-dash-of-drama"></a>Ajouter un tiret de la fiction
+Un changement de mode est un facteur important: il est important que lorsque ces transitions se produisent, il s’agit d’un commutateur explicite, même spectaculaire, pour permettre à l’utilisateur de savoir ce qui s’est passé. 
 
 
-## <a name="usability-checklist"></a>Liste de vérification de facilité d’utilisation
+## <a name="usability-checklist"></a>Liste de vérification de l’utilisation
 
-**L’utilisateur peut faire de tout et rien mains-libres, end-to-end ?**
-* Chaque interactible doivent être accessibles mains libres
-* Vérifiez qu’il existe un remplacement pour tous les mouvements personnalisés, tels que redimensionnement, de placement, où les balayages, robinets, etc.
-* Assurez-vous que l’utilisateur dispose du contrôle sûr de l’interface utilisateur de présence, positionnement et commentaires à tout moment
-    * Obtention de l’interface utilisateur disparaître
-    * Adressage de l’interface utilisateur qui est en dehors du champ de vision (angle d’ouverture)
+**L’utilisateur peut-il faire tout et tout ce qui est mains libres, de bout en bout?**
+* Chaque interactible doit être accessible mains libres
+* Assurez-vous qu’il existe un remplacement de tous les mouvements personnalisés, tels que le redimensionnement, le placement, les balayages, les robinets, etc.
+* S’assurer que l’utilisateur a le contrôle assuré de la présence, de l’emplacement et des commentaires de l’interface utilisateur à tout moment
+    * Récupération de l’interface utilisateur
+    * Adressage de l’interface utilisateur en dehors de l’affichage (angle de vue)
     * Combien je vois, où, quand
 
-**Sont les mécanismes de l’interaction en cours dispensés et renforcés avec l’intuitivité droit ?**
+**Les mécanismes de l’interaction sont-ils enseignés et armés avec le bon intuitivité?**
 
-L’utilisateur comprend...
-* ... Quel mode ils compte-t-elle ?
-* ... Ce qu’ils peuvent faire dans ce mode ?
-* ... Quel est l’état actuel ?
-* ... Comment ils peuvent transition sortante ?
+L’utilisateur a-t-il compris...
+* ... Dans quel mode ils se trouvent-ils?
+* ... Qu’est-ce qu’il est possible de faire dans ce mode?
+* ... Quel est l’état actuel?
+* ... Comment elles peuvent être transférées?
     
-**L’interface utilisateur optimisée pour mains libres ?**   
+**L’interface utilisateur est-elle optimisée pour les mains libres?**   
 
-* Exemple : Balayage intuitivité n’est pas intégrées aux modèles 2D standard
-* Exemple : Ciblage de la voix est préférable avec mise en surbrillance de l’objet
-* Exemple : Interactions vocales sont meilleures avec des légendes qui doivent être mis sous tension
+* Exemple : Les intuitivités de logement ne sont pas intégrés aux modèles 2D typiques
+* Exemple : Le ciblage vocal est mieux adapté à la mise en surbrillance des objets
+* Exemple : Les interactions vocales sont mieux adaptées aux légendes qui doivent être activées
 
 
 ## <a name="see-also"></a>Voir aussi

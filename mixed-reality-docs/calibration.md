@@ -1,11 +1,11 @@
 ---
-title: Étalonnage
-description: Étalonnage de votre infrastructure ou IPD (distance interpupillary) peut améliorer la qualité de vos éléments visuels. HoloLens et Windows Mixed Reality des casques IMMERSIFS offrent des façons de personnaliser l’IPD.
+title: Auto
+description: L’étalonnage de votre IPD (distance interpupillary) peut améliorer la qualité de vos visuels. Les casques immersifs HoloLens et Windows Mixed Reality offrent des moyens de personnaliser la IPD.
 author: xerxesb85
 ms.author: xerxesb
 ms.date: 02/24/2019
 ms.topic: article
-keywords: calibration, comfort, visuals, quality, ipd
+keywords: étalonnage, confort, visuels, qualité, IPD
 ms.openlocfilehash: 5f8e6aef1df0efe4c64c807e627f69c7949363f2
 ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
@@ -13,12 +13,12 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 05/21/2019
 ms.locfileid: "65974804"
 ---
-# <a name="improve-visual-quality-and-comfort"></a>Améliorer le confort et qualité visuelle
-HoloLens, HoloLens 2 et Windows Mixed Reality des casques IMMERSIFS offrent différentes manières d’améliorer la qualité de l’expérience visuelle. 
+# <a name="improve-visual-quality-and-comfort"></a>Améliorez la qualité visuelle et le confort
+Les casques immersifs HoloLens, HoloLens 2 et Windows Mixed Reality offrent des méthodes différentes pour améliorer la qualité de l’expérience visuelle. 
 
 ## <a name="hololens"></a>HoloLens
 
-Étalonnage de votre infrastructure ou IPD (distance interpupillary) peut améliorer la qualité de vos éléments visuels.
+L’étalonnage de votre IPD (distance interpupillary) peut améliorer la qualité de vos visuels.
 
 ### <a name="during-setup"></a>Pendant l’installation
 
@@ -26,56 +26,56 @@ HoloLens, HoloLens 2 et Windows Mixed Reality des casques IMMERSIFS offrent diff
 
 *Écran d’alignement de doigt IPD à la deuxième étape*
 
-Sur HoloLens, vous devrez ajuster vos éléments visuels lors de l’installation. Cela permet à l’appareil ajuster l’affichage d’hologramme en fonction de l’utilisateur [interpupillary distance](https://en.wikipedia.org/wiki/Interpupillary_distance) (IPD). Avec une infrastructure ou IPD incorrect, hologrammes semble instable ou à une distance incorrecte.
+Sur HoloLens, vous serez invité à étalonner vos éléments visuels lors de l’installation. Cela permet à l’appareil d’ajuster l’affichage de l’hologramme en fonction de la [distance interpupillary](https://en.wikipedia.org/wiki/Interpupillary_distance) (IPD) de l’utilisateur. Avec une IPD incorrecte, les hologrammes peuvent paraître instables ou à une distance incorrecte.
 
-Une fois que Cortana se présente, la première étape d’installation est étalonnage. Il est recommandé que vous effectuer l’étape d’étalonnage durant cette phase d’installation, mais elle peut être ignorée en attente jusqu'à ce que Cortana vous invite à dire « Ignorer » pour déplacer sur.
+Une fois que Cortana s’est présente, la première étape d’installation est étalonnage. Il est recommandé d’effectuer l’étape d’étalonnage au cours de la phase d’installation, mais vous pouvez l’ignorer en attendant que Cortana vous invite à indiquer «ignorer» pour continuer.
 
-Les utilisateurs sont invités à aligner leurs doigts avec une série de six cibles par yeux. Ce processus, HoloLens définit l’IPD correct pour l’utilisateur. Si l’étalonnage doit être mis à jour ou ajustées pour un nouvel utilisateur, il peut être exécuté en dehors de l’installation à l’aide de l’application d’étalonnage.
+Les utilisateurs sont invités à aligner leur doigt sur une série de six cibles par œil. Grâce à ce processus, HoloLens définit le IPD correct pour l’utilisateur. Si l’étalonnage doit être mis à jour ou ajusté pour un nouvel utilisateur, il peut être exécuté en dehors de l’installation à l’aide de l’application d’étalonnage.
 
-### <a name="calibration-app"></a>Application de l’étalonnage
+### <a name="calibration-app"></a>Application d’étalonnage
 
-Étalonnage peut être effectuée à tout moment via l’application d’étalonnage. L’application d’étalonnage est installée par défaut et est accessible à partir du menu Démarrer, ou via l’application paramètres. Étalonnage est recommandé si vous souhaitez améliorer la qualité de vos éléments visuels ou étalonner les éléments visuels d’un nouvel utilisateur.
+L’étalonnage peut être effectué à tout moment par le biais de l’application d’étalonnage. L’application d’étalonnage est installée par défaut et est accessible à partir du menu Démarrer ou via l’application paramètres. L’étalonnage est recommandé si vous souhaitez améliorer la qualité de vos visuels ou étalonner des visuels pour un nouvel utilisateur.
 
-**Lancement de l’application à partir du début**
-1. Utilisez [bloom](gestures.md#bloom) pour accéder à [Menu Démarrer](navigating-the-windows-mixed-reality-home.md#start-menu).
-2. Sélectionnez **+** pour afficher toutes les applications.
-3. Lancez **étalonnage**.
+**Lancement de l’application à partir du démarrage**
+1. Utilisez [fleuri](gestures.md#bloom) pour accéder au [menu Démarrer](navigating-the-windows-mixed-reality-home.md#start-menu).
+2. Sélectionnez **+** cette option pour afficher toutes les applications.
+3. Lancement de l' **étalonnage**.
 
-![L’accès à l’application d’étalonnage à partir de l’interpréteur de commandes](images/calibration-shell.png)
+![Accès à l’application d’étalonnage à partir de l’interpréteur de commandes](images/calibration-shell.png)
 
-![L’application d’étalonnage affichée sous forme de Cube Live après son démarrage](images/calibration-livecube-200px.png)
+![Application d’étalonnage affichée sous la forme d’un cube actif après son lancement](images/calibration-livecube-200px.png)
 
 **Lancement de l’application à partir des paramètres**
-1. Utilisez [bloom](gestures.md#bloom) pour accéder à [Menu Démarrer](navigating-the-windows-mixed-reality-home.md#start-menu).
-2. Sélectionnez **+** pour afficher toutes les applications si **paramètres** n’est pas épinglé au début.
-3. Lancez **paramètres**.
-4. Accédez à **système** > **utilitaires** et sélectionnez **étalonnage Open**.
+1. Utilisez [fleuri](gestures.md#bloom) pour accéder au [menu Démarrer](navigating-the-windows-mixed-reality-home.md#start-menu).
+2. Sélectionnez **+** cette option pour afficher toutes les applications si **paramètres** n’est pas épinglé au démarrage.
+3. **Paramètres**de lancement.
+4. Accédez à**utilitaires** **système** > et sélectionnez **ouvrir l’étalonnage**.
 
 ![Lancement de l’application d’étalonnage à partir de l’application paramètres](images/calibration-settings-500px.jpg)
 
 ## <a name="hololens-2"></a>HoloLens 2
 
-### <a name="calibration"></a>Étalonnage 
+### <a name="calibration"></a>Auto 
 
-Sur HoloLens 2, vous devrez ajuster vos éléments visuels lors de l’installation de l’appareil. Les utilisateurs sont invités à consulter l’ensemble des cibles de fixation. Cela permet à l’appareil ajuster le rendu hologramme pour l’utilisateur pour vous assurer de hologrammes positionnées de manière précise, plus confortable 3D expérience d’affichage et amélioré la qualité d’affichage. Tous les ajustements se produisent à la volée sans besoin de réglage manuel. 
+Sur HoloLens 2, vous serez invité à étalonner vos visuels pendant la configuration de l’appareil. Les utilisateurs sont invités à examiner l’ensemble des cibles de fixation. Cela permet à l’appareil d’ajuster le rendu de l’hologramme pour l’utilisateur afin de garantir des hologrammes correctement positionnés, une expérience d’affichage 3D plus confortable et une meilleure qualité d’affichage. Tous les ajustements se produisent à la volée, sans nécessiter de paramétrage manuel. 
 
 ### <a name="calibration-when-sharing-a-device"></a>Étalonnage lors du partage d’un appareil 
 
-APPAREIL Hololens 2 peut être partagé entre les personnes, sans besoin de chaque personne à passer par le programme d’installation de périphérique. Hololens 2 invitera l’utilisateur d’étalonner les visuels lorsque l’appareil est placé sur la tête, si l’utilisateur est une nouveauté de l’appareil. Si l’utilisateur a déjà étalonné des éléments visuels sur l’appareil, affichage soient en toute transparence ajusté de qualité et de confort lorsque l’utilisateur place le périphérique sur la tête.  
+L’appareil Hololens 2 peut être partagé entre les personnes, sans qu’il soit nécessaire de passer par le programme d’installation de l’appareil. Hololens 2 invite l’utilisateur à étalonner des éléments visuels lorsque l’appareil est mis en tête, si l’utilisateur est nouveau sur l’appareil. Si l’utilisateur a déjà étalonné des éléments visuels sur l’appareil, l’affichage sera réglé en toute transparence pour une qualité et une expérience d’affichage optimale lorsque l’utilisateur placera l’appareil en tête.  
 
 ### <a name="launching-the-calibration-app-from-settings"></a>Lancement de l’application d’étalonnage à partir des paramètres
-1. Démarrer un mouvement permet d’obtenir au Menu Démarrer.
-2. Sélectionnez **+** pour afficher toutes les applications si **paramètres** n’est pas épinglé au début.
-3. Lancez **paramètres**.
-4. Accédez à **système** > **utilitaires** et sélectionnez **étalonnage Open**.
+1. Utilisez l’option démarrer le mouvement pour accéder au menu Démarrer.
+2. Sélectionnez **+** cette option pour afficher toutes les applications si **paramètres** n’est pas épinglé au démarrage.
+3. **Paramètres**de lancement.
+4. Accédez à**utilitaires** **système** > et sélectionnez **ouvrir l’étalonnage**.
 
 ## <a name="immersive-headsets"></a>Casques immersifs
 
-Pour modifier l’IPD au sein de votre casque, ouvrez l’application paramètres et accédez à **une réalité mixte** > **affichage de casque** et faites glisser le curseur. Vous verrez les modifications en temps réel dans votre casque. Si vous connaissez votre IPD, peut-être à partir d’une visite à l’optométriste, vous pouvez entrer elle aussi directement.
+Pour modifier l’IPD au sein de votre casque, ouvrez l’application paramètres et accédez à l'**affichage du casque** de **réalité** > mixte et déplacez le curseur. Vous verrez les modifications en temps réel dans votre casque. Si vous connaissez votre IPD, peut-être à partir d’une visite sur le Optometrist, vous pouvez également l’entrer directement.
 
-Vous pouvez également ajuster ce paramètre en accédant à **paramètres** > **une réalité mixte** > **affichage de casque** sur votre PC.
+Vous pouvez également ajuster ce paramètre en accédant à **paramètres** > **affichage du casque** de la**réalité** > mixte sur votre PC.
 
-Si votre casque ne prend pas en charge la personnalisation de l’IPD, ce paramètre sera désactivé.
+Si votre casque ne prend pas en charge la personnalisation IPD, ce paramètre est désactivé.
 
 ## <a name="see-also"></a>Voir aussi
 * [Considérations relatives à l’environnement pour HoloLens](environment-considerations-for-hololens.md)

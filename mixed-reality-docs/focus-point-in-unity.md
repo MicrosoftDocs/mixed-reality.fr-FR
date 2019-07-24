@@ -1,37 +1,37 @@
 ---
 title: Point de focus dans Unity
-description: Régler manuellement la stabilité hologramme dans Unity en définissant le point de focus
+description: Réglage manuel de la stabilité des hologrammes dans Unity en définissant le point de focus
 author: thetuvix
 ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Unity, point de focus, plan de focus, plan de stabilisation, point de stabilisation, reprojection, LSR, mémoire tampon de profondeur
+keywords: Unity, point de focalisation, plan de focalisation, plan de stabilisation, point de stabilisation, reprojection, LSR, tampon de profondeur
 ms.openlocfilehash: 0f43c37df66ecada86dcb309fcd58d822f0f3481
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59597037"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63525460"
 ---
 # <a name="focus-point-in-unity"></a>Point de focus dans Unity
 
-**Namespace :** *UnityEngine.XR.WSA*<br>
+**Espace de noms :** *UnityEngine. XR. WSA*<br>
 **Type** : *HolographicSettings*
 
-Le [concentrer point](hologram-stability.md#stabilization-plane) peut être définie sur fournir HoloLens un indicateur sur comment effectuer au mieux stabilisation sur les hologrammes actuellement en cours affiche.
+Le [point de focus](hologram-stability.md#stabilization-plane) peut être défini pour fournir à HoloLens une indication sur la façon d’effectuer la meilleure stabilisation sur les hologrammes actuellement affichés.
 
-Si vous souhaitez définir le Point de Focus dans Unity, il doit être définie à chaque image en utilisant le *HolographicSettings.SetFocusPointForFrame()*. Si le Point de Focus n’est pas défini pour un frame, le plan de stabilisation par défaut sera utilisé.
+Si vous souhaitez définir le point de focus dans Unity, vous devez définir chaque frame à l’aide de *HolographicSettings. SetFocusPointForFrame ()* . Si le point de focus n’est pas défini pour un frame, le plan de stabilisation par défaut est utilisé.
 
 > [!NOTE]
-> Par défaut, nouveaux projets de Unity ont l’option « Activer le partage de mémoire tampon profondeur » définie.  Avec cette option, une application Unity s’exécutant sur un casque immersif de bureau ou un HoloLens exécutant Windows 10 avril 2018 mise à jour (RS4) ou plus tard votre mémoire tampon de profondeur à Windows pour optimiser la stabilité hologramme automatiquement, sans spécifier de votre application envoie un point de focus :
-> * Sur un casque bureau immersif, cela permettra reprojection en fonction de profondeur de par pixel.
-> * Sur un HoloLens exécutant Windows 10 avril 2018 mettre à jour ou une version ultérieure, cette analyse le tampon de profondeur pour choisir un plan de stabilisation optimal automatiquement.
+> Par défaut, l’option «Activer le partage de tampon de profondeur» est définie pour les nouveaux projets Unity.  Avec cette option, une application Unity s’exécutant sur un casque de bureau immersif ou sur un HoloLens exécutant la mise à jour 2018 d’avril de Windows 10 (RS4) ou une version ultérieure envoie votre tampon de profondeur à Windows pour optimiser la stabilité de l’hologramme automatiquement, sans que votre application spécifie un point de Focus:
+> * Sur un casque d’un bureau immersif, cela permet une reprojection basée sur la profondeur par pixel.
+> * Sur un HoloLens exécutant la mise à jour 2018 de Windows 10 avril ou une version ultérieure, le tampon de profondeur est analysé afin de choisir un plan de stabilisation optimal automatiquement.
 >
-> Chacune de ces approches doit fournir encore meilleure qualité d’image sans travail explicite par votre application pour sélectionner un point de focus chaque frame.  Notez que si vous fournissez manuellement un point de focus, qui remplacera le comportement automatique décrit ci-dessus et permet généralement de réduire la stabilité hologramme.  En règle générale, vous devez spécifier un point de mise au point manuelle uniquement lorsque votre application s’exécute sur un HoloLens n’a pas encore été mis à jour pour les fenêtres de mettre à jour du 10 avril 2018.
+> L’une ou l’autre de ces approches doit offrir une meilleure qualité d’image sans que votre application ait un travail explicite pour sélectionner un point de focus sur chaque cadre.  Notez que si vous fournissez un point de focalisation manuellement, cela remplacera le comportement automatique décrit ci-dessus et réduira généralement la stabilité de l’hologramme.  En règle générale, vous devez uniquement spécifier un point de focus manuel lorsque votre application s’exécute sur un HoloLens qui n’a pas encore été mis à jour vers la mise à jour 2018 d’avril de Windows 10.
 
 ### <a name="example"></a>Exemple
 
-Il existe plusieurs façons de définir le Point de Focus, comme suggéré par les surcharges disponibles sur le *SetFocusPointForFrame* fonction statique. Présentée ci-dessous est un exemple simple de définir le plan de focus à l’objet fourni chaque frame :
+Il existe de nombreuses façons de définir le point de focus, comme suggéré par les surcharges disponibles sur la fonction statique *SetFocusPointForFrame* . Vous trouverez ci-dessous un exemple simple pour définir le plan de focus sur l’objet fourni chaque frame:
 
 ```cs
 public GameObject focusedObject;
@@ -48,7 +48,7 @@ void Update()
 }
 ```
 
-Notez que le simple code ci-dessus peut retrouver en réduisant la stabilité hologramme si l’objet ayant le focus se retrouve derrière l’utilisateur.  C’est pourquoi vous devez généralement définir « Activer le partage de mémoire tampon de profondeur » au lieu de spécifier manuellement un point de focus.
+Notez que le code simple ci-dessus peut finir par réduire la stabilité des hologrammes si l’objet ayant le focus se termine derrière l’utilisateur.  C’est la raison pour laquelle vous devez généralement définir «activer le partage de mémoire tampon de profondeur» au lieu de spécifier manuellement un point de focus.
 
 ### <a name="see-also"></a>Voir aussi
 * [Plan de stabilisation](hologram-stability.md#stabilization-plane)

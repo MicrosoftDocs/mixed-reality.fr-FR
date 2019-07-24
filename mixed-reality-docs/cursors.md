@@ -1,98 +1,98 @@
 ---
 title: Curseurs
-description: Un curseur, ou indiquer votre vecteur de ciblage, fournit des commentaires en continu pour l’utilisateur à comprendre ce que comprend HoloLens sur leurs intentions.
+description: Un curseur, ou un indicateur de votre vecteur de ciblage, fournit des commentaires continus permettant à l’utilisateur de comprendre ce que HoloLens comprend pour ses intentions.
 author: thetuvix
 ms.author: alexturn, thgable
 ms.date: 02/24/2019
 ms.topic: article
-keywords: HoloLens (1er gen), 2 de HoloLens, réalité mixte, les curseurs, ciblage, regards, les mouvements
+keywords: HoloLens (1re génération), HoloLens 2, réalité mixte, curseurs, ciblage, point de regard, mouvements
 ms.openlocfilehash: cdedcaffabe0f90e7956fdb19a7b85e202fcf403
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59596948"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63526216"
 ---
 # <a name="cursors"></a>Curseurs
 
 > [!NOTE]
-> Obtenir des instructions spécifiques pour HoloLens 2 [bientôt](index.md#news-and-notes).
+> Plus d’instructions spécifiques à HoloLens 2 bientôt [disponible](index.md#news-and-notes).
 
 
-Un curseur, ou indiquer votre vecteur actuel de ciblage, fournit des commentaires en continu pour l’utilisateur à comprendre où HoloLens estime que leur focus actuel sont à ce moment-là. Le curseur permet de pointer l’utilisateur à comprendre leur ciblant actuel et agit en tant que commentaires pour indiquer quelle zone, hologramme ou point répondra à entrer. Il s’agit de la numérique représentation où l’appareil comprend l’attention des utilisateurs (même si qui ne peut pas être identique à la détermination de quoi que ce soit sur leurs intentions).
+Un curseur, ou un indicateur de votre vecteur de ciblage actuel, fournit des commentaires continus permettant à l’utilisateur de comprendre où HoloLens pense que son focus actuel est à ce moment-là. Le curseur permet à l’utilisateur de comprendre son point de ciblage actuel et agit comme un feedback pour indiquer la zone, l’hologramme ou le point qui répondra à l’entrée. Il s’agit de la représentation numérique de l’endroit où l’appareil comprend l’attention de l’utilisateur (bien que cela puisse ne pas être le même que pour déterminer quoi que ce soit sur leurs intentions).
 
-Les commentaires formulés par le curseur offre aux utilisateurs la possibilité d’anticiper la façon dont le système répond, utiliser ce signal en tant que commentaires pour mieux communiquer leur intention de l’appareil et finalement être plus confiants sur leurs interactions.
+Les commentaires fournis par le curseur permettent aux utilisateurs d’anticiper la façon dont le système répondra, utilisez ce signal comme commentaires afin de mieux communiquer leur intention à l’appareil et, en dernier lieu, soyez plus convaincu de leurs interactions.
 
-## <a name="hololens-1st-gen"></a>HoloLens (1er gen)
+## <a name="hololens-1st-gen"></a>HoloLens (1ère génération)
 
-Ciblage du contenu sur HoloLens (1er gen) s’effectue principalement avec la [les regards](gaze.md) vecteur (un rayon contrôlé par la position et la rotation de la tête). Cela fournit un formulaire d’entrée directe pour l’utilisateur qui a besoin de peu d’enseignement. Toutefois, les utilisateurs ont des difficultés à utiliser un centre de regards de non marqué pour le ciblage précis pour un curseur garantit que les utilisateurs connaissent le point qu'actuellement cibler. 
+Le ciblage du contenu sur HoloLens (1re génération) s’effectue principalement avec le vecteur point de [regard](gaze.md) (un rayon contrôlé par la position et la rotation de l’en-tête). Cela fournit une forme d’entrée directe pour l’utilisateur qui a besoin d’une petite enseigne. Toutefois, les utilisateurs ont des difficultés à utiliser un centre de regard non marqué pour un ciblage précis afin qu’un curseur permette aux utilisateurs de connaître le point qu’ils ciblent actuellement. 
 
 
 ## <a name="positioning"></a>Positionnement
 
-En règle générale, l’indicateur doit déplacer environ un ratio de 1:1 avec un mouvement de la tête. Il existe certains cas où gain (augmentation ou une diminution des mouvements sensiblement) peut être utilisée comme un garagiste intentionnel, mais elle entraîne des problèmes pour les utilisateurs si utilisé de façon inattendue (Notez qu’il existe une petite quantité de 'lag' recommandé pour le curseur afin d’éviter des problèmes avec contenu entièrement verrouillé en affichage). Plus important encore, expériences doivent être « honnêtes » dans la représentation sous forme de position du curseur - si le lissage, magnétisme, gain, ou autres effets sont inclus, le système doit continue d’afficher le curseur partout où compréhension du système de position est avec ceux effets inclus. Le curseur est moyen du système d’indiquer à l’utilisateur qu’ils peuvent ou ne peuvent pas interagir, pas les moyen de l’utilisateur d’indiquer le système.
+En général, l’indicateur doit se déplacer dans un rapport d’environ 1:1 avec le mouvement de la tête. Dans certains cas, le gain (augmentation ou réduction du mouvement est notable) peut être utilisé comme mécanicien intentionnel, mais cela risque d’entraîner des problèmes pour les utilisateurs s’ils sont utilisés de façon inattendue (Notez qu’il y a un peu de «décalage» recommandé pour le curseur afin d’éviter les problèmes avec contenu verrouillé complet). Plus important encore, l’expérience doit être «honnête» dans la représentation de la position du curseur: si le lissage, le magnétisme, le gain ou d’autres effets sont inclus, le système doit toujours afficher le curseur là où la compréhension de la position du système est, avec celles effets inclus. Le curseur est la méthode du système qui permet d’indiquer à l’utilisateur ce qu’il peut ou ne peut pas interagir, et non celui de l’utilisateur.
 
-L’indicateur doit idéalement verrouiller en profondeur pour les éléments de l’utilisateur peut cibler plausibly. Cela peut signifier l’aire de verrouillage s’il existe certaines [mappage Spatial](spatial-mapping.md) maillage ou à la profondeur de n’importe quel éléments d’interface utilisateur « flottants », le verrouillage pour aider l’utilisateur à comprendre ce qu’ils peuvent interagir avec en temps réel.
+L’indicateur doit idéalement verrouiller en profondeur les éléments que l’utilisateur peut plausibly cibler. Cela peut signifier le verrouillage de surface s’il existe un maillage de [mappage spatial](spatial-mapping.md) ou un verrouillage à la profondeur de tous les éléments d’interface utilisateur «flottants», afin d’aider l’utilisateur à comprendre à quoi il peut interagir en temps réel.
 
 ## <a name="cursor-design-principles"></a>Principes de conception de curseur
 
 ### <a name="always-present"></a>Toujours présent
-* Nous recommandons que le curseur est toujours présent.
-* Si l’utilisateur ne peut pas trouver le curseur, elles sont perdues.
-* Exceptions sont des instances où l’ayant un curseur fournit une expérience non optimal pour l’utilisateur. Voici un exemple : un utilisateur est chargé d’observer une vidéo. Le curseur devient indésirable à ce stade, car elle est en cours de la vidéo de tout le temps. Il s’agit d’un scénario où vous pouvez envisager de rendre le curseur visible uniquement lorsque l’utilisateur a la main indiquant un désir de prendre des mesures. Sinon, il n’est pas visible dans la vidéo.
+* Nous recommandons que le curseur soit toujours présent.
+* Si l’utilisateur ne parvient pas à trouver le curseur, ces derniers sont perdus.
+* Les exceptions sont les cas où le fait d’avoir un curseur offre une expérience non optimale pour l’utilisateur. C’est le cas, par exemple, lorsqu’un utilisateur regarde une vidéo. Le curseur devient indésirable à ce stade, car il se trouve au milieu de la vidéo tout le temps. Il s’agit d’un scénario dans lequel vous pouvez envisager de rendre le curseur visible uniquement lorsque l’utilisateur a la main pour indiquer qu’il souhaite agir. Dans le cas contraire, il n’est pas visible dans la vidéo.
 
-### <a name="cursor-scale"></a>Mise à l’échelle de curseur
-* Le curseur doit être ne dépassant pas les cibles disponibles, permettant aux utilisateurs d’interagir facilement avec et afficher le contenu.
-* En fonction de l’expérience que vous créez, mise à l’échelle le curseur que l’utilisateur recherche est également un facteur important. Par exemple, comme l’utilisateur cherche plus loin absent dans votre expérience peut-être le curseur ne doit pas devenir trop petit telles que son perdues.
-* Le curseur de l’échelle, envisagez de lui appliquer une animation de manière réversible comme il s’adapte en lui attribuant un sentiment organique.
-* Évitez l’obstruction de contenu. Hologrammes sont permettent à l’expérience facile à mémoriser et le curseur ne doit pas suivre en dehors de leur.
+### <a name="cursor-scale"></a>Échelle du curseur
+* Le curseur ne doit pas être plus grand que les cibles disponibles, ce qui permet aux utilisateurs d’interagir facilement avec et d’afficher le contenu.
+* En fonction de l’expérience que vous créez, il est également important de mettre à l’échelle le curseur à mesure que l’utilisateur regarde. Par exemple, à mesure que l’utilisateur regarde plus loin dans votre expérience, il est possible que le curseur ne devienne pas trop petit, ce qui est perdu.
+* Lors de la mise à l’échelle du curseur, envisagez de lui appliquer une animation floue, car il évolue pour lui donner un sentiment organique.
+* Évitez d’obstruer le contenu. Les hologrammes sont ce qui rend l’expérience mémorable et le curseur ne doit pas être pris en charge.
 
-### <a name="directionless-cursor"></a>Curseur sombre
-* Bien qu’il n’y a pas une forme de curseur approprié, nous vous recommandons d’utiliser une forme sombre comme un anneau ou quelque chose d’autre. Un curseur qui pointe dans une direction (ex : un curseur en flèche traditionnel) peut induire en erreur l’utilisateur de rechercher toujours de cette façon.
-* Une exception à cette règle est lorsque vous utilisez le curseur pour communiquer des instructions d’interaction à l’utilisateur. Par exemple, lors de la mise à l’échelle hologrammes dans l’interpréteur de commandes Windows HOLOGRAPHIQUE, le curseur inclut temporairement les flèches qui aident à demander à l’utilisateur comment déplacer la main à l’échelle l’hologramme.
+### <a name="directionless-cursor"></a>Curseur bidirectionnel
+* Bien qu’il n’y ait pas de forme de curseur droite, nous vous recommandons d’utiliser une forme sans direction comme un tore ou autre chose. Un curseur qui pointe dans une certaine direction (par exemple, un curseur en forme de flèche traditionnel) peut dérouter l’utilisateur pour qu’il se présente toujours de cette façon.
+* Une exception est lors de l’utilisation du curseur pour communiquer des instructions d’interaction à l’utilisateur. Par exemple, lors de la mise à l’échelle d’hologrammes dans l’interpréteur de commandes Windows holographique, le curseur comprend temporairement des flèches qui permettent d’indiquer à l’utilisateur comment déplacer sa main pour mettre l’hologramme à l’échelle.
 
 ### <a name="look-and-feel"></a>Apparence
-* La forme d’un graphique en anneau ou un anneau works de curseur pour un grand nombre d’applications.
+* Un curseur en forme de bouée ou de Tore fonctionne pour de nombreuses applications.
 * Choisissez une couleur et une forme qui correspond le mieux à l’expérience que vous créez.
-* Les curseurs sont particulièrement sujettes à [séparation des couleurs](hologram-stability.md#color-separation).
-* Un petit curseur avec une opacité à charge équilibrée met constamment informatives sans domine la hiérarchie d’objets visuel.
-* Être informé de l’utilisation des ombres ou les grands titres derrière votre curseur car elles peuvent entraver le contenu et l’objectif d’un point.
-* Les curseurs doivent aligner sur et étreinte les surfaces dans votre application, vous obtiendrez l’utilisateur un sentiment que le système peut voir où dont ils ont besoin, mais également que le système est informé de leur environnement.
-* Par exemple, dans le système d’exploitation holographique de Windows, le curseur s’aligne sur les surfaces du monde de l’utilisateur, création d’un sentiment de la connaissance du monde de même lorsque l’utilisateur n’est pas examinant directement un hologramme...
-* Verrouillage magnétique le curseur sur un élément interactif lorsqu’il est au sein de proximité. Cela peut aider à améliorer la confiance que l’utilisateur interagit avec cet élément lorsqu’ils effectuent une action de sélection.
+* Les curseurs sont particulièrement sujets à la [séparation des couleurs](hologram-stability.md#color-separation).
+* Un petit curseur avec une opacité équilibrée conserve l’information, sans qui prennent la hiérarchie visuelle.
+* Soyez Cognizant de l’utilisation des ombres ou des surbrillances derrière votre curseur, car elles peuvent entraver le contenu et distraire de l’objectif.
+* Les curseurs doivent s’aligner sur les surfaces de votre application et les étreinter, ce qui donne à l’utilisateur un sentiment que le système peut voir où il regarde, mais également que le système est conscient de son environnement.
+* Par exemple, dans le système d’exploitation Windows holographique, le curseur s’aligne sur les surfaces du monde de l’utilisateur, ce qui crée un sentiment de conscience du monde même lorsque l’utilisateur n’regarde pas directement sur un hologramme.
+* Verrouillage magnétique du curseur sur un élément interactif lorsqu’il se trouve à proximité. Cela peut contribuer à améliorer la confiance que l’utilisateur interagit avec cet élément lorsqu’il effectue une action de sélection.
 
 ### <a name="visual-cues"></a>Signaux visuels
-* Il y a beaucoup d’informations dans notre monde et nous ajoutons avec hologrammes de plus d’informations. Un curseur est un excellent moyen de communiquer à l’utilisateur, ce qui est important.
-* Si votre expérience se concentre sur un hologramme unique, puis peut-être votre curseur aligne et bloquée uniquement de hologramme et modifications de la forme lorsque vous consultez en dehors de ce hologramme. Cela peut transmettre à l’utilisateur que l’hologramme est spéciale et ils peuvent interagir avec lui.
-* Si votre application utilise le mappage spatial, votre curseur peut aligner et étreinte chaque surface qu'il voit. Cela donne des commentaires aux utilisateurs ce HoloLens et votre application peut voir leur espace.
-* Ces éléments vous aider à renforcer le fait que hologrammes sont réel et dans notre monde. Ils permettent de combler le fossé entre réels et virtuels.
-* Vous avez une idée de ce que le curseur doit faire lorsqu’il n’y aucun hologrammes ou surfaces dans la vue. En le plaçant à une distance prédéterminée devant l’utilisateur est une option.
+* Il y a beaucoup d’informations dans notre monde et avec des hologrammes, nous ajoutons des informations supplémentaires. Un curseur est un excellent moyen de communiquer à l’utilisateur ce qui est important.
+* Si votre expérience est axée sur un seul hologramme, peut-être que votre curseur s’aligne et Hugs uniquement Cet hologramme et change de forme lorsque vous regardez loin de cet hologramme. Cela peut indiquer à l’utilisateur que l’hologramme est spécial et qu’il peut interagir avec lui.
+* Si votre application utilise le mappage spatial, votre curseur peut s’aligner sur chaque surface visible. Ainsi, les utilisateurs peuvent voir que HoloLens et votre application peuvent voir leur espace.
+* Ces éléments permettent de renforcer le fait que les hologrammes sont réels et dans notre monde. Ils permettent de combler le fossé entre les véritables et les virtuels.
+* Avoir une idée de ce que le curseur doit faire lorsqu’il n’y a pas d’hologrammes ou de surfaces en vue. La placer à une distance prédéterminée devant l’utilisateur est une option.
 
-## <a name="cursor-feedback"></a>Commentaire du curseur
+## <a name="cursor-feedback"></a>Commentaires sur le curseur
 
-Comme nous l’avons mentionné qu’il est conseillé pour que le curseur soit toujours présente, comme vous pouvez utiliser le curseur pour transmettre des bits importants d’informations.
+Comme nous l’avons mentionné, il est recommandé d’avoir le curseur toujours présent, car vous pouvez utiliser le curseur pour transmettre des informations importantes.
 
 ### <a name="possible-actions"></a>Actions possibles
-* Lorsque l’utilisateur est gazing à un hologramme et le curseur se trouve sur ce HOLOGRAMME, vous pouvez utiliser le curseur pour transmettre les actions possibles sur ce hologramme.
-* Vous pouvez afficher une icône sur le curseur que l’utilisateur peut par exemple acheter élément ou peut-être que hologramme mises à l’échelle. Ou même quelque chose d’aussi simple que l’hologramme peut être activé par un clic sur.
-* Ajouter uniquement des informations supplémentaires sur le curseur, si cela signifie que quelque chose à l’utilisateur. Sinon, les utilisateurs n’avez peut-être soit remarqué les modifications d’état ou perturbés par le curseur.
+* Étant donné que l’utilisateur est Gazing à un hologramme et que le curseur se trouve sur cet hologramme, vous pouvez utiliser le curseur pour acheminer les actions possibles sur cet hologramme.
+* Vous pouvez afficher sur le curseur une icône qui peut, par exemple, Acheter cet élément ou mettre à l’échelle Cet hologramme. Vous pouvez également utiliser des éléments aussi simples que l’hologramme.
+* Ajoutez uniquement des informations supplémentaires sur le curseur si cela revient à l’utilisateur. Dans le cas contraire, les utilisateurs peuvent ne pas remarquer les modifications d’État ou être confondus par le curseur.
 
 ### <a name="input-state"></a>État d’entrée
-* Nous pourrions utiliser le curseur pour afficher l’état d’entrée de l’utilisateur. Par exemple, nous pouvons afficher une icône indiquant si le système détecte leur état disponible à l’utilisateur. Cela indique à l’utilisateur que l’application sait que l’utilisateur est prêt à prendre des mesures.
-* Nous pourrions également utiliser le curseur pour qu’un utilisateur prenant en charge qu’une commande vocale est disponible. Ou peut-être modifier la couleur du curseur momentanément à indiquer à l’utilisateur que la commande voix a été émises par le système.
+* Nous pourrions utiliser le curseur pour afficher l’état d’entrée de l’utilisateur. Par exemple, nous pourrions afficher une icône indiquant à l’utilisateur si le système voit son état main. Cela indique à l’utilisateur que l’application sait que l’utilisateur est prêt à agir.
+* Nous pourrions également utiliser le curseur pour permettre à l’utilisateur de savoir qu’une commande vocale est disponible. Ou peut-être modifier momentanément la couleur du curseur pour indiquer à l’utilisateur que la commande vocale a été entendue par le système.
 
-Ces États de curseur différent peuvent être implémentés de différentes façons. Vous pouvez implémenter ces différents États en modélisant le curseur comme une machine à états. Exemple :
-* État d’inactivité est où vous affichez le curseur par défaut.
-* L’état prêt est lorsque vous avez détecté main de l’utilisateur dans la position de prête.
-* État d’interaction est quand l’utilisateur effectue une interaction particulière.
-* État des Actions possibles est lorsque vous indiquez des actions possibles qui peuvent être effectuées sur un hologramme.
+Ces différents États de curseur peuvent être implémentés de différentes façons. Vous pouvez implémenter ces différents États en modélisant le curseur comme une machine à États. Exemple :
+* L’état inactif est l’endroit où vous affichez le curseur par défaut.
+* L’état prêt est lorsque vous avez détecté la main de l’utilisateur en position prête.
+* L’état d’interaction est lorsque l’utilisateur effectue une interaction particulière.
+* L’État actions possibles est lorsque vous transmettent des actions possibles qui peuvent être effectuées sur un hologramme.
 
-Vous pouvez aussi implémenter ces États de manière en mesure de l’apparence de telle sorte que vous pouvez afficher les composants graphiques différents lors de la détection des différents états.
+Vous pouvez également implémenter ces États en fonction de l’apparence, de sorte que vous pouvez afficher différentes ressources artistiques lorsque différents États sont détectés.
 
-## <a name="going-cursor-free"></a>Va « curseur-libre »
+## <a name="going-cursor-free"></a>Passage en «sans curseur»
 
-Conception sans un curseur est recommandée uniquement lorsque le sens d’immersion est un composant clé d’une expérience, et les interactions qui impliquent le ciblage (par le biais du pointage de regard et mouvement) ne nécessitent pas une grande précision. Le système doit tout en respectant les exigences qui sont normalement satisfaites par un curseur cependant - offrant aux utilisateurs des commentaires en continu de compréhension du système de leurs ciblant les aidant ainsi à communiquer en toute confiance leurs intentions dans le système. Cela peut être réalisable via d’autres modifications notables d’état.
+La conception sans curseur est recommandée uniquement lorsque le sens de l’immersion est un composant clé d’une expérience, et les interactions qui impliquent le ciblage (via le point de regard et le mouvement) ne nécessitent pas de précision. Le système doit toujours répondre aux besoins normalement atteints par un curseur, ce qui permet aux utilisateurs d’obtenir des commentaires continus sur la compréhension du système de leur ciblage et de les aider à communiquer leurs intentions au système en toute confiance. Cela peut être réalisable par d’autres changements d’État perceptibles.
 
 ## <a name="see-also"></a>Voir aussi
 * [Mouvements](gestures.md)
-* [Ciblage des regards](gaze-targeting.md)
+* [Pointage du regard](gaze-targeting.md)

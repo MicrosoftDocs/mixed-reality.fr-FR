@@ -1,11 +1,11 @@
 ---
 title: Conception de mappage spatial
-description: Utilisation efficace de mappage spatial dans HoloLens nécessite une attention particulière de nombreux facteurs.
+description: L’utilisation effective du mappage spatial dans HoloLens requiert un examen attentif de nombreux facteurs.
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Mappage de Windows Mixed Reality, conception, spatiale, HoloLens, surface reconstruction, maillage
+keywords: Windows Mixed Reality, conception, mappage spatial, HoloLens, reconstruction de surface, maille
 ms.openlocfilehash: 451213a79e1d482d64725ce750065611830beec3
 ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
@@ -15,7 +15,7 @@ ms.locfileid: "66829960"
 ---
 # <a name="spatial-mapping-design"></a>Conception de mappage spatial
 
-Utilisation efficace de mappage spatial dans HoloLens nécessite une attention particulière de nombreux facteurs.
+L’utilisation effective du mappage spatial dans HoloLens requiert un examen attentif de nombreux facteurs.
 
 ## <a name="device-support"></a>Prise en charge des appareils
 
@@ -28,7 +28,7 @@ Utilisation efficace de mappage spatial dans HoloLens nécessite une attention p
     <tr>
         <td><strong>Fonctionnalité</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Casques IMMERSIFS</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Casques immersifs</strong></a></td>
     </tr>
      <tr>
         <td>Conception de mappage spatial</td>
@@ -37,173 +37,173 @@ Utilisation efficace de mappage spatial dans HoloLens nécessite une attention p
     </tr>
 </table>
 
-## <a name="why-is-spatial-mapping-important"></a>Pourquoi le mappage spatial est-elle importante ?
+## <a name="why-is-spatial-mapping-important"></a>Pourquoi le mappage spatial est-il important?
 
-Mappage spatial rend possible de placer des objets sur des surfaces réels. Cela vous aide à des objets d’ancrage dans le monde de l’utilisateur et tire parti des signaux de profondeur de monde réel. OCCLUSION votre hologrammes selon d’autres hologrammes et les objets du monde réel, vous aide à convaincre l’utilisateur à qui ces hologrammes sont réellement dans leur espace. Hologrammes flottant dans l’espace ou à l’utilisateur ne se sentira pas est de type real. Dans la mesure du possible, les éléments de place pour plus de confort.
+Le mappage spatial permet de placer des objets sur des surfaces réelles. Cela permet d’ancrer les objets dans le monde de l’utilisateur et de tirer parti des indications de profondeur dans le monde réel. Boucher vos hologrammes en fonction d’autres hologrammes et des objets réels vous aide à convaincre l’utilisateur que ces hologrammes sont en fait dans leur espace. Les hologrammes flottants en espace ou en mouvement avec l’utilisateur ne seront pas aussi réels. Lorsque cela est possible, placez les éléments pour plus de confort.
 
-Visualiser les surfaces lors placement ou du déplacement hologrammes (utiliser une simple grille prévue). Cela vous aidera à l’utilisateur de savoir où ils peuvent placer mieux leurs hologrammes et indique l’utilisateur si la place, ils essaient de placer l’hologramme n’a pas encore été mappée. Vous pouvez « tableau éléments » vers l’utilisateur si elles se retrouvent au trop grand nombre d’un angle.
+Visualisez les surfaces lors du placement ou du déplacement d’hologrammes (utilisez une grille projetée simple). Cela permet à l’utilisateur de savoir où il peut placer ses hologrammes et montre l’utilisateur si l’endroit où il tente de placer l’hologramme n’a pas encore été mappé. Vous pouvez «encadrer des éléments» pour l’utilisateur s’ils finissent à un trop grand angle.
 
-## <a name="what-influences-spatial-mapping-quality"></a>Élément qui influence la qualité de mappage spatial ?
+## <a name="what-influences-spatial-mapping-quality"></a>Qu’est-ce qui influence la qualité du mappage spatial?
 
-Afin de fournir la meilleure expérience utilisateur, il est important de comprendre les facteurs qui affectent la qualité des données de mappage spatial collectées par HoloLens.
+Afin d’offrir la meilleure expérience utilisateur, il est important de comprendre les facteurs qui affectent la qualité des données de mappage spatiale collectées par HoloLens.
 
-Erreurs dans les données de mappage spatial se répartissent en trois catégories :
-* **Trous**: Surfaces du monde réel sont manquants dans les données de mappage spatial.
-* **Délirante**: Surfaces existent dans les données de mappage spatial qui n’existent pas dans le monde réel.
-* **Écart**: Surfaces dans les données de mappage spatial sont manière imparfaite alignées avec des surfaces de monde réel, soit envoyé ou extraites.
+Les erreurs dans les données de mappage spatiale sont classées dans l’une des trois catégories suivantes:
+* **Trous**: Les surfaces réelles sont absentes des données de mappage spatiale.
+* **Hallucinations**: Des surfaces existent dans les données de mappage spatiale qui n’existent pas dans le monde réel.
+* **Biais**: Les surfaces dans les données de mappage spatiale sont alignées de façon imparfaite avec les surfaces réelles, push dans ou extraites.
 
-Plusieurs facteurs peuvent affecter la fréquence et la gravité de ces erreurs :
+Plusieurs facteurs peuvent affecter la fréquence et la gravité de ces erreurs:
 
 * **Mouvement de l’utilisateur**
-   * Comment l’utilisateur progresse dans leur environnement détermine quelle mesure l’environnement sera analysé, afin de l’utilisateur peut nécessiter des conseils afin d’obtenir une bonne analyse.
-   * L’appareil photo utilisé pour l’analyse fournit des données dans un cône 70 degrés, à partir d’un minimum de 0,8 mètres à un maximum de distance de compteurs 3.1 à partir de l’appareil photo. Surfaces du monde réel ne sera analysés que dans ce champ de vision. Notez que ces valeurs sont susceptibles de changer dans les futures versions.
-   * Si l’utilisateur n’obtienne jamais dans 3.1 mètres d’un objet, il ne sera pas analysé.
-   * Si l’utilisateur le consulte uniquement un objet à partir d’une distance inférieure à 0,8 mètres, il ne sera pas analysé (Cela évite de devoir analyser les mains de l’utilisateur).
-   * Si l’utilisateur jamais recherche vers le haut (ce qui est assez normal), le plafond sera probablement pas analysé.
-   * Si un utilisateur ne semble jamais derrière un meuble ou d’un mur, les objets bloqués par leur ne seront pas analysés.
-   * Surfaces ont tendance à être analysés de meilleure qualité lorsqu’ils sont visualisés front plutôt que selon un angle superficiels.
-   * Si le système de suivi de la tête de la HoloLens échoue momentanément (qui peut se produire en raison de mouvement de l’utilisateur rapide, d’éclairage faible, murs larges ou les caméras devenir couverte), cela peut introduire des erreurs dans les données de mappage spatial. De telles erreurs seront corrigées au fil du temps que l’utilisateur continue à se déplacer et de leur environnement d’analyse.
+   * La façon dont l’utilisateur parcourt son environnement détermine la qualité de l’analyse de l’environnement, de sorte que l’utilisateur peut avoir besoin d’aide pour obtenir une bonne analyse.
+   * L’appareil photo utilisé pour l’analyse fournit des données dans un cône de 70 degrés, d’un minimum de 0,8 mètres à une distance maximale de 3,1 mètres de l’appareil photo. Les surfaces réelles ne sont analysées que dans ce champ de vue. Notez que ces valeurs sont susceptibles d’être modifiées dans les versions ultérieures.
+   * Si l’utilisateur n’obtient jamais dans les 3,1 mètres d’un objet, il ne sera pas analysé.
+   * Si l’utilisateur ne voit qu’un objet à une distance inférieure à 0,8 mètres, il n’est pas analysé (cela évite d’analyser les mains de l’utilisateur).
+   * Si l’utilisateur ne regarde jamais vers le haut (ce qui est relativement normal), le plafond n’est probablement pas analysé.
+   * Si un utilisateur ne cherche jamais derrière un meuble ou un mur, les objets qu’il bloqués ne seront pas analysés.
+   * Les surfaces ont tendance à être numérisées à une qualité supérieure lorsqu’elles sont affichées au-dessus plutôt qu’à un angle superficiel.
+   * Si le système de suivi des têtes du HoloLens échoue momentanément (ce qui peut se produire en raison d’un mouvement rapide de l’utilisateur, un éclairage médiocre, des murs sans fonctionnalité ou des caméras couvertes), cela peut introduire des erreurs dans les données de mappage spatiale. Ces erreurs seront corrigées au fil du temps, à mesure que l’utilisateur continuera de se déplacer et d’analyser son environnement.
 
-* **Supports de l’aire de conception**
-   * Les documents trouvés sur les surfaces de réels varient considérablement. Impact sur la qualité de mappage spatial, données, car elles affectent la lumière infrarouge sont reflétées.
-   * Surfaces foncées peut ne pas analyser jusqu'à ce qu’ils soient plus proches de l’appareil photo, car ils reflètent le moins de lumière.
-   * Des surfaces peut-être donc foncées qu’ils reflètent trop peu clair pour être analysée à partir de n’importe quelle distance, afin qu’ils seront également introduire des erreurs de trou à l’emplacement de la surface et parfois derrière la surface.
-   * Peuvent analyser uniquement les surfaces brillantes en particulier lorsqu’ils sont affichés front, mais ne pas affichés à partir d’un angle superficiels.
-   * Miroirs, parce qu’elles créent des réflexions illusory des espaces réels et des surfaces, peuvent provoquer des erreurs de trou et les erreurs hallucination.
+* **Matériaux de surface**
+   * Les matériaux trouvés sur des surfaces réelles varient considérablement. Elles ont un impact sur la qualité des données de mappage spatiale, car elles affectent la façon dont la lumière infrarouge est reflétée.
+   * Les surfaces sombres ne peuvent pas être numérisées jusqu’à ce qu’elles soient plus proches de l’appareil photo, car elles reflètent moins de lumière.
+   * Certaines surfaces peuvent être tellement sombres qu’elles reflètent trop peu de lumière pour être numérisées à partir de n’importe quelle distance, de sorte qu’elles introduisent des erreurs de trous à l’emplacement de la surface et parfois également derrière la surface.
+   * En particulier, les surfaces brillantes ne peuvent être numérisées qu’en cas d’affichage, et non en vue d’un angle superficiel.
+   * Les miroirs, car ils créent des réflexions Illusory d’espaces et de surfaces réels, peuvent entraîner des erreurs de trous et des erreurs hallucination.
 
-* **Mouvement de la scène**
-   * Mappage spatial s’adapte rapidement aux changements dans l’environnement, telles que le déplacement de personnes ou d’ouverture et de fermeture des portes.
-   * Toutefois, mappage spatial peut uniquement s’adapter aux modifications dans une zone lorsque cette zone est clairement visible à l’appareil photo qui est utilisé pour l’analyse.
-   * Pour cette raison, il est possible pour cette adaptation rester derrière la réalité, ce qui peut entraîner des erreurs trou ou hallucination.
-   * Par exemple, un utilisateur analyse un ami, puis met tandis que l’ami quitte la salle. Une représentation sous forme de « ghost » de l’ami (une erreur hallucination) persistera dans les données de mappage spatial, jusqu'à ce que l’utilisateur reprend et nouvelle analyse l’espace où l’ami a été permanent.
+* **Mouvement de scène**
+   * Le mappage spatial s’adapte rapidement aux modifications de l’environnement, telles que le déplacement de personnes ou l’ouverture et la fermeture de portes.
+   * Toutefois, le mappage spatial peut s’adapter uniquement aux modifications apportées à une zone lorsque cette zone est clairement visible par l’appareil photo utilisé pour l’analyse.
+   * Pour cette raison, il est possible que cette adaptation se passe en arrière-plan de la réalité, ce qui peut provoquer des erreurs de trous ou de hallucination.
+   * Par exemple, un utilisateur balaie un ami, puis se contourne alors que l’ami quitte la salle. Une représentation «fantôme» de l’ami (erreur hallucination) est conservée dans les données de mappage spatiale, jusqu’à ce que l’utilisateur reprenne et réanalyse l’espace où l’ami était debout.
 
-* **Interférence de l’éclairage**
-   * La lumière ambiante infrarouge dans la scène peut-être interférer avec l’analyse, par exemple du soleil fort provenant d’une fenêtre.
-   * Les surfaces brillantes en particulier peuvent interférer avec l’analyse des surfaces à proximité, la lumière rebondissements sur les erreurs de décalage à l’origine.
-   * Les surfaces brillantes réflexion de lumière directement dans l’appareil photo peuvent interférer avec espace proche, en provoquant flottante délirante air en milieu ou en retardant l’adaptation de mouvement de la scène.
-   * Deux appareils HoloLens dans la même salle ne doivent pas interférer avec l’autre, mais la présence de plus de cinq appareils HoloLens peut provoquer des interférences.
+* **Interférence d’éclairage**
+   * La lumière infrarouge ambiante dans la scène peut interférer avec l’analyse, par exemple une forte lumière solaire venant dans une fenêtre.
+   * En particulier, les surfaces brillantes peuvent interférer avec l’analyse des surfaces avoisinantes, la lumière les rebonds provoquant des erreurs de décalage.
+   * Les surfaces brillantes qui reflètent la lumière directement dans l’appareil photo peuvent perturber l’espace à proximité, soit en provoquant des hallucinations à mi-air flottants, soit en retardant l’adaptation au mouvement de la scène.
+   * Deux appareils HoloLens dans la même salle ne doivent pas interférer les uns avec les autres, mais la présence de plus de cinq appareils HoloLens peut entraîner des interférences.
 
-Il peut être possible d’éviter ou de corriger certains de ces erreurs. Toutefois, vous devez concevoir votre application afin que l’utilisateur est en mesure d’atteindre leurs objectifs même en présence d’erreurs dans les données de mappage spatial.
+Il peut être possible d’éviter ou de corriger certaines de ces erreurs. Toutefois, vous devez concevoir votre application afin que l’utilisateur puisse atteindre ses objectifs même en présence d’erreurs dans les données de mappage spatiale.
 
-## <a name="the-environment-scanning-experience"></a>L’environnement d’expérience d’analyse
+## <a name="the-environment-scanning-experience"></a>Expérience d’analyse de l’environnement
 
-HoloLens apprend sur les surfaces de son environnement, comme l’utilisateur consulte. Au fil du temps, le HoloLens construit une analyse de toutes les parties de l’environnement qui ont été observés. Il met également à jour l’analyse comme les modifications de l’environnement sont observées. Cette analyse est automatiquement conservées entre lancements d’applications.
+HoloLens apprend les surfaces dans son environnement à mesure que l’utilisateur les examine. Au fil du temps, le HoloLens génère une analyse de toutes les parties de l’environnement qui ont été observées. Il met également à jour l’analyse en fonction des modifications apportées à l’environnement. Cette analyse est automatiquement conservée entre les lancements de l’application.
 
-Chaque application qui utilise le mappage spatial doit prendre en compte prévisibilité « analyse » ; le processus par le biais duquel l’application guide l’utilisateur afin d’analyser les surfaces qui sont nécessaires pour l’application fonctionne correctement.
+Chaque application qui utilise le mappage spatial doit envisager de fournir une «expérience d’analyse»; processus par lequel l’application guide l’utilisateur pour analyser les surfaces nécessaires au bon fonctionnement de l’application.
 
 ![Exemple d’analyse](images/sr-mixedworld-140429-8pm-00068-1000px.png)<br>
 *Exemple d’analyse*
 
-La nature de cette expérience d’analyse peut varier considérablement en fonction des besoins de chaque application, mais deux principes essentiels doivent guider sa conception.
+La nature de cette expérience d’analyse peut varier considérablement en fonction des besoins de chaque application, mais deux principes principaux doivent guider sa conception.
 
-Tout d’abord, **effacer la communication avec l’utilisateur est la principale préoccupation**. L’utilisateur doit toujours être conscient de si les exigences de l’application sont respectés. Quand ils ne sont pas respectées, il doit être immédiatement claire pour l’utilisateur pourquoi c’est le cas, et ils doivent être rapidement a conduit à prendre les mesures appropriées.
+Tout d’abord, une **communication claire avec l’utilisateur est la préoccupation principale**. L’utilisateur doit toujours savoir si les exigences de l’application sont respectées. Lorsqu’ils ne sont pas satisfaits, l’utilisateur doit immédiatement savoir pourquoi c’est le cas et il doit être rapidement dirigé pour prendre les mesures appropriées.
 
-Deuxièmement, **applications doivent tenter de trouver un équilibre entre l’efficacité et la fiabilité**. Quand il est possible de faire **fiable**, les applications doivent analyser automatiquement les données de mappage spatial pour gagner du temps de l’utilisateur. Lorsqu’il n’est pas possible de faire de manière fiable, applications doivent activer l’utilisateur à fournir rapidement l’application avec les informations supplémentaires que nécessaires à la place.
+Deuxièmement, **les applications doivent tenter d’équilibrer l’efficacité et la fiabilité**. Lorsqu’il est possible de le faire de façon **fiable**, les applications doivent analyser automatiquement les données de mappage spatiale pour économiser le temps utilisateur. Lorsqu’il n’est pas possible de le faire de manière fiable, les applications doivent à la place permettre à l’utilisateur de fournir rapidement à l’application les informations supplémentaires dont il a besoin.
 
-Pour aider à concevoir l’expérience d’analyse de droite, tenez compte parmi les possibilités suivantes s’appliquent à votre application :
+Pour faciliter la conception de l’expérience d’analyse, prenez en compte les possibilités suivantes applicables à votre application:
 
 * **Aucune expérience d’analyse**
-   * Une application peut fonctionner parfaitement sans aucune expérience d’analyse interactive ; Il sera en savoir plus sur les surfaces qui sont observés au cours de déplacement de l’utilisateur naturelle.
-   * Par exemple une application qui permet à l’utilisateur de dessiner sur les surfaces avec spraypaint HOLOGRAPHIQUE requiert des connaissances uniquement des surfaces actuellement visibles par l’utilisateur.
-   * L’environnement peut être complètement analysé déjà s’il s’agit d’un dans lequel l’utilisateur a déjà passé beaucoup de temps à l’aide de la HoloLens.
-   * N’oubliez pas cependant que l’appareil photo utilisé par le mappage spatial ne peut voir 3,1 m devant l’utilisateur, par conséquent, mappage spatial ne saurez pas sur des surfaces plus éloignées, sauf si l’utilisateur a les observé à partir d’une distance plus en détail dans le passé.
-   * L’utilisateur comprenne bien les surfaces ont été analysés, l’application doit fournir des commentaires visuels à cet effet, par exemple le cast shadows virtuels sur les surfaces numérisés peut aider l’utilisateur placer hologrammes sur ces surfaces.
-   * Dans ce cas, les volumes englobant de l’Observateur de surface spatiale doivent être mis à jour de chaque image à un verrouillage de corps [système de coordonnées spatial](coordinate-systems.md), afin qu’elles suivent l’utilisateur.
+   * Une application peut fonctionner parfaitement sans aucune expérience d’analyse guidée. elle présente des informations sur les surfaces observées au cours du déplacement des utilisateurs naturels.
+   * Par exemple, une application qui permet à l’utilisateur de dessiner sur des surfaces avec des spraypaint holographiques nécessite uniquement des connaissances des surfaces actuellement visibles pour l’utilisateur.
+   * L’environnement peut être complètement analysé s’il s’agit d’un environnement dans lequel l’utilisateur a déjà passé beaucoup de temps à l’aide de HoloLens.
+   * Gardez à l’esprit que l’appareil photo utilisé par le mappage spatial ne peut voir que 3,1 m devant l’utilisateur; par conséquent, le mappage spatial ne connaîtra pas d’autres surfaces distantes, sauf si l’utilisateur les a observées à partir d’une distance plus proche dans le passé.
+   * L’utilisateur comprend donc les surfaces qui ont été analysées, l’application doit fournir un retour visuel à cet effet. par exemple, le cast d’ombres virtuelles sur des surfaces numérisées peut aider l’utilisateur à placer des hologrammes sur ces surfaces.
+   * Dans ce cas, les volumes limites de l’observateur de surface spatiale doivent être mis à jour sur chaque cadre pour obtenir un [système de coordonnées spatiales](coordinate-systems.md)verrouillé, afin qu’ils suivent l’utilisateur.
 
-* **Recherchez un emplacement approprié**
-   * Une application peut être conçue pour une utilisation dans un emplacement avec des exigences spécifiques.
-   * Par exemple, l’application peut nécessiter une zone vide autour de l’utilisateur afin qu’ils peuvent exercer en toute sécurité karateka HOLOGRAPHIQUE.
-   * Les applications doivent communiquer des exigences spécifiques à l’utilisateur initial et renforcer les commentaires visuelle claire.
-   * Dans cet exemple, l’application doit visualiser l’étendue de la zone vide requise et mettre en évidence visuellement de la présence de tous les objets indésirables dans cette zone.
-   * Dans ce cas, les volumes englobant de l’Observateur de surface spatiale doivent utiliser verrouillé par un monde [système de coordonnées spatial](coordinate-systems.md) dans l’emplacement choisi.
+* **Trouver un emplacement approprié**
+   * Une application peut être conçue pour être utilisée dans un emplacement avec des exigences spécifiques.
+   * Par exemple, l’application peut nécessiter une zone vide autour de l’utilisateur afin qu’elle puisse s’assurer en toute sécurité le kung-fou holographique.
+   * Les applications doivent communiquer toutes les exigences spécifiques à l’utilisateur au préalable et les renforcer avec des commentaires visuels clairs.
+   * Dans cet exemple, l’application doit visualiser l’étendue de la zone vide requise et mettre visuellement en évidence la présence d’objets non désirés dans cette zone.
+   * Dans ce cas, les volumes limites de l’observateur de surface spatiale doivent utiliser un système de [coordonnées spatiales](coordinate-systems.md) verrouillé à l’emplacement choisi.
 
 * **Rechercher une configuration appropriée des surfaces**
-   * Une application peut nécessiter une configuration spécifique des surfaces, par exemple deux grandes, plate, opposées murs pour créer un hall holographique de miroirs.
-   * Dans ce cas, l’application devra analyser les surfaces fournies par le mappage spatial pour détecter les surfaces adaptées et diriger l’utilisateur vers eux.
-   * L’utilisateur doit avoir une option de secours si l’analyse de la surface de l’application n’est pas entièrement fiable. Par exemple, si l’application identifie incorrectement une voie d’accès comme un mur plat, l’utilisateur a besoin d’un moyen simple pour corriger cette erreur.
+   * Une application peut nécessiter une configuration spécifique de surfaces, par exemple deux parois larges, plates et opposées pour créer un couloir holographique de miroirs.
+   * Dans ce cas, l’application doit analyser les surfaces fournies par le mappage spatial pour détecter les surfaces appropriées et diriger l’utilisateur vers ces surfaces.
+   * L’utilisateur doit avoir une option de secours si l’analyse des surfaces de l’application n’est pas complètement fiable. Par exemple, si l’application identifie de manière incorrecte une porte comme un mur plat, l’utilisateur a besoin d’un moyen simple de corriger cette erreur.
 
-* **Partie de l’environnement d’analyse**
-   * Une application peut souhaiter capturer uniquement la partie de l’environnement, comme indiqué par l’utilisateur.
-   * Par exemple, l’application balaie partie d’un espace pour l’utilisateur peut publier une annonce classique HOLOGRAPHIQUE pour meuble qu’ils souhaitent vendre.
-   * Dans ce cas, l’application doit capturer les données de mappage spatial dans les régions observées par l’utilisateur lors de leur analyse.
+* **Analyser une partie de l’environnement**
+   * Une application peut souhaiter uniquement capturer une partie de l’environnement, comme indiqué par l’utilisateur.
+   * Par exemple, l’application analyse une partie d’une salle afin que l’utilisateur puisse poster une publicité classée holographique pour le mobilier qu’elle souhaite vendre.
+   * Dans ce cas, l’application doit capturer les données de mappage spatiale dans les régions observées par l’utilisateur lors de son analyse.
 
-* **Analyse de la salle d’ensemble**
-   * Une application peut nécessiter une analyse de toutes les surfaces dans la salle, y compris ceux derrière l’utilisateur.
-   * Par exemple, un jeu peut affecter l’utilisateur au rôle de Gulliver, sous siege parmi des centaines de minuscules Lilliputians approche à partir de toutes les directions.
-   * Dans ce cas, l’application devra déterminer combien des surfaces en cours de l’espace ont déjà été analysés et diriger les regards de l’utilisateur pour combler les lacunes significatives.
-   * La clé pour ce processus fournit des commentaires visuels qui rend clairement à l’utilisateur les surfaces qui n’ont pas encore été analysés. L’application peut par exemple utiliser [brouillard basé sur une distance](https://msdn.microsoft.com/library/windows/desktop/bb173401%28v=vs.85%29.aspx) pour mettre en évidence visuellement des régions qui ne sont pas couverts par les surfaces de mappage spatial.
+* **Analyser la totalité de la salle**
+   * Une application peut nécessiter une analyse de toutes les surfaces dans la salle actuelle, y compris celles qui se trouvent derrière l’utilisateur.
+   * Par exemple, un jeu peut mettre l’utilisateur dans le rôle de Gulliver, sous siege à partir de centaines de petites Lilliputians approchant de toutes les directions.
+   * Dans ce cas, l’application doit déterminer le nombre de surfaces de la salle active qui ont déjà été analysées et diriger le point de regard de l’utilisateur pour combler les lacunes significatives.
+   * La clé de ce processus consiste à fournir des commentaires visuels qui démontrent à l’utilisateur que les surfaces n’ont pas encore été analysées. L’application peut, par exemple, utiliser [un brouillard basé](https://msdn.microsoft.com/library/windows/desktop/bb173401%28v=vs.85%29.aspx) sur la distance pour mettre visuellement en surbrillance des zones qui ne sont pas couvertes par des surfaces de mappage spatiale.
 
-* **Prenez un instantané de l’environnement**
-   * Une application peut souhaiter ignorer toutes les modifications dans l’environnement après réception d’un « instantané » initial.
-   * Cela peut être appropriée pour éviter toute interruption de données créés par l’utilisateur qui sont étroitement liées à l’état initial de l’environnement.
-   * Dans ce cas, l’application doit faire une copie des données de mappage spatial dans son état initial une fois que l’analyse est terminée.
-   * Les applications doivent continuer à recevoir des mises à jour les données de mappage spatial si hologrammes doivent toujours être correctement bloqués par l’environnement.
-   * Mises à jour continues des données de mappage spatial permettent également de visualiser toutes les modifications qui se sont produites, clarifier les différences entre les états antérieurs et présentes de l’environnement à l’utilisateur.
+* **Prendre un instantané initial de l’environnement**
+   * Une application peut souhaiter ignorer toutes les modifications apportées à l’environnement après avoir effectué un «instantané» initial.
+   * Cela peut être utile pour éviter toute interruption des données créées par l’utilisateur qui est étroitement couplée à l’état initial de l’environnement.
+   * Dans ce cas, l’application doit faire une copie des données de mappage spatiale dans son état initial une fois l’analyse terminée.
+   * Les applications doivent continuer à recevoir des mises à jour des données de mappage spatiale si les hologrammes continuent d’être correctement bloquéss par l’environnement.
+   * Les mises à jour continues des données de mappage spatiale permettent également de visualiser les modifications qui se sont produites, en clarifiant l’utilisateur les différences entre les États antérieur et présent de l’environnement.
 
-* **Prendre des instantanés initiée par l’utilisateur de l’environnement**
-   * Une application peut souhaiter uniquement répondre aux modifications d’ordre environnemental lorsqu’il par l’utilisateur.
-   * Par exemple, l’utilisateur peut créer plusieurs 3D 'statues » d’un ami en capturant leurs risque de poser à des moments différents.
+* **Prendre des instantanés initiés par l’utilisateur de l’environnement**
+   * Une application ne souhaite peut-être répondre aux modifications environnementales que lorsqu’il est demandé par l’utilisateur.
+   * Par exemple, l’utilisateur peut créer plusieurs «statues» en 3D d’un ami en capturant ses poses à des moments différents.
 
 * **Autoriser l’utilisateur à modifier l’environnement**
-   * Une application peut être conçue pour répondre en temps réel pour toutes les modifications apportées dans l’environnement utilisateur.
-   * Par exemple, l’utilisateur un rideau de dessin peut déclencher de changement de scène pour une lecture HOLOGRAPHIQUE ayant lieu sur l’autre côté.
+   * Une application peut être conçue pour répondre en temps réel à toute modification apportée à l’environnement de l’utilisateur.
+   * Par exemple, l’utilisateur qui dessine un rideau peut déclencher une «modification de la scène» pour qu’une lecture holographique se déroule de l’autre côté.
 
-* **Guide de l’utilisateur pour éviter les erreurs dans les données de mappage spatial**
-   * Une application peut souhaiter fournissent des instructions à l’utilisateur pendant qu’ils sont analyse leur environnement.
-   * Cela peut aider à l’utilisateur afin d’éviter certains types de [erreurs dans les données de mappage spatial](spatial-mapping-design.md#what-influences-spatial-mapping-quality), par exemple en restant en dehors de windows sunlit ou miroirs.
+* **Guide de l’utilisateur pour éviter les erreurs dans les données de mappage spatiale**
+   * Une application peut souhaiter fournir des conseils à l’utilisateur pendant qu’il analyse son environnement.
+   * Cela peut aider l’utilisateur à éviter certains types d' [Erreurs dans les données de mappage spatiale](spatial-mapping-design.md#what-influences-spatial-mapping-quality), par exemple en restant à l’écart des fenêtres ou miroirs Sunlit.
 
-Un détail supplémentaire à connaître est que la plage de données de mappage spatial n’est pas un nombre illimitée. Tandis que le mappage spatial génère une base de données permanente de grands espaces, il établit uniquement ces données disponibles pour les applications dans une bulle de taille limitée autour de l’utilisateur. Par conséquent, si vous commencez au début d’un couloir long et le parcours assez loin de début, puis finalement les surfaces spatiales au début disparaît. Vous pouvez bien sûr atténuer ce risque en mettant en cache ces surfaces dans votre application une fois qu’ils ont disparu à partir des données de mappage spatial disponible.
+L’un des détails supplémentaires à prendre en compte est que la «plage» de données de mappage spatiale n’est pas illimitée. Tandis que le mappage spatial crée une base de données permanente d’espaces de grande taille, il ne rend ces données disponibles qu’aux applications dont la taille est limitée à l’utilisateur. Par conséquent, si vous commencez au début d’un couloir long et que vous vous éloignez suffisamment du début, les surfaces spatiales finissent par disparaître. Vous pouvez bien sûr atténuer cela en mettant en cache ces surfaces dans votre application une fois qu’elles ont disparu des données de mappage spatiale disponibles.
 
 ## <a name="mesh-processing"></a>Traitement de maillage
 
-Il peut être utile pour détecter les types courants d’erreurs dans les surfaces et à filtrer, supprimer ou modifier les données de mappage spatial comme il convient.
+Il peut être utile de détecter les types courants d’erreurs dans les surfaces et de filtrer, supprimer ou modifier les données de mappage spatiale comme il convient.
 
-N’oubliez pas que le mappage spatial données sont destinées à être aussi fidèle que possible aux surfaces du monde réel, par conséquent, tout traitement vous appliquez les risques de décalage de vos surfaces plus éloigné de la vérité »'.
+Gardez à l’esprit que les données de mappage spatiale sont destinées à être aussi fidèles que possible pour les surfaces réelles, de sorte que tout traitement que vous appliquez risque de faire passer vos surfaces plus loin de la «vérité».
 
-Voici quelques exemples de différents types de maillage de traitement que vous pouvez trouver utiles :
+Voici quelques exemples de différents types de traitement de maillage qui peuvent s’avérer utiles:
 
-* **Remplissage des trous**
-   * Si un petit objet constitué d’un matériau foncé ne parvient pas à analyser, il laissera une faille dans la surface environnante.
-   * Trous affectent occlusion : hologrammes sont consultables « par « un trou dans une surface réalistes soi-disant opaque.
-   * Trous affectent raycasts : Si vous utilisez raycasts pour aider les utilisateurs à interagir avec des surfaces, il est peut-être pas souhaitable pour ces des rayons à passer par les failles. Une atténuation consiste à utiliser un ensemble de plusieurs raycasts couvrant une zone de taille appropriée. Cela vous permettra de filtrer les résultats de la « valeur hors norme », afin que même si un raycast traverse un petit trou, le résultat du regroupement sera toujours valide. Toutefois, n’oubliez pas que cette approche a un coût de calcul.
-   * Trous affectent les collisions physique : un objet contrôlé par simulation physique peut supprimer par un trou de l’étage et se perdent.
-   * Il est possible de façon algorithmique remplir ces trous dans la maille superficielle. Toutefois, vous devrez régler votre algorithme afin que les trous réels telles que windows et les guichets ne pas remplis. Il peut être difficile de différencier fiable des trous réels à partir de « trous imaginaires », vous devrez faire des essais avec différents paramètres heuristiques tels que « size » et « forme limite ».
+* **Remplissage de trous**
+   * Si un petit objet constitué d’un matériau sombre ne parvient pas à être analysé, il laisse un trou dans la surface environnante.
+   * Les trous affectent l’occlusion: les hologrammes peuvent être vus «jusqu’à» un trou dans une surface réaliste opaque.
+   * Les trous affectent raycasts: Si vous utilisez raycasts pour aider les utilisateurs à interagir avec les surfaces, il peut être indésirable que ces rayons passent par des trous. Une solution de contournement consiste à utiliser un groupe de plusieurs raycasts couvrant une région de taille appropriée. Cela vous permettra de filtrer les résultats «aberrants», de sorte que même si un raycast traverse un petit trou, le résultat de l’agrégat restera valide. Toutefois, gardez à l’esprit que cette approche est un coût de calcul.
+   * Les trous affectent les collisions physiques: un objet contrôlé par la simulation physique peut déplacer un trou à l’étage et être perdu.
+   * Il est possible d’effectuer un remplissage algorithmique de ces trous dans le maillage des surfaces. Toutefois, vous devrez régler votre algorithme pour que les «véritables trous», tels que les fenêtres et les portes, ne soient pas remplis. Il peut être difficile de distinguer de manière fiable les «véritables trous» de «trous imaginaires». vous devrez donc faire des essais avec différents heuristiques, tels que «taille» et «forme limite».
 
 * **Suppression de hallucination**
-   * Réflexions, des lumières et déplacement d’objets peut laisser des petites en attente 'délirante' flottante en l’air.
-   * Délirante affecte occlusion : délirante peut-être devenir visibles en tant que formes foncées déplacement devant et OCCLUSION autres hologrammes.
-   * Délirante affecte raycasts : Si vous utilisez raycasts pour aider les utilisateurs à interagir avec des surfaces, ces rayons pouvaient atteindre une hallucination au lieu de la surface derrière lui. Comme avec les trous, une atténuation consiste à utiliser les nombreuses raycasts au lieu d’un raycast unique, mais là encore cela se fera à un coût de calcul.
-   * Délirante affectent physique collisions : un objet contrôlé par simulation physique peut se bloquer sur une hallucination et son incapacité à déplacer dans une zone apparemment claire d’espace.
-   * Il est possible de filtrer ces délirante à partir de la maille superficielle. Toutefois, comme avec les trous, vous devez régler votre algorithme afin que les petites réel objets tels que lamp-stands et poignées des portes ne sont pas supprimées.
+   * Les réflexions, les lumières brillantes et les objets mobiles peuvent rendre le petit «hallucinations» en attente flottant dans le milieu de l’air.
+   * Hallucinations affecte l’occlusion: les hallucinations peuvent devenir visibles en tant que formes sombres se déplaçant devant et obturant d’autres hologrammes.
+   * Hallucinations affecte raycasts: Si vous utilisez raycasts pour aider les utilisateurs à interagir avec les surfaces, ces rayons peuvent toucher un hallucination au lieu de la surface derrière. Comme avec les trous, une atténuation consiste à utiliser un grand nombre de raycasts au lieu d’un raycast unique, mais à nouveau cela aura un coût de calcul.
+   * Les hallucinations affectent les collisions physiques: un objet contrôlé par la simulation physique peut être bloqué contre un hallucination et ne peut pas se déplacer dans une zone d’espace apparemment claire.
+   * Il est possible de filtrer ce hallucinations à partir de la maille de surface. Toutefois, comme pour les trous, vous devez régler votre algorithme pour que les petits objets tels que les poignées de la porte et les béquilles ne soient pas supprimés.
 
 * **Lissage**
-   * Mappage spatial peut retourner les surfaces qui semblent être approximative ou bruyant par rapport à leurs équivalents du monde réel.
-   * Lissage affecte les collisions physique : si la valeur plancher est approximatif, une balle de golf physiquement simulé peuvent se pas déployer sans heurts entre il dans une ligne droite.
-   * Lissage affecte le rendu : si une surface est visualisée directement, les normales de surface rugueuses peuvent affecter son apparence et interrompre un coup de œil « nettoyage ». Il est possible de ce problème en utilisant un éclairage approprié et les textures dans le nuanceur est utilisé pour restituer la surface.
-   * Il est possible de lisser irrégularité dans une maille superficielle. Toutefois, cela peut pousser la surface davantage la surface réel correspondant. Maintenir une correspondance étroite est important pour produire d’occlusion hologramme précis et permet aux utilisateurs d’obtenir des interactions précises et prévisibles avec des surfaces HOLOGRAPHIQUE.
-   * Si seule une modification cosmétique est nécessaire, il peut être suffisant lisser les normales des sommets sans modifier les positions de vertex.
+   * Le mappage spatial peut retourner des surfaces qui semblent être rugueuses ou bruyantes par rapport à leurs équivalents réels.
+   * Le lissage affecte les collisions physiques: si le plancher est grossier, une boule de golf simulée physiquement peut ne pas s’effectuer correctement sur une ligne droite.
+   * Le lissage affecte le rendu: si une surface est visualisée directement, les normales des surfaces approximatives peuvent avoir une incidence sur l’apparence et perturber l’apparence d’un «nettoyage». Il est possible de réduire cela en utilisant l’éclairage et les textures appropriés dans le nuanceur qui est utilisé pour afficher l’aire.
+   * Il est possible de lisser l’irrégularité dans un maillage de surface. Toutefois, cela peut éloigner la surface de la surface réelle correspondante. Il est important de maintenir une correspondance étroite pour produire une occlusion d’hologramme précise et permettre aux utilisateurs d’effectuer des interactions précises et prévisibles avec des surfaces holographiques.
+   * Si seule une modification cosmétique est nécessaire, elle peut suffire à lisser les normales des sommets sans modifier les positions des sommets.
 
 * **Recherche de plan**
-   * Il existe de nombreux formulaires d’analyse une application pouvez souhaiter effectuer sur les surfaces de mappage spatial.
-   * Constitue un exemple simple « du plan de recherche » ; identification des régions délimitées, principalement PLANAIRE des surfaces.
-   * Régions planaires peuvent servir de HOLOGRAPHIQUE-surfaces de travail, les régions où HOLOGRAPHIQUE contenu peut être placé automatiquement par l’application.
-   * Régions planaires peuvent contraindre l’interface utilisateur, pour guider les utilisateurs pour interagir avec les surfaces de leurs besoins.
-   * Régions planaires utilisable comme dans le monde réel, pour HOLOGRAPHIQUE équivalents à des objets fonctionnelles tels que les écrans LCD, des tables ou des tableaux blancs.
-   * Régions planaires peuvent définir des zones de play, qui forment la base de niveaux de jeu vidéo.
-   * Planaires régions peuvent aider les agents virtuels pour naviguer le monde réel, en identifiant les zones de l’étage que des personnes réelles sont susceptibles de remonter sur.
+   * Il existe de nombreuses formes d’analyse qu’une application peut souhaiter effectuer sur les surfaces fournies par le mappage spatial.
+   * Un exemple simple consiste à «rechercher dans le plan». identification des régions délimitées, principalement planaires des surfaces.
+   * Les régions planaires peuvent être utilisées comme des surfaces de travail holographiques, des régions où le contenu holographique peut être automatiquement placé par l’application.
+   * Les régions planaires peuvent contraindre l’interface utilisateur, afin de guider les utilisateurs afin qu’ils puissent interagir avec les surfaces qui répondent le mieux à leurs besoins.
+   * Les régions planaires peuvent être utilisées comme dans le monde réel, pour les équivalents holographiques aux objets fonctionnels, tels que les écrans LCD, les tables ou les tableaux blancs.
+   * Les régions planaires peuvent définir des zones de lecture, formant ainsi la base des niveaux Videogame.
+   * Les régions planaires peuvent aider les agents virtuels à naviguer dans le monde réel, en identifiant les zones d’étage que les gens sont susceptibles de parcourir.
 
 ## <a name="prototyping-and-debugging"></a>Prototypage et débogage
 
 ### <a name="useful-tools"></a>Outils utiles
-* Le [HoloLens émulateur](using-the-hololens-emulator.md) peut être utilisé pour développer des applications à l’aide du mappage spatial sans accès à un HoloLens physique. Il vous permet de simuler une session en direct sur un HoloLens dans un environnement réaliste, avec toutes les données de votre application serait normalement consommer, notamment HoloLens motion, systèmes de coordonnées spatiales et les mailles de mappage spatial. Cela peut servir à fournir l’entrée fiable et renouvelable, ce qui peut être utile pour le débogage des problèmes et d’évaluer les modifications apportées à votre code.
-* Pour reproduire des scénarios, capturer des données de mappage spatial sur le réseau à partir d’un HoloLens en direct, puis enregistrez-le disque et le réutiliser dans des sessions de débogage suivantes.
-* Le [vue 3D portail des appareils Windows](using-the-windows-device-portal.md#3d-view) fournit un moyen de voir toutes les surfaces spatiales actuellement disponibles via le système de mappage spatial. Cela fournit une base de comparaison pour les surfaces spatiales à l’intérieur de votre application ; par exemple vous pouvez facilement vérifier si toutes les surfaces spatiales manquent ou sont affichés au mauvais endroit.
+* L' [émulateur hololens](using-the-hololens-emulator.md) peut être utilisé pour développer des applications à l’aide du mappage spatial sans accès à un HoloLens physique. Elle vous permet de simuler une session active sur un HoloLens dans un environnement réaliste, avec toutes les données que votre application consomme normalement, y compris le mouvement HoloLens, les systèmes de coordonnées spatiales et les maillages de mappage spatial. Cela peut être utilisé pour fournir des entrées fiables et reproductibles, ce qui peut être utile pour déboguer des problèmes et évaluer des modifications apportées à votre code.
+* Pour reproduire un scénario, capturez les données de mappage spatiale sur le réseau à partir d’un HoloLens actif, puis enregistrez-les sur le disque et réutilisez-les dans les sessions de débogage suivantes.
+* La [vue 3D du portail d’appareils Windows](using-the-windows-device-portal.md#3d-view) fournit un moyen de voir toutes les surfaces spatiales actuellement disponibles via le système de mappage spatial. Cela fournit une base de comparaison pour les surfaces spatiales à l’intérieur de votre application. par exemple, vous pouvez facilement savoir si des surfaces spatiales sont manquantes ou affichées au mauvais endroit.
 
-### <a name="general-prototyping-guidance"></a>Conseils de création de prototypes général
-* Étant donné que [erreurs](spatial-mapping-design.md#what-influences-spatial-mapping-quality) dans le mappage spatial data peut fortement affectent l’expérience utilisateur, nous vous recommandons de tester votre application dans une grande variété d’environnements.
-* Ne pas obtenir interceptées l’habitude de toujours tester dans le même emplacement, par exemple à votre bureau. Veillez à tester sur différentes surfaces des positions différentes, les formes, les tailles et les documents.
-* De même, tandis que les données synthétiques ou enregistrées peuvent être utiles pour le débogage, ne deviennent trop dépend de même les rares cas de test. Cela peut retarder la recherche des problèmes importants qui aurait détecté plus variées test précédemment.
-* Il est judicieux d’effectuer des tests avec des utilisateurs réels (et dans l’idéal, non surveillées), car ils ne peuvent pas utiliser le HoloLens ou votre application dans la même façon que vous effectuez. En fait, il peut vous surprendre comportement de comment divergente populaire, base de connaissances et les hypothèses peuvent être !
+### <a name="general-prototyping-guidance"></a>Conseils généraux sur le prototypage
+* Étant donné que les [Erreurs](spatial-mapping-design.md#what-influences-spatial-mapping-quality) dans les données de mappage spatiale peuvent affecter fortement l’expérience de votre utilisateur, nous vous recommandons de tester votre application dans un large éventail d’environnements.
+* Ne vous retrouvez pas à l’habitude de toujours tester dans le même emplacement, par exemple au niveau de votre bureau. Veillez à effectuer des tests sur différentes surfaces de différentes positions, formes, tailles et matériaux.
+* De même, si les données synthétiques ou enregistrées peuvent être utiles pour le débogage, ne vous inquiétez pas trop sur les mêmes cas de test. Cela peut retarder la recherche de problèmes importants que des tests plus variés auraient été détectés précédemment.
+* Il est judicieux d’effectuer des tests avec des utilisateurs réels (et idéalement non-surveillés), car ils ne peuvent pas utiliser le HoloLens ou votre application exactement de la même façon que vous le faites. En fait, il peut être surpris de savoir comment le comportement, les connaissances et les hypothèses de personnes divergentes peuvent être!
 
 ## <a name="see-also"></a>Voir aussi
 * [Visualisation du balayage d’une pièce](room-scan-visualization.md)
