@@ -1,67 +1,67 @@
 ---
 layout: LandingPage
-title: Jours de développement de réalité mixte Forum aux questions
-description: Page de FAQ pour les jours de développement MR
+title: FAQ sur les jours de développement de la réalité mixte
+description: Page de FAQ pour les journées de développement MR
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/25/2019
 ms.topic: article
-keywords: Mixte réalité, conférence, summit, développeur, HoloLens, 2 de HoloLens, Kinect
+keywords: Réalité mixte, Conférence, sommet, développeur, HoloLens, HoloLens 2, Kinect
 ms.openlocfilehash: 8d38d121ab76281497ab8d8ec11c096f9bc7cc71
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59597008"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63526647"
 ---
-# <a name="mixed-reality-dev-days-faq"></a>Jours de développement de réalité mixte Forum aux questions
+# <a name="mixed-reality-dev-days-faq"></a>FAQ sur les jours de développement de la réalité mixte
 
-* **Qui doit s’appliquer ? Existe-t-il des critères ?**
+* **Qui doit s’appliquer? Existe-t-il des critères?**
     
-    Nous sommes passionnés d’accueillir une Communauté de développeurs différents jours de développement de réalité mixte. Nous nous assurons également que cet événement réunit les développeurs à partir de notre les gros clients et partenaires grands studios, petits studios et les développeurs individuels.
+    Nous sommes passionnés par l’accueil d’une communauté de développeurs diversifiée à des jours de développement de la réalité mixte. Nous garantissons également que cet événement regroupe les développeurs de nos grands clients et partenaires, de grands studios, de petits studios et de développeurs individuels.
 
-    Si vous êtes un développeur de réalité mixte cherchent à vous former sur notre plateforme de développement, les outils, les services et les appareils, nous vous encourageons à nous rejoindre à jours de développement de réalité mixte.
+    Si vous êtes un développeur de réalité mixte cherchant à obtenir des formations sur la plate-forme, les outils, les services et les appareils de développement, nous vous encourageons à nous faire part de vos journées de développement en réalité mixte.
 
-    Notre objectif est d’avoir un large éventail de réalité mixte développeurs et concepteurs de participation et toutes les informations que vous pouvez fournir dans la [application](https://aka.ms/MRDevDayApplication) nous aidera à s’assurer que cela se produit.
+    Notre objectif est d’avoir un large éventail de développeurs et de concepteurs de réalité mixte, et toutes les informations que vous pouvez fournir dans l' [application](https://aka.ms/MRDevDayApplication) nous aideront à s’assurer que cela se produit.
 
-* **Lorsque savoir si je peux assister ?**
+* **Quand est-il possible de savoir si je peux participer?**
 
-    [Applications](https://aka.ms/MRDevDayApplication) sont ouverts avant midi PST le 5 avril 2019. En fonction lorsque vous Finalisez votre application, vous pouvez être averti de votre état dès que le 5 avril 2019. Nous travaillons dur pour vous assurer de tous les candidats sont notifiés de leur état en fin de journée sur le 10 avril 2019. Si nous ne remplissent pas toutes les zones à partir de cette première vague de demandeurs, nous pouvons ouvrir des applications pour une deuxième vague.
+    Les [applications](https://aka.ms/MRDevDayApplication) sont ouvertes jusqu’à midi PST, le 5 avril 2019. Selon le moment où vous terminez votre application, vous pouvez être informé de votre état dès le 5 avril 2019. Nous nous efforçons de vous assurer que tous les candidats sont informés de leur état à la fin de la journée, le 10 avril 2019. Si nous ne remplissons pas tous les points de cette première vague de candidats, nous pouvons ouvrir des applications pour une deuxième vague.
 
-* **Pourquoi dois-je appliquer ?**
+* **Pourquoi dois-je appliquer?**
 
-    Nous avons reçu un intérêt élevé dans cet événement et que vous ont une capacité maximale pour l’événement. Pour cette raison, nous demandons que tous les développeurs souhaitent effectuer cette opération [application](https://aka.ms/MRDevDayApplication) afin que nous avons plus d’informations sur ce que vous travaillez actuellement et pourquoi vous intéressent.
+    Nous avons reçu un intérêt important dans cet événement et avons une capacité maximale pour l’événement. Pour cette raison, nous demandons à tous les développeurs intéressés d’effectuer cette [application](https://aka.ms/MRDevDayApplication) afin que nous puissions en savoir plus sur ce que vous utilisez et pourquoi vous êtes intéressé.
 
-* **Il m’a dit que dois-je dois-je y assister.  Comment appliquer ?**
+* **Je me suis dit que je dois participer.  Comment faire appliquer?**
 
-    Veuillez remplir ce [application](https://aka.ms/MRDevDayApplication) par MIDI heure du Pacifique (PST), le 5 avril 2019.
+    Veuillez effectuer cette [application](https://aka.ms/MRDevDayApplication) par midi (heure du Pacifique), le 5 avril 2019.
 
-* **Quelle est la différence entre les jours de développement de réalité mixte et Build ?**
+* **Quelle est la différence entre les journées de développement de la réalité mixte et la génération?**
 
-    Nous avons conçu des jours de développement de réalité mixte pour vous – experts en réalité mixte et les nombreux aspects du cloud et de la technologie d’intelligence artificielle qu’il contient, à partir de la vision par ordinateur pour la création de hologramme. Si vous êtes un développeur de réalité mixte cherchent à vous former sur notre plateforme de développement, les outils, les services et les périphériques, les jours de développement de réalité mixte est parfait. 
+    Nous avons conçu des jours de développement de la réalité mixte pour vous: des experts en réalité mixte et les nombreux aspects de la technologie Cloud et IA qui accompagnent ce service, de la vision par ordinateur à la création d’hologrammes. Si vous êtes un développeur de réalité mixte souhaitant obtenir une formation sur la plate-forme, les outils, les services et les appareils de développement, le développement de la réalité mixte peut s’avérer très utile. 
 
-    [Microsoft Build](https://www.microsoft.com/en-us/build) réunit les développeurs et les experts des équipes de produit au sein de l’entreprise. Un large éventail de technologies et des modèles d’application sont couverts. Cet événement ne remplace pas la Build, et si tel est votre bourrage, nous vous encourageons à le faire aussi ! 
+    [Microsoft Build](https://www.microsoft.com/en-us/build) permet aux développeurs et aux experts des équipes produit de toute l’entreprise de collaborer. Une large gamme de technologies et de modèles d’application est traitée. Cet événement ne remplace pas la build, et si c’est votre bourrage, nous vous encourageons également à le faire. 
 
-* **Combien coûte l’événement ?**
+* **Combien coûte l’événement?**
 
-    Cet événement est disponible pour participer à.
+    Cet événement est gratuit.
 
-* **Ce qui coûte suis-je responsable ?**
+* **Quels coûts suis-je responsable?**
 
-    Vous êtes responsable des frais de déplacement (vol, hôtel, repas, vers et à partir de transport).
+    Vous êtes responsable des frais de voyage (vol, hôtel, repas, transport vers et à partir de).
 
-* **À quoi dois-je attendre ?**
+* **Que dois-je attendre?**
 
-    Jours de développement de réalité mixte a lourd de développeurs à se concentrer (environ 75 %) complétée par le développement des activités et des informations stratégiques (environ 25 %).  Vous avez la possibilité de code en même temps que nos développeurs, la dernière version de notre portefeuille de démonstration et en savoir plus sur la science derrière nos tech, et meilleures pratiques et leçons que nous avons appris au fil des années.
+    Les jours de développement de la réalité mixte ont un intérêt important pour les développeurs (environ 75%) complété par le développement d’activités et les Insights stratégiques (environ 25%).  Vous aurez la possibilité de coder avec nos développeurs, de découvrir les dernières nouveautés de notre portefeuille et d’en savoir plus sur la science derrière notre Tech, ainsi que sur les meilleures pratiques et les leçons que nous avons appris au fil des années.
 
-* **Je dois apporter ma propre machine de développeur ?**
+* **Dois-je apporter mon propre ordinateur de développement?**
 
-    Oui, chaque participant doit apporter leur propres PC installés avec les logiciels, les outils et les environnements de développement intégrés que vous utilisez pour votre environnement de développement.
+    Oui, chaque participant doit faire en sorte que ses propres PC de développement soient installés avec le logiciel, les outils et les IDE que vous utilisez pour votre environnement.
 
-* **Où puis-je obtenir plus ?**
+* **Où puis-je en savoir plus?**
 
-    Pour en savoir plus sur notre [pages de Documentation de réalité mixte](mr-dev-days.md), et vous pouvez toujours contacter notre équipe de Relations de développeur de réalité mixte des questions.
+    Vous trouverez plus d’informations sur nos [pages de documentation sur la réalité mixte](mr-dev-days.md), et vous pouvez toujours contacter notre équipe de relations développeurs de réalité mixte avec des questions.
 
-* **Qui dois-je contacter pour en savoir plus ?**
+* **Qui dois-je contacter pour en savoir plus?**
 
-    Pour plus d’informations envoyez un e-mail DevEvent@microsoft.com
+    Pour plus d’informations, envoyez un e-mail àDevEvent@microsoft.com
