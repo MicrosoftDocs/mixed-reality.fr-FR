@@ -1,96 +1,172 @@
-# <a name="speech-sdk-learning-module"></a>Module d’apprentissage de kit de développement logiciel de reconnaissance vocale
+---
+title: Module d’apprentissage de SpeechSDK-reconnaissance vocale et transcription
+description: Suivez ce cours pour apprendre à implémenter le kit de développement logiciel (SDK) Azure Speech dans une application de réalité mixte.
+author: jessemcculloch
+ms.author: jemccull
+ms.date: 02/26/2019
+ms.topic: article
+keywords: réalité mixte, unity, tutoriel, hololens
+ms.openlocfilehash: c1ca44ffcaa8dced988b829d9875ebe304f14a12
+ms.sourcegitcommit: c7c7e3c836373b65e319609b4e8389dea6b081de
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460355"
+---
+# <a name="1-integrating-and-using-speech-recognition-and-transcription"></a>1. Intégration et utilisation de la reconnaissance vocale et de la transcription
 
-Dans ce didacticiel, vous allez créer une application de réalité mixte qui explore l’utilisation d’Azure Cognitive Services Speech SDK avec la version 2 HoloLens. Lorsque vous avez terminé avec cette série de didacticiels, vous serez en mesure d’utiliser le microphone de votre appareil à transcrire reconnaissance vocale en temps réel, transcrivez dans d’autres langues et tirer parti de fonctionnalité d’intention du Speech SDK pour comprendre les commandes vocales à l’aide de intelligence artificielle.
+Ce didacticiel crée une application de réalité mixte qui explore l’utilisation du kit de développement logiciel (SDK) Azure Cognitive Services Speech avec le HoloLens 2. À la fin de cette série de didacticiels, vous serez en mesure d’utiliser le microphone de votre appareil pour transcrire la parole en temps réel, traduire votre discours en d’autres langues et tirer parti de la fonctionnalité d’intention du kit de développement logiciel (SDK) Speech pour comprendre les commandes vocales à l’aide de intelligence artificielle.
 
-Objectifs :
+## <a name="objectives"></a>Objectifs
 
-- Découvrez comment intégrer le Kit de développement vocale dans une application de HoloLens 2
-- Découvrez comment utiliser les commandes vocales
-- Découvrez comment utiliser les fonctionnalités de la parole-texte
+- Découvrez comment intégrer le kit de développement logiciel (SDK) Azure Speech dans une application HoloLens 2
+- En savoir plus sur l’utilisation des commandes vocales
+- En savoir plus sur l’utilisation des fonctionnalités vocales en texte
 
 ## <a name="instructions"></a>Instructions
 
 ### <a name="getting-started"></a>Prise en main
 
-1. Démarrer Unity et créer un nouveau projet. Entrez le nom du projet « Module de formation Speech SDK ». Choisissez un emplacement pour l’emplacement où enregistrer votre projet. Puis cliquez sur « Créer un projet ».
+1. Démarrez Unity et créez un nouveau projet. Entrez le module d’apprentissage du kit de développement logiciel (SDK) Speech Name. Choisissez un emplacement pour l’emplacement où enregistrer votre projet. Cliquez ensuite sur créer un projet.
 
 ![Module2Chapter3step1im](images/module4chapter1step1im.PNG)
 
-> Remarque: Assurez-vous que le modèle est défini sur « 3D », comme illustré dans l’image ci-dessus.
+> Remarque : Assurez-vous que le modèle est défini sur 3D, comme indiqué dans l’image ci-dessus.
 
-2. Téléchargez le [Toolkit de réalité mixte](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/download/v2.0.0-RC2/Microsoft.MixedReality.Toolkit.Unity.Foundation-v2.0.0-RC2.unitypackage) Unity empaqueter et enregistrez-la dans un dossier sur votre PC. Importer le package dans votre projet Unity. Pour obtenir des instructions détaillées sur la façon de procéder, consultez [leçon de module de base 1](mrlearning-base-ch1.md). 
+2. Téléchargez le package Unity du [Kit d’outils de réalité mixte](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/download/v2.0.0-RC2/Microsoft.MixedReality.Toolkit.Unity.Foundation-v2.0.0-RC2.unitypackage) et enregistrez-le dans un dossier sur votre ordinateur. Importez le package dans votre projet Unity. Pour obtenir des instructions détaillées sur la procédure à suivre, consultez le [module de base leçon 1](mrlearning-base-ch1.md). 
 
-3. Téléchargez et importez le Azure [Speech SDK](https://aka.ms/csspeech/unitypackage) pour le package de ressource Unity. Importer le package de Speech SDK en cliquant sur « ressources », en sélectionnant « package d’importation », puis en sélectionnant « package personnalisé ». Rechercher le package de Speech SDK téléchargé précédemment et l’ouvrir pour commencer le processus d’importation. 
+3. Téléchargez et importez le [Kit de développement logiciel (SDK) Azure Speech](https://aka.ms/csspeech/unitypackage) pour le package d’actifs Unity. Importez le package du kit de développement logiciel (SDK) Speech en cliquant sur actifs, en sélectionnant importer un package, puis en sélectionnant package personnalisé. Recherchez le package du kit de développement logiciel (SDK) Speech téléchargé précédemment et ouvrez-le pour commencer le processus d’importation. 
+
+![Module4Chapter1step3ima](images/module4chapter1step3ima.PNG)
 
 ![Module4Chapter1step3im](images/module4chapter1step3im.PNG)
 
-4. Dans la fenêtre contextuelle suivante, cliquez sur « Importer » pour commencer l’importation du package de Speech SDK. Vérifiez tous les éléments sont activés, comme illustré dans l’image ci-dessous.
+4. Dans la fenêtre contextuelle suivante, cliquez sur Importer pour commencer l’importation du package du kit de développement logiciel (SDK) Speech. Vérifiez que tous les éléments sont vérifiés comme indiqué dans l’image ci-dessous.
 
 ![Module4Chapter1step4im](images/module4chapter1step4im.PNG)
 
+5. Téléchargez le module Asset SDK module Asset Pack, également appelé package Lunarcom en cliquant sur [ce lien](https://github.com/microsoft/MixedRealityLearning/releases/tag/Speech_2). Le package de ressources Lunarcom est un ensemble de ressources et de scripts développés pour cette série de leçons afin de présenter une utilisation pratique du kit de développement logiciel (SDK) Speech d’Azure. Il s’agit d’un terminal de commande vocale qui, au final, interviendra avec l’expérience d’assembly de module lunaire développée dans le [didacticiel du module de base.](mrlearning-base-ch6.md)
 
-5. Téléchargez le [Lunarcom](https://github.com/levilais/Speech-SDK-Module/raw/master/Speech SDK Module/Lunarcom.unitypackage) package de l’élément multimédia. Le package de ressource Lunarcom est une collection de ressources et les scripts développés pour cette série de leçons pour présenter une utilisation pratique de Speech SDK d’Azure. Il s’agit d’un terminal de commande de voix qui sera finalement créent une interface avec l’expérience d’assembly lunaire module développé dans le [didacticiel de Module de Base.](mrlearning-base-ch6.md)
-6. Importer le package de la ressource Lunarcom dans votre projet Unity en suivant les étapes similaires que vous avez suivies pour importer le Toolkit de réalité mixte et le Speech SDK.
-7. Configurer le Kit de ressources de réalité mixte (MRTK). Pour ce faire, cliquez sur le panneau « Toolkit de réalité mixte » en haut de la fenêtre, puis sélectionnez « Ajouter à la scène et configurer ».
+6. Importez le package de ressources Lunarcom dans votre projet Unity en suivant les étapes similaires que vous avez suivies pour importer le kit de ressources de réalité mixte et le SDK Speech.
+7. Configurez la boîte à outils de réalité mixte (MRTK). Pour ce faire, cliquez sur le panneau du Toolkit de réalité mixte en haut de votre fenêtre, puis sélectionnez Ajouter à la scène et configurer.
 
 ![Module4Chapter1step7im](images/module4chapter1step7im.PNG)
 
-8. Votre scène sera désormais contenir plusieurs nouveaux éléments à partir de la MRTK. Enregistrez votre scène sous un autre nom en cliquant sur « fichier », « enregistrer sous », puis nommez votre scène « SpeechScene ». 
+![module4Chapter1step9ima](images/module4chapter1step9ima.PNG)
 
-   > Remarque: Si vous appuyez sur le bouton de lecture sur votre scène une fois que vous ajoutez le MRTK à votre projet, et il n’entre pas le mode « lecture », vous devrez peut-être redémarrer Unity. 
+![module4Chapter1step9imb](images/module4chapter1step9imb.PNG)
 
-9. Avec l’objet « MixedRealityToolkit » sélectionné dans votre hiérarchie, cliquez sur « Copier et personnaliser » dans le panneau de l’inspecteur.
+8. Votre scène contient maintenant plusieurs nouveaux éléments à partir du MRTK. Enregistrez votre scène sous un nom différent en cliquant sur «fichier», puis sur «Enregistrer sous» et nommez votre scène SpeechScene. 
+
+> Remarque : Si vous appuyez sur lire sur votre scène après avoir ajouté le MRTK à votre projet et qu’il n’entre pas en mode lecture, vous devrez peut-être redémarrer Unity. 
+
+9. Avec l’objet MixedRealityToolkit sélectionné dans votre hiérarchie, cliquez sur copier et personnaliser dans le panneau Inspecteur.
 
 ![Module4Chapter1step9im](images/module4chapter1step9im.PNG)
 
-10. Également dans le panneau Inspecteur (avec l’objet « MixedRealityToolkit » sélectionné dans votre hiérarchie), désactiver le système de diagnostic en décochant la case à droite de « Enable Diagnostics System. »
+10. De même, dans le panneau inspecteur (avec l’objet MixedRealityToolkit sélectionné dans votre hiérarchie), désactivez le système de diagnostic en désactivant la case à cocher située à droite de l’option Activer le système de diagnostic.
 
-![Module4Chapter1step10im](images/module4chapter1step10im.PNG)
+![Module4Chapter1step9imd](images/module4chapter1step9imd.PNG)
 
-11. Dans le volet de projet, développez le dossier « Lunarcom » et faites glisser le préfabriqué « Lunarcom_Base » dans votre hiérarchie.
+11. Pour activer les commandes vocales, sélectionnez le profil MRTK nouvellement créé à personnaliser. Dans ce didacticiel, nous utilisons les commandes vocales en entrée pour la reconnaissance vocale et la transcription. Permet de cloner le profil d’entrée pour apporter des modifications aux paramètres de reconnaissance vocale.
+
+![Module4Chapter1step11imb](images/module4chapter1step11imb.PNG)
+
+![Module4Chapter1step11imd](images/module4chapter1step11imd.PNG)
+
+12. Une fois le profil d’entrée cloné, accédez à commandes vocales et Clonez les commandes vocales.
+
+![Module4Chapter1step12imb](images/module4chapter1step12imb.PNG)
+
+![Module4Chapter1step12imc](images/module4chapter1step12imc.PNG)
+
+13. Maintenant, sous commandes vocales, accédez à «paramètres généraux» et définissez «comportement de démarrage» sur «démarrage manuel».
+
+![Module4Chapter1step13imb](images/module4chapter1step13imb.PNG)
+
+14. Dans le panneau projet, développez le dossier Lunarcom et faites glisser le Prefab Lunarcom_Base dans votre hiérarchie.
 
 ![Module4Chapter1step11im](images/module4chapter1step11im.PNG)
 
-12. Sélectionnez l’objet « Lunarcom_Base » dans votre hiérarchie et vérifiez que la position est définie sur x = 0, y = 0 et z = 0, ainsi que la rotation de la valeur x = 0, y = 0 et z = 0. Définir l’échelle lecture x = 0.008, y = 0.008 et z = 0,01.
+15. Sélectionnez l’objet Lunarcom_Base dans votre hiérarchie et assurez-vous que la position est définie sur x = 0, y = 0 et z = 0, ainsi que la rotation définie sur x = 0, y = 0 et z = 0. Définissez l’échelle sur lecture x = 0.008, y = 0.008 et z = 0,01.
 
 ![Module4Chapter1step12im](images/module4chapter1step12im.PNG)
 
-13. Cliquez sur « Ajouter un composant » puis recherchez et sélectionnez « LunarcomController ». Ce script est inclus dans le pack de ressources Lunarcom que vous avez importé à l’étape 6.
+16. Cliquez sur Ajouter un composant, puis recherchez et sélectionnez LunarcomController. Ce script est inclus dans le pack d’actifs Lunarcom que vous avez importé à l’étape 6.
 
 ![Module4Chapter1step13im](images/module4chapter1step13im.PNG)
 
-14. Pour vous connecter à notre application à Azure Cognitive Services, vous devez entrer une clé « abonnement » également appelé une « clé API » pour le Service de reconnaissance vocale. Suivez les instructions de [ce lien](https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/get-started) pour obtenir une clé d’abonnement gratuit. Une fois que vous obtenez la clé d’abonnement, entrez-le dans le champ « Clé API du Service de reconnaissance vocale » du composant « LunarcomController » dans le panneau d’inspecteur, comme illustré dans l’image ci-dessous.
+17. Pour connecter notre application à Azure Cognitive Services, vous devez entrer une clé d’abonnement (également appelée clé API) pour le service vocal. Suivez les instructions [ici](https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/get-started) pour obtenir une clé d’abonnement gratuite. Une fois que vous avez obtenu la clé d’abonnement, entrez-la dans le champ clé de l’API du service vocal du composant LunarcomController dans le panneau Inspecteur, comme indiqué dans l’image ci-dessous.
 
-15. Entrez la région que vous avez choisi lors de votre inscription pour la clé d’abonnement dans le champ « Région du Service de reconnaissance vocale » du composant « LunarcomController » dans le panneau de l’inspecteur.
+18. Entrez la région que vous avez choisie lorsque vous vous êtes inscrit à la clé d’abonnement dans le champ région du service vocal du composant LunarcomController dans le panneau Inspecteur. Par exemple, pour la région «ouest des États-Unis» dans «ouestr»
 
 ![Module4Chapter1step15im](images/module4chapter1step15im.PNG)
 
-16. Dans votre hiérarchie, développez l’objet « Lunarcom_Base » en cliquant sur la flèche à gauche de celui-ci, puis faites de même pour son objet enfant, « Terminal Server » comme indiqué dans l’image ci-dessous.
+19. Dans votre hiérarchie, développez l’objet Lunarcom_Base en cliquant sur la flèche à gauche de celui-ci. Ensuite, faites de même pour son objet enfant, «terminal», comme indiqué dans l’image ci-dessous.
 
-17. « Lunarcom_Base » est sélectionnée, cliquez et faites « Lunarcom Text » à partir de la hiérarchie à l’emplacement « Sortie texte » dans le composant « LunarcomController » dans le panneau d’inspecteur, comme illustré dans l’image ci-dessous.
-18. Maintenant effectuer la même chose avec l’objet « Terminal Server » dans l’emplacement « Terminal Server » et l’objet « Connexion Light » à l’emplacement « Connexion Light Controller ».
+20. Tandis que Lunarcom_Base est sélectionné, cliquez et faites glisser Lunarcom Text de la hiérarchie vers l’emplacement du texte de sortie dans le composant LunarcomController du panneau Inspecteur, comme indiqué dans l’image ci-dessous.
+
+21. Effectuez la même opération avec l’objet terminal dans l’emplacement terminal et l’objet de connexion Light à l’emplacement de contrôle Light de connexion.
 
 ![Module4Chapter1step18im](images/module4chapter1step18im.PNG)
 
-19. Cliquez sur la flèche en regard de la section « Lunarcom boutons » du script « LunarcomController » dans le panneau d’inspecteur et modifier la taille à 3 et appuyez sur la touche entrée ou retour de votre clavier. Ainsi, trois nouveaux champs « Element » apparaisse.
+22. Cliquez sur la flèche en regard de la section Lunarcom Buttons du script LunarcomController dans le panneau Inspector, puis définissez la taille sur 3. Appuyez sur entrée ou retour. Trois nouveaux champs d’élément apparaissent alors.
 
 ![Module4Chapter1step19im](images/module4chapter1step19im.PNG)
 
-20. Développez les boutons « Lunarcom » en cliquant sur la flèche en regard de celle-ci dans votre hiérarchie et, à l’aide de la même procédure que ci-dessus, faites glisser le Mic, Satellite et Rocket gameobjects les références de l’élément 0, 1 et 2 respectivement dans le composant « LunarcomController » dans le Panneau de l’inspecteur. 
+23. Développez les boutons Lunarcom en cliquant sur la flèche en regard de celle-ci dans votre hiérarchie et en utilisant le même processus que ci-dessus, faites glisser les Gameobjects MIC, satellite et Rocket vers les références des éléments 0, 1 et 2, respectivement, dans le composant LunarcomController de la Panneau de l’inspecteur. 
 
 ![Module4Chapter1step18im](images/module4chapter1step20im.PNG)
 
-21. Sélectionnez l’objet « Lunarcom_Base » dans votre hiérarchie. Cliquez sur « Ajouter un composant » dans le panneau d’inspecteur, recherchez puis sélectionnez « LunarcomWakeWordRecognizer ».
+24. Sélectionnez l’objet Lunarcom_Base» dans votre hiérarchie. Cliquez sur Ajouter un composant dans le panneau Inspecteur, puis recherchez et sélectionnez LunarcomWakeWordRecognizer.
 
 ![Module4Chapter1step18im](images/module4chapter1step21im.PNG)
 
-22. Dans l’emplacement « Éveil par mot », tapez « Activer Terminal Server. » Également, dans l’emplacement « Ignorer Word », tapez « Terminal Dismiss. »
+25. Dans l’emplacement de mise en éveil par mot, tapez activer terminal. Dans l’emplacement ignorer le mot, tapez rejeter le terminal.
 
 ![Module4Chapter1step18im](images/module4chapter1step22im.PNG)
 
+### <a name="build-your-application-to-your-device"></a>Générer votre application sur votre appareil
+
+1. Ouvrez à nouveau la fenêtre Paramètres de build en accédant à fichier > paramètres de Build.
+
+![Lesson1 Chapter5 étape1](images/Lesson1Chapter5Step1.JPG)
+
+2. Vérifiez que la scène que vous souhaitez essayer figure dans la liste « Scenes in Build » (Scènes dans la génération) en cliquant sur le bouton « Add Open Scenes » (Ajouter des scènes ouvertes).
+
+3. Appuyez sur le bouton Build (Générer) pour commencer le processus de génération.
+
+![Lesson1 Chapter5 step3](images/Lesson1Chapter5Step3.JPG)
+
+4. Créez un dossier pour votre application et nommez-le. Dans l’image ci-dessous, un dossier portant le nom « App » a été créé pour contenir l’application. Cliquez sur « Select Folder » (Sélectionner le dossier) pour commencer la génération dans le dossier que vous venez de créer. Une fois la génération terminée, vous pouvez fermer la fenêtre « Build Settings » dans Unity. 
+
+![Lesson1 Chapter5 étape 4](images/Lesson1Chapter5Step4.JPG)
+
+> REMARQUE : Si la génération échoue, essayez de renouveler l’opération, éventuellement après avoir redémarré Unity. Si vous voyez une erreur comme « Error : CS0246 = The type or namespace name “XX” could not be found (are you missing a using directive or an assembly reference?) » (CS0246 = le type ou le nom de l’espace de noms « XX » est introuvable (une directive using ou une référence d’assembly est-elle manquante ?) », vous devrez peut-être installer [SDK Windows 10 (10.0.18362.0)](<https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk>)
+
+5. Une fois la génération terminée, ouvrez le dossier créé qui contient vos fichiers d’application nouvellement générés. Double-cliquez sur le fichier solution «. sln» pour ouvrir le fichier solution dans Visual Studio.
+
+> Remarque : Veillez à ouvrir le dossier créé (par exemple, le dossier « App », si vous avez suivi les conventions de nommage indiquées aux étapes précédentes), car il existe un fichier .sln portant le même nom en dehors de ce dossier qui ne doit pas être confondu avec le fichier .sln situé dans le dossier de génération. 
+
+![Leçon 1 Chapitre 5 Étape 5](images/Lesson1Chapter5Step5.JPG)
+
+> Remarque : Si Visual Studio vous invite à installer de nouveaux composants, prenez un moment pour vous assurer que tous les composants requis sont installés comme spécifié dans la [page « Installer les outils »](install-the-tools.md).
+
+6. Branchez l’appareil HoloLens 2 à votre PC avec le câble USB. Bien que les instructions de cette leçon supposent que vous déployez un test avec un appareil HoloLens 2, vous pouvez choisir d’effectuer le déploiement sur l’[émulateur HoloLens 2](using-the-hololens-emulator.md) ou de créer un [package d’application pour effectuer un chargement indépendant](<https://docs.microsoft.com/en-us/windows/uwp/packaging/packaging-uwp-apps>).
+
+7. Avant d’effectuer la génération sur votre appareil, vérifiez que ce dernier est en mode développeur. S’il s’agit de votre premier déploiement sur l’appareil HoloLens 2, Visual Studio peut vous demander de l’associer à un code confidentiel. Veuillez suivre [ces instructions](https://docs.microsoft.com/en-us/windows/mixed-reality/using-visual-studio) si vous devez activer le mode développeur ou associer l’appareil à Visual Studio.
+
+8. Configurez Visual Studio en vue d’effectuer la génération sur votre appareil HoloLens 2 en sélectionnant la configuration « Release » et l’architecture « ARM ».
+
+![Lesson1 Chapter5 Step8](images/Lesson1Chapter5Step8.JPG)
+
+9. L’étape finale consiste à effectuer la génération sur votre appareil en sélectionnant Déboguer > Démarrer sans débogage. Quand vous sélectionnez « Démarrer sans débogage », l’application démarre immédiatement sur votre appareil si la génération réussit, mais les informations de débogage n’apparaissent pas dans Visual Studio. Cela signifie également que vous pouvez déconnecter le câble USB pendant que votre application s’exécute sur votre appareil HoloLens 2 sans arrêter celle-ci. Vous pouvez également sélectionner Générer > Déployer la solution pour effectuer le déploiement sur votre appareil sans que l’application démarre automatiquement.
+
+![Lesson1 Chapter5 Step9](images/Lesson1Chapter5Step9.JPG)
+
 ## <a name="congratulations"></a>Félicitations
 
-Vous avez configuré la reconnaissance vocale dans votre application, alimentée par Azure ! Exécutez l’application pour vérifier que toutes les fonctions sont fonctionne correctement. Démarrer avec indiquant que le mot de mise en éveil que vous avez tapé à l’étape 22, « Activer Terminal Server. » Ensuite, sélectionnez le bouton du microphone pour démarrer la reconnaissance vocale et commencez à parler. Vous verrez vos mots lorsque vous parlez de transcription dans le terminal. Appuyez sur le bouton du microphone une deuxième fois pour arrêter la reconnaissance vocale. Par exemple « Ignorer Terminal Server » pour masquer le terminal Lunarcom. Dans la leçon suivante, nous allez apprendre à basculer dynamiquement à l’utilisation de la reconnaissance vocale sous tension l’appareil, pour les situations où speech d’Azure SDK n’est pas disponible en raison de la version 2 HoloLens hors connexion.
+Vous avez configuré la reconnaissance vocale dans votre application, optimisée par Azure. Exécutez l’application pour vous assurer que toutes les fonctions et fonctionnalités fonctionnent correctement. Commencez par dire le mot de mise en éveil que vous avez tapé à l’étape 22, activer terminal. Sélectionnez le bouton microphone pour démarrer la reconnaissance vocale. Commencez à parler. Vous verrez vos mots transcrits dans le terminal à mesure que vous parlez. Appuyez une deuxième fois sur le bouton microphone pour arrêter la reconnaissance vocale. Dites rejeter le terminal pour masquer le terminal Lunarcom. Dans la leçon suivante, nous allons apprendre à utiliser de manière dynamique la reconnaissance vocale de l’appareil pour les situations où le kit de développement logiciel (SDK) Speech d’Azure n’est pas disponible en raison de la déconnexion de HoloLens 2.
 
-[Leçon suivante : Kit de développement logiciel de reconnaissance vocale leçon 2](mrlearning-speechSDK-ch2.md)
+[Didacticiel suivant: 2. Ajout d’un mode hors connexion pour la traduction de parole en texte locale](mrlearning-speechSDK-ch2.md)
 

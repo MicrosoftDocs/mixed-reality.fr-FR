@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: 3e4be00ddeab6d91dbbc8226bfa3dc543cded095
-ms.sourcegitcommit: 611af6ff7a2412abad80c0c7d4decfc0c3a0e8c8
+ms.openlocfilehash: 529a888dfa00180ca908fbc7f4c62f9a9086c661
+ms.sourcegitcommit: c7c7e3c836373b65e319609b4e8389dea6b081de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68293676"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460328"
 ---
 # <a name="4-sharing-object-movements-with-multiple-users"></a>4. Partage des mouvements d’objets avec plusieurs utilisateurs
 
@@ -50,7 +50,7 @@ Cherché
 
 ![module3chapter4updatestep6](images/module3chapter4updatestep6.png)
 
-7. Dans la vue de projet, accédez à ressources-> Ressources-> Prefabs. Tout d’abord, glissez-déplacez la table Prefab vers l’emplacement Tableprefab sur la classe PhotonRoom. Ensuite, faites glisser et déposez le Prefab LunarModule vers l’emplacement Prefab de module sur la classe PhotonRoom.
+7. Dans la vue de projet, accédez à ressources-> Ressources-> Prefabs. Tout d’abord, glissez-déplacez la table Prefab vers l’emplacement Tableprefab sur la classe PhotonRoom. Ensuite, glissez-déplacez le RocketLauncherCompleteVariantprefab vers l’emplacement Prefab du module sur la classe PhotonRoom.
 
 ![module3chapter4updatestep7](images/module3chapter4updatestep7.png)
 
@@ -67,10 +67,6 @@ Cherché
 10. Après avoir sélectionné le nouvel objet dans votre hiérarchie, remplacez le nom de l’objet par TableAnchor dans le panneau Inspecteur. En outre, cliquez sur Ajouter un composant, puis recherchez le composant TableAnchor. Sélectionnez-le et ajoutez-le à l’objet. 
 
 ![Module3Chapter4step6im](images/module3chapter4step7im.PNG)
-
-> Remarque : Définissez le positionnement sur x = 1, y =-0,55 et z = 2. En outre, définissez la rotation sur y = 90. 
->
-> ![Module3Chapter4step6im](images/module3chapter4noteim.PNG)
 
 11. À présent, à partir du panneau projet dans le dossier Prefabs, faites glisser la table Prefab dans l’objet enfant «TableAnchor» que vous venez de créer.
 
