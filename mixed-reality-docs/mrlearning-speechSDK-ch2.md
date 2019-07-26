@@ -6,16 +6,18 @@ ms.author: jemccull
 ms.date: 06/27/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: e8dc5da5a089079ba38a26969df6070af8bc6200
-ms.sourcegitcommit: c7c7e3c836373b65e319609b4e8389dea6b081de
+ms.openlocfilehash: b13b22fcdce2e7fa1319d241302b764f457aabba
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460305"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485605"
 ---
 # <a name="2----adding-an-offline-mode-for-local-speech-to-text-translation"></a>2.    Ajout d’un mode hors connexion pour la traduction vocale locale en texte
 
 Dans ce didacticiel, nous allons ajouter un mode hors connexion qui vous permet d’effectuer des traductions vocales en texte local quand nous ne pouvons pas nous connecter au service Azure. Nous simulerons  également un état déconnecté.
+
+## <a name="instructions"></a>Instructions
 
 1. Sélectionnez l’objet Lunarcom_Base dans la hiérarchie, puis cliquez sur Ajouter un composant dans le panneau Inspecteur. Recherchez et sélectionnez la reconnaissance hors connexion Lunarcom.
 

@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 05/02/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: d47f2940ad741cb436322a824a67f54bb6376c55
-ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.openlocfilehash: 314af3e1e38e1698943f07dc32f5e1e3e2f36d4f
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387693"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485706"
 ---
 # <a name="5-interacting-with-3d-objects"></a>5. Interaction avec les objets 3D
 
@@ -202,8 +202,8 @@ Dans cet exemple, nous allons émettre un son quand vous touchez un objet avec v
 
 ![Lesson4 Chapter4 Step3 5 Noteim](images/Lesson4_chapter4_step3-5-noteim.PNG)
 
-### <a name="congratulations"></a>Félicitations 
+## <a name="congratulations"></a>Félicitations 
 Dans ce didacticiel, vous avez appris à organiser des objets 3D dans une collection de grilles et à manipuler des objets 3D (mise à l’échelle, rotation et déplacement) à l’aide de l’interaction proche (saisie directe des mains) et de l’interaction lointaine (à l’aide de rayons ou rayons de main). Vous avez également appris à placer des zones englobantes autour des objets 3D et appris à utiliser et à personnaliser les gizmos dans les zones englobantes. Enfin, vous avez découvert comment déclencher des événements quand l’utilisateur touche un objet.
 
-[Leçon suivante : Entrée avancée](mrlearning-base-ch5.md)
+[Leçon suivante : 6. Exploration des options d’entrée avancées](mrlearning-base-ch5.md)
 

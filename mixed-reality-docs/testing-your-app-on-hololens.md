@@ -6,12 +6,12 @@ ms.author: jlyons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: HoloLens, test
-ms.openlocfilehash: 35e8eff230cdcd719952ad2633ec610c9a9a26a0
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: b8c8e7ea8f90633cbb3b2aa01764398ef9a5c12a
+ms.sourcegitcommit: 76a7aa6e64e114b63ace058dd6d6d662b3c9f09e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63549056"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68507911"
 ---
 # <a name="testing-your-app-on-hololens"></a>Test de votre application sur HoloLens
 
@@ -71,7 +71,11 @@ Les utilisateurs peuvent interagir avec votre application via des [périphériqu
 
 ### <a name="battery"></a>Batterie
 
-Testez votre application sans une source d’alimentation connectée pour comprendre la vitesse à laquelle elle draine la batterie. L’un peut facilement comprendre l’état de la batterie en examinant les lectures de LED d’alimentation. ![États LED qui indiquent la puissance de la batterie](images/batterypowerledindication-500px.png)
+Testez votre application sans une source d’alimentation connectée pour comprendre la vitesse à laquelle elle draine la batterie. L’un peut facilement comprendre l’état de la batterie en examinant les lectures de LED d’alimentation. 
+
+![États LED qui indiquent la puissance de la batterie](images/batterypowerledindication-500px.png)<br>
+
+*États LED qui indiquent la puissance de la batterie*
 
 ### <a name="power-state-transitions"></a>Transitions d’état d’alimentation
 

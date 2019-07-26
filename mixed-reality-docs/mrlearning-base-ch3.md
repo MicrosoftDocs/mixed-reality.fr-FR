@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: 4baee7ba8643f5bb80e0456eb97d915405431654
-ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.openlocfilehash: 401c667ef80042da9182b7f4e065dfd6884cf061
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387706"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485692"
 ---
 # <a name="4-placing-dynamic-content-and-using-solvers"></a>4. Placement de contenu dynamique et utilisation de solveurs
 
@@ -74,8 +74,8 @@ Dans cette section, nous allons configurer l’objet de jeu Cube créé précéd
 
 ![Leçon 3, chapitre 3, étape 5, image](images/Lesson3_chapter3_step5im.PNG)
 
-### <a name="congratulations"></a>Félicitations
+## <a name="congratulations"></a>Félicitations
 Dans ce didacticiel, vous avez appris à utiliser les solveurs de MRTK pour qu’une interface utilisateur suive intuitivement l’utilisateur. Vous avez également vu comment attacher un solveur à un objet de jeu (par exemple, un cube) pour suivre les mouvements captés des mains de l’utilisateur. Pour en savoir plus sur ces solveurs et les autres fournis avec le MRTK, n’hésitez pas à visiter la [documentation consacrée aux solveurs du MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Solver.html).
 
-[Leçon suivante : Interaction avec des objets 3D](mrlearning-base-ch4.md)
+[Leçon suivante : 5.    Interaction avec les objets 3D](mrlearning-base-ch4.md)
 

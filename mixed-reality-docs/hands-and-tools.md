@@ -6,12 +6,12 @@ ms.author: shengkait
 ms.date: 04/26/2019
 ms.topic: article
 keywords: La réalité mixte, les mains, les opérations de mouvement, l’interaction, la conception
-ms.openlocfilehash: d0e54c71ab42a09f2f9c6063a85441b98e729af1
-ms.sourcegitcommit: 8d6e5723283c03f984f1fafef81afa5aab5d04bc
+ms.openlocfilehash: b6efb0a9651cad8eee9b80bb130aa1a85b9a9941
+ms.sourcegitcommit: 76a7aa6e64e114b63ace058dd6d6d662b3c9f09e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66039164"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68507869"
 ---
 # <a name="hands-and-motion-controllers"></a>Contrôleurs mains et motion
 ## <a name="scenarios"></a>Scénarios
@@ -32,9 +32,11 @@ Il s’agit d’une modalité tirant parti de la puissance des mains, avec laque
 Cette modalité permet aux utilisateurs d’interagir avec des hologrammes à distance. Il permet aux utilisateurs de tirer le meilleur parti de l’environnement. Les utilisateurs peuvent placer des hologrammes n’importe où et peuvent toujours y accéder à partir de n’importe quelle distance. Les modèles et les gestes mentals pour le contrôle et la manipulation des hologrammes 2D et 3D sont hautement synchronisés avec ceux de manipulation directe.
 
 ### <a name="motion-controllersmotion-controllersmd"></a>[Contrôleurs de mouvement](motion-controllers.md)
-Les contrôleurs de mouvement sont des outils qui étendent les capacités physiques des utilisateurs en fournissant des interactions précises sur une grande variété de distances tout en utilisant l’une ou l’autre des mains. Ces accessoires de matériel fournissent des raccourcis vers de nombreuses interactions couramment utilisées et donnent des commentaires surefooteds et tactiles pour diverses actions. Actuellement, les contrôleurs de mouvement sont uniquement disponibles pour les scénarios WMR. 
+Les contrôleurs de mouvement sont des outils qui étendent les capacités physiques de l’utilisateur en fournissant des interactions précises sur une grande variété de distances tout en utilisant l’une ou l’autre des mains. Ces accessoires de matériel fournissent des raccourcis vers de nombreuses interactions couramment utilisées et fournissent des commentaires surefooted et tactiles pour diverses actions. Actuellement, les contrôleurs de mouvement sont uniquement disponibles pour les scénarios Windows Mixed Reality (WMR). 
 
-![](images/Hands-and-controllers-720px.jpg)<br>
+![Comparaison des modalités des contrôleurs de mouvement et de mains](images/Hands-and-controllers-720px.jpg)<br>
+
+*Comparaison des modalités des contrôleurs de mouvement et de mains*
 
 ## <a name="see-also"></a>Voir aussi
 * [Suivre de la tête et valider](gaze-and-commit.md)

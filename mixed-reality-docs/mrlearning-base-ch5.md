@@ -6,14 +6,14 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: f9da038fe917e9e45b386de54049d6aa312ecfba
-ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.openlocfilehash: d7ef68d1a1e64ca85d76b11376d0916b2693e8e1
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387779"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485709"
 ---
-# <a name="6exploring-advanced-input-options"></a>6. exploration des options d’entrée avancées
+# <a name="6-exploring-advanced-input-options"></a>6. Exploration des options d’entrée avancées
 
 Dans ce didacticiel, nous explorons plusieurs options d’entrée avancées pour HoloLens 2, y compris l’utilisation de commandes vocales, le mouvement panoramique et le suivi oculaire. 
 
@@ -198,8 +198,9 @@ Dans le champ nouvellement créé, ajoutez l’objet de jeu actuel au champ vide
 6. Vérifiez que les fonctionnalités d’eye-tracking sont configurées correctement avant la génération dans HoloLens 2. Au moment de la rédaction de cet article, Unity n’a pas encore la possibilité de définir l’entrée de regard pour les fonctionnalités de suivi oculaire. La définition de cette fonctionnalité est nécessaire pour que le suivi oculaire fonctionne dans HoloLens 2. Suivez ces instructions fournies dans la documentation de Mixed Reality Toolkit pour activer la fonctionnalité d’entrée de pointage du regard : https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_BasicSetup.html#testing-your-unity-app-on-a-hololens-2 
 
 
-### <a name="congratulations"></a>Félicitations ! 
+## <a name="congratulations"></a>Félicitations
+
 Vous avez ajouté avec succès des fonctionnalités de suivi des yeux de base à votre application. Ces premiers pas vous ouvrent la voie vers tout un monde de possibilités avec l’eye-tracking. Ce chapitre conclut également la leçon 5, où nous avons appris les fonctionnalités d’entrée avancées, telles que les commandes vocales, les gestes panoramiques et le suivi oculaire. 
 
-[Leçon suivante : Exemple d’expérience d’assembly de module lunaire](mrlearning-base-ch6.md)
+[Leçon suivante : 7. Création d’un exemple d’application Module lunaire](mrlearning-base-ch6.md)
 

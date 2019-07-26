@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: 51cfc123f7da8d25a53eecfb730f60cf10fe7377
-ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.openlocfilehash: e79c3ea719a71d6df8ffd9e2be009d14a846a16a
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387784"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485723"
 ---
 # <a name="2-initializing-your-project-and-first-application"></a>2. Initialisation de votre projet et de la première application
 
@@ -112,4 +112,4 @@ Vous avez maintenant déployé votre première application HoloLens 2. Au fur et
 
 >Remarque : Vous découvrirez comment afficher/masquer le compteur de fréquence d’images à l’aide d’une commande vocale dans la [Leçon 5](mrlearning-base-ch5.md).
 
-[Leçon suivante : Interface utilisateur, suivi manuel et configuration du Kit de ressources de réalité mixte](mrlearning-base-ch2.md)
+[Leçon suivante : 3. Création d’une interface utilisateur et configuration d’une réalité mixte Toolkit](mrlearning-base-ch2.md)

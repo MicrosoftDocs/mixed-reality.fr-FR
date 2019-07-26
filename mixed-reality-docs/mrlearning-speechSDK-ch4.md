@@ -6,14 +6,14 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: 0cffb9ac8f61f77b77fc5925264b95ba57d94ece
-ms.sourcegitcommit: c7c7e3c836373b65e319609b4e8389dea6b081de
+ms.openlocfilehash: b434b9c79a702067a9c3db6fb25b0f75cdc6030d
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460344"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485779"
 ---
-# <a name="speech-sdk-learning-module---intent-and-natural-language-understanding"></a>Module de formation Speech SDK-Intent et Language Understanding naturel
+# <a name="4-setting-up-intent-and-natural-language-understanding"></a>4. Configuration de l’intention et compréhension du langage naturel
 
 Dans cette leçon, nous allons explorer la fonctionnalité d’intention du service Azure Speech. La fonctionnalité d’intention nous permet d’équiper notre application avec des commandes vocales en intelligence artificielle, où les utilisateurs peuvent indiquer des commandes vocales non spécifiques, tout en ayant l’intention de les interpréter par le système. Au cours de cette leçon, nous allons configurer notre portail Azure LUIS, configurer nos intentions/entités/énoncés, publier notre ressource intentionnelle, connecter notre application Unity à notre ressource intentionnelle et effectuer notre premier appel d’API d’intention.
 

@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: 690ece3a02aeefd598db18baa66de3ddabfa43eb
-ms.sourcegitcommit: 611af6ff7a2412abad80c0c7d4decfc0c3a0e8c8
+ms.openlocfilehash: 391e797ad9cc8933b057366ab47a3f453c68723e
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68293816"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485774"
 ---
 # <a name="1-getting-started-with-azure-spatial-anchors"></a>1. Prise en main des ancres spatiales Azure
 
@@ -199,5 +199,5 @@ Dans les sections précédentes, vous avez appris les principes de base des ancr
 ## <a name="congratulations"></a>Félicitations
 Dans ce didacticiel, vous avez appris les principes de base des ancres spatiales Azure. Cette session Esso a fourni plusieurs boutons qui vous permettent d’explorer les différentes étapes requises pour démarrer et arrêter une session Azure, et de créer, télécharger et télécharger des ancres Azure sur un seul appareil. Dans la leçon suivante, nous allons apprendre à enregistrer des ID d’ancrage Azure dans votre HoloLens 2 pour la récupération, même après le redémarrage de l’application. Au cours de la série, vous apprendrez également à transférer des ID d’ancrage entre plusieurs appareils pour atteindre l’alignement spatial et à découvrir les sessions partagées multi-utilisateur, à venir dans le cadre du didacticiel de partage.
 
-[Leçon suivante : Leçon ASA 2](mrlearning-asa-ch2.md)
+[Leçon suivante : 2. Enregistrement, récupération et partage d’ancres spatiales Azure](mrlearning-asa-ch2.md)
 

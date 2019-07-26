@@ -6,14 +6,14 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: 92bea1f3130f67645c10e36fe40cd4bc6f8b9151
-ms.sourcegitcommit: 611af6ff7a2412abad80c0c7d4decfc0c3a0e8c8
+ms.openlocfilehash: 53519d7bb2832fe8ce500f1ee146c91488b09366
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68293671"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485660"
 ---
-# <a name="connecting-multiple-users"></a>Connexion de plusieurs utilisateurs
+# <a name="3-connecting-multiple-users"></a>3. Connexion de plusieurs utilisateurs
 
 Dans cette leçon, nous allons apprendre à connecter plusieurs utilisateurs dans le cadre d’une expérience partagée en direct. À la fin de cette leçon, vous serez en mesure d’ouvrir l’application sur plusieurs appareils, et de voir un avatar, représenté par une sphère, des représentations de chaque personne qui rejoint. 
 
@@ -23,7 +23,7 @@ Cherché
 - Configurer les joueurs
 - Découvrez comment connecter plusieurs utilisateurs dans un environnement partagé
 
-### <a name="instructions"></a>Instructions
+## <a name="instructions"></a>Instructions
 
 1. Dans le dossier Ressources-> Ressources-> Prefabs dans le panneau projet, glissez-déposez le Prefab NetworkLobby dans la hiérarchie, comme indiqué dans l’image ci-dessous.
 
@@ -72,5 +72,5 @@ Cherché
 
 Une fois que toutes les étapes ci-dessus sont terminées et que le processus de génération est également terminé, appuyez sur le bouton de lecture et connectez votre HoloLens 2. Vous devriez voir une sphère se déplaçant au fur et à mesure que vous déplacez votre tête. Celui-ci s’affiche pour tout utilisateur qui rejoint votre projet Unity.
 
-[Leçon suivante : Leçon 4 sur le partage (photon)](mrlearning-sharing(photon)-ch4.md)
+[Leçon suivante : 4. Partage de mouvements d’objet avec plusieurs utilisateurs](mrlearning-sharing(photon)-ch4.md)
 

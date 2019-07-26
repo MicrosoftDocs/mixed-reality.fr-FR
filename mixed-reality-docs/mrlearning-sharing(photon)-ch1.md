@@ -6,18 +6,18 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: e40cd50f75ca509c601d215cb865161ea3596565
-ms.sourcegitcommit: 611af6ff7a2412abad80c0c7d4decfc0c3a0e8c8
+ms.openlocfilehash: 46c32abaf45623b7ccba90f257959e4ef4f8e1b5
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68293645"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485644"
 ---
-#  <a name="setting-up-photon-unity-networking"></a>Configuration de la mise en réseau photonique Unity
+#  <a name="1-setting-up-photon-unity-networking"></a>1. Configuration de la mise en réseau photonique Unity
 
 Dans ce didacticiel, nous allons apprendre à vous préparer à la création d’une expérience partagée en important la mise en réseau de photons Unity (retentissante) dans votre projet Unity. Photons est l’une des nombreuses options de mise en réseau disponibles pour les développeurs de réalité mixte pour créer des expériences partagées. Nous allons apprendre à créer un compte de photons, à importer une photons et à créer un serveur local facultatif
 
-Cherché
+## <a name="objectives"></a>Objectifs
 
 * Découvrez comment créer un compte de photons
 
@@ -27,7 +27,7 @@ Cherché
 
   
 
-### <a name="setting-up-photon"></a>Configuration de photons
+## <a name="setting-up-photon"></a>Configuration de photons
 
 1. Configurez un compte de [photons](https://dashboard.photonengine.com/en-US/Account/SignUp) . Accédez à la page d’inscription à photons en cliquant sur [ce lien](https://dashboard.photonengine.com/en-US/Account/SignUp). Suivez les instructions de la page d’inscription pour créer le compte. 
    
@@ -69,5 +69,5 @@ Cherché
 
 Vous venez de créer un compte de photons, de configurer un serveur de photons local et d’importer des retentissante dans Unity. L’étape suivante consiste à configurer le projet, puis à autoriser les connexions avec d’autres utilisateurs afin que plusieurs utilisateurs puissent voir votre travail. 
 
-[Didacticiel suivant: Préparation de Unity pour le développement](mrlearning-sharing(photon)-ch2.md)
+[Didacticiel suivant: 2. Préparation de Unity pour le développement](mrlearning-sharing(photon)-ch2.md)
 

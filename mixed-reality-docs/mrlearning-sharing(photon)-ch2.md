@@ -1,4 +1,4 @@
-### <a name="getting-unity-ready-for-development"></a>Obtention d’Unity prête pour le développement 
+# <a name="2-getting-unity-ready-for-development"></a>2. Obtention d’Unity prête pour le développement 
 
 
 Dans ce didacticiel, nous allons apprendre à préparer et à configurer Unity pour le développement d’applications, notamment l’importation du kit de développement de la réalité mixte, la configuration des paramètres de génération et la préparation de notre scène.
@@ -11,7 +11,7 @@ Cherché
 
 - Préparer la scène de votre projet
 
-### <a name="instructions"></a>Instructions
+## <a name="instructions"></a>Instructions
 
 1. Téléchargez et enregistrez le package Unity du kit d’outils de réalité mixte en cliquant [ici.](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/download/v2.0.0-RC2.1/Microsoft.MixedReality.Toolkit.Unity.Foundation-v2.0.0-RC2.1.unitypackage)
 
@@ -76,5 +76,5 @@ Cherché
 
 Votre projet Unity est maintenant prêt pour la photonique. Dans les didacticiels à venir, nous nous appuyons sur cette scène et notre projet Unity vers une expérience partagée complète.
 
-[Didacticiel suivant: Connexion de plusieurs utilisateurs](mrlearning-sharing(photon)-ch3.md)
+[Didacticiel suivant: 3. Connexion de plusieurs utilisateurs](mrlearning-sharing(photon)-ch3.md)
 

@@ -6,18 +6,18 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: c6e902710eebe205b9e944b1bf95a9ddd3bd9044
-ms.sourcegitcommit: 611af6ff7a2412abad80c0c7d4decfc0c3a0e8c8
+ms.openlocfilehash: cfd6ac9997a8a5d962603922f473bd6fc5d708ed
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68293808"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485732"
 ---
-# <a name="displaying-azure-spatial-anchor-feedback"></a>Affichage des commentaires sur l’ancrage spatial Azure
+# <a name="3-displaying-azure-spatial-anchor-feedback"></a>3. Affichage des commentaires sur l’ancrage spatial Azure
 
 Dans cette leçon, vous allez apprendre à fournir aux utilisateurs des commentaires sur la détection d’ancrage, les événements et l’état lors de l’utilisation d’ancres spatiales Azure.
 
-Cherché
+## <a name="objectives"></a>Objectifs
 
 * Découvrez comment configurer un panneau d’interface utilisateur qui affiche des informations importantes sur la session ASA actuelle.
 
