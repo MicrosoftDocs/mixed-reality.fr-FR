@@ -3,7 +3,7 @@
 
 Dans ce didacticiel, nous allons apprendre à préparer et à configurer Unity pour le développement d’applications, notamment l’importation du kit de développement de la réalité mixte, la configuration des paramètres de génération et la préparation de notre scène.
 
-Cherché
+## <a name="objectives"></a>Objectifs
 
 - Configurer Unity pour le développement d’applications
 
