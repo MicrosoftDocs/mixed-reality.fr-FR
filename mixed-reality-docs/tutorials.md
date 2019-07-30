@@ -4,28 +4,36 @@ title: Didacticiels et exemples d’applications
 description: Fournit des exemples de code et des didacticiels sur le développement de réalité mixte.
 author: keveleigh
 ms.author: kurtie
-ms.date: 03/21/2018
+ms.date: 03/26/2019
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, Academy, didacticiel
-ms.openlocfilehash: 4f1402cb9b91e0d0619c0516de9120302323b799
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: 862cf8726df6143ece0d87a135a8e9cc6101948b
+ms.sourcegitcommit: 23e172664c2ee1220fe3b4468c104b37ef3ceda9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67415403"
+ms.lasthandoff: 07/29/2019
+ms.locfileid: "68601620"
 ---
 # <a name="tutorials-and-sample-apps"></a>Didacticiels et exemples d’applications
 
 Actuellement, tous nos didacticiels et nos exemples d’applications sont basés sur Unity.  Au fur et à mesure que nous développons du contenu pour d’autres moteurs et plateformes, vous les trouverez sous l’en-tête approprié dans la table des matières.
 
-## <a name="mr-learning-modules"></a>Modules d’apprentissage sur la réalité mixte
+## <a name="hololens-2-tutorials"></a>Tutoriels sur HoloLens 2
 
-Les modules de formation MR sont conçus pour aider les développeurs à apprendre les techniques et les meilleures pratiques pour le développement d’applications de réalité mixte.  Les modules initiaux sont destinés à HoloLens 2 et implémentent la réalité mixte Toolkit 2,0 (MRTK 2,0).
-* Le module de base est destiné à montrer aux développeurs comment configurer leur projet avec MRTK, ainsi qu’à implémenter l’interface utilisateur, le mappage spatial et les interactions de base et avancées
+Les didacticiels HoloLens 2 sont conçus pour aider les développeurs à apprendre les techniques et les meilleures pratiques pour le développement d’applications de réalité mixte.  Les didacticiels sont basés sur le [Kit de réalité mixte Toolkit 2,0 (MRTK 2,0)](https://github.com/microsoft/MixedRealityToolkit-Unity).
+
+* Didacticiels de mise en route- [1 sur 7 vue d’ensemble et objectifs](mrlearning-base.md)
+* Didacticiels d’ancrage spatial Azure- [1 sur 3 prise en main des ancres spatiales Azure](mrlearning-asa-ch1.md)
+* Didacticiels Azure Speech services- [1 sur 4 intégration et utilisation de la reconnaissance vocale et transcription](mrlearning-speechSDK-ch1.md)
+* Didacticiels sur les fonctionnalités multi-utilisateur- [1 sur 5 Configuration de la mise en réseau photonique Unity](mrlearning-sharing(photon)-ch1.md)
 
 ## <a name="open-source-sample-apps"></a>Exemples d’applications open source
 
 Les exemples d’applications open source sont des applications qui ont été créées par nos équipes et nous avons fourni le code source pour que les développeurs puissent les examiner et tirer des connaissances de nos projets.
+
+* [Tableau périodique des éléments](periodic-table-of-the-elements.md)
+* [Lunar Module](lunar-module.md)
+* [Galaxy Explorer](galaxy-explorer.md)
 
 ## <a name="mixed-reality-academy-tutorials"></a>Didacticiels d’Académie de la réalité mixte
 
