@@ -129,7 +129,7 @@ Vous avez besoin d’au moins quinze (15) images pour chaque objet que vous souh
 
 Pour former votre projet Custom Vision:
 
-1.  Cliquez sur le **+** bouton en regard de balises.
+1.  Cliquez sur le **+** bouton en regardde balises.
 
     ![](images/AzureLabs-Lab310-06.png)
 
@@ -137,7 +137,7 @@ Pour former votre projet Custom Vision:
 
     ![](images/AzureLabs-Lab310-07.png)
 
-3.  Vous remarquerez  que votre balise a été ajoutée (vous devrez peut-être recharger votre page pour qu’elle apparaisse). 
+3.  Vous remarquerez que votre balise a été ajoutée (vous devrez peut-être recharger votre page pour qu’elle apparaisse). 
 
     ![](images/AzureLabs-Lab310-08.png)
 
@@ -291,7 +291,7 @@ Vous trouverez le [package Azure-Mr-310 que vous devez télécharger ici](https:
 
     ![](images/AzureLabs-Lab310-35.png)
 
-    1.  Le  dossier Materials contient les éléments utilisés par le **curseur en regard**. 
+    1.  Le dossier Materials contient les éléments utilisés par le **curseur en regard**. 
 
     2.  Le dossier **plug-ins** contient la dll Newtonsoft utilisée par le code pour désérialiser la réponse Web du service. Les deux (2) différentes versions contenues dans le dossier, et sous-dossier, sont nécessaires pour permettre à la bibliothèque d’être utilisée et construite à la fois par l’éditeur Unity et par la build UWP. 
 
@@ -301,9 +301,9 @@ Vous trouverez le [package Azure-Mr-310 que vous devez télécharger ici](https:
         2.  L' **étiquette**, qui est l’objet d’interface utilisateur utilisé pour afficher la balise d’objet dans la scène, si nécessaire.
         3.  **SpatialMapping**, qui est l’objet qui permet à l’application d’utiliser la création d’une carte virtuelle, à l’aide du suivi spatial Microsoft HoloLens.
 
-    4.  Le  dossier scenes qui contient actuellement la scène prédéfinie pour ce cours.
+    4.  Le dossier scenes qui contient actuellement la scène prédéfinie pour ce cours.
 
-4.  Ouvrez le  dossier scenes, dans le **panneau Projet**, puis double-cliquez sur **ObjDetectionScene**pour charger la scène que vous allez utiliser pour ce cours.
+4.  Ouvrez le dossier scenes, dans le **panneau Projet**, puis double-cliquez sur **ObjDetectionScene**pour charger la scène que vous allez utiliser pour ce cours.
 
     ![](images/AzureLabs-Lab310-36.png)
 
@@ -325,7 +325,7 @@ Cette classe est chargée des opérations suivantes:
 
 - Réception de la réponse sous forme de chaîne JSON.
 
-- La désérialisation de la réponse et le passage  de la prédiction résultante à la classe **SceneOrganiser** , qui s’occupera du mode d’affichage de la réponse.
+- La désérialisation de la réponse et le passage de la prédiction résultante à la classe **SceneOrganiser** , qui s’occupera du mode d’affichage de la réponse.
 
 Pour créer cette classe:
 
@@ -1300,7 +1300,7 @@ Vous êtes maintenant prêt à créer votre application en tant que solution UWP
 
 8.  Accédez à votre nouvelle build Unity (le dossier de l' **application** ) et ouvrez le fichier solution avec **Visual Studio**.
 
-9.  Dans la configuration de la solution, sélectionnez Déboguer.
+9.  Dans la configuration de lasolution, sélectionnez Déboguer.
 
 10. Dans la plateforme de la solution, sélectionnez **x86, ordinateur distant**. Vous serez invité à insérer l' **adresse IP** d’un périphérique distant (le Microsoft HoloLens, dans ce cas, que vous avez noté).
 

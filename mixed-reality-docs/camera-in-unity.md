@@ -1,108 +1,95 @@
 ---
 title: Appareil photo dans Unity
-description: Comment utiliser le développement de Main Camera pour Windows Mixed Reality d’Unity pour effectuer le rendu HOLOGRAPHIQUE
+description: Comment utiliser la caméra principale d’Unity pour le développement de la réalité mixte Windows pour effectuer un rendu holographique
 author: keveleigh
 ms.author: kurtie
 ms.date: 03/21/2018
 ms.topic: article
-keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-unity, rendu HOLOGRAPHIQUE, point de focus holographique et immersive, mémoire tampon de profondeur, orientation uniquement, positionnel, opaque et transparent, élément
-ms.openlocfilehash: 8ea5a1f53351faab1b2863a0afac74e958b4b1a0
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, rendu holographique, holographique, immersif, point de focus, mémoire tampon de profondeur, orientation uniquement, positionnelle, opaque, transparent, clip
+ms.openlocfilehash: 3a9846242dd1709bcaf927d8ffae33862e96ecc8
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59593338"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63522378"
 ---
 # <a name="camera-in-unity"></a>Appareil photo dans Unity
 
-Lorsque vous porter un casque de réalité mixte, il devient le centre de votre monde HOLOGRAPHIQUE. L’Unity [caméra](http://docs.unity3d.com/Manual/class-Camera.html) composant gérera automatiquement rendu stéréoscopique et suivent le mouvement de la tête et de rotation lorsque votre projet a « Virtuel réalité pris en charge » sélectionné avec « Windows Mixed Reality » en tant que l’appareil (dans la section autres paramètres les paramètres du lecteur Windows Store). Cela peut être répertorié en tant que « Windows HOLOGRAPHIQUE » dans les versions antérieures de Unity.
+Quand vous portez un casque de réalité mixte, il devient le centre de votre monde holographique. Le composant [appareil photo](http://docs.unity3d.com/Manual/class-Camera.html) Unity gère automatiquement le rendu stéréoscopique et suit le mouvement et la rotation de votre tête quand la «réalité virtuelle prise en charge» de votre projet est sélectionnée avec «Windows Mixed Reality» comme appareil (dans les autres paramètres Section des paramètres du lecteur Windows Store). Cela peut être indiqué sous la forme «Windows holographique» dans les versions antérieures d’Unity.
 
-Toutefois, pour optimiser complètement qualité visuelle et [la stabilité hologramme](hologram-stability.md), vous devez définir les paramètres de la caméra décrites ci-dessous.
+Toutefois, pour optimiser complètement la qualité visuelle et la [stabilité](hologram-stability.md)des hologrammes, vous devez définir les paramètres de l’appareil photo décrits ci-dessous.
 
 >[!NOTE]
->Ces paramètres doivent être appliquées à l’appareil photo dans chaque scène de votre application.
+>Ces paramètres doivent être appliqués à l’appareil photo dans chaque scène de votre application.
 >
->Par défaut, lorsque vous créez une nouvelle scène dans Unity, il contiendra un GameObject de caméra principale dans la hiérarchie qui inclut le composant de l’appareil photo, mais n’a pas les paramètres ci-dessous correctement appliquées.
+>Par défaut, lorsque vous créez une nouvelle scène dans Unity, elle contient un GameObject d’appareil photo principal dans la hiérarchie qui comprend le composant Camera, mais les paramètres ci-dessous ne sont pas correctement appliqués.
 
-## <a name="holographic-vs-immersive-headsets"></a>Holographique et des casques IMMERSIFS
+## <a name="automatic-scene-and-camera-setup-with-mixed-reality-toolkit-v2"></a>Configuration automatique de la scène et de l’appareil photo avec Mixed Reality Toolkit v2. 
 
-Les paramètres par défaut sur le composant de l’appareil photo Unity sont pour les applications 3D traditionnelles nécessitant un arrière-plan de type skybox qu’ils n’ont pas un monde réel.
-* Lors de l’exécution un  **[casque immersif](immersive-headset-hardware-details.md)**, rendu tout ce que voit l’utilisateur et par conséquent, vous souhaiterez probablement garder le skybox.
-* Toutefois, lors de l’exécution un **casque HOLOGRAPHIQUE** comme [HoloLens](hololens-hardware-details.md), le monde réel doit apparaître tout ce que l’appareil photo rendus. Pour ce faire, définir l’arrière-plan de l’appareil photo d’être transparents (dans HoloLens, devient noir transparent) au lieu d’une texture Skybox :
-    1. Sélectionnez la caméra principale dans le volet de hiérarchie
-    2. Dans le panneau d’inspecteur, de trouver le composant de l’appareil photo et modifiez la liste déroulante d’effacer les indicateurs Skybox par couleur unie
-    3. Sélectionnez le sélecteur de couleurs d’arrière-plan et de modifier les valeurs RGBA (0, 0, 0, 0)
+Suivez le guide [pas à pas](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html) pour ajouter Mixed Reality Toolkit v2 à votre projet Unity et configurez votre projet automatiquement.
 
-Vous pouvez utiliser le code de script pour déterminer, lors de l’exécution, si le casque est immersives ou HOLOGRAPHIQUE en vérifiant [HolographicSettings.IsDisplayOpaque](https://docs.unity3d.com/ScriptReference/XR.WSA.HolographicSettings.IsDisplayOpaque.html).
+Vous pouvez également configurer manuellement le projet sans MRTK avec le Guide de la section ci-dessous. 
+
+## <a name="holographic-vs-immersive-headsets"></a>Des casques holographiques et des casques immersifs
+
+Les paramètres par défaut du composant appareil photo Unity sont destinés aux applications 3D traditionnelles qui ont besoin d’un arrière-plan skybox, car ils n’ont pas de monde réel.
+* Quand vous exécutez sur un **[casque immersif](immersive-headset-hardware-details.md)** , vous affichez tout ce que l’utilisateur voit, et vous souhaiterez probablement conserver le skybox.
+* Toutefois, en cas d’exécution sur un **casque holographique** comme [HoloLens](hololens-hardware-details.md), le monde réel doit apparaître derrière tout ce que l’appareil photo rend. Pour ce faire, définissez l’arrière-plan de l’appareil photo sur transparent (dans HoloLens, le rendu noir est transparent) au lieu d’une texture skybox:
+    1. Sélectionner la caméra principale dans le volet de la hiérarchie
+    2. Dans le panneau Inspecteur, recherchez le composant Camera et modifiez la liste déroulante Clear Flags de skybox en Color unie
+    3. Sélectionnez le sélecteur de couleur d’arrière-plan et modifiez les valeurs RVBA en (0, 0, 0, 0)
+
+Vous pouvez utiliser le code de script pour déterminer au moment de l’exécution si le casque est immersif ou holographique en vérifiant [HolographicSettings. IsDisplayOpaque](https://docs.unity3d.com/ScriptReference/XR.WSA.HolographicSettings.IsDisplayOpaque.html).
 
 
 ## <a name="positioning-the-camera"></a>Positionnement de l’appareil photo
 
-Il sera plus facile de créer votre application si vous imaginez la position de départ de l’utilisateur en tant que (x :) 0, Y : 0, Z : 0). Étant donné que la caméra principale effectue le suivi des mouvements de tête de l’utilisateur, vous pouvez définir la position de départ de l’utilisateur en définissant la position de départ de la caméra principale.
-1. Sélectionnez Main Camera dans le volet de hiérarchie
-2. Dans le panneau d’inspecteur, de trouver le composant de transformation et modifier la Position à partir de (x :) 0, Y : 1, Z: -10) à (x : 0, Y : 0, Z : 0)
+Il sera plus facile de disposer votre application si vous imaginez la position de départ de l’utilisateur comme (X: 0, Y: 0, Z: 0). Étant donné que la caméra principale effectue le suivi du mouvement de la tête de l’utilisateur, la position de départ de l’utilisateur peut être définie en définissant la position de départ de l’appareil photo principal.
+1. Sélectionner la caméra principale dans le volet de la hiérarchie
+2. Dans le panneau Inspecteur, recherchez le composant transformer et changez la position de (X: 0, Y: 1, Z:-10) à (X: 0, Y: 0, Z: entre
 
-   ![Appareil photo dans le volet de l’inspecteur dans Unity](images/maincamera-350px.png)<br>
-   *Appareil photo dans le volet de l’inspecteur dans Unity*
+   ![Caméra dans le volet de l’inspecteur dans Unity](images/maincamera-350px.png)<br>
+   *Caméra dans le volet de l’inspecteur dans Unity*
 
 ## <a name="clip-planes"></a>Plans de coupe
 
-Rendu de contenu trop proche de l’utilisateur peut être inconfortable en réalité mixte. Vous pouvez ajuster le [près et plans de coupe présent](hologram-stability.md#hologram-render-distances) sur le composant de l’appareil photo.
-1. Sélectionnez la caméra principale dans le volet de hiérarchie
-2. Dans le panneau d’inspecteur, rechercher les plans de découpage de composant de caméra et diffère de la zone de texte quasi 0.3.85. Le contenu restitué encore plus proche peut entraîner une gêne utilisateur et doit être évitée par le [restituer des instructions de distance](hologram-stability.md#hologram-render-distances).
+Le rendu du contenu trop proche de l’utilisateur peut ne pas être à l’aise avec la réalité mixte. Vous pouvez ajuster les [plans de clip proches et Far](hologram-stability.md#hologram-render-distances) sur le composant de l’appareil photo.
+1. Sélectionner la caméra principale dans le volet de la hiérarchie
+2. Dans le panneau Inspecteur, recherchez les plans de découpage du composant d’appareil photo et remplacez la valeur 0,3 de la zone de texte near par. 85. Le rendu du contenu est encore plus proche peut entraîner une gêne de l’utilisateur et doit être évité en fonction des [règles de distance de rendu](hologram-stability.md#hologram-render-distances).
 
 ## <a name="multiple-cameras"></a>Plusieurs caméras
 
-Lorsqu’il existe plusieurs composants de l’appareil photo dans la scène, Unity sait quelle caméra à utiliser pour le rendu stéréoscopique et suivi principal en vérifiant le GameObject a la balise MainCamera.
+Lorsqu’il existe plusieurs composants d’appareil photo dans la scène, Unity sait quelle caméra utiliser pour le rendu stéréoscopique et le suivi des têtes en vérifiant quel GameObject a la balise MainCamera.
 
-## <a name="recentering-a-seated-experience"></a>Recentering une expérience assise
+## <a name="recentering-a-seated-experience"></a>Recentrer une expérience assise
 
-Si vous créez un [assis à l’échelle du expérience](coordinate-systems.md), vous pouvez l’origine du monde de recentrer Unity à la position principal actuel de l’utilisateur en appelant le **[XR. InputTracking.Recenter](https://docs.unity3d.com/ScriptReference/XR.InputTracking.Recenter.html)** (méthode).
+Si vous créez une [expérience à l’échelle assise](coordinate-systems.md), vous pouvez recentrer l’origine du monde de l’unité à la position de la tête actuelle de l’utilisateur en appelant **[XR. Méthode InputTracking. recenter](https://docs.unity3d.com/ScriptReference/XR.InputTracking.Recenter.html)** .
 
 ## <a name="reprojection-modes"></a>Modes de reprojection
 
-HoloLens et des casques IMMERSIFS seront reproject chaque cadre de votre application effectue le rendu pour s’ajuster à toute mauvaise prédiction de position principal réelle de l’utilisateur lorsque photons sont émis.
+Les casques HoloLens et immersif reprojeteront chaque image que votre application restituera pour s’ajuster pour une prédiction incorrecte de la position d’en-tête réelle de l’utilisateur lors de l’émission de photons.
 
-Par défaut :
+Par défaut:
 
-* **Des casques IMMERSIFS** effectuera reprojection positionnelle, ajuster votre hologrammes pour mauvaise prédiction de la position et l’orientation, si l’application fournit un mémoire tampon de profondeur pour une trame donnée.  Si un mémoire tampon de profondeur n’est pas fourni, le système corrige uniquement mispredictions dans l’orientation.
-* **Les casques HOLOGRAPHIQUE** comme HoloLens effectuera positionnelle reprojection si l’application fournit sa mémoire tampon de profondeur ou non.  Reprojection positionnelle est possible sans les tampons de profondeur sur HoloLens comme rendu est souvent partiellement alloué avec un arrière-plan stable fourni par le monde réel.
+* Les casques immersifs effectuent une reprojection de position, en ajustant vos hologrammes pour la prédiction à la fois à la position et à l’orientation, si l’application fournit un tampon de profondeur pour un frame donné.  Si aucune mémoire tampon de profondeur n’est fournie, le système corrigera uniquement les prédictions incorrectes dans l’orientation.
+* Les casques holographiques comme HoloLens effectuent une reprojection de position, que l’application fournisse ou non sa mémoire tampon de profondeur.  La reprojection positionnel est possible sans tampons de profondeur sur HoloLens, car le rendu est souvent épars avec un arrière-plan stable fourni par le monde réel.
 
-Si vous savez que vous générez un [orientation seule expérience](coordinate-systems-in-unity.md#building-an-orientation-only-or-seated-scale-experience) avec du contenu de façon rigide verrouillé de corps (par exemple, à 360 degrés le contenu vidéo), vous pouvez définir explicitement le mode reprojection en orientation uniquement en définissant [ HolographicSettings.ReprojectionMode](https://docs.unity3d.com/ScriptReference/XR.WSA.HolographicSettings.ReprojectionMode.html) à [HolographicReprojectionMode.OrientationOnly](https://docs.unity3d.com/ScriptReference/XR.WSA.HolographicSettings.HolographicReprojectionMode.html).
+Si vous savez que vous créez une [expérience d’orientation uniquement](coordinate-systems-in-unity.md#building-an-orientation-only-or-seated-scale-experience) avec du contenu verrouillé de manière rigide (par exemple, du contenu vidéo de 360 degrés), vous pouvez définir explicitement le mode de reprojection sur l’orientation uniquement en définissant [ HolographicSettings. ReprojectionMode](https://docs.unity3d.com/ScriptReference/XR.WSA.HolographicSettings.ReprojectionMode.html) à [HolographicReprojectionMode. OrientationOnly](https://docs.unity3d.com/ScriptReference/XR.WSA.HolographicSettings.HolographicReprojectionMode.html).
 
-## <a name="sharing-your-depth-buffers-with-windows"></a>Partage de vos tampons de profondeur avec Windows
+## <a name="sharing-your-depth-buffers-with-windows"></a>Partage de vos mémoires tampons de profondeur avec Windows
 
-Partage de mémoire tampon de profondeur de votre application pour chaque trame donnera votre application une des deux accroît de stabilité HOLOGRAMME, selon le type de casque de Windows que vous êtes rendu pour :
-* **Des casques IMMERSIFS** réalisables reprojection positionnelle lorsqu’un mémoire tampon de profondeur est fourni, en ajustant vos hologrammes pour mauvaise prédiction de la position et l’orientation.
-* **Les casques HOLOGRAPHIQUE** comme HoloLens sélectionne automatiquement un [concentrer point](focus-point-in-unity.md) lorsqu’un mémoire tampon de profondeur est fourni, optimisation de la stabilité hologramme le long du plan qui entre en intersection avec le contenu le plus.
+En partageant le tampon de profondeur de votre application sur Windows, chaque trame donne à votre application l’un des deux boosters de stabilité de l’hologramme, en fonction du type de casque pour lequel vous effectuez le rendu:
+* Les casques immersifs peuvent effectuer une reprojection de position lorsqu’une mémoire tampon de profondeur est fournie, en ajustant vos hologrammes pour la prédiction à la fois à la position et à l’orientation.
+* Les casques holographiques tels que HoloLens sélectionnent automatiquement un [point](focus-point-in-unity.md) de focalisation lorsqu’un tampon de profondeur est fourni, ce qui optimise la stabilité de l’hologramme le long du plan qui croise la plus grande partie du contenu.
 
-Pour définir si votre application Unity fournira un mémoire tampon de profondeur à Windows :
-1. Accédez à **modifier** > **paramètres du projet** > **Player** > **onglet plateforme Windows universelle**  >  **XR paramètres**.
-2. Développez le **SDK de réalité mixte Windows** élément.
-3. Activez ou désactivez le **activer le partage de mémoire tampon de profondeur** case à cocher.  Cela sera vérifié par défaut dans les nouveaux projets créés dans la mesure où cette fonctionnalité a été ajoutée à Unity et sera désactivée par défaut pour les anciens projets qui ont été mis à niveau.
+Pour définir si votre application Unity fournira un tampon de profondeur à Windows:
+1. Accédez à **modifier** > les**paramètres** > du projet**lecteur** > **plateforme Windows universelle onglet** > **paramètres XR**.
+2. Développez l’élément du **Kit de développement logiciel (SDK) Windows Mixed Reality** .
+3. Activez ou désactivez la case à cocher **activer le partage** de tampons de profondeur.  Cette option est activée par défaut dans les nouveaux projets créés, car cette fonctionnalité a été ajoutée à Unity et elle est désactivée par défaut pour les projets plus anciens qui ont été mis à niveau.
 
-Fournir un mémoire tampon de profondeur à Windows peut améliorer la qualité visuelle tant que Windows peut mapper correctement les valeurs de la profondeur normalisée par pixel dans votre mémoire tampon de profondeur à des distances en mètres, à l’aide des plans proches que vous avez défini dans Unity sur la caméra principale.  Si votre rendu transmet la profondeur de la poignée de valeurs dans les méthodes classiques, devrait généralement être ici, bien que le rendu translucide transmet qui écrivent dans la mémoire tampon de profondeur tout en montrant via à existant pixels de couleur peuvent ainsi être dérouté la reprojection.  Si vous savez que vos passes de rendu laissera la plupart de vos pixels profondeur finale avec les valeurs de profondeur inexactes, vous êtes susceptible d’obtenir une meilleure qualité visuelle en désactivant la case « Activer la profondeur de mémoire tampon partage ».
+En fournissant une mémoire tampon de profondeur à Windows, vous pouvez améliorer la qualité visuelle tant que Windows peut mapper avec précision les valeurs de profondeur par pixel normalisées dans votre tampon de profondeur à des distances exprimées en mètres, à l’aide des plans proches et Far que vous avez définis dans Unity sur la caméra principale.  Si votre rendu passe les valeurs de profondeur des poignées de manière classique, vous devez généralement être précis ici, bien que le rendu translucide passe l’écriture dans le tampon de profondeur pendant que l’affichage aux pixels de couleur existants peut confondre la reprojection.  Si vous savez que vos passes de rendu conservent un grand nombre de pixels de profondeur finale avec des valeurs de profondeur inexactes, vous obtiendrez probablement une meilleure qualité visuelle en désactivant l’option «Activer le partage de mémoire tampon de profondeur».
 
-## <a name="mixed-reality-toolkits-automatic-scenesetup"></a>Programme d’installation automatique de scène de mixte réalité la boîte à outils
-Lorsque vous importez [MRTK publie des packages de Unity](https://github.com/Microsoft/MixedRealityToolkit-Unity/releases) ou cloner le projet à partir de la [référentiel GitHub](https://github.com/Microsoft/MixedRealityToolkit-Unity), vous vous apprêtez à trouver un nouveau menu « Toolkit de réalité mixte » dans Unity. Sous le menu « Configurer », vous verrez le menu « Application des paramètres de scène réalité mixte ». Lorsque vous cliquez dessus, il supprime l’appareil photo par défaut et ajoute les composants fondamentaux - [InputManager](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/Input/Prefabs/InputManager.prefab), [MixedRealityCameraParent](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/Input/Prefabs/MixedRealityCameraParent.prefab), et [DefaultCursor](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/Input/Prefabs/Cursor/DefaultCursor.prefab).
-
-![Menu MRTK pour le programme d’installation de scène](images/MRTK_Input_Menu.png)<br>
-*Menu MRTK pour le programme d’installation de scène*
-
-![Programme d’installation automatique de scène dans MRTK](images/MRTK_HowTo_Input1.png)<br>
-*Programme d’installation automatique de scène dans MRTK*
-
-## <a name="mixedrealitycamera-prefab"></a>MixedRealityCamera prefab
-Vous pouvez également ajouter manuellement à partir du panneau projet. Vous pouvez trouver ces composants en tant que prefabs. Si vous effectuez une recherche **MixedRealityCamera**, vous serez en mesure de voir les deux prefabs caméra différente. La différence est, **MixedRealityCamera** est l’appareil photo uniquement prefab tandis que **MixedRealityCameraParent** inclut des composants supplémentaires pour les casques IMMERSIFS telles que téléportation, Motion Contrôleur et limites.
-
-![Prefabs caméra dans MRTK](images/MRTK_HowTo_Input2.png)<br>
-*Prefabs caméra dans MRTK*
-
-**MixedRealtyCamera** prend en charge HoloLens et immersif casque. Il détecte le type d’appareil et optimise les propriétés telles que d’effacer les indicateurs et Skybox. Vous trouverez ci-dessous certaines des propriétés utiles, vous pouvez personnaliser comme curseur personnalisé, les modèles de contrôleur de mouvement et Floor.
-
-![Propriétés pour le contrôleur de mouvement, curseur et étage](images/MRTK_HowTo_Input3.png)<br>
-*Propriétés pour le contrôleur de mouvement, curseur et étage*
 
 ## <a name="see-also"></a>Voir aussi
-* [Stabilité HOLOGRAMME](hologram-stability.md)
-* [MixedRealityToolkit Main Camera.prefab](https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit/Input/Prefabs)
+* [Stabilité des hologrammes](hologram-stability.md)
+* [MixedRealityToolkit main Camera. Prefab](https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit/Input/Prefabs)

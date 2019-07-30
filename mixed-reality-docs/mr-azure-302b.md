@@ -133,7 +133,7 @@ Pour former votre projet Service Vision personnalisée:
 
     ![](images/AzureLabs-Lab302b-07.png)
 
-3.  Vous remarquerez  que votre balise a été ajoutée (vous devrez peut-être recharger votre page pour qu’elle apparaisse). Cliquez sur la case à cocher en regard de votre nouvelle balise, si elle n’est pas déjà activée.
+3.  Vous remarquerez que votre balise a été ajoutée (vous devrez peut-être recharger votre page pour qu’elle apparaisse). Cliquez sur la case à cocher en regard de votre nouvelle balise, si elle n’est pas déjà activée.
 
     ![](images/AzureLabs-Lab302b-08.png)
 
@@ -154,7 +154,7 @@ Pour former votre projet Service Vision personnalisée:
 
     ![](images/AzureLabs-Lab302b-11.png)
 
-8.  Répétez le même processus pour créer une  nouvelle balise nommée **Keyboard** et chargez les photos appropriées pour celle-ci. Veillez à ne pas **vérifier** la *souris* une fois que vous avez créé les nouvelles balises, afin d’afficher la fenêtre *Ajouter des images* .
+8.  Répétez le même processus pour créer une nouvelle balise nommée **Keyboard** et chargez les photos appropriées pour celle-ci. Veillez à ne pas **vérifier** la *souris* une fois que vous avez créé les nouvelles balises, afin d’afficher la fenêtre *Ajouter des images* .
 
 9.  Une fois que les deux balises sont configurées, cliquez sur **train**, et la première itération d’apprentissage commencera la génération.
 
@@ -219,7 +219,7 @@ Ce qui suit est une configuration classique pour le développement avec une réa
 
             ![](images/AzureLabs-Lab302b-21.png)
 
-        2. Créez un dossier pour cela, ainsi que toute nouvelle scène, puis sélectionnez le bouton **nouveau dossier** pour créer un nouveau dossier, puis nommez- le Scenes.
+        2. Créez un dossier pour cela, ainsi que toute nouvelle scène, puis sélectionnez le bouton **nouveau dossier** pour créer un nouveau dossier, puis nommez-le Scenes.
 
             ![](images/AzureLabs-Lab302b-22.png)
 
@@ -296,7 +296,7 @@ Pour importer la bibliothèque Newtonsoft dans votre projet, utilisez le package
     > Le marquage de ces plug-ins permet de les configurer pour qu’ils soient utilisés uniquement dans l’éditeur Unity. Il y en a un ensemble différent dans le dossier WSA qui sera utilisé une fois que le projet est exporté d’Unity.
 
 6.  Ensuite, vous devez ouvrir le dossier **WSA** , dans le dossier **Newtonsoft** . Vous verrez une copie du même fichier que celui que vous venez de configurer. Sélectionnez le fichier, puis, dans l’inspecteur, vérifiez que
-    -   **Aucune plateforme** n'  est désactivée 
+    -   **Aucune plateforme** n' est désactivée 
     -   **uniquement** **WSAPlayer** est **activé**
     -   L’option ne pas **traiter le processus** est **activée**
 
@@ -310,7 +310,7 @@ Pour importer la bibliothèque Newtonsoft dans votre projet, utilisez le package
 
     1.  L’objet *Camera* doit être nommé **Camera main** (Notez l’orthographe!)
 
-    2.  La balise  principale de l’appareil photo doit être définie sur **MainCamera** (Notez l’orthographe!)
+    2.  La balise principale de l’appareil photo doit être définie sur **MainCamera** (Notez l’orthographe!)
 
     3.  Vérifiez que la **position** de la transformation est définie sur **0, 0,** 0
 
@@ -338,7 +338,7 @@ Cette classe est chargée des opérations suivantes:
 
 -   Réception de la réponse sous forme de chaîne JSON.
 
--   La désérialisation de la réponse et le passage  de la prédiction résultante à la classe *SceneOrganiser* , qui s’occupera du mode d’affichage de la réponse.
+-   La désérialisation de la réponse et le passage de la prédiction résultante à la classe *SceneOrganiser* , qui s’occupera du mode d’affichage de la réponse.
 
 Pour créer cette classe:
 
@@ -460,7 +460,7 @@ Pour créer cette classe:
         }
     ```
 
-10.  Veillez à enregistrer vos modifications dans **Visual Studio** avant de revenir à Unity.
+10.  Veillez à enregistrer vos modifications dans **Visual Studio** avant de revenirà Unity.
 
 ## <a name="chapter-7---create-the-customvisionobjects-class"></a>Chapitre 7-créer la classe CustomVisionObjects
 
@@ -707,7 +707,7 @@ Pour créer cette classe:
         }
     ```
 
-8.  Veillez à enregistrer vos modifications dans **Visual Studio** avant de revenir à Unity.
+8.  Veillez à enregistrer vos modifications dans **Visual Studio** avant de revenirà Unity.
 
 > [!NOTE]
 > Ne vous inquiétez pas du code qui peut sembler avoir une erreur, car vous fournirez bientôt d’autres classes, ce qui les corrigera.
@@ -1061,7 +1061,7 @@ Pour créer cette classe:
         }
     ```
 
-14. Veillez à enregistrer vos modifications dans **Visual Studio** avant de revenir à Unity.
+14. Veillez à enregistrer vos modifications dans **Visual Studio** avant de revenirà Unity.
 
 ## <a name="chapter-10---create-the-sceneorganiser-class"></a>Chapitre 10-créer la classe SceneOrganiser
 
@@ -1322,7 +1322,7 @@ Pour créer cette classe:
         }
     ```
 
-11. Veillez à enregistrer vos modifications dans **Visual Studio** avant de revenir à Unity.
+11. Veillez à enregistrer vos modifications dans **Visual Studio** avant de revenirà Unity.
 
 > [!IMPORTANT]
 > Avant de continuer, ouvrez la classe **CustomVisionAnalyser** et, dans la méthode **AnalyseLastImageCaptured ()** , *supprimez les marques de commentaire* des lignes suivantes:
@@ -1619,7 +1619,7 @@ Pour créer cette classe:
         }
     ```
 
-10. Veillez à enregistrer vos modifications dans **Visual Studio** avant de revenir à Unity.
+10. Veillez à enregistrer vos modifications dans **Visual Studio** avant de revenirà Unity.
 
 11. Maintenant que tous les scripts ont été exécutés, revenez dans l’éditeur Unity, puis cliquez et faites glisser la classe **SceneOrganiser** du dossier **scripts** vers l’objet **Camera principal** dans le *panneau hiérarchie*.
 
@@ -1673,7 +1673,7 @@ Pour effectuer un déploiement sur HoloLens:
 
 2.  Accédez à votre nouvelle build Unity (le dossier de l' **application** ) et ouvrez le fichier solution avec **Visual Studio**.
 
-3.  Dans la *configuration* de la solution, sélectionnez Déboguer.
+3.  Dans la *configuration* de lasolution, sélectionnez Déboguer.
 
 4.  Dans la *plateforme*de la solution, sélectionnez **x86, ordinateur distant**. Vous serez invité à insérer l' **adresse IP** d’un périphérique distant (le HoloLens, dans ce cas, que vous avez noté).
 
@@ -1688,7 +1688,7 @@ Pour effectuer un déploiement sur HoloLens:
 
 ## <a name="to-use-the-application"></a>Pour utiliser l’application:
 
-Pour basculer la fonctionnalité de l’application entre le mode d' *apprentissage* et le mode de prédiction, vous devez mettre à jour la variable **AppMode** , située dans la méthode  **éveillé ()** située dans la classe *ImageCapture* .
+Pour basculer la fonctionnalité de l’application entre le mode d' *apprentissage* et le mode de prédiction, vous devez mettre à jour la variable **AppMode** , située dans la méthode **éveillé ()** située dans la classe *ImageCapture* .
 
 ```
         // Change this flag to switch between Analysis mode and Training mode 
@@ -1709,7 +1709,7 @@ En mode d' *apprentissage* :
 - Disons **la souris** ou le **clavier**.
 
 
-En  mode de prédiction:
+En mode de prédiction:
 
 - Examinez un objet et utilisez le **mouvement TAP**.
 
@@ -1719,7 +1719,7 @@ En  mode de prédiction:
 
 Pour améliorer la précision de votre service, vous devrez continuer à former le modèle utilisé pour la prédiction. Pour ce faire, vous pouvez utiliser votre nouvelle application, à la fois avec les modes de *formation* et de prédiction, avec ceux qui vous demandent de visiter le portail, ce qui est abordé dans ce chapitre. Préparez-vous à revisiter votre portail plusieurs fois, afin d’améliorer continuellement votre modèle.
 
-1. Accédez à nouveau à votre portail Azure Custom Vision et, une fois que vous êtes dans votre projet  , sélectionnez l’onglet prédictions (à partir du centre en haut de la page):
+1. Accédez à nouveau à votre portail Azure Custom Vision et, une fois que vous êtes dans votre projet , sélectionnez l’onglet prédictions (à partir du centre en haut de la page):
 
     ![](images/AzureLabs-Lab302b-35.png)
 
