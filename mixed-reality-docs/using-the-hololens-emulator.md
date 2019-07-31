@@ -7,25 +7,25 @@ ms.date: 04/25/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: HoloLens, émulateur
-ms.openlocfilehash: 0dfca73e6c8e1809e1bea3df6ca344b3de0698d5
-ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
+ms.openlocfilehash: e675911e661ad6a4b1f05f2ecb3aa77994c3815c
+ms.sourcegitcommit: 36601a19306a05c826b91dea191b020f634912bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "65730919"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67650824"
 ---
 # <a name="using-the-hololens-emulator"></a>Utilisation de l’émulateur HoloLens
 
-L’émulateur HoloLens vous permet de tester des applications holographiques sur votre PC sans avoir besoin d’un HoloLens physique. Il est fourni avec l’ensemble d’outils de développement HoloLens. L’émulateur utilise une machine virtuelle Hyper-V. Les entrées utilisateur et environnementales qui seraient normalement lues par les capteurs de l’appareil HoloLens sont en fait simulées à l’aide du clavier, de la souris ou d’une manette Xbox. Les applications ne nécessitent pas d’être modifiées pour s’exécuter sur l’émulateur et elles n’ont même pas connaissance qu’elles ne sont pas exécutées sur un HoloLens réel.
+L’émulateur HoloLens vous permet de tester des applications holographiques sur votre PC sans avoir besoin d’un appareil HoloLens physique. Il inclut également l’ensemble d’outils de développement HoloLens. L’émulateur utilise une machine virtuelle Hyper-V. Les entrées utilisateur et environnementales qui sont normalement lues par les capteurs HoloLens sont simulées à partir de votre clavier, de votre souris ou de votre manette Xbox. Les applications ne nécessitent pas d’être modifiées pour s’exécuter sur l’émulateur ; les applications ne savent pas qu’elles ne sont pas exécutées sur un HoloLens réel.
 
-Si vous devez développer des applications ou jeux avec casques immersifs de réalité mixte Windows (VR) pour les ordinateurs de bureau, essayez le [simulateur de réalité mixte Windows](using-the-windows-mixed-reality-simulator.md), qui vous permet de simuler des casques de bureau à la place.
+Si vous devez développer des applications ou jeux avec casques immersifs de réalité mixte Windows (VR) pour les ordinateurs de bureau, essayez le [simulateur de réalité mixte Windows](using-the-windows-mixed-reality-simulator.md), qui vous permet de simuler des casques de bureau.
 
 
 ## <a name="installing-the-hololens-emulator"></a>Installation de l’émulateur HoloLens
 Téléchargez l’émulateur HoloLens et les modèles de projet holographiques.
 
 Versions : 
-* [Émulateur HoloLens 2 et modèles de projet holographiques](https://go.microsoft.com/fwlink/?linkid=2087187).
+* [Émulateur HoloLens 2 et modèles de projet holographiques](https://go.microsoft.com/fwlink/?linkid=2098508).
 * [Émulateur HoloLens (1ère génération) et modèles de projet holographiques](https://go.microsoft.com/fwlink/?linkid=2065980).
 
 Des versions antérieures de l’émulateur HoloLens sont disponibles à partir de la page [Archive de l’émulateur HoloLens](hololens-emulator-archive.md).
@@ -35,7 +35,7 @@ Des versions antérieures de l’émulateur HoloLens sont disponibles à partir 
 L’émulateur HoloLens utilise Hyper-V avec RemoteFx (émulateur 1ère génération) ou GPU-PV (émulateur HoloLens 2) pour l’affichage graphique accéléré matériel. Pour utiliser l’émulateur, assurez-vous que votre PC présente la configuration matérielle suivante :
 * Windows 10 Professionnel, Entreprise ou Éducation 64 bits 
     >[!NOTE]
-    >Windows 10 Famille ne prend pas en charge Hyper-V ni l’émulateur HoloLens.  
+    >Windows 10 Édition familiale ne prend en charge ni Hyper-V ni l’émulateur HoloLens.  
     >L’émulateur HoloLens 2 nécessite la mise à jour de Windows 10 d’octobre 2018 ou une version ultérieure.
 * Processeur 64 bits
 * Processeur avec 4 cœurs (ou plusieurs processeurs avec un total de 4 cœurs)
@@ -50,31 +50,31 @@ L’émulateur HoloLens utilise Hyper-V avec RemoteFx (émulateur 1ère génér
    * Pilote graphique WDDM 2.5 (émulateur HoloLens 2)
    * L’émulateur peut éventuellement fonctionner avec un GPU non pris en charge, mais il sera beaucoup plus lent
 
-Si votre système présente la configuration requise ci-dessus, **assurez-vous que la fonctionnalité « Hyper-V » a été activée sur le système**. Pour cela, accédez à Panneau de configuration -> Programmes -> Programmes et fonctionnalités -> Activer ou désactiver des fonctionnalités Windows, et vérifiez que la fonctionnalité « Hyper-V » est sélectionnée pour garantir la réussite de l’installation de l’émulateur.
+Si votre système présente la configuration requise mentionnée plus haut, **assurez-vous que la fonctionnalité « Hyper-V » a été activée sur le système**. Pour cela, accédez à Panneau de configuration -> Programmes -> Programmes et fonctionnalités -> Activer ou désactiver des fonctionnalités Windows, et vérifiez que la fonctionnalité « Hyper-V » est sélectionnée pour garantir la réussite de l’installation de l’émulateur.
 
 ## <a name="deploying-apps-to-the-hololens-emulator"></a>Déploiement d’applications dans l’émulateur HoloLens
 
 1. Chargez votre solution d’application dans Visual Studio.
     >[!NOTE]
     >Si vous utilisez Unity, générez votre projet à partir d’Unity, puis chargez la solution générée dans Visual Studio comme vous le faites habituellement.
-2. Pour l’émulateur HoloLens (1ère génération), vérifiez que la plateforme est configurée sur **x86**. Pour l’émulateur HoloLens 2, vérifiez que la plateforme est configurée sur **x86** ou **x64**.
+2. Pour l’émulateur HoloLens (1ère génération), vérifiez que cette plateforme est configurée sur **x86**. Pour l’émulateur HoloLens 2, vérifiez que la plateforme est configurée sur **x86** ou **x64**.
 3. Sélectionnez la version de l’**émulateur HoloLens** à utiliser comme appareil cible pour le débogage.
 4. Accédez à **Déboguer > Démarrer le débogage** ou appuyez sur **F5** pour lancer l’émulateur et déployer votre application en vue du débogage.
 
-Le lancement de l’émulateur peut prendre une minute ou plus au premier démarrage. Nous vous recommandons de laisser l’émulateur ouvert durant votre session de débogage afin de déployer rapidement des applications sur l’émulateur en cours d’exécution.
+Le lancement de l’émulateur peut prendre une minute ou plus au premier démarrage. Nous vous recommandons de laisser l’émulateur ouvert durant votre session de débogage afin de déployer rapidement des applications sur l’émulateur.
 
 ## <a name="basic-emulator-input"></a>Entrées de base de l’émulateur
 
-Le contrôle de l’émulateur est très similaire à la plupart des jeux vidéo 3D courants. Les options d’entrée sont disponibles par le biais du clavier, de la souris ou d’une manette Xbox. Vous contrôlez l’émulateur en dirigeant les actions d’un utilisateur simulé qui porte un casque HoloLens. Vos actions font faire différents mouvements à l’utilisateur simulé, et les applications exécutées dans l’émulateur y répondent comme elles le feraient sur un appareil réel.
+Le contrôle de l’émulateur est très similaire à la plupart des jeux vidéo 3D courants. Des options d’entrée sont permettent l’utilisation par le biais du clavier, de la souris ou d’une manette Xbox. Vous contrôlez l’émulateur en dirigeant les actions d’un utilisateur simulé qui porte un casque HoloLens. Vos actions déplacent l’utilisateur simulé dans l’environnement. Les applications qui s’exécutent dans l’émulateur réagissent comme elles le feraient sur un appareil réel.
 
-Le curseur sur HoloLens (1ère génération) suit le mouvement et la rotation de la tête.  Dans l’émulateur HoloLens 2, le curseur suit le mouvement et l’orientation de la main.
+Le curseur sur HoloLens (1ère génération) suit le mouvement et la rotation de la tête. Dans l’émulateur HoloLens 2, le curseur suit le mouvement et l’orientation de la main.
 
 * **Marcher vers l’avant, l’arrière, la gauche et la droite** : utilisez les touches W, A, S et D du clavier, ou le stick gauche d’une manette Xbox.
 * **Regarder vers le haut, le bas, la gauche et la droite** : cliquez et faites glisser la souris, utilisez les touches de direction du clavier ou utilisez le stick droit d’une manette Xbox.
 * **Clic aérien** : cliquez avec le bouton droit de la souris, appuyez sur la touche Entrée du clavier ou utilisez le bouton A d’une manette Xbox.
 * **Écarter les doigts paume vers le haut/Mouvement système** : appuyez sur la touche Windows ou la touche F2 du clavier, ou appuyez sur le bouton B d’une manette Xbox.
-* **Mouvement de la main pour faire défiler** : maintenez la touche Alt enfoncée, maintenez le bouton droit de la souris enfoncé et faites glisser la souris vers le haut ou le bas, ou sur une manette Xbox, maintenez la gâchette droite et le bouton A enfoncés et déplacez le stick droit vers le haut et le bas.
-* **Mouvement de la main et orientation** (émulateur HoloLens 2 uniquement) : maintenez la touche Alt enfoncée et faites glisser la souris vers le haut, le bas, la gauche ou la droite pour déplacer la main, ou utilisez les touches de direction et Q /E pour faire pivoter et incliner la main.  Sur une manette Xbox, maintenez la gâchette gauche ou droite enfoncée et utilisez le joystick gauche pour déplacer la main vers la gauche, la droite, l’avant ou l’arrière, utilisez le joystick droit pour faire pivoter la main, et appuyez sur la direction vers le haut/bas sur le Dpad pour lever ou abaisser la main.
+* **Mouvement de la main pour faire défiler** : maintenez la touche Alt et le bouton droit de la souris simultanément enfoncés et faites glisser la souris vers le haut ou le bas ou, sur une manette Xbox, maintenez la gâchette droite et le bouton A enfoncés et déplacez le stick droit vers le haut et le bas.
+* **Mouvement de la main et orientation** (émulateur HoloLens 2 uniquement) : maintenez la touche Alt enfoncée et faites glisser la souris vers le haut ou le bas, la gauche ou la droite pour déplacer la main, ou utilisez les touches de direction et Q ou E pour faire pivoter et incliner la main. Sur une manette Xbox, maintenez la gâchette gauche ou droite enfoncée et utilisez le joystick gauche pour déplacer la main vers la gauche, la droite, l’avant et l’arrière, utilisez le joystick droit pour faire pivoter la main, et appuyez sur la direction vers le haut ou le bas sur le Dpad pour lever ou abaisser la main.
 
 ## <a name="anatomy-of-the-hololens-2-emulator"></a>Anatomie de l’émulateur HoloLens 2 
 
@@ -96,7 +96,7 @@ La barre d’outils de l’émulateur se trouve à droite de la fenêtre princip
 
 ### <a name="simulation-control-panel"></a>Panneau de configuration Simulation
 
-Le Panneau de configuration Simulation affiche la position et l’orientation actuelles des périphériques d’interface utilisateur simulés et des périphériques d’entrée simulés.  Il permet également de configurer des entrées simulées, comme montrer ou cacher une main ou les deux mains, ainsi que des appareils utilisés pour contrôler les entrées simulées tels que le clavier, la souris et la manette de votre PC.
+Le Panneau de configuration Simulation affiche la position et l’orientation actuelles des périphériques d’interface utilisateur et des périphériques d’entrée simulés. Il permet également de configurer des entrées simulées, comme montrer ou cacher une main ou les deux mains, ainsi que des appareils utilisés pour contrôler les entrées simulées tels que le clavier, la souris et la manette de votre PC.
 
 ![Panneau de configuration Simulation](images/emulator-simulation-control-panel.png)
 
@@ -105,21 +105,21 @@ Le Panneau de configuration Simulation affiche la position et l’orientation ac
 * Pour montrer ou cacher une main, activez le contrôle approprié sous Main gauche ou Main droite.
 * Pour contrôler la main, utilisez les touches Alt gauche ou droite du clavier, ou la gâchette gauche ou droite de la manette.
 * Pour diriger toutes les entrées vers une main ou les deux mains, cliquez sur le bouton punaise sous le bouton bascule.  Cela revient à maintenir la touche Alt enfoncée pour la main.
-* Pour contrôler la direction du suivi des yeux, cliquez sur la punaise dans la section « Yeux ».  Cela revient à maintenir la touche « Y » enfoncée sur le clavier.
-* Pour charger l’enregistrement d’une pièce, cliquez sur le bouton « Charger » dans la section « Enregistrement ».  Pour plus d’informations, consultez [Pièces simulées](#simulated-rooms).
-* Pour ajuster la vitesse de déplacement ou de rotation des périphériques d’interface utilisateur simulés ou des périphériques d’entrée simulés en réponse à une entrée du clavier, de la souris ou d’une manette, cliquez sur l’icône d’engrenage à côté de « Paramètres d’entrée » et réglez les curseurs.
-* Par défaut, les entrées clavier contrôlent les périphériques d’interface utilisateur simulés et les périphériques d’entrée simulés.  Pour envoyer les entrées clavier de votre PC à HoloLens, décochez la case « Utiliser le clavier pour la simulation ».  F4 est la touche de raccourci pour ce paramètre.
+* Pour contrôler la direction du suivi du regard, cliquez sur la punaise dans la section Yeux. Cela revient à maintenir la touche Y enfoncée sur le clavier.
+* Pour charger l’enregistrement d’une pièce, cliquez sur le bouton Charger dans la section Enregistrement. Pour plus d’informations, consultez [Pièces simulées](#simulated-rooms).
+* Pour ajuster la vitesse de déplacement ou de rotation des périphériques d’interface utilisateur ou des périphériques d’entrée simulés en réponse à une entrée du clavier, de la souris ou d’une manette, cliquez sur l’icône d’engrenage à côté de Paramètres d’entrée et réglez les curseurs.
+* Par défaut, les entrées clavier contrôlent les périphériques d’interface utilisateur simulés et les périphériques d’entrée simulés. Pour envoyer les entrées clavier de votre PC à HoloLens, décochez la case Utiliser le clavier pour la simulation.  F4 est la touche de raccourci pour ce paramètre.
 * Si vous voyez déjà le panneau de simulation, appuyez sur la touche F8 pour y déplacer le focus clavier.
 * Pour détacher le panneau de simulation de la fenêtre de l’émulateur, cliquez sur le bouton en bas du panneau ou appuyez sur la touche F9 du clavier.  Si vous fermez la fenêtre ou réappuyez sur F9, vous revenez dans la fenêtre de l’émulateur.
 * Le Panneau de configuration Simulation peut être lancé comme une application distincte. Dans ce cas, vous pouvez connecter et contrôler l’émulateur HoloLens 2, un appareil HoloLens 2 ou une simulation de réalité mixte Windows en exécutant PerceptionSimulationInput.exe à partir du dossier %ProgramFiles(x86)%\Windows Kits\10\Microsoft XDE\10.0.18362.0\.
 
 ### <a name="account-tab"></a>Onglet Compte
 
-L’onglet Compte permet de configurer l’émulateur pour la connexion avec un compte Microsoft. Cela est utile pour tester des API qui demandent à l’utilisateur de se connecter avec un compte.  Après avoir activé ou désactivé cette option, vous devez fermer et redémarrer entièrement l’émulateur HoloLens pour que le paramètre de configuration prenne effet.  Si cette option est activée, vous serez invité à vous connecter à chaque lancement de l’émulateur, tout comme un utilisateur devrait le faire au premier démarrage d’HoloLens.  Pour entrer rapidement vos informations d’identification à l’aide du clavier de votre PC, décochez d’abord l’option « Utiliser le clavier pour la simulation » dans le Panneau de configuration Simulation, ou appuyez sur la touche F4 du clavier pour activer ou désactiver le paramètre du clavier.
+L’onglet Compte permet de configurer l’émulateur pour la connexion avec un compte Microsoft. Cela est utile pour tester des API qui demandent à l’utilisateur de se connecter avec un compte. Après avoir activé ou désactivé cette option, vous devez fermer et redémarrer entièrement l’émulateur HoloLens pour que le paramètre de configuration prenne effet. Si cette option est activée, vous serez invité à vous connecter à chaque lancement de l’émulateur, tout comme un utilisateur devrait le faire au premier démarrage d’HoloLens. Pour entrer vos informations d’identification à l’aide du clavier de votre PC, décochez d’abord l’option Utiliser le clavier pour la simulation dans le Panneau de configuration Simulation, ou appuyez sur la touche F4 du clavier pour activer ou désactiver le paramètre du clavier.
 
 ### <a name="optional-settings-tab"></a>Onglet Paramètres facultatifs
 
-L’onglet Paramètres facultatifs affiche un contrôle permettant d’activer ou de désactiver l’affichage graphique accéléré matériel.  L’affichage graphique accéléré matériel est utilisé par défaut s’il est pris en charge par le pilote de carte graphique de votre PC.  Si le pilote de votre carte graphique ne prend pas en charge GPU-PV, cette option n’est pas proposée.
+L’onglet Paramètres facultatifs affiche un contrôle permettant d’activer ou de désactiver l’affichage graphique accéléré matériel. L’affichage graphique accéléré matériel est utilisé par défaut s’il est pris en charge par le pilote de carte graphique de votre PC. Si le pilote de votre carte graphique ne prend pas en charge GPU-PV, cette option n’est pas proposée.
 
 ### <a name="diagnostics-tab"></a>Onglet Diagnostics
 
@@ -157,7 +157,7 @@ L’onglet Simulation affiche l’état actuel des capteurs simulés utilisés p
 
 ### <a name="room-tab"></a>Onglet Pièce
 
-L’émulateur simule des entrées à l’échelle mondiale sous la forme d’un maillage de mappage spatial à partir de « pièces » simulées. Cet onglet vous permet de choisir la pièce à charger à la place de la pièce par défaut.
+L’émulateur simule des entrées à l’échelle mondiale sous la forme d’un maillage de mappage spatial à partir de pièces simulées. Cet onglet vous permet de choisir la pièce à charger à la place de la pièce par défaut.
 
 ![Onglet « Pièces » de l’émulateur HoloLens](images/emulator-room-500px.png)
 
@@ -178,7 +178,7 @@ Les pièces simulées sont utiles pour tester votre application dans différents
 
 Vous pouvez également enregistrer vos propres pièces à utiliser dans l’émulateur à partir de la page Simulation du [Portail d’appareil Windows](using-the-windows-device-portal.md) sur votre HoloLens (1ère génération).
 
-Dans l’émulateur, vous voyez uniquement les hologrammes dont vous effectuez le rendu visuel ; la pièce simulée derrière les hologrammes n’est pas visible. C’est la différence avec le véritable HoloLens, où vous voyez les deux simultanément. Si vous souhaitez voir la pièce simulée dans l’émulateur HoloLens, vous devez mettre à jour votre application pour qu’elle affiche le maillage du mappage spatial dans la scène.
+Dans l’émulateur, vous voyez uniquement les hologrammes que vous affichez. Mais vous ne voyez pas la pièce simulée derrière les hologrammes. C’est la différence avec le véritable HoloLens, où vous voyez les deux simultanément. Si vous souhaitez voir la pièce simulée dans l’émulateur HoloLens, vous devez mettre à jour votre application pour qu’elle affiche le maillage du mappage spatial dans la scène.
 
 ## <a name="troubleshooting"></a>Résolution des problèmes
 
@@ -201,8 +201,8 @@ Si votre installation s’est déroulée correctement, mais que Visual Studio af
 Si l’émulateur affiche une boîte de dialogue d’erreur « Encodage en octets non valide » au lancement :
 * Supprimez tous les fichiers %localappdata%\Microsoft\XDE\HCS et réessayez.
 
-Si votre liste de cible de débogage dans Visual Studio est vide (par exemple, « Démarrer » est la seule option) et que vous avez suivi toutes les étapes de dépannage ci-dessus :
-* Supprimez le dossier « ConfigurationCache » dans %localappdata%\Microsoft\VisualStudio\\<*id installation*>\CoreCon et réessayez.
+Si votre liste de cible de débogage dans Visual Studio est vide (par exemple, Démarrer est la seule option) et que vous avez suivi toutes les étapes de dépannage ci-dessus :
+* Supprimez le dossier ConfigurationCache dans %localappdata%\Microsoft\VisualStudio\\<*id installation*>\CoreCon et réessayez.
 
 Si votre système plante au démarrage de l’émulateur, désactivez l’accélération matérielle pour les graphiques de l’émulateur.
 * Créez une valeur de Registre DWORD nommée « DisableGPU » dans HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\XDE\10.0 et définissez-la sur 1.
