@@ -8,12 +8,12 @@ ms.date: 02/12/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, développer, développement, HoloLens, unity, directx
-ms.openlocfilehash: 8833d2d692f2082c939bcfc3bb55e5d159e8c9ac
-ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
+ms.openlocfilehash: b2bd9c4d81e5c7156ad753859a299209bad70c44
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "65974814"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67414429"
 ---
 # <a name="development-launchpad"></a>Zone de développement
 
@@ -114,7 +114,7 @@ ms.locfileid: "65974814"
                             <a href="directx-development-overview.md">Moteur personnalisé (DirectX)</a>
                         </p>
                         <p>
-Unreal - Bientôt disponible !
+                            <a href="https://www.unrealengine.com/en-US/blog/unreal-engine-4-support-for-hololens-2-released-in-early-access">Unreal</a>
                         </p>                
                     </div>
                 </div>
@@ -133,7 +133,7 @@ Unreal - Bientôt disponible !
                     <div class="cardText">
                         <h3>Guides en matière de portage</h3>
                         <p>
-                            <a href="mrtk-porting-guide.md">Mise à jour des applications vers HoloLens 2<br>à partir de HoloLens (1ère génération)</a>
+                            <a href="mrtk-porting-guide.md">Mise à jour des applications vers HoloLens 2<br>à partir d’HoloLens (1ère génération)</a>
                         </p>
                         <p>
                             <a href="https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/HTKToMRTKPortingGuide.html">Guide sur le portage de l’API du<br>Kit de ressources de réalité mixte (MRTK)</a>
@@ -175,7 +175,7 @@ Unreal - Bientôt disponible !
 
 ## <a name="overview"></a>Vue d’ensemble
 
-Les applications de réalité mixte sont générées avec la [plateforme Windows universelle](https://dev.windows.com/getstarted). Toutes les applications de réalité mixte sont des applications Windows universelles, et toutes les applications Windows universelles peuvent s’exécuter sur des appareils Windows Mixed Reality. Si vous disposez de Windows 10 et êtes familiarisé avec les outils de middleware (intergiciel) tels qu’Unity, vous pouvez commencer dès aujourd’hui à générer des expériences de réalité mixte.
+Les applications de réalité mixte sont générées avec la [plateforme Windows universelle](https://dev.windows.com/getstarted) (UWP). Toutes les applications de réalité mixte sont des applications UWP. Toutes les applications UWP peuvent être exécutées sur des appareils Windows Mixed Reality. Si vous disposez de Windows 10 et êtes familiarisé avec les outils de middleware (intergiciel) comme Unity, vous pouvez dès aujourd’hui créer des expériences de réalité mixte.
 
 <br>
 
@@ -183,7 +183,7 @@ Les applications de réalité mixte sont générées avec la [plateforme Windows
 
 ## <a name="basics-of-mixed-reality-development"></a>Principes de base du développement de réalité mixte
 
-Les expériences de [réalité mixte](mixed-reality.md) sont rendues possibles grâce à de nouvelles fonctionnalités Windows qui facilitent la compréhension de l’environnement. Les développeurs peuvent ainsi placer un [hologramme](hologram.md) dans le monde réel et permettre aux utilisateurs d’explorer littéralement des mondes numériques. 
+Les expériences de [réalité mixte](mixed-reality.md) sont rendues possibles grâce à de nouvelles fonctionnalités Windows qui facilitent la compréhension de l’environnement. Ces fonctionnalités permettent aux développeurs de placer un [hologramme](hologram.md) dans le monde réel et aux utilisateurs d’explorer littéralement des mondes numériques. 
 
 Voici les fonctionnalités principales du développement de réalité mixte :
 
@@ -219,17 +219,17 @@ Voici les fonctionnalités principales du développement de réalité mixte :
 
 Le modèle d’interaction de base pour [HoloLens](hololens-hardware-details.md) est [pointage du regard](gaze.md), [mouvement](gestures.md) et [voix](voice-input.md), parfois appelé *GGV* (Gaze, Gesture et Voice). Les [casques immersifs Windows Mixed Reality](immersive-headset-hardware-details.md) utilisent également le pointage du regard et la voix, mais échangent les [contrôleurs de mouvement](motion-controllers.md) pour les mouvements.
 
-Tous les appareils de réalité mixte bénéficient de l’écosystème d’entrée dont dispose Windows, notamment la souris, le clavier et les boîtiers de commande. Dans le cas de HoloLens, les [accessoires matériels](hardware-accessories.md) sont connectés via Bluetooth. Dans le cas des casques immersifs, les accessoires se connectent à l’ordinateur hôte via Bluetooth, un port USB et autres protocoles pris en charge.
+Tous les appareils de réalité mixte bénéficient de l’écosystème d’entrée disponible dans Windows, notamment la souris, le clavier, les manettes et les boîtiers de commande. Dans le cas de HoloLens, les [accessoires matériels](hardware-accessories.md) sont connectés via Bluetooth. Dans le cas des casques immersifs, les accessoires se connectent à l’ordinateur hôte via Bluetooth, un port USB et autres protocoles pris en charge.
 
 Les fonctionnalités de compréhension de l’environnement, telles que les [coordonnées](coordinate-systems.md), le [son spatial](spatial-sound.md) et le [mappage spatial](spatial-mapping.md), fournissent les fonctionnalités nécessaires pour obtenir une réalité mixte. Propre à HoloLens, le mappage spatial permet aux hologrammes d’interagir avec l’utilisateur et le monde physique qui l’entoure. Avec les systèmes de coordonnées, le déplacement de l’utilisateur peut affecter le déplacement dans le monde numérique.
 
-Les hologrammes sont constitués de lumière et de son, qui s’appuient sur un [rendu](rendering.md). Pour vous familiariser avec l’expérience utilisateur, rien de tel que de comprendre l’expérience du placement et de la persistance, comme l’illustre la [page d’accueil Windows Mixed Reality](navigating-the-windows-mixed-reality-home.md) (parfois appelée « shell »).
+Les hologrammes sont constitués de lumière et de son qui reposent sur l’[affichage](rendering.md). Pour vous familiariser avec l’expérience utilisateur, rien de tel que de comprendre l’expérience du placement et de la persistance, comme l’illustre la [page d’accueil Windows Mixed Reality](navigating-the-windows-mixed-reality-home.md) (également appelée « shell »).
 
-## <a name="tools-for-developing-for-mixed-reality"></a>Outils de développement pour la réalité mixte
+## <a name="tools-for-developing-mixed-reality"></a>Outils de développement de réalité mixte
 
 Les outils employés dépendent du [style d’application](app-views.md) à générer.
-* Les [applications dotées d’une vue en 2D](building-2d-apps.md) tirent parti des outils de génération d’applications UWP adaptés aux environnements comme Windows Phone, les PC et les tablettes. Ces applications prennent la forme de projections 2D dans la page d’accueil Windows Mixed Reality et peuvent fonctionner sur différents types d’appareils (notamment téléphones et PC).
-* Les applications immersives et holographiques nécessitent des outils conçus pour bénéficier des API Windows Mixed Reality. Nous vous [recommandons d’utiliser Unity](unity-development-overview.md) pour générer des applications de réalité mixte. Les développeurs désireux de générer leu propre moteur peuvent [utiliser DirectX et d’autres API Windows](directx-development-overview.md).
+* Les [applications dotées d’une vue en 2D](building-2d-apps.md) tirent parti des outils de création d’applications UWP adaptés aux environnements comme Windows Phone, les PC et les tablettes. Ces applications prennent la forme de projections 2D dans la page d’accueil Windows Mixed Reality et fonctionnent sur différents types d’appareils, notamment les téléphones et les PC.
+* Les applications immersives et holographiques nécessitent des outils conçus pour bénéficier d’API Windows Mixed Reality. Nous vous [recommandons d’utiliser Unity](unity-development-overview.md) pour créer vos applications de réalité mixte. Les développeurs désireux de générer leu propre moteur peuvent [utiliser DirectX et d’autres API Windows](directx-development-overview.md).
 
 Quel que soit le type d’application que vous générez, les outils ci-après facilitent votre expérience de développement d’application :
 * [Visual Studio et le SDK Windows](using-visual-studio.md)

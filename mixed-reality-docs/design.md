@@ -8,18 +8,20 @@ ms.date: 03/21/2018
 ms.topic: article
 ms.localizationpriority: high
 keywords: Windows Mixed Reality, conception, interaction, style, couleur, modèles d’application, contrôles, exemples d’applications, Mixed Reality Toolkit, MRTK
-ms.openlocfilehash: 88de9008dbea6cce3b980bbbe3d0f45b7818e7c9
-ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
+ms.openlocfilehash: 6601f4c2dd75e6e555dd79bc92abcccc15eb1ab4
+ms.sourcegitcommit: 30246ab9b9be44a3c707061753e53d4bf401eb6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66039209"
+ms.lasthandoff: 06/22/2019
+ms.locfileid: "67326188"
 ---
 # <a name="design-for-mixed-reality"></a>Conception pour la réalité mixte
 
 ![Conception pour la réalité mixte](images/Bicycle-Leschi10.gif)
 
-Cette aide a été écrite par des concepteurs, des développeurs, des responsables de programme et les chercheurs de Microsoft, dont les travaux couvrent les appareils holographiques (par exemple HoloLens) et les appareils immersifs (par exemple les casques Windows Mixed Reality Acer et HP). Considérez donc ce travail comme un ensemble de rubriques expliquant « comment concevoir pour les afficheurs Windows placés sur la tête ».
+
+Cette aide a été écrite par des concepteurs, des développeurs, des responsables de programme et les chercheurs de Microsoft, dont les travaux couvrent les appareils holographiques tels qu’HoloLens et les appareils immersifs tels que les casques Windows Mixed Reality Acer et HP. Considérez donc ce travail comme un ensemble de rubriques expliquant comment concevoir pour les afficheurs Windows placés sur la tête.
+
 
 ## <a name="article-categories"></a>Catégories d’articles
 
@@ -166,7 +168,7 @@ Cette aide a été écrite par des concepteurs, des développeurs, des responsab
                             <a href="progress.md">Affichage de la progression</a>
                         </p>
                         <p>
-                            <a href="app-bar-and-bounding-box.md">Barre de l’application et cadre englobant</a>
+                            <a href="app-bar-and-bounding-box.md">Rectangle englobant et barre de l’application</a>
                         </p>
                     </div>
                 </div>
@@ -213,7 +215,7 @@ Créez des expériences de qualité à partir d’exemples conçus et créés pa
                         </div>
                         <div class="cardText">
                             <h3>Module lunaire</h3>
-                            <p>Découvrez comment étendre les mouvements de base d’HoloLens avec suivi des deux mains et l’entrée d’un contrôleur Xbox.</p>
+                            <p>Découvrez comment étendre les mouvements de base d’HoloLens avec un suivi des deux mains et l’entrée d’une manette. Xbox.</p>
                         </div>
                     </div>
                 </div>
@@ -248,7 +250,7 @@ Créez des expériences de qualité à partir d’exemples conçus et créés pa
 
 <ul id="cardtypes-D" class="cardsD panelContent" style="display: flex; margin-top: 0px;">
     <li>
-    <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity" title="Mixed Reality Toolkit - Unity" data-linktype="absolute-path">
+    <a href="https://microsoft.github.io/MixedRealityToolkit-Unity/README.html#ui-and-interaction-building-blocks" title="Mixed Reality Toolkit - Unity" data-linktype="absolute-path">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -284,26 +286,7 @@ Créez des expériences de qualité à partir d’exemples conçus et créés pa
             </div>
         </div>
       </a>  
-    </li>   
-        <li>
-    <a href="case-study-building-holosketch,-a-spatial-layout-and-ux-sketching-app-for-hololens.md" title="HoloSketch" data-linktype="absolute-path">
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="images/HoloSketch.png" alt="HoloSketch">
-                        </div>
-                    </div>                    
-            <div class="cardText">
-                        <h3>HoloSketch</h3>
-                        <p> </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </a>  
-    </li>   
+    </li>       
             <li>
     <a href="https://www.simplygon.com" title="Simplygon" data-linktype="absolute-path">
         <div class="cardSize">
