@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 7/29/2019
 ms.topic: article
 keywords: OpenXR, Khronos, BasicXRApp, réalité mixte OpenXR portail des développeurs, DirectX, natif, moteur personnalisé d’application native, intergiciel
-ms.openlocfilehash: 057d01527163f2ffcfe10d2e105592f07ff9e9e2
-ms.sourcegitcommit: 23e172664c2ee1220fe3b4468c104b37ef3ceda9
+ms.openlocfilehash: efad0809356f969c825ef7285885fdb9431c7fce
+ms.sourcegitcommit: c0d5c19b756b8e6ff95ea26a4d8d2b3a53878c2e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68601598"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671955"
 ---
 # <a name="openxr"></a>OpenXR
 
@@ -36,7 +36,7 @@ L’API Core OpenXR 1,0 fournit les fonctionnalités de base dont vous aurez bes
 * Entrée et haptique
 * API Graphics + intégration de plateforme
 
-Pour en savoir plus sur l’API OpenXR, consultez la [spécification OpenXR 1,0](https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html) et informations de référence sur l' [API OpenXR 1,0](https://www.khronos.org/registry/OpenXR/specs/1.0/man/html/).  Pour plus d’informations, consultez la [page Khronos OpenXR](https://www.khronos.org/openxr/).
+Pour en savoir plus sur l’API OpenXR, consultez la [spécification OpenXR 1,0](https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html) et informations de référence sur l' [API OpenXR 1,0](https://www.khronos.org/registry/OpenXR/specs/1.0/man/html/openxr.html).  Pour plus d’informations, consultez la [page Khronos OpenXR](https://www.khronos.org/openxr/).
 
 Pour cibler l’ensemble complet des fonctionnalités de HoloLens 2, vous utiliserez également des extensions OpenXR spécifiques à un fournisseur et à un fournisseur qui activent des fonctionnalités supplémentaires au-delà du OpenXR 1,0 cœurs, telles que le suivi articulé, le suivi oculaire, le mappage spatial et les ancrages spatiaux.  Pour plus d’informations sur les extensions arrivant plus tard cette année, consultez la section de la feuille de [route](openxr.md#roadmap) ci-dessous.
 
@@ -117,5 +117,5 @@ Si le bouton installer de l’application OpenXR Developer de la réalité mixte
 
 * [Plus d’informations sur OpenXR](https://www.khronos.org/openxr/)
 * [Spécification OpenXR 1,0](https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html)
-* [Informations de référence sur l’API OpenXR 1,0](https://www.khronos.org/registry/OpenXR/specs/1.0/man/html/)
+* [Informations de référence sur l’API OpenXR 1,0](https://www.khronos.org/registry/OpenXR/specs/1.0/man/html/openxr.html)
 * [Guide de référence rapide de OpenXR 1,0](https://www.khronos.org/registry/OpenXR/specs/1.0/refguide/OpenXR-1.0-web.pdf)
