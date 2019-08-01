@@ -8,12 +8,12 @@ ms.date: 02/12/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, développer, développement, HoloLens, unity, directx
-ms.openlocfilehash: b2bd9c4d81e5c7156ad753859a299209bad70c44
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: bf80b676d03fce9011f5952af476dcaa5e2b4eb2
+ms.sourcegitcommit: 76a7aa6e64e114b63ace058dd6d6d662b3c9f09e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67414429"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68507916"
 ---
 # <a name="development-launchpad"></a>Zone de développement
 
@@ -133,7 +133,7 @@ ms.locfileid: "67414429"
                     <div class="cardText">
                         <h3>Guides en matière de portage</h3>
                         <p>
-                            <a href="mrtk-porting-guide.md">Mise à jour des applications vers HoloLens 2<br>à partir d’HoloLens (1ère génération)</a>
+                            <a href="mrtk-porting-guide.md">Mise à jour des applications vers HoloLens 2<br>à partir de HoloLens (1ère génération)</a>
                         </p>
                         <p>
                             <a href="https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/HTKToMRTKPortingGuide.html">Guide sur le portage de l’API du<br>Kit de ressources de réalité mixte (MRTK)</a>
@@ -164,7 +164,7 @@ ms.locfileid: "67414429"
                             <a href="rendering.md">Rendu holographique</a>
                         </p>
                          <p>
-                            <a href="testing-your-app-on-hololens.md">Tests</a>
+                            <a href="testing-your-app-on-hololens.md">Test de votre application</a>
                         </p>                    
                     </div>
                 </div>

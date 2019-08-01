@@ -7,12 +7,12 @@ ms.date: 04/11/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, pointage du regard, ciblage avec le regard, interaction, conception, hololens, MMR, multimodal
-ms.openlocfilehash: 7b04141c832597be4bb58447629e0ef6e248dc2b
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: 3ba1a2fc46aa88c856e4cc9531382c479b3fb17a
+ms.sourcegitcommit: 76a7aa6e64e114b63ace058dd6d6d662b3c9f09e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67415248"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68507899"
 ---
 # <a name="introducing-instinctual-interactions"></a>Présentation des interactions instinctuelles
 
@@ -115,14 +115,14 @@ Voici quelques exemples d’optimisation des affordances et des comportements po
     <tr>
         <td><a href="hands-and-tools.md">Mains et contrôleurs de mouvement</a></td>
         <td>Je vois un maillage de main, je vois une affordance d’extrémité de doigt ou des rayons de contrôleur/sortant de la main.</td>
-        <td>Des poignées déplaçables ou un rectangle englobant apparaissent quand ma main est proche.</td>
+        <td>Des poignées déplaçables ou un rectangle englobant apparaissent quand ma main est proche d’un objet.</td>
         <td>J’entends des tonalités et vois des animations quand je saisis ou libère un objet.</td>
     </tr>
     <tr>
         <td><a href="gaze-and-commit.md">Suivre de la tête et valider</a></td>
         <td>Je vois un curseur au centre de mon champ de vision.</td>
-        <td>Le curseur de suivi de la tête change d’état en fonction de l’objet au-dessus duquel il se trouve.</td>
-        <td>Je vois/entends des confirmations visuelles et sonores quand j’effectue une action.</td>
+        <td>Le curseur oculaire de la tête change d’état en fonction de l’objet au-dessus duquel il se trouve.</td>
+        <td>Je vois/j’entends des confirmations visuelles et sonores quand j’effectue une action.</td>
     </tr>   
     <tr>
         <td><a href="hands-free.md">Mains-libres (Suivre de la tête et stabiliser)</a></td>
@@ -133,7 +133,7 @@ Voici quelques exemples d’optimisation des affordances et des comportements po
     <tr>
         <td><a href="hands-free.md">Mains-libres (commander avec la voix)</a></td>
         <td>Je vois un indicateur à l’écoute et des légendes qui montrent ce que le système a entendu.</td>
-        <td>J’obtiens des indicateurs et des invites vocales. Quand je dis : « what can I say ? » je vois un retour.</td>
+        <td>J’obtiens des indicateurs et des invites vocales. Quand je dis : Qu’est-ce que je dis ? je vois un retour.</td>
         <td>Je vois/entends des confirmations visuelles et sonores quand je donne une commande ou obtiens une expérience utilisateur de levée d’ambiguïté si nécessaire.</a></td>
     </tr>
 </table>
