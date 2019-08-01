@@ -1,17 +1,17 @@
 ---
-title: Module ASA d’apprentissage de la fonction d’ancrage spatial Azure sur HoloLens 2
+title: Didacticiels sur les ancres spatiales Azure-2. Enregistrement, récupération et partage d’ancres spatiales Azure
 description: Suivez ce cours pour découvrir comment implémenter la reconnaissance faciale Azure au sein d’une application de réalité mixte.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: b263d30905c5a1ba81bfb59ba6a49c7710c43869
-ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
+ms.openlocfilehash: 4e60ed844e64d736c268dd3ec8453c6c2cb7ad75
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485743"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702047"
 ---
 # <a name="2-saving-retrieving-and-sharing-azure-spatial-anchors"></a>2. Enregistrement, récupération et partage d’ancres spatiales Azure
 
@@ -81,5 +81,5 @@ Nous apprenons à implémenter des ancres spatiales Azure dans le cadre d’une 
 
 Dans la leçon suivante, nous apprendrons à fournir aux utilisateurs des commentaires en temps réel. Ces commentaires incluent des informations sur la création d’ancres, la qualité de la compréhension de l’environnement et l’état de la session Azure. Sans commentaires, les utilisateurs peuvent ne pas savoir si un point d’ancrage a été chargé avec succès sur Azure, que la qualité de l’environnement soit suffisante pour la création de l’ancre ou pour l’état actuel.
 
-[Leçon suivante : 3. Affichage des commentaires sur l’ancrage spatial Azure](mrlearning-asa-ch3.md)
+[Leçon suivante : 3. Affichage des commentaires sur les ancres spatiales Azure](mrlearning-asa-ch3.md)
 

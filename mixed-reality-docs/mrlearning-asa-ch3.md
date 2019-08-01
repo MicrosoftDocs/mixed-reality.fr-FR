@@ -1,17 +1,17 @@
 ---
-title: Module ASA d’apprentissage de la fonction d’ancrage spatial Azure sur HoloLens 2
+title: Didacticiels sur les ancres spatiales Azure-3. Affichage des commentaires sur l’ancrage spatial Azure
 description: Suivez ce cours pour découvrir comment implémenter la reconnaissance faciale Azure au sein d’une application de réalité mixte.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: cfd6ac9997a8a5d962603922f473bd6fc5d708ed
-ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
+ms.openlocfilehash: 45a71cada97dff4a2fb32f2eaf7700816f2e0d42
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485732"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702026"
 ---
 # <a name="3-displaying-azure-spatial-anchor-feedback"></a>3. Affichage des commentaires sur l’ancrage spatial Azure
 

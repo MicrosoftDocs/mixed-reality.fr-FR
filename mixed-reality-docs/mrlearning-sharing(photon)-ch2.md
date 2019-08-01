@@ -1,3 +1,18 @@
+---
+title: Didacticiels sur les fonctionnalités multi-utilisateur-2. Obtention d’Unity prête pour le développement
+description: Suivez ce cours pour apprendre à implémenter des expériences partagées multi-utilisateur dans une application HoloLens 2.
+author: jessemcculloch
+ms.author: jemccull
+ms.date: 02/26/2019
+ms.topic: article
+keywords: réalité mixte, unity, tutoriel, hololens
+ms.openlocfilehash: 9d42811157db108baad51eab3f367a06a11b7f7b
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701977"
+---
 # <a name="2-getting-unity-ready-for-development"></a>2. Obtention d’Unity prête pour le développement 
 
 

@@ -1,17 +1,17 @@
 ---
-title: Module de base d’apprentissage de la réalité mixte - Placement de contenu dynamique et solveurs
+title: Didacticiels de mise en route-4. Placement de contenu dynamique et utilisation de solveurs
 description: Suivez ce cours pour découvrir comment implémenter la reconnaissance faciale Azure au sein d’une application de réalité mixte.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: 401c667ef80042da9182b7f4e065dfd6884cf061
-ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
+ms.openlocfilehash: a73be40180e582058ae3e9bbaeffebe462042fbb
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485692"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701999"
 ---
 # <a name="4-placing-dynamic-content-and-using-solvers"></a>4. Placement de contenu dynamique et utilisation de solveurs
 

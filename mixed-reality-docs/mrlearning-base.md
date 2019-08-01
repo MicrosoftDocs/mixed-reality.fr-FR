@@ -1,17 +1,17 @@
 ---
-title: Présentation du module de base de l’apprentissage de MR
+title: Didacticiels de mise en route-1. Vue d’ensemble et objectifs
 description: Suivez ce cours pour découvrir comment implémenter la reconnaissance faciale Azure au sein d’une application de réalité mixte.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: baf99fa313e3ab38f138078334fb1388a148d6da
-ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
+ms.openlocfilehash: 1ea2437920c518f15639043c667b3915373f8d67
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485614"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701925"
 ---
 # <a name="1-overview-and-objectives"></a>1. Vue d’ensemble et objectifs
 

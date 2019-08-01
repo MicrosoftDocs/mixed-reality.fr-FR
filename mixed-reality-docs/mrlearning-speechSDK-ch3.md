@@ -1,19 +1,19 @@
 ---
-title: Module d’apprentissage de SpeechSDK-reconnaissance vocale et transcription
+title: Didacticiels Azure Speech Services-3. Ajout du composant Azure Cognitive Services Speech translation
 description: Suivez ce cours pour apprendre à implémenter le kit de développement logiciel (SDK) Azure Speech dans une application de réalité mixte.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: 7fe3c96cf7b888a4a91960147270be81a0973980
-ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
+ms.openlocfilehash: 27742702f7a274b3212cdf12c77d8acfa0a29834
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485766"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701825"
 ---
-# <a name="3----adding-the-azure-cognitive-services-speech-translation-component"></a>3.    Ajout du composant Azure Cognitive Services Speech translation
+# <a name="3-adding-the-azure-cognitive-services-speech-translation-component"></a>3. Ajout du composant Azure Cognitive Services Speech translation
 
 Dans ce didacticiel, nous apprenons à aabout le composant Azure Cognitive Services Speech translation dans notre projet et à le traduire en trois langages différents. 
 

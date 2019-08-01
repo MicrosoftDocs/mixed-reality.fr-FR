@@ -1,19 +1,19 @@
 ---
-title: Module de partage d’apprentissage MR pour HoloLens 2
+title: Didacticiels sur les fonctionnalités multi-utilisateur-5. Intégration des ancres spatiales Azure dans un environnement partagé
 description: Suivez ce cours pour apprendre à implémenter des expériences partagées multi-utilisateur dans une application HoloLens 2.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: 1ae880208e79e2e045bd5e7298db260b7f0b2232
-ms.sourcegitcommit: 611af6ff7a2412abad80c0c7d4decfc0c3a0e8c8
+ms.openlocfilehash: cb4645d197238d8712719625bf11eac0650a8246
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68293625"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701870"
 ---
-# <a name="azure-spatial-anchors-and-shared-experiences"></a>Ancres spatiales Azure et expériences partagées
+# <a name="5-integrating-azure-spatial-anchors-into-a-shared-experience"></a>5. Intégration des ancres spatiales Azure dans un environnement partagé
 
 Dans cette leçon, nous apprenons à intégrer les ancres spatiales Azure (ASA) dans notre expérience partagée. ASA permet à plusieurs appareils colocalisés d’avoir une référence commune si leur environnement physique est d’ancrer des expériences virtuelles, de sorte que tous les participants voient les objets dans le même emplacement physique.
 

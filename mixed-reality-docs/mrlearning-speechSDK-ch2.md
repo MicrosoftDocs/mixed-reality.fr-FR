@@ -1,21 +1,21 @@
 ---
-title: Module d’apprentissage de SpeechSDK-reconnaissance vocale et transcription
+title: Didacticiels Azure Speech services-2. Ajout d’un mode hors connexion pour la traduction vocale locale en texte
 description: Suivez ce cours pour apprendre à implémenter le kit de développement logiciel (SDK) Azure Speech dans une application de réalité mixte.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 06/27/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: b13b22fcdce2e7fa1319d241302b764f457aabba
-ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
+ms.openlocfilehash: 1dd6c01768ddf5dda954f50e0f7507022bd59c3b
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485605"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701859"
 ---
-# <a name="2----adding-an-offline-mode-for-local-speech-to-text-translation"></a>2.    Ajout d’un mode hors connexion pour la traduction vocale locale en texte
+# <a name="2-adding-an-offline-mode-for-local-speech-to-text-translation"></a>2. Ajout d’un mode hors connexion pour la traduction vocale locale en texte
 
-Dans ce didacticiel, nous allons ajouter un mode hors connexion qui vous permet d’effectuer des traductions vocales en texte local quand nous ne pouvons pas nous connecter au service Azure. Nous simulerons  également un état déconnecté.
+Dans ce didacticiel, nous allons ajouter un mode hors connexion qui vous permet d’effectuer des traductions vocales en texte local quand nous ne pouvons pas nous connecter au service Azure. Nous simulerons également un état déconnecté.
 
 ## <a name="instructions"></a>Instructions
 

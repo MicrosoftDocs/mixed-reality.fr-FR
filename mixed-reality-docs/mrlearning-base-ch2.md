@@ -1,17 +1,17 @@
 ---
-title: Module de base d’apprentissage de la réalité mixte - Interface utilisateur, suivi manuel et configuration du Kit de ressources de réalité mixte
-description: Suivez ce cours pour découvrir comment implémenter Reconnaissance faciale Azure au sein d’une application de réalité mixte.
+title: Didacticiels de mise en route-3. Création d’une interface utilisateur et configuration d’une réalité mixte Toolkit
+description: Suivez ce cours pour découvrir comment implémenter la reconnaissance faciale Azure au sein d’une application de réalité mixte.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: 6257b5a4b42127a7f15b235dbdd6b44967684fcb
-ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
+ms.openlocfilehash: 925ab825c2716a847726ac763dc6800914d87c6b
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485756"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702037"
 ---
 # <a name="3-creating-user-interface-and-configure-mixed-reality-toolkit"></a>3. Création d’une interface utilisateur et configuration d’une réalité mixte Toolkit 
 

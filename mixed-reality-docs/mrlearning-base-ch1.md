@@ -1,17 +1,17 @@
 ---
-title: Module d’apprentissage de base sur la réalité mixte - Initialisation du projet et première application
-description: Suivez ce cours pour découvrir comment implémenter Reconnaissance faciale Azure au sein d’une application de réalité mixte.
+title: Didacticiels de mise en route-2. Initialisation de votre projet et de la première application
+description: Suivez ce cours pour découvrir comment implémenter la reconnaissance faciale Azure au sein d’une application de réalité mixte.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: e79c3ea719a71d6df8ffd9e2be009d14a846a16a
-ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
+ms.openlocfilehash: f003bebf51859122b679162f41797bff1becd3fb
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485723"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702060"
 ---
 # <a name="2-initializing-your-project-and-first-application"></a>2. Initialisation de votre projet et de la première application
 

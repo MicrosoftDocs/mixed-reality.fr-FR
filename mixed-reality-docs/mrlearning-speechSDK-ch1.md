@@ -1,17 +1,17 @@
 ---
-title: Module d’apprentissage de SpeechSDK-reconnaissance vocale et transcription
+title: Didacticiels Azure Speech services-1. Intégration et utilisation de la reconnaissance vocale et de la transcription
 description: Suivez ce cours pour apprendre à implémenter le kit de développement logiciel (SDK) Azure Speech dans une application de réalité mixte.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: c1ca44ffcaa8dced988b829d9875ebe304f14a12
-ms.sourcegitcommit: c7c7e3c836373b65e319609b4e8389dea6b081de
+ms.openlocfilehash: 501e8bc2e70248a4ca8a79f90d74d30129830701
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460355"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701960"
 ---
 # <a name="1-integrating-and-using-speech-recognition-and-transcription"></a>1. Intégration et utilisation de la reconnaissance vocale et de la transcription
 
