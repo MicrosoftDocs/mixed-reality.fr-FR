@@ -22,7 +22,6 @@
 #### [Réinitialiser ou récupérer les données de votre casque HoloLens](reset-or-recover-your-hololens.md)
 #### [Enregistrement et recherche de vos fichiers](saving-and-finding-your-files.md)
 #### [Voir vos photos](see-your-photos.md)
-#### [Réglage des capteurs](sensor-tuning.md)
 #### [Mise à jour du casque HoloLens](updating-hololens.md)
 #### [Partage d’appareil](device-sharing.md)
 #### [Guide de mise en place et de nettoyage du casque HoloLens pour les démos](hololens-demo-guide.md)
