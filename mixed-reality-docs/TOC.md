@@ -134,8 +134,6 @@
 ## [Zone de développement](development.md)
 ## Services cloud de réalité mixte
 ### [Azure Spatial Anchors](https://docs.microsoft.com/azure/spatial-anchors)
-### [Holographic Remoting Player](holographic-remoting-player.md)
-### [Termes du contrat de licence pour Holographic Remoting Player](https://docs.microsoft.com/en-us/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
 ## Unity
 ### [Vue d’ensemble du développement Unity](unity-development-overview.md)
 ### Prise en main
@@ -188,7 +186,6 @@
 #### [Saisie à l’aide de la commande de jeu, du clavier et de la souris dans DirectX](keyboard,-mouse,-and-controller-input-in-directx.md)
 ### Rubriques avancées
 #### [Utilisation de code XAML avec les applications DirectX holographiques](using-xaml-with-holographic-directx-apps.md)
-#### [Ajout de la communication à distance holographique](add-holographic-remoting.md)
 ### [OpenXR](openxr.md)
 ## WebVR
 ### [Utilisation de WebVR dans Edge avec Windows Mixed Reality](using-webvr-in-edge-with-windows-mixed-reality.md)
@@ -289,7 +286,16 @@
 ## Outils distants et outils de recherche
 ### [Utilisation du portail d’appareil Windows](using-the-windows-device-portal.md)
 ### [Informations de référence sur les API du portail d’appareil](device-portal-api-reference.md)
+## Communication à distance holographique
 ### [Holographic Remoting Player](holographic-remoting-player.md)
+### [Écriture d’une application hôte de communication à distance holographique](holographic-remoting-create-host.md)
+### [Écriture d’un lecteur de communication à distance holographique](holographic-remoting-create-player.md)
+### [Canaux de données de communication à distance holographique personnalisés](holographic-remoting-custom-data-channels.md)
+### [Connexion sécurisée avec la communication à distance holographique](holographic-remoting-secure-connection.md)
+### [Résolution des problèmes et limitations](holographic-remoting-troubleshooting.md)
+### [Termes du contrat de licence de la communication à distance holographique](https://docs.microsoft.com/en-us/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
+### Communication à distance holographique pour HoloLens 1
+#### [Ajouter la communication à distance holographique](add-holographic-remoting.md)
 ## Autre
 ### [Suivi des codes QR](qr-code-tracking.md)
 ### [Expériences partagées dans Mixed Reality](shared-experiences-in-mixed-reality.md)
