@@ -3,23 +3,26 @@ title: Lecteur de communication à distance holographique
 description: Le lecteur de communication à distance holographique est une application auxiliaire qui se connecte aux applications de PC et aux jeux qui prennent en charge la communication à distance holographique. La communication à distance holographique diffuse du contenu holographique depuis un PC vers votre Microsoft HoloLens en temps réel, à l’aide d’une connexion Wi-Fi.
 author: JonMLyons
 ms.author: jlyons
-ms.date: 03/21/2018
+ms.date: 08/01/2019
 ms.topic: article
 keywords: HoloLens, communication à distance, communication à distance holographique
-ms.openlocfilehash: b8354295f9752e73cc9b34c1769254e49808b63f
-ms.sourcegitcommit: c6b59f532a9c5818d9b25c355a174a231f5fa943
+ms.openlocfilehash: fe26092ec8f5895652d17f88bf3be15cb116e482
+ms.sourcegitcommit: ca949efe0279995a376750d89e23d7123eb44846
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66813720"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68712688"
 ---
 # <a name="holographic-remoting-player"></a>Lecteur de communication à distance holographique
+
+>[!IMPORTANT]
+>La communication à distance holographique pour HoloLens 2 est une modification majeure de la version. [Les applications hôtes pour **hololens 1** ](add-holographic-remoting.md) doivent utiliser le package NuGet version **1. x. x** et les [applications hôtes pour **hololens 2** ](holographic-remoting-create-host.md) doivent utiliser **2. x**. x. Cela implique que les applications hôtes écrites pour HoloLens 2 ne sont pas compatibles avec HoloLens 1 et vice versa.
 
 Le lecteur de communication à distance holographique est une application auxiliaire qui se connecte aux applications de PC et aux jeux qui prennent en charge la communication à distance holographique. La communication à distance holographique diffuse du contenu holographique depuis un PC vers votre Microsoft HoloLens en temps réel, à l’aide d’une connexion Wi-Fi.
 
 Le lecteur de communication à distance holographique peut uniquement être utilisé avec des applications de PC conçues spécifiquement pour prendre en charge la communication à distance holographique.
 
-Le lecteur de communication à distance holographique est disponible à la fois pour HoloLens et HoloLens 2.  Les applications PC qui prennent en charge la communication à distance holographique avec HoloLens doivent être mises à jour pour prendre en charge les Remtoing holographiques avec HoloLens 2.  Si vous avez des questions sur les versions prises en charge, contactez le fournisseur de votre application.
+Le lecteur de communication à distance holographique est disponible à la fois pour HoloLens et HoloLens 2.  Les applications PC qui prennent en charge la communication à distance holographique avec HoloLens doivent être mises à jour pour prendre en charge la communication à distance holographique avec HoloLens 2. Si vous avez des questions sur les versions prises en charge, contactez le fournisseur de votre application.
 
 ## <a name="connecting-to-the-holographic-remoting-player"></a>Connexion au lecteur de communication à distance holographique
 
@@ -40,9 +43,30 @@ La qualité et les performances de votre expérience varient en fonction de troi
 
 ## <a name="diagnostics"></a>Diagnostics
 
-Pour mesurer la qualité de votre connexion, dites **«activer les diagnostics»** dans l’écran principal du lecteur de communication à distance holographique. Lorsque les diagnostics sont activés, l’application vous indique:
+Pour mesurer la qualité de votre connexion, dites **«activer les diagnostics»** dans l’écran principal du lecteur de communication à distance holographique. Lorsque les diagnostics sont activés, sur **HoloLens 1** l’application vous indique:
+
 * **Fps** : nombre moyen de trames rendues que le lecteur de communication à distance reçoit et restitue par seconde. L’idéal est de 60 FPS.
 * **Latence** : temps moyen nécessaire pour qu’une image passe de votre PC à la vue HoloLens. Plus la solution est performante. Cela dépend en grande partie de votre réseau Wi-Fi.
+
+Sur **HoloLens 2** , l’application vous indiquera:
+
+![Diagnostics de lecteur de communication à distance holographique](images/holographicremotingplayer-diag.png)
+
+* **Render** : nombre d’images rendu par le joueur de communication à distance au cours de la dernière seconde. Notez que cela ne dépend pas du nombre de trames qui sont arrivés via le réseau (voir **images vidéo**). En outre, l’affichage de l’heure Delta de rendu moyenne/maximale en millisecondes au cours de la dernière seconde entre les images rendues est affiché.
+
+* **Trames vidéo** : le premier nombre affiché est ignoré, le second est une trame vidéo réutilisée, et la troisième les images vidéo. Tous les nombres représentent le nombre au cours de la dernière seconde.
+    * ```Received frames```nombre de trames vidéo arrivant au cours de la dernière seconde. Dans des conditions normales, cette valeur doit être 60, mais si ce n’est pas le cas, l’un des cadres est abandonné en raison de problèmes réseau ou le côté hôte/distant ne produit pas de trames avec la vitesse attendue.
+    * ```Reused frames```nombre de trames vidéo qui ont été utilisées plusieurs fois au cours de la dernière seconde. Par exemple, si des images vidéo arrivent tardivement, la boucle de rendu du lecteur affiche toujours un cadre, mais doit réutiliser le frame vidéo qu’il a déjà utilisé pour le frame précédent.
+    * ```Skipped frames```nombre de trames vidéo qui n’ont pas été utilisées par la boucle de rendu du lecteur. Par exemple, l’instabilité du réseau peut avoir pour effet que les trames vidéo arrivant ne sont plus réparties uniformément, disons que certaines sont en retard et que d’autres arrivent dans le temps, et qu’elles n’ont plus de Delta de 16,66 millisecondes lorsqu’elles s’exécutent à 60 Hz. Cela peut se produire si plusieurs frames arrivent entre deux battements de la boucle de rendu du joueur. Dans ce cas, le lecteur ignore un ou plusieurs frames, car il est supposé afficher toujours la dernière image vidéo reçue.
+
+    >[!NOTE]
+    >Lorsque l’instabilité du réseau est en général ignorée et que les frames réutilisés sont à la fois identiques. À l’inverse, si vous voyez uniquement les frames ignorés, il s’agit d’un indicateur indiquant que le lecteur n’atteint pas sa fréquence d’images cible. Dans ce cas, vous devez garder un œil sur l’heure de Delta de rendu maximale lors du diagnostic des problèmes.
+
+* **Images vidéo Delta** : Delta minimum/maximum entre les trames vidéo reçues au cours de la dernière seconde. Ce nombre est généralement mis en corrélation avec les frames ignorés/réutilisés en cas de problèmes dus à l’instabilité du réseau.
+* **Latence** : fréquence moyenne en millisecondes au cours de la dernière seconde. Dans ce contexte, le fait d’envoyer des données de pose/capteur du HoloLens au côté hôte/distant jusqu’à l’affichage de la trame vidéo pour les données de pose/télémétrie sur l’affichage HoloLens.
+* **Images vidéo ignorées** -nombre de trames vidéo rejetées au cours de la dernière seconde et depuis qu’une connexion a été établie. La cause principale des trames vidéo ignorées est lorsqu’une image vidéo n’arrive pas dans l’ordre et, pour cette raison, doit être ignorée, car il existe déjà une version plus récente. Cela est similaire aux *Trames ignorées* , mais la cause se trouve à un niveau inférieur dans la pile de communication à distance. Les trames vidéo ignorées ne sont attendues que dans des conditions de réseau médiocres.
+
+
 
 Dans l’écran principal, vous pouvez indiquer **«Désactiver les diagnostics»** pour désactiver les Diagnostics.
 
@@ -52,5 +76,7 @@ Dans l’écran principal, vous pouvez indiquer **«Désactiver les diagnostics�
 * Nous vous recommandons de connecter votre ordinateur à votre réseau via Ethernet pour réduire le nombre de sauts sans fil.
 
 ## <a name="see-also"></a>Voir aussi
-* [Termes du contrat de licence pour Holographic Remoting Player](https://docs.microsoft.com/en-us/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
+* [HoloLens 1: Ajouter la communication à distance holographique](add-holographic-remoting.md)
+* [HoloLens 2: Écriture d’une application hôte de communication à distance holographique](holographic-remoting-create-host.md)
+* [Termes du contrat de licence du logiciel de communication à distance holographique](https://docs.microsoft.com/en-us/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
 * [Déclaration de confidentialité Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839)
