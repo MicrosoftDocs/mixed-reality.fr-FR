@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 06/03/2019
 ms.topic: article
 keywords: Windows Mixed Reality, conception, contrôles, police, typographie, UI, UX
-ms.openlocfilehash: 238f99442bcc5cf02de6760f0ce52d07c9d9c567
-ms.sourcegitcommit: be3631932ea1c88ac3ad8b2390c98c5a6e8b93ed
+ms.openlocfilehash: 55c25400a061366e045398da3196db208b4ab590
+ms.sourcegitcommit: 6a3b7d489c2aa3451b1c88c5e9542fbe1472c826
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/04/2019
-ms.locfileid: "68776390"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817366"
 ---
 # <a name="text-in-unity"></a>Texte dans Unity
 
@@ -51,7 +51,7 @@ Quand vous ajoutez un élément de texte basé sur une interface utilisateur ou 
 
 ## <a name="working-with-text-mesh-pro"></a>Utilisation de Text Mesh Pro
 
-Avec le texte de la maille Pro de Unity, vous pouvez sécuriser la qualité de rendu du texte. Elle prend en charge les contours de texte nets, quelle que soit la distance à l’aide de la technique du [champ à distance signée (SDF)](https://steamcdn-a.akamaihd.net/apps/valve/2007/SIGGRAPH2007_AlphaTestedMagnification.pdf) . À l’aide de la méthode de calcul que nous avons utilisée ci-dessus pour le texte 3D et le texte de l’interface utilisateur, nous pouvons trouver les valeurs de mise à l’échelle appropriées à utiliser avec les points typographiques conventionnels. Étant donné que la police par défaut de maillage de texte 3D avec la taille 36 a une taille limite de 2,5 unités Unity (2,5 millions), nous pouvons utiliser la valeur de mise à l’échelle de 0,005 pour obtenir la taille en points. La taille de la limite par défaut de 25 unités Unity (25m) est définie dans le maillage de texte Pro du menu de l’interface utilisateur. Cela nous donne 0,0005 pour la valeur de mise à l’échelle.
+Avec le texte de la maille Pro de Unity, vous pouvez sécuriser la qualité de rendu du texte. Elle prend en charge les contours de texte nets, quelle que soit la distance à l’aide de la technique du [champ à distance signée (SDF)](https://steamcdn-a.akamaihd.net/apps/valve/2007/SIGGRAPH2007_AlphaTestedMagnification.pdf) . À l’aide de la méthode de calcul que nous avons utilisée ci-dessus pour le texte 3D et le texte de l’interface utilisateur, nous pouvons trouver les valeurs de mise à l’échelle appropriées à utiliser avec les points typographiques conventionnels. Étant donné que la police par défaut de maillage de texte 3D avec la taille 36 a une taille limite de 2,5 unités Unity (2,5 millions), nous pouvons utiliser une valeur de mise à l’échelle de 0,005 pour obtenir la taille en points. La taille de la limite par défaut de 25 unités Unity (25m) est définie dans le maillage de texte Pro du menu de l’interface utilisateur. Cela nous donne 0,0005 pour la valeur de mise à l’échelle.
 
 ![Maillage de texte 3D Unity avec différentes tailles de police](images/Text_In_Unity_Measurements2.png)<br>
 *Mise à l’échelle des valeurs pour le texte 3D Unity et texte de l’interface utilisateur*
