@@ -189,7 +189,7 @@ Pour utiliser Azure Media Service, vous devez configurer une instance du service
 
     ![Le portail Azure](images/AzureLabs-Lab6-14.png)
 
-14. La page que vous avez redirigée affiche des informations détaillées sur votre vidéo. Pour pouvoir utiliser votre vidéo, vous devez l’encoder en cliquant sur le  bouton encoder en haut à gauche de la page.
+14. La page que vous avez redirigée affiche des informations détaillées sur votre vidéo. Pour pouvoir utiliser votre vidéo, vous devez l’encoder en cliquant sur le bouton encoder en haut à gauche de la page.
 
     ![Le portail Azure](images/AzureLabs-Lab6-15.png)
 
@@ -354,9 +354,9 @@ Comment importer les **pour Unity**:
 
     ![Importation du package InsideOutSphere Unity](images/AzureLabs-Lab6-37.png)
 
-    1.  Ouvrez le  dossier Models, et vous verrez que le modèle **InsideOutSphere** a été importé.
+    1.  Ouvrez le dossier Models, et vous verrez que le modèle **InsideOutSphere** a été importé.
 
-    2.  Dans le  dossier Materials, vous trouverez la *Lambert1*de matériau **InsideOutSpheres** , ainsi qu’un document appelé *ButtonMaterial*, qui est utilisé par le GazeButton, que vous verrez bientôt.
+    2.  Dans le dossier Materials, vous trouverez la *Lambert1*de matériau **InsideOutSpheres** , ainsi qu’un document appelé *ButtonMaterial*, qui est utilisé par le GazeButton, que vous verrez bientôt.
 
     3.  Le dossier **Prefabs** contient le Prefab **InsideOutSphere** qui contient à la fois le *modèle* **InsideOutSphere** et le *GazeButton*.
 
@@ -504,7 +504,7 @@ Pour créer cette classe:
     2.  Deuxième dans la variable *video2endpoint* .
 
     > [!WARNING]
-    > Il existe un problème connu lié à  l’utilisation de https dans Unity, avec la version 2017.4.1 F1. Si les vidéos fournissent une erreur lors de la lecture, essayez d’utiliser «http» à la place.
+    > Il existe un problème connu lié à l’utilisation de https dans Unity, avec la version 2017.4.1 F1. Si les vidéos fournissent une erreur lors de la lecture, essayez d’utiliser «http» à la place.
 
 8.  Ensuite, la méthode **Start ()** doit être modifiée. Cette méthode est déclenchée chaque fois que l’utilisateur change de scène (en basculant la vidéo) en regardant le bouton de regard.
 
@@ -739,16 +739,16 @@ L’objectif de ce chapitre est de configurer les deux scènes, chacune héberge
 
     ![Chapitre 7: configurer les deux scènes d’Unity](images/AzureLabs-Lab6-49.png)
 
-2.  Nommez le dossier Scenes.
+2.  Nommez ledossier Scenes.
 
 3.  La fenêtre **enregistrer la scène** est toujours ouverte. Ouvrez le dossier **scenes** que vous venez de créer.
 
 4.  Dans le champ **nom de fichier:** , tapez **VideoScene1**, puis cliquez sur **Enregistrer**.
 
-5.  De retour dans Unity,  ouvrez votre dossier scenes, puis cliquez sur votre fichier **VideoScene1** . À l’aide de votre clavier, appuyez sur **Ctrl + D** pour dupliquer cette scène
+5.  De retour dans Unity, ouvrez votre dossier scenes, puis cliquez sur votre fichier **VideoScene1** . À l’aide de votre clavier, appuyez sur **Ctrl + D** pour dupliquer cette scène
 
     > [!TIP]
-    > La  commande dupliquée peut également être exécutée en accédant à **Modifier > doublon**.
+    > La commande dupliquée peut également être exécutée en accédant à **Modifier > doublon**.
 
 6.  Unity incrémente automatiquement le numéro de nom de la scène, mais vérifie tout de même qu’il correspond au code précédemment inséré.
 
@@ -795,7 +795,7 @@ L’objectif de ce chapitre est de configurer les deux scènes, chacune héberge
 
 14. Le **GazeButton** est maintenant partiellement mis à jour. Toutefois, vous allez maintenant créer un nouveau **matériau**, afin qu’il soit complètement différent et qu’il soit plus facile à reconnaître en tant qu’objet différent que l’objet dans la première scène.
 
-15. Accédez à votre  dossier Materials, dans le **panneau Projet**. Dupliquez le matériel **ButtonMaterial** (appuyez sur **CTRL** + **D** sur le clavier ou cliquez sur le **matériau**, puis sélectionnez Dupliquer dans l’option de menu  **modifier** le fichier).
+15. Accédez à votre dossier Materials, dans le **panneau Projet**. Dupliquez le matériel **ButtonMaterial** (appuyez sur **CTRL** + **D** sur le clavier ou cliquez sur le **matériau**, puis sélectionnez Dupliquer dans l’option de menu **modifier** le fichier).
 
     ![Chapitre 7--configurer les deux scènes](images/AzureLabs-Lab6-55.png)
     ![d’Unity chapitre 7--configurer les deux scènes d’Unity](images/AzureLabs-Lab6-56.png)
@@ -830,7 +830,7 @@ Pour générer:
 
 4.  Vous serez invité à sélectionner le dossier dans lequel vous souhaitez buildThe la solution.
 
-5.  Créez un  dossier Builds et, dans ce dossier, créez un autre dossier avec le nom approprié de votre choix.
+5.  Créez un dossier Builds et, dans ce dossier, créez un autre dossier avec le nom approprié de votre choix.
 
 6.  Cliquez sur votre nouveau dossier, puis sur **Sélectionner un dossier**, afin de choisir ce dossier, pour commencer la build à cet emplacement.
 
@@ -851,7 +851,7 @@ Pour effectuer le déploiement sur l’ordinateur local:
 
 2.  Dans la **plateforme**de la solution, sélectionnez **x86, ordinateur local**.
 
-3.  Dans la **configuration** de la solution, sélectionnez Déboguer.
+3.  Dans la **configuration** de lasolution, sélectionnez Déboguer.
 
     ![Chapitre 9--déployer sur l’ordinateur local](images/AzureLabs-Lab6-62.png)
 
