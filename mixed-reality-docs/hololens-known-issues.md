@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 07/10/2019
 ms.topic: article
 keywords: résolution des problèmes, problème connu, aide
-ms.openlocfilehash: 1ef9e9f411e16d2f604930f3146ede1d03d7c0f6
-ms.sourcegitcommit: c36b8c8573f51afa79504c4a17084e4f55d2f664
+ms.openlocfilehash: 9ec15957b75ca3ec51dd01f5b9b4bc7371912c5a
+ms.sourcegitcommit: a11999e92e4e87516a6dcceabc2c5ed7642f1fd9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67789489"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68887270"
 ---
 # <a name="hololens-known-issues"></a>Problèmes connus de HoloLens
 
@@ -20,11 +20,11 @@ Voici la liste actuelle des problèmes connus liés à HoloLens qui affectent le
 ## <a name="unable-to-connect-and-deploy-to-hololens-through-visual-studio"></a>Impossible de se connecter à HoloLens et de le déployer dans Visual Studio
 
 >[!NOTE]
->Dernière mise à jour: 7/8 @ 7:25PM-l’équipe a identifié la cause racine et travaille actuellement à la résolution du problème. Solution de contournement disponible ci-dessous. 
+>Dernière mise à jour: 8/8 @ 5:23 H 00-Visual Studio a publié VS 2019 version 16,2, qui inclut un correctif pour ce problème. Nous vous recommandons d’effectuer la mise à jour vers cette version la plus récente pour éviter d’avoir à rencontrer cette erreur.
 
-Nous avons pu identifier la cause racine de ce problème. Les utilisateurs qui utilisaient Visual Studio 2015 ou les versions antérieures de Visual Studio 2017 pour déployer et déboguer des applications sur leur HoloLens, puis utilisaient ensuite les dernières versions de Visual Studio 2017 ou Visual Studio 2019 avec le même HoloLens seront affectés. 
+Visual Studio a publié VS 2019 version 16,2, qui inclut un correctif pour résoudre ce problème. Nous vous recommandons d’effectuer la mise à jour vers cette version la plus récente pour éviter d’avoir à rencontrer cette erreur.
 
-Les nouvelles versions de Visual Studio déploient une nouvelle version d’un composant, mais les fichiers de la version antérieure sont conservés sur l’appareil, ce qui entraîne l’échec de la version plus récente.  Le message d’erreur suivant s’affiche alors: DEP0100: Vérifiez que le mode développeur est activé pour l’appareil cible. Impossible d’obtenir une licence de développeur <ip> sur en raison de l’erreur 80004005.
+Cause première du problème: Les utilisateurs qui utilisaient Visual Studio 2015 ou les versions antérieures de Visual Studio 2017 pour déployer et déboguer des applications sur leur HoloLens, puis utilisaient ensuite les dernières versions de Visual Studio 2017 ou Visual Studio 2019 avec le même HoloLens seront affectés. Les nouvelles versions de Visual Studio déploient une nouvelle version d’un composant, mais les fichiers de la version antérieure sont conservés sur l’appareil, ce qui entraîne l’échec de la version plus récente.  Le message d’erreur suivant s’affiche alors: DEP0100: Vérifiez que le mode développeur est activé pour l’appareil cible. Impossible d’obtenir une licence de développeur <ip> sur en raison de l’erreur 80004005.
  
 **Solution de contournement** : 
 

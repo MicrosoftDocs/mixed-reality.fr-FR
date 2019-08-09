@@ -6,12 +6,12 @@ ms.author: wguyman, cdedmonds
 ms.date: 06/12/2019
 ms.topic: article
 keywords: appareil photo, hololens, caméra couleur, frontal, hololens 2, CV, vision par ordinateur, fiduciaire, marqueurs, code QR, QR, photo, vidéo
-ms.openlocfilehash: b80e201723f8f499a6d35008b9d308f93b925b1c
-ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
+ms.openlocfilehash: 368943dd70c721a41ca7c265a19ecb7c394db312
+ms.sourcegitcommit: 4ac761fed7a9570977f6d031ba4f870585d6630a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67694536"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68861724"
 ---
 # <a name="locatable-camera"></a>Appareil photo localisable
 
@@ -84,11 +84,13 @@ Pour passer de «CameraIntrinsics» et «CameraCoordinateSystem» à votre syst�
 
 [Appareil photo localisable dans Unity](locatable-camera-in-unity.md): CameraToWorldMatrix est automatiquement fourni par la classe PhotoCaptureFrame (vous n’avez donc pas à vous soucier des transformations CameraCoordinateSystem).
 
-[Appareil photo localisable dans DirectX](locatable-camera-in-directx.md): Montre la manière assez simple d’interroger la transformation entre le système de coordonnées de l’appareil photo et vos propres systèmes de coordonnées de l’application.
+[Appareil photo localisable dans DirectX](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/HolographicFaceTracking): L’exemple de suivi de visage holographique illustre la façon assez simple d’interroger la transformation entre le système de coordonnées de l’appareil photo et vos propres systèmes de coordonnées d’application.
 
 ### <a name="distortion-error"></a>Erreur de distorsion
 
-Sur HoloLens, les flux vidéo et d’images fixes ne sont pas déformés dans le pipeline de traitement d’image du système avant que les frames ne soient mis à disposition de l’application (le flux de préversion contient les frames déformés d’origine). Étant donné que seules les CameraIntrinsics sont disponibles, les applications doivent supposer que les trames d’image représentent une caméra parfaite Pinhole. Toutefois, la fonction de intorsion dans le processeur d’images peut toujours provoquer une erreur pouvant atteindre 10 pixels sur HoloLens (première génération) lors de l’utilisation de CameraIntrinsics dans les métadonnées de frame. Dans de nombreux cas d’utilisation, cette erreur n’a pas d’importance, mais si vous alignez des hologrammes sur des affiches/marqueurs réels, par exemple, et que vous remarquez un décalage de < 10px (à peu près 11mm pour les hologrammes positionnés sur 2 mètres), cette erreur peut être due à une déformation. 
+Sur HoloLens, les flux vidéo et d’images fixes ne sont pas déformés dans le pipeline de traitement d’image du système avant que les frames ne soient mis à disposition de l’application (le flux de préversion contient les frames déformés d’origine). Étant donné que seules les CameraIntrinsics sont disponibles, les applications doivent supposer que les images d’images représentent une caméra Pinhole parfaite.
+
+Sur HoloLens (première génération), la fonction de désdistortion dans le processeur d’images peut toujours provoquer une erreur pouvant atteindre 10 pixels lors de l’utilisation de CameraIntrinsics dans les métadonnées de frame. Dans de nombreux cas d’utilisation, cette erreur n’a pas d’importance, mais si vous alignez des hologrammes sur des affiches/marqueurs réels, par exemple, et que vous remarquez un décalage de < 10px (à peu près 11mm pour les hologrammes positionnés sur 2 mètres), cette erreur peut être due à une déformation. 
 
 ## <a name="locatable-camera-usage-scenarios"></a>Scénarios d’utilisation d’appareil photo localisables
 
@@ -170,7 +172,7 @@ Exemples :
 * Identifier et reconnaître les personnes de la pièce (par exemple, placer des cartes de contact holographiques sur des visages)
 
 ## <a name="see-also"></a>Voir aussi
-* [Appareil photo localisable dans DirectX](locatable-camera-in-directx.md)
+* [Exemple d’appareil photo localisable](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/HolographicFaceTracking)
 * [Appareil photo localisable dans Unity](locatable-camera-in-unity.md)
 * [Capture de Réalité Mixte](mixed-reality-capture.md)
 * [Capture de Réalité Mixte pour les développeurs](mixed-reality-capture-for-developers.md)

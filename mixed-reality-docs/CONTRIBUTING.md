@@ -5,12 +5,12 @@ author: mattwojo
 ms.author: mattwoj
 ms.date: 03/21/2018
 ms.topic: article
-ms.openlocfilehash: c110b549603f42ec03fd6c0dc8df7bf70ba5ba9f
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: a6c2574a35ec1240c573532dabfdc6cec1696947
+ms.sourcegitcommit: 4ac761fed7a9570977f6d031ba4f870585d6630a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63516232"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68861716"
 ---
 # <a name="contributing-to-windows-mixed-reality-developer-documentation"></a>Contribution à la documentation Windows Mixed Reality Developer
 
@@ -49,7 +49,7 @@ Utilisez le flux de travail suivant pour effectuer des mises à jour d' *un arti
 3. Modifiez le contenu de l’article (consultez [«principes de base](#markdown-basics) des démarques» ci-dessous pour obtenir de l’aide).
 4. Mettez à jour les métadonnées en haut de chaque article:
    * bonhomme Il s’agit du titre de la page qui s’affiche sous l’onglet navigateur lorsque l’article est affiché. Comme il est utilisé pour le SEO et l’indexation, vous ne devez pas modifier le titre sauf si cela est nécessaire (bien que cela soit moins critique avant que la documentation ne soit publique).
-   * Descriptive Rédigez une brève description du contenu de l’article. Cela facilite la découverte et le SEO.
+   * descriptive Rédigez une brève description du contenu de l’article. Cela facilite la découverte et le SEO.
    * auteur Si vous êtes le propriétaire principal de la page, ajoutez votre alias GitHub ici.
    * ms. Author: Si vous êtes le propriétaire principal de la page, ajoutez votre alias Microsoft ici (vous n’en @microsoft.comavez pas besoin, juste l’alias).
    * ms. Date: Mettez à jour la date si vous ajoutez du contenu majeur à la page, mais pas pour des correctifs tels que la clarification, la mise en forme, la grammaire ou l’orthographe.
@@ -57,6 +57,28 @@ Utilisez le flux de travail suivant pour effectuer des mises à jour d' *un arti
 5. Une fois que vous avez terminé vos modifications, faites défiler la liste et cliquez sur le bouton **proposer un changement de fichier** .
 6. Sur la page suivante, cliquez sur **créer une demande de tirage (pull Request** ) pour fusionner votre branche créée automatiquement dans «Master».
 7. Répétez les étapes ci-dessus pour le prochain article que vous souhaitez modifier.
+
+## <a name="renaming-or-deleting-an-existing-article"></a>Attribution d’un nouveau nom ou suppression d’un article existant
+
+Si votre modification renomme ou supprime un article existant, veillez à ajouter une redirection. De cette façon, toute personne disposant d’un lien vers l’article existant continuera de se retrouver au bon endroit. Les redirections sont gérées par le fichier. openpublishing. redirection. JSON à la racine du référentiel.
+
+Pour ajouter une redirection à. openpublishing. redirection. JSON, ajoutez une entrée au `redirections` tableau:
+
+```json
+{
+    "redirections": [
+        {
+            "source_path": "mixed-reality-docs/old-article.md",
+            "redirect_url": "new-article#section-about-old-topic",
+            "redirect_document_id": false
+        },
+```
+
+- `source_path` Est le chemin d’accès relatif au référentiel relatif à l’ancien article que vous supprimez. Assurez-vous que le `mixed-reality-docs` chemin commence par `.md`et se termine par.
+- `redirect_url` Est l’URL publique relative de l’ancien article vers le nouvel article. Assurez-vous que cette URL ne `mixed-reality-docs` contient `.md` **pas** ou, car elle fait référence à l’URL publique et non au chemin d’accès au référentiel. La liaison à une section dans le nouvel article `#section` à l’aide de est autorisée. Vous pouvez également utiliser un chemin d’accès absolu à un autre site, si nécessaire.
+- `redirect_document_id`indique si vous souhaitez conserver l’ID du document dans le fichier précédent. Par défaut, il s’agit de `false`. Utilisez `true` si vous souhaitez conserver la `ms.documentid` valeur d’attribut de l’article Redirigé. Si vous conservez l’ID de document, les données, telles que les affichages de page et les classements, seront transférées vers l’article cible. Procédez ainsi si la redirection est principalement un changement de nom, et non un pointeur vers un autre article qui couvre uniquement une partie du même contenu.
+
+Si vous ajoutez une redirection, veillez à supprimer également l’ancien fichier.
 
 ## <a name="creating-a-new-article"></a>Création d’un article
 
@@ -184,7 +206,7 @@ Utilisez le flux de travail suivant pour apporter des modifications à la docume
    3. **Valide toutes les** modifications dans **le contrôle de code source** (message de validation en écriture quand vous y êtes invité).
       
       ![Choisissez «valider tout» dans le contrôle de code source](images/source_control_commit.png)
-   4. Cliquez sur  le bouton synchroniser pour resynchroniser vos modifications avec l’origine (votre fourche sur GitHub).
+   4. Cliquez sur le bouton synchroniser pour resynchroniser vos modifications avec l’origine (votre fourche sur GitHub).
       
       ![Cliquez sur le bouton synchroniser.](images/sync_back.png)
 3. Dans un navigateur Web, créez une requête de tirage pour synchroniser les modifications apportées à votre fourche en MicrosoftDocs/Mixed-Reality’Master' (Assurez-vous que la flèche pointe vers la bonne voie).

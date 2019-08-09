@@ -182,7 +182,6 @@
 #### [Mappage spatial dans DirectX](spatial-mapping-in-directx.md)
 ### Autres fonctionnalités clés
 #### [Ancres spatiales partagées dans DirectX](shared-spatial-anchors-in-directx.md)
-#### [Appareil photo localisable dans DirectX](locatable-camera-in-directx.md)
 #### [Saisie à l’aide de la commande de jeu, du clavier et de la souris dans DirectX](keyboard,-mouse,-and-controller-input-in-directx.md)
 ### Rubriques avancées
 #### [Utilisation de code XAML avec les applications DirectX holographiques](using-xaml-with-holographic-directx-apps.md)
