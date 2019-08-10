@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: mappage spatial, HoloLens, réalité mixte, reconstruction de surface, maille, SR
-ms.openlocfilehash: 31abeca624512f1d5e721dbe879ca2243cf41345
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 4914cf5b7864ecb2430a39af73729eb6dfc0e2bd
+ms.sourcegitcommit: c4c293971bb3205a82121bbfb40d1ac52b5cb38e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63550476"
+ms.lasthandoff: 08/10/2019
+ms.locfileid: "68937067"
 ---
 # <a name="spatial-mapping"></a>Mappage spatial
 
@@ -178,7 +178,7 @@ Il existe trois façons principales pour lesquelles les maillages de mappage spa
 * Pour modifier l’apparence des bloqués hologrammes par surfaces réelles
    * Normalement, la géométrie rendue est masquée lorsqu’elle est bloqués. Pour ce faire, définissez la fonction Depth dans votre [État Depth-stencil](https://msdn.microsoft.com/library/windows/desktop/ff476110(v=vs.85).aspx) sur «inférieur ou égal à», ce qui entraîne la visibilité de la géométrie uniquement lorsque celle-ci est plus **proche** de l’appareil photo que toutes les géométries affichées précédemment.
    * Toutefois, il peut être utile de garder une certaine géométrie visible même quand elle est bloqués et de modifier son apparence lorsque bloqués est un moyen de fournir des commentaires visuels à l’utilisateur. Par exemple, cela permet à l’application de montrer à l’utilisateur l’emplacement d’un objet tout en le rendant clair, derrière une surface réelle.
-   * Pour ce faire, restituez la géométrie une seconde fois avec un nuanceur différent qui crée l’apparence «bloqués» souhaitée. Avant de restituer la géométrie pour la deuxième fois, apportez deux modifications à l’état de votre [gabarit de profondeur](https://msdn.microsoft.com/library/windows/desktop/ff476110(v=vs.85).aspx). Tout d’abord, définissez la fonction Depth sur «supérieur ou égal à», de façon à ce que la géométrie ne soit visible qu' **à partir de** l’appareil photo, par rapport à toute la géométrie précédemment rendue. Ensuite, définissez DepthWriteMask sur zéro, afin que la mémoire tampon de profondeur ne soit pas modifiée (le tampon de profondeur doit continuer à représenter la profondeur de la géométrie la **plus proche** de l’appareil photo).
+   * Pour ce faire, restituez la géométrie une seconde fois avec un nuanceur différent qui crée l’apparence «bloqués» souhaitée. Avant de restituer la géométrie pour la deuxième fois, apportez deux modifications à l’état de votre [gabarit de profondeur](https://msdn.microsoft.com/library/windows/desktop/ff476110(v=vs.85).aspx). Tout d’abord, définissez la fonction Depth sur «supérieur ou égal à», de façon à ce que la géométrie ne soit visible qu’à partir de l’appareil photo, par rapport à toute la géométrie précédemment rendue. Ensuite, définissez DepthWriteMask sur zéro, afin que la mémoire tampon de profondeur ne soit pas modifiée (le tampon de profondeur doit continuer à représenter la profondeur de la géométrie la **plus proche** de l’appareil photo).
 
 Les [performances](understanding-performance-for-mixed-reality.md) sont une préoccupation importante lors du rendu de maillages de mappages spatiaux. Voici quelques techniques de performances de rendu spécifiques au rendu des maillages de mappage spatial:
 * Ajuster la densité du triangle
@@ -220,4 +220,5 @@ Toutefois, gardez à l’esprit que chaque raycast peut avoir un coût de calcul
 * [Mappage spatial dans DirectX](spatial-mapping-in-directx.md)
 * [Mappage spatial dans Unity](spatial-mapping-in-unity.md)
 * [Conception du mappage spatial](spatial-mapping-design.md)
+* [Compréhension des scènes](scene-understanding.md)
 * [Étude de cas - Voir à travers vos objets](case-study-looking-through-holes-in-your-reality.md)

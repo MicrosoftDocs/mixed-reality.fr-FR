@@ -6,12 +6,12 @@ ms.author: Yoyoz
 ms.date: 05/15/19
 ms.topic: article
 keywords: Windows Mixed Reality, test, kit de développement logiciel (SDK) de réalité mixte, MRTK version 2, MRTK, Tools, SDK, HoloLens, HoloLens 2
-ms.openlocfilehash: 7eded2c766765a5ccebf741eed2f8b7fe8f65a93
-ms.sourcegitcommit: 76a7aa6e64e114b63ace058dd6d6d662b3c9f09e
+ms.openlocfilehash: c785498e1533b2117249d3b21952ff56190126c0
+ms.sourcegitcommit: c4c293971bb3205a82121bbfb40d1ac52b5cb38e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68507932"
+ms.lasthandoff: 08/10/2019
+ms.locfileid: "68937087"
 ---
 # <a name="getting-started-with-mrtk-v2"></a>Prise en main de MRTK v2
 
@@ -185,7 +185,7 @@ Pour en savoir plus, consultez le [portail de documentation MRTK](https://micros
 
 
 ## <a name="minimum-requirement-for-mrtk-v2"></a>Configuration minimale requise pour MRTK v2
-* Unity 2018.3.x
+* Unity 2018.4. x
 * Microsoft Visual Studio 2017 ou version ultérieure
 * SDK Windows 18362 + 
 * Windows 10 1803 ou version ultérieure
