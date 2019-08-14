@@ -18,7 +18,6 @@
 #### [Problèmes connus concernant HoloLens](hololens-known-issues.md)
 #### [Résolution des problèmes concernant HoloLens](troubleshooting.md)
 #### [Capture de Réalité Mixte](mixed-reality-capture.md)
-#### [Exploration de la page d’accueil Windows Mixed Reality](navigating-the-windows-mixed-reality-home.md)
 #### [Réinitialiser ou récupérer les données de votre casque HoloLens](reset-or-recover-your-hololens.md)
 #### [Enregistrement et recherche de vos fichiers](saving-and-finding-your-files.md)
 #### [Voir vos photos](see-your-photos.md)
@@ -27,6 +26,7 @@
 #### [Guide de mise en place et de nettoyage du casque HoloLens pour les démos](hololens-demo-guide.md)
 ### Casques immersifs
 #### [Informations détaillées sur les casques immersifs](immersive-headset-hardware-details.md)
+#### [Exploration de la page d’accueil Windows Mixed Reality](navigating-the-windows-mixed-reality-home.md)
 #### [Guide de découverte](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide)
 ### [Accessoires matériels](hardware-accessories.md)
 ### [Guide de mise en place et de nettoyage du casque HoloLens pour les démos](hololens-demo-guide.md)
