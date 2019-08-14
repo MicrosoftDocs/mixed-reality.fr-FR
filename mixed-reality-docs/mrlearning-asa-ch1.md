@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: 110c8ae1a529d4a3b4796a5d2b6ee44c150741cb
-ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
+ms.openlocfilehash: 95e5a5bfbf289731512554f2e4e73feeae96f432
+ms.sourcegitcommit: 599bbdd861ce6ff11b6cfb345a0a995f8b7bf85b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702070"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68978006"
 ---
 # <a name="1-getting-started-with-azure-spatial-anchors"></a>1. Prise en main des ancres spatiales Azure
 
@@ -32,7 +32,7 @@ Avant de commencer, téléchargez et importez les ressources suivantes:
 
 [Pack d’actifs du module de base RM v 1.2](https://github.com/microsoft/MixedRealityLearning/releases/download/1.2/BaseModuleAssets-1.2.unitypackage)
 
-[Module Asset Pack de ASA v 1.0](https://github.com/microsoft/MixedRealityLearning/releases/download/ASA_1.1/ASAModuleAssetsBeta.unitypackage)
+[Module Asset Pack de ASA v 1.0](https://github.com/microsoft/MixedRealityLearning/releases/tag/ASA_1.3)
 
 [Kit de la réalité mixte Toolkit 2.0.0 RC1](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/download/v2.0.0-RC1-Refresh/Microsoft.MixedReality.Toolkit.Unity.Foundation-v2.0.0-RC1-Refresh.unitypackage)
 
@@ -65,13 +65,13 @@ Une fois enregistré, revenez dans Unity, cliquez sur ressources, puis sur Impor
 
 ![module2chapter1step5bim](images/module2chapter1step5bim.PNG)
 
-Une fenêtre contextuelle s’affiche, providingg une liste d’outils et de paramètres et vous demande les éléments à importer. Sélectionnez ***toutes*** les options disponibles, puis cliquez sur Importer.
+Une fenêtre contextuelle s’affiche, fournissant une liste d’outils et de paramètres et vous demandant ce qu’il faut importer. Sélectionnez ***toutes*** les options disponibles, puis cliquez sur Importer.
 
 ![module2chapter1step5cim](images/module2chapter1step5cim.PNG)
 
 > Remarque : Soyez patient, l’importation prendra quelques minutes. 
 
-6. Importation [Mr Pack d’actifs du module https://github.com/microsoft/MixedRealityLearning/releases/tag/1.2) de base] suivant. À l’étape 5, cliquez sur le lien ci-dessus. Cliquez ensuite avec le bouton droit sur BasemoduleAssetsV1 1. unitypackag, puis cliquez sur enregistrer la cible sous et enregistrez-la sur votre ordinateur.
+6. Importez le [Pack de ressources du module de base Mr](https://github.com/microsoft/MixedRealityLearning/releases/tag/1.2) . À l’étape 5, cliquez sur le lien ci-dessus. Cliquez ensuite avec le bouton droit sur BasemoduleAssets-1.2. pour Unity, puis cliquez sur enregistrer la cible sous et enregistrez-la sur votre ordinateur.
 
 ![module2chapter1step6aim](images/module2chapter1step6aim.PNG)
 
@@ -83,7 +83,7 @@ Comme pour l’étape 5, revenez à Unity, cliquez sur ressources, puis pointez 
 
 > Remarque : Il peut y avoir plus de ressources nécessaires plus tard dans ce module. Procédez comme suit pour importer les ressources mentionnées à partir de ce point sur. 
 
-7. Importez le [Pack de module ASA](https://github.com/microsoft/MixedRealityLearning/releases/tag/ASA_1.1) en utilisant la même approche que l’importation des packages précédents.
+7. Importez le [Pack de module ASA](https://github.com/microsoft/MixedRealityLearning/releases/tag/ASA_1.3) en utilisant la même approche que l’importation des packages précédents.
 
 ### <a name="configuring-your-scene"></a>Configuration de votre scène
 
@@ -97,9 +97,13 @@ Dans cette section, nous allons ajouter des prefabs et des scripts dans la scèn
 
 ![module2chapter1step8im](images/module2chapter1step8im.PNG)
 
+Remarque : Si vous souhaitez vérifier les journaux de débogage dans HoloLens. Vous pouvez glisser-déplacer le Prefab DebugWindow à partir du dossier ASAModuleAssets vers la scène. Attachez le script DebugWindowMessaging dans le panneau d’inspecteur DebugWindow. Activez l’option déboguer la fenêtre activée, puis faites glisser le Prefab DebugWindow dans le champ DebugText vide. Ajustez la position de DebugWindow lorsque cela est approprié.
+
 10. Double-cliquez sur l’ancre parente pour la sélectionner. Vous devrez peut-être ajuster votre affichage pour voir l’intégralité de la scène. Ajustez votre scène en fonction des besoins.
 
 Familiarisez-vous avec le Prefab ParentAnchor. Actuellement, l’objet de jeu nommé, ParentAnchor, est un cube coloré à des fins de démonstration. Finalement, nous allons masquer le cube et placer notre contenu en tant qu’enfant du ParentAnchor. Ce Prefab inclut le script AzureSpatialAnchorsDemoWrapper.cs (inclus avec le kit de développement logiciel (SDK) ASA) et le script ASAmoduleScript.cs, inclus dans le cadre de ce module, à l’objet ParentAnchor. 
+
+Remarque : Après avoir ajouté le ButtonParent dans la scène, un message s’affiche pour vous demander d’importer les ressources TMP. Importez uniquement le «TMP Essentials». Après cela, si vous voyez un texte de police de grande taille dans la scène, supprimez l’objet ButtonParent et rajoutez-le à partir du dossier ASAmoduleAssets
 
 11. Configurer des boutons. Sous le Prefab ButtonParent, notez plusieurs boutons étiquetés. Ces boutons sont créés à partir du prefabs PressableButton de MRTK. Apprenez-en davantage sur la création de boutons d’appui à partir du [module de base](mrlearning-base-ch2.md). Pour chaque bouton, ajoutez un événement qui est déclenché quand l’utilisateur appuie sur le bouton ou le sélectionne en fonction de la liste ci-dessous. 
 
@@ -113,13 +117,17 @@ Familiarisez-vous avec le Prefab ParentAnchor. Actuellement, l’objet de jeu no
 
 - Pour le nom du bouton, StopAzureSession, créez un événement sous le déclencheur d’événements appuyé sur le bouton, ainsi que le déclencheur d’événements on Click. Faites glisser l’objet ParentAnchor dans le champ Empty, puis affectez la méthode StopAzureSession () à partir du composant ASAmoduleScript de l’objet ParentAnchor.
 
-- Pour le bouton nommé, CreateAnchor, créez un événement sous le déclencheur d’événements appuyé sur le bouton, ainsi que le déclencheur d’événements on Click. Faites glisser l’objet ParentAnchor dans le champ Empty, puis affectez la méthode CreateAzureAnchor () à partir du composant ASAmoduleScript de l’objet ParentAnchor.
+- Pour le bouton nommé, CreateAnchor, créez un événement sous le déclencheur d’événements appuyé sur le bouton, ainsi que le déclencheur d’événements on Click. Faites glisser l’objet ParentAnchor dans le champ Empty, puis affectez la méthode CreateAzureAnchor () à partir du composant ASAmoduleScript de l’objet ParentAnchor.  Après cela, faites glisser à nouveau le ParentAnchor dans le champ vide suivant.
 
 - Pour le bouton nommé, commencez à rechercher Anchor, créez un nouvel événement sous le bouton déclencheur d’événements Appuyez sur, ainsi que le déclencheur d’événements on Click. Faites glisser l’objet ParentAnchor dans le champ Empty, puis affectez la méthode FindAzureAnchor () à partir du composant ASAmoduleScript de l’objet ParentAnchor.
 
-- Pour le bouton nommé, DeleteAzureAnchor, créez un événement sous le déclencheur d’événements appuyé sur le bouton, ainsi que le déclencheur d’événements on Click. Faites glisser l’objet ParentAnchor dans le champ Empty, puis affectez la méthode DeleteAzureAnchor () à partir du composant ASAmoduleScript de l’objet ParentAnchor.
+- Pour le bouton nommé, DeleteAzureAnchor, créez un événement sous le déclencheur d’événements appuyé sur le bouton, ainsi que le déclencheur d’événements on Click. Faites glisser l’objet ParentAnchor dans le champ Empty, puis affectez la méthode DeleteAzureAnchor () à partir du composant ASAmoduleScript de l’objet ParentAnchor.  Après cela, faites glisser l’objet ParentAnchor dans le champ vide suivant.
 
 - Pour le bouton nommé, supprimer l’ancre locale, créez un événement sous le déclencheur d’événements enfoncé, ainsi que le déclencheur d’événements on Click. Faites glisser l’objet ParentAnchor dans le champ Empty, puis affectez la méthode RemoveLocalAnchor () à partir du composant ASAmoduleScript de l’objet ParentAnchor.
+
+  Pour configurer des ancres spatiales Azure, accédez au dossier AzureSpatialAnchorsPlugin dans le dossier ressources, puis accédez à exemples-ressources >-> fichier AzureSpatialAnchorsDemoConfig. Dans le panneau Inspecteur, ajoutez l’ID de compte Azure et la clé de compte créés précédemment. Si vous n’avez pas créé ou si vous ne les avez pas, veuillez suivre les [conditions préalables](https://docs.microsoft.com/en-us/azure/spatial-anchors/quickstarts/get-started-unity-hololens). module2chapter1step13im
+  
+  ![module2chapter1step13im](images/module2chapter1step13im.PNG)
 
 ### <a name="build-and-demonstrate-base-application"></a>Générer et démontrer l’application de base
 
@@ -127,19 +135,19 @@ Maintenant que votre scène est configurée pour illustrer les principes de base
 
 1. Si vous avez fermé la fenêtre Build Settings dans les sections précédentes, rouvrez-la en choisissant File>Build Settings.
 ![Lesson1Chapter5Step1](images/Lesson1Chapter5Step1.JPG)
-
 2. Vérifiez que la scène que vous souhaitez essayer se trouve dans la liste scenes dans la build, en cliquant sur le bouton Ajouter des scènes en cours.
+3. Vérifiez que la plateforme est définie sur plateforme Windows universelle. Si ce n’est pas le cas, définissez-le sur le même.
+4. Appuyez sur le bouton Paramètres du lecteur et accédez à paramètres de publication. Sous fonctionnalités, activez: Internet, serveur client Internet, serveur client de réseau privé, stockage amovible, webcam, microphone et perception spatiale.
+5. Dans les mêmes paramètres de lecteur, accédez à paramètres XR et sélectionnez la réalité virtuelle prise en charge sur activé.
+6. Appuyez sur le bouton Build (Générer) pour commencer le processus de génération.
+   ![Lesson1Chapter5Step3](images/Lesson1Chapter5Step3.JPG)
+7. Créez un dossier pour votre application et nommez-le. Dans l’image ci-dessous, un dossier avec le nom de l’application a été créé pour contenir l’application. Cliquez sur Sélectionner un dossier pour commencer à créer le dossier nouvellement créé. Une fois la génération terminée, vous pouvez fermer la fenêtre du paramètre de build dans Unity. 
+    ![Lesson1Chapter5Step4](images/Lesson1Chapter5Step4.JPG)
 
-3. Appuyez sur le bouton Build (Générer) pour commencer le processus de génération.
-![Lesson1Chapter5Step3](images/Lesson1Chapter5Step3.JPG)
-
-4. Créez un dossier pour votre application et nommez-le. Dans l’image ci-dessous, un dossier avec le nom de l’application a été créé pour contenir l’application. Cliquez sur Sélectionner un dossier pour commencer à créer le dossier nouvellement créé. Une fois la génération terminée, vous pouvez fermer la fenêtre du paramètre de build dans Unity. 
-![Lesson1Chapter5Step4](images/Lesson1Chapter5Step4.JPG)
-
-  > REMARQUE : Si la génération échoue, essayez de renouveler l’opération, éventuellement après avoir redémarré Unity. Si vous voyez une erreur comme « Error : CS0246 = le saisissez ou le nom d’espace de noms «XX» est introuvable (vous manque-t-il une directive using ou une référence d’assembly?). Vous devrez peut-être installer le [Kit de développement logiciel (SDK) Windows 10 (10.0.18362.0)](<https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk>) 
+  > REMARQUE : Si la génération échoue, essayez de renouveler l’opération, éventuellement après avoir redémarré Unity. Si vous voyez une erreur comme « Error : CS0246 = le type ou le nom d’espace de noms «XX» est introuvable (vous manque-t-il une directive using ou une référence d’assembly?). Vous devrez peut-être installer le [Kit de développement logiciel (SDK) Windows 10 (10.0.18362.0)](<https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk>) 
   >
 
-5. Une fois la génération terminée, ouvrez le dossier créé qui contient vos fichiers d’application nouvellement générés. Double-cliquez sur la solution «MixedRealityBase. sln» ou le nom correspondant. Si vous avez utilisé un autre nom pour votre projet pour ouvrir le fichier solution dans Visual Studio.
+8. Une fois la génération terminée, ouvrez le dossier créé qui contient vos fichiers d’application nouvellement générés. Double-cliquez sur la solution «MixedRealityBase. sln» ou le nom correspondant. Si vous avez utilisé un autre nom pour votre projet pour ouvrir le fichier solution dans Visual Studio.
 
   > Remarque : Veillez à ouvrir le dossier nouvellement créé (c’est-à-dire, le dossier de l’application, si vous respectez les conventions d’affectation des noms des étapes précédentes, car il y aura un fichier. sln de même nom en dehors de ce dossier qui ne doit pas être confondu avec le fichier. sln dans le dossier de Build. 
 
@@ -147,17 +155,17 @@ Maintenant que votre scène est configurée pour illustrer les principes de base
 
 > Remarque : Si Visual Studio vous invite à installer de nouveaux composants, prenez un moment pour vous assurer que tous les composants requis sont installés comme spécifiques dans [la page «installer les outils»](install-the-tools.md) 
 
-6. Branchez l’appareil HoloLens 2 à votre PC avec le câble USB. Bien que ces instructions de leçon partent du principe que vous déploierez un test avec un appareil HoloLens 2, vous pouvez également choisir de déployer vers l' [émulateur hololens 2](using-the-hololens-emulator.md) ou de créer un [package d’application pour chargement](<https://docs.microsoft.com/en-us/windows/uwp/packaging/packaging-uwp-apps>)
+9. Branchez l’appareil HoloLens 2 à votre PC avec le câble USB. Bien que ces instructions de leçon partent du principe que vous déploierez un test avec un appareil HoloLens 2, vous pouvez également choisir de déployer vers l' [émulateur hololens 2](using-the-hololens-emulator.md) ou de créer un [package d’application pour chargement](<https://docs.microsoft.com/en-us/windows/uwp/packaging/packaging-uwp-apps>)
 
-7. Avant d’effectuer la génération sur votre appareil, vérifiez que ce dernier est en mode développeur. S’il s’agit de votre premier déploiement sur l’appareil HoloLens 2, Visual Studio peut vous demander de l’associer à un code confidentiel. Suivez [ces instructions](https://docs.microsoft.com/en-us/windows/mixed-reality/using-visual-studio) si vous devez activer le mode développeur ou le coupler avec Visual Studio.
+10. Avant d’effectuer la génération sur votre appareil, vérifiez que ce dernier est en mode développeur. S’il s’agit de votre premier déploiement sur l’appareil HoloLens 2, Visual Studio peut vous demander de l’associer à un code confidentiel. Suivez [ces instructions](https://docs.microsoft.com/en-us/windows/mixed-reality/using-visual-studio) si vous devez activer le mode développeur ou le coupler avec Visual Studio.
+11. Configurez Visual Studio pour la création dans votre HoloLens 2 en sélectionnant la configuration Release, ainsi que l’architecture ARM.
+    ![Lesson1Chapter5Step8](images/Lesson1Chapter5Step8.JPG)
 
-8. Configurez Visual Studio pour la création dans votre HoloLens 2 en sélectionnant la configuration Release, ainsi que l’architecture RM.
-![Lesson1Chapter5Step8](images/Lesson1Chapter5Step8.JPG)
-   
-9. La dernière étape consiste à créer sur votre appareil en sélectionnant Déboguer > Exécuter sans débogage. Si vous sélectionnez l’option Exécuter sans débogage, l’application démarre immédiatement sur votre appareil après une génération réussie des informations de débogage ithout affichées dans Visual Studio. Cela signifie également que vous pouvez déconnecter le câble USB pendant que votre application s’exécute sur votre appareil HoloLens 2 sans arrêter celle-ci. Vous pouvez également sélectionner générer > déployer la solution pour déployer sur votre appareil sans démarrer automatiquement l’application.
-![Lesson1Chapter5Step9](images/Lesson1Chapter5Step9.JPG)
-   
-10. Suivez les instructions. Lorsque l’application s’exécute sur votre appareil, suivez les instructions à l’écran. Appuyez sur les boutons de la scène correspondant aux étapes ci-dessous.
+12. La dernière étape consiste à créer sur votre appareil en sélectionnant Déboguer > Exécuter sans débogage. Si vous sélectionnez l’option Exécuter sans débogage, l’application démarre immédiatement sur votre appareil après une génération réussie sans que des informations de débogage apparaissent dans Visual Studio. Cela signifie également que vous pouvez déconnecter le câble USB pendant que votre application s’exécute sur votre appareil HoloLens 2 sans arrêter celle-ci. Vous pouvez également sélectionner générer > déployer la solution pour déployer sur votre appareil sans démarrer automatiquement l’application.
+    ![Lesson1Chapter5Step9](images/Lesson1Chapter5Step9.JPG)
+
+13. Suivez les instructions. 
+    Lorsque l’application s’exécute sur votre appareil, suivez les instructions à l’écran. Appuyez sur les boutons de la scène correspondant aux étapes ci-dessous.
 
 ![module2chapter1step10eim](images/module2chapter1step10eim.PNG)
     
@@ -186,7 +194,7 @@ Maintenant que votre scène est configurée pour illustrer les principes de base
 
 Dans les sections précédentes, vous avez appris les principes de base des ancres spatiales Azure. Nous avons utilisé un cube pour représenter et visualiser l’objet de jeu parent avec l’ancre attachée. Dans cette section, vous allez apprendre à ancrer une expérience complète en la plaçant en tant qu’enfant de l’objet ParentAnchor. Pour cet exemple, nous utilisons l’application de démonstration de l’assembly du module lunaire qui a été créée au cours de la [leçon 6 du module de base](mrlearning-base-ch6.md).
 
-1. Recherchez l’assembly de module lunaire complet Prefab et faites-le glisser dans votre hiérarchie en tant qu’enfant du gameobject AnchorParent, comme indiqué dans l’image ci-dessous.
+1. Recherchez l’assembly de module lunaire complet Prefab et faites-le glisser dans votre hiérarchie en tant qu’enfant de l’objet, comme indiqué dans l’image ci-dessous.
 
 ![module2chapter1step11](images/module2chapter1step11im.PNG)
 
@@ -197,7 +205,7 @@ Dans les sections précédentes, vous avez appris les principes de base des ancr
 > Remarque : Il existe un grand nombre d’expériences utilisateur pour repositionner les expériences, y compris l’utilisation d’un bouton permettant de basculer un cadre englobant qui entoure l’expérience, l’utilisation d’un objet de repositionnement (tel que le cube utilisé dans cette étape), l’utilisation de la position et de la rotation gizmos , et bien plus encore.
 
 ## <a name="congratulations"></a>Félicitations
-Dans ce didacticiel, vous avez appris les principes de base des ancres spatiales Azure. Cette session Esso a fourni plusieurs boutons qui vous permettent d’explorer les différentes étapes requises pour démarrer et arrêter une session Azure, et de créer, télécharger et télécharger des ancres Azure sur un seul appareil. Dans la leçon suivante, nous allons apprendre à enregistrer des ID d’ancrage Azure dans votre HoloLens 2 pour la récupération, même après le redémarrage de l’application. Au cours de la série, vous apprendrez également à transférer des ID d’ancrage entre plusieurs appareils pour atteindre l’alignement spatial et à découvrir les sessions partagées multi-utilisateur, à venir dans le cadre du didacticiel de partage.
+Dans ce didacticiel, vous avez appris les principes de base des ancres spatiales Azure. Cette leçon vous a fourni plusieurs boutons qui vous permettent d’explorer les différentes étapes nécessaires au démarrage et à l’arrêt d’une session Azure, ainsi que la création, le chargement et le téléchargement d’ancres Azure sur un seul appareil. Dans la leçon suivante, nous allons apprendre à enregistrer des ID d’ancrage Azure dans votre HoloLens 2 pour la récupération, même après le redémarrage de l’application. Au cours de la série, vous apprendrez également à transférer des ID d’ancrage entre plusieurs appareils pour atteindre l’alignement spatial et à découvrir les sessions partagées multi-utilisateur, à venir dans le cadre du didacticiel de partage.
 
 [Leçon suivante : 2. Enregistrement, récupération et partage d’ancres spatiales Azure](mrlearning-asa-ch2.md)
 

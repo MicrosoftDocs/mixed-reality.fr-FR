@@ -208,7 +208,7 @@ Ce qui suit est une configuration classique pour le développement avec une réa
 
     ![](images/AzureLabs-Lab310-22.png)
 
-3.  Si Unity est ouvert, il est conseillé de vérifier que l' **éditeur de script** par défaut est défini sur **Visual Studio**. Accédez à **modifier* > les*Préférences** , puis à partir de la nouvelle fenêtre, accédez à **outils externes**. Remplacez l' **éditeur de script externe** par **Visual Studio**. Fermez la fenêtre **Préférences** .
+3.  Si Unity est ouvert, il est conseillé de vérifier que l' **éditeur de script** par défaut est défini sur **Visual Studio**. Accédez à  **modifier* > les*Préférences** , puis à partir de la nouvelle fenêtre, accédez à **outils externes**. Remplacez l' **éditeur de script externe** par **Visual Studio**. Fermez la fenêtre **Préférences** .
 
     ![](images/AzureLabs-Lab310-23.png)
 

@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: 501e8bc2e70248a4ca8a79f90d74d30129830701
-ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
+ms.openlocfilehash: a6367a1be1bcaeab911b925641dbb3a66998c2dc
+ms.sourcegitcommit: 599bbdd861ce6ff11b6cfb345a0a995f8b7bf85b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68701960"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68977991"
 ---
 # <a name="1-integrating-and-using-speech-recognition-and-transcription"></a>1. Intégration et utilisation de la reconnaissance vocale et de la transcription
 
@@ -133,18 +133,19 @@ Ce didacticiel crée une application de réalité mixte qui explore l’utilisat
 ![Lesson1 Chapter5 étape1](images/Lesson1Chapter5Step1.JPG)
 
 2. Vérifiez que la scène que vous souhaitez essayer figure dans la liste « Scenes in Build » (Scènes dans la génération) en cliquant sur le bouton « Add Open Scenes » (Ajouter des scènes ouvertes).
-
-3. Appuyez sur le bouton Build (Générer) pour commencer le processus de génération.
+3. Appuyez sur le bouton Paramètres du lecteur et accédez à paramètres de publication. Sous fonctionnalités, activez: Internet, serveur client Internet, serveur client de réseau privé, microphone et perception spatiale.
+4. Dans les mêmes paramètres de lecteur, accédez à paramètres XR et sélectionnez la réalité virtuelle prise en charge sur activé.
+5. Appuyez sur le bouton Build (Générer) pour commencer le processus de génération.
 
 ![Lesson1 Chapter5 step3](images/Lesson1Chapter5Step3.JPG)
 
-4. Créez un dossier pour votre application et nommez-le. Dans l’image ci-dessous, un dossier portant le nom « App » a été créé pour contenir l’application. Cliquez sur « Select Folder » (Sélectionner le dossier) pour commencer la génération dans le dossier que vous venez de créer. Une fois la génération terminée, vous pouvez fermer la fenêtre « Build Settings » dans Unity. 
+6. Créez un dossier pour votre application et nommez-le. Dans l’image ci-dessous, un dossier portant le nom « App » a été créé pour contenir l’application. Cliquez sur « Select Folder » (Sélectionner le dossier) pour commencer la génération dans le dossier que vous venez de créer. Une fois la génération terminée, vous pouvez fermer la fenêtre « Build Settings » dans Unity. 
 
 ![Lesson1 Chapter5 étape 4](images/Lesson1Chapter5Step4.JPG)
 
 > REMARQUE : Si la génération échoue, essayez de renouveler l’opération, éventuellement après avoir redémarré Unity. Si vous voyez une erreur comme « Error : CS0246 = The type or namespace name “XX” could not be found (are you missing a using directive or an assembly reference?) » (CS0246 = le type ou le nom de l’espace de noms « XX » est introuvable (une directive using ou une référence d’assembly est-elle manquante ?) », vous devrez peut-être installer [SDK Windows 10 (10.0.18362.0)](<https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk>)
 
-5. Une fois la génération terminée, ouvrez le dossier créé qui contient vos fichiers d’application nouvellement générés. Double-cliquez sur le fichier solution «. sln» pour ouvrir le fichier solution dans Visual Studio.
+7. Une fois la génération terminée, ouvrez le dossier créé qui contient vos fichiers d’application nouvellement générés. Double-cliquez sur le fichier solution «. sln» pour ouvrir le fichier solution dans Visual Studio.
 
 > Remarque : Veillez à ouvrir le dossier créé (par exemple, le dossier « App », si vous avez suivi les conventions de nommage indiquées aux étapes précédentes), car il existe un fichier .sln portant le même nom en dehors de ce dossier qui ne doit pas être confondu avec le fichier .sln situé dans le dossier de génération. 
 
@@ -152,15 +153,14 @@ Ce didacticiel crée une application de réalité mixte qui explore l’utilisat
 
 > Remarque : Si Visual Studio vous invite à installer de nouveaux composants, prenez un moment pour vous assurer que tous les composants requis sont installés comme spécifié dans la [page « Installer les outils »](install-the-tools.md).
 
-6. Branchez l’appareil HoloLens 2 à votre PC avec le câble USB. Bien que les instructions de cette leçon supposent que vous déployez un test avec un appareil HoloLens 2, vous pouvez choisir d’effectuer le déploiement sur l’[émulateur HoloLens 2](using-the-hololens-emulator.md) ou de créer un [package d’application pour effectuer un chargement indépendant](<https://docs.microsoft.com/en-us/windows/uwp/packaging/packaging-uwp-apps>).
+8. Branchez l’appareil HoloLens 2 à votre PC avec le câble USB. Bien que les instructions de cette leçon supposent que vous déployez un test avec un appareil HoloLens 2, vous pouvez choisir d’effectuer le déploiement sur l’[émulateur HoloLens 2](using-the-hololens-emulator.md) ou de créer un [package d’application pour effectuer un chargement indépendant](<https://docs.microsoft.com/en-us/windows/uwp/packaging/packaging-uwp-apps>).
+9. Avant d’effectuer la génération sur votre appareil, vérifiez que ce dernier est en mode développeur. S’il s’agit de votre premier déploiement sur l’appareil HoloLens 2, Visual Studio peut vous demander de l’associer à un code confidentiel. Veuillez suivre [ces instructions](https://docs.microsoft.com/en-us/windows/mixed-reality/using-visual-studio) si vous devez activer le mode développeur ou associer l’appareil à Visual Studio.
 
-7. Avant d’effectuer la génération sur votre appareil, vérifiez que ce dernier est en mode développeur. S’il s’agit de votre premier déploiement sur l’appareil HoloLens 2, Visual Studio peut vous demander de l’associer à un code confidentiel. Veuillez suivre [ces instructions](https://docs.microsoft.com/en-us/windows/mixed-reality/using-visual-studio) si vous devez activer le mode développeur ou associer l’appareil à Visual Studio.
-
-8. Configurez Visual Studio en vue d’effectuer la génération sur votre appareil HoloLens 2 en sélectionnant la configuration « Release » et l’architecture « ARM ».
+10. Configurez Visual Studio en vue d’effectuer la génération sur votre appareil HoloLens 2 en sélectionnant la configuration « Release » et l’architecture « ARM ».
 
 ![Lesson1 Chapter5 Step8](images/Lesson1Chapter5Step8.JPG)
 
-9. L’étape finale consiste à effectuer la génération sur votre appareil en sélectionnant Déboguer > Démarrer sans débogage. Quand vous sélectionnez « Démarrer sans débogage », l’application démarre immédiatement sur votre appareil si la génération réussit, mais les informations de débogage n’apparaissent pas dans Visual Studio. Cela signifie également que vous pouvez déconnecter le câble USB pendant que votre application s’exécute sur votre appareil HoloLens 2 sans arrêter celle-ci. Vous pouvez également sélectionner Générer > Déployer la solution pour effectuer le déploiement sur votre appareil sans que l’application démarre automatiquement.
+11. L’étape finale consiste à effectuer la génération sur votre appareil en sélectionnant Déboguer > Démarrer sans débogage. Quand vous sélectionnez « Démarrer sans débogage », l’application démarre immédiatement sur votre appareil si la génération réussit, mais les informations de débogage n’apparaissent pas dans Visual Studio. Cela signifie également que vous pouvez déconnecter le câble USB pendant que votre application s’exécute sur votre appareil HoloLens 2 sans arrêter celle-ci. Vous pouvez également sélectionner Générer > Déployer la solution pour effectuer le déploiement sur votre appareil sans que l’application démarre automatiquement.
 
 ![Lesson1 Chapter5 Step9](images/Lesson1Chapter5Step9.JPG)
 

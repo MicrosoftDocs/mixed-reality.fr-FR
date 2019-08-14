@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: fc65dccfcbc181af0c0b321374c721797e120e5d
-ms.sourcegitcommit: c7c7e3c836373b65e319609b4e8389dea6b081de
+ms.openlocfilehash: 43a6f02eaf09fcf43775374fae4fbe2d0bc8c346
+ms.sourcegitcommit: 599bbdd861ce6ff11b6cfb345a0a995f8b7bf85b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460336"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68977976"
 ---
 # <a name="speech-sdk-learning-module---rocket-launcher-control-using-speech-commands"></a>Module Speech SDK Learning-contrôle du lanceur Rocket utilisant des commandes vocales
 
@@ -23,17 +23,17 @@ Dans cette leçon, nous allons utiliser la fonctionnalité d’intention du serv
 - Découvrez comment utiliser les commandes vocales d’intention vocale comme commandes de contrôle de fusée.
 
 ## <a name="instructions"></a>Instructions
-1. Dans ce didacticiel, nous allons utiliser un élément multimédia «BaseModule» pour intégrer le lanceur Rocket avec les commandes vocales. Pour ce faire, nous devons importer la ressource dans notre projet. Vous pouvez télécharger le composant «lanceur Rocket» à l’aide de ce lien (joindre le lien). 
+1. Dans ce didacticiel, nous allons utiliser un élément multimédia «BaseModule» pour intégrer le lanceur Rocket avec les commandes vocales. Pour ce faire, nous devons importer la ressource dans notre projet. Vous pouvez télécharger le composant «lanceur Rocket» à l’aide de ce [lien](https://github.com/microsoft/MixedRealityLearning/releases/tag/1.2). 
 
 2. Pour importer l’élément multimédia, accédez à ressources-> Importer un package-> package personnalisé-> accédez au fichier téléchargé, puis cliquez sur Importer.
 
 ![module4chapter5step1](images/module4chapter5step1.PNG)
 
-3. Après avoir importé le composant «lanceur Rocket», accédez au dossier «fusée Launcher»-> Prefabs-> sélectionnez «Rocket Launcher_Complete», puis faites-le glisser et déposez-le dans la hiérarchie de la scène existante.
+3. Après avoir importé le composant «ressources du module de base», naviguez dans le dossier «ressources du module de base»-> Prefabs-> sélectionnez «fusée Launcher_Complete», puis faites-le glisser dans la hiérarchie de la scène existante.
 
 ![module4chapter5step2](images/module4chapter5step2.PNG)
 
-4. Nous devons maintenant intégrer notre «lanceur Rocket» à notre projet LUIS que nous avons travaillé dans notre leçon précédente (lien pour lesson4). Pour cela, développez le Prefab «fusée Launcher_Complete» dans la hiérarchie et recherchez les boutons «LaunchRoundButton», «ResetRoundButton» et «indicateurs de positionnement».
+4. Nous devons maintenant intégrer notre «lanceur Rocket» à notre projet LUIS que nous avons travaillé dans notre [leçon](mrlearning-speechSDK-ch4.md)précédente. Pour cela, développez le Prefab «fusée Launcher_Complete» dans la hiérarchie et recherchez les boutons «LaunchRoundButton», «ResetRoundButton» et «indicateurs de positionnement».
 
 ![module4chapter5step3](images/module4chapter5step3.PNG)
 
