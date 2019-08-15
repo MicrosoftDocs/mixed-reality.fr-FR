@@ -6,16 +6,16 @@ ms.author: cmeekhof
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Réalité mixte, gestes, interaction, conception
-ms.openlocfilehash: 8094caaf8a5d805606e9dac11ece56bc50122e5d
-ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
+ms.openlocfilehash: 70b03c6fa327bd987a681bba59abb725c3ddc6b4
+ms.sourcegitcommit: e5b677f92ac4b1dff9aad6c329345a5aca4fcef5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66829771"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69020212"
 ---
 # <a name="gestures"></a>Mouvements
 
-Les gestes manuels permettent aux utilisateurs de prendre des mesures en réalité mixte. L’interaction repose sur **le point** d’arrêt et le point de vue cible et le **mouvement** ou la **voix** pour agir sur tout élément ciblé. Les gestes manuels ne fournissent pas un emplacement précis dans l’espace, mais la simplicité de mise en place d’un HoloLens et l’interaction immédiate avec le contenu permet aux utilisateurs de travailler sans aucun autre accessoire.
+Les gestes manuels permettent aux utilisateurs d’agir en réalité mixte. L’interaction repose sur le point d’arrêt et le point de vue cible et le **mouvement** ou la **voix** pour agir sur tout élément ciblé. Les gestes manuels ne fournissent pas un emplacement précis dans l’espace, mais la simplicité de mise en place d’un HoloLens et l’interaction immédiate avec le contenu permet aux utilisateurs de travailler sans aucun autre accessoire.
 
 <br>
 
@@ -55,11 +55,11 @@ Les gestes manuels permettent aux utilisateurs de prendre des mesures en réalit
 
 ## <a name="gaze-and-commit"></a>Point de dépointment et validation
 
-Pour prendre des mesures, les gestes manuels utilisent le point de vue de la [tête](gaze.md) en tant que mécanisme de ciblage. La combinaison du mouvement de pointage **et du** robinet d’air entraîne une interaction de point de **suspension** **et de validation** . Une alternative au point de contrôle et à la validation est la possibilité de **pointer et de valider**, activée par les contrôleurs de [mouvement](motion-controllers.md). Les applications qui s’exécutent sur HoloLens doivent uniquement prendre en charge le point de recherche et la validation puisque HoloLens ne prend pas en charge les contrôleurs de mouvement. Les applications qui s’exécutent à la fois sur HoloLens et sur des casques immersifs doivent prendre en charge les interactions pilotées par le pointage et le pointage, afin de permettre aux utilisateurs de choisir le périphérique d’entrée qu’ils utilisent.
+Pour prendre des mesures, les gestes manuels utilisent le point de vue de la [tête](gaze.md) en tant que mécanisme de ciblage. La combinaison du mouvement de pointage et du **robinet d’air** entraîne une interaction de point de suspension **et de validation** . Une alternative au point de contrôle et à la validation est la possibilité de **pointer et de valider**, activée par les contrôleurs de [mouvement](motion-controllers.md). Les applications qui s’exécutent sur HoloLens doivent uniquement prendre en charge le point de recherche et la validation puisque HoloLens ne prend pas en charge les contrôleurs de mouvement. Les applications qui s’exécutent à la fois sur HoloLens et sur des casques immersifs doivent prendre en charge les interactions pilotées par le pointage et le pointage, afin de permettre aux utilisateurs de choisir le périphérique d’entrée qu’ils utilisent.
 
 ## <a name="the-two-core-gestures-of-hololens"></a>Les deux principaux mouvements de HoloLens
 
-HoloLens reconnaît actuellement deux gestes de composants principaux: le robinet et **le**toucher de l' **air** . Ces deux interactions de base sont le niveau le plus bas des données d’entrée spatiale auxquelles un développeur peut accéder. Elles constituent la base d’une série d’actions utilisateur possibles.
+HoloLens reconnaît actuellement deux gestes de composants principaux: le robinet etle toucher de l' **air** . Ces deux interactions de base sont le niveau le plus bas des données d’entrée spatiale auxquelles un développeur peut accéder. Elles constituent la base d’une série d’actions utilisateur possibles.
 
 ### <a name="air-tap"></a>Clic aérien
 

@@ -6,12 +6,12 @@ ms.author: jlyons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Portail des appareils Windows, HoloLens
-ms.openlocfilehash: 79a4a1f99125028fcaf71e185eb00093aa8c742f
-ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
+ms.openlocfilehash: 5a2440c07ade1a9c41f3c28c332748e0c97cd3ed
+ms.sourcegitcommit: e5b677f92ac4b1dff9aad6c329345a5aca4fcef5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67694585"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69020229"
 ---
 # <a name="using-the-windows-device-portal"></a>Utilisation du portail d’appareils Windows
 
@@ -52,7 +52,7 @@ Cette documentation concerne spécifiquement le portail de périphériques Windo
 
 1. [Installez les outils](install-the-tools.md) pour vérifier que vous disposez de Visual Studio Update 1 avec les outils de développement Windows 10 installés sur votre PC. Cela permet d’activer la connectivité USB.
 2. Connectez votre HoloLens au PC à l’aide d’un câble micro-USB.
-3. À partir d’un navigateur web sur votre PC, accédez à http://127.0.0.1:10080.
+3. À partir d’un navigateur Web sur votre PC, [http://127.0.0.1:10080](http://127.0.0.1:10080)accédez à.
 
 ## <a name="connecting-to-an-emulator"></a>Connexion à un émulateur
 
@@ -281,7 +281,7 @@ Vous permet d’enregistrer et de lire des données d’entrée pour le test.
 
 Gère les connexions Wi-Fi sur le HoloLens.
 * **Adaptateurs Wi-Fi**: Sélectionnez un adaptateur Wi-Fi et un profil à l’aide des contrôles de liste déroulante. Cliquez ou appuyez sur **se connecter** pour utiliser l’adaptateur sélectionné.
-* **Réseaux disponibles**: Répertorie les réseaux Wi-Fi auxquels le HoloLens peut se connecter. Cliquez ou appuyez  sur Actualiser pour mettre à jour la liste.
+* **Réseaux disponibles**: Répertorie les réseaux Wi-Fi auxquels le HoloLens peut se connecter. Cliquez ou appuyez sur Actualiser pour mettre à jour la liste.
 * **Configuration IP**: Affiche l’adresse IP et d’autres détails de la connexion réseau.
 
 ### <a name="virtual-input"></a>Entrée virtuelle
