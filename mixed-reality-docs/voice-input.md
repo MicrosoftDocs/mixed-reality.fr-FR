@@ -1,11 +1,11 @@
 ---
 title: Entrée vocale
-description: Entrée vocale est une entrée de base pour des casques IMMERSIFS HoloLens et Windows Mixed Reality. Voix utilisable pour les commandes, la dictée, Cortana et bien plus encore.
+description: L’entrée vocale est une entrée de base pour HoloLens et les casques immersifs immersifs de Windows Mixed Reality. La voix peut être utilisée pour les commandes, la dictée, Cortana et bien plus encore.
 author: Hak0n
 ms.author: hakons
 ms.date: 02/24/2019
 ms.topic: article
-keywords: ggv, voix, cortana, saisie vocale
+keywords: GGv, voix, Cortana, discours, entrée
 ms.openlocfilehash: e21310b940e4a4c3019f61edea695b452e74ab62
 ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
@@ -15,9 +15,9 @@ ms.locfileid: "66829950"
 ---
 # <a name="voice-input"></a>Entrée vocale
 
-Voix est la clé trois formes de d’entrée sur HoloLens. Il vous permet à la commande directement un hologramme sans avoir à utiliser [mouvements](gestures.md). Vous simplement [les regards](gaze.md) à un hologramme et parler de votre commande. Entrée vocale peut être une façon naturelle à communiquer votre intention. Voix est particulièrement efficace pour parcourir les interfaces complexes, car il permet aux utilisateurs de couper par le biais des menus imbriqués avec une seule commande.
+La voix est l’une des trois formes clés d’entrée sur HoloLens. Elle vous permet de directement commander un hologramme sans avoir à utiliser des [mouvements](gestures.md). Il vous [suffit de](gaze.md) pointer sur un hologramme et de parler de votre commande. L’entrée vocale peut être un moyen naturel de communiquer votre intention. La voix est particulièrement intéressante pour traverser des interfaces complexes, car elle permet aux utilisateurs de couper les menus imbriqués à l’aide d’une seule commande.
 
-Entrée vocale est alimentée par le [même moteur](https://msdn.microsoft.com/library/windows/apps/mt185615.aspx) qui prend en charge la reconnaissance vocale dans toutes les autres applications Windows universelles.
+L’entrée vocale est alimentée par le [moteur](https://msdn.microsoft.com/library/windows/apps/mt185615.aspx) qui prend en charge la reconnaissance vocale dans toutes les autres applications universelles Windows.
 
 <br>
 
@@ -34,9 +34,9 @@ Entrée vocale est alimentée par le [même moteur](https://msdn.microsoft.com/l
     </colgroup>
     <tr>
         <td><strong>Fonctionnalité</strong></td>
-        <td><a href="hololens-hardware-details.md"><strong>HoloLens (1er gen)</strong></a></td>
-        <td><strong>HoloLens 2</strong></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Casques IMMERSIFS</strong></a></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens (1ère génération)</strong></a></td>
+        <td><strong>HoloLens 2</strong></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Casques immersifs</strong></a></td>
     </tr>
      <tr>
         <td>Entrée vocale</td>
@@ -46,83 +46,83 @@ Entrée vocale est alimentée par le [même moteur](https://msdn.microsoft.com/l
     </tr>
 </table>
 
-## <a name="the-select-command"></a>La commande « select »
+## <a name="the-select-command"></a>Commande «sélectionner»
 
-Même sans en ajoutant la prise en charge de la voix à votre application, vos utilisateurs peuvent activer hologrammes simplement en disant « select ». Ce comportement est identique à un [appui en l’air](gestures.md#air-tap) sur HoloLens, en appuyant sur le bouton de sélection le [HoloLens clicker](hardware-accessories.md#hololens-clicker), ou en appuyant sur le déclencheur un [contrôleur de mouvement Windows Mixed Reality](motion-controllers.md). Vous allez entendre un son et affiche une info-bulle avec « select » en tant que confirmation. « Select » est activé par un algorithme de détection de mot clé de faible consommation d’énergie, elle est toujours disponible pour vous dire à tout moment avec un impact minimal batterie vie, même avec vos mains de votre côté.
+Même sans ajouter spécifiquement la prise en charge vocale à votre application, vos utilisateurs peuvent activer des hologrammes simplement en disant «sélectionner». Cela se comporte de la même façon qu’un [TAP Air](gestures.md#air-tap) sur HoloLens, en appuyant sur le bouton de sélection sur l’interactiveur [hololens](hardware-accessories.md#hololens-clicker)ou en appuyant sur le déclencheur sur un [contrôleur de mouvement Windows Mixed Reality](motion-controllers.md). Vous entendez un son et vous voyez une info-bulle avec «sélectionner» qui s’affiche comme confirmation. «SELECT» est activé par un algorithme de détection de mot-clé à faible consommation d’énergie. il est donc toujours disponible pour vous, à tout moment, avec un impact minimal sur la durée de vie de la batterie, même avec vos mains.
 
 > [!NOTE]
-> Obtenir des instructions spécifiques pour HoloLens 2 [bientôt](index.md#news-and-notes).
+> Plus d’instructions spécifiques à HoloLens 2 bientôt [disponible](index.md#news-and-notes).
 
-![Par exemple « sélectionner » pour utiliser les commandes vocales pour la sélection](images/kma-voice-select-00170-800px.png)<br>
-*Par exemple « sélectionner » pour utiliser les commandes vocales pour la sélection*
+![Dites «sélectionner» pour utiliser la commande vocale pour la sélection](images/kma-voice-select-00170-800px.png)<br>
+*Dites «sélectionner» pour utiliser la commande vocale pour la sélection*
 
 ## <a name="hey-cortana"></a>Hey Cortana
 
-Vous pouvez également indiquer « Hey Cortana » pour faire apparaître Cortana à tout moment. Vous n’êtes pas obligé d’attendre de lui semble continuent de lui poser votre question ou en lui donnant une instruction - par exemple, essayez de dire « Hey Cortana quelle est la météo ? » en tant qu’une phrase unique. Pour plus d’informations sur Cortana et que vous pouvez faire, simplement lui demander ! Dites « Hey Cortana, ce qui peut dire ? » et elle vais extraire la liste des commandes de travail et les suggestions. Si vous êtes déjà dans l’application Cortana vous pouvez également cliquer sur le **?** icône dans la barre latérale pour extraire ce même menu.
+Vous pouvez également indiquer «Hey Cortana» pour afficher Cortana à tout moment. Vous n’avez pas besoin d’attendre qu’il apparaisse pour continuer à poser votre question ou de lui donner une instruction. par exemple, essayez de dire «Hé Cortana qu’est-ce que la météo?» comme une seule phrase. Pour plus d’informations sur Cortana et ce que vous pouvez faire, demandez-lui simplement! Dites-le «Hé Cortana que puis-je prononcer?» et elle extrait une liste de commandes de travail et suggérées. Si vous êtes déjà dans l’application Cortana, vous pouvez également cliquer sur le **?** sur la barre latérale pour extraire le même menu.
 
-**Commandes spécifiques HoloLens**
+**Commandes spécifiques à HoloLens**
 * Qu’est-ce que je dis ?
-* « Go home » ou « Accéder au démarrage » - au lieu de [bloom](gestures.md#bloom) pour accéder à [Menu Démarrer](navigating-the-windows-mixed-reality-home.md#start-menu)
-* « Lancer <app>»
-* « Déplacer <app> ici »
-* « Prendre une photo »
-* « Démarrer l’enregistrement »
-* « Arrêter l’enregistrement »
-* « Augmenter la luminosité »
-* « Réduire la luminosité »
-* « Augmenter le volume »
-* « Diminuer le volume »
-* « Activer » ou « Désactiver »
-* « Arrêt de l’appareil »
-* « Redémarrer l’appareil »
-* « Go en veille »
-* « Quelle heure est-elle ? »
-* « La quantité do de batterie restant ? »
-* « Appeler <contact>» (nécessite Skype pour HoloLens)
+* «Go Start» ou «Go to Start»-au lieu de [fleuri](gestures.md#bloom) pour accéder au [menu Démarrer](navigating-the-windows-mixed-reality-home.md#start-menu)
+* «Lancer <app>»
+* «Déplacer <app> ici»
+* «Prendre une photo»
+* «Démarrer l’enregistrement»
+* «Arrêter l’enregistrement»
+* «Augmenter la luminosité»
+* «Réduire la luminosité»
+* «Augmenter le volume»
+* «Réduire le volume»
+* «Muet» ou «muet»
+* «Arrêter l’appareil»
+* «Redémarrer l’appareil»
+* «Go to Sleep»
+* «Quel est l’heure?»
+* «Quelle batterie ai-je laissée?»
+* «Appeler <contact>» (nécessite Skype pour HoloLens)
 
-## <a name="see-it-say-it"></a>« Il consultez, dites-le »
+## <a name="see-it-say-it"></a>«Regardez-le, dites-le»
 
-HoloLens dispose d’un modèle « voir, dites-le » pour l’entrée de la voix, où les étiquettes sur les boutons indiquent aux utilisateurs les commandes vocales peut dire qu’aussi. Par exemple, lorsque vous examinez une application 2D, un utilisateur peut dire la commande « Ajuster » qui ils voient dans la barre des applications pour ajuster la position de l’application dans le monde.
+HoloLens a un modèle de «voir», par exemple, le modèle d’entrée vocale, où les étiquettes sur les boutons indiquent aux utilisateurs les commandes vocales qu’ils peuvent également prononcer. Par exemple, lors de la consultation d’une application 2D, un utilisateur peut prononcer la commande «Adjust» qui s’affiche dans la barre de l’application pour ajuster la position de l’application dans le monde.
 
-![Lorsque vous examinez une application 2D ou d’un hologramme, un utilisateur peut dire la commande « Ajuster » qui ils voient dans la barre des applications pour ajuster la position de l’application dans le monde](images/microphone-600px.png)
+![Lors de la consultation d’une application 2D ou d’un hologramme, un utilisateur peut prononcer la commande «Adjust» qui s’affiche dans la barre de l’application pour ajuster la position de l’application dans le monde.](images/microphone-600px.png)
 
-Lorsque des applications suivent cette règle, les utilisateurs peuvent facilement comprendre ce qu’il faut dire à contrôler le système. Pour renforcer, tout en gazing à un bouton, vous verrez une info-bulle de « balayage voix » qui s’affiche après une seconde si le bouton est activé à la voix et affiche la commande de parler pour « appuyer ».
+Lorsque les applications suivent cette règle, les utilisateurs peuvent facilement comprendre ce qu’il faut savoir pour contrôler le système. Pour renforcer cela, alors que Gazing à un bouton, vous verrez une info-bulle «de la voix» qui apparaît après une seconde si le bouton est activé pour la voix et affiche la commande pour dire à «appuyer» dessus.
 
-![Voir, par exemple, il les commandes apparaissent sous les boutons](images/voice-seeitsayit-600px.png)<br>
-*« Consultez, dites » commandes apparaissent sous les boutons*
+![Voyez-le, disons que les commandes s’affichent sous les boutons](images/voice-seeitsayit-600px.png)<br>
+*«Voir les commandes, dites» s’affichent sous les boutons*
 
-## <a name="voice-commands-for-fast-hologram-manipulation"></a>Commandes vocales pour la Manipulation des hologramme rapide
+## <a name="voice-commands-for-fast-hologram-manipulation"></a>Commandes vocales pour une manipulation d’hologramme rapide
 
-Il existe également un nombre de voix commandes que vous pouvez dire lors gazing à un hologramme pour effectuer rapidement les tâches de manipulation. Ces commandes vocales fonctionnent sur les applications 2D, ainsi que des objets 3D que vous avez placés dans le monde.
+Il existe également un certain nombre de commandes vocales que vous pouvez prononcer Gazing sur un hologramme pour effectuer rapidement des tâches de manipulation. Ces commandes vocales fonctionnent sur les applications 2D, ainsi que sur les objets 3D que vous avez placés dans le monde.
 
-**Commandes de Manipulation HOLOGRAMME**
-* Me face
-* Plus grande | Améliorer
-* Plus petit
+**Commandes de manipulation d’hologramme**
+* Me faire face
+* Plus grand | Enrichissement
+* Grande
 
 ## <a name="dictation"></a>Dictée
 
-Au lieu de taper avec [air robinets](gestures.md#air-tap), la dictée vocale peut être plus efficace d’entrer du texte dans une application. Cela peut accélérer considérablement l’entrée ayant moins d’efforts pour l’utilisateur.
+Plutôt que de taper avec des [pressions en l’air](gestures.md#air-tap), la dictée vocale peut être plus efficace pour entrer du texte dans une application. Cela peut accélérer l’entrée avec moins d’efforts pour l’utilisateur.
 
-![La dictée vocale commence en sélectionnant le bouton du microphone](images/micbuttonfordictation.png)<br>
-*La dictée vocale commence en sélectionnant le bouton du microphone du clavier*
+![La dictée vocale commence en sélectionnant le bouton microphone](images/micbuttonfordictation.png)<br>
+*La dictée vocale commence en sélectionnant le bouton microphone sur le clavier.*
 
-Chaque fois que le clavier holographique est actif, vous pouvez basculer vers le mode dictée au lieu de taper. Sélectionnez le microphone sur le côté de la zone de texte d’entrée pour commencer.
+À chaque fois que le clavier holographique est actif, vous pouvez basculer en mode dictée au lieu de taper. Sélectionnez le microphone sur le côté de la zone d’entrée de texte pour commencer.
 
 ## <a name="communication"></a>Communication
 
-Pour les applications qui souhaitent tirer parti de l’entrée audio personnalisée fournies par HoloLens des options de traitement, il est important de comprendre les différents [catégories de flux audio](https://msdn.microsoft.com/library/windows/desktop/hh404178(v=vs.85).aspx) votre application peut consommer. Prend en charge de Windows 10 plusieurs catégories de flux de données différents et HoloLens rend utiliser de trois d'entre eux pour permettre un traitement personnalisé optimiser la qualité audio du microphone adaptée à la reconnaissance vocale, communication et autres qui peut être utilisé pour l’audio de l’environnement ambiant scénarios de capture (autrement dit, « caméscope »).
-* La catégorie de flux AudioCategory_Communications est personnalisée pour les scénarios de qualité et de narration appel et fournit au client avec un flux audio mono 16kHz 24 bits de voix de l’utilisateur
-* La catégorie de flux AudioCategory_Speech est personnalisée pour le moteur de reconnaissance vocale HoloLens (Windows) et lui fournit un flux de mono 16kHz 24 bits de voix de l’utilisateur. Cette catégorie peut être utilisée par les moteurs de reconnaissance vocale 3e partie si nécessaire.
-* La catégorie de flux AudioCategory_Other est personnalisée pour l’enregistrement audio environnement ambiant et fournit au client avec un flux audio stéréo 48kHz 24 bits.
+Pour les applications qui souhaitent tirer parti des options de traitement d’entrée audio personnalisées fournies par HoloLens, il est important de comprendre les différentes [catégories de flux audio](https://msdn.microsoft.com/library/windows/desktop/hh404178(v=vs.85).aspx) que votre application peut consommer. Windows 10 prend en charge plusieurs catégories de flux et HoloLens en utilise trois pour permettre un traitement personnalisé afin d’optimiser la qualité audio du microphone adaptée à la parole, à la communication et à d’autres qui peuvent être utilisées pour l’audio de l’environnement ambiant. scénarios de capture (par exemple, «Camcorder»).
+* La catégorie de flux AudioCategory_Communications est personnalisée pour les scénarios de qualité des appels et de narration et fournit au client un flux audio mono 16kHz 24bit de la voix de l’utilisateur.
+* La catégorie de flux AudioCategory_Speech est personnalisée pour le moteur de reconnaissance de la parole HoloLens (Windows) et lui fournit un flux mono 16kHz 24bit de la voix de l’utilisateur. Cette catégorie peut être utilisée par les moteurs de reconnaissance vocale tiers si nécessaire.
+* La catégorie de flux AudioCategory_Other est personnalisée pour l’enregistrement audio de l’environnement ambiant et fournit au client un flux audio stéréo de 48 bits.
 
-Tout ce traitement audio est ce qui signifie que les fonctionnalités drainer beaucoup moins d’énergie que si le même traitement a été effectué sur le processeur de HoloLens à accélération matérielle. Évitez d’exécuter d’autres sur l’UC pour optimiser l’autonomie du système et de tirer parti de la génération de traitement d’entrée audio, déchargées traitement d’entrée audio.
+Tout ce traitement audio est l’accélération matérielle, ce qui signifie que les fonctionnalités se déchargent beaucoup moins d’énergie que si le même traitement a été effectué sur l’UC HoloLens. Évitez d’exécuter un autre traitement d’entrée audio sur le processeur pour maximiser la durée de vie de la batterie du système et tirer parti du traitement des entrées audio déchargées et intégrées.
 
 ## <a name="troubleshooting"></a>Résolution des problèmes
 
-Si vous rencontrez des problèmes à l’aide de « select » et le « Hey Cortana », essayez de le déplacer vers un espace plus calme, l’activation en dehors de la source de bruit ou en parlant plus fort. À ce stade, la reconnaissance vocale tous sur HoloLens est paramétrée et optimisée spécifiquement à maîtrisant l’anglais des États-Unis.
+Si vous rencontrez des problèmes à l’aide de «SELECT» et de «Hey Cortana», essayez de passer à un espace plus silencieux, à l’extérieur de la source de bruit, ou en parlant plus fort. À ce stade, toute la reconnaissance vocale sur HoloLens est réglée et optimisée spécifiquement pour les intervenants natifs de États-Unis anglais.
 
-Pour la version de la réalité mixte Windows Developer Edition 2017, la logique de gestion de point de terminaison audio fonctionne correctement (pour toujours) une fois que la journalisation en arrière et revenir aux ordinateurs de bureau après la connexion HMD initiale. Avant ce signe out/dans l’événement après la passer en revue WMR OOBE, l’utilisateur peut rencontrer divers problèmes de fonctionnalité audio allant sans contenu audio au format audio aucun changement en fonction de la façon dont le système a été configuré avant de connecter le HMD pour la première fois.
+Pour la version 2017 de Windows Mixed Reality Edition, la logique de gestion des points de terminaison audio fonctionnera correctement (éternellement) après la déconnexion et la réinitialisation du PC Desktop après la première connexion HMD. Avant le premier événement de déconnexion/dans le cas de l’utilisation de WMR OOBE, l’utilisateur peut rencontrer différents problèmes de fonctionnalité audio, qu’il s’agisse d’aucun audio ou d’aucune commutation audio, en fonction de la configuration du système avant de connecter le HMD pour la première fois.
 
 ## <a name="see-also"></a>Voir aussi
 * [Entrée vocale dans DirectX](voice-input-in-directx.md)

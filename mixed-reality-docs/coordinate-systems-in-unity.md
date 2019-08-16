@@ -1,58 +1,58 @@
 ---
 title: Systèmes de coordonnées dans Unity
-description: Apprenez à créer assis, permanent, salle à l’échelle et à l’échelle du monde mixte réalité des expériences dans Unity.
+description: Découvrez comment créer des expériences de réalité mixte assiste, debout, à l’échelle de la place et à l’échelle mondiale dans Unity.
 author: thetuvix
 ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
-keywords: système de coordonnées, système de coordonnées spatial, orientation, à l’échelle en place et seule permanent à l’échelle, salle à l’échelle, mise à l’échelle mondiale, assis à 360 degrés, debout, salle, monde, à l’échelle, position, orientation, Unity, ancre, spatiale d’ancrage, ancre world, world-verrouillé, verrouillage de monde, body-verrouillée, corps de verrouillage, suivi de perte, locatability, limites, recentrer
+keywords: système de coordonnées, système de coordonnées spatiales, orientation uniquement, à l’échelle assise, à l’échelle debout, à l’échelle de la pièce, à l’échelle mondiale, 360 de degrés, assis, debout, salle, monde, échelle, position, orientation, Unity, ancrage, ancrage spatial, ancrage universel, verrouillé, verrouillage universel, verrouillage du corps, verrouillage du corps, perte de suivi, localisation, limites, recentrer
 ms.openlocfilehash: 36d74488b23587e5c89b40faf97921a10be7473b
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59597105"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63525965"
 ---
 # <a name="coordinate-systems-in-unity"></a>Systèmes de coordonnées dans Unity
 
-Réalité mixte Windows prend en charge les applications sur une large gamme de [expérience échelles](coordinate-systems.md), à partir d’applications orientation uniquement et à l’échelle en place des via des applications à l’échelle de salle. Sur HoloLens, vous pouvez aller plus loin et créer des applications à l’échelle mondiale qui permettent aux utilisateurs de parcourir au-delà de 5 mètres, explorant un étage entier d’un bâtiment et au-delà.
+Windows Mixed Reality prend en charge les applications à travers une large gamme d' [expériences](coordinate-systems.md), des applications en orientation seule et à l’échelle à l’échelle jusqu’à des applications à l’échelle de la place. Sur HoloLens, vous pouvez aller plus loin et créer des applications à l’échelle mondiale qui permettent aux utilisateurs d’aller au-delà de 5 mètres, en explorant un étage entier d’un immeuble et au-delà.
 
-Votre première étape dans la création d’une expérience de réalité mixte dans Unity consiste à déterminer quel [expérience mise à l’échelle](coordinate-systems.md) votre application ciblera.
+La première étape de la création d’une expérience de réalité mixte dans Unity consiste à déterminer la mise à l' [échelle](coordinate-systems.md) ciblée par votre application.
 
-## <a name="building-an-orientation-only-or-seated-scale-experience"></a>Création d’une expérience de l’orientation uniquement ou à l’échelle en place
+## <a name="building-an-orientation-only-or-seated-scale-experience"></a>Création d’une expérience d’orientation seule ou de mise à l’échelle installée
 
-**Namespace :** *UnityEngine.XR*<br>
-**Type :** *XRDevice*
+**Espace de noms :** *UnityEngine. XR*<br>
+**Type :** *XRDevice*
 
-Pour générer un **orientation seule** ou **assis à l’échelle du expérience**, vous devez définir Unity à l’arrêt suivi du type d’espace. Cela définit le système de coordonnées de monde d’Unity pour suivre le [de référence stationnaire](coordinate-systems.md#spatial-coordinate-systems). Dans le mode de suivi stationnaire, contenu placé dans l’éditeur juste devant l’emplacement par défaut de l’appareil photo (-Z est vers l’avant) apparaît devant l’utilisateur quand l’application démarre.
+Pour créer une expérience d' **orientation uniquement** ou de mise à l' **échelle assise**, vous devez définir Unity sur le type d’espace de suivi fixe. Définit le système de coordonnées universelles de Unity pour suivre le [cadre stationnaire de référence](coordinate-systems.md#spatial-coordinate-systems). Dans le mode de suivi fixe, le contenu placé dans l’éditeur juste devant l’emplacement par défaut de l’appareil photo (Forward is-Z) s’affiche devant l’utilisateur au lancement de l’application.
 
 ```cs
 XRDevice.SetTrackingSpaceType(TrackingSpaceType.Stationary);
 ```
 
-**Namespace :** *UnityEngine.XR*<br>
-**Type :** *InputTracking*
+**Espace de noms :** *UnityEngine. XR*<br>
+**Type :** *InputTracking*
 
-Pour une pure **orientation seule expérience** tels que l’Observateur de vidéo à 360 degrés (où les mises à jour principal positionnels seraient endommager l’illusion), vous pouvez ensuite définir [XR. InputTracking.disablePositionalTracking](https://docs.unity3d.com/ScriptReference/XR.InputTracking-disablePositionalTracking.html) sur true :
+Pour une expérience purement en **orientation uniquement** telle qu’une visionneuse vidéo de 360 degrés (où les mises à jour de la tête de position dépasseraient l’illusion), vous pouvez définir [XR. InputTracking. disablePositionalTracking](https://docs.unity3d.com/ScriptReference/XR.InputTracking-disablePositionalTracking.html) sur true:
 
 ```cs
 InputTracking.disablePositionalTracking = true;
 ```
 
-Pour un **assis à l’échelle du expérience**, pour permettre à l’utilisateur plus tard recentrer l’origine assis, vous pouvez appeler la [XR. InputTracking.Recenter](https://docs.unity3d.com/ScriptReference/XR.InputTracking.Recenter.html) méthode :
+Pour une **expérience**de mise à l’échelle assiste, pour permettre à l’utilisateur de recentrer plus tard l’origine assise, vous pouvez appeler [XR. Méthode InputTracking. recenter](https://docs.unity3d.com/ScriptReference/XR.InputTracking.Recenter.html) :
 
 ```cs
 InputTracking.Recenter();
 ```
 
-## <a name="building-a-standing-scale-or-room-scale-experience"></a>Création d’une expérience permanent à l’échelle ou d’échelle de la salle
+## <a name="building-a-standing-scale-or-room-scale-experience"></a>Création d’une expérience de mise à l’échelle permanente ou à l’échelle de l’espace
 
-**Namespace :** *UnityEngine.XR*<br>
-**Type :** *XRDevice*
+**Espace de noms :** *UnityEngine. XR*<br>
+**Type :** *XRDevice*
 
-Pour un **permanent à l’échelle** ou **expérience de l’échelle de la salle**, vous devez placer le contenu relatif à l’étage. Sur l’utilisateur de la raison floor, à l’aide de la  **[étape spatial](coordinate-systems.md#spatial-coordinate-systems)**, qui représente l’utilisateur défini au niveau du sol origine et les limites de salle facultatif, définissez au cours de première exécution.
+Pour une expérience à l’échelle **permanente** ou à l’échelle de l' **espace**, vous devez placer du contenu par rapport à l’étage. Vous avez raison de l’étage de l’utilisateur à l’aide de la **[Phase spatiale](coordinate-systems.md#spatial-coordinate-systems)** , qui représente l’origine de l’utilisateur et la limite facultative de l’espace, configurées lors de la première exécution.
 
-Pour vous assurer que Unity fonctionne avec son système de coordonnées de monde au niveau du sol, vous pouvez définir que Unity pour le suivi du type de l’espace de RoomScale et vous assurer que le jeu réussit :
+Pour vous assurer que Unity fonctionne avec son système de coordonnées universel à l’étage, vous pouvez définir Unity sur le type d’espace de suivi RoomScale et vérifier que le jeu est correctement effectué:
 
 ```cs
 if (XRDevice.SetTrackingSpaceType(TrackingSpaceType.RoomScale))
@@ -64,17 +64,17 @@ else
     // RoomScale mode was not set successfully.  App cannot make assumptions about where the floor plane is.
 }
 ```
-* Si SetTrackingSpaceType retourne la valeur true, Unity a basculé correctement son système de coordonnées de monde pour suivre le [phase de référence](coordinate-systems.md#spatial-coordinate-systems).
-* Si SetTrackingSpaceType retourne la valeur false, Unity a été impossible de passer du stade cadre de référence, probablement parce que l’utilisateur n’a pas configuré de même un étage dans leur environnement. Cela n’est pas courant, mais peut se produire si l’étape a été configurée dans une autre pièce et que l’appareil a été déplacé vers la salle sans le paramètre de l’utilisateur d’une nouvelle étape.
+* Si SetTrackingSpaceType retourne la valeur true, Unity a correctement basculé son système de coordonnées universel pour suivre le [cadre de la phase de référence](coordinate-systems.md#spatial-coordinate-systems).
+* Si SetTrackingSpaceType retourne la valeur false, Unity n’a pas pu basculer vers le cadre de la phase de référence, ce qui est probablement dû au fait que l’utilisateur n’a pas configuré un étage dans son environnement. Ce n’est pas courant, mais cela peut se produire si l’étape a été configurée dans une autre salle et que l’appareil a été déplacé dans la salle active sans que l’utilisateur n’ait configuré une nouvelle phase.
 
-Une fois que votre application définit correctement le RoomScale suivi de type d’espace, contenu placé sur la y = 0 plan s’affiche sur le sol. L’origine (0, 0, 0) sera l’emplacement spécifique sur le lieu où l’utilisateur a su résister pendant l’installation de la salle, avec -Z qui représente la direction avant qu’ils ont été confrontés pendant l’installation.
+Une fois que votre application a correctement défini le type d’espace de suivi RoomScale, le contenu placé sur le plan y = 0 s’affiche sur le plancher. L’origine à (0, 0, 0) sera l’emplacement spécifique sur le plancher où l’utilisateur a pris la main pendant la configuration de la salle, avec-Z représentant la direction vers l’avant au cours de l’installation.
 
-**Namespace :** *UnityEngine.Experimental.XR*<br>
-**Type :** *Limites*
+**Espace de noms :** *UnityEngine. expérimentale. XR*<br>
+**Type :** *Bordure*
 
-Dans le code de script, vous pouvez, puis appelez la méthode TryGetGeometry vous êtes du genre à UnityEngine.Experimental.XR.Boundary pour obtenir un polygone de la limite, en spécifiant un type de limite de TrackedArea. Si l’utilisateur défini une limite (vous obtenez une liste de sommets), vous savez qu’il fournir un **expérience de l’échelle de la salle** à l’utilisateur, où ils peuvent la scène vous guider créer.
+Dans le code de script, vous pouvez ensuite appeler la méthode TryGetGeometry sur vous êtes le type UnityEngine. expérimental. XR. Boundary pour obtenir un polygone de limite, en spécifiant un type de limite de TrackedArea. Si l’utilisateur a défini une limite (vous récupérez une liste de vertex), vous savez qu’il est possible de fournir une expérience de mise à l’échelle de l' **espace** à l’utilisateur, où il peut se déplacer dans la scène que vous créez.
 
-Notez que le système affiche automatiquement la limite lors de l’utilisateur à l’approche. Votre application n’a pas besoin d’utiliser ce polygone pour restituer la limite de lui-même. Toutefois, vous pouvez choisir de disposer de vos objets de scène à l’aide de ce polygone limite, pour vous assurer de que l’utilisateur peut atteindre physiquement ces objets sans teleporting :
+Notez que le système affiche automatiquement la limite lorsque l’utilisateur l’approche. Votre application n’a pas besoin d’utiliser ce polygone pour restituer la limite elle-même. Toutefois, vous pouvez choisir de disposer vos objets de scène à l’aide de ce polygone limite pour vous assurer que l’utilisateur peut atteindre physiquement ces objets sans téléportage:
 
 ```cs
 var vertices = new List<Vector3>();
@@ -86,43 +86,43 @@ if (UnityEngine.Experimental.XR.Boundary.TryGetGeometry(vertices, Boundary.Type.
 
 ## <a name="building-a-world-scale-experience"></a>Création d’une expérience à l’échelle mondiale
 
-**Namespace :** *UnityEngine.XR.WSA*<br>
-**Type :** *WorldAnchor*
+**Espace de noms :** *UnityEngine. XR. WSA*<br>
+**Type :** *WorldAnchor*
 
-Pour true **expériences à l’échelle du monde** sur HoloLens qui permettent aux utilisateurs de plate-formes au-delà de 5 mètres, vous devez disposer des nouvelles techniques au-delà de celles utilisées pour les expériences de l’échelle de la salle. Une technique clé que vous utiliserez consiste à créer un [ancre spatial](coordinate-systems.md#spatial-anchors) pour verrouiller un cluster de hologrammes précisément en place dans le monde physique, quelle que soit la distance, l’utilisateur est déplacé, puis [suite de retrouver ces hologrammes à nouveau dans sessions](coordinate-systems.md#spatial-anchor-persistence).
+Pour les expériences réelles à l' **échelle mondiale** sur HoloLens qui permettent aux utilisateurs d’aller au-delà de 5 mètres, vous aurez besoin de nouvelles techniques au-delà de celles utilisées pour les expériences à l’échelle de la place. Une technique clé que vous allez utiliser consiste à créer une [ancre spatiale](coordinate-systems.md#spatial-anchors) pour verrouiller un cluster d’hologrammes précisément en place dans le monde physique, quelle que soit la durée d’itinérance de l’utilisateur, puis Retrouvez [ces hologrammes dans les sessions ultérieures](coordinate-systems.md#spatial-anchor-persistence).
 
-Dans Unity, vous créez un point d’ancrage spatiale en ajoutant le **WorldAnchor** composant Unity à un GameObject.
+Dans Unity, vous créez une ancre spatiale en ajoutant le composant **WorldAnchor** Unity à un GameObject.
 
-### <a name="adding-a-world-anchor"></a>Ajout d’un point d’ancrage du monde
+### <a name="adding-a-world-anchor"></a>Ajout d’une ancre mondiale
 
-Pour ajouter un point d’ancrage du monde, appelez AddComponent<WorldAnchor>() sur l’objet de jeu avec la transformation que vous souhaitez ancrer dans le monde réel.
+Pour ajouter une ancre universelle, appelez addComponent<WorldAnchor>() sur l’objet de jeu avec la transformation que vous souhaitez ancrer dans le monde réel.
 
 ```cs
 WorldAnchor anchor = gameObject.AddComponent<WorldAnchor>();
 ```
 
-C’est tout ! Cet objet de jeu sera désormais être ancré à son emplacement actuel dans le monde physique, vous pouvez voir ses coordonnées de monde Unity ajuster légèrement au fil du temps pour vous assurer qu’alignement physique. Utilisez [persistance](persistence-in-unity.md) à trouver cela ancrée emplacement dans une session de futures de l’application.
+C’est tout ! Cet objet de jeu sera désormais ancré à son emplacement actuel dans le monde physique: vous pouvez constater que ses coordonnées universelles s’ajustent légèrement au fil du temps pour garantir l’alignement physique. Utilisez la [persistance](persistence-in-unity.md) pour rechercher à nouveau cet emplacement d’ancrage dans une session d’application future.
 
-### <a name="removing-a-world-anchor"></a>Suppression d’un point d’ancrage du monde
+### <a name="removing-a-world-anchor"></a>Suppression d’une ancre mondiale
 
-Si n’est plus, vous souhaitez que le GameObject verrouillé sur un emplacement du monde physique et que vous ne prévoyez pas sur le déplacement de ce cadre, vous pouvez simplement appeler Destroy sur le composant de point d’ancrage du monde entier.
+Si vous ne souhaitez plus que les GameObject soient verrouillés sur un emplacement géographique physique et que vous n’envisagez pas de déplacer ce cadre, vous pouvez simplement appeler Destroy sur le composant d’ancrage du monde.
 
 ```cs
 Destroy(gameObject.GetComponent<WorldAnchor>());
 ```
 
-Si vous souhaitez déplacer le GameObject ce cadre, vous devez appeler DestroyImmediate à la place.
+Si vous souhaitez déplacer le GameObject ce frame, vous devez appeler DestroyImmediate à la place.
 
 ```cs
 DestroyImmediate(gameObject.GetComponent<WorldAnchor>());
 ```
 
-### <a name="moving-a-world-anchored-gameobject"></a>Déplacement d’un monde ancrée GameObject
+### <a name="moving-a-world-anchored-gameobject"></a>Déplacement d’un GameObject ancré dans le monde
 
-Impossible de déplacer du GameObject pendant une ancre de World dessus. Si vous devez déplacer le GameObject ce frame, vous devez :
-1. DestroyImmediate le composant de point d’ancrage du monde
+Les GameObject ne peuvent pas être déplacées pendant qu’une ancre mondiale y est. Si vous devez déplacer le GameObject ce frame, vous devez:
+1. DestroyImmediate le composant d’ancrage universel
 2. Déplacer le GameObject
-3. Ajouter un nouveau composant de point d’ancrage du monde entier pour le GameObject.
+3. Ajoutez un nouveau composant d’ancrage du monde au GameObject.
 
 ```cs
 DestroyImmediate(gameObject.GetComponent<WorldAnchor>());
@@ -130,21 +130,21 @@ gameObject.transform.position = new Vector3(0, 0, 2);
 WorldAnchor anchor = gameObject.AddComponent<WorldAnchor>();
 ```
 
-### <a name="handling-locatability-changes"></a>Gestion des modifications de Locatability
+### <a name="handling-locatability-changes"></a>Gestion des modifications de localisabilité
 
-Un WorldAnchor peut-être pas localisable dans le monde physique à un point dans le temps. Si cela se produit, Unity n'a pas mis à jour la transformation de l’objet ancré. Cela peut également changer pendant l’exécution d’une application. Gérer les modifications dans locatability provoquera l’objet s’affiche ne pas dans l’emplacement physique approprié dans le monde.
+Un WorldAnchor peut ne pas être localisable dans le monde physique à un moment donné. Si cela se produit, Unity ne met pas à jour la transformation de l’objet ancré. Cela peut également changer pendant l’exécution d’une application. Si la modification de la localisation n’est pas prise en charge, l’objet n’apparaîtra pas à l’emplacement physique approprié dans le monde.
 
-Pour être averti des modifications de locatability :
+Pour être informé des changements de localisation:
 1. S’abonner à l’événement OnTrackingChanged
 2. Gérer l’événement
 
-Le **OnTrackingChanged** événement sera appelé chaque fois que le point d’ancrage spatial sous-jacent change entre un état d’être localisables et n’est pas localisable.
+L’événement **OnTrackingChanged** est appelé chaque fois que l’ancrage spatial sous-jacent change entre un État localisable et n’est pas localisable.
 
 ```cs
 anchor.OnTrackingChanged += Anchor_OnTrackingChanged;
 ```
 
-Puis gérer l’événement :
+Ensuite, gérez l’événement:
 
 ```cs
 private void Anchor_OnTrackingChanged(WorldAnchor self, bool located)
@@ -154,26 +154,26 @@ private void Anchor_OnTrackingChanged(WorldAnchor self, bool located)
 }
 ```
 
-Parfois ancres se trouvent immédiatement. Dans ce cas, cette propriété isLocated de l’ancrage est fixée à true lorsque AddComponent<WorldAnchor>() retourne. Par conséquent, l’événement OnTrackingChanged ne sera pas déclenchée. Un modèle propre consisterait à appeler votre gestionnaire OnTrackingChanged avec l’état initial de IsLocated après l’attachement d’un point d’ancrage.
+Parfois, les ancres se trouvent immédiatement. Dans ce cas, cette propriété isLocated de l’ancre sera définie sur true lorsque addComponent<WorldAnchor>() retourne. Par conséquent, l’événement OnTrackingChanged n’est pas déclenché. Un modèle propre serait d’appeler votre gestionnaire OnTrackingChanged avec l’état initial de IsLocated après avoir attaché une ancre.
 
 ```cs
 Anchor_OnTrackingChanged(anchor, anchor.isLocated);
 ```
 
-## <a name="sharing-anchors-across-devices"></a>Partage des points d’ancrage sur des appareils
+## <a name="sharing-anchors-across-devices"></a>Partage d’ancres sur plusieurs appareils
 
-Vous pouvez utiliser <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">ancres Spatial Azure</a> pour créer un point d’ancrage cloud durable à partir d’un WorldAnchor local, lequel votre application peut ensuite localiser dans plusieurs HoloLens, appareils iOS et Android.  En partageant une ancre spatiale commune sur plusieurs appareils, chaque utilisateur peut voir le contenu restitué par rapport à ce point d’ancrage dans le même emplacement physique.  Ainsi, les expériences partagées en temps réel.
+Vous pouvez utiliser des <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">ancres spatiales Azure</a> pour créer une ancre Cloud durable à partir d’un WorldAnchor local, que votre application peut ensuite localiser sur plusieurs appareils HoloLens, iOS et Android.  En partageant une ancre spatiale commune sur plusieurs appareils, chaque utilisateur peut voir le contenu affiché par rapport à cette ancre dans le même emplacement physique.  Cette technique autorise les expériences partagées en temps réel.
 
-Pour commencer à créer des expériences partagées dans Unity, essayez les 5 minutes <a href="https://docs.microsoft.com/azure/spatial-anchors/unity-overview" target="_blank">Démarrages rapides Azure Spatial ancres Unity</a>.
+Pour commencer à créer des expériences partagées dans Unity, essayez les Démarrages rapides de 5 minutes d' <a href="https://docs.microsoft.com/azure/spatial-anchors/unity-overview" target="_blank">Unity spatiales Azure Unity</a>.
 
-Une fois que vous êtes en cours d’exécution ancres spatiale d’Azure, vous pouvez ensuite <a href="https://docs.microsoft.com/azure/spatial-anchors/concepts/create-locate-anchors-unity" target="_blank">créer et localiser les points d’ancrage dans Unity</a>.
+Une fois que vous êtes opérationnel avec les ancres spatiales Azure, vous pouvez <a href="https://docs.microsoft.com/azure/spatial-anchors/concepts/create-locate-anchors-unity" target="_blank">créer et localiser des ancres dans Unity</a>.
 
 ## <a name="see-also"></a>Voir aussi
-* [Échelles de l’expérience](coordinate-systems.md#mixed-reality-experience-scales)
-* [Étape spatial](coordinate-systems.md#stage-frame-of-reference)
-* [Suivi de la perte dans Unity](tracking-loss-in-unity.md)
+* [Échelle de l’expérience](coordinate-systems.md#mixed-reality-experience-scales)
+* [Étape spatiale](coordinate-systems.md#stage-frame-of-reference)
+* [Suivi des pertes dans Unity](tracking-loss-in-unity.md)
 * [Ancres spatiales](spatial-anchors.md)
 * [Persistance dans Unity](persistence-in-unity.md)
 * [Expériences partagées dans Unity](shared-experiences-in-unity.md)
-* <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Ancres Spatial Azure</a>
-* <a href="https://docs.microsoft.com/dotnet/api/Microsoft.Azure.SpatialAnchors" target="_blank">Ancres Spatial Azure SDK pour Unity</a>
+* <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure Spatial Anchors</a>
+* <a href="https://docs.microsoft.com/dotnet/api/Microsoft.Azure.SpatialAnchors" target="_blank">Kit de développement logiciel (SDK) d’ancre spatiale Azure pour Unity</a>

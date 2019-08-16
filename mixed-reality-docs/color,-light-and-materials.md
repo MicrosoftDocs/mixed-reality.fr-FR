@@ -1,67 +1,67 @@
 ---
-title: Couleur, clair et supports
-description: Conception de contenu pour la réalité mixte nécessite une attention particulière de couleur, d’éclairage et de documentations pour chacune des ressources visual utilisés dans votre expérience.
+title: Couleur, lumière et matériaux
+description: La conception de contenu pour la réalité mixte nécessite une attention particulière à la couleur, à l’éclairage et à la documentation de chacune des ressources visuelles utilisées dans votre expérience.
 author: mavitazk
 ms.author: pinkb
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Windows Mixed Reality, conception, de couleur, de lumière, de matériaux
+keywords: Windows Mixed Reality, design, Color, Light, Materials
 ms.openlocfilehash: 3f8ee8edfe4cbbaf8a55b3c4a9125f752823be9c
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59594882"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63526513"
 ---
-# <a name="color-light-and-materials"></a>Couleur, clair et supports
+# <a name="color-light-and-materials"></a>Couleur, lumière et matériaux
 
-Conception de contenu pour la réalité mixte nécessite une attention particulière de couleur, d’éclairage et de documentations pour chacune des ressources visual utilisés dans votre expérience. Ces décisions peuvent être pour à des fins esthétiques, comme à l’aide de la lumière et matériel pour définir le ton d’un environnement immersif et le point de vue fonctionnel, comme à l’aide de couleurs frappante pour avertir les utilisateurs d’une action imminente. Chacune de ces décisions doit être comparée aux opportunités et les contraintes de l’appareil de cible de votre expérience.
+La conception de contenu pour la réalité mixte nécessite une attention particulière à la couleur, à l’éclairage et à la documentation de chacune des ressources visuelles utilisées dans votre expérience. Ces décisions peuvent être utilisées à des fins esthétiques, comme l’utilisation de la lumière et du matériau pour définir la tonalité d’un environnement immersif, et des fonctions fonctionnelles, comme l’utilisation de couleurs saisissantes pour alerter les utilisateurs d’une action imminente. Chacune de ces décisions doit être pesée par rapport aux opportunités et contraintes de l’appareil cible de votre expérience.
 
-Voici les instructions spécifiques à des ressources de rendu sur des casques IMMERSIFS et HOLOGRAPHIQUES. Nombre d'entre elles sont étroitement liées à d’autres zones techniques et vous trouverez une liste de sujets connexes dans le [Voir aussi](color,-light-and-materials.md#see-also) section à la fin de cet article.
+Vous trouverez ci-dessous des instructions spécifiques au rendu des ressources sur les casques immersifs et holographiques. Un grand nombre d’entre eux sont étroitement liés à d’autres domaines techniques et une liste de sujets connexes est disponible dans la section [Voir aussi](color,-light-and-materials.md#see-also) à la fin de cet article.
 
-## <a name="rendering-on-immersive-vs-holographic-devices"></a>Rendu sur immersives et appareils HOLOGRAPHIQUE
+## <a name="rendering-on-immersive-vs-holographic-devices"></a>Rendu sur des appareils immersifs et holographiques
 
-Le contenu restitué dans des casques IMMERSIFS apparaîtra visuellement différent par rapport à du contenu dans les casques HOLOGRAPHIQUE. Alors que des casques IMMERSIFS généralement afficher le contenu autant que vous attendez sur un écran 2D, casques HOLOGRAPHIQUE comme l’utilisation de HoloLens RVB séquentiel de couleur, transparente affiche rendus hologrammes.
+Le contenu rendu dans les casques immersifs s’affiche visuellement différent par rapport au contenu rendu dans les casques holographiques. Bien que les casques immersifs affichent généralement le contenu comme vous le feriez sur un écran 2D, les casques holographiques tels que les HoloLens utilisent des couleurs séquentielles, voir les affichages RGB pour afficher les hologrammes.
 
-Toujours suivre le temps de tester vos expériences HOLOGRAPHIQUE dans un casque HOLOGRAPHIQUE. L’apparence du contenu, même s’il est conçu spécialement pour les appareils HOLOGRAPHIQUE, diffèrent comme indiqué sur des moniteurs secondaires, instantanés et dans la vue du spectateur. N’oubliez pas de porter les expériences avec un périphérique, le test de l’éclairage de hologrammes et en observant à partir de tous les côtés (ainsi que d’au-dessus et au-dessous) mode de rendu de votre contenu. Veillez à tester dans la plage de paramètres de luminosité sur l’appareil, car il est peu probable que tous les utilisateurs partagent une valeur par défaut, ainsi que d’un ensemble varié de conditions d’éclairage.
+Prenez toujours le temps de tester vos expériences holographiques dans un casque holographique. L’apparence du contenu, même s’il est conçu spécifiquement pour les appareils holographiques, varie en fonction des analyses secondaires, des instantanés et de la vue spectateur. N’oubliez pas de vous familiariser avec les expériences d’un appareil, de tester l’éclairage des hologrammes et d’observer tous les côtés (ainsi que d’un niveau supérieur ou inférieur) de la façon dont votre contenu est rendu. Veillez à tester à une plage de paramètres de luminosité sur l’appareil, car il est peu probable que tous les utilisateurs partagent une valeur par défaut supposée, ainsi qu’un ensemble diversifié de conditions d’éclairage.
 
-## <a name="fundamentals-of-rendering-on-holographic-devices"></a>Principes de base du rendu sur les appareils HOLOGRAPHIQUE
-* **Appareils HOLOGRAPHIQUE ont affiche additifs** – hologrammes sont créées en ajoutant la lumière à la lumière à partir de la réalité – blanche apparaît lumineux, tout en noir apparaît transparent.
-* **Impact des couleurs varie en fonction de l’environnement utilisateur** : il existe de nombreuses conditions d’éclairage diverses dans la salle de l’utilisateur. Créer du contenu avec des niveaux appropriés de contraste à plus de clarté.
-* **Évitez d’éclairage dynamique** – hologrammes sont allumés uniformément dans les expériences HOLOGRAPHIQUE sont plus efficaces. À l’aide d’éclairage dynamique avancé dépassera probablement les fonctionnalités de nuanceurs mobiles.
+## <a name="fundamentals-of-rendering-on-holographic-devices"></a>Notions de base du rendu sur les appareils holographiques
+* Les **appareils holographiques ont des affichages** supplémentaires: les hologrammes sont créés en ajoutant de la lumière à la lumière à partir du monde réel: le blanc s’affiche vivement, tandis que le noir apparaît en transparence.
+* **L’impact des couleurs varie en fonction de l’environnement de l’utilisateur** : il existe de nombreuses conditions d’éclairage différentes dans la salle d’un utilisateur. Créez du contenu avec des niveaux de contraste appropriés pour faciliter la clarté.
+* **Évitez l’éclairage dynamique** : les hologrammes qui sont allumés uniformément dans les expériences holographiques sont les plus efficaces. L’éclairage dynamique est susceptible de dépasser les capacités des nuanceurs mobiles.
 
-## <a name="designing-with-color"></a>Conception de couleur
+## <a name="designing-with-color"></a>Conception avec couleur
 
-En raison de la nature des écrans additifs, certaines couleurs peuvent apparaître différents sur les écrans HOLOGRAPHIQUE. Certaines couleurs seront affiche dans les environnements d’éclairage, tandis que d’autres utilisateurs apparaît sous la forme moins qui risquent d’affecter. Les couleurs ont tendance à reculent en arrière-plan, tandis que les couleurs à chaud accéder au premier plan. Considérez les facteurs comme la couleur que vous explorez dans vos expériences :
-* **Gamme** -HoloLens bénéficie d’une gamme « large » de couleur, conceptuellement semblable à Adobe RVB. Par conséquent, certaines couleurs peuvent présenter des différentes qualités et la représentation sous forme de l’appareil.
-* **Gamma** -luminosité et contraste de l’image rendue varient entre les appareils immersives et HOLOGRAPHIQUE. Ces différences de périphériques apparaissent souvent pour rendre les zones sombres de couleur et les ombres, plus ou moins claires.
-* **Séparation des couleurs** -également appelé « répartition couleur » ou « frange de couleur », séparation de couleur se produit généralement avec déplacement hologrammes (y compris le curseur) quand un utilisateur effectue le suivi des objets avec leurs yeux.
-* **Couleur d’uniformité** -généralement hologrammes sont rendus suffisamment lumineux afin qu’elles conservent l’uniformité de couleur, quel que soit l’arrière-plan. Grandes zones peuvent devenir nette. Évitez les grandes régions de lumineuse, de couleur unie.
-* **Rendu des couleurs claires** -blanc apparaît très clair et doivent être utilisé avec parcimonie. Pour la plupart des cas, envisagez une valeur du blanc autour de R 235 G 235 B 235. Grandes zones claires peuvent provoquer des maux de l’utilisateur.
+En raison de la nature des affichages additifs, certaines couleurs peuvent apparaître différentes sur les affichages holographiques. Certaines couleurs s’affichent dans les environnements d’éclairage, tandis que d’autres sont moins impactables. Les couleurs froides ont tendance à être remplacées en arrière-plan, tandis que les couleurs chaudes sautent au premier plan. Tenez compte de ces facteurs lorsque vous explorez les couleurs dans vos expériences:
+* La **gamme** -HoloLens bénéficie d’une «gamme étendue» de couleurs, conceptuellement similaire à Adobe RGB. Par conséquent, certaines couleurs peuvent présenter des qualités et une représentation différentes dans l’appareil.
+* **Gamma** : la luminosité et le contraste de l’image rendue varient en fonction des appareils immersifs et holographiques. Ces différences d’appareils semblent souvent faire apparaître des zones sombres de couleur et des ombres, plus ou moins lumineuses.
+* **Séparation** des couleurs: également appelée «répartition des couleurs» ou «frange des couleurs», la séparation des couleurs se produit le plus souvent avec des hologrammes mobiles (y compris le curseur) quand un utilisateur effectue le suivi des objets avec leurs yeux.
+* Uniformité des **couleurs** -en général, les hologrammes sont rendues suffisamment brillants pour maintenir l’uniformité des couleurs, quel que soit l’arrière-plan. Les grandes zones peuvent devenir nettes. Évitez les grandes zones de couleur lumineuse et unie.
+* **Rendu des couleurs claires** : le blanc semble très brillant et doit être utilisé avec modération. Dans la plupart des cas, envisagez une valeur blanche autour de R 235 G 235 B 235. Les grandes zones lumineuses peuvent entraîner une gêne pour l’utilisateur.
 
 **Rendu des couleurs sombres**
 
-En raison de la nature des écrans additifs, les couleurs foncées semblent transparents. Un objet noir uni s’affiche ne diffère pas du monde réel. Canal Alpha de voir ci-dessous. Pour donner l’apparence de « noir » essayez une valeur RVB grise foncée très telles que 16,16,16.
+En raison de la nature des affichages additifs, les couleurs sombres sont transparentes. Un objet noir Uni n’est pas différent du monde réel. Voir canal alpha ci-dessous. Pour obtenir l’apparence «Black», essayez une valeur RVB grise très sombre, telle que 16, 16, 16.
 
-![Normal et large gamme de couleurs](images/640px-widegamut.png)<br>
-*Normal et large gamme de couleurs*
+![Gamme de couleurs standard et large](images/640px-widegamut.png)<br>
+*Gamme de couleurs standard et large*
 
 ## <a name="technical-considerations"></a>Considérations techniques
-* **Alias** -être tenir compte de l’utilisation d’alias, en escalier ou « étapes d’escalier » où le bord de la géométrie d’un hologramme répond à la réalité. À l’aide de textures avec beaucoup de détails peut aggraver cet effet. Textures doivent être mappés et le filtrage activé. Envisagez de fondu les bords de hologrammes ou l’ajout d’une texture qui crée une bordure noire edge autour des objets. Évitez de géométrie mince lorsque cela est possible.
-* **Canal alpha** -vous devez effacer votre canal alpha entièrement transparents pour toutes les parties où vous ne sont pas rendu un hologramme. En laissant les prospects undefined alphabétiques pour les artefacts visuels lors de la création d’images/vidéos à partir de l’appareil ou avec la vue du spectateur.
-* **Texture adoucissement** : étant donné que la lumière est additif dans les affichages HOLOGRAPHIQUE, il est préférable d’éviter les grandes régions de lumineuse, de couleur unie comme ils ne produisent souvent pas l’effet escompté visual.
+* **Alias** : Tenez compte des alias, des étapes en escalier ou des «étapes d’escalier» où le bord de la géométrie d’un hologramme répond au monde réel. L’utilisation de textures avec des détails élevés peut aggraver cet effet. Les textures doivent être mappées et le filtrage activé. Envisagez de faire déborder les bords des hologrammes ou d’ajouter une texture qui crée une bordure noire autour des objets. Évitez la géométrie fine lorsque cela est possible.
+* **Canal alpha** : vous devez effacer votre canal alpha pour qu’il soit entièrement transparent pour les parties où vous n’effectuez pas le rendu d’un hologramme. Si vous laissez la valeur alpha non définie, les artefacts visuels sont pris en charge lors de la création d’images/de vidéos à partir de l’appareil ou de la vue spectateur.
+* **Adoucissement** des textures-étant donné que la lumière est additive dans les affichages holographiques, il est préférable d’éviter les grandes zones de couleur lumineuse et unie, car elles ne produisent pas l’effet visuel souhaité.
 
-## <a name="storytelling-with-light-and-color"></a>Narration avec la lumière et la couleur
+## <a name="storytelling-with-light-and-color"></a>Narration avec lumière et couleur
 
-Lumière et la couleur peuvent aider à rendre votre hologrammes apparaissent plus naturellement dans d’un utilisateur environnement ainsi qu’offrent des conseils et d’aide pour l’utilisateur. Pour des expériences HOLOGRAPHIQUE, considérez les facteurs que vous explorez l’éclairage et la couleur :
-* **Vignettage** -un effet de « vignette » pour obscurcir les matériaux peut aider à concentrer l’attention des utilisateurs sur le centre de champ de vue. Cet effet assombrit matériel de l’hologramme à certains radius à partir de vecteur du pointage de regard de l’utilisateur. Notez que cela est également efficace lorsque l’utilisateur consulte hologrammes à partir d’un angle oblique ou oeil.
-* **Accent** -attirer l’attention sur des objets ou des points d’interaction en mettant en contraste des couleurs, luminosité et d’éclairage. Pour une étude plus détaillée de méthodes d’éclairage dans leur interprétation, consultez [cinéma Pixel - un éclairage approche pour les graphiques de l’ordinateur](http://media.siggraph.org/education/cgsource/Archive/ConfereceCourses/S96/course30.pdf).
+Le clair et la couleur peuvent vous aider à faire apparaître vos hologrammes plus naturellement dans l’environnement d’un utilisateur, ainsi qu’à offrir des conseils et de l’aide à l’utilisateur. Pour les expériences holographiques, tenez compte de ces facteurs lorsque vous explorez l’éclairage et la couleur:
+* **Vignette** : l’effet «vignette» sur les matériaux obscurcis peut aider à attirer l’attention de l’utilisateur sur le centre du champ de l’affichage. Cet effet assombrit le matériau de l’hologramme à un rayon à partir du vecteur de pointage de l’utilisateur. Notez que cela est également efficace lorsque les vues de l’utilisateur s’hologramment à partir d’un angle oblique ou parcourant.
+* **Accentuation** : attirez l’attention sur les objets ou les points d’interaction en contrastant les couleurs, la luminosité et l’éclairage. Pour plus d’informations sur les méthodes d’éclairage dans le récits, consultez [pixels cinématographiques-approche d’éclairage pour les images informatiques](http://media.siggraph.org/education/cgsource/Archive/ConfereceCourses/S96/course30.pdf).
 
-![Utilisation de couleur pour indiquer l’importance pour les éléments de narration, présentées dans une scène de Fragments.](images/640px-fragments.jpg)<br>
-*Utilisation des couleurs pour afficher l’importance pour les éléments de narration, illustré ici dans une scène à partir de [Fragments](https://www.microsoft.com/p/fragments/9nblggh5ggm8).*
+![Utilisation de la couleur pour mettre en évidence les éléments de narration, indiqués ici dans une scène à partir de fragments.](images/640px-fragments.jpg)<br>
+*Utilisation de la couleur pour mettre en évidence les éléments de narration, montrés ici dans une scène de [Fragments](https://www.microsoft.com/p/fragments/9nblggh5ggm8).*
 
 ## <a name="see-also"></a>Voir aussi
 * [Séparation des couleurs](hologram-stability.md#color-separation)
 * [Hologrammes](hologram.md)
-* [Langage de Microsoft Design - couleur](https://www.microsoft.com/design/color)
-* [Plateforme Windows universelle - couleur](https://docs.microsoft.com/windows/uwp/style/color)
+* [Langue de design Microsoft-couleur](https://www.microsoft.com/design/color)
+* [plateforme Windows universelle couleur](https://docs.microsoft.com/windows/uwp/style/color)

@@ -1,11 +1,11 @@
 ---
 title: Systèmes de coordonnées
-description: Les systèmes de coordonnées spatiales permet de générer assis, debout, salle à l’échelle et à l’échelle du monde mixte réalité expériences.
+description: Les systèmes de coordonnées spatiales utilisés pour créer des expériences de réalité mixte assiste, debout, à l’échelle de la place et à l’échelle mondiale.
 author: thetuvix
 ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
-keywords: système de coordonnées, système de coordonnées spatial, orientation, à l’échelle en place et seule permanent à l’échelle, salle-échelle, mise à l’échelle mondiale, assis à 360 degrés, debout, salle, monde, mise à l’échelle, position, orientation, fixe, attaché, étape, ancre, ancre spatiale, World-verrouillé, verrouillage world, body-verrouillée, verrouillage de corps, limites, persistance, partage, suivi de la perte, cloud spatiale d’ancrage
+keywords: système de coordonnées, système de coordonnées spatiales, orientation uniquement, à l’échelle assise, à l’échelle debout, à l’échelle de la pièce, à l’échelle mondiale, 360 de degrés, assis, debout, salle, monde, échelle, position, orientation, stationnaire, attaché, étage, Ancre, ancrage spatial, verrouillage universel, verrouillage universel, verrouillage du corps, verrouillage du corps, limites, persistance, partage, perte de suivi, ancrage spatial Cloud
 ms.openlocfilehash: f4b945a3ffb83b9ac0a94e0d793a19939aece3bb
 ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
@@ -15,7 +15,7 @@ ms.locfileid: "66829863"
 ---
 # <a name="coordinate-systems"></a>Systèmes de coordonnées
 
-En son cœur, mixte sur place les applications de réalité [hologrammes](hologram.md) dans votre monde dont l’apparence et des objets réels vous semble. Cela implique le positionnement et l’orientation des ces hologrammes dans des lieux dans le monde qui sont significatives pour l’utilisateur, si le monde est leur espace physique ou un domaine virtuel que vous avez créé avec précision. Quand un peu de la position et l’orientation de votre hologrammes ou n’importe quelle autre géométrie comme le [les regards](gaze.md) ray ou [main positions](gestures.md), Windows fournit divers systèmes de coordonnées réels dans laquelle géométrie peut être exprimée, connu sous le nom **des systèmes de coordonnées spatiales**.
+À la base, les applications de réalité mixte placent des [hologrammes](hologram.md) dans votre monde qui ressemblent à des objets réels. Cela implique de positionner et d’orienter précisément ces hologrammes à des endroits du monde qui sont significatifs pour l’utilisateur, qu’il s’agisse de son espace physique ou d’un domaine virtuel que vous avez créé. En cas de raisonnement quant à la position et à l’orientation de vos hologrammes, ou à toute autre géométrie telle [que les](gaze.md) positions de rayons ou de [main](gestures.md), Windows fournit divers systèmes de coordonnées réalistes dans lesquels cette géométrie peut être exprimée, appelée  **systèmes de coordonnées spatiales**.
 
 <br>
 
@@ -32,24 +32,24 @@ En son cœur, mixte sur place les applications de réalité [hologrammes](hologr
     </colgroup>
     <tr>
         <td><strong>Fonctionnalité</strong></td>
-        <td><a href="hololens-hardware-details.md"><strong>HoloLens (1er gen)</strong></a></td>
-        <td><strong>HoloLens 2</strong></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Casques IMMERSIFS</strong></a></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens (1ère génération)</strong></a></td>
+        <td><strong>HoloLens 2</strong></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Casques immersifs</strong></a></td>
     </tr>
      <tr>
-        <td><a href="coordinate-systems.md#stationary-frame-of-reference">Système de référence stationnaire</a></td>
+        <td><a href="coordinate-systems.md#stationary-frame-of-reference">Cadre de référence stationnaire</a></td>
         <td>✔️</td>
         <td>✔️</td>
         <td>✔️</td>
     </tr>
     <tr>
-        <td><a href="coordinate-systems.md#attached-frame-of-reference">Jointe de référence</a></td>
+        <td><a href="coordinate-systems.md#attached-frame-of-reference">Cadre de référence attaché</a></td>
         <td>✔️</td>
         <td>✔️</td>
         <td>✔️</td>
     </tr>
     <tr>
-        <td><a href="coordinate-systems.md#stage-frame-of-reference">Phase de référence</a></td>
+        <td><a href="coordinate-systems.md#stage-frame-of-reference">Cadre de la phase de référence</a></td>
         <td>Pas encore pris en charge</td>
         <td>Pas encore pris en charge</td>
         <td>✔️</td>
@@ -68,164 +68,164 @@ En son cœur, mixte sur place les applications de réalité [hologrammes](hologr
     </tr>
 </table>
 
-## <a name="mixed-reality-experience-scales"></a>Échelles d’expérience de réalité mixte
+## <a name="mixed-reality-experience-scales"></a>Évolution de l’expérience de réalité mixte
 
-Applications de réalité mixte peuvent concevoir d’une large gamme d’expériences utilisateur, à partir des visionneuses de vidéo à 360 degrés juste besoin orientation du casque, à complète world-applications à l’échelle et de jeux, qui doivent mappage spatial et ancres spatiales :
+Les applications de réalité mixte peuvent concevoir une large gamme d’expériences utilisateur, à partir de visionneuses vidéo de 360 degrés qui ont juste besoin de l’orientation du casque, à des applications et des jeux à l’échelle mondiale, qui nécessitent un mappage spatial et des ancres spatiales:
 <br>
 
-| Expérience mise à l’échelle | Configuration requise | Expérience de l’exemple | 
+| Mise à l’échelle | Configuration requise | Exemple d’expérience | 
 |----------|----------|----------|
-|  **Orientation-only** |  **Orientation de casque** (gravité aligné) |  Visionneuse de vidéo à 360° | 
-|  **Seated-scale** |  Ci-dessus, plus **position casque** par rapport à la position zéro |  Simulateur de jeu ou votre espace de course | 
-|  **Permanent à l’échelle** |  Ci-dessus, plus **étape d’origine de l’étage** |  Jeu d’action où vous volante des fous et d’en place  | 
-|  **Échelle de la salle** |  Ci-dessus, plus **polygone de limites de phase** |  Jeu de puzzle où vous partez du puzzle | 
-|  **À l’échelle mondiale** |  **Ancres spatiales** (en général [mappage spatial](spatial-mapping.md)) |  Jeu avec ennemis provenant de votre murs réels, tel que [RoboRaid](https://www.microsoft.com/p/roboraid/9nblggh5fv3j) | 
+|  **Orientation uniquement** |  **Orientation du casque** (aligné en gravité) |  visionneuse vidéo 360 ° | 
+|  **À l’échelle assise** |  Ci-dessus, plus la **position du casque** par rapport à la position zéro |  Jeu de course ou simulateur d’espace | 
+|  **À l’échelle debout** |  Ci-dessus, plus l’origine de l' **étage** |  Jeu d’action dans lequel vous avez des canards et une densité  | 
+|  **Mise à l’échelle de l’espace** |  Ci-dessus, plus les limites de la **phase Polygon** |  Jeu de puzzle dans lequel vous parcourez le puzzle | 
+|  **À l’échelle mondiale** |  **Ancres spatiales** (et généralement le [mappage spatial](spatial-mapping.md)) |  Jeu avec des ennemis provenant de vos murs réels, tels que [RoboRaid](https://www.microsoft.com/p/roboraid/9nblggh5fv3j) | 
 
-Ces expérience échelles suivent un modèle « imbrication poupées ». Le principe de conception clés ici pour la réalité mixte Windows est qu’un casque donné prend en charge les applications conçues pour une expérience de mise à l’échelle les cible, ainsi que tout moindre échelles :
+Ces possibilités de mise à l’échelle suivent un modèle d’imbrication de poupées. Le principal concept de conception pour Windows Mixed Reality est qu’un casque donné prend en charge les applications conçues pour une mise à l’échelle de l’expérience cible, ainsi que toutes les échelles les plus petites:
 <br>
 
-| Suivi de 6DOF | Floor défini | 360° de suivi | Limites définies | Ancres spatiales | Expérience de max | 
+| suivi 6DOF | Défini par l’étage | suivi de 360 ° | Limites définies | Ancres spatiales | Expérience max. | 
 |----------|----------|----------|----------|----------|----------|
-|  Non |  - |  - |  - |  - |  **Orientation-only** | 
-|  **Oui** |  Non |  - |  - |  - |  **En place** | 
-|  **Oui** |  **Oui** |  Non |  - |  - |  **Permanent - progression** | 
-|  **Oui** |  **Oui** |  **Oui** |  Non |  - |  **Debout - 360°** | 
-|  **Oui** |  **Oui** |  **Oui** |  **Oui** |  Non |  **Salle** | 
-|  **Oui** |  **Oui** |  **Oui** |  **Oui** |  **Oui** |  **World** | 
+|  Non |  - |  - |  - |  - |  **Orientation uniquement** | 
+|  **Oui** |  Non |  - |  - |  - |  **Positionné** | 
+|  **Oui** |  **Oui** |  Non |  - |  - |  **En aval** | 
+|  **Oui** |  **Oui** |  **Oui** |  Non |  - |  **Debout-360 °** | 
+|  **Oui** |  **Oui** |  **Oui** |  **Oui** |  Non |  **Divertissement** | 
+|  **Oui** |  **Oui** |  **Oui** |  **Oui** |  **Oui** |  **Réelles** | 
 
-Notez que la phase de référence n’est pas encore possible sur HoloLens. Une application de l’échelle de l’espace sur HoloLens doit actuellement utiliser [mappage spatial](spatial-mapping.md) pour trouver l’utilisateur floor et walls.
+Notez que le cadre de la phase de référence n’est pas encore pris en charge sur HoloLens. Une application de mise à l’échelle de la place sur HoloLens doit actuellement utiliser le [mappage spatial](spatial-mapping.md) pour rechercher le plancher et les murs de l’utilisateur.
 
 ## <a name="spatial-coordinate-systems"></a>Systèmes de coordonnées spatiales
 
-Utilisent toutes les applications graphiques 3D [systèmes de coordonnées cartésiennes](https://docs.microsoft.com/windows/uwp/graphics-concepts/coordinate-systems) de raisonner sur les positions et les orientations d’objets dans les mondes virtuels leur rendu. Ces systèmes de coordonnées établir 3 axes perpendiculaires le long duquel positionner les objets : un axe X, Y et Z.
+Toutes les applications graphiques 3D utilisent des [systèmes de coordonnées cartésiens](https://docs.microsoft.com/windows/uwp/graphics-concepts/coordinate-systems) pour expliquer les positions et les orientations des objets dans les mondes virtuels qu’elles affichent. Ces systèmes de coordonnées établissent 3 axes perpendiculaires pour positionner les objets: un axe X, Y et Z.
 
-Dans [une réalité mixte](mixed-reality.md), vos applications seront analyser les systèmes de coordonnées physiques et virtuels. Windows appelle un système de coordonnées ayant une signification réelle dans le monde physique un **système de coordonnées spatial**.
+En [réalité mixte](mixed-reality.md), vos applications ont une raison d’être des systèmes de coordonnées physiques et virtuels. Windows appelle un système de coordonnées qui a une signification réelle dans le système physique de **coordonnées spatiales**.
 
-Les systèmes de coordonnées spatiales exprimer leurs valeurs de coordonnées en mètres. Cela signifie que les objets placés 2 unités distantes soit x, l’axe Y ou Z apparaîtra 2 mètres indépendamment les uns des autres lors du rendu en réalité mixte. Cela vous permet de restituer facilement des objets et des environnements à grande échelle du monde réel.
+Les systèmes de coordonnées spatiales expriment leurs valeurs de coordonnées en mètres. Cela signifie que les objets placés 2 unités à l’écart de l’axe X, Y ou Z apparaîtront à 2 mètres l’un de l’autre lorsqu’ils sont rendus en réalité mixte. Cela vous permet de rendre facilement les objets et les environnements à l’échelle du monde réel.
 
-En règle générale, les systèmes de coordonnées cartésiennes peuvent être droitier ou gaucher. Les systèmes de coordonnées spatiales sur Windows sont toujours droitiers, ce qui signifie que la valeur positive l’axe des x pointant vers la droite, l’axe y positif pointe vers le haut (aligné sur la gravité) et la valeur positive z pointant vers vous.
+En général, les systèmes de coordonnées cartésiennes peuvent être droitiers ou gauches. Les systèmes de coordonnées spatiales sur les fenêtres sont toujours droitiers, ce qui signifie que les points de l’axe des X positifs à droite, l’axe Y positif pointe vers le haut (aligné sur la gravité) et les points positifs de l’axe Z vers vous.
 
-Dans les deux types de systèmes de coordonnées, la valeur positive l’axe des x pointant vers la droite et l’axe y positif pointe vers le haut. La différence est que l’axe z positif pointe vers ou à vous. Vous pouvez mémoriser la direction dans laquelle l’axe z positif pointe en pointant les doigts d’un de votre gauche ou la droite dans la valeur positive X direction et les utiliser curl pour l’axe Y positif. La direction de votre curseur pointe, rapprochez ou éloignez vous, est la direction dans laquelle les points de l’axe z positif pour ce système de coordonnées.
+Dans les deux types de systèmes de coordonnées, l’axe X positif pointe vers la droite et l’axe Y positif pointe vers le haut. La différence est que l’axe Z positif pointe vers vous ou en éloigne. Vous pouvez vous souvenir de la direction vers laquelle pointe l’axe Z positif en pointant les doigts de votre gauche ou de la main droite dans la direction X positive et en les faisant passer à la direction Y positive. La direction vers laquelle votre Thumb pointe, que ce soit vers vous ou en dehors, est la direction dans laquelle les points positifs de l’axe Z pour ce système de coordonnées.
 
-## <a name="building-an-orientation-only-or-seated-scale-experience"></a>Création d’une expérience de l’orientation uniquement ou à l’échelle en place
+## <a name="building-an-orientation-only-or-seated-scale-experience"></a>Création d’une expérience d’orientation seule ou de mise à l’échelle installée
 
-La clé au holographic [rendu](rendering.md) évolue de vue de votre application de son hologrammes chaque frame comme l’utilisateur se déplace, pour correspondre à leur déplacement de la tête prédite. Vous pouvez générer **à l’échelle en place des expériences** qu’égard change à la position de tête de l’utilisateur et l’orientation principale à l’aide un **de référence stationnaire**.
+La clé du [rendu](rendering.md) holographique est la modification de la vue de l’application de ses hologrammes à mesure que l’utilisateur se déplace, afin de faire correspondre le mouvement de l’en-tête prédit. Vous pouvez créer des expériences à l' **échelle assises** qui respectent les modifications apportées à la position des têtes et à l’orientation des têtes de l’utilisateur à l’aide d’un **cadre stationnaire de référence**.
 
-Certains contenus doit ignorer les mises à jour de la position de tête, rester fixe à un en-tête choisi et la distance à partir de l’utilisateur à tout moment. L’exemple principal est à 360 degrés vidéo : étant donné que la vidéo est capturée à partir d’une seule perspective fixe, il serait endommager l’illusion de la position de la vue déplacer relative au contenu, même si l’orientation de la vue doit changer comme l’utilisateur recherche. Vous pouvez générer ces **expériences orientation seule** à l’aide un **attaché de référence**.
+Une partie du contenu doit ignorer les mises à jour de position de l’en-tête, à tout moment résolu à un titre et à une distance choisis. L’exemple principal est la vidéo de 360 degrés: étant donné que la vidéo est capturée à partir d’une perspective fixe unique, l’illusion de la position de la vue doit être déplacée par rapport au contenu, même si l’orientation de la vue doit changer à mesure que l’utilisateur regarde. Vous pouvez générer une telle **expérience d’orientation uniquement** à l’aide d’un **cadre de référence attaché**.
 
-### <a name="stationary-frame-of-reference"></a>Système de référence stationnaire
+### <a name="stationary-frame-of-reference"></a>Cadre de référence stationnaire
 
-Le système de coordonnées fourni par un système de référence stationnaire s’efforce de maintenir les positions des objets à proximité de l’utilisateur comme stable que possible par rapport à l’environnement, tout en respectant les modifications apportées à la position de tête de l’utilisateur.
+Le système de coordonnées fourni par un cadre stationnaire de référence permet de conserver les positions des objets près de l’utilisateur aussi stables que possible par rapport au monde, tout en respectant les modifications de la position de la tête de l’utilisateur.
 
-Pour des expériences de l’échelle en place dans un moteur de jeu comme [Unity](https://unity3d.com/), un système de référence stationnaire est ce qui définit « monde l’origine. » du moteur Les objets qui sont placés en une coordonnée du monde spécifique utilisent le système de référence stationnaire pour définir leur position dans le monde réel à l’aide de ces mêmes coordonnées. Contenu qui reste placé dans le monde, même lorsque l’utilisateur, est appelé **verrouillé de monde** contenu.
+Pour les expériences en position assise dans un moteur de jeu comme [Unity](https://unity3d.com/), une image fixe de référence est ce qui définit l’« origine du monde » du moteur. Les objets placés à une coordonnée universelle spécifique utilisent le cadre stationnaire de référence pour définir leur position dans le monde réel à l’aide de ces mêmes coordonnées. Le contenu qui reste dans le monde, même au fur et à mesure que l’utilisateur se déplace, est connu sous le nom de contenu **à verrouillage universel** .
 
-Une application crée généralement un système de référence stationnaire au démarrage et utilise son système de coordonnées tout au long de durée de vie de l’application. En tant que développeur d’applications dans Unity, vous êtes prêt à placer le contenu relatif à l’origine, ce qui sera à la position principale initiale et l’orientation de l’utilisateur. Si l’utilisateur se déplace vers un nouvel emplacement et souhaite continuer leur expérience à l’échelle en place, vous pouvez recentrer l’origine du monde entier à cet emplacement.
+Une application crée généralement une image fixe de référence au démarrage et utilise son système de coordonnées tout au long de la durée de vie de l’application. En tant que développeur d’applications dans Unity, vous pouvez simplement commencer à placer du contenu par rapport à l’origine, qui sera à la position et à l’orientation initiales de l’utilisateur. Si l’utilisateur se déplace vers un nouvel emplacement et veut poursuivre son expérience à l’échelle assise, vous pouvez recentrer l’origine du monde à cet emplacement.
 
-Au fil du temps, comme le système apprend plus sur l’environnement utilisateur, il peut déterminer que les distances entre les différents points dans le monde réel sont plus court ou plus longue que le système de croire précédemment. Si vous effectuez le rendu hologrammes dans un système de référence stationnaire pour une application sur HoloLens où les utilisateurs divaguer au-delà de la zone large d’environ 5 mètres, votre application peut observer une dérive dans l’emplacement observée de ces hologrammes. Si votre expérience a des utilisateurs dont y au-delà de 5 mètres, vous créez un [à l’échelle du monde expérience](#building-a-world-scale-experience), ce qui nécessitera des techniques supplémentaires pour conserver les hologrammes stable, comme décrit ci-dessous.
+Au fil du temps, à mesure que le système apprend davantage sur l’environnement de l’utilisateur, il peut déterminer que les distances entre les différents points du monde réel sont plus courtes ou plus longues que le système n’était supposé. Si vous affichez des hologrammes dans une image de référence fixe pour une application sur HoloLens, où les utilisateurs se dépassent d’une zone d’environ 5 mètres de largeur, votre application peut observer une dérive à l’emplacement observé de ces hologrammes. Si votre expérience a des utilisateurs qui se dépassent de 5 mètres, vous créez une expérience à l' [échelle mondiale](#building-a-world-scale-experience), qui nécessitera des techniques supplémentaires pour garantir la stabilité des hologrammes, comme décrit ci-dessous.
 
-### <a name="attached-frame-of-reference"></a>Jointe de référence
+### <a name="attached-frame-of-reference"></a>Cadre de référence attaché
 
-Un cadre de référence jointe se déplace avec l’utilisateur tandis qu’ils autour, avec un titre fixe défini lors de l’application crée d’abord le frame. Cela permet à l’utilisateur confortablement regardez autour de contenu placé dans ce cadre de référence. Le contenu restitué de cette façon relatifs à un utilisateur est appelé **body-verrouillée** contenu.
+Un cadre de référence attaché se déplace avec l’utilisateur lors de son parcours, avec un en-tête fixe défini lorsque l’application crée d’abord le frame. Cela permet à l’utilisateur de regarder confortablement le contenu placé dans ce cadre de référence. Le contenu rendu dans cette méthode relative à l’utilisateur est appelé contenu **verrouillé** .
 
-Lorsque le casque ne peut pas déterminer où il est dans le monde, un cadre de référence jointe fournit le seul système de coordonnées qui peut être utilisé pour restituer hologrammes. Cette solution est idéale pour l’affichage de l’interface utilisateur de secours pour indiquer à l’utilisateur que son appareil ne peut pas se retrouver dans le monde. Les applications qui sont en place à l’échelle ou une version ultérieure doivent inclure un secours orientation uniquement pour aider l’utilisateur à commencer à nouveau, avec l’interface utilisateur similaire à celle illustrée à la [Mixed Reality accueil](navigating-the-windows-mixed-reality-home.md).
+Lorsque le casque ne peut pas déterminer où il se trouve dans le monde, un cadre de référence attaché fournit le seul système de coordonnées qui peut être utilisé pour le rendu des hologrammes. Cela permet d’afficher l’interface utilisateur de secours idéale pour indiquer à l’utilisateur que son appareil ne peut pas le trouver dans le monde. Les applications qui sont installées à l’échelle ou supérieures doivent inclure un secours en orientation seule pour aider l’utilisateur à se relancer, avec une interface utilisateur semblable à celle illustrée dans la page d’hébergement de la [réalité mixte](navigating-the-windows-mixed-reality-home.md).
 
-## <a name="building-a-standing-scale-or-room-scale-experience"></a>Création d’une expérience permanent à l’échelle ou d’échelle de la salle
+## <a name="building-a-standing-scale-or-room-scale-experience"></a>Création d’une expérience de mise à l’échelle permanente ou à l’échelle de l’espace
 
-Pour aller au-delà d’assis-mise à l’échelle sur un casque immersif et générer un **permanent à l’échelle expérience**, vous pouvez utiliser la **phase de référence**.
+Pour aller au-delà de la mise à l’échelle sur un casque immersif et créer une expérience à l' **échelle debout**, vous pouvez utiliser le **cadre de la phase de référence**.
 
-Pour fournir un **expérience de l’échelle de la salle**, ce qui permet les utilisateurs Parcourir dans la limite de 5-compteur ils prédéfinis, vous pouvez vérifier **limites à l’étape** ainsi.
+Pour fournir une **expérience**de mise à l’échelle de l’espace, en permettant aux utilisateurs de se déplacer dans la limite de 5 mètres qu’ils prédéfinis, vous pouvez également vérifier les limites du niveau **intermédiaire** .
 
-### <a name="stage-frame-of-reference"></a>Phase de référence
+### <a name="stage-frame-of-reference"></a>Cadre de la phase de référence
 
-Lorsque vous configurez tout d’abord un casque immersif, l’utilisateur définit un **étape**, qui représente l’espace dans lequel ils seront confrontés une réalité mixte. L’étape définit au minimum un **origine à l’étape**, un système de coordonnées spatial centré à l’utilisateur de choisi position d’étage et orientation vers l’avant, où il a l’intention d’utiliser l’appareil. En plaçant le contenu dans ce système de coordonnées étape au niveau du plan d’étage Y = 0, vous pouvez Vérifiez votre hologrammes apparaissent confortablement sur le sol lorsque l’utilisateur est permanent, offrant aux utilisateurs un **permanent à l’échelle expérience**.
+Lors de la configuration initiale d’un casque immersif, l’utilisateur définit une **étape**, qui représente la salle dans laquelle il expérimentera la réalité mixte. L’étape définit au minimum un **État d’origine**, un système de coordonnées spatiales centré à la position de plancher choisie par l’utilisateur et l’orientation vers l’avant, où il envisage d’utiliser l’appareil. En plaçant le contenu dans ce système de coordonnées au niveau du plan de plancher Y = 0, vous pouvez vous assurer que vos hologrammes apparaissent confortablement à l’étage lorsque l’utilisateur est debout, ce qui permet aux utilisateurs de bénéficier d’une expérience à l' **échelle debout**.
 
-### <a name="stage-bounds"></a>Limites de la scène
+### <a name="stage-bounds"></a>Limites de la phase
 
-L’utilisateur peut également définir **limites à l’étape**, une zone dans l’espace qui leur ont effacées meuble où ils souhaitent déplacer dans une réalité mixte. Si, par conséquent, l’application peut générer un **expérience de l’échelle de la salle**, à l’aide de ces limites pour vous assurer que hologrammes sont toujours placées dans lequel l’utilisateur peut y accéder.
+L’utilisateur peut également définir des limites au niveau de la **phase**, une zone de la pièce dans laquelle elles ont été désactivées pour se déplacer dans la réalité mixte. Dans ce cas, l’application peut créer une expérience de mise à l’échelle de l' **espace**, à l’aide de ces limites pour s’assurer que les hologrammes sont toujours placés là où l’utilisateur peut les joindre.
 
-Étant donné que la phase de référence fournit la que correction d’un seul système de coordonnées dans lequel placer le contenu de l’étage relatif, il est le chemin le plus simple pour portage permanent à l’échelle et des applications à l’échelle de la salle développées pour les casques de réalité virtuelle. Toutefois, comme avec ces plateformes de réalité virtuelle, un seul système de coordonnées peut uniquement se stabiliser contenu dans sur un diamètre égal à 5 mètres (16 pied), avant les bras de levier entraîner l’échec contenu loin d’être le centre de décalage sensiblement comme ajuste le système. Pour aller au-delà de 5 mètres, ancres spatiales sont nécessaires.
+Étant donné que le cadre de la phase de référence fournit un système de coordonnées fixe unique dans lequel placer le contenu relatif à l’étage, il s’agit du chemin le plus simple pour le portage des applications à l’échelle du sol et à l’échelle de l’espace développée pour les casques de réalité virtuelle. Toutefois, comme pour ces plateformes VR, un seul système de coordonnées peut uniquement stabiliser le contenu dans environ un diamètre de 5 mètres (16 pieds de page), avant que les effets du bras de levier n’entraînent une évolution notable du contenu du centre. Pour aller au-delà de 5 mètres, les ancres spatiales sont nécessaires.
 
 ## <a name="building-a-world-scale-experience"></a>Création d’une expérience à l’échelle mondiale
 
-True permet de HoloLens **expériences à l’échelle du monde** qui permettent aux utilisateurs divaguer au-delà de 5 mètres. Pour générer une application à l’échelle mondiale, vous aurez besoin de nouvelles techniques plus de ceux utilisés pour des expériences de l’échelle de la salle.
+HoloLens permet des expériences de mise à l' **échelle au monde** véritables qui permettent aux utilisateurs de dépasser 5 mètres. Pour créer une application à l’échelle mondiale, vous aurez besoin de nouvelles techniques au-delà de celles utilisées pour les expériences à l’échelle de la place.
 
-### <a name="why-a-single-rigid-coordinate-system-cannot-be-used-beyond-5-meters"></a>Pourquoi un système de coordonnées rigid unique ne peut pas être utilisé au-delà de 5 mètres
+### <a name="why-a-single-rigid-coordinate-system-cannot-be-used-beyond-5-meters"></a>Pourquoi un système de coordonnées rigides unique ne peut pas être utilisé au-delà de 5 mètres
 
-Aujourd'hui, lorsque vous écrivez des jeux, des applications de visualisation de données ou des applications de réalité virtuelle, la classique consiste à établir un système de coordonnées universelles absolues toutes les autres coordonnées peuvent mapper fiable vers. Dans cet environnement, vous pouvez toujours trouver une transformation stable qui définit une relation entre deux objets dans ce monde. Si vous n’avez pas déplacer ces objets, leurs transformations relatives toujours reste le même. Ce système de coordonnées de global fonctionne correctement lors du rendu d’un monde purement virtuel où vous connaissez tous de la géométrie à l’avance. Aujourd'hui, salle à l’échelle des applications VR établissent généralement ce type de système de coordonnées absolu salle à l’échelle avec son origine sur le sol.
+Aujourd’hui, lors de l’écriture de jeux, d’applications de visualisation de données ou d’applications de réalité virtuelle, l’approche classique consiste à établir un système de coordonnées universel unique sur lequel toutes les autres coordonnées peuvent être mappées de manière fiable. Dans cet environnement, vous pouvez toujours trouver une transformation stable qui définit une relation entre deux objets dans ce monde. Si vous n’avez pas déplacé ces objets, leurs transformations relatives restent toujours les mêmes. Ce type de système de coordonnées global fonctionne bien lors du rendu d’un monde purement virtuel où vous connaissez toute la géométrie à l’avance. Aujourd’hui, les applications de la mise à l’échelle de la salle établissent généralement ce type de système de coordonnées à l’échelle de la pièce, avec son origine sur le plancher.
 
-En revanche, un appareil de réalité mixte librement telles que HoloLens a une compréhension piloté par les capteurs dynamique du monde, ajuster en permanence ses connaissances au fil du temps de l’environnement de l’utilisateur tandis qu’ils mètres nombreuses entre un étage d’un bâtiment entier. Dans une expérience à l’échelle mondiale, si vous avez placé tous vos hologrammes dans un système de coordonnées rigid unique, ces hologrammes seraient nécessairement dérives au fil du temps, par rapport au monde ou entre eux.
+En revanche, un appareil de réalité mixte non attaché, tel que HoloLens, a une compréhension dynamique pilotée par les capteurs du monde, en ajustant en permanence ses connaissances dans le temps de l’environnement de l’utilisateur lorsqu’il parcourt de nombreux compteurs à travers l’ensemble d’un étage d’un bâtiment. Dans le cas d’une expérience à l’échelle mondiale, si vous avez placé tous vos hologrammes dans un système de coordonnées rigides unique, ces hologrammes se déplaceront nécessairement dans le temps, soit par rapport au monde ou entre eux.
 
-Par exemple, le casque peut croire actuellement deux emplacements dans le monde entier pour être 4 mètres uns des autres et ensuite affiner ultérieurement cette compréhension, que les emplacements sont en fait des compteurs 3.9 éloignés de formation. Si ces hologrammes étaient initialement placées 4 mètres uns des autres dans un système de coordonnées rigid unique, un d’eux puis toujours apparaîtrait 0,1 mètres du monde réel.
+Par exemple, le casque peut considérer deux endroits du monde comme étant séparés de 4 mètres, puis affiner cette compréhension, en sachant que les emplacements sont en fait de 3,9 mètres de distance. Si ces hologrammes avaient initialement été placés à 4 mètres en un seul système de coordonnées rigides, l’un d’eux présenterait toujours 0,1 mètres du monde réel.
 
 ### <a name="spatial-anchors"></a>Ancres spatiales
 
-Réalité mixte Windows résout le problème décrit dans la section précédente, en vous permettant de créer [ancres spatiales](spatial-anchors.md) pour marquer des points importants dans le monde où l’utilisateur a placé hologrammes. Un point d’ancrage spatial représente un point important dans le monde que le système doit effectuer le suivi au fil du temps.
+Windows Mixed Reality résout le problème décrit dans la section précédente en vous permettant de créer des [ancres spatiales](spatial-anchors.md) pour marquer des points importants dans le monde où l’utilisateur a placé des hologrammes. Une ancre spatiale représente dans le monde un point important dont le système doit effectuer le suivi au fil du temps.
 
-Comme l’appareil s’informe sur le monde, ces points d’ancrage spatiales peuvent ajustent leur position par rapport à l’autre en fonction des besoins pour vous assurer que chaque point d’ancrage reste précisément où il a été placé par rapport au monde réel. En plaçant une ancre de spatial à l’emplacement où l’utilisateur place un hologramme et puis en positionnant ce hologramme par rapport à son ancre spatiale, vous pouvez vous assurer que l’hologramme conserve une stabilité optimale, même lorsque l’utilisateur se déplace sur des dizaines de mètres.
+À mesure que l’appareil apprend sur le monde, ces ancres spatiales peuvent ajuster leur position par rapport à l’autre en fonction des besoins pour s’assurer que chaque ancre reste précisément là où elle a été placée par rapport au monde réel. En plaçant un ancrage spatial à l’emplacement où l’utilisateur place un hologramme, puis en positionnant Cet hologramme par rapport à son ancrage spatial, vous pouvez vous assurer que l’hologramme maintient une stabilité optimale, même lorsque l’utilisateur se déplace sur des dizaines de mètres.
 
-Cet ajustement continu d’ancres spatiales par rapport à l’autre est la principale différence entre coordinate systems à partir de points d’ancrage spatiales et images de référence STATIONNAIRES :
+Ce réglage continu des ancrages spatiaux l’un de l’autre est la principale différence entre les systèmes de coordonnées des ancres spatiales et des images fixes de référence:
 
-* Hologrammes placés dans le système de référence stationnaire tous les conservent une relation rigide entre eux. Toutefois, lorsque l’utilisateur longues distances, système de coordonnées de celle de l’image peut dérives par rapport au monde pour vous assurer que hologrammes en regard de l’utilisateur apparaissent stables.
+* Les hologrammes placés dans le cadre stationnaire de référence conservent une relation rigide les uns avec les autres. Toutefois, à mesure que l’utilisateur parcourt de longues distances, le système de coordonnées de ce frame peut dépasser par rapport au monde pour s’assurer que les hologrammes à côté de l’utilisateur semblent stables.
 
-* Hologrammes placés dans la phase de référence également conservent une relation rigide entre eux. Contrairement à l’image fixe, le frame de la phase toujours reste fixe par rapport à son origine physique défini. Toutefois, le contenu restitué dans le système de coordonnées de la scène au-delà de sa limite de 5-compteur apparaîtra seulement stable alors que l’utilisateur est permanent au sein de cette limite.
+* Les hologrammes placés dans le cadre de la phase de référence conservent également une relation rigide les uns avec les autres. Contrairement à l’image stationnaire, le frame d’étape reste toujours fixe en place par rapport à son origine physique définie. Toutefois, le contenu rendu dans le système de coordonnées de l’étape au-delà de sa limite de 5 mètres n’apparaîtra stable que lorsque l’utilisateur se trouve dans cette limite.
 
-* Hologrammes placées à l’aide d’une ancre spatial peut dérives par rapport à hologrammes placé à l’aide d’un autre point d’ancrage spatiale. Cela permet à Windows améliorer la compréhension de la position de chaque point d’ancrage spatiale, même si, par exemple, un point d’ancrage doit ajuster lui-même gauche et un autre point d’ancrage doit ajuster vers la droite.
+* Les hologrammes placés à l’aide d’une ancre spatiale peuvent être dérives par rapport aux hologrammes placés à l’aide d’une autre ancre spatiale. Cela permet à Windows d’améliorer sa compréhension de la position de chaque ancrage spatial, même si, par exemple, une ancre doit s’ajuster elle-même à gauche et qu’une autre ancre doit s’ajuster à droite.
 
-Contrairement à un système de référence stationnaire, qui optimise toujours de stabilité près de l’utilisateur, la phase de référence et les ancres spatiales garantissent la stabilité près de leurs origines. Cela permet à ces hologrammes demeurer précisément en place au fil du temps, mais cela signifie également que hologrammes rendus trop loin à partir de l’origine de leur système coordonnées seront confrontés à des effets de plus en plus graves levier-arm. Il s’agit, car de légères modifications à la position et l’orientation de la scène ou d’un point d’ancrage sont amplifient encore proportionnelle à la distance à partir de ce point d’ancrage. 
+Contrairement à une image stationnaire de référence qui optimise toujours la stabilité près de l’utilisateur, le cadre de la phase de référence et les ancres spatiales garantissent une stabilité proche de leur origine. Cela permet aux hologrammes de rester précisément en place au fil du temps, mais cela signifie également que les hologrammes rendus trop loin de l’origine de leur système de coordonnées subiront des effets de leviers plus sérieux. Cela est dû au fait que les petits ajustements de la position et de l’orientation de la phase ou de l’ancrage sont agrandis proportionnellement à la distance par rapport à cette ancre. 
 
-Une règle empirique consiste à vous assurer que quoi que ce soit rendu selon le système de coordonnées de l’une ancre spatial éloigné se trouve dans environ 3 mètres de son origine. Pour une origine de scène à proximité, rendre le contenu distant est OK, car toute erreur positionnelle accrue affecte seulement les petites hologrammes qui ne sont pas décalés une grande partie de la vue.
+Une bonne règle empirique consiste à s’assurer que tout ce que vous restituez en fonction du système de coordonnées d’une ancre spatiale distante est situé à environ 3 mètres de son origine. Dans le cas d’une étape proche, le rendu du contenu distant est OK, car toute erreur de position plus importante affecte uniquement les petits hologrammes qui ne se déplacent pas dans l’affichage de l’utilisateur.
 
-### <a name="spatial-anchor-persistence"></a>Persistance de l’ancre spatial
+### <a name="spatial-anchor-persistence"></a>Persistance d’ancrage spatial
 
-Ancres spatiales peuvent permettent également de votre application à mémoriser un emplacement important même après que votre application s’interrompt ou de l’appareil est arrêté.
+Les ancres spatiales peuvent également permettre à votre application de mémoriser un emplacement important même après l’interruption de votre application ou l’arrêt de l’appareil.
 
-Vous pouvez enregistrer les ancres spatiales crée votre application de disque et puis chargez-les revenir plus tard, en rendant persistant vers votre application **Boutique spatial**. Lors de l’enregistrement ou du chargement d’un point d’ancrage, vous fournissez une clé de chaîne qui est significative pour votre application, afin d’identifier le point d’ancrage plus tard. Considérez cette clé comme le nom de fichier pour votre point d’ancrage. Si vous souhaitez associer les autres données qui sont ancrés, tels qu’un modèle 3D placé par l’utilisateur à cet emplacement, enregistre dans le stockage local de votre application et l’associer à la clé que vous avez choisi.
+Vous pouvez enregistrer sur disque les ancres spatiales créées par votre application, puis les charger à nouveau ultérieurement en les rendant persistantes dans le **magasin d’ancrage spatial**de votre application. Lors de l’enregistrement ou du chargement d’une ancre, vous fournissez une clé de chaîne qui est significative pour votre application, afin d’identifier l’ancre ultérieurement. Considérez cette clé comme le nom de fichier de votre point d’ancrage. Si vous souhaitez associer d’autres données à cette ancre, par exemple un modèle 3D que l’utilisateur a placé à cet emplacement, enregistrez-le dans le stockage local de votre application et associez-le à la clé que vous avez choisie.
 
-Par ancres persistantes dans le magasin, vos utilisateurs peuvent placer hologrammes individuels ou placer un espace de travail autour de laquelle une application placer ses hologrammes différents et recherchez ces hologrammes ultérieurement où ils attendent, au fil de nombreuses utilisations de votre application.
+En conservant les ancres dans le magasin, vos utilisateurs peuvent placer des hologrammes individuels ou placer un espace de travail autour duquel une application place ses différents hologrammes, puis rechercher ces hologrammes plus tard là où ils l’attendent, sur de nombreuses utilisations de votre application.
 
-Vous pouvez également utiliser <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">ancres Spatial Azure</a> pour la persistance hologramme asynchrone sur HoloLens, appareils iOS et Android.  En partageant une ancre spatial cloud durable, plusieurs périphériques peuvent observer l’hologramme persistante même au fil du temps, même si ces appareils ne sont pas présents ensemble en même temps.
+Vous pouvez également utiliser <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">Azure Spatial Anchors</a> pour la persistance asynchrone des hologrammes sur les appareils HoloLens, iOS et Android.  En partageant une ancre spatiale cloud durable, plusieurs appareils peuvent observer le même hologramme conservé au fil du temps, même si ces appareils ne sont pas présents ensemble en même temps.
 
 ### <a name="spatial-anchor-sharing"></a>Partage d’ancrage spatial
 
-Votre application peut également partager un point d’ancrage spatiale en temps réel avec d’autres appareils, ce qui permet en temps réel partagé des expériences.
+Votre application peut également partager une ancre spatiale en temps réel avec d’autres appareils, ce qui permet d’obtenir des expériences partagées en temps réel.
 
-À l’aide de <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">ancres Spatial Azure</a>, votre application peut partager un point d’ancrage spatial entre plusieurs HoloLens, appareils iOS et Android. En demandant à chaque appareil de restituer un hologramme à l’aide de l’ancre spatial même, tous les utilisateurs voient l’hologramme apparaissent au même endroit dans le monde réel.
+En utilisant des <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">ancres spatiales Azure</a>, votre application peut partager une ancre spatiale sur plusieurs appareils HoloLens, iOS et Android. Quand chaque appareil affiche un hologramme à l’aide de la même ancre spatiale, tous les utilisateurs voient l’hologramme au même endroit dans le monde réel.
 
-## <a name="avoid-head-locked-content"></a>Éviter la tête verrouillée de contenu
+## <a name="avoid-head-locked-content"></a>Éviter le contenu verrouillé
 
-Nous vous déconseillons fortement de restituer le contenu de tête verrouillée, ce qui reste à un point fixe dans l’affichage (par exemple, un HUD). En règle générale, contenu de tête verrouillée est désagréable pour les utilisateurs et ne pas semble un dans le cadre de leur univers.
+Nous vous déconseillons fortement de rendre le contenu verrouillé, qui reste à une position fixe dans l’affichage (par exemple, un HUD). En général, le contenu verrouillé est inconfortable pour les utilisateurs et ne ressemble pas à une partie naturelle de leur monde.
 
-Contenu de tête verrouillée doit généralement être remplacé par hologrammes qui sont attachés à l’utilisateur ou placés dans le monde lui-même. Par exemple, [curseurs](cursors.md) doit généralement être transférée dans le monde, mise à l’échelle naturellement pour refléter la position et la distance de l’objet sous le regard de l’utilisateur.
+Le contenu verrouillé doit généralement être remplacé par des hologrammes attachés à l’utilisateur ou placés dans le monde lui-même. Par exemple, les [curseurs](cursors.md) doivent généralement être poussés dans le monde, en se mettant à l’échelle naturellement pour refléter la position et la distance de l’objet sous le regard de l’utilisateur.
 
 ## <a name="handling-tracking-errors"></a>Gestion des erreurs de suivi
 
-Dans certains environnements tels que des couloirs foncées, il peut-être pas possible pour un casque à l’aide de suivi intégrale lui-même localiser correctement dans le monde. Cela peut entraîner des hologrammes apparaître ou apparaître dans des lieux incorrect si pas correctement traités. Nous abordons maintenant les conditions dans lesquelles cela peut se produire, son impact sur l’expérience utilisateur, et des conseils pour mieux gérant cette situation.
+Dans certains environnements tels que les couloirs sombres, il n’est pas possible pour un casque utilisant le suivi de l’extérieur de se localiser correctement dans le monde. Cela peut entraîner l’affichage des hologrammes qui ne s’affichent pas ou n’apparaissent pas aux endroits erronés si le traitement est incorrect. Nous évoquons maintenant les conditions dans lesquelles cela peut se produire, son impact sur l’expérience utilisateur et des conseils pour mieux gérer cette situation.
 
-### <a name="headset-cannot-track-due-to-insufficient-sensor-data"></a>Casque ne peut pas effectuer le suivi en raison de données de capteur insuffisant
+### <a name="headset-cannot-track-due-to-insufficient-sensor-data"></a>Impossible d’effectuer le suivi du casque en raison de données de capteur insuffisantes
 
-Parfois, les capteurs du casque ne sont pas en mesure de déterminer où le casque est. Cela peut se produire si la pièce est sombre, si les capteurs sont couverts par les cheveux ou mains, ou si l’environnement n’ont pas de suffisamment de texture.
+Parfois, les capteurs du casque ne sont pas en mesure de déterminer où se trouve le casque. Cela peut se produire si la pièce est sombre, si les capteurs sont couverts par des cheveux ou des mains ou si l’environnement n’a pas suffisamment de texture.
 
-Dans ce cas, le casque ne pourront pas être effectuer le suivi de sa position avec suffisamment de précision pour restituer hologrammes verrouillé de monde. Vous ne pourrez pas déterminer où une ancre spatiale, un frame stationnaire ou un cadre de l’étape est relatif à l’appareil, mais vous pouvez toujours afficher verrouillé de corps de contenu dans le cadre de référence jointe.
+Dans ce cas, le casque n’est pas en mesure d’effectuer le suivi de sa position avec suffisamment de précision pour le rendu des hologrammes à verrouillage universel. Vous ne serez pas en mesure de déterminer l’emplacement d’un point d’ancrage spatial, d’un cadre stationnaire ou d’un cadre intermédiaire par rapport à l’appareil, mais vous pouvez toujours restituer le contenu verrouillé dans le cadre de référence attaché.
 
-Votre application doit indiquer à l’utilisateur comment obtenir la position de suivi, rendu du contenu verrouillé de corps de secours qui présente des conseils, telles que dévoilant les capteurs et en activant les lumières plus.
+Votre application doit indiquer à l’utilisateur comment obtenir le suivi positionnel, en rendant un contenu verrouillé verrouillé qui décrit certains conseils, tels que la récupération des capteurs et l’activation d’autres lumières.
 
-### <a name="headset-tracks-incorrectly-due-to-dynamic-changes-in-the-environment"></a>Casque effectue le suivi de manière incorrecte en raison de modifications dynamiques dans l’environnement
+### <a name="headset-tracks-incorrectly-due-to-dynamic-changes-in-the-environment"></a>Le casque suit de manière incorrecte en raison de modifications dynamiques dans l’environnement
 
-Parfois, l’appareil ne peut pas suivre correctement s’il existe un grand nombre de modifications dynamiques dans l’environnement, telles que de nombreuses personnes vous épargne dans la salle. Dans ce cas, les hologrammes semblent accéder ou dérive car l’appareil tente d’effectuer le suivi de lui-même dans cet environnement dynamique. Nous recommandons à l’aide de l’appareil dans un environnement moins dynamique si vous rencontrez ce scénario.
+Parfois, l’appareil ne peut pas suivre correctement s’il y a beaucoup de modifications dynamiques dans l’environnement, telles que de nombreuses personnes qui se déplacent dans la pièce. Dans ce cas, les hologrammes peuvent sembler sauter ou dérive lorsque l’appareil tente de se suivre dans cet environnement dynamique. Nous vous recommandons d’utiliser l’appareil dans un environnement moins dynamique si vous atteignez ce scénario.
 
-### <a name="headset-tracks-incorrectly-because-the-environment-has-changed-significantly-over-time"></a>Casque effectue le suivi de manière incorrecte, car l’environnement a changé considérablement au fil du temps
+### <a name="headset-tracks-incorrectly-because-the-environment-has-changed-significantly-over-time"></a>Le casque suit de manière incorrecte, car l’environnement a considérablement changé au fil du temps
 
-Parfois, lorsque vous démarrez à l’aide d’un casque dans un environnement ayant subi beaucoup de modifications (par exemple le mouvement significatif de mobilier, porte-manteaux etc.), il est possible que certains hologrammes peuvent apparaître décalées depuis leur emplacement d’origine. Les hologrammes antérieures peuvent également passez à une autre que l’utilisateur se déplace dans ce nouvel espace. Il s’agit, car compréhension du système de votre espace ne conserve plus et il essaie de remapper l’environnement lorsqu’il tente de réconcilier les fonctionnalités de la salle. Dans ce scénario, il est conseillé d’encourager les utilisateurs à ré-placer hologrammes, qu’ils épinglées dans le monde si elles ne s’affichent pas emplacement attendu.
+Parfois, lorsque vous commencez à utiliser un casque dans un environnement qui a subi un grand nombre de modifications (par exemple, un déplacement important de meubles, de points de suspension, etc.), il est possible que certains hologrammes soient décalés de leur emplacement d’origine. Les hologrammes précédents peuvent également sauter au fur et à mesure que l’utilisateur se déplace dans ce nouvel espace. Cela est dû au fait que la compréhension du système de votre espace ne se débloque plus et tente de remapper l’environnement tout en essayant de rapprocher les fonctionnalités de la salle. Dans ce scénario, il est recommandé d’encourager les utilisateurs à réactiver les hologrammes qu’ils ont épinglés dans le monde s’ils n’apparaissent pas là où ils sont attendus.
 
-### <a name="headset-tracks-incorrectly-due-to-identical-spaces-in-an-environment"></a>Casque effectue le suivi de manière incorrecte en raison des espaces identiques dans un environnement
+### <a name="headset-tracks-incorrectly-due-to-identical-spaces-in-an-environment"></a>Le casque suit de manière incorrecte en raison d’espaces identiques dans un environnement
 
-Parfois, une maison ou autres espace peut avoir deux domaines identiques. Par exemple, deux salles de conférence identiques, deux identiques coin inférieur droit des zones, deux schémas identiques de grande taille qui couvrent le champ de vision de l’appareil. Dans de tels scénarios, l’appareil peut, dans certains cas, perturbés entre les parties identiques et marquez-les comme étant le même que dans sa représentation interne. Cela peut entraîner les hologrammes à partir de certaines zones à apparaître dans d’autres emplacements. L’appareil peut commencer à perdre suivi souvent dans la mesure où sa représentation interne de l’environnement a été endommagée. Dans ce cas, il est conseillé de réinitialiser la compréhension de l’environnement du système. Veuillez noter que la réinitialisation de la carte entraîne une perte de tous les emplacements spatiale d’ancrage. Cela entraîne le casque suivre correctement dans les domaines uniques de l’environnement. Toutefois, le problème peut se ré-produire si l’appareil obtient confondu entre les zones d’identiques.
+Parfois, un logement ou un autre espace peut avoir deux zones identiques. Par exemple, deux salles de conférence identiques, deux zones d’angle identiques, deux affiches identiques identiques qui couvrent le champ de vision de l’appareil. Dans de tels scénarios, l’appareil peut parfois être confondu entre les parties identiques et les marquer comme étant identiques dans sa représentation interne. Cela peut entraîner l’affichage des hologrammes de certaines zones dans d’autres emplacements. L’appareil peut commencer à perdre souvent le suivi, car sa représentation interne de l’environnement a été endommagée. Dans ce cas, il est recommandé de réinitialiser la compréhension de l’environnement du système. Notez que la réinitialisation de la carte provoque la perte de tous les placements d’ancrage spatial. Cela permet au casque de suivre correctement les zones uniques de l’environnement. Toutefois, le problème peut se produire si l’appareil est à nouveau confondu entre les zones identiques.
 
 ## <a name="see-also"></a>Voir aussi
-* [Présentation de GDC 2017 sur les systèmes de coordonnées spatiales et rendu HOLOGRAPHIQUE](https://channel9.msdn.com/events/GDC/GDC-2017/GDC2017-008)
+* [Présentation GDC 2017 sur les systèmes de coordonnées spatiales et le rendu holographique](https://channel9.msdn.com/events/GDC/GDC-2017/GDC2017-008)
 * [Systèmes de coordonnées dans Unity](coordinate-systems-in-unity.md)
 * [Systèmes de coordonnées dans DirectX](coordinate-systems-in-directx.md)
 * [Ancres spatiales](spatial-anchors.md)
 * [Expériences partagées dans Mixed Reality](shared-experiences-in-mixed-reality.md)
 * <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure Spatial Anchors</a>
-* [Étude de cas - parcourant des trous dans la réalité](case-study-looking-through-holes-in-your-reality.md)
+* [Étude de cas - Voir à travers vos objets](case-study-looking-through-holes-in-your-reality.md)

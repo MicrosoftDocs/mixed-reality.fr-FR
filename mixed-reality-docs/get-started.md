@@ -1,11 +1,11 @@
 ---
 title: Prise en main
-description: Ce guide décrit le moyen le plus rapide pour être rapidement opérationnel avec le développement de réalité mixte.
+description: Ce guide décrit le moyen le plus rapide d’être opérationnel avec le développement de réalité mixte.
 author: mattzmsft
 ms.author: mazeller
 ms.date: 08/06/2018
 ms.topic: article
-keywords: prise en main, principes de base, HoloLens, casque immersif, ar, vr, unity, visual studio, Guide de démarrage rapide, comment
+keywords: prise en main, principes de base, HoloLens, casque immersif, AR, VR, Unity, Visual Studio, démarrage rapide, comment
 ms.openlocfilehash: 4277de37ffe4a7ab03f382626452b96bf9157634
 ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
 ms.translationtype: MT
@@ -15,58 +15,58 @@ ms.locfileid: "64873959"
 ---
 # <a name="get-started"></a>Prise en main
 
-Bienvenue dans le monde du développement de réalité mixte ! Si vous débutez avec MR, ce guide sera votre hub pour être opérationnel et en cours d’exécution aussi rapidement que possible. Nous allons vous aider à préparer votre jeu de PC pour le développement, préparer votre ou vos appareils et installer les outils qui permettent d’accélérer le processus de développement MR. 
+Bienvenue dans le monde du développement de la réalité mixte! Si vous débutez avec m... ce guide vous permettra de devenir opérationnel aussi rapidement que possible. Nous vous aiderons à configurer votre ordinateur pour le développement, à préparer vos appareils et à installer des outils qui accélèrent le processus de développement d’un MR. 
 
-## <a name="intro-to-mixed-reality"></a>Introduction à la réalité mixte
+## <a name="intro-to-mixed-reality"></a>Présentation de la réalité mixte
 
-Avoir des questions sur ce que nous entendons par « réalité mixte » et sa relation avec la réalité augmentée (AR) et la réalité virtuelle (VR). En bref, réalité mixte est la fusion du monde physique avec le monde numérique, il s’agit d’une gamme qui couvre tous les éléments à partir de la réalité augmentée, où le contenu numérique est placé dans le monde réel, réalité virtuelle, où votre monde réel est presque entièrement remplacé par la numérique. 
+Vous avez peut-être des questions sur ce que nous entendons par «réalité mixte» et sur la façon dont il se réfère à la réalité augmentée (AR) et à la réalité virtuelle (VR). En bref, la réalité mixte est la fusion du monde physique avec l’univers numérique. il s’agit donc d’un spectre qui couvre tout, de la réalité augmentée, où le contenu numérique est placé dans le monde réel jusqu’à la réalité virtuelle, où votre monde réel est presque entièrement remplacé par le numérique. 
 
-![Exemple d’une application de réalité mixte qui prend en charge HoloLens et des casques IMMERSIFS (VR)](images/mr-island.png)<br>
-*Applications de réalité mixte peuvent prendre en charge HoloLens et des casques IMMERSIFS (VR)*
+![Exemple d’application de réalité mixte qui prend en charge les casques HoloLens et immersif (VR)](images/mr-island.png)<br>
+*Les applications de réalité mixte peuvent prendre en charge les casques HoloLens et immersif (VR)*
 
-Nous avons créé la réalité mixte Windows en tant que plateforme de développement unique et ensemble d’outils permettant de couvrir le spectre MR, et nous prenons en charge deux types d’appareils qui couvrent la gamme même : [Microsoft HoloLens](https://www.microsoft.com/hololens), première autonome HOLOGRAPHIQUE casque dans le monde, et [des casques IMMERSIFS réalité mixte Windows et les contrôleurs de mouvement](https://www.microsoft.com/windows/windows-mixed-reality), laquelle se connecter à un PC pour des expériences de réalité virtuelle puissante. Vous pouvez consulter notre ce qui est [une réalité mixte ?] (article pour une réponse plus approfondie si cela vous intéresse.
+Nous avons créé Windows Mixed Reality comme une plate-forme de développement unique et un ensemble d’outils qui peuvent couvrir le spectre de MR, et nous prenons actuellement en charge deux types d’appareils couvrant le même spectre: [Microsoft HoloLens](https://www.microsoft.com/hololens), le premier casque holographique autonome au monde et les contrôleurs [de mouvement et les casques immersifs immersifs de Windows Mixed Reality](https://www.microsoft.com/windows/windows-mixed-reality), qui se connectent à un PC pour de puissantes expériences de réalité virtuelle. Vous pouvez consulter notre présentation [réalité mixte?] (article pour obtenir une réponse plus complète si vous êtes intéressé.
 
-## <a name="choose-your-development-path"></a>Choisissez votre chemin d’accès de développement
+## <a name="choose-your-development-path"></a>Choisir votre chemin de développement
 
-À l’aide de la façon la plus simple de développer une application de réalité mixte [Unity](https://unity3d.com), un outil d’intergiciel (middleware) puissants et les plus souvent utilisé pour le développement de jeux. Si vous souhaitez utiliser un moteur personnalisé, vous pouvez également [générer avec DirectX](directx-development-overview.md), mais la plupart des développeurs MR utiliser Unity pour leurs applications et jeux. Avec Unity, vous serez en mesure de créer une application de réalité mixte qui cible HoloLens, des casques IMMERSIFS (VR) ou les deux !
+Le moyen le plus simple de développer une application de réalité mixte est d’utiliser [Unity](https://unity3d.com), outil middleware puissant et populaire souvent utilisé pour le développement de jeux. Si vous souhaitez utiliser un moteur personnalisé, vous pouvez également effectuer une [génération par rapport à DirectX](directx-development-overview.md), mais la plupart des développeurs de Mr utilisent Unity pour leurs jeux et leurs applications. Avec Unity, vous pouvez créer une application de réalité mixte qui cible les casques HoloLens, immersifs (VR) ou les deux.
 
-## <a name="prepare-your-pc-and-devices-for-development"></a>Préparer vos PC et appareils pour le développement
+## <a name="prepare-your-pc-and-devices-for-development"></a>Préparer votre PC et vos appareils à des fins de développement
 
-Si vous créez une application de réalité mixte qui cible HoloLens, des casques IMMERSIFS (VR) ou les deux, vous allez utiliser un ensemble commun d’outils et API. Vous allez également s’assurer que votre PC est suffisamment puissant pour le développement, que vous allez faire. 
+Que vous soyez en train de créer une application de réalité mixte qui cible des casques HoloLens, immersifs (VR), ou les deux, vous utiliserez un ensemble commun d’outils et d’API. Vous devez également vous assurer que votre ordinateur est suffisamment puissant pour le développement. 
 
 >[!NOTE]
->Vous pouvez trouver des spécifications de nos recommandations sur les PC de développement, les versions prises en charge de chaque outil de logiciels et paramètres correspondants ou configuration note pour chacune d’elles dans le [installer les outils](install-the-tools.md) article. Veuillez consulter cet article avant d’installer les outils ci-dessous.
+>Vous trouverez nos recommandations sur les spécifications des PC de développement, les versions prises en charge de chaque outil logiciel et les paramètres ou notes de configuration appropriés pour chacun d’entre eux dans l’article [installer les outils](install-the-tools.md) . Consultez cet article avant d’installer les outils ci-dessous.
 
-Outils pour installer :
+Outils à installer:
 * [Unity](https://store.unity.com/download)
-* [Visual Studio (avec Windows 10 SDK)](https://developer.microsoft.com/windows/downloads)
-* [Kit de ressources de réalité mixte pour Unity](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/GettingStarted.md)
+* [Visual Studio (avec le kit de développement logiciel Windows 10)](https://developer.microsoft.com/windows/downloads)
+* [Kit de pratiques de réalité mixte pour Unity](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/GettingStarted.md)
 
-Vous souhaiterez également [mis votre appareil cible en mode développeur et configurer Visual Studio pour le déploiement d’applications sur l’appareil cible](using-visual-studio.md).
+Vous pouvez également [mettre votre appareil cible en mode développeur et configurer Visual Studio pour déployer des applications sur l’appareil cible](using-visual-studio.md).
 
-### <a name="a-note-about-the-mixed-reality-toolkit-for-unity"></a>Remarque à propos de la boîte à outils de réalité mixte pour Unity
+### <a name="a-note-about-the-mixed-reality-toolkit-for-unity"></a>Note relative à la réalité mixte Toolkit pour Unity
 
 ![MRTK pour Unity](images/mrtkandunity.png)<br>
 
-***JOJO VEUILLEZ DONNER VIE À CE STADE ET TOUT LE MONDE DIRE POURQUOI MRTK-UNITY EST SI ÉPATANTE ET TOUS LES AVANTAGES OFFERTS QU’À L’INTÉRIEUR DE  :)***
+***YOYO ÉTOFFEZ-VOUS ET DITES À TOUT LE MONDE POURQUOI MRTK-UNITY EST SI INCROYABLE ET TOUT CE QU’IL POSSÈDE DANS:)***
 
-Le Toolkit de réalité mixte est une collection de scripts et les composants destinés à accélérer le développement d’applications qui ciblent Microsoft HoloLens et Windows Mixed Reality casques. Le projet est destiné à réduire les barrières à l’entrée à créer des applications de réalité mixte et contribuer à la Communauté, tous les besoins d’évolution.
+La boîte à outils de réalité mixte est un ensemble de scripts et de composants destinés à accélérer le développement d’applications ciblant Microsoft HoloLens et les casques de réalité mixte Windows. Le projet a pour but de réduire le nombre d’obstacles qui gênent la création d’applications de réalité mixte et d’apporter une contribution à la Communauté de la réalité mixte.
 
-## <a name="start-your-first-mr-project"></a>Démarrer votre premier projet MR
+## <a name="start-your-first-mr-project"></a>Commencez votre premier projet MR
 
-Maintenant que votre PC et les périphériques sont configurés, vous êtes prêt à créer votre premier projet de réalité mixte dans Unity. Suivez notre premier cours academy MR, [MR principes de base 100 : Mise en route avec Unity](holograms-100.md), et à la fin, vous aurez un cube soit opérationnel dans un casque de réalité mixte.
+Maintenant que votre PC et vos appareils sont configurés, vous êtes prêt à créer votre premier projet de réalité mixte dans Unity. Suivez notre premier cours sur Monsieur Academy, [Monsieur Basics 100: Prise en main d'](holograms-100.md)Unity, et à la fin, vous disposerez d’un cube opérationnel dans un casque de réalité mixte.
 
 ![Capture d’écran d’un cube dans un projet Unity de réalité mixte](images/mr-cube.PNG)<br>
-*Votre premier projet de réalité mixte dans Unity - Bonjour tout le monde !*
+*Votre premier projet de réalité mixte dans Unity-Hello World!*
 
 ## <a name="learn-more-and-get-help"></a>En savoir plus et obtenir de l’aide
 
-Maintenant que vous avez créé votre premier projet MR, vous avez probablement faim et bien plus encore ! Voici quelques ressources qui peut aider à :
-* [Mixte de documentation pour développeurs réalité](mixed-reality.md) - vous êtes déjà ici, mais il est bien plus encore à consulter, y compris la documentation technique, des conseils de conception, des exemples de projets et des études de cas.
-* [Didacticiels de la réalité de mixte](tutorials.md) -suivre des didacticiels qui couvrent tous les éléments à partir de la configuration de projets, à l’implémentation des principaux blocs de construction MR, à l’intégration d’Azure cloud services dans votre application MR.
-* [Découvrez Unity](https://unity3d.com/learn) -site Web de Unity propose des didacticiels, des projets et des sessions de formation en direct pour les créateurs à chaque étape de la formation.
+Maintenant que vous avez créé votre premier projet MR, vous avez probablement d’autres à vous en faire! Voici quelques ressources qui devraient vous aider:
+* [Documentation du développeur de la réalité mixte](mixed-reality.md) : vous êtes déjà ici, mais il y a bien plus à consulter, y compris la documentation technique, des conseils de conception, des exemples de projets et des études de cas.
+* [Didacticiels de réalité mixte](tutorials.md) : suivez les didacticiels relatifs à la configuration des projets, à l’implémentation des blocs de construction RM de base, à l’intégration des services Cloud Azure dans votre application RM.
+* [Découvrez Unity](https://unity3d.com/learn) : le site Web de Unity propose des didacticiels, des projets et des sessions de formation en direct pour les créateurs à chaque étape de l’apprentissage.
 
-Vous pouvez également vous aider à partir de ces ressources de communauté très :
-* [Une réalité mixte forums de développeurs](https://forums.hololens.com/) -le forum officiel pour les développeurs de réalité mixte à poser et répondre aux questions, ainsi que pour lire les actualités de développement MR directement auprès de Microsoft.
-* [Canal de HoloDevelopers Slack](https://holodevelopersslack.azurewebsites.net/) -le plus robuste et ingénieux externes mixte de canal de développeur spécifique à la réalité ; ici les développeurs d’être compétentes et utile.
-* [Forums de Unity](https://forum.unity3d.com/) -forums officielles de Unity.
+Vous pouvez également obtenir de l’aide auprès de ces formidables ressources de la communauté:
+* [Forums de développeurs de réalité mixte](https://forums.hololens.com/) : forum officiel pour les développeurs de réalité mixte pour poser et répondre à des questions, ainsi que lire les actualités de développement Mr directement de Microsoft.
+* [Canal HoloDevelopers](https://holodevelopersslack.azurewebsites.net/) -le canal de développeur spécifique à la réalité mixte, le plus robuste et le ingénieux; les développeurs ici sont compétents et utiles.
+* [Forums Unity](https://forum.unity3d.com/) : forums officiels Unity.

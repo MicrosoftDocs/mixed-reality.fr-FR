@@ -1,38 +1,38 @@
 ---
-title: Rendu de volume
-description: Images volumétriques contiennent des informations enrichies avec opacité de couleur dans le volume qui ne peut pas être facilement exprimé en tant que surfaces. Découvrez comment rendre efficacement des images volumétriques dans Windows Mixed Reality.
+title: Rendu du volume
+description: Les images volumétriques contiennent des informations riches avec opacité et couleur dans tout le volume qui ne peuvent pas être facilement exprimées en tant que surfaces. Découvrez comment restituer efficacement des images volumétriques dans Windows Mixed Reality.
 author: KevinKennedy
 ms.author: kkennedy
 ms.date: 03/21/2018
 ms.topic: article
-keywords: image volumétrique, de rendu de volume, de performances, de réalité mixte
+keywords: image volumétrique, rendu volume, performances, réalité mixte
 ms.openlocfilehash: dc0e75b916ab7cc96be1eccb4ad32ac71f5b75ff
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59596682"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63548633"
 ---
-# <a name="volume-rendering"></a>Rendu de volume
+# <a name="volume-rendering"></a>Rendu du volume
 
-Pour médicales IRM ou d’ingénierie de volumes, consultez [Volume rendu sur Wikipedia](https://en.wikipedia.org/wiki/Volume_rendering). Ces « images volumétriques » contiennent des informations riches avec opacité de couleur dans le volume qui ne peut pas être facilement exprimé en tant que surfaces comme [mailles polygonales](https://en.wikipedia.org/wiki/Polygon_mesh).
+Pour les volumes d’ingénierie ou d’IRM médicaux, consultez [rendu en volume sur Wikipédia](https://en.wikipedia.org/wiki/Volume_rendering). Ces « images volumétriques » contiennent des informations riches avec de l’opacité et des couleurs dans tout le volume qui ne peuvent pas être facilement exprimées comme surfaces telles que les [maillages polygonaux](https://en.wikipedia.org/wiki/Polygon_mesh).
 
-Pour améliorer les performances des solutions clés
-1. DÉFECTUEUX : Approche naïve : Afficher l’intégralité du Volume, généralement s’exécute trop lentement
-2. BON : Plan de coupe : Afficher uniquement un seul secteur du volume
-3. BON : Coupe de Volume secondaire : Afficher uniquement quelques couches du volume
-4. BON : Réduisez la résolution de la restitution de volume (voir « Rendu de scènes résolution mixte »)
+Solutions clés pour améliorer les performances
+1. INCORRECTE Approche naïve: Afficher tout le volume, s’exécute généralement trop lentement
+2. ÉTAT Plan sécant: Afficher une seule tranche du volume
+3. ÉTAT Sous-volume de coupe: Afficher uniquement quelques couches du volume
+4. ÉTAT Réduire la résolution du rendu du volume (voir «Mixed Resolution Scene Rendering»)
 
-Il n'existe qu’une certaine quantité d’informations qui peuvent être transférées à partir de l’application à l’écran dans une image particulière, c’est la bande passante totale de la mémoire. Tout traitement (ou « trame ») nécessaires pour transformer les données pour la présentation également nécessite également de temps. Les considérations principales lors de rendu de volume sont par conséquent :
-* Largeur d’écran * hauteur d’écran * nombre de l’écran * Volume couches-sur-que-Pixel = Total-Volume-exemples-image par image
-* 1028 * 720 * 2 * 256 = 378961920 (100 %) (les volumes res complets : trop grand nombre d’exemples)
-* 1028 * 720 * 2 * 1 = 1480320 (0.3 % de la pleine) (tranche dynamique : 1 exemple par pixel, s’exécute correctement)
-* 1028 * 720 * 2 * 10 = 14803200 (3.9 % de la pleine) (tranche de volume secondaire : 10 échantillons par pixel, assez performante, recherche 3d)
-* 200 * 200 * 2 * 256 = 20480000 (5 % de la pleine) (baisser le volume de res : moins de pixels, chiffrement de volume complet, recherche blury 3d mais un peu plus tard)
+Il n’existe qu’une certaine quantité d’informations qui peuvent être transférées de l’application à l’écran dans n’importe quel cadre particulier. il s’agit de la bande passante de mémoire totale. En outre, tout traitement (ou «ombrage») requis pour transformer ces données en vue de leur présentation nécessite également du temps. Les principales considérations à prendre en compte lors du rendu du volume sont les suivantes:
+* Screen-largeur * Screen-hauteur * Screen-Count * volume-Layers-on-pixel = total-volume-Samples per-Frame
+* 1028 * 720 * 2 * 256 = 378961920 (100%) (Full res volume: exemples trop nombreux)
+* 1028 * 720 * 2 * 1 = 1480320 (0,3% du total) (tranche fine: 1 échantillon par pixel, s’exécute sans heurts)
+* 1028 * 720 * 2 * 10 = 14803200 (3,9% de l’intégralité) (sous-volume de volume: 10 échantillons par pixel, s’exécutent assez facilement, semble 3D)
+* 200 * 200 * 2 * 256 = 20480000 (5% de l’ensemble) (volume de ressources inférieur: moins de pixels, volume complet, semble 3D mais flou)
 
-## <a name="representing-3d-textures"></a>Représentant les Textures 3D
+## <a name="representing-3d-textures"></a>Représentation de textures 3D
 
-Sur l’UC :
+Sur le processeur:
 
 ```
 public struct Int3 { public int X, Y, Z; /* ... */ }
@@ -67,7 +67,7 @@ public struct Int3 { public int X, Y, Z; /* ... */ }
  }
 ```
 
-Sur le GPU :
+Sur le GPU:
 
 ```
 float3 _VolBufferSize;
@@ -85,9 +85,9 @@ float3 _VolBufferSize;
  }
 ```
 
-## <a name="shading-and-gradients"></a>Ombrage et des dégradés
+## <a name="shading-and-gradients"></a>Ombrage et dégradés
 
-Guide pratique pour ombrer un volume, telles qu’IRM, pour la visualisation utile. La principale méthode consiste à disposer d’une fenêtre d’intensité (min et max) que vous souhaitez voir intensité dans et simplement mettre à l’échelle dans cet espace pour afficher l’intensité noir et blanche. Une rampe de couleur peut être appliquée aux valeurs dans la plage et stockée en tant qu’une texture, afin que les différentes parties du spectre intensité peuvent être grisées différentes couleurs :
+Comment ombrer un volume, par exemple MRI, pour une visualisation utile. La méthode principale consiste à avoir une «fenêtre d’intensité» (un minimum et un maximum) dont vous souhaitez voir les intensités, et simplement mettre à l’échelle dans cet espace pour voir l’intensité en noir et blanc. Une «rampe de couleurs» peut ensuite être appliquée aux valeurs de cette plage et être stockée sous la forme d’une texture, de sorte que différentes parties du spectre d’intensité peuvent avoir des couleurs différentes:
 
 ```
 float4 ShadeVol( float intensity ) {
@@ -98,16 +98,16 @@ float4 ShadeVol( float intensity ) {
    color.rgba = tex2d( ColorRampTexture, float2( unitIntensity, 0 ) );
 ```
 
-Dans de nombreux nos applications nous stockons dans notre volume à la fois une valeur brute intensité et un index de segmentation (pour segmenter les différentes parties telles que l’apparence et le segment, ces segments sont généralement créés par des experts dans les outils dédiés). Cela peut être combiné avec l’approche ci-dessus pour placer une couleur différente ou une bande des couleurs différentes pour chaque index de segment :
+Dans de nombreuses applications que nous stockons dans notre volume à la fois une valeur d’intensité brute et un «index de segmentation» (pour segmenter différentes parties telles que la peau et le segment, ces segments sont généralement créés par des experts dans des outils dédiés). Cela peut être combiné avec l’approche ci-dessus pour mettre une couleur différente, ou même une gamme de couleurs différente pour chaque index de segment:
 
 ```
 // Change color to match segment index (fade each segment towards black):
  color.rgb = SegmentColors[ segment_index ] * color.a; // brighter alpha gives brighter color
 ```
 
-## <a name="volume-slicing-in-a-shader"></a>Volume de découpage dans un nuanceur
+## <a name="volume-slicing-in-a-shader"></a>Découpage de volume dans un nuanceur
 
-Une belle première étape consiste à créer un « plan de découpage » qui peut parcourir le volume, « découpage il », et comment l’analyse des valeurs à chaque point. Cela suppose qu’il existe un cube « VolumeSpace », qui représente où le volume est dans l’espace universel, ce qui peut être utilisé comme référence pour placer les points :
+La première étape consiste à créer un «plan de découpage» qui peut se déplacer dans le volume, le découpage et la façon dont les valeurs d’analyse sont à chaque point. Cela suppose qu’il existe un cube «VolumeSpace», qui représente l’endroit où le volume se trouve dans l’espace universel, qui peut être utilisé comme référence pour placer les points:
 
 ```
 // In the vertex shader:
@@ -120,9 +120,9 @@ Une belle première étape consiste à créer un « plan de découpage » qui 
  float4 color = ShadeVol( SampleVol( volSpace ) );
 ```
 
-## <a name="volume-tracing-in-shaders"></a>Suivi du volume dans les nuanceurs
+## <a name="volume-tracing-in-shaders"></a>Suivi de volume dans les nuanceurs
 
-Comment utiliser le GPU pour effectuer le suivi de volume secondaire (Guide voxels quelques couches puis approfondie sur les données à partir du serveur au premier plan) :
+Comment utiliser le GPU pour effectuer le suivi des sous-volumes (en examinant quelques voxels, puis les couches sur les données de l’arrière vers l’avant):
 
 ```
 float4 AlphaBlend(float4 dst, float4 src) {
@@ -164,9 +164,9 @@ float4 AlphaBlend(float4 dst, float4 src) {
  float4 color = volTraceSubVolume( volSpace, cameraInVolSpace );
 ```
 
-## <a name="whole-volume-rendering"></a>Rendu de l’intégralité du Volume
+## <a name="whole-volume-rendering"></a>Rendu de volume complet
 
-Modification du code de sous-volume ci-dessus, nous obtenons :
+En modifiant le code de sous-volume ci-dessus, nous obtenons:
 
 ```
 float4 volTraceSubVolume(float3 objPosStart, float3 cameraPosVolSpace) {
@@ -177,15 +177,15 @@ float4 volTraceSubVolume(float3 objPosStart, float3 cameraPosVolSpace) {
    int numLoops = min( distanceInVoxels, maxSamples ); // put a min on the voxels to sample
 ```
 
-## <a name="mixed-resolution-scene-rendering"></a>Rendu de scènes résolution mixte
+## <a name="mixed-resolution-scene-rendering"></a>Rendu de scène à résolution mixte
 
-Comment afficher une partie de la scène avec une faible résolution et replacer dans la place :
-1. Le programme d’installation des deux caméras hors écran, une pour suivre chaque œil qui mettent à jour de chaque image
-2. Le programme d’installation deux basse résolution des cibles de rendu (par exemple 200 x 200 chaque), que les caméras de rendu
-3. Le programme d’installation un quadruple déplace devant l’utilisateur
+Comment restituer une partie de la scène avec une résolution faible et la remettre en place:
+1. Configurer deux caméras hors écran, une pour suivre chaque œil qui met à jour chaque image
+2. Configurer deux cibles de rendu basse résolution (par exemple, 200x200 chacune), que les caméras affichent
+3. Configurer un Quad qui se déplace devant l’utilisateur
 
-Chaque image :
-1. Dessiner des cibles de rendu pour chaque œil en basse résolution (données de volume, les nuanceurs coûteuses, etc.)
-2. Dessiner la scène normalement en tant que pleine résolution (maille, l’interface utilisateur, etc..)
-3. Dessiner un quadruple devant l’utilisateur, sur la scène et de projet les convertisseurs de basse à cette étape.
-4. Résultat : la combinaison visual d’éléments de haute résolution avec des données de volume basse résolution mais à haute densité.
+Chaque frame:
+1. Dessinez les cibles de rendu pour chaque œil à basse résolution (données de volume, nuanceurs onéreux, etc.).
+2. Dessinez la scène normalement en tant que résolution complète (mailles, UI, etc.)
+3. Dessinez une quadruple face avant l’utilisateur, sur la scène, et projetez les rendus basse résolution sur cela.
+4. Résultat: combinaison visuelle d’éléments à pleine résolution avec des données de volume à faible résolution mais à haute densité.
