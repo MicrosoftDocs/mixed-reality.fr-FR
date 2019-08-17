@@ -6,12 +6,12 @@ ms.author: kurtie
 ms.date: 03/21/2018
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, Academy, didacticiel, geste
-ms.openlocfilehash: 76d2b4c0ac3d0a3783b091f7dc8c39548a18b548
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 694f51f1b56588e100d6d2676a8194d7e9936133
+ms.sourcegitcommit: e9a55528965048ce34f8247ef6e544f9f432ee37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63522452"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69559879"
 ---
 >[!NOTE]
 >Les didacticiels d’Académie de la réalité mixte ont été conçus avec les casques immersif (1er génération) et de réalité mixte à l’esprit.  Par conséquent, nous pensons qu’il est important de ne pas mettre en place ces didacticiels pour les développeurs qui cherchent toujours des conseils en matière de développement pour ces appareils.  Ces didacticiels ne seront **_pas_** mis à jour avec les derniers ensembles d’outils ou interactions utilisés pour HoloLens 2.  Ils seront conservés pour continuer à travailler sur les appareils pris en charge. Une nouvelle série de didacticiels sera publiée à l’avenir qui vous montrera comment développer pour HoloLens 2.  Cet avis sera mis à jour avec un lien vers ces didacticiels lors de leur publication.
@@ -121,6 +121,9 @@ En cas de déploiement sur un casque immersif:
 * S’abonner aux événements de suivi de la main.
 * Utilisez les commentaires des curseurs pour montrer aux utilisateurs quand une main fait l’objet d’un suivi.
 
+>[!NOTE]
+>Sur HoloLens 2, les mains détectées se déclenchent chaque fois que les mains sont visibles (pas seulement lorsqu’un doigt pointe vers le haut).
+
 ### <a name="instructions"></a>Instructions
 
 * Dans le volet **hiérarchie** , développez l’objet **InputManager** .
@@ -172,7 +175,7 @@ Les **données d’État du curseur** fonctionnent de la manière suivante:
 Pour utiliser des mouvements de navigation dans notre application, nous allons modifier **GestureAction.cs** pour faire pivoter les objets lorsque le mouvement de navigation se produit. En outre, nous ajouterons des commentaires au curseur à afficher lorsque la navigation est disponible.
 
 1. Dans le volet **hiérarchie** , développez **CursorWithFeedback**.
-2. Dans le  dossier hologrammes, recherchez la ressource **ScrollFeedback** .
+2. Dans le dossier hologrammes, recherchez la ressource **ScrollFeedback** .
 3. Glissez-déplacez le Prefab **ScrollFeedback** sur le gameobject **CursorWithFeedback** dans la **hiérarchie**.
 4. Cliquez sur **CursorWithFeedback**.
 5. Dans le volet de l' **inspecteur** , cliquez sur le bouton **Ajouter un composant** .

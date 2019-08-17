@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, conception, mappage spatial, HoloLens, reconstruction de surface, maille
-ms.openlocfilehash: 451213a79e1d482d64725ce750065611830beec3
-ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
+ms.openlocfilehash: 02e64727f9a23bea28e018d7c4e5a8b89c152447
+ms.sourcegitcommit: 60f73ca23023c17c1da833c83d2a02f4dcc4d17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66829960"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566009"
 ---
 # <a name="spatial-mapping-design"></a>Conception de mappage spatial
 
@@ -45,49 +45,9 @@ Visualisez les surfaces lors du placement ou du déplacement d’hologrammes (ut
 
 ## <a name="what-influences-spatial-mapping-quality"></a>Qu’est-ce qui influence la qualité du mappage spatial?
 
-Afin d’offrir la meilleure expérience utilisateur, il est important de comprendre les facteurs qui affectent la qualité des données de mappage spatiale collectées par HoloLens.
-
-Les erreurs dans les données de mappage spatiale sont classées dans l’une des trois catégories suivantes:
-* **Trous**: Les surfaces réelles sont absentes des données de mappage spatiale.
-* **Hallucinations**: Des surfaces existent dans les données de mappage spatiale qui n’existent pas dans le monde réel.
-* **Biais**: Les surfaces dans les données de mappage spatiale sont alignées de façon imparfaite avec les surfaces réelles, push dans ou extraites.
-
-Plusieurs facteurs peuvent affecter la fréquence et la gravité de ces erreurs:
-
-* **Mouvement de l’utilisateur**
-   * La façon dont l’utilisateur parcourt son environnement détermine la qualité de l’analyse de l’environnement, de sorte que l’utilisateur peut avoir besoin d’aide pour obtenir une bonne analyse.
-   * L’appareil photo utilisé pour l’analyse fournit des données dans un cône de 70 degrés, d’un minimum de 0,8 mètres à une distance maximale de 3,1 mètres de l’appareil photo. Les surfaces réelles ne sont analysées que dans ce champ de vue. Notez que ces valeurs sont susceptibles d’être modifiées dans les versions ultérieures.
-   * Si l’utilisateur n’obtient jamais dans les 3,1 mètres d’un objet, il ne sera pas analysé.
-   * Si l’utilisateur ne voit qu’un objet à une distance inférieure à 0,8 mètres, il n’est pas analysé (cela évite d’analyser les mains de l’utilisateur).
-   * Si l’utilisateur ne regarde jamais vers le haut (ce qui est relativement normal), le plafond n’est probablement pas analysé.
-   * Si un utilisateur ne cherche jamais derrière un meuble ou un mur, les objets qu’il bloqués ne seront pas analysés.
-   * Les surfaces ont tendance à être numérisées à une qualité supérieure lorsqu’elles sont affichées au-dessus plutôt qu’à un angle superficiel.
-   * Si le système de suivi des têtes du HoloLens échoue momentanément (ce qui peut se produire en raison d’un mouvement rapide de l’utilisateur, un éclairage médiocre, des murs sans fonctionnalité ou des caméras couvertes), cela peut introduire des erreurs dans les données de mappage spatiale. Ces erreurs seront corrigées au fil du temps, à mesure que l’utilisateur continuera de se déplacer et d’analyser son environnement.
-
-* **Matériaux de surface**
-   * Les matériaux trouvés sur des surfaces réelles varient considérablement. Elles ont un impact sur la qualité des données de mappage spatiale, car elles affectent la façon dont la lumière infrarouge est reflétée.
-   * Les surfaces sombres ne peuvent pas être numérisées jusqu’à ce qu’elles soient plus proches de l’appareil photo, car elles reflètent moins de lumière.
-   * Certaines surfaces peuvent être tellement sombres qu’elles reflètent trop peu de lumière pour être numérisées à partir de n’importe quelle distance, de sorte qu’elles introduisent des erreurs de trous à l’emplacement de la surface et parfois également derrière la surface.
-   * En particulier, les surfaces brillantes ne peuvent être numérisées qu’en cas d’affichage, et non en vue d’un angle superficiel.
-   * Les miroirs, car ils créent des réflexions Illusory d’espaces et de surfaces réels, peuvent entraîner des erreurs de trous et des erreurs hallucination.
-
-* **Mouvement de scène**
-   * Le mappage spatial s’adapte rapidement aux modifications de l’environnement, telles que le déplacement de personnes ou l’ouverture et la fermeture de portes.
-   * Toutefois, le mappage spatial peut s’adapter uniquement aux modifications apportées à une zone lorsque cette zone est clairement visible par l’appareil photo utilisé pour l’analyse.
-   * Pour cette raison, il est possible que cette adaptation se passe en arrière-plan de la réalité, ce qui peut provoquer des erreurs de trous ou de hallucination.
-   * Par exemple, un utilisateur balaie un ami, puis se contourne alors que l’ami quitte la salle. Une représentation «fantôme» de l’ami (erreur hallucination) est conservée dans les données de mappage spatiale, jusqu’à ce que l’utilisateur reprenne et réanalyse l’espace où l’ami était debout.
-
-* **Interférence d’éclairage**
-   * La lumière infrarouge ambiante dans la scène peut interférer avec l’analyse, par exemple une forte lumière solaire venant dans une fenêtre.
-   * En particulier, les surfaces brillantes peuvent interférer avec l’analyse des surfaces avoisinantes, la lumière les rebonds provoquant des erreurs de décalage.
-   * Les surfaces brillantes qui reflètent la lumière directement dans l’appareil photo peuvent perturber l’espace à proximité, soit en provoquant des hallucinations à mi-air flottants, soit en retardant l’adaptation au mouvement de la scène.
-   * Deux appareils HoloLens dans la même salle ne doivent pas interférer les uns avec les autres, mais la présence de plus de cinq appareils HoloLens peut entraîner des interférences.
-
-Il peut être possible d’éviter ou de corriger certaines de ces erreurs. Toutefois, vous devez concevoir votre application afin que l’utilisateur puisse atteindre ses objectifs même en présence d’erreurs dans les données de mappage spatiale.
+Plusieurs facteurs, détaillés [ici](environment-considerations-for-hololens.md), peuvent affecter la fréquence et la gravité de ces erreurs.  Toutefois, vous devez concevoir votre application afin que l’utilisateur puisse atteindre ses objectifs même en présence d’erreurs dans les données de mappage spatiale.
 
 ## <a name="the-environment-scanning-experience"></a>Expérience d’analyse de l’environnement
-
-HoloLens apprend les surfaces dans son environnement à mesure que l’utilisateur les examine. Au fil du temps, le HoloLens génère une analyse de toutes les parties de l’environnement qui ont été observées. Il met également à jour l’analyse en fonction des modifications apportées à l’environnement. Cette analyse est automatiquement conservée entre les lancements de l’application.
 
 Chaque application qui utilise le mappage spatial doit envisager de fournir une «expérience d’analyse»; processus par lequel l’application guide l’utilisateur pour analyser les surfaces nécessaires au bon fonctionnement de l’application.
 
@@ -104,7 +64,7 @@ Pour faciliter la conception de l’expérience d’analyse, prenez en compte le
 
 * **Aucune expérience d’analyse**
    * Une application peut fonctionner parfaitement sans aucune expérience d’analyse guidée. elle présente des informations sur les surfaces observées au cours du déplacement des utilisateurs naturels.
-   * Par exemple, une application qui permet à l’utilisateur de dessiner sur des surfaces avec des spraypaint holographiques nécessite uniquement des connaissances des surfaces actuellement visibles pour l’utilisateur.
+   * Par exemple, une application qui permet à l’utilisateur de dessiner sur des surfaces avec la peinture de pulvérisation holographique ne nécessite que les connaissances des surfaces actuellement visibles pour l’utilisateur.
    * L’environnement peut être complètement analysé s’il s’agit d’un environnement dans lequel l’utilisateur a déjà passé beaucoup de temps à l’aide de HoloLens.
    * Gardez à l’esprit que l’appareil photo utilisé par le mappage spatial ne peut voir que 3,1 m devant l’utilisateur; par conséquent, le mappage spatial ne connaîtra pas d’autres surfaces distantes, sauf si l’utilisateur les a observées à partir d’une distance plus proche dans le passé.
    * L’utilisateur comprend donc les surfaces qui ont été analysées, l’application doit fournir un retour visuel à cet effet. par exemple, le cast d’ombres virtuelles sur des surfaces numérisées peut aider l’utilisateur à placer des hologrammes sur ces surfaces.

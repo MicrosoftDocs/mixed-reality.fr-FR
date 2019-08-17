@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: 97dd8fce1ebe53efc37cb48cde7dc9e207be9a42
-ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
+ms.openlocfilehash: f45aa7e2f07a8a67cd56f0aae140de3a68afc918
+ms.sourcegitcommit: e9a55528965048ce34f8247ef6e544f9f432ee37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68701989"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69559891"
 ---
 # <a name="7-creating-a-lunar-module-sample-application"></a>7. Création d’un exemple d’application de module lunaire
 
@@ -51,7 +51,7 @@ Si vous développez l’objet de jeu Launcher_Tutorial Rocket dans votre hiérar
 
 > Remarque : Les noms d’objets de jeu que vous voyez dans votre hiérarchie de scène de base ne correspondent pas aux noms des objets dans la scène.
 
-Étape 2 : Ajoutez une source audio au module lunaire. Assurez-vous que le module lunaire est sélectionné dans votre hiérarchie de scènes de base, puis cliquez sur Ajouter un composant. Recherchez source audio, puis ajoutez-le à l’objet. Laissez-le vide pour l’instant. Nous allons l’utiliser plus tard pour jouer le son du lancement.
+Étape 2 : Ajoutez une source audio au module lunaire. Assurez-vous que le module lunaire est sélectionné dans votre hiérarchie de scènes de base, puis cliquez sur Ajouter un composant. Recherchez source audio, puis ajoutez-le à l’objet. Laissez-le vide pour l’instant, mais veillez à activer la case à cocher «spatialiser» pour activer l’audio spatial. Nous allons l’utiliser plus tard pour jouer le son du lancement.
 
  ![Lesson6 fichier chapter1 Step2im](images/Lesson6_Chapter1_step2im.PNG)  
 Étape 3 : Ajoutez le script, activez les indicateurs de positionnement. Cliquez sur Ajouter un composant, puis recherchez indicateurs de position de basculement. Il s’agit d’un script personnalisé qui vous permet d’activer et de désactiver les indicateurs translucides (objets avec les rayons x) mentionnés précédemment.  
