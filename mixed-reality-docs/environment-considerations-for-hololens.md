@@ -6,12 +6,12 @@ ms.author: dobrown
 ms.date: 04/22/2019
 ms.topic: article
 keywords: cadre holographique, champ de vision, angle de fonctionnement, étalonnage, espaces, environnement, procédure
-ms.openlocfilehash: 0070455792e09cd59741362b201ca6b7b9af0aec
-ms.sourcegitcommit: f5c1dedb3b9e29f27f627025b9e7613931a7ce18
+ms.openlocfilehash: fd5c5020916b3fde6f91663135c3bc2b6c334b44
+ms.sourcegitcommit: 60f73ca23023c17c1da833c83d2a02f4dcc4d17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64670174"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69565989"
 ---
 # <a name="environment-considerations-for-hololens"></a>Considérations environnementales pour HoloLens
 
@@ -21,7 +21,7 @@ Les hologrammes que vous placez restent là où vous les avez placés, même si 
 
 ## <a name="setting-up-an-environment"></a>Configuration d’un environnement
 
-Les appareils HoloLens savent comment placer des hologrammes stables et précis en effectuant le *suivi* des utilisateurs dans un espace. Si le suivi n’est pas correct, l’appareil ne comprend pas l’environnement ou l’utilisateur au sein de celui-ci. les hologrammes peuvent donc apparaître dans les mauvais endroits, ne pas apparaître dans le même emplacement à chaque fois, ou ne pas apparaître du tout.
+Les appareils HoloLens savent comment placer des hologrammes stables et précis en effectuant le *suivi* des utilisateurs dans un espace. Si le suivi n’est pas correct, l’appareil ne comprend pas l’environnement ou l’utilisateur au sein de celui-ci. les hologrammes peuvent donc apparaître dans les mauvais endroits, ne pas apparaître dans le même emplacement à chaque fois, ou ne pas apparaître du tout. Les données utilisées pour suivre les utilisateurs sont représentées dans la *carte spatiale*. 
 
 Le suivi des performances est fortement influencé par l’environnement dans lequel se trouve l’utilisateur et le paramétrage d’un environnement pour induire un suivi stable et cohérent est un art plutôt qu’une science. De nombreux facteurs environnementaux différents sont fusionnés pour permettre le suivi, mais en tant que développeur de réalité mixte, vous pouvez garder à l’esprit plusieurs facteurs pour paramétrer un espace afin d’améliorer le suivi.
  
@@ -55,10 +55,12 @@ Si vous avez deux zones ou régions qui semblent identiques, le dispositif de su
 
 Pour éviter les repères, essayez d’éviter les zones identiques dans le même espace. Les zones identiques peuvent parfois inclure des stations de fabrique, des fenêtres sur un bâtiment, des racks de serveurs ou des stations de travail. L’étiquetage des zones ou l’ajout de fonctionnalités uniques à chaque zone d’aspect similaire peut aider à atténuer les repères.
  
-### <a name="temporal-stability-of-a-space"></a>Stabilité temporelle d’un espace
+### <a name="movement-in-a-space"></a>Déplacement dans un espace
 Si votre environnement est en constante évolution et change, l’appareil n’a pas de fonctionnalités stables à rechercher. 
 
 Plus les objets mobiles sont présents dans un espace, y compris les personnes, plus il est facile de perdre le suivi. Les tapis roulants, les éléments dans différents États de construction et un grand nombre de personnes dans un espace ont tous été connus pour provoquer des problèmes de suivi.
+
+Le HoloLens peut rapidement s’adapter à ces modifications, mais uniquement lorsque cette zone est clairement visible pour l’appareil. Les zones qui ne sont pas considérées comme fréquentes peuvent avoir un retard en arrière-plan, ce qui peut provoquer des erreurs dans la carte spatiale. Par exemple, un utilisateur balaie un ami, puis se contourne alors que l’ami quitte la salle. Une représentation «fantôme» de l’ami est conservée dans les données de mappage spatiale jusqu’à ce que l’utilisateur relance l’analyse de l’espace vide.
  
 ### <a name="proximity-of-the-user-to-items-in-the-space"></a>Proximité de l’utilisateur aux éléments de l’espace
 De même que la façon dont les êtres humains ne peuvent pas se concentrer bien sur les objets à proximité des yeux, HoloLens éprouve des difficultés quand les objets sont proches des appareils photo. Si un objet est trop proche pour être visible avec les deux caméras, ou si un objet bloque un appareil photo, l’appareil rencontre beaucoup plus de problèmes avec le suivi de l’objet. 
@@ -76,11 +78,7 @@ Tant que le Wi-Fi est activé, les données cartographiques sont corrélées ave
 L’identification réseau (par exemple, SSID, adresse MAC) n’est pas envoyée à Microsoft, et toutes les références WiFi sont conservées localement sur le HoloLens.
 
 ## <a name="mapping-new-spaces"></a>Mappage de nouveaux espaces
-Lorsque vous entrez un nouvel espace (ou chargez un espace existant), un graphique maillé s’étale sur l’espace. Cela signifie que votre appareil est en mode [de mappage de votre environnement](spatial-mapping-design.md). 
-
-Si vous avez des difficultés à placer des hologrammes, essayez de vous déplacer autour de l’espace afin que HoloLens puisse le mapper plus complètement. 
-
-Si votre HoloLens ne peut pas mapper votre espace ou n’est pas à l’étalonnage, vous pouvez entrer en mode limité. En mode limité, vous ne pourrez pas placer des hologrammes dans votre environnement.
+Lorsque vous entrez un nouvel espace (ou chargez un espace existant), un graphique maillé s’étale sur l’espace. Cela signifie que votre appareil est en mode de mappage de votre environnement. Alors qu’un HoloLens apprend un espace dans le temps, il y a des [trucs et astuces pour mapper les espaces](use-hololens-in-new-spaces.md). 
 
 ## <a name="environment-management"></a>Gestion de l’environnement
 Il existe deux paramètres qui permettent aux utilisateurs de «nettoyer» les hologrammes et de faire en sorte que HoloLens «oublie» un espace.  Ils se trouvent dans «hologrammes et environnements» dans l’application paramètres, le deuxième paramètre apparaissant également sous «confidentialité» dans l’application paramètres.
@@ -89,20 +87,14 @@ Il existe deux paramètres qui permettent aux utilisateurs de «nettoyer» les h
 
 2.  Supprimer tous les hologrammes: en sélectionnant ce paramètre, HoloLens efface toutes les données cartographiques et les hologrammes ancrés dans l’ensemble des bases de données d’espaces.  Aucun hologramme n’est redécouvert et tous les hologrammes doivent être placés à nouveau pour stocker les sections de mappage dans la base de données.
 
-### <a name="managing-your-spaces"></a>Gestion des espaces
-
-Les sections cartographiques et les différents espaces ont été réduits dans une base de données unique, stockée localement sur l’appareil HoloLens. La base de données de mappage est stockée de manière sécurisée, avec accès uniquement au système interne et jamais à un utilisateur de l’appareil, même lorsqu’elle est connectée à un PC et/ou à l’aide de l’application de l’Explorateur de fichiers. Lorsque BitLocker est activé, les données de mappage stockées sont également chiffrées.
-
-Il existe plusieurs composants cartographiques lorsque les hologrammes sont placés à différents emplacements sans chemin de connexion entre les emplacements/hologrammes.  Les hologrammes ancrés dans la même section de mappage sont considérés comme «proches» dans l’espace actuel.
-
-Il existe une API de développeur pour exporter un petit sous-ensemble de l' «espace actuel» (une partie du composant de carte qui est actuellement reconnu) pour activer les scénarios d’hologrammes partagés.  Il n’existe actuellement aucun mécanisme permettant de télécharger la totalité de la base de données de tous les espaces mappés.
-
 
 ## <a name="hologram-quality"></a>Qualité de l’hologramme
 
 Les hologrammes peuvent être placés dans l’ensemble de votre environnement (haute, faible, etc.), mais vous les verrez par le biais d’un [cadre holographique](holographic-frame.md) qui se trouve devant vos yeux. Pour obtenir la meilleure vue, veillez à ajuster votre appareil pour que vous puissiez voir le frame entier. Et n’hésitez pas à vous familiariser avec votre environnement et à explorer!
 
 Pour que vos [hologrammes](hologram.md) soient nets, clairs et stables, votre HoloLens doit être calibré juste pour vous. Quand vous configurez pour la première fois votre HoloLens, vous serez guidé tout au long de ce processus. Plus tard, si les hologrammes ne s’affichent pas correctement ou si vous voyez de nombreuses erreurs, vous pouvez effectuer des ajustements.
+
+Si vous avez des difficultés à mapper des espaces, essayez de supprimer les hologrammes à proximité et de remapper l’espace.
 
 ### <a name="calibration"></a>Auto
 
@@ -118,3 +110,4 @@ Si quelqu’un d’autre utilise votre HoloLens, il doit d’abord exécuter l�
 * [Conception du mappage spatial](spatial-mapping-design.md)
 * [Hologrammes](hologram.md)
 * [Étalonnage](calibration.md)
+* [Utiliser Hololens dans de nouveaux espaces](use-hololens-in-new-spaces.md)
