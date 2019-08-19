@@ -22,6 +22,7 @@
 #### [Enregistrement et recherche de vos fichiers](saving-and-finding-your-files.md)
 #### [Voir vos photos](see-your-photos.md)
 #### [Mise à jour du casque HoloLens](updating-hololens.md)
+#### [Utiliser HoloLens dans de nouveaux espaces](use-hololens-in-new-spaces.md)
 #### [Partage d’appareil](device-sharing.md)
 #### [Guide de mise en place et de nettoyage du casque HoloLens pour les démos](hololens-demo-guide.md)
 ### Casques immersifs

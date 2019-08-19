@@ -1,11 +1,11 @@
 ---
-title: Entrée avancée d’émulateur de HoloLens et simulateur de réalité mixte
-description: Obtenir des instructions détaillées pour l’utilisation du clavier, la souris et la manette Xbox pour simuler l’entrée pour le simulateur de l’émulateur de HoloLens et Windows Mixed Reality.
+title: Entrée de l’émulateur HoloLens avancé et du simulateur de réalité mixte
+description: Instructions détaillées pour l’utilisation du clavier, de la souris et du contrôleur Xbox pour simuler l’entrée pour l’émulateur HoloLens et le simulateur Windows Mixed Reality.
 author: pbarnettms
 ms.author: pbarnett
 ms.date: 04/26/2019
 ms.topic: article
-keywords: HoloLens, émulateur, Simulation, Windows Mixed Reality
+keywords: HoloLens, émulateur, simulation, Windows Mixed Reality
 ms.openlocfilehash: 6ea493d8c1269ff0bea1d4102b9e224e30d06aef
 ms.sourcegitcommit: f5c1dedb3b9e29f27f627025b9e7613931a7ce18
 ms.translationtype: MT
@@ -13,136 +13,136 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64580590"
 ---
-# <a name="advanced-hololens-emulator-and-mixed-reality-simulator-input"></a>Entrée avancée d’émulateur de HoloLens et simulateur de réalité mixte
+# <a name="advanced-hololens-emulator-and-mixed-reality-simulator-input"></a>Entrée de l’émulateur HoloLens avancé et du simulateur de réalité mixte
 
-La plupart des utilisateurs de l’émulateur devrez utiliser les contrôles d’entrée de base pour le [HoloLens émulateur](using-the-hololens-emulator.md#basic-emulator-input) ou [simulateur de réalité mixte Windows](using-the-windows-mixed-reality-simulator.md#basic-simulator-input). Les détails ci-dessous sont pour les utilisateurs expérimentés qui ont trouvé un besoin pour simuler des types plus complexes d’entrée.
+La plupart des utilisateurs de l’émulateur auront uniquement besoin d’utiliser les contrôles d’entrée de base pour l' [émulateur HoloLens](using-the-hololens-emulator.md#basic-emulator-input) ou le simulateur de [réalité mixte Windows](using-the-windows-mixed-reality-simulator.md#basic-simulator-input). Les informations ci-dessous sont destinées aux utilisateurs expérimentés qui ont trouvé besoin de simuler des types d’entrée plus complexes.
 
 
 ## <a name="concepts"></a>Concepts
 
-Pour commencer à contrôler les entrées virtuelle pour le simulateur de l’émulateur de HoloLens et Windows Mixed Reality, vous devez d’abord comprendre quelques concepts.
+Pour commencer à contrôler l’entrée virtuelle dans l’émulateur HoloLens et le simulateur Windows Mixed Reality, vous devez d’abord comprendre quelques concepts.
 
-Mouvement fait référence au contrôle et la modification de la position et l’orientation d’un élément dans la scène. Pour un objet contrôlable ciblé, le mouvement est contrôlé avec une rotation et de translation (déplacement) le long des trois axes.
-* **Lacet**: Activez la gauche ou vers la droite.
-* **Pitch**: Activer le haut ou vers le bas.
-* **ROULEAU**: Déploiement côte à côte.
-* **X**: Déplacer à gauche ou droite.
-* **Y**: Faire monter ou Descendre.
-* **Z**: Déplacer vers l’avant ou vers l’arrière.
+Motion fait référence au contrôle et à la modification de la position et de l’orientation d’un événement dans la scène. Pour un objet contrôlable ciblé, motion est contrôlé avec la rotation et la translation (mouvement) sur trois axes.
+* **Lacet**: Tournez à gauche ou à droite.
+* Pas à **pas:** Activez ou désactivez.
+* **Roll**: Faire rouler côte à côte.
+* **X**: Déplacer vers la gauche ou vers la droite.
+* **Y**: Monter ou descendre.
+* **Z**: Avancer ou reculer.
 
-[Mouvement](gestures.md) et de l’entrée de contrôleur de mouvement sont mappées étroitement à la manière dont ils périphériques physiques :
-* **Action**: Cela simule l’action d’en appuyant sur l’index pour le curseur ou en les extrayant le bouton d’action sur un contrôleur. Par exemple, l’entrée d’Action peut être utilisée pour simuler le mouvement d’appui en l’air, pour faire défiler le contenu et à appuyer et maintenir.
-* **[Bloom](gestures.md#bloom)mouvement de /System ou accueil**: Le mouvement de bloom/système HoloLens ou un bouton d’accueil d’un contrôleur est utilisé pour retourner à l’environnement et pour effectuer des actions du système.
+Les entrées de contrôleur de [mouvement et de](gestures.md) mouvement sont mappées de près à la façon dont elles sont les appareils physiques:
+* **Action** : Cela simule l’action d’appuyer sur le index sur le curseur ou d’extraire le bouton d’action d’un contrôleur. Par exemple, l’entrée d’action peut être utilisée pour simuler le mouvement d’appui sur l’air, pour faire défiler le contenu et pour appuyer et maintenir.
+* **[Bloom](gestures.md#bloom)Geste ou page d’habitation/** : Le mouvement de type de page et de système HoloLens ou le bouton d’hébergement d’un contrôleur est utilisé pour retourner à l’interpréteur de commandes et effectuer des actions système.
 
-Mains ont une riche reprresentation dans HoloLens 2.  En plus d’être suivies/non et non suivies utilisables pour les mouvements de conduite, mains sont maintenant un modèle squelette articulé ajuster à leur et exposée au développeur.  Cela introduit 26 points suivies sur chaque aiguille.  
-* **Mixte**: L’une des vingt positions suivies pour chaque cas suivies. Cela aura un point est associé un espace 3d.
-* **Poser**: Une collection complète de tous les articulations dans une main suivie. À ce stade, il s’agit d’une collection de 26 Joints. 
+Les mains ont un reprresentation riche dans HoloLens 2.  En plus de faire l’objet d’un suivi/non suivi, et d’être utilisable pour la conduite de mouvements, les mains disposent désormais d’un modèle de squelette articulé qui leur est adapté et exposé au développeur.  Cela présente 26 points suivis sur chaque main.  
+* **Jointure**: Un des vingt positions suivies pour une main donnée. Un point est alors associé à l’espace 3D.
+* **Poser**: Collection complète de tous les joints dans une main. À ce stade, il s’agit d’une collection de 26 jointures. 
 
-À ce stade, nous n’exposent pas un contrôle direct de chaque position commune individuellement via l’interface utilisateur de l’émulateur, bien que vous pouvez les définir via l’API de simulation. Au lieu de cela, nous avons un ensemble d’utile risque de poser représentatif l’émulateur vous permet de basculer entre.
+À ce stade, nous n’exposent pas le contrôle direct de chaque position conjointe individuellement par le biais de l’interface utilisateur de l’émulateur, même si vous pouvez les définir via l’API de simulation. Au lieu de cela, nous disposons d’un ensemble de jeux représentatifs utiles que l’émulateur vous permet de basculer entre.
 
-Vous pouvez également contrôler l’état de l’entrée de capteur simulées :
-* **Réinitialiser**: Ceci renverra tous les capteurs simulés à leurs valeurs par défaut.  À partir de l’émulateur de 2 HoloLens, une réinitialisation peut être limitée à un ou deux mains en effectuant le hand(s) souhaité à l’aide de l’ou les clés de modificateur appropriée ou l’ou les boutons (gauche et/ou Alt de droite ou gauche et/ou droit pare-chocs du boîtier de commande).
-* **Suivi des**: Parcourt les modes de suivi positionnels. Cela comprend les éléments suivants :
-  * **Par défaut** : Le système d’exploitation choisit le mode de suivi des meilleures basé sur les demandes du système.
-   * **Orientation**: Force l’Orientation uniquement le suivi, quel que soit les demandes du système.
-   * **Positionnels**: Force positionnels le suivi, quelle que soit les demandes du système.
+Vous pouvez également contrôler l’état de l’entrée de capteur simulé:
+* Réinitialisation: Tous les capteurs simulés sont retournés à leurs valeurs par défaut.  À partir de l’émulateur HoloLens 2, une réinitialisation peut être étendue à l’un ou aux deux mains en faisant passer la ou les mains souhaitées à l’aide de la ou des touches de modification appropriées ou des boutons (gauche et/ou droit Alt, ou de gauche et/ou de droite sur le boîtier de sélection).
+* **Suivi**: Parcourt les modes de suivi positionnel. notamment :
+  * **Par défaut** : Le système d’exploitation choisit le mode de suivi le plus approprié en fonction des demandes effectuées sur le système.
+   * **Orientation**: Force le suivi de l’orientation uniquement, quelles que soient les demandes effectuées sur le système.
+   * **Positionnel**: Force le suivi positionnel, quelles que soient les demandes effectuées sur le système.
 
-## <a name="types-of-input"></a>Types d’entrées
+## <a name="types-of-input"></a>Types d’entrée
 
-Le tableau suivant montre comment chaque type de d’entrée est mappé au clavier, de la souris et de la manette Xbox. Chaque type a un mappage différent selon le mode de contrôle d’entrée ; plus d’informations sur les modes de contrôle d’entrée sont fournies plus loin dans ce document.
+Le tableau suivant montre comment chaque type d’entrée est mappé au clavier, à la souris et au contrôleur Xbox. Chaque type a un mappage différent selon le mode de contrôle d’entrée. plus d’informations sur les modes de contrôle d’entrée sont fournies plus loin dans ce document.
 
 |  |  Clavier |  Souris |  Contrôleur Xbox | 
 |----------|----------|----------|----------|
-|  Lacet |  Flèches gauche / droite |  Faites glisser gauche / droite |  Stick analogique droit gauche / droite | 
-|  Inclinaison |  Haut / bas flèches |  Faites glisser le haut / bas |  Stick analogique droit haut / bas | 
-|  Annuler |  Q / E |  |  DPad gauche / droite | 
-|  X |  A / D |  |  Stick analogique gauche gauche / droite | 
-|  Y |  Page vers le haut / bas de page |  |  DPad haut / bas | 
-|  Z |  W / S |  |  Stick analogique gauche, haut / bas | 
-|  Action |  Entrez ou espace |  Bouton de droite |  Un bouton ou un déclencheur | 
-|  Bloom/système |  Touche F2 ou Windows |  |  Bouton B | 
-|  Bouton de poignée de contrôleur |  G  |  |  | 
-|  Bouton de menu de contrôleur |  M  |  |  | 
-|  Touch pavé tactile de contrôleur |  U  |  |  | 
-|  Appuyez sur le pavé tactile contrôleur |  P  |  |  | 
-|  Appuyez sur le stick analogique contrôleur |  K  |  |  | 
-|  Suivi de l’état de contrôleur de gauche |  F9 |  |  | 
-|  Suivi de l’état de contrôleur de droite |  F10 |  |  | 
-|  Pose « Fermer » de main | 7 |  |  |
-|  Remettez Pose « Open » (valeur par défaut) | 8 |  |  |
-|  Main 'Point' Pose | 9 |  |  |
-|  Pose de « Pincement » disponible | 0 |  |  |
-|  Réinitialiser |  Touche ÉCHAP |  |  bouton Démarrer | 
-|  Suivi |  T ou F3 |  |  Bouton X | 
+|  Lacet |  Flèches gauche/droite |  Faire glisser vers la gauche/droite |  Stick à droite gauche/droite | 
+|  Inclinaison |  Flèches haut/bas |  Faire glisser vers le haut/vers le haut |  Joystick droit vers le haut/vers le haut | 
+|  Annuler |  Q/E |  |  DPad gauche/droite | 
+|  X |  A/D |  |  Stick analogique gauche vers la gauche/droite | 
+|  Y |  PG. suiv/PG. suiv |  |  DPad vers le haut/vers le haut | 
+|  Z |  W/S |  |  Joystick gauche vers le haut/vers le haut | 
+|  Action |  Entrée ou espace |  Bouton droit |  Un bouton ou un déclencheur | 
+|  Fleuri/système |  F2 ou touche Windows |  |  Bouton B | 
+|  Bouton de poignée du contrôleur |  G  |  |  | 
+|  Bouton de menu contrôleur |  M  |  |  | 
+|  Pavé tactile du contrôleur |  GOUDJARATI  |  |  | 
+|  Appuyez sur le contrôleur Touchpad |  P  |  |  | 
+|  Pression du joystick du contrôleur |  K  |  |  | 
+|  État du suivi du contrôleur de gauche |  F9 |  |  | 
+|  État du suivi du contrôleur approprié |  F10 |  |  | 
+|  Poser la main | 7 |  |  |
+|  Main «Open» (valeur par défaut) | 8 |  |  |
+|  Pose de la main | 9 |  |  |
+|  Main «pincer» | 0 |  |  |
+|  Réinitialiser |  Touche Échap |  |  bouton Démarrer | 
+|  Suivre |  T ou F3 |  |  Bouton X | 
 
 
-Remarque: Les boutons de contrôleur peuvent être adressé à une seule main/contrôleur ou l’autre à l’aide de l’aiguille de ciblage des modificateurs.
+Remarque : Les boutons de contrôleur peuvent être ciblés pour une main ou un contrôleur, ou l’autre à l’aide des modificateurs de ciblage de la main.
 
 ## <a name="targeting"></a>Ciblage 
 
-Certains des concepts d’entrée ci-dessus, mettez au point leurs propres.  Action, de Bloom/système, de réinitialisation et de suivi sont des concepts complètes n’est pas nécessaire et ne sont pas affectés par n’importe quel modificateur supplémentaires pour le ciblage.  Toutefois, les concepts restants peuvent être appliquées à une de plusieurs cibles. Nous avons introduit les méthodes vous permettent de spécifier qui cible à que votre commande doit être appliqué.  Dans tous les cas, il est possible de spécifier via l’interface utilisateur ou via les appuis de clavier, objet targtet.  Dans certains cas, il est également possible de spécifier directement avec le contrôleur de la xbox. 
+Certains des concepts d’entrée ci-dessus sont autonomes.  Les concepts action, fleuri/System, Reset et Tracking sont complets, n’ont pas besoin et ne sont pas affectés par, tout modificateur supplémentaire pour le ciblage.  Toutefois, les autres concepts peuvent être appliqués à une ou plusieurs cibles. Nous avons introduit des moyens de spécifier la cible à laquelle votre commande doit être appliquée.  Dans tous les cas, il est possible de spécifier par le biais de l’interface utilisateur ou par le biais de l’appui sur le clavier, qui est l’objet à targtet.  Dans certains cas, il est également possible de spécifier directement avec le contrôleur Xbox. 
 
-Le tableau suivant décrivent les options de ciblage et la façon d’activer chacun d’eux.
+Le tableau suivant décrit les options de ciblage et la manière d’activer chacune d’elles.
 
-| Objet | Touche de modification | Modificateur de contrôleur | Modificateur de l’interface utilisateur d’émulateur |
+| Object | Modificateur de clavier | Modificateur de contrôleur | Modificateur de l’interface utilisateur de l’émulateur |
 |----------|----------|----------|----------|
 | Corps | (par défaut) | (par défaut) | (par défaut) |
-| head | Blocage H | (Non disponible) | (Non disponible) |
-| Main gauche/contrôleur | Maintenez le bouton de Alt gauche | Maintenez le bouton de l’épaule gauche | Gauche punaise | 
-| Droite/contrôleur | Maintenez la touche Alt de droite | Maintenez le bouton de droite épaule | Droite punaise |
-| Yeux | Attente Y | (Non disponible) | Yeux punaise |
+| Siège | Contenir H | (Non disponible) | (Non disponible) |
+| Main gauche/contrôleur | Maintenir le bouton gauche ALT | Bouton conserver l’épaule gauche | Punaise gauche | 
+| Main droite/contrôleur | Maintenir le bouton droit Alt | Bouton de maintien de l’épaule de droite | Clic droit |
+| Yeux | Conserver Y | (Non disponible) | Punaise yeux |
   
-Le tableau suivant montre comment chaque modificateur cible est mappé à chacun des mouvements d’entrée certains concepts fondamentaux
+Le tableau suivant montre comment chaque modificateur cible mappe chacun des concepts d’entrée de déplacement de base
 
-|  | Par défaut (corps) |  Main/contrôleur (maintenez la touche Alt, bouton de blocage gamepad épaule ou activer/désactiver l’interface utilisateur punaise) |  Head (maintenez H)  |  Yeux (punaise Y contenir ou activer/désactiver l’interface utilisateur) |
+|  | Valeur par défaut (corps) |  Main/contrôleur (maintenez la touche Alt enfoncée, maintenez le bouton d’épauler du boîtier ou la punaise de l’interface utilisateur) |  En-tête (Hold H)  |  Yeux (maintenir Y ou basculer l’UI punaise) |
 |----------|----------|----------|----------|
-|  Lacet |  Corps de la main gauche / droite |  Déplacer la main gauche / droite |  Activer la tête gauche / droite | Les regards yeux recherche gauche/droite |
-|  Inclinaison |  Activer la tête haut / bas |  Main haut / bas |  Activer la tête haut / bas | Les regards yeux recherche haut/bas | 
-|  Annuler |  Rouleau de tête gauche / droite |  |  Rouleau de tête gauche / droite | (Aucune action) |
-|  X |  Corps de la diapositive gauche / droite |  Déplacer/contrôleur de la main gauche / droite |  Activer la tête gauche / droite | (Aucune Action) |
-|  Y |  Déplacer des corps haut / bas |  Déplacer la main/contrôleur haut / bas |  Activer la tête haut / bas | (Aucune Action) |
-|  Z |  Déplacer vers l’avant / arrière de corps |  Déplacer vers l’avant / arrière main/de contrôleur. |  Activer la tête haut / bas | (Aucune Action) |
+|  Lacet |  Transformer le corps vers la gauche/droite |  Déplacer la main vers la gauche/droite |  Activer l’en-tête gauche/droite | Yeux oculaires gauche/droite |
+|  Inclinaison |  Activer/désactiver la tête |  Monter/descendre |  Activer/désactiver la tête | Point de regard des yeux | 
+|  Annuler |  Tête de roulement gauche/droite |  |  Tête de roulement gauche/droite | (Aucune action) |
+|  X |  Corps de la diapositive vers la gauche/droite |  Déplacer la main/le contrôleur vers la gauche/droite |  Activer l’en-tête gauche/droite | (Aucune action) |
+|  Y |  Déplacer le corps vers le haut/vers le haut |  Monter/descendre dans la main/le contrôleur |  Activer/désactiver la tête | (Aucune action) |
+|  Z |  Déplacer le corps vers l’avant/vers l’arrière |  Déplacer vers l’avant/à l’arrière du contrôleur |  Activer/désactiver la tête | (Aucune action) |
  
  
 ## <a name="controlling-an-app"></a>Contrôle d’une application
 
-L’ensemble de contrôles suivant est suggéré pour une utilisation quotidienne :
+L’ensemble de contrôles suivant est suggéré pour une utilisation quotidienne:
 
-|  Opération |  Clavier et souris |  Contrôleur | 
+|  Opération |  Clavier et souris |  Controller | 
 |----------|----------|----------|
-|  Corps X |  A / D |  Stick analogique gauche gauche / droite | 
-|  Corps Y |  Page vers le haut / bas de page |  DPad haut / bas | 
-|  Corps Z |  W / S |  Stick analogique gauche, haut / bas | 
-|  Corps lacet |  Faites glisser la souris gauche / droite |  Stick analogique droit gauche / droite | 
-|  Head lacet |  H + faire glisser la souris gauche / droite |  H (sur le clavier) + stick analogique droit gauche / droite | 
-|  Hauteur de la tête |  Faites glisser la souris haut / bas |  Stick analogique droit haut / bas | 
-|  Rouleau de tête |  Q / E |  DPad gauche / droite | 
-|  Main/contrôleur X |  ALT + A / D |  Épaule + stick analogique gauche gauche / droite | 
-|  Main/contrôleur Y |  ALT + PG. préc / Pg |  Épaule + DPad haut / bas | 
-|  Main/contrôleur Z |  ALT + W / S |  Épaule + stick analogique gauche, haut / bas | 
-|  Main/contrôleur lacet |  Alt + faire glisser la souris gauche / droite |  Épaule + stick analogique droit gauche / droite | 
-|  Main/contrôleur tangage |  Alt + faire glisser la souris haut / bas |  Épaule + stick analogique droit haut / bas | 
-|  Rouleau de main/contrôleur |  ALT + Q / E |  Épaule + DPad gauche / droite | 
-|  Action |  Bouton droit de la souris |  déclencheur | 
-|  Bloom / système / Home |  Touche F2 ou Windows |  Bouton B | 
+|  Corps X |  A/D |  Stick analogique gauche vers la gauche/droite | 
+|  Corps Y |  PG. suiv/PG. suiv |  DPad vers le haut/vers le haut | 
+|  Corps Z |  W/S |  Joystick gauche vers le haut/vers le haut | 
+|  Lacet de corps |  Faire glisser la souris vers la gauche/droite |  Stick à droite gauche/droite | 
+|  Lacet tête |  H + faire glisser la souris vers la gauche/droite |  H (on Keyboard) + Joystick droit gauche/droite | 
+|  Hauteur des têtes |  Faire glisser la souris vers le haut/vers le haut |  Joystick droit vers le haut/vers le haut | 
+|  Rouleau de tête |  Q/E |  DPad gauche/droite | 
+|  Main/contrôleur X |  Alt + A/D |  Épaule + Stick à gauche gauche/droite | 
+|  Main/contrôleur Y |  Alt + Pg. suiv/PG. suiv |  Épaule + DPad haut/PG. | 
+|  Main/contrôleur Z |  Alt + W/S |  Épauler + joystick gauche vers le haut/vers le haut | 
+|  Lacet main/Controller |  Alt + faire glisser la souris vers la gauche/droite |  Épaule + joystick droit gauche/droite | 
+|  Hauteur de la main/du contrôleur |  Alt + faire glisser la souris vers le haut/vers le haut |  Haut/bouton de l’épaule + droite | 
+|  Rouleau de main/contrôleur |  Alt + Q/E |  Épaule + DPad gauche/droite | 
+|  Action |  Bouton droit de la souris |  Déclencheur | 
+|  Fleuri/système/page d’hébergement |  F2 ou touche Windows |  Bouton B | 
 |  Réinitialiser |  Échappement |  bouton Démarrer | 
-|  Suivi |  T |  Bouton X | 
-|  Défilement |  ALT + flèche droite bouton de souris + faire glisser la souris haut / bas |  Épaule + déclencheur + stick analogique droit haut / bas | 
-|  Déplacement/faire tourner plus rapidement | Touche MAJ de gauche ou droite | Maintenez la touche et le stick analogique droit |
-|  Déplacement/faire pivoter lente | Touche Ctrl de gauche ou droite | Maintenez la touche et le stick analogique gauche |
+|  Suivre |  T |  Bouton X | 
+|  Défilement |  Alt + bouton droit de la souris + faire glisser la souris vers le haut/vers le haut |  Épaule + déclencheur + joystick droit vers le haut/vers le haut | 
+|  Déplacer/faire pivoter plus rapidement | Touche Maj de gauche ou de droite | Appuyez sur le joystick droit et maintenez-le enfoncé |
+|  Déplacer/faire pivoter lentement | Touche CTRL de gauche ou de droite | Appuyez sur le stick analogique gauche et maintenez-le enfoncé |
 
-## <a name="perception-simulation-control-panel-keyboard-shortcuts"></a>Raccourcis de clavier perception Simulation le panneau de configuration
+## <a name="perception-simulation-control-panel-keyboard-shortcuts"></a>Raccourcis clavier du panneau de configuration de la perception
 
-Les raccourcis clavier suivants sont disponibles pour accéder au panneau Perception Simulation et l’activation ou désactivation périphériques d’entrée de PC pour les utilisent avec simulation.
+Les raccourcis clavier suivants sont disponibles pour accéder au panneau de configuration de la simulation de perception et à l’activation ou la désactivation de périphériques d’entrée de PC pour une utilisation avec la simulation.
 
-| Opération | Raccourci | Description/Remarques |
+| Opération | Raccourci | Description/remarques |
 |-----------|----------|-------------|
-| Activer/désactiver « Utiliser le clavier pour la simulation » | F4 | Mise hors tension, l’entrée de clavier va à l’application HoloLens ou Windows Mixed Reality. |
-| Activer/désactiver « Utiliser la souris pour la simulation » | F5 | Mise hors tension, l’entrée de la souris va à l’environnement de réalité mixte (Windows Mixed Reality uniquement) |
-| Activer/désactiver « Utiliser gamepad de simulation » | F6 | Mise hors tension, gamepad entrée est ignorée par simulation |
+| Activer/désactiver le clavier pour la simulation | F4 | Lorsqu’elle est désactivée, l’entrée au clavier est envoyée à l’application HoloLens ou Windows Mixed Reality. |
+| Activer l’utilisation de la souris pour la simulation | F5 | Lorsqu’elle est désactivée, l’entrée de la souris est envoyée à l’environnement de réalité mixte (Windows Mixed Reality uniquement) |
+| Activer/désactiver le boîtier d’activation pour la simulation | F6 | Lorsqu’elle est désactivée, l’entrée du boîtier est ignorée par la simulation |
 | Afficher ou masquer le panneau de configuration | F7 | |
-| Définir le focus clavier au panneau de commande | F8 | Si le panneau n’est pas actuellement visible il est affiché en premier. |
-| Attacher ou détacher le panneau vers/à partir de l’émulateur ou de la fenêtre du portail de réalité mixte | F9 | Si la fenêtre est fermée lorsque flottant, il est ancré et masqué. |
+| Définir le focus clavier sur le panneau de configuration | F8 | Si le panneau n’est pas visible actuellement, il s’affiche en premier. |
+| Ancrer ou détacher le panneau vers/depuis la fenêtre du portail de l’émulateur ou de la réalité mixte | F9 | Si la fenêtre est fermée lorsqu’elle est désancrée, elle est ancrée et masquée. |
 
 ## <a name="see-also"></a>Voir aussi
 * [Installer les outils](install-the-tools.md)
