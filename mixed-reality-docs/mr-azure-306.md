@@ -329,7 +329,7 @@ Ce qui suit est une configuration classique pour le développement avec la réal
 
 8.  Une fois ces modifications effectuées, fermez la fenêtre **paramètres de build** .
 
-9.  Enregistrer votre projet **fichier* *enregistrer projet **.
+9.  Enregistrer votre projet **fichier* *enregistrer projet**.
 
 
 
