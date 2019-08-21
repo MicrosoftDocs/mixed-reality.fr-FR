@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: 925ab825c2716a847726ac763dc6800914d87c6b
-ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
+ms.openlocfilehash: 45833ba22305acedb45bfdc9752c0b278a693190
+ms.sourcegitcommit: 9636573eabdc78db6875e831a9c894a2ff173a99
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702037"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69629182"
 ---
 # <a name="3-creating-user-interface-and-configure-mixed-reality-toolkit"></a>3. Création d’une interface utilisateur et configuration d’une réalité mixte Toolkit 
 
@@ -34,7 +34,7 @@ Dans cette section, vous allez apprendre à personnaliser et à configurer les p
 
 >Remarque : Par défaut, les profils MRTK ne sont pas modifiables. Il s’agit de modèles de profil par défaut que vous pouvez copier et personnaliser. Il existe plusieurs couches de personnalisation et de profils. Par conséquent, il est recommandé de copier et de personnaliser plusieurs profils lors de la configuration d’un ou de plusieurs paramètres.
 >
->Pour en savoir plus sur les profils MRTK et leur architecture, consultez la [documentation de MRTK](<https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Architecture/SpatialAwareness/SpatialAwarenessSystemArchitecture.html>).
+>Pour en savoir plus sur les profils MRTK et leur architecture, consultez la [documentation de MRTK](<https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/MixedRealityConfigurationGuide.html>).
 
 2. Créez une copie du profil par défaut pour le personnaliser. Pour copier un profil par défaut, cliquez sur Copier & personnaliser (Voir l’image). Ceci crée une copie du profil MRTK. Avec votre propre copie du profil MRTK, vous pouvez maintenant personnaliser des paramètres de ce profil. Vous devrez également répéter l’étape de copie et de personnalisation pour tous les profils supplémentaires imbriqués sous ce profil, comme décrit dans les étapes suivantes.
 
