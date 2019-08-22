@@ -1,17 +1,17 @@
 ---
 title: Processus de création de ressources
 description: Aide sur la création de ressources pour les expériences de réalité mixte.
-author: paseb
-ms.author: paseb
+author: shengkait
+ms.author: shentan
 ms.date: 03/21/2018
 ms.topic: article
 keywords: actif, création, processus, budget, polygones, textures, nuanceurs, performances
-ms.openlocfilehash: 513a9856ac35e4229cfb7bc8bcb92d9d6a152980
-ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
+ms.openlocfilehash: f7bee55249764af37453ea0fab01730b43907569
+ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66692299"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69896503"
 ---
 # <a name="asset-creation-process"></a>Processus de création de ressources
 
@@ -60,7 +60,7 @@ Vous trouverez ci-dessous un exemple de budget pour votre expérience. En règle
 
 **Complexité des ressources**
 * Combien de triangles/polygones?
-* Quel est le degré de complexité du nuanceur?
+* Quel est le degré de complexité du nuanceur? Lors de l’utilisation de la boîte à outils de réalité mixte, il est recommandé d’utiliser le [nuanceur standard Mixed Reality Toolkit standard](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_MRTKStandardShader.md) pour réduire la complexité des nuanceurs.
 
 Les développeurs et les artistes doivent prendre en compte les fonctionnalités de l’appareil et du moteur graphique. Microsoft HoloLens dispose de toutes les fonctionnalités de calcul et de graphique intégrées à l’appareil. Il partage les fonctionnalités que les développeurs trouveraient sur une plate-forme mobile.
 
@@ -77,7 +77,7 @@ Nous allons commencer par les moyens d’obtenir des ressources pour votre proje
 ### <a name="creating-assets"></a>Création de ressources
 
 **Outils de création**<br>
-Tout d’abord, vous pouvez créer vos propres ressources de plusieurs façons. les artistes 3D utilisent un certain nombre d’applications et d’outils pour créer des modèles qui se composent de maillages, de **textures**et de **matériaux**. Il est ensuite enregistré dans un format de fichier qui peut être importé ou utilisé par le moteur graphique utilisé par l’application, par exemple **. FBX** ou **. OBJ**. Tout outil qui génère un modèle pris en charge par le moteur graphique que vous avez choisi fonctionnera sur **HoloLens**. Parmi les artistes en 3D, beaucoup choisissent d’utiliser les [Maya de Autodesk qui peuvent lui-même utiliser HoloLens](https://www.youtube.com/watch?v=q0K3n0Gf8mA) pour transformer la façon dont les ressources sont créées. Si vous souhaitez obtenir un résultat rapide, vous pouvez également utiliser le [Générateur 3D](https://developer.microsoft.com/windows/hardware/3d-print/3d-builder-resources) fourni avec Windows pour l’exportation. OBJ à utiliser dans votre application.
+Tout d’abord, vous pouvez créer vos propres ressources de plusieurs façons. les artistes 3D utilisent un certain nombre d’applications et d’outils pour créer desmodèles qui se composent de maillages, de **textures**et de **matériaux**. Il est ensuite enregistré dans un format de fichier qui peut être importé ou utilisé par le moteur graphique utilisé par l’application, par exemple **. FBX** ou **. OBJ**. Tout outil qui génère un modèle pris en charge par le moteur graphique que vous avez choisi fonctionnera sur **HoloLens**. Parmi les artistes en 3D, beaucoup choisissent d’utiliser les [Maya de Autodesk qui peuvent lui-même utiliser HoloLens](https://www.youtube.com/watch?v=q0K3n0Gf8mA) pour transformer la façon dont les ressources sont créées. Si vous souhaitez obtenir un résultat rapide, vous pouvez également utiliser le [Générateur 3D](https://developer.microsoft.com/windows/hardware/3d-print/3d-builder-resources) fourni avec Windows pour l’exportation. OBJ à utiliser dans votre application.
 
 **Capture d’objets**<br>
 Vous pouvez également capturer des objets en 3D. La capture d’objets inanimés en 3D et leur modification avec le logiciel de création de contenu numérique sont de plus en plus populaires avec la hausse de l’impression en 3D. À l’aide du capteur **Kinect 2** et du [Générateur 3D](https://developer.microsoft.com/windows/hardware/3d-print/3d-builder-resources) , vous pouvez utiliser la fonctionnalité de capture pour créer des ressources à partir d’objets réels. Il s’agit également d’une [suite d’outils](https://en.wikipedia.org/wiki/Comparison_of_photogrammetry_software) permettant de faire de même avec **Photogrammetry** en traitant un certain nombre d’images pour assembler et mailler les textures.

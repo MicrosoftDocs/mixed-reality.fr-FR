@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 07/10/2019
 ms.topic: article
 keywords: résolution des problèmes, problème connu, aide
-ms.openlocfilehash: 9ec15957b75ca3ec51dd01f5b9b4bc7371912c5a
-ms.sourcegitcommit: a11999e92e4e87516a6dcceabc2c5ed7642f1fd9
+ms.openlocfilehash: f043164f21f20925a78b59057e14ac4607d0d3f1
+ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68887270"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69896543"
 ---
 # <a name="hololens-known-issues"></a>Problèmes connus de HoloLens
 
@@ -127,6 +127,9 @@ Nous vous remercions de votre patience, car nous avons passé en revue le proces
 Au cours des paramètres d' & OOBE, le délai d’expiration des informations d’identification est de 2 minutes. Le nom d’utilisateur et le mot de passe doivent être entrés dans un délai de 2 minutes, sinon, le champ nom d’utilisateur est automatiquement effacé.
 
 Nous vous recommandons d’utiliser un clavier Bluetooth pour entrer des mots de passe longs.
+
+>[!NOTE]
+> Si le mauvais réseau est sélectionné au cours de l’OOBE, l’appareil doit être entièrement réinitialisé. Vous trouverez des instructions [ici.](https://docs.microsoft.com/en-us/windows/mixed-reality/reset-or-recover-your-hololens#perform-a-full-device-recovery) 
 
 ## <a name="device-update"></a>Mise à jour de l’appareil
 * 30 secondes après une nouvelle mise à jour, l’interpréteur de commandes peut disparaître une fois. Effectuez le geste de **floraison** pour reprendre votre session.

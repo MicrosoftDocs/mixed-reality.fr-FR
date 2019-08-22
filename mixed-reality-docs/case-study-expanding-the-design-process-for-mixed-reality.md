@@ -1,17 +1,17 @@
 ---
 title: Étude de cas-développement du processus de conception pour la réalité mixte
 description: Ajout de techniques à votre processus de conception pour aider votre équipe à réfléchir de façon spatiale et plus facile à envisager des expériences de réalité mixte.
-author: mavitazk
-ms.author: mavitazk
+author: danielescudero
+ms.author: daescu
 ms.date: 04/08/2018
 ms.topic: article
 keywords: Windows Mixed Reality, conception, processus, étude de cas
-ms.openlocfilehash: 572e4cd7e204d65429908b5f52a46f980cfb4cc8
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 27b1fbcbee413317c5466170bc38309581b9f4f0
+ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63523175"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69896578"
 ---
 # <a name="case-study-expanding-the-design-process-for-mixed-reality"></a>Étude de cas : Développement du processus de conception pour la réalité mixte
 

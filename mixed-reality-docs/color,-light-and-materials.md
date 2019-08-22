@@ -6,12 +6,12 @@ ms.author: pinkb
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, design, Color, Light, Materials
-ms.openlocfilehash: 3f8ee8edfe4cbbaf8a55b3c4a9125f752823be9c
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: bef0c8b63c109baa536e4192ce94919eb888faf2
+ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63526513"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69896517"
 ---
 # <a name="color-light-and-materials"></a>Couleur, lumière et matériaux
 
@@ -28,7 +28,7 @@ Prenez toujours le temps de tester vos expériences holographiques dans un casqu
 ## <a name="fundamentals-of-rendering-on-holographic-devices"></a>Notions de base du rendu sur les appareils holographiques
 * Les **appareils holographiques ont des affichages** supplémentaires: les hologrammes sont créés en ajoutant de la lumière à la lumière à partir du monde réel: le blanc s’affiche vivement, tandis que le noir apparaît en transparence.
 * **L’impact des couleurs varie en fonction de l’environnement de l’utilisateur** : il existe de nombreuses conditions d’éclairage différentes dans la salle d’un utilisateur. Créez du contenu avec des niveaux de contraste appropriés pour faciliter la clarté.
-* **Évitez l’éclairage dynamique** : les hologrammes qui sont allumés uniformément dans les expériences holographiques sont les plus efficaces. L’éclairage dynamique est susceptible de dépasser les capacités des nuanceurs mobiles.
+* **Évitez l’éclairage dynamique** : les hologrammes qui sont allumés uniformément dans les expériences holographiques sont les plus efficaces. L’éclairage dynamique est susceptible de dépasser les capacités des appareils mobiles. Lorsque l’éclairage dynamique est requis, il est recommandé d’utiliser le [nuanceur standard Mixed Reality Toolkit standard](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_MRTKStandardShader.md). 
 
 ## <a name="designing-with-color"></a>Conception avec couleur
 

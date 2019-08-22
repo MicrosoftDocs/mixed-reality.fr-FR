@@ -6,12 +6,12 @@ ms.author: trferrel
 ms.date: 03/26/2019
 ms.topic: article
 keywords: Unity, paramètres, réalité mixte
-ms.openlocfilehash: 8afcefb49a860d66a372ebd3d0c4bcdb43038813
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: 395363cb99fd7e9e61adbea8ebc341aab50755e0
+ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67415451"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69896538"
 ---
 # <a name="recommended-settings-for-unity"></a>Paramètres recommandés pour Unity
 
@@ -25,7 +25,7 @@ Il est important de modifier les **paramètres de qualité** des Unity pour votr
 
 Dans Unity 2018 LTS +, le niveau de qualité du projet peut être défini par:
 
-Sous **modifier** > lesparamètres > du projet **> définir** la **valeur par défaut** en cliquant sur la flèche vers le bas jusqu’au niveau de qualité **très faible**
+Sous **modifier** > les**paramètres** > du projet > définir la **valeur par défaut** en cliquant sur la flèche vers le bas jusqu’au niveau de qualité **très faible**
 
 ### <a name="lighting-settings"></a>Paramètres d’éclairage
 
@@ -67,9 +67,9 @@ En outre, il est recommandé de sélectionner **profondeur de 16 bits** sous le 
 
 Pour que la plateforme Windows Mixed realisation optimise la stabilité des hologrammes, elle s’appuie sur la mémoire tampon de profondeur pour être exacte et correspond à n’importe quel hologramme rendu sur l’écran. Ainsi, avec le partage de mémoire tampon de profondeur sur, il est important d’effectuer un rendu des couleurs, également une profondeur de rendu. Dans Unity, la plupart des matériaux opaques ou TransparentCutout restituent la profondeur par défaut, mais les objets transparents et textuels n’affichent généralement pas de profondeur, bien qu’il s’agisse d’un nuanceur dépendant, etc. 
 
-Si vous utilisez le nuanceur standard de la boîte à outils de la réalité mixte, pour restituer la profondeur des objets transparents:
+Si vous utilisez le nuanceur standard de la boîte à outils de la [réalité mixte](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_MRTKStandardShader.md), pour restituer la profondeur des objets transparents:
 1) Sélectionner la matière tranparent qui utilise le nuanceur MRTK standard et ouvrir la fenêtre de l’éditeur de l’inspecteur
-2) Définir **le mode de rendu** sur **personnalisé** puis définir le **mode** sur **transparent** et enfin définir l' **écriture de profondeur** **sur activé**
+2) Sélectionnez le bouton **corriger maintenant** dans l’avertissement de partage de la mémoire tampon de profondeur. Vous pouvez également effectuer cette opération manuellement en définissant le **mode de rendu** sur **personnalisé** , puis en définissant **mode** sur **transparent** et enfin définir l' **écriture de profondeur** **sur activé**
 
 >[!NOTE]
 > Les développeurs doivent être attentifs à la lutte Z lors de la modification de ces valeurs avec les paramètres du plan proche/Far de l’appareil photo. Z-combat se produit lorsque deux Gameobjects essaient de s’afficher sur le même pixel et en raison de limitations de fidélité du tampon de profondeur (par exemple, profondeur z), Unity ne peut pas déterminer quel objet est devant l’autre. Les développeurs notent un scintillement entre deux objets de jeu lorsqu’ils *luttent contre* la même valeur de profondeur z. Cela peut être résolu en basculant au format de profondeur 24 bits, car il y aura une plus grande plage de valeurs pour chaque objet à calculer pour la profondeur z de l’appareil photo.
@@ -84,7 +84,7 @@ Unity a déconseillé la prise en charge du backend de script .NET et recommande
 2) Désactiver les analyses logicielles anti-programme malveillant pour votre projet & les dossiers de build
    - Ouvrir la **protection contre les menaces contre les Virus &** sous votre application Paramètres Windows 10
    - Sélectionnez **gérer les paramètres** sous **virus & les paramètres de protection contre les menaces**
-   - Sélectionnez **Ajouter ou supprimer** des exclusions sous  la section exclusions.
+   - Sélectionnez **Ajouter ou supprimer** des exclusions sous la section exclusions.
    - Cliquez sur **Ajouter une exclusion** , puis sélectionnez le dossier qui contient le code de votre projet Unity et les sorties de génération
 3) Utiliser un SSD pour la génération
 
@@ -109,9 +109,9 @@ Pour activer/désactiver l’écran de démarrage holographique:
 |  Afficher l’écran de démarrage Unity  |  Image de démarrage holographique  |  Comportement |
 |----------|----------|----------|
 |  Activé  |  Aucun  |  Affiche l’écran de démarrage Unity par défaut pendant 5 secondes ou jusqu’à ce que l’application soit chargée, selon la valeur la plus longue. | 
-|  Activé  |  Custom  |  Affichez l’écran de démarrage personnalisé pendant 5 secondes ou jusqu’à ce que l’application soit chargée, selon la valeur la plus longue. | 
+|  Activé  |  Personnalisé  |  Affichez l’écran de démarrage personnalisé pendant 5 secondes ou jusqu’à ce que l’application soit chargée, selon la valeur la plus longue. | 
 |  Désactivé  |  Aucun  |  Affichez le noir transparent (rien) jusqu’à ce que l’application soit chargée. | 
-|  Désactivé  |  Custom  |  Affichez l’écran de démarrage personnalisé pendant 5 secondes ou jusqu’à ce que l’application soit chargée, selon la valeur la plus longue. | 
+|  Désactivé  |  Personnalisé  |  Affichez l’écran de démarrage personnalisé pendant 5 secondes ou jusqu’à ce que l’application soit chargée, selon la valeur la plus longue. | 
 
 Pour plus d’informations, consultez la [documentation de l’écran de démarrage d’Unity](https://docs.unity3d.com/Manual/class-PlayerSettingsSplashScreen.html) .
 

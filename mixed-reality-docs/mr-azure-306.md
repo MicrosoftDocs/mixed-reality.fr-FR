@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, réalité mixte, Academy, Unity, didacticiel, API, Media Services, streaming video, 360, immersif, VR
-ms.openlocfilehash: f6974ab6a72828a557649d5dc65b4e505a7484ff
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: e27bda2a9309f335feb0056703da492555c39fde
+ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63555880"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69896582"
 ---
 >[!NOTE]
 >Les didacticiels d’Académie de la réalité mixte ont été conçus avec les casques immersif (1er génération) et de réalité mixte à l’esprit.  Par conséquent, nous pensons qu’il est important de ne pas mettre en place ces didacticiels pour les développeurs qui cherchent toujours des conseils en matière de développement pour ces appareils.  Ces didacticiels ne seront **_pas_** mis à jour avec les derniers ensembles d’outils ou interactions utilisés pour HoloLens 2.  Ils seront conservés pour continuer à travailler sur les appareils pris en charge. Une nouvelle série de didacticiels sera publiée à l’avenir qui vous montrera comment développer pour HoloLens 2.  Cet avis sera mis à jour avec un lien vers ces didacticiels lors de leur publication.
@@ -226,7 +226,7 @@ Pour utiliser Azure Media Service, vous devez configurer une instance du service
 
     ![Le portail Azure](images/AzureLabs-Lab6-21.png)
 
-20. Vous verrez votre vidéo, ainsi que l’autre, ce qui est de **Type de ressource *MP4 multidébit***.
+20. Vous verrez votre vidéo avec une autre, qui est de **type de ressource _MP4 à débit binaire multiple_** .
 
     ![Le portail Azure](images/AzureLabs-Lab6-22.png)
 
@@ -729,7 +729,7 @@ Pour créer cette classe:
 
 8.  Enregistrez vos modifications dans Visual Studio avant de revenir à Unity.
 
-9.  Cliquez et faites glisser **la classe** pointage du dossier scripts vers l’objet caméra principal dans le panneau **hiérarchie** .
+9.  Cliquez et faites glisser la classe pointage du dossier scripts vers l’objet caméra principal dans le panneau **hiérarchie** .
 
 ## <a name="chapter-7---setup-the-two-unity-scenes"></a>Chapitre 7: configurer les deux scènes d’Unity
 
