@@ -31,6 +31,7 @@
 #### [Guide de découverte](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide)
 ### [Accessoires matériels](hardware-accessories.md)
 ### [Guide de mise en place et de nettoyage du casque HoloLens pour les démos](hololens-demo-guide.md)
+### [Divertissement basé sur la localisation avec Windows Mixed Reality](location-based-experiences.md)
 ## Fonctionnalités principales
 ### [Pointage du regard](gaze.md)
 ### [Mouvements](gestures.md)
