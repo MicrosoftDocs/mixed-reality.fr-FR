@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, vision personnalisée, détection d’objets, réalité mixte, Académie, Unity, didacticiel, API, hololens
-ms.openlocfilehash: 89ee79943a88de8a34c679ae33621db5770908b0
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 71370db84a9b90b017e8d5fac0799a862883d046
+ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63544458"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70047227"
 ---
 >[!NOTE]
 >Les didacticiels d’Académie de la réalité mixte ont été conçus avec les casques immersif (1er génération) et de réalité mixte à l’esprit.  Par conséquent, nous pensons qu’il est important de ne pas mettre en place ces didacticiels pour les développeurs qui cherchent toujours des conseils en matière de développement pour ces appareils.  Ces didacticiels ne seront **_pas_** mis à jour avec les derniers ensembles d’outils ou interactions utilisés pour HoloLens 2.  Ils seront conservés pour continuer à travailler sur les appareils pris en charge. Une nouvelle série de didacticiels sera publiée à l’avenir qui vous montrera comment développer pour HoloLens 2.  Cet avis sera mis à jour avec un lien vers ces didacticiels lors de leur publication.
@@ -31,7 +31,7 @@ Ce service vous permet d’effectuer l’apprentissage d’un modèle de Machine
 
 À la fin de ce cours, vous disposerez d’une application de réalité mixte qui sera en mesure d’effectuer les opérations suivantes:
 
-1. L’utilisateur sera en *mesure de* pointer vers un objet, qu’il a formé à l’aide du service vision personnalisée Azure, détection d’objet. 
+1. L’utilisateur sera en mesure de pointer vers un objet, qu’il a formé à l’aide du service vision personnalisée Azure, détection d’objet. 
 2. L’utilisateur utilise le geste *Tap* pour capturer une image de ce qu’il examine.
 3. L’application enverra l’image à la Service Vision personnalisée Azure.
 4. Il y aura une réponse du service qui affichera le résultat de la reconnaissance sous forme de texte d’espace universel. Pour ce faire, vous devez utiliser le suivi spatial de Microsoft HoloLens, afin de comprendre la position universelle de l’objet reconnu, puis l’utilisation de la *balise* associée à ce qui est détecté dans l’image, pour fournir le texte de l’étiquette.
@@ -75,7 +75,7 @@ Nous vous recommandons d’utiliser le matériel et les logiciels suivants pour 
 2.  Configurez et testez votre HoloLens. Si vous avez besoin de la prise en charge de la configuration de votre HoloLens, [consultez l’article Configuration de hololens](https://docs.microsoft.com/hololens/hololens-setup). 
 3.  Il est judicieux d’effectuer un réglage de l’étalonnage et du capteur au début du développement d’une nouvelle application HoloLens (parfois, il peut être utile d’effectuer ces tâches pour chaque utilisateur). 
 
-Pour obtenir de l’aide sur l’étalonnage, veuillez suivre ce [lien vers l’article d’étalonnage HoloLens](calibration.md#hololens).
+Pour obtenir de l’aide sur l’étalonnage, veuillez suivre ce [lien vers l’article d’étalonnage HoloLens](calibration.md#hololens-2).
 
 Pour obtenir de l’aide sur le réglage du capteur, veuillez suivre ce [lien vers l’article sur le paramétrage du capteur HoloLens](sensor-tuning.md).
 

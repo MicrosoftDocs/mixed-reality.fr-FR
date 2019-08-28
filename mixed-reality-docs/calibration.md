@@ -6,12 +6,12 @@ ms.author: xerxesb
 ms.date: 02/24/2019
 ms.topic: article
 keywords: étalonnage, confort, visuels, qualité, IPD
-ms.openlocfilehash: 354d7eb74666471f24a6b5774e5772260b1e3570
-ms.sourcegitcommit: 5d3be2d7569d912011ea114c0a283bc3c635d5df
+ms.openlocfilehash: 1fc3904f4b3e441a967616f20e4287dbc7f08835
+ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69979479"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70047052"
 ---
 # <a name="improve-visual-quality-and-comfort"></a>Améliorez la qualité visuelle et le confort
 Les casques immersifs HoloLens, HoloLens 2 et Windows Mixed Reality offrent des méthodes différentes pour améliorer la qualité de l’expérience visuelle. 
@@ -52,12 +52,12 @@ Si vous avez suivi toutes les instructions et que l’étalonnage est toujours e
 3. **Paramètres**de lancement.
 4. Accédez à étalonnage de l'**œil** de l'**étalonnage** > du **système** > et sélectionnez étalonnage de l' **œil**.
 
-### <a name="calibration-when-sharing-a-device--session"></a>Étalonnage lors du partage d’un appareil/d’une session
+### <a name="calibration-when-sharing-a-devicesession"></a>Étalonnage lors du partage d’un appareil/d’une session
 
 Hololens 2 peut être partagé entre les personnes, sans qu’il soit nécessaire que chaque personne passe par la configuration de l’appareil. Hololens 2 invite l’utilisateur à étalonner des éléments visuels lorsque l’appareil est placé sur l’en-tête si l’utilisateur est nouveau sur l’appareil. Si l’utilisateur a précédemment étalonné des éléments visuels sur l’appareil, l’affichage est ajusté en fonction de la qualité et d’une expérience d’affichage confortable quand l’utilisateur place l’appareil en tête. 
 
 
-## <a name="hololens"></a>Hololens
+## <a name="hololens-v1"></a>Hololens (v1)
 
 L’étalonnage de votre IPD (distance interpupillary) peut améliorer la qualité de vos visuels.
 

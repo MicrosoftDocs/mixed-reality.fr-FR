@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, réalité mixte, Academy, Unity, didacticiel, API, Microsoft Graph, hololens, immersif, VR
-ms.openlocfilehash: 04c72a7ef7724cfcc27867f7f003c171a6f7851f
-ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
+ms.openlocfilehash: 775971c4e4289d2dc963dfa2bf033192d9f3489e
+ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67694525"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70047202"
 ---
 >[!NOTE]
 >Les didacticiels d’Académie de la réalité mixte ont été conçus avec les casques immersif (1er génération) et de réalité mixte à l’esprit.  Par conséquent, nous pensons qu’il est important de ne pas mettre en place ces didacticiels pour les développeurs qui cherchent toujours des conseils en matière de développement pour ces appareils.  Ces didacticiels ne seront **_pas_** mis à jour avec les derniers ensembles d’outils ou interactions utilisés pour HoloLens 2.  Ils seront conservés pour continuer à travailler sur les appareils pris en charge. Une nouvelle série de didacticiels sera publiée à l’avenir qui vous montrera comment développer pour HoloLens 2.  Cet avis sera mis à jour avec un lien vers ces didacticiels lors de leur publication.
@@ -66,7 +66,7 @@ Nous vous recommandons d’utiliser le matériel et les logiciels suivants pour 
 2.  Configurez et testez votre HoloLens. Si vous avez besoin de la prise en charge de la configuration de votre HoloLens, [consultez l’article Configuration de hololens](https://docs.microsoft.com/hololens/hololens-setup). 
 3.  Il est judicieux d’effectuer un réglage de l’étalonnage et du capteur au début du développement d’une nouvelle application HoloLens (parfois, il peut être utile d’effectuer ces tâches pour chaque utilisateur). 
 
-Pour obtenir de l’aide sur l’étalonnage, veuillez suivre ce [lien vers l’article d’étalonnage HoloLens](calibration.md#hololens).
+Pour obtenir de l’aide sur l’étalonnage, veuillez suivre ce [lien vers l’article d’étalonnage HoloLens](calibration.md#hololens-2).
 
 Pour obtenir de l’aide sur le réglage du capteur, veuillez suivre ce [lien vers l’article sur le paramétrage du capteur HoloLens](sensor-tuning.md).
 
@@ -144,7 +144,7 @@ Ce qui suit est une configuration classique pour le développement avec une réa
 
             ![](images/AzureLabs-Lab311-13.png)
 
-        2. Créez un dossier pour cela, ainsi que toute nouvelle scène. Sélectionnez le bouton **nouveau dossier** pour créer un nouveau dossier, puis nommez -le Scenes.
+        2. Créez un dossier pour cela, ainsi que toute nouvelle scène. Sélectionnez le bouton **nouveau dossier** pour créer un nouveau dossier, puis nommez-le Scenes.
 
             ![](images/AzureLabs-Lab311-14.png)
 
@@ -205,7 +205,7 @@ Si vous souhaitez en savoir plus sur l’ajout de dll personnalisées à votre p
 
 Pour importer le package:
 
-1.  Ajoutez le package Unity à Unity à l’aide **de l'**  > option de menu package d'**importation de packages** > **personnalisés** . Sélectionnez le package que vous venez de télécharger.
+1.  Ajoutez le package Unity à Unity à > l’aide de l’option de menu package d'**importation de packages** > **personnalisés** . Sélectionnez le package que vous venez de télécharger.
 
 2.  Dans la zone **importer le package Unity** qui s’affiche, vérifiez que tous les plug- **ins** sous (et y compris) sont sélectionnés.
 
@@ -226,7 +226,7 @@ Pour importer le package:
 
 6.  Ensuite, vous devez ouvrir le dossier **WSA** , dans le dossier **MSGraph** . Vous verrez une copie du même fichier que celui que vous venez de configurer. Sélectionnez le fichier, puis dans l’inspecteur:
 
-    -   Vérifiez que **toutes les plateformes** sont désactivées et que **seul** **WSAPlayer** est **activé**.
+    -   Vérifiez que **toutes les plateformes** sont désactivéeset que **seul** **WSAPlayer** est **activé**.
 
     -   Vérifiez que le **Kit de développement logiciel (SDK)** a la valeur **UWP**et que le **serveur principal de script** est défini sur le **point net**
 
@@ -246,7 +246,7 @@ Au cours de ce chapitre, vous allez configurer la caméra principale de votre sc
 
     1.  L' **objet Camera** doit être nommé **Camera main** (Notez l’orthographe!)
 
-    2.  La balise  principale de l’appareil photo doit être définie sur **MainCamera** (Notez l’orthographe!)
+    2.  La balise principale de l’appareil photo doit être définie sur **MainCamera** (Notez l’orthographe!)
 
     3.  Vérifiez que la **position** de la transformation est définie sur **0, 0,** 0
 
@@ -923,7 +923,7 @@ Pour créer la balise:
 
 1.  Dans l’éditeur Unity, cliquez sur la **caméra principale** dans le *panneau hiérarchie*.
 
-2.  Dans le *volet* de l’inspecteur, cliquez sur la balise **MainCamera**  pour ouvrir une liste déroulante. Cliquez sur **Ajouter une étiquette...**
+2.  Dans le *volet* de l’inspecteur, cliquez sur la balise **MainCamera** pour ouvrir une liste déroulante. Cliquez sur **Ajouter une étiquette...**
 
     ![](images/AzureLabs-Lab311-30.png)
 
@@ -969,7 +969,7 @@ Pour effectuer un déploiement sur HoloLens:
 
 2.  Accédez à votre nouvelle build Unity (le dossier de l' **application** ) et ouvrez le fichier solution avec **Visual Studio**.
 
-3.  Dans la **configuration** de la solution, sélectionnez Déboguer.
+3.  Dans la **configuration** de lasolution, sélectionnez Déboguer.
 
 4.  Dans la **plateforme**de la solution, sélectionnez **x86, ordinateur distant**. Vous serez invité à insérer l' **adresse IP** d’un périphérique distant (le HoloLens, dans ce cas, que vous avez noté).
 

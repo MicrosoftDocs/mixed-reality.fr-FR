@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, réalité mixte, Academy, Unity, didacticiel, API, vision par ordinateur, hololens, immersif, VR
-ms.openlocfilehash: 9d5288904dd6cae08a995ae40a31b00fea655776
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 9cc526afdc36b8056afd61948fea5cf98015bb35
+ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63552325"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70047193"
 ---
 >[!NOTE]
 >Les didacticiels d’Académie de la réalité mixte ont été conçus avec les casques immersif (1er génération) et de réalité mixte à l’esprit.  Par conséquent, nous pensons qu’il est important de ne pas mettre en place ces didacticiels pour les développeurs qui cherchent toujours des conseils en matière de développement pour ces appareils.  Ces didacticiels ne seront **_pas_** mis à jour avec les derniers ensembles d’outils ou interactions utilisés pour HoloLens 2.  Ils seront conservés pour continuer à travailler sur les appareils pris en charge. Une nouvelle série de didacticiels sera publiée à l’avenir qui vous montrera comment développer pour HoloLens 2.  Cet avis sera mis à jour avec un lien vers ces didacticiels lors de leur publication.
@@ -71,7 +71,7 @@ Nous vous recommandons d’utiliser le matériel et les logiciels suivants pour 
 2.  Configurez et testez votre HoloLens. Si vous avez besoin de la prise en charge de la configuration de votre HoloLens, [consultez l’article Configuration de hololens](https://docs.microsoft.com/hololens/hololens-setup). 
 3.  Il est judicieux d’effectuer un réglage de l’étalonnage et du capteur au début du développement d’une nouvelle application HoloLens (parfois, il peut être utile d’effectuer ces tâches pour chaque utilisateur). 
 
-Pour obtenir de l’aide sur l’étalonnage, veuillez suivre ce [lien vers l’article d’étalonnage HoloLens](calibration.md#hololens).
+Pour obtenir de l’aide sur l’étalonnage, veuillez suivre ce [lien vers l’article d’étalonnage HoloLens](calibration.md#hololens-2).
 
 Pour obtenir de l’aide sur le réglage du capteur, veuillez suivre ce [lien vers l’article sur le paramétrage du capteur HoloLens](sensor-tuning.md).
 
@@ -171,7 +171,7 @@ Ce qui suit est une configuration classique pour le développement avec une réa
         
             ![Cliquez sur le bouton Ajouter des scènes ouvertes](images/AzureLabs-Lab2-11.png)
 
-        2. Créez un dossier pour cela, ainsi que toute nouvelle scène, puis sélectionnez le bouton **nouveau dossier** pour créer un nouveau dossier, puis nommez- le Scenes.
+        2. Créez un dossier pour cela, ainsi que toute nouvelle scène, puis sélectionnez le bouton **nouveau dossier** pour créer un nouveau dossier, puis nommez-le Scenes.
 
             ![Créer un dossier de scripts](images/AzureLabs-Lab2-12.png)
 
@@ -221,7 +221,7 @@ Ce qui suit est une configuration classique pour le développement avec une réa
 2.  Une fois sélectionné, vous pouvez voir tous les composants de la **caméra principale** dans le *panneau Inspecteur*.
 
     1. L' **objet Camera** doit être nommé **Camera main** (Notez l’orthographe!)
-    2. La balise  principale de l’appareil photo doit être définie sur **MainCamera** (Notez l’orthographe!)
+    2. La balise principale de l’appareil photo doit être définie sur **MainCamera** (Notez l’orthographe!)
     3. Vérifiez que la **position** de la transformation est définie sur **0, 0,** 0
     4. Affectez à **effacer les indicateurs** la **couleur unie** (ignorer ce point pour le casque immersif).
     5. Définissez la couleur d' **arrière-plan** du composant Camera sur **Black, alpha 0 (Code hex: #00000000)** (ignorez-le pour le casque immersif).
@@ -357,7 +357,7 @@ Pour créer cette classe:
         }
     ```
 
-6.  Veillez à enregistrer vos modifications dans *Visual Studio* avant de revenir à Unity.
+6.  Veillez à enregistrer vos modifications dans *Visual Studio* avant de revenirà Unity.
 7.  De retour dans l' *éditeur Unity*, cliquez et faites glisser la classe *ResultsLabel* du dossier **scripts** vers l’objet **Camera principal** dans le *panneau hiérarchie*.
 8.  Cliquez sur l' **appareil photo principal** et observez le panneau de l' *inspecteur*.
 
@@ -676,7 +676,7 @@ Pour créer cette classe:
         }  
     ```
 
-9.  Veillez à enregistrer vos modifications dans *Visual Studio* avant de revenir à Unity.
+9.  Veillez à enregistrer vos modifications dans *Visual Studio* avant de revenirà Unity.
 10. De retour dans l’éditeur Unity, cliquez et faites glisser les classes *VisionManager* et *ImageCapture* du dossier **scripts** vers l’objet **Camera principal** dans le *panneau hiérarchie*. 
 
 ## <a name="chapter-8--before-building"></a>Chapitre 8 – avant la génération
@@ -716,7 +716,7 @@ Pour effectuer un déploiement sur HoloLens:
     5. Définissez le mode développeur sur.
 
 2.  Accédez à votre nouvelle build Unity (le dossier de l' *application* ) et ouvrez le fichier solution avec *Visual Studio*.
-3.  Dans la configuration de la solution, sélectionnez Déboguer.
+3.  Dans la configuration de lasolution, sélectionnez Déboguer.
 4.  Dans la plateforme de la solution, sélectionnez **x86**, **ordinateur distant**. 
 
     ![Déployez la solution à partir de Visual Studio.](images/AzureLabs-Lab2-27.png)

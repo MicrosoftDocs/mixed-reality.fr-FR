@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/03/2018
 ms.topic: article
 keywords: Azure, réalité mixte, Academy, Unity, didacticiel, API, vision personnalisée, hololens, immersif, VR
-ms.openlocfilehash: e6e9782a8d559af660dc4765556f1e926c5360b1
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: b173648e2e829e94e47306277bd7814a19842cae
+ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63553607"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70047211"
 ---
 >[!NOTE]
 >Les didacticiels d’Académie de la réalité mixte ont été conçus avec les casques immersif (1er génération) et de réalité mixte à l’esprit.  Par conséquent, nous pensons qu’il est important de ne pas mettre en place ces didacticiels pour les développeurs qui cherchent toujours des conseils en matière de développement pour ces appareils.  Ces didacticiels ne seront **_pas_** mis à jour avec les derniers ensembles d’outils ou interactions utilisés pour HoloLens 2.  Ils seront conservés pour continuer à travailler sur les appareils pris en charge. Une nouvelle série de didacticiels sera publiée à l’avenir qui vous montrera comment développer pour HoloLens 2.  Cet avis sera mis à jour avec un lien vers ces didacticiels lors de leur publication.
@@ -72,7 +72,7 @@ Nous vous recommandons d’utiliser le matériel et les logiciels suivants pour 
 2.  Configurez et testez votre HoloLens. Si vous avez besoin de la prise en charge de la configuration de votre HoloLens, [consultez l’article Configuration de hololens](https://docs.microsoft.com/hololens/hololens-setup). 
 3.  Il est judicieux d’effectuer un réglage de l’étalonnage et du capteur au début du développement d’une nouvelle application HoloLens (parfois, il peut être utile d’effectuer ces tâches pour chaque utilisateur). 
 
-Pour obtenir de l’aide sur l’étalonnage, veuillez suivre ce [lien vers l’article d’étalonnage HoloLens](calibration.md#hololens).
+Pour obtenir de l’aide sur l’étalonnage, veuillez suivre ce [lien vers l’article d’étalonnage HoloLens](calibration.md#hololens-2).
 
 Pour obtenir de l’aide sur le réglage du capteur, veuillez suivre ce [lien vers l’article sur le paramétrage du capteur HoloLens](sensor-tuning.md).
 
@@ -195,7 +195,7 @@ Ce qui suit est une configuration classique pour le développement avec une réa
 
     ![](images/AzureLabs-Lab302b-18.png)
 
-3.  Si Unity est ouvert, il est conseillé de vérifier que l' **éditeur de script** par défaut est défini sur **Visual Studio**. Accédez à **modifier* > les*Préférences** , puis à partir de la nouvelle fenêtre, accédez à **outils externes**. Remplacez l' **éditeur de script externe** par **Visual Studio 2017**. Fermez la fenêtre **Préférences** .
+3.  Si Unity est ouvert, il est conseillé de vérifier que l' **éditeur de script** par défaut est défini sur **Visual Studio**. Accédez à **modifier* > *les Préférences** , puis à partir de la nouvelle fenêtre, accédez à **outils externes**. Remplacez l' **éditeur de script externe** par **Visual Studio 2017**. Fermez la fenêtre **Préférences** .
 
     ![](images/AzureLabs-Lab302b-19.png)
 
@@ -781,7 +781,7 @@ Pour créer cette classe:
     ```
 
     > [!IMPORTANT]
-    > Veillez à ajouter la valeur de **clé de service** (clé de formation) et la valeur d' **ID de projet** , que vous avez notée précédemment; Il s’agit des valeurs que vous avez [collectées à partir du portail plus haut dans le cours (chapitre 2, étape 10)](#chapter-2---training-your-custom-vision-oroject).
+    > Veillez à ajouter la valeur de **clé de service** (clé de formation) et la valeur d' **ID de projet** , que vous avez notée précédemment; Il s’agit des valeurs que vous avez [collectées à partir du portail plus haut dans le cours (chapitre 2, étape 10)](#chapter-2---training-your-custom-vision-project).
 
 5.  Ajoutez les méthodes **Start ()** et **éveillé ()** suivantes. Ces méthodes sont appelées lors de l’initialisation et contiennent l’appel pour configurer l’interface utilisateur:
 

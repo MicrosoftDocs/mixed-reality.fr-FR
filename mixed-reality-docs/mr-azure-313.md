@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/11/2018
 ms.topic: article
 keywords: Azure, réalité mixte, Académie, périphérie, IOT Edge, didacticiel, API, notification, fonctions, tables, hololens, immersif, VR, IOT, machine virtuelle, Ubuntu, Python
-ms.openlocfilehash: 93f7dc64426360d2e02b0ee0a9b1796fc8f2b469
-ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
+ms.openlocfilehash: ec669b799e7c46a9a4ed87674ed78e50f816c9e9
+ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67694600"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70047243"
 ---
 >[!NOTE]
 >Les didacticiels d’Académie de la réalité mixte ont été conçus avec les casques immersif (1er génération) et de réalité mixte à l’esprit.  Par conséquent, nous pensons qu’il est important de ne pas mettre en place ces didacticiels pour les développeurs qui cherchent toujours des conseils en matière de développement pour ces appareils.  Ces didacticiels ne seront **_pas_** mis à jour avec les derniers ensembles d’outils ou interactions utilisés pour HoloLens 2.  Ils seront conservés pour continuer à travailler sur les appareils pris en charge. Une nouvelle série de didacticiels sera publiée à l’avenir qui vous montrera comment développer pour HoloLens 2.  Cet avis sera mis à jour avec un lien vers ces didacticiels lors de leur publication.
@@ -84,7 +84,7 @@ Le matériel et les logiciels suivants sont requis:
 1. Configurez et testez votre HoloLens. Si vous avez besoin de la prise en charge de la configuration de votre HoloLens, [consultez l’article Configuration de hololens](https://docs.microsoft.com/hololens/hololens-setup).
 2. Il est judicieux d’effectuer un réglage de l' **étalonnage** et du **capteur** au début du développement d’une nouvelle application HoloLens (parfois, il peut être utile d’effectuer ces tâches pour chaque utilisateur).
 
-Pour obtenir de l’aide sur l’étalonnage, veuillez suivre ce [lien vers l’article d’étalonnage HoloLens](calibration.md#hololens).
+Pour obtenir de l’aide sur l’étalonnage, veuillez suivre ce [lien vers l’article d’étalonnage HoloLens](calibration.md#hololens-2).
 
 Pour obtenir de l’aide sur le réglage du capteur, veuillez suivre ce [lien vers l’article sur le paramétrage du capteur HoloLens](sensor-tuning.md).
 
@@ -744,7 +744,7 @@ Vous allez ensuite créer le dossier *images* , utilisé par le script Python po
 
 ## <a name="chapter-9---package-the-solution-as-a-container"></a>Chapitre 9-empaqueter la solution en tant que conteneur
 
-1.  Vous êtes maintenant prêt à «empaqueter» vos fichiers en tant que conteneur et à les envoyer à votre **Azure Container Registry**. Dans vs code, ouvrez le *Terminal intégré* (**Affichez** > le**Terminal intégré** ou **CTRL**+ **\`** ) et utilisez la ligne suivante pour vous  connecter à dockr (remplacez les valeurs de la avec les informations d’identification de votre **Azure Container Registry (ACR)** ):
+1.  Vous êtes maintenant prêt à «empaqueter» vos fichiers en tant que conteneur et à les envoyer à votre **Azure Container Registry**. Dans vs code, ouvrez le *Terminal intégré* (**Affichez** > le**Terminal intégré** ou **CTRL**+ **\`** ) et utilisez la ligne suivante pour vous connecter à dockr (remplacez les valeurs de la avec les informations d’identification de votre **Azure Container Registry (ACR)** ):
 
     ```bash
         docker login -u <ACR username> -p <ACR password> <ACR login server>
@@ -860,7 +860,7 @@ Revenez à votre portail Azure, où vous allez créer un service de tables Azure
 
     4. Cliquez sur un **emplacement**approprié.
     
-    5. Dans le  menu déroulant réplication, cliquez sur **stockage avec accès géo-redondant (RA-GRS)** .
+    5. Dans le menu déroulant réplication, cliquez sur **stockage avec accès géo-redondant (RA-GRS)** .
 
     6. Pour les **performances**, cliquez sur **standard**.
 
@@ -886,11 +886,11 @@ Revenez à votre portail Azure, où vous allez créer un service de tables Azure
 
 8. Cliquez sur le bouton **atteindre la ressource** dans la notification pour accéder à la page vue d’ensemble de votre nouvelle instance de service de stockage.
 
-    ![Accéder à la ressource](images/AzureLabs-Lab313-39.png)
+    ![accéder à la ressource](images/AzureLabs-Lab313-39.png)
 
 9. Dans la page vue d’ensemble, sur le côté droit, cliquez sur **tables**.
     
-    ![Elles](images/AzureLabs-Lab313-40.png)
+    ![elles](images/AzureLabs-Lab313-40.png)
 
 10. Le panneau à droite change pour afficher les informations sur le **service de table** , où vous devez ajouter une nouvelle table. Pour ce faire, cliquez sur le bouton **+ table** dans le coin supérieur gauche.
 
@@ -1021,7 +1021,7 @@ Tout d’abord, vous devez créer un fichier qui permettra à votre fonction Azu
 
     8. Pour la section **stockage** , **vous devez sélectionner le service de stockage que vous avez créé à l’étape précédente**.
 
-    9. Vous n’aurez pas besoin de *application Insights* dans cette **application. n'** hésitez donc pas à la conserver.
+    9. Vous n’aurez pas besoin de *application Insights* dans cette application. n’hésitez doncpas à la conserver.
 
     10. Cliquez sur **Créer**.
 
@@ -1037,7 +1037,7 @@ Tout d’abord, vous devez créer un fichier qui permettra à votre fonction Azu
 
 10. Cliquez sur le bouton **atteindre la ressource** dans la notification pour explorer votre nouvelle instance de service. 
 
-    ![Accéder à la ressource](images/AzureLabs-Lab313-57.png)
+    ![accéder à la ressource](images/AzureLabs-Lab313-57.png)
 
 11. Sur le côté gauche du nouveau panneau, cliquez sur l' **+** icône (plus) en regard de *fonctions*pour créer une fonction.
 
@@ -1175,7 +1175,7 @@ Si vous ouvrez maintenant Visual Studio (**pas** Visual Studio code), vous pouve
 
 Une fois le service de table et le Function App en place, vos messages d’appareil Ubuntu s’affichent dans votre table *IoTMessages* . S’il n’est pas déjà en cours d’exécution, redémarrez votre appareil et vous pourrez voir les messages de résultats de votre appareil et du module dans votre table, à l’aide de Visual Studio *Cloud Explorer*.
 
-![Visualiser les données](images/AzureLabs-Lab313-72.png)
+![visualiser les données](images/AzureLabs-Lab313-72.png)
 
 
 ## <a name="chapter-15---power-bi-setup"></a>Chapitre 15-configuration de Power BI

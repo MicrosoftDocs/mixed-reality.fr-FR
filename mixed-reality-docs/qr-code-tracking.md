@@ -6,12 +6,12 @@ ms.author: dobrown
 ms.date: 05/15/2019
 ms.topic: article
 keywords: VR, LBE, divertissement basé sur l’emplacement, VR arcade, arcade, immersif, QR, code QR, hololens2
-ms.openlocfilehash: d51da88aa7bff1dc5c6d3068cb31793891c71e61
-ms.sourcegitcommit: 60f73ca23023c17c1da833c83d2a02f4dcc4d17b
+ms.openlocfilehash: 736ab265db2145dd784c435e525059ed3a2fcbbb
+ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69565998"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70047165"
 ---
 # <a name="qr-code-tracking"></a>Suivi du code QR
 
@@ -248,6 +248,9 @@ Les codes QR avec des logos n’ont pas été testés et ne sont actuellement pa
 Les appareils Windows Mixed Reality détectent les codes QR au niveau du système dans le pilote. Lorsque l’appareil est redémarré, les codes QR détectés ont disparu et sont à nouveau détectés en tant que nouveaux objets la prochaine fois.
 
 Il est recommandé de configurer votre application pour qu’elle ignore les codes QR antérieurs à un horodateur spécifique. Actuellement, l’API ne prend pas en charge l’effacement de l’historique du code QR.
+
+### <a name="qr-code-placement-in-a-space"></a>Positionnement du code QR dans un espace
+Pour obtenir des recommandations sur l’emplacement et le positionnement des codes QR, reportez-vous à [considérations relatives à l’environnement pour HoloLens](environment-considerations-for-hololens.md).
 
 ## <a name="qr-api-reference"></a>Informations de référence sur l’API QR
 

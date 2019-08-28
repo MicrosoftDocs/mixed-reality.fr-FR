@@ -6,12 +6,12 @@ ms.author: dobrown
 ms.date: 04/22/2019
 ms.topic: article
 keywords: cadre holographique, champ de vision, angle de fonctionnement, étalonnage, espaces, environnement, procédure
-ms.openlocfilehash: fd5c5020916b3fde6f91663135c3bc2b6c334b44
-ms.sourcegitcommit: 60f73ca23023c17c1da833c83d2a02f4dcc4d17b
+ms.openlocfilehash: cc856c42aaf4ddfca8365f63ab0c7df1a1a3b248
+ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69565989"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70047081"
 ---
 # <a name="environment-considerations-for-hololens"></a>Considérations environnementales pour HoloLens
 
@@ -37,7 +37,7 @@ Si vous avez un luxmeter, un 500-1000 lux stable est un bon point de départ.
 #### <a name="types-of-lighting"></a>Types d’éclairage
 Les différents types de lumière dans un espace peuvent également influencer le suivi. Les ampoules sont en impulsions avec l’électricité courant à travers le courant: si la fréquence de l’AC est 50Hz, la lumière clignote à 50Hz. Pour un homme, cette pulsation n’est pas remarquée. Toutefois, l’appareil photo 30fps de HoloLens voit ces modifications. certaines images sont bien éclairées, certaines sont mal éclairées, et d’autres sont surexposées lorsque l’appareil photo tente de compenser les impulsions légères.
 
-Aux États-Unis, la norme de fréquence électrique est 60 Hz, de sorte que les impulsions d’ampoule sont harmonisées avec les impulsions de fréquence d’images de HoloLens, alignées avec la cadence de la fréquence de 30 i/s. Toutefois, de nombreux pays ont une norme de fréquence AC de 50Hz, ce qui signifie que certaines images Hololens seront prises pendant les impulsions, et d’autres non. En particulier, l’éclairage fluorescent en Europe a été connu pour causer des problèmes. 
+Aux États-Unis, la norme de fréquence électrique est 60 Hz, de sorte que les impulsions d’ampoule sont harmonisées avec les impulsions de fréquence d’images de HoloLens, alignées avec la cadence de la fréquence de 30 i/s. Toutefois, de nombreux pays ont une norme de fréquence AC de 50Hz, ce qui signifie que certaines images HoloLens seront prises pendant les impulsions, et d’autres non. En particulier, l’éclairage fluorescent en Europe a été connu pour causer des problèmes. 
 
 Vous pouvez essayer de résoudre les problèmes de scintillement en quelques étapes. La température, l’âge des bulbes et les cycles de préchauffage sont des causes courantes du scintillement fluorescent et le remplacement des ampoules peut aider. Il peut également être utile d’alserrer les ampoules et de s’assurer que les dessins actuels sont constants. 
 
@@ -46,7 +46,7 @@ HoloLens utilise des points de repère environnementaux uniques, également appe
 
 Un appareil ne peut pratiquement jamais effectuer de suivi dans une zone de fonctionnalité médiocre, car l’appareil n’a aucun moyen de savoir où il est dans l’espace. L’ajout de fonctionnalités aux murs d’un espace est généralement un bon moyen d’améliorer le suivi. Toutes les lignes de l’affiches, les symboles sur bande, les plantes, les objets uniques ou autres éléments similaires. Un bureau en désordre est un bon exemple d’environnement qui donne un bon suivi: il existe de nombreuses fonctionnalités différentes dans une seule zone. 
 
-En outre, utilisez des fonctionnalités uniques dans le même espace. La même affiche répétée plusieurs fois sur un mur, par exemple, entraîne la confusion de l’appareil, car le HoloLens ne sait pas laquelle des affiches répétitives qu’elle examine. Une façon courante d’ajouter des fonctionnalités uniques consiste à utiliser des lignes de masquage de bande pour créer des modèles nonrepetitve uniques le long des murs et de l’étage d’un espace. 
+En outre, utilisez des fonctionnalités uniques dans le même espace. La même affiche répétée plusieurs fois sur un mur, par exemple, entraîne la confusion de l’appareil, car le HoloLens ne sait pas laquelle des affiches répétitives qu’elle examine. Une façon courante d’ajouter des fonctionnalités uniques consiste à utiliser des lignes de masquage de bande pour créer des modèles uniques et non répétitifs le long des murs et de l’étage d’un espace. 
 
 Une bonne question à vous poser est: Si vous avez vu juste une petite partie de la scène, pouvez-vous vous trouver dans l’espace? Si ce n’est pas le cas, il est probable que l’appareil aura également des problèmes de suivi.
 
@@ -54,6 +54,15 @@ Une bonne question à vous poser est: Si vous avez vu juste une petite partie de
 Si vous avez deux zones ou régions qui semblent identiques, le dispositif de suivi peut penser qu’elles sont identiques. Cela permet à l’appareil de se tromper pour penser qu’il s’agit d’un autre emplacement. Nous appelons ces types de repères de zone répétitives. 
 
 Pour éviter les repères, essayez d’éviter les zones identiques dans le même espace. Les zones identiques peuvent parfois inclure des stations de fabrique, des fenêtres sur un bâtiment, des racks de serveurs ou des stations de travail. L’étiquetage des zones ou l’ajout de fonctionnalités uniques à chaque zone d’aspect similaire peut aider à atténuer les repères.
+
+### <a name="qr-codes-in-environments"></a>Codes QR dans les environnements.
+HoloLens peut utiliser des [codes QR](qr-code-tracking.md) pour plusieurs raisons, par exemple pour étiqueter des objets ou pour fournir un contexte supplémentaire aux environnements, mais ils peuvent également être utilisés pour améliorer la qualité du suivi. HoloLens utilisera automatiquement les codes QR pour faciliter la création d’une carte, même si vous ne consommez pas les données incorporées dans les codes.
+
+Si vous utilisez des codes QR pour faciliter le suivi, vous aurez besoin de deux à trois codes dans un champ de vue donné. Pour de nombreux scénarios, cela se traduit par la mise en place d’un code QR tous les 2-3 ou 6-9 mètres.
+
+Assurez-vous que les codes QR sont plats et fermement attachés aux murs ou à d’autres surfaces.
+
+Les meilleures pratiques pour la génération et l’impression de codes QR se trouvent dans [meilleures pratiques pour la détection du code QR](qr-code-tracking.md#best-practices-for-qr-code-detection).
  
 ### <a name="movement-in-a-space"></a>Déplacement dans un espace
 Si votre environnement est en constante évolution et change, l’appareil n’a pas de fonctionnalités stables à rechercher. 
@@ -110,4 +119,4 @@ Si quelqu’un d’autre utilise votre HoloLens, il doit d’abord exécuter l�
 * [Conception du mappage spatial](spatial-mapping-design.md)
 * [Hologrammes](hologram.md)
 * [Étalonnage](calibration.md)
-* [Utiliser Hololens dans de nouveaux espaces](use-hololens-in-new-spaces.md)
+* [Utiliser HoloLens dans de nouveaux espaces](use-hololens-in-new-spaces.md)

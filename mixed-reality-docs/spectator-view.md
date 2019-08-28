@@ -6,12 +6,12 @@ ms.author: chriba
 ms.date: 02/11/2019
 ms.topic: article
 keywords: Vue spectateur, iPhone, iOS, iPad, OpenCV, Camera, ARKit, HoloLens, realer, MixedRealityToolkit, Demo, record
-ms.openlocfilehash: 135a566456f1000669d2033edcf0d0b4649ccdf3
-ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.openlocfilehash: 708ed694af3769f16d5dce0595e026f9a348d754
+ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387667"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70047173"
 ---
 # <a name="spectator-view-for-hololens-and-hololens-2"></a>Vue spectateur pour HoloLens et HoloLens 2
 
@@ -25,10 +25,8 @@ La vue spectateur offre une approche rapide et abordable pour l’enregistrement
 ## <a name="key-resources"></a>Ressources clés
 
 * [**Vue spectateur sur GitHub**](https://github.com/microsoft/MixedReality-SpectatorView)
-* [**SOA**](https://github.com/microsoft/MixedReality-SpectatorView/blob/master/doc/SpectatorView.Architecture.md)
-* [**Extraits**](https://github.com/microsoft/MixedReality-SpectatorView/tree/master/samples)
-* [**Instructions d’installation de mobile**](https://github.com/microsoft/MixedReality-SpectatorView/blob/master/doc/SpectatorView.Setup.md)
-* [**Instructions d’installation de la caméra vidéo**](https://github.com/microsoft/MixedReality-SpectatorView/blob/master/doc/SpectatorView.Setup.VideoCamera.md)
+* [**Documentation de l’affichage de spectateur**](https://microsoft.github.io/MixedReality-SpectatorView/README.html)
+* [**Exemples de vue de spectateur**](https://github.com/microsoft/MixedReality-SpectatorView/tree/master/samples)
 
 ## <a name="use-cases"></a>Cas d’usage
 * Vous pouvez enregistrer une expérience de réalité mixte à l’aide d’un appareil iPhone ou Android. Enregistrez en HD entièrement et appliquez l’anticrénelage aux hologrammes et même aux ombres. Il s’agit d’un moyen économique et rapide de capturer la vidéo des hologrammes.

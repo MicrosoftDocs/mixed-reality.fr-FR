@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, réalité mixte, Academy, Unity, didacticiel, API, reconnaissance faciale, hololens, immersif, VR
-ms.openlocfilehash: 6330d3e5c51d6b2cbc43ea795a3f953a5b14d6f1
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 7cd2a6683c80279129934c619a9b9cb857badf67
+ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63554709"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70047187"
 ---
 >[!NOTE]
 >Les didacticiels d’Académie de la réalité mixte ont été conçus avec les casques immersif (1er génération) et de réalité mixte à l’esprit.  Par conséquent, nous pensons qu’il est important de ne pas mettre en place ces didacticiels pour les développeurs qui cherchent toujours des conseils en matière de développement pour ces appareils.  Ces didacticiels ne seront **_pas_** mis à jour avec les derniers ensembles d’outils ou interactions utilisés pour HoloLens 2.  Ils seront conservés pour continuer à travailler sur les appareils pris en charge. Une nouvelle série de didacticiels sera publiée à l’avenir qui vous montrera comment développer pour HoloLens 2.  Cet avis sera mis à jour avec un lien vers ces didacticiels lors de leur publication.
@@ -72,7 +72,7 @@ Nous vous recommandons d’utiliser le matériel et les logiciels suivants pour 
 2.  Configurez et testez votre HoloLens. Si vous avez besoin de la prise en charge de la configuration de votre HoloLens, [consultez l’article Configuration de hololens](https://docs.microsoft.com/hololens/hololens-setup). 
 3.  Il est judicieux d’effectuer un réglage de l’étalonnage et du capteur au début du développement d’une nouvelle application HoloLens (parfois, il peut être utile d’effectuer ces tâches pour chaque utilisateur). 
 
-Pour obtenir de l’aide sur l’étalonnage, veuillez suivre ce [lien vers l’article d’étalonnage HoloLens](calibration.md#hololens).
+Pour obtenir de l’aide sur l’étalonnage, veuillez suivre ce [lien vers l’article d’étalonnage HoloLens](calibration.md#hololens-2).
 
 Pour obtenir de l’aide sur le réglage du capteur, veuillez suivre ce [lien vers l’article sur le paramétrage du capteur HoloLens](sensor-tuning.md).
 
@@ -156,7 +156,7 @@ Cette application utilise les bibliothèques *Microsoft. ProjectOxford. face* , 
 >
 > -  Attribuez des *images de visage* à une *personne*pour permettre à votre service Azure API visage de reconnaître une *personne* par la *face*correspondante.
 >
-> -  *Formez votre* *service Azure API visage*.
+> -  Formez votre *service Azure API visage*.
 
 N’oubliez pas que pour former cette application et reconnaître des personnes, vous aurez besoin de dix (10) photos proches de chaque personne que vous souhaitez ajouter à votre groupe de personnes. L’application Cam Windows 10 peut vous aider à prendre ces derniers. Vous devez vous assurer que chaque photo est claire (éviter le flou, le masquage ou être trop éloigné, du sujet), que la photo est au format jpg ou png, avec une taille de fichier image supérieure à **4 Mo**et inférieure ou égale à **1 Ko**.
 
@@ -251,7 +251,7 @@ Ce qui suit est une configuration classique pour le développement avec une réa
 
             ![Cliquez sur le bouton Ajouter des scènes ouvertes](images/AzureLabs-Lab4-12.png)
 
-        2. Sélectionnez le bouton **nouveau dossier** pour créer un nouveau dossier, puis nommez -le Scenes.
+        2. Sélectionnez le bouton **nouveau dossier** pour créer un nouveau dossier, puis nommez-le Scenes.
 
             ![Créer un dossier de scripts](images/AzureLabs-Lab4-13.png)
 
@@ -293,7 +293,7 @@ Ce qui suit est une configuration classique pour le développement avec une réa
 ## <a name="chapter-4---main-camera-setup"></a>Chapitre 4-Configuration de l’appareil photo principal
 
 > [!IMPORTANT]
-> Si vous souhaitez ignorer le composant *Unity* configure de ce cours et continuer directement dans le code, n’hésitez pas à [Télécharger ce fichier. pour Unity](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20304%20-%20Face%20recognition/Azure-MR-304.unitypackage)et à l’importer dans votre projet en tant que [package personnalisé](https://docs.unity3d.com/Manual/AssetPackages.html). Sachez que ce package comprend également l’importation de la *dll Newtonsoft*, traitée dans le [Chapitre 5](#chapter-5--import-the-newtonsoft.json-library). Une fois cette importation effectuée, vous pouvez passer [au chapitre 6](#chapter-6-create-the-faceanalysis-class).
+> Si vous souhaitez ignorer le composant *Unity* configure de ce cours et continuer directement dans le code, n’hésitez pas à [Télécharger ce fichier. pour Unity](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20304%20-%20Face%20recognition/Azure-MR-304.unitypackage)et à l’importer dans votre projet en tant que [package personnalisé](https://docs.unity3d.com/Manual/AssetPackages.html). Sachez que ce package comprend également l’importation de la *dll Newtonsoft*, traitée dans le [Chapitre 5](#chapter-5--import-the-newtonsoftjson-library). Une fois cette importation effectuée, vous pouvez passer [au chapitre 6](#chapter-6---create-the-faceanalysis-class).
 
 1.  Dans le panneau *hiérarchie* , sélectionnez l' **appareil photo principal**.
 
@@ -301,7 +301,7 @@ Ce qui suit est une configuration classique pour le développement avec une réa
 
     1. L' **objet Camera** doit être nommé **Camera main** (Notez l’orthographe!)
 
-    2. La balise  principale de l’appareil photo doit être définie sur **MainCamera** (Notez l’orthographe!)
+    2. La balise principale de l’appareil photo doit être définie sur **MainCamera** (Notez l’orthographe!)
 
     3. Vérifiez que la **position** de la transformation est définie sur **0, 0,** 0
 
@@ -314,7 +314,7 @@ Ce qui suit est une configuration classique pour le développement avec une réa
 ## <a name="chapter-5--import-the-newtonsoftjson-library"></a>Chapitre 5-importer la bibliothèque Newtonsoft. JSON
 
 > [!IMPORTANT]
-> Si vous avez importé le «. pour Unity» dans le [dernier chapitre](#chapter-4--main-camera-setup), vous pouvez ignorer ce chapitre.
+> Si vous avez importé le «. pour Unity» dans le [dernier chapitre](#chapter-4---main-camera-setup), vous pouvez ignorer ce chapitre.
 
 Pour vous aider à désérialiser et à sérialiser les objets reçus et envoyés au service bot, vous devez télécharger la bibliothèque *Newtonsoft. JSON* . Vous trouverez une version compatible déjà organisée avec la structure de dossiers Unity correcte dans ce [fichier de package Unity](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20304%20-%20Face%20recognition/newtonsoftDLL.unitypackage). 
 
@@ -825,7 +825,7 @@ Pour effectuer un déploiement sur HoloLens:
     5. Définissez le mode développeur sur.
 
 2.  Accédez à votre nouvelle build Unity (le dossier de l' *application* ) et ouvrez le fichier solution avec *Visual Studio*.
-3.  Dans la configuration de la solution, sélectionnez Déboguer.
+3.  Dans la configuration de lasolution, sélectionnez Déboguer.
 4.  Dans la plateforme de la solution, sélectionnez **x86**, **ordinateur distant**. 
 
     ![Déployez la solution à partir de Visual Studio.](images/AzureLabs-Lab4-26.png)

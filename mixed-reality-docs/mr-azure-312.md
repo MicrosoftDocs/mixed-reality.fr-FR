@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, réalité mixte, Académie, Unity, didacticiel, API, vision par ordinateur, hololens, immersif, VR, Microsoft bot Framework v4, application Web bot, robot Framework, Microsoft bot
-ms.openlocfilehash: b828aa4415103d280459bd2c666004c994b3e59d
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 481693b5af8c946e1cb45dda5144e78a175fa771
+ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63542519"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70047229"
 ---
 >[!NOTE]
 >Les didacticiels d’Académie de la réalité mixte ont été conçus avec les casques immersif (1er génération) et de réalité mixte à l’esprit.  Par conséquent, nous pensons qu’il est important de ne pas mettre en place ces didacticiels pour les développeurs qui cherchent toujours des conseils en matière de développement pour ces appareils.  Ces didacticiels ne seront **_pas_** mis à jour avec les derniers ensembles d’outils ou interactions utilisés pour HoloLens 2.  Ils seront conservés pour continuer à travailler sur les appareils pris en charge. Une nouvelle série de didacticiels sera publiée à l’avenir qui vous montrera comment développer pour HoloLens 2.  Cet avis sera mis à jour avec un lien vers ces didacticiels lors de leur publication.
@@ -66,7 +66,7 @@ Nous vous recommandons d’utiliser le matériel et les logiciels suivants pour 
 2.  Configurez et testez votre HoloLens. Si vous avez besoin de la prise en charge de la configuration de votre HoloLens, [consultez l’article Configuration de hololens](https://docs.microsoft.com/hololens/hololens-setup). 
 3.  Il est judicieux d’effectuer un réglage de l’étalonnage et du capteur au début du développement d’une nouvelle application HoloLens (parfois, il peut être utile d’effectuer ces tâches pour chaque utilisateur). 
 
-Pour obtenir de l’aide sur l’étalonnage, veuillez suivre ce [lien vers l’article d’étalonnage HoloLens](calibration.md#hololens).
+Pour obtenir de l’aide sur l’étalonnage, veuillez suivre ce [lien vers l’article d’étalonnage HoloLens](calibration.md#hololens-2).
 
 Pour obtenir de l’aide sur le réglage du capteur, veuillez suivre ce [lien vers l’article sur le paramétrage du capteur HoloLens](sensor-tuning.md).
 
@@ -374,7 +374,7 @@ Ce qui suit est une configuration classique pour le développement avec une réa
         
             ![Configurer le projet Unity](images/AzureLabs-Lab312-24.png)
 
-        2. Créez un dossier pour cela, ainsi que toute nouvelle scène, puis sélectionnez le bouton **nouveau dossier** pour créer un nouveau dossier, puis nommez- le Scenes.
+        2. Créez un dossier pour cela, ainsi que toute nouvelle scène, puis sélectionnez le bouton **nouveau dossier** pour créer un nouveau dossier, puis nommez-le Scenes.
 
              ![Configurer le projet Unity](images/AzureLabs-Lab312-25.png)
 
@@ -417,13 +417,13 @@ Ce qui suit est une configuration classique pour le développement avec une réa
 ## <a name="chapter-5--camera-setup"></a>Chapitre 5 – Configuration de l’appareil photo
 
 > [!IMPORTANT]
-> Si vous souhaitez ignorer le composant *Unity Set up* de ce cours et continuer directement dans le code, n’hésitez pas à télécharger ce fichier [Azure-Mr-312-package. pour Unity](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20312%20-%20Bot%20integration/Azure-MR-312.unitypackage), à l’importer dans votre projet en tant que [**package personnalisé**](https://docs.unity3d.com/Manual/AssetPackages.html), puis à [continuer Chapitre 7](#chapter-7-–-create-the-botobjects-class).
+> Si vous souhaitez ignorer le composant *Unity Set up* de ce cours et continuer directement dans le code, n’hésitez pas à télécharger ce fichier [Azure-Mr-312-package. pour Unity](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20312%20-%20Bot%20integration/Azure-MR-312.unitypackage), à l’importer dans votre projet en tant que [**package personnalisé**](https://docs.unity3d.com/Manual/AssetPackages.html), puis à [continuer Chapitre 7](#chapter-8--create-the-botobjects-class).
 
 1.  Dans le *panneau hiérarchie*, sélectionnez l' **appareil photo principal**. 
 2.  Une fois sélectionné, vous pouvez voir tous les composants de la **caméra principale** dans le *panneau Inspecteur*.
 
     1. L' **objet Camera** doit être nommé **Camera main** (Notez l’orthographe)
-    2. La balise  principale de l’appareil photo doit être définie sur **MainCamera** (Notez l’orthographe)
+    2. La balise principale de l’appareil photo doit être définie sur **MainCamera** (Notez l’orthographe)
     3. Vérifiez que la **position** de la transformation est définie sur **0, 0,** 0
     4. Affectez à **effacer les indicateurs** la **couleur unie**.
     5. Définir la couleur d' **arrière-plan** du composant Camera sur **Black, alpha 0 (Code hexadécimal: #00000000)**
@@ -451,7 +451,7 @@ Pour importer la bibliothèque Newtonsoft dans votre projet, utilisez le package
 
     ![](images/AzureLabs-Lab312-35b.png)
 
-5.  Une fois le plug-in Newtonsoft sélectionné, assurez -vous que **toutes les plateformes** sont décochées, vérifiez que **WSAPlayer** est également **désactivé**, puis cliquez sur **appliquer**. Cela vous permet de vérifier que les fichiers sont correctement configurés.
+5.  Une fois le plug-in Newtonsoft sélectionné, assurez-vous que **toutes les plateformes** sont décochées, vérifiez que **WSAPlayer** est également **désactivé**, puis cliquez sur **appliquer**. Cela vous permet de vérifier que les fichiers sont correctement configurés.
 
     ![](images/AzureLabs-Lab312-35c.png)
 
@@ -459,7 +459,7 @@ Pour importer la bibliothèque Newtonsoft dans votre projet, utilisez le package
     > Le marquage de ces plug-ins permet de les configurer pour qu’ils soient utilisés uniquement dans l’éditeur Unity. Il y en a un ensemble différent dans le dossier WSA qui sera utilisé une fois que le projet est exporté d’Unity.
 
 6.  Ensuite, vous devez ouvrir le dossier **WSA** , dans le dossier **Newtonsoft** . Vous verrez une copie du même fichier que celui que vous venez de configurer. Sélectionnez le fichier, puis, dans l’inspecteur, vérifiez que
-    -   **Aucune plateforme** n'  est désactivée 
+    -   **Aucune plateforme** n' est désactivée 
     -   **uniquement** **WSAPlayer** est **activé**
     -   L’option ne pas **traiter le processus** est **activée**
 
@@ -471,7 +471,7 @@ Pour importer la bibliothèque Newtonsoft dans votre projet, utilisez le package
 
     ![Configuration de l’appareil photo](images/AzureLabs-Lab312-32.png)
  
-2.  Cliquez sur le **+** symbole. Nommez la  nouvelle balise **BotTag**, *Save*.
+2.  Cliquez sur le **+** symbole. Nommez la nouvelle balise **BotTag**, *Save*.
 
     ![Configuration de l’appareil photo](images/AzureLabs-Lab312-33.png)
 
@@ -552,7 +552,7 @@ Pour créer cette classe:
     }
     ```
 
-6.  Veillez à enregistrer vos modifications dans *Visual Studio* avant de revenir à Unity.
+6.  Veillez à enregistrer vos modifications dans *Visual Studio* avant de revenirà Unity.
 
 ## <a name="chapter-9--create-the-gazeinput-class"></a>Chapitre 9: créer la classe GazeInput
 
@@ -745,7 +745,7 @@ Pour créer cette classe:
         }
     ```
  
-9.  Veillez à enregistrer vos modifications dans *Visual Studio* avant de revenir à Unity.
+9.  Veillez à enregistrer vos modifications dans *Visual Studio* avant de revenirà Unity.
 
 ## <a name="chapter-10--create-the-bot-class"></a>Chapitre 10: créer la classe bot
 
@@ -1033,7 +1033,7 @@ Pour créer cette classe:
     > [!NOTE] 
     > Une erreur peut s’afficher dans la console de l’éditeur Unity, à propos de la classe **SceneOrganiser** manquante. Ignorez ce message, car vous allez créer cette classe ultérieurement dans le didacticiel.
 
-14.  Veillez à enregistrer vos modifications dans *Visual Studio* avant de revenir à Unity.
+14.  Veillez à enregistrer vos modifications dans *Visual Studio* avant de revenirà Unity.
 
 ## <a name="chapter-11--create-the-interactions-class"></a>Chapitre 11: créer la classe interactions
 
@@ -1113,7 +1113,7 @@ Pour créer cette classe:
         }
     ```
 
-8. Veillez à enregistrer vos modifications dans *Visual Studio* avant de revenir à Unity.
+8. Veillez à enregistrer vos modifications dans *Visual Studio* avant de revenirà Unity.
 
 ## <a name="chapter-12--create-the-sceneorganiser-class"></a>Chapitre 12: créer la classe SceneOrganiser
 
@@ -1219,7 +1219,7 @@ Pour créer cette classe:
         }
     ```
 
-8.  Veillez à enregistrer vos modifications dans *Visual Studio* avant de revenir à Unity.
+8.  Veillez à enregistrer vos modifications dans *Visual Studio* avant de revenirà Unity.
 9.  Dans l’éditeur Unity, faites glisser le script **SceneOrganiser** du dossier scripts vers l’appareil photo principal. Le composant organisateur de scène doit maintenant apparaître sur l’objet caméra principal, comme illustré dans l’image ci-dessous.
 
     ![Créer le Azure Bot Service](images/AzureLabs-Lab312-37.png)
@@ -1229,7 +1229,7 @@ Pour créer cette classe:
 Pour effectuer un test minutieux de votre application, vous devez l’chargement sur votre HoloLens.
 Avant cela, assurez-vous que:
 
--   Tous les paramètres mentionnés dans le [**Chapitre 4**](#Chapter-4-–-Set-up-the-unity-project) sont correctement définis. 
+-   Tous les paramètres mentionnés dans le [**Chapitre 4**](#chapter-4--set-up-the-unity-project) sont correctement définis. 
 -   Le script **SceneOrganiser** est attaché à l’objet **Camera principal** . 
 -   Dans la classe **bot** , vérifiez que vous avez inséré la **clé secrète** de votre robot dans la variable **botSecret** .
 
@@ -1260,7 +1260,7 @@ Pour effectuer un déploiement sur HoloLens:
     5. Définissez le mode développeur sur.
 
 2.  Accédez à votre nouvelle build Unity (le dossier de l' **application** ) et ouvrez le fichier solution avec **Visual Studio**.
-3.  Dans la **configuration** de la solution, sélectionnez Déboguer.
+3.  Dans la **configuration** de lasolution, sélectionnez Déboguer.
 4.  Dans la **plateforme**de la solution, sélectionnez **x86**, **ordinateur distant**. 
 
     ![Déployez la solution à partir de Visual Studio.](images/AzureLabs-Lab312-39.png)
