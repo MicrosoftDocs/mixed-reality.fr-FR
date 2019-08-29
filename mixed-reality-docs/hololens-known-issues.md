@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 07/10/2019
 ms.topic: article
 keywords: résolution des problèmes, problème connu, aide
-ms.openlocfilehash: f043164f21f20925a78b59057e14ac4607d0d3f1
-ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
+ms.openlocfilehash: 80bd7499c0075399e516648dd92b7515fdba753a
+ms.sourcegitcommit: ff330a7e36e5ff7ae0e9a08c0e99eb7f3f81361f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69896543"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122129"
 ---
 # <a name="hololens-known-issues"></a>Problèmes connus de HoloLens
 
@@ -28,7 +28,7 @@ Cause première du problème: Les utilisateurs qui utilisaient Visual Studio 201
  
 **Solution de contournement** : 
 
-Notre équipe travaille actuellement sur un correctif. En attendant, vous pouvez utiliser les étapes suivantes pour contourner le problème et vous aider à débloquer le déploiement et le débogage:  
+Bien que ce problème soit résolu dans Visual Studio 2019 16,2, les développeurs qui choisissent de rester dans les versions antérieures de Visual Studio peuvent utiliser les étapes suivantes pour contourner le problème et aider à débloquer le déploiement et le débogage:  
 1. Ouvrir Visual Studio
 2. Projet de > de fichiers >
 3. Visual C# -> Windows Desktop-application console > (.NET Framework)
@@ -74,7 +74,6 @@ Notre équipe travaille actuellement sur un correctif. En attendant, vous pouvez
  
 15. Une fois que l’outil s’est arrêté sans message (cette opération ne doit prendre que quelques secondes), vous pouvez désormais déployer et déboguer à partir de Visual Studio 2017 ou version ultérieure.  L’utilisation continue de l’outil n’est pas nécessaire.
 
-Nous fournirons d’autres mises à jour dès qu’elles seront disponibles.
 
 ## <a name="issues-launching-the-microsoft-store-and-apps-on-hololens"></a>Problèmes lors du lancement du Microsoft Store et des applications sur HoloLens
 

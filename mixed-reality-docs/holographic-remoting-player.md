@@ -6,17 +6,17 @@ ms.author: jlyons
 ms.date: 08/01/2019
 ms.topic: article
 keywords: HoloLens, communication à distance, communication à distance holographique
-ms.openlocfilehash: fe26092ec8f5895652d17f88bf3be15cb116e482
-ms.sourcegitcommit: ca949efe0279995a376750d89e23d7123eb44846
+ms.openlocfilehash: c3e31cdb5acf35ecc3101d3cf359e40771cc8cbd
+ms.sourcegitcommit: ff330a7e36e5ff7ae0e9a08c0e99eb7f3f81361f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68712688"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122078"
 ---
 # <a name="holographic-remoting-player"></a>Lecteur de communication à distance holographique
 
 >[!IMPORTANT]
->La communication à distance holographique pour HoloLens 2 est une modification majeure de la version. [Les applications hôtes pour **hololens 1** ](add-holographic-remoting.md) doivent utiliser le package NuGet version **1. x. x** et les [applications hôtes pour **hololens 2** ](holographic-remoting-create-host.md) doivent utiliser **2. x**. x. Cela implique que les applications hôtes écrites pour HoloLens 2 ne sont pas compatibles avec HoloLens 1 et vice versa.
+>La communication à distance holographique pour HoloLens 2 est une modification majeure de la version. [Les applications hôtes pour **hololens (1re génération)** ](add-holographic-remoting.md) doivent utiliser le package NuGet version **1. x. x** et les [applications hôtes pour **hololens 2** ](holographic-remoting-create-host.md) doivent utiliser **2. x**. x. Cela implique que les applications hôtes écrites pour HoloLens 2 ne sont pas compatibles avec HoloLens 1 et vice versa.
 
 Le lecteur de communication à distance holographique est une application auxiliaire qui se connecte aux applications de PC et aux jeux qui prennent en charge la communication à distance holographique. La communication à distance holographique diffuse du contenu holographique depuis un PC vers votre Microsoft HoloLens en temps réel, à l’aide d’une connexion Wi-Fi.
 
@@ -43,7 +43,7 @@ La qualité et les performances de votre expérience varient en fonction de troi
 
 ## <a name="diagnostics"></a>Diagnostics
 
-Pour mesurer la qualité de votre connexion, dites **«activer les diagnostics»** dans l’écran principal du lecteur de communication à distance holographique. Lorsque les diagnostics sont activés, sur **HoloLens 1** l’application vous indique:
+Pour mesurer la qualité de votre connexion, dites **«activer les diagnostics»** dans l’écran principal du lecteur de communication à distance holographique. Lorsque les diagnostics sont activés, sur **HoloLens (1re génération)** , l’application vous indique:
 
 * **Fps** : nombre moyen de trames rendues que le lecteur de communication à distance reçoit et restitue par seconde. L’idéal est de 60 FPS.
 * **Latence** : temps moyen nécessaire pour qu’une image passe de votre PC à la vue HoloLens. Plus la solution est performante. Cela dépend en grande partie de votre réseau Wi-Fi.
@@ -76,7 +76,7 @@ Dans l’écran principal, vous pouvez indiquer **«Désactiver les diagnostics�
 * Nous vous recommandons de connecter votre ordinateur à votre réseau via Ethernet pour réduire le nombre de sauts sans fil.
 
 ## <a name="see-also"></a>Voir aussi
-* [HoloLens 1: Ajouter la communication à distance holographique](add-holographic-remoting.md)
+* [HoloLens (1ère génération): Ajouter la communication à distance holographique](add-holographic-remoting.md)
 * [HoloLens 2: Écriture d’une application hôte de communication à distance holographique](holographic-remoting-create-host.md)
-* [Termes du contrat de licence du logiciel de communication à distance holographique](https://docs.microsoft.com/en-us/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
+* [Termes du contrat de licence de la communication à distance holographique](https://docs.microsoft.com/en-us/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
 * [Déclaration de confidentialité Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839)

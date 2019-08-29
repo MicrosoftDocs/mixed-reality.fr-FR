@@ -6,17 +6,17 @@ ms.author: mriches
 ms.date: 05/24/2019
 ms.topic: article
 keywords: Windows Mixed Reality, hologrammes, accès distant holographique, rendu à distance, rendu réseau, HoloLens, hologrammes distants
-ms.openlocfilehash: 71a763b0660867bf910c0dcecb5fba921f19d068
-ms.sourcegitcommit: ca949efe0279995a376750d89e23d7123eb44846
+ms.openlocfilehash: 523486c26c03bd4b3d5ed8e8cafd994f12678e3b
+ms.sourcegitcommit: ff330a7e36e5ff7ae0e9a08c0e99eb7f3f81361f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68712429"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122051"
 ---
-# <a name="add-holographic-remoting-hololens-1"></a>Ajouter la communication à distance holographique (HoloLens 1)
+# <a name="add-holographic-remoting-hololens-1st-gen"></a>Ajouter la communication à distance holographique (HoloLens (1re génération))
 
 >[!IMPORTANT]
->Ce document décrit la création d’une application hôte pour HoloLens 1. L’application hôte pour **HoloLens 1** doit utiliser le package NuGet version **1. x. x**. Cela implique que les applications hôtes écrites pour HoloLens 1 ne sont pas compatibles avec HoloLens 2 et vice versa.
+>Ce document décrit la création d’une application hôte pour HoloLens 1. L’application hôte pour **HoloLens (1re génération)** doit utiliser le package NuGet version **1. x. x**. Cela implique que les applications hôtes écrites pour HoloLens 1 ne sont pas compatibles avec HoloLens 2 et vice versa.
 
 ## <a name="hololens-2"></a>HoloLens 2
 
