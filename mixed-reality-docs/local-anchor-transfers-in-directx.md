@@ -6,12 +6,12 @@ ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, synchroniser, ancrage spatial, transfert, multijoueur, vue, scénario, procédure pas à pas, exemple de code, transfert, transfert d’ancrage local, exportation d’ancrage, importation d’ancrage
-ms.openlocfilehash: 5d03f4bfa764b9948ec4718bce86127cfcc3e303
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: f961862c3c49872484683e264fb9c62b5d0b60ee
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63515450"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437956"
 ---
 # <a name="local-anchor-transfers-in-directx"></a>Transferts d’ancrage locaux dans DirectX
 
@@ -33,7 +33,7 @@ Notez que les ancres spatiales ne peuvent pas être transférées entre différe
 
 Pour pouvoir utiliser le [SpatialAnchorTransferManager](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchortransfermanager.aspx), votre application doit avoir l’autorisation d’utiliser la fonctionnalité spatialPerception. Cela est nécessaire, car le transfert d’une ancre spatiale implique le partage d’images de capteur collectées au fil du temps à proximité de cette ancre, qui peut inclure des informations sensibles.
 
-Déclarez cette fonctionnalité dans le fichier Package. appxmanifest pour votre application. Voici un exemple :
+Déclarez cette fonctionnalité dans le fichier Package. appxmanifest pour votre application. Voici un exemple :
 
 ```
 <Capabilities>
@@ -41,19 +41,19 @@ Déclarez cette fonctionnalité dans le fichier Package. appxmanifest pour votre
 </Capabilities>
 ```
 
-La fonctionnalité provient de l’espace de noms **UAP2** . Pour accéder à cet espace de noms dans votre manifeste, incluez-  le en tant qu' &lt;attribut xlmns dans l’élément > du package. Voici un exemple :
+La fonctionnalité provient de l’espace de noms **UAP2** . Pour accéder à cet espace de noms dans votre manifeste, incluez-le en tant qu’attribut *xlmns* dans l’élément &lt;> Package. Voici un exemple :
 
 ```
 <Package
-    xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
-    xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
-    xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
-    xmlns:uap2="http://schemas.microsoft.com/appx/manifest/uap/windows10/2"
+    xmlns="https://schemas.microsoft.com/appx/manifest/foundation/windows10"
+    xmlns:mp="https://schemas.microsoft.com/appx/2014/phone/manifest"
+    xmlns:uap="https://schemas.microsoft.com/appx/manifest/uap/windows10"
+    xmlns:uap2="https://schemas.microsoft.com/appx/manifest/uap/windows10/2"
     IgnorableNamespaces="uap mp"
     >
 ```
 
-**REMARQUE :** Votre application devra demander la fonctionnalité au moment de l’exécution avant de pouvoir accéder aux API d’exportation/importation SpatialAnchor. Consultez [RequestAccessAsync](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchortransfermanager.requestaccessasync.aspx) dans les exemples ci-dessous.
+**Remarque :** Votre application devra demander la fonctionnalité au moment de l’exécution avant de pouvoir accéder aux API d’exportation/importation SpatialAnchor. Consultez [RequestAccessAsync](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchortransfermanager.requestaccessasync.aspx) dans les exemples ci-dessous.
 
 ## <a name="serialize-anchor-data-by-exporting-it-with-the-spatialanchortransfermanager"></a>Sérialisez les données d’ancrage en les exportant avec SpatialAnchorTransferManager
 
@@ -72,7 +72,7 @@ task<bool> SpatialAnchorImportExportHelper::ExportAnchorDataAsync(
 {
 ```
 
-Tout d’abord, nous devons configurer le flux de données. Cela nous permettra de 1.) Utilisez TryExportAnchorsAsync pour placer les données dans une mémoire tampon appartenant à l’application, et 2.) lire les données du flux de mémoire tampon d’octets exporté, qui est un flux de données WinRT-dans notre propre mémoire tampon, qui est un&lt;> d’octets std:: Vector.
+Tout d’abord, nous devons configurer le flux de données. Cela nous permettra de 1.) Utilisez TryExportAnchorsAsync pour placer les données dans une mémoire tampon appartenant à l’application, et 2.) lire les données du flux de mémoire tampon d’octets exporté, qui est un flux de données WinRT-dans notre propre mémoire tampon, qui est un > d’octets std :: Vector&lt;.
 
 ```
 // Create a random access stream to process the anchor byte data.
@@ -270,7 +270,7 @@ Si les données peuvent être importées, nous obtenons une vue cartographique d
 }
 ```
 
-**REMARQUE :** La seule raison pour laquelle vous pouvez importer une ancre ne signifie pas nécessairement que vous pouvez l’utiliser immédiatement. Le point d’ancrage peut se trouver dans une salle différente, ou dans un autre emplacement physique. le point d’ancrage ne peut pas être localisé tant que l’appareil qui l’a reçu n’a pas suffisamment d’informations visuelles sur l’environnement dans lequel l’ancre a été créée, afin de restaurer la position de l’ancre par rapport à l’environnement actuel connu. L’implémentation du client doit essayer de localiser le point d’ancrage par rapport au système de coordonnées local ou au frame de référence avant de continuer à essayer de l’utiliser pour du contenu dynamique. Par exemple, essayez de localiser l’ancre par rapport à un système de coordonnées actif régulièrement jusqu’à ce que le point d’ancrage commence à être localisable.
+**Remarque :** La seule raison pour laquelle vous pouvez importer une ancre ne signifie pas nécessairement que vous pouvez l’utiliser immédiatement. Le point d’ancrage peut se trouver dans une salle différente, ou dans un autre emplacement physique. le point d’ancrage ne peut pas être localisé tant que l’appareil qui l’a reçu n’a pas suffisamment d’informations visuelles sur l’environnement dans lequel l’ancre a été créée, afin de restaurer la position de l’ancre par rapport à l’environnement actuel connu. L’implémentation du client doit essayer de localiser le point d’ancrage par rapport au système de coordonnées local ou au frame de référence avant de continuer à essayer de l’utiliser pour du contenu dynamique. Par exemple, essayez de localiser l’ancre par rapport à un système de coordonnées actif régulièrement jusqu’à ce que le point d’ancrage commence à être localisable.
 
 ## <a name="special-considerations"></a>Considérations spéciales
 
@@ -288,13 +288,13 @@ L’objet BLOB contient une représentation de l’environnement à proximité d
 
 ![Plusieurs ancres exportées à l’aide d’un seul appel TryExportAnchorsAsync](images/multipleanchors.png) ![Plusieurs ancres exportées à l’aide d’un appel TryExportAnchorsAsync distinct pour chaque ancre](images/separateanchors.png)
 
-## <a name="example-send-anchor-data-using-a-windowsnetworkingstreamsocket"></a>Exemple : Envoyer des données d’ancrage à l’aide d’un Windows:: Networking:: StreamSocket
+## <a name="example-send-anchor-data-using-a-windowsnetworkingstreamsocket"></a>Exemple : envoyer des données d’ancrage à l’aide d’un Windows :: Networking :: StreamSocket
 
 Ici, nous fournissons un exemple d’utilisation des données d’ancrage exportées en les envoyant à travers un réseau TCP. C’est à partir du HolographicSpatialAnchorTransferSample.
 
 La classe StreamSocket WinRT utilise la bibliothèque de tâches PPL. Dans le cas d’erreurs réseau, l’erreur est retournée à la tâche suivante dans la chaîne à l’aide d’une exception qui est levée à nouveau. L’exception contient un HRESULT indiquant l’état de l’erreur.
 
-### <a name="use-a-windowsnetworkingstreamsocketlistener-with-tcp-to-send-exported-anchor-data"></a>Utiliser un Windows:: Networking:: StreamSocketListener avec TCP pour envoyer des données d’ancrage exportées
+### <a name="use-a-windowsnetworkingstreamsocketlistener-with-tcp-to-send-exported-anchor-data"></a>Utiliser un Windows :: Networking :: StreamSocketListener avec TCP pour envoyer des données d’ancrage exportées
 
 Créez une instance de serveur qui écoute une connexion.
 
@@ -370,7 +370,7 @@ void SampleAnchorTcpServer::OutputToClientSocket(IMap<String^, SpatialAnchor^>^ 
 }
 ```
 
-Avant de pouvoir envoyer le flux lui-même, nous devons d’abord envoyer un paquet d’en-tête. Ce paquet d’en-tête doit avoir une longueur fixe et doit également indiquer la longueur du tableau de variables d’octets qui est le flux de données d’ancrage; dans le cas de cet exemple, nous n’avons pas d’autres données d’en-tête à envoyer. par conséquent, notre en-tête a une longueur de 4 octets et contient un entier non signé 32 bits.
+Avant de pouvoir envoyer le flux lui-même, nous devons d’abord envoyer un paquet d’en-tête. Ce paquet d’en-tête doit avoir une longueur fixe et doit également indiquer la longueur du tableau de variables d’octets qui est le flux de données d’ancrage ; dans le cas de cet exemple, nous n’avons pas d’autres données d’en-tête à envoyer. par conséquent, notre en-tête a une longueur de 4 octets et contient un entier non signé 32 bits.
 
 ```
 Concurrency::task<bool> SampleAnchorTcpServer::SendAnchorDataLengthMessage(size_t dataStreamLength)
@@ -460,11 +460,11 @@ void SampleAnchorTcpServer::HandleException(Exception^ exception)
 }
 ```
 
-### <a name="use-a-windowsnetworkingstreamsocket-with-tcp-to-receive-exported-anchor-data"></a>Utiliser un Windows:: Networking:: StreamSocket avec TCP pour recevoir les données d’ancrage exportées
+### <a name="use-a-windowsnetworkingstreamsocket-with-tcp-to-receive-exported-anchor-data"></a>Utiliser un Windows :: Networking :: StreamSocket avec TCP pour recevoir les données d’ancrage exportées
 
 Tout d’abord, nous devons nous connecter au serveur. Cet exemple de code montre comment créer et configurer un StreamSocket et créer un DataReader que vous pouvez utiliser pour acquérir des données réseau à l’aide de la connexion de Socket.
 
-**REMARQUE :** Si vous exécutez cet exemple de code, assurez-vous de configurer et de lancer le serveur avant de démarrer le client.
+**Remarque :** Si vous exécutez cet exemple de code, assurez-vous de configurer et de lancer le serveur avant de démarrer le client.
 
 ```
 task<bool> SampleAnchorTcpClient::ConnectToServer()
@@ -672,9 +672,9 @@ void SampleAnchorTcpClient::HandleException(Exception^ exception)
 }
 ```
 
-C’est tout ! Maintenant, vous devez disposer de suffisamment d’informations pour essayer de localiser les ancres reçues sur le réseau. Là encore, Notez que le client doit disposer d’un nombre suffisant de données de suivi visuel pour l’espace pour la localisation de l’ancre. Si cela ne fonctionne pas immédiatement, essayez de vous lancer pendant un certain temps. Si cela ne fonctionne toujours pas, faites en sorte que le serveur envoie davantage d’ancres et qu’il utilise des communications réseau pour s’en contenter. Vous pouvez essayer cela en téléchargeant le HolographicSpatialAnchorTransferSample, en configurant les adresses IP du client et du serveur, et en le déployant sur des appareils HoloLens client et serveur.
+C’est tout ! Maintenant, vous devez disposer de suffisamment d’informations pour essayer de localiser les ancres reçues sur le réseau. Là encore, Notez que le client doit disposer d’un nombre suffisant de données de suivi visuel pour l’espace pour la localisation de l’ancre. Si cela ne fonctionne pas immédiatement, essayez de vous lancer pendant un certain temps. Si cela ne fonctionne toujours pas, faites en sorte que le serveur envoie davantage d’ancres et qu’il utilise des communications réseau pour s’en contenter. Vous pouvez essayer cela en téléchargeant le HolographicSpatialAnchorTransferSample, en configurant les adresses IP du client et du serveur, et en le déployant sur des appareils HoloLens client et serveur.
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a>Articles associés
 * [Bibliothèque de modèles parallèles (PPL)](https://msdn.microsoft.com/library/dd492418.aspx)
 * [Windows. Networking. StreamSocket](https://msdn.microsoft.com/library/windows/apps/windows.networking.sockets.streamsocket.aspx)
 * [Windows. Networking. StreamSocketListener](https://msdn.microsoft.com/library/windows/apps/windows.networking.sockets.streamsocketlistener.aspx)

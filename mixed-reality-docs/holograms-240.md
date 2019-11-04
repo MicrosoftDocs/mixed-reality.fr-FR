@@ -3,45 +3,45 @@ title: RM partageant 240-plusieurs appareils HoloLens
 description: Suivez cette procédure pas à pas de codage avec Unity, Visual Studio et HoloLens pour apprendre les détails du partage d’hologrammes.
 author: keveleigh
 ms.author: kurtie
-ms.date: 03/21/2018
+ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, partage, mise en réseau, Academy, didacticiel
-ms.openlocfilehash: 70a39a739d360a5032bc8df76b6f0bd57521d9ec
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 0d8e8f4484546d82caadf162623a6f4059eb2f00
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63522330"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73434565"
 ---
 >[!NOTE]
->Les didacticiels d’Académie de la réalité mixte ont été conçus avec les casques immersif (1er génération) et de réalité mixte à l’esprit.  Par conséquent, nous pensons qu’il est important de ne pas mettre en place ces didacticiels pour les développeurs qui cherchent toujours des conseils en matière de développement pour ces appareils.  Ces didacticiels ne seront **_pas_** mis à jour avec les derniers ensembles d’outils ou interactions utilisés pour HoloLens 2.  Ils seront conservés pour continuer à travailler sur les appareils pris en charge. Une nouvelle série de didacticiels sera publiée à l’avenir qui vous montrera comment développer pour HoloLens 2.  Cet avis sera mis à jour avec un lien vers ces didacticiels lors de leur publication.
+>Les didacticiels d’Académie de la réalité mixte ont été conçus avec les casques immersif (1er génération) et de réalité mixte à l’esprit.  Par conséquent, nous pensons qu’il est important de ne pas mettre en place ces didacticiels pour les développeurs qui cherchent toujours des conseils en matière de développement pour ces appareils.  Ces didacticiels ne seront **_pas_** mis à jour avec les derniers ensembles d’outils ou interactions utilisés pour HoloLens 2.  Ils seront conservés pour continuer à travailler sur les appareils pris en charge. [Une nouvelle série de didacticiels](mrlearning-base.md) a été publiée pour HoloLens 2.
 
 <br>
 
-# <a name="mr-sharing-240-multiple-hololens-devices"></a>RM partageant 240: Plusieurs appareils HoloLens
+# <a name="mr-sharing-240-multiple-hololens-devices"></a>RM partageant 240 : plusieurs appareils HoloLens
 
 Les hologrammes sont présents dans notre monde en restant en place au fur et à mesure que nous nous déplacerons dans l’espace. HoloLens conserve les hologrammes en place à l’aide de différents [systèmes de coordonnées](coordinate-systems.md) pour effectuer le suivi de l’emplacement et de l’orientation des objets. Lorsque nous partageons ces systèmes de coordonnées entre les appareils, nous pouvons créer une expérience partagée qui nous permet de participer à un monde holographique partagé.
 
-Dans ce didacticiel, nous allons:
+Dans ce didacticiel, nous allons :
 
 * Configurez un réseau pour une expérience partagée.
 * Partager des hologrammes sur des appareils HoloLens.
 * Découvrez d’autres personnes dans notre monde holographique partagé.
-* Créez une expérience interactive partagée où vous pouvez cibler d’autres joueurs et lancer des projectiles!
+* Créez une expérience interactive partagée où vous pouvez cibler d’autres joueurs et lancer des projectiles !
 
-## <a name="device-support"></a>Prise en charge des appareils
+## <a name="device-support"></a>Périphériques pris en charge
 
 <table>
 <tr>
 <th>Course</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Casques immersifs</a></th>
 </tr><tr>
-<td>RM partageant 240: Plusieurs appareils HoloLens</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> </td>
+<td>RM partageant 240 : plusieurs appareils HoloLens</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> </td>
 </tr>
 </table>
 
 ## <a name="before-you-start"></a>Avant de commencer
 
-### <a name="prerequisites"></a>Prérequis
+### <a name="prerequisites"></a>Conditions préalables
 
 * Un PC Windows 10 configuré avec les [outils appropriés installés](install-the-tools.md) avec l’accès à Internet.
 * Au moins deux appareils HoloLens [configurés pour le développement](using-visual-studio.md#enabling-developer-mode).
@@ -66,7 +66,7 @@ Dans ce chapitre, nous allons configurer notre premier projet Unity et effectuer
 ### <a name="objectives"></a>Objectifs
 
 * Configurer Unity pour développer des applications holographiques.
-* Consultez votre hologramme!
+* Consultez votre hologramme !
 
 ### <a name="instructions"></a>Instructions
 
@@ -78,11 +78,11 @@ Dans ce chapitre, nous allons configurer notre premier projet Unity et effectuer
 * Dans le dossier **HoloToolkit-partage-240/Prefabs/Camera** , recherchez la **caméra principale** Prefab.
 * Glissez-déposez la **caméra principale** dans la **hiérarchie**.
 * Dans la **hiérarchie**, cliquez sur **créer** et **créez un vide**.
-* Cliquez avec le bouton droit sur le nouveau **gameobject** , puis sélectionnez Renommer.
+* Cliquez avec le bouton droit sur le nouveau **gameobject** , puis sélectionnez **Renommer**.
 * Renommez GameObject en **HologramCollection**.
 * Sélectionnez l’objet **HologramCollection** dans la **hiérarchie**.
-* Dans l' **inspecteur** , définissez la position de la **transformation** sur: **X 0, Y:-0,25, Z: 2**.
-* Dans le  dossier hologrammes du **panneau Projet**, recherchez la ressource **EnergyHub** .
+* Dans l' **inspecteur** , définissez la position de la **transformation** sur : **X : 0, Y :-0,25, Z : 2**.
+* Dans le dossier **hologrammes** du **panneau Projet**, recherchez la ressource **EnergyHub** .
 * Glissez-déplacez l’objet **EnergyHub** du **panneau Projet** vers la **hiérarchie** en tant qu' **enfant de HologramCollection**.
 * Sélectionnez le **fichier > enregistrer la scène sous...**
 * Nommez la scène **SharedHolograms** , puis cliquez sur **Enregistrer**.
@@ -90,14 +90,15 @@ Dans ce chapitre, nous allons configurer notre premier projet Unity et effectuer
 * Appuyez sur **lecture** une deuxième fois pour arrêter le mode aperçu.
 
 **Exporter le projet d’Unity vers Visual Studio**
+
 * Dans Unity, sélectionnez **fichier > paramètres de build**.
 * Cliquez sur **Ajouter des scènes ouvertes** pour ajouter la scène.
-* Sélectionnez **plateforme Windows universelle** dans la liste **plateforme** , puis cliquez sur basculer la **plateforme**.
+* Sélectionnez **plateforme Windows universelle** dans la liste **plateforme** , puis cliquez sur **basculer la plateforme**.
 * Affectez à **SDK** la valeur **Universal 10**.
 * Définissez le **périphérique cible** sur **HoloLens** et le **type de build UWP** sur **D3D**.
 * Vérifiez **les C# projets Unity**.
 * Cliquez sur **Build**.
-* Dans la fenêtre de l’Explorateur de fichiers qui s’affiche, créez un **nouveau dossier** nommé «App».
+* Dans la fenêtre de l’Explorateur de fichiers qui s’affiche, créez un **nouveau dossier** nommé « App ».
 * Cliquez sur le dossier de l' **application** .
 * Appuyez sur **Sélectionner un dossier**.
 * Lorsque Unity est terminé, une fenêtre de l’Explorateur de fichiers s’affiche.
@@ -105,17 +106,17 @@ Dans ce chapitre, nous allons configurer notre premier projet Unity et effectuer
 * Ouvrez **SharedHolograms. sln** pour lancer Visual Studio.
 * À l’aide de la barre d’outils supérieure dans Visual Studio, remplacez la cible Debug par **Release** et de ARM par **x86**.
 * Cliquez sur la flèche déroulante en regard de ordinateur local, puis sélectionnez **périphérique distant**.
-    * Définissez l' **adresse** sur le nom ou l’adresse IP de votre HoloLens. Si vous ne connaissez pas l’adresse IP de votre appareil, accédez à **paramètres > réseau & Internet > options avancées** ou demandez à Cortana **«Hey Cortana, qu’est-ce que mon adresse IP?»**
+    * Définissez l' **adresse** sur le nom ou l’adresse IP de votre HoloLens. Si vous ne connaissez pas l’adresse IP de votre appareil, accédez à **paramètres > réseau & Internet > options avancées** ou demandez à Cortana **« Hey Cortana, qu’est-ce que mon adresse IP ? »**
     * Laissez le **mode d’authentification** défini sur **universel**.
     * Cliquez sur **Sélectionner**
-* Cliquez sur déboguer **> exécuter sans débogage** ou appuyez sur **CTRL + F5**. S’il s’agit de la première fois que vous déployez sur votre appareil, vous devrez le coupler à [Visual Studio](using-visual-studio.md#pairing-your-device-hololens).
+* Cliquez sur **Déboguer > exécuter sans débogage** ou appuyez sur **CTRL + F5**. S’il s’agit de la première fois que vous déployez sur votre appareil, vous devrez le [coupler à Visual Studio](using-visual-studio.md#pairing-your-device).
 * Placez sur HoloLens et recherchez l’hologramme EnergyHub.
 
 ## <a name="chapter-2---interaction"></a>Chapitre 2-interaction
 
 >[!VIDEO https://www.youtube.com/embed/W60xG15a8gc]
 
-Dans ce chapitre, nous interagissons avec nos hologrammes. Tout d’abord, nous allons ajouter un curseur pour visualiser notre point de [regard](gaze.md). Ensuite, nous ajouterons des [gestes](gestures.md) et utilisons notre main pour placer nos hologrammes dans l’espace.
+Dans ce chapitre, nous interagissons avec nos hologrammes. Tout d’abord, nous allons ajouter un curseur pour visualiser notre point de [regard](gaze-and-commit.md). Ensuite, nous ajouterons des [gestes](gaze-and-commit.md#composite-gestures) et utilisons notre main pour placer nos hologrammes dans l’espace.
 
 ### <a name="objectives"></a>Objectifs
 
@@ -125,6 +126,7 @@ Dans ce chapitre, nous interagissons avec nos hologrammes. Tout d’abord, nous 
 ### <a name="instructions"></a>Instructions
 
 **Pointage du regard**
+
 * Dans le **volet de hiérarchie** , sélectionnez l’objet **HologramCollection** .
 * Dans le **volet** de l’inspecteur, cliquez sur le bouton **Ajouter un composant** .
 * Dans le menu, tapez dans la zone de recherche **Gestionnaire de regard**. Sélectionnez le résultat de la recherche.
@@ -132,6 +134,7 @@ Dans ce chapitre, nous interagissons avec nos hologrammes. Tout d’abord, nous 
 * Faites glisser et déposez la ressource **curseur** dans la **hiérarchie**.
 
 **Mouvement**
+
 * Dans le **volet de hiérarchie** , sélectionnez l’objet **HologramCollection** .
 * Cliquez sur **Ajouter un composant** et tapez gestionnaire de **mouvements** dans le champ de recherche. Sélectionnez le résultat de la recherche.
 * Dans le **volet hiérarchie**, développez **HologramCollection**.
@@ -141,6 +144,7 @@ Dans ce chapitre, nous interagissons avec nos hologrammes. Tout d’abord, nous 
 * Enregistrez la scène en sélectionnant **fichier > enregistrer la scène**.
 
 **Déployer et apprécier**
+
 * Créez et déployez sur votre HoloLens, en suivant les instructions du chapitre précédent.
 * Une fois l’application lancée sur votre HoloLens, déplacez votre tête et notez la façon dont la EnergyHub suit votre point de regard.
 * Notez que le curseur s’affiche lorsque vous pointez sur l’hologramme et qu’il passe à une lumière de point lorsque vous n’êtes pas Gazing à un hologramme.
@@ -150,20 +154,21 @@ Dans ce chapitre, nous interagissons avec nos hologrammes. Tout d’abord, nous 
 
 >[!VIDEO https://www.youtube.com/embed/Ey8yBgWiqtg]
 
-Il est amusant de voir et d’interagir avec les hologrammes, mais nous allons aller plus loin. Nous allons configurer notre première expérience partagée: un hologramme tout le monde peut le voir ensemble.
+Il est amusant de voir et d’interagir avec les hologrammes, mais nous allons aller plus loin. Nous allons configurer notre première expérience partagée : un hologramme tout le monde peut le voir ensemble.
 
 ### <a name="objectives"></a>Objectifs
 
 * Configurez un réseau pour une expérience partagée.
 * Établissez un point de référence commun.
 * Partager des systèmes de coordonnées entre les appareils.
-* Tout le monde voit le même hologramme!
+* Tout le monde voit le même hologramme !
 
 >[!NOTE]
 >Les fonctionnalités **InternetClientServer** et **PrivateNetworkClientServer** doivent être déclarées pour qu’une application se connecte au serveur de partage. Cela est fait pour vous déjà dans les hologrammes 240, mais gardez cela à l’esprit pour vos propres projets.
->1. Dans l’éditeur Unity, accédez aux paramètres du lecteur en accédant à «modifier les paramètres du projet > > Player».
->2. Cliquer sur l’onglet «Windows Store»
->3. Dans la section «fonctionnalités de > des paramètres de publication», vérifiez la capacité de **InternetClientServer** et la capacité de **PrivateNetworkClientServer**
+
+>1. Dans l’éditeur Unity, accédez aux paramètres du lecteur en accédant à « modifier les paramètres du projet > > Player ».
+>2. Cliquer sur l’onglet « Windows Store »
+>3. Dans la section « fonctionnalités de > des paramètres de publication », vérifiez la capacité de **InternetClientServer** et la capacité de **PrivateNetworkClientServer**
 
 ### <a name="instructions"></a>Instructions
 
@@ -171,14 +176,16 @@ Il est amusant de voir et d’interagir avec les hologrammes, mais nous allons a
 * Faites glisser et déposez le Prefab de **partage** dans le **panneau de hiérarchie**.
 
 Nous devons ensuite lancer le service de partage. **Un seul ordinateur** de l’expérience partagée doit effectuer cette étape.
+
 * Dans Unity, dans le menu de niveau supérieur, sélectionnez le **menu HoloToolkit-Sharing-240**.
 * Sélectionnez l’élément **Démarrer le partage de service** dans la liste déroulante.
 * Cochez l’option **réseau privé** , puis cliquez sur **autoriser l’accès** lorsque l’invite de pare-feu s’affiche.
 * Notez l’adresse IPv4 affichée dans la fenêtre de console du service de partage. Il s’agit de la même adresse IP que la machine sur laquelle le service est en cours d’exécution.
 
 Suivez le reste des instructions sur **tous les PC** qui vont rejoindre l’expérience partagée.
+
 * Dans la **hiérarchie**, sélectionnez l’objet de **partage** .
-* Dans l' **inspecteur**, sur le composant **étape de partage** , remplacez l’adresse du **serveur** «localhost» par l’adresse IPv4 de l’ordinateur exécutant SharingService. exe.
+* Dans l' **inspecteur**, sur le composant **étape de partage** , remplacez l’adresse du **serveur** « localhost » par l’adresse IPv4 de l’ordinateur exécutant SharingService. exe.
 * Dans la **hiérarchie** , sélectionnez l’objet **HologramCollection** .
 * Dans l' **inspecteur** , cliquez sur le bouton **Ajouter un composant** .
 * Dans la zone de recherche, tapez **Import exporter Anchor Manager**. Sélectionnez le résultat de la recherche.
@@ -256,7 +263,7 @@ public class HologramPlacement : Singleton<HologramPlacement>
     {
         // Note that we have a transform.
         GotTransform = true;
-        
+
         // And send it to our friends.
         CustomMessages.Instance.SendStageTransform(transform.localPosition, transform.localRotation);
     }
@@ -295,17 +302,18 @@ public class HologramPlacement : Singleton<HologramPlacement>
 * Dans le menu, tapez dans la zone de recherche **Gestionnaire d’état des applications**. Sélectionnez le résultat de la recherche.
 
 **Déployer et apprécier**
+
 * Générez le projet pour vos appareils HoloLens.
 * Désignez un HoloLens à déployer au préalable. Vous devez attendre que le point d’ancrage soit téléchargé vers le service avant de pouvoir placer le EnergyHub (cette opération peut prendre environ 30-60 secondes). Tant que le téléchargement n’est pas terminé, vos gestes TAP seront ignorés.
 * Une fois que le EnergyHub a été placé, son emplacement est chargé sur le service et vous pouvez le déployer sur tous les autres appareils HoloLens.
 * Quand un nouveau HoloLens rejoint pour la première fois dans la session, l’emplacement du EnergyHub peut ne pas être correct sur cet appareil. Toutefois, dès que les emplacements d’ancrage et de EnergyHub ont été téléchargés à partir du service, le EnergyHub doit accéder au nouvel emplacement partagé. Si cela ne se produit pas dans un délai de environ 30-60 secondes, passez à l’emplacement de l’HoloLens d’origine lors de la définition de l’ancre pour obtenir davantage d’indices d’environnement. Si l’emplacement ne verrouille toujours pas, redéployez sur l’appareil.
-* Une fois que les appareils sont prêts et que vous exécutez l’application, recherchez EnergyHub. Pouvez-vous tous les accepter sur l’emplacement de l’hologramme et la direction dans laquelle le texte est dirigé?
+* Une fois que les appareils sont prêts et que vous exécutez l’application, recherchez EnergyHub. Pouvez-vous tous les accepter sur l’emplacement de l’hologramme et la direction dans laquelle le texte est dirigé ?
 
 ## <a name="chapter-4---discovery"></a>Chapitre 4-détection
 
 >[!VIDEO https://www.youtube.com/embed/5NxJWMV4BP8]
 
-Tout le monde peut désormais Voir le même hologramme! Voyons à présent tous les autres utilisateurs connectés à notre environnement holographique partagé. Dans ce chapitre, nous allons récupérer l’emplacement et la rotation de tous les autres appareils HoloLens dans la même session de partage.
+Tout le monde peut désormais Voir le même hologramme ! Voyons à présent tous les autres utilisateurs connectés à notre environnement holographique partagé. Dans ce chapitre, nous allons récupérer l’emplacement et la rotation de tous les autres appareils HoloLens dans la même session de partage.
 
 ### <a name="objectives"></a>Objectifs
 
@@ -315,7 +323,7 @@ Tout le monde peut désormais Voir le même hologramme! Voyons à présent tous 
 
 ### <a name="instructions"></a>Instructions
 
-* Dans le **panneau Projet** , accédez au  dossier hologrammes.
+* Dans le **panneau Projet** , accédez au dossier **hologrammes** .
 * Glissez-déplacez le **PlayerAvatarStore** dans la **hiérarchie**.
 * Dans le **panneau Projet** , accédez au dossier **scripts** .
 * Double-cliquez sur le script **AvatarSelector** pour l’ouvrir dans Visual Studio.
@@ -343,7 +351,7 @@ public class AvatarSelector : MonoBehaviour
     {
         PlayerAvatarStore.Instance.DismissAvatarPicker();
 
-        LocalPlayerManager.Instance.SetUserAvatar(AvatarIndex);        
+        LocalPlayerManager.Instance.SetUserAvatar(AvatarIndex);
     }
 
     void Start()
@@ -468,7 +476,7 @@ public class HologramPlacement : Singleton<HologramPlacement>
                 // And if we've already been sent the relative transform, we will use it.
                 if (GotTransform)
                 {
-                    // This triggers the animation sequence for the model and 
+                    // This triggers the animation sequence for the model and
                     // puts the cool materials on the model.
                     GetComponent<EnergyHubBase>().SendMessage("OnSelect");
                 }
@@ -596,10 +604,11 @@ public class AppStateManager : Singleton<AppStateManager>
 ```
 
 **Déployer et apprécier**
+
 * Générez et déployez le projet sur vos appareils HoloLens.
 * Quand vous entendez un son de ping, recherchez le menu de sélection d’avatar et sélectionnez un avatar avec le geste de pression d’air.
-* Si vous n’êtes pas en train de regarder des hologrammes, la lumière du point autour de votre curseur permet de changer de couleur quand votre HoloLens communique avec le service: initialisation (violet foncé), téléchargement de l’ancre (vert), importation/exportation des données d’emplacement (jaune), chargement de l’ancre (bleu). Si votre lumière de point autour de votre curseur est la couleur par défaut (violet clair), vous êtes prêt à interagir avec les autres joueurs de votre session.
-* Regardez les autres personnes connectées à votre espace-un robot holographique flotte au-dessus de son épaule et imitant ses mouvements de tête!
+* Si vous n’êtes pas en train de regarder des hologrammes, la lumière du point autour de votre curseur permet de changer de couleur quand votre HoloLens communique avec le service : initialisation (violet foncé), téléchargement de l’ancre (vert), importation/exportation des données d’emplacement (jaune), chargement de l’ancre (bleu). Si votre lumière de point autour de votre curseur est la couleur par défaut (violet clair), vous êtes prêt à interagir avec les autres joueurs de votre session.
+* Regardez les autres personnes connectées à votre espace-un robot holographique flotte au-dessus de son épaule et imitant ses mouvements de tête !
 
 ## <a name="chapter-5---placement"></a>Chapitre 5-placement
 
@@ -609,11 +618,11 @@ Dans ce chapitre, nous allons faire en sorte que l’ancre puisse être placée 
 
 ### <a name="objectives"></a>Objectifs
 
-* Placez les hologrammes sur la carte spatiale en fonction de la position de tête des joueurs.
+* Placez les hologrammes sur le maillage de mappage spatial en fonction de la position de tête des joueurs.
 
 ### <a name="instructions"></a>Instructions
 
-* Dans le **panneau Projet** , accédez au  dossier hologrammes.
+* Dans le **panneau Projet** , accédez au dossier **hologrammes** .
 * Glissez-déplacez le Prefab **CustomSpatialMapping** sur la **hiérarchie**.
 * Dans le **panneau Projet** , accédez au dossier **scripts** .
 * Double-cliquez sur le script **AppStateManager** pour l’ouvrir dans Visual Studio.
@@ -670,7 +679,7 @@ public class AppStateManager : Singleton<AppStateManager>
 
     public void ResetStage()
     {
-        // If we fall back to waiting for anchor, everything needed to 
+        // If we fall back to waiting for anchor, everything needed to
         // get us into setting the target transform state will be setup.
         if (CurrentAppState != AppState.PickingAvatar)
         {
@@ -696,7 +705,7 @@ public class AppStateManager : Singleton<AppStateManager>
                 }
                 break;
             case AppState.WaitingForAnchor:
-                // Once the anchor is established we need to run spatial mapping for a 
+                // Once the anchor is established we need to run spatial mapping for a
                 // little while to build up some meshes.
                 if (ImportExportAnchorManager.Instance.AnchorEstablished)
                 {
@@ -775,7 +784,7 @@ public class HologramPlacement : Singleton<HologramPlacement>
 
     /// <summary>
     /// When the keyword recognizer hears a command this will be called.  
-    /// In this case we only have one keyword, which will re-enable moving the 
+    /// In this case we only have one keyword, which will re-enable moving the
     /// target.
     /// </summary>
     /// <param name="args">information to help route the voice command.</param>
@@ -868,7 +877,7 @@ public class HologramPlacement : Singleton<HologramPlacement>
                 // And if we've already been sent the relative transform, we will use it.
                 if (GotTransform)
                 {
-                    // This triggers the animation sequence for the model and 
+                    // This triggers the animation sequence for the model and
                     // puts the cool materials on the model.
                     GetComponent<EnergyHubBase>().SendMessage("OnSelect");
                 }
@@ -973,16 +982,17 @@ public class HologramPlacement : Singleton<HologramPlacement>
 ```
 
 **Déployer et apprécier**
+
 * Générez et déployez le projet sur vos appareils HoloLens.
 * Lorsque l’application est prête, mettez-la dans un cercle et observez la façon dont le EnergyHub apparaît au centre de tout le monde.
 * Appuyez pour placer le EnergyHub.
-* Essayez la commande vocale «réinitialiser la cible» pour sélectionner le EnergyHub de sauvegarde et travailler ensemble en tant que groupe pour déplacer l’hologramme vers un nouvel emplacement.
+* Essayez la commande vocale « réinitialiser la cible » pour sélectionner le EnergyHub de sauvegarde et travailler ensemble en tant que groupe pour déplacer l’hologramme vers un nouvel emplacement.
 
 ## <a name="chapter-6---real-world-physics"></a>Chapitre 6-physique réel
 
 >[!VIDEO https://www.youtube.com/embed/XNpQVSyXwMo]
 
-Dans ce chapitre, nous allons ajouter des hologrammes qui rebondissent sur des surfaces réelles. Regardez votre espace plein avec les projets lancés par vous et vos amis!
+Dans ce chapitre, nous allons ajouter des hologrammes qui rebondissent sur des surfaces réelles. Regardez votre espace plein avec les projets lancés par vous et vos amis !
 
 ### <a name="objectives"></a>Objectifs
 
@@ -993,12 +1003,13 @@ Dans ce chapitre, nous allons ajouter des hologrammes qui rebondissent sur des s
 
 * Dans la **hiérarchie** , sélectionnez l’objet **HologramCollection** .
 * Dans l' **inspecteur** , cliquez sur **Ajouter un composant**.
-* Dans la zone de recherche, tapez lanceur de projectiles. Sélectionnez le résultat de la recherche.
+* Dans la zone de recherche, tapez **lanceur de projectiles**. Sélectionnez le résultat de la recherche.
 
 **Déployer et apprécier**
+
 * Créez et déployez sur vos appareils HoloLens.
 * Lorsque l’application est en cours d’exécution sur tous les appareils, effectuez un taraudage pour lancer un projectile à des surfaces réelles.
-* Voyez ce qui se passe lorsque votre projectile entre en conflit avec un avatar d’un joueur!
+* Voyez ce qui se passe lorsque votre projectile entre en conflit avec un avatar d’un joueur !
 
 ## <a name="chapter-7---grand-finale"></a>Chapitre 7-finalisation général
 
@@ -1012,14 +1023,15 @@ Dans ce chapitre, nous allons découvrir un portail qui peut être découvert un
 
 ### <a name="instructions"></a>Instructions
 
-* Dans le **panneau Projet** , accédez au  dossier hologrammes.
+* Dans le **panneau Projet** , accédez au dossier **hologrammes** .
 * Faites glisser et déposez la ressource de sous- **monde** en tant qu' **enfant de HologramCollection**.
 * Avec **HologramCollection** sélectionné, cliquez sur le bouton **Ajouter un composant** dans l' **inspecteur**.
 * Dans le menu, tapez dans la zone de recherche **ExplodeTarget**. Sélectionnez le résultat de la recherche.
 * Avec **HologramCollection** sélectionné, dans la **hiérarchie** , faites glisser l’objet **EnergyHub** vers le champ **cible** de l' **inspecteur**.
-* Lorsque **HologramCollection** est sélectionné, dans la **hiérarchie** , faites glisser l’objet «sous- **monde** » vers le champ «sous- **monde** » de l' **inspecteur**.
+* Lorsque **HologramCollection** est sélectionné, dans la **hiérarchie** , faites glisser l’objet « sous- **monde** » vers le champ « sous- **monde** » de l' **inspecteur**.
 
 **Déployer et apprécier**
+
 * Créez et déployez sur vos appareils HoloLens.
 * Lorsque l’application a démarré, collaborez pour lancer des projectiles au EnergyHub.
 * Quand le sous-monde s’affiche, lancez des projectiles chez les robots du sous-monde (un robot se trouve trois fois plus amusant).

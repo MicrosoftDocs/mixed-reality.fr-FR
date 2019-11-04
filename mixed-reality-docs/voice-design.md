@@ -1,24 +1,24 @@
 ---
 title: Commander avec la voix
 description: Le regard, les mouvements et la voix constituent les principaux moyens d’interaction avec HoloLens. Cet article fournit des instructions détaillées sur la conception des fonctionnalités de voix.
-author: shentan
+author: shengkait
 ms.author: shentan
 ms.date: 04/21/2019
 ms.topic: article
 keywords: Windows Mixed Reality, conception, interaction, voix
-ms.openlocfilehash: 724ef87dae1c731289af51504a518193c20b7d96
-ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.openlocfilehash: bfcaef787b22f17da9627a53c92c43f5cb1e1d9b
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387646"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437217"
 ---
 # <a name="voice-commanding"></a>Commander avec la voix
 
 Lorsque vous utilisez des commandes vocales, le regard est généralement utilisé comme mécanisme de ciblage, par exemple, comme un pointeur (« sélectionner ») ou pour adresser votre commande à une application (« voir, dire »). Bien entendu, certaines commandes vocales ne nécessitent pas de cible. C’est le cas, par exemple, des commandes « aller au menu Démarrer » ou « Hey Cortana ».
 
 
-## <a name="device-support"></a>Prise en charge des appareils
+## <a name="device-support"></a>Périphériques pris en charge
 
 <table>
     <colgroup>
@@ -30,7 +30,7 @@ Lorsque vous utilisez des commandes vocales, le regard est généralement utilis
     <tr>
         <td><strong>Fonctionnalité</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens (1ère génération)</strong></a></td>
-        <td><strong>HoloLens 2</strong></td>
+        <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>Casques immersifs</strong></a></td>
     </tr>
      <tr>
@@ -47,13 +47,13 @@ Lorsque vous utilisez des commandes vocales, le regard est généralement utilis
 
 Il est recommandé d’ajouter des commandes vocales à toutes les expériences que vous créez. La voix est un moyen puissant et pratique de contrôler le système et les applications. Étant donné le nombre de dialectes et d’accents qui peuvent être utilisés, il est important de bien choisir les mots clés de reconnaissance vocale, afin de garantir que les commandes de vos utilisateurs seront correctement interprétées.
 
-### <a name="best-practices"></a>Bonnes pratiques
+### <a name="best-practices"></a>Meilleures pratiques
 
 Voici quelques bonnes pratiques qui faciliteront la reconnaissance vocale.
-* **Utilisez des commandes concises** : dans la mesure du possible, choisissez des mots clés de deux syllabes minimum. Les mots d’une syllabe comprennent souvent des voyelles qui peuvent être prononcées différemment selon l’accent de la personne. Exemple : « Lire la vidéo » est mieux que « Lire la vidéo actuellement sélectionnée »
-* **Utilisez du vocabulaire simple** : par exemple : « Afficher la note de service » est mieux que « Afficher la circulaire »
+* **Utilisez des commandes concises** : dans la mesure du possible, choisissez des mots clés de deux syllabes minimum. Les mots d’une syllabe comprennent souvent des voyelles qui peuvent être prononcées différemment selon l’accent de la personne. Exemple : « lire la vidéo » est préférable à « lire la vidéo actuellement sélectionnée »
+* **Utilisation d’un vocabulaire simple** -exemple : « afficher la note » est préférable à « afficher le résumé »
 * **Utilisez des commandes non définitives** : assurez-vous que les actions réalisables par les commandes de reconnaissance vocale peuvent être facilement annulées, en cas de déclenchement involontaire provoqué par une personne parlant près de l’utilisateur.
-* **Évitez les commandes avec des consonances similaires** : évitez d’enregistrer plusieurs commandes vocales ayant une consonance très similaire. Exemple : « Afficher plus » et « Afficher bus » ont une consonance très similaire.
+* **Évitez les commandes avec des consonances similaires** : évitez d’enregistrer plusieurs commandes vocales ayant une consonance très similaire. Exemple : « afficher plus » et « afficher le magasin » peuvent être très similaires.
 * **Désinscrivez votre application lorsque vous ne l’utilisez pas** : lorsque l’état de votre application rend une commande de reconnaissance vocale non valide, désinscrivez l’application pour que les autres commandes ne soient pas confondues avec celle-ci.
 * **Testez les différents accents** : testez votre application avec des utilisateurs ayant différents accents.
 * **Maintenez une certaine cohérence au sein des commandes vocales** : si la commande « Retour » permet de retourner à la page précédente, gardez ce comportement dans toutes vos applications.
@@ -65,7 +65,7 @@ Voici quelques bonnes pratiques qui faciliteront la reconnaissance vocale.
 
 La prononciation de la commande « Sélectionner » activera systématiquement l’élément qui est pointé par le curseur de pointage. 
 
->Remarque : Dans HoloLens 2, le curseur de pointage doit d’abord être appelé en prononçant la commande « Sélectionner ». Pour activer l’élément, vous devez prononcer une nouvelle fois la commande « Sélectionner ». Pour masquer le curseur de pointage, un mouvement suffit. Vous pouvez cliquer dans l’air ou appuyer sur un objet. 
+>Remarque : dans HoloLens 2, le curseur en regard doit d’abord être appelé en disant le mot « Select ». Pour activer l’élément, vous devez prononcer une nouvelle fois la commande « Sélectionner ». Pour masquer le curseur de pointage, un mouvement suffit. Vous pouvez cliquer dans l’air ou appuyer sur un objet. 
 
 ### <a name="see-it-say-it"></a>Voir, prononcer
 
@@ -113,6 +113,6 @@ Lorsque la voix est utilisée correctement, l’utilisateur **comprend ce qu’i
 * Comment choisir l’application ou la commande d’application à laquelle adresser mes commandes vocales ?
 * Puis-je utiliser la voix pour contrôler les éléments holographiques sur HoloLens ?
 
-## <a name="see-also"></a>Voir aussi
-* [Mouvements](gestures.md)
+## <a name="see-also"></a>Articles associés
+* [Mouvements](gaze-and-commit.md#composite-gestures)
 * [Suivre de la tête et stabiliser](gaze-and-dwell.md)

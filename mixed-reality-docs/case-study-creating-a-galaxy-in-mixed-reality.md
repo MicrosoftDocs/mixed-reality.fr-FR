@@ -1,19 +1,19 @@
 ---
-title: 'Étude de cas: création d’un Galaxy en réalité mixte'
-description: Avant la sortie de Microsoft HoloLens, nous avons demandé à notre communauté de développeurs quel type d’application il souhaite voir une build d’équipe interne expérimentée pour le nouvel appareil. Plus de 5000 idées ont été partagées et, après une interrogation Twitter de 24 heures, le gagnant était une idée appelée «Galaxy Explorer».
+title: 'Étude de cas : création d’un Galaxy en réalité mixte'
+description: Avant la sortie de Microsoft HoloLens, nous avons demandé à notre communauté de développeurs quel type d’application il souhaite voir une build d’équipe interne expérimentée pour le nouvel appareil. Plus de 5000 idées ont été partagées et, après une interrogation Twitter de 24 heures, le gagnant était une idée appelée « Galaxy Explorer ».
 author: KarimLUCCIN
 ms.author: kaluccin
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Explorateur Galaxy, HoloLens, Windows Mixed Reality, partager votre idée, étude de cas
-ms.openlocfilehash: a478eaa35144a8ee0fbeaeb43cec4b9f901890ab
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 696662eb92371708389f8a128dcee6a61acf1816
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63523745"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436873"
 ---
-# <a name="case-study---creating-a-galaxy-in-mixed-reality"></a>Étude de cas: création d’un Galaxy en réalité mixte
+# <a name="case-study---creating-a-galaxy-in-mixed-reality"></a>Étude de cas : création d’un Galaxy en réalité mixte
 
 Avant la sortie de Microsoft HoloLens, nous avons demandé à notre communauté de développeurs quel type d’application il souhaite voir une build d’équipe interne expérimentée pour le nouvel appareil. Plus de 5000 idées ont été partagées et, après une interrogation Twitter de 24 heures, le gagnant était une idée appelée l' [Explorateur Galaxy](galaxy-explorer.md).
 
@@ -25,7 +25,7 @@ Andy Zibits, responsable artistique sur le projet et karim Luccin, l’ingénieu
 
 Nous souhaitons tirer pleinement parti de la capacité de HoloLens à restituer les objets 3D directement dans votre espace de vie. nous avons donc décidé de créer un Galaxy réaliste où les gens seraient en mesure d’effectuer un zoom avant et de voir les étoiles individuelles, chacune sur leurs propres trajectoires .
 
-Au cours de la première semaine de développement, nous avons trouvé quelques objectifs pour notre représentation de la manière lactée de Galaxy: Cela devait avoir un niveau de profondeur, de mouvement et de sensation, avec des étoiles qui vous aideront à créer la forme du Galaxy.
+Au cours de la première semaine de développement, nous avons vu quelques objectifs pour notre représentation de la méthode lactée Galaxy : elle devait avoir une profondeur, un mouvement et une sensation volumétrique, ce qui permet de créer la forme du Galaxy.
 
 Le problème lié à la création d’un Galaxy animé qui avait des milliards d’étoiles était que le nombre important d’éléments uniques nécessitant une mise à jour serait trop grand par frame pour que HoloLens s’anime à l’aide de l’UC. Notre solution impliquait une combinaison complexe d’art et de science.
 
@@ -41,7 +41,7 @@ Nous avons commencé des tests de stress avec des milliers de particules de poin
 
 ### <a name="creating-the-position-of-the-stars"></a>Création de la position des étoiles
 
-L’un de nos membres de l’équipe a C# déjà écrit le code qui générerait des étoiles à leur position initiale. Les étoiles se trouvent sur une ellipse et leur position peut être décrite par (**curveOffset**, **ellipseSize**, **Elevation**) où **curveOffset** est l’angle de l’étoile le long de l’ellipse, **ellipseSize** est la dimension de l’ellipse le long de X et de Z, et élever l’altitude appropriée de l’étoile au sein de Galaxy. Par conséquent, nous pouvons créer une mémoire tampon ([ComputeBuffer d’Unity](http://docs.unity3d.com/ScriptReference/ComputeBuffer.html)) qui serait initialisée avec chaque attribut d’étoile et l’envoyer sur le GPU là où il résiderait pour le reste de l’expérience. Pour dessiner ce tampon, nous utilisons [l’DrawProcedural d’Unity](http://docs.unity3d.com/ScriptReference/Graphics.DrawProcedural.html) qui permet d’exécuter un nuanceur (code sur un GPU) sur un ensemble arbitraire de points sans avoir de maillage réel représentant le Galaxy:
+L’un de nos membres de l’équipe a C# déjà écrit le code qui générerait des étoiles à leur position initiale. Les étoiles se trouvent sur une ellipse et leur position peut être décrite par (**curveOffset**, **ellipseSize**, **Elevation**) où **curveOffset** est l’angle de l’étoile le long de l’ellipse, **ellipseSize** est la dimension de l’ellipse le long de X et de Z, et élever l’altitude appropriée de l’étoile au sein de Galaxy. Par conséquent, nous pouvons créer une mémoire tampon ([ComputeBuffer d’Unity](https://docs.unity3d.com/ScriptReference/ComputeBuffer.html)) qui serait initialisée avec chaque attribut d’étoile et l’envoyer sur le GPU là où il résiderait pour le reste de l’expérience. Pour dessiner ce tampon, nous utilisons [l’DrawProcedural d’Unity](https://docs.unity3d.com/ScriptReference/Graphics.DrawProcedural.html) qui permet d’exécuter un nuanceur (code sur un GPU) sur un ensemble arbitraire de points sans avoir de maillage réel représentant le Galaxy :
 
 **POURCENTAGE**
 
@@ -74,14 +74,14 @@ Nous avons commencé avec des modèles circulaires bruts avec des milliers de pa
 
 Nous avons essayé différents modèles et systèmes de particules qui ont pivoté, comme ceux-ci.
 
-Notre équipe a fait des recherches sur la façon dont galaxies fonctionne et nous avons créé un système de particule personnalisé spécifiquement pour la galaxie afin que nous puissions déplacer les particules sur les ellipses en fonction de la «[théorie des vagues de densité](https://en.wikipedia.org/wiki/Density_wave_theory)», qui theorizes que les bras d’un Galaxy sont des zones de densité plus élevée, mais en flux constant, comme un bourrage de trafic. Il semble stable et solide, mais les étoiles sont en fait en déplacement et en provenance des bras lorsqu’ils se déplacent sur leurs ellipses respectives. Dans notre système, les particules n’existent jamais sur le processeur: nous générons les cartes et les orientons toutes sur le GPU, de sorte que le système entier est simplement un état initial + Time. Elle a progressé comme suit:
+Notre équipe a fait des recherches sur la façon dont galaxies fonctionne et nous avons créé un système de particule personnalisé spécifiquement pour la galaxie afin que nous puissions déplacer les particules sur les ellipses en fonction de la «[théorie des vagues de densité](https://en.wikipedia.org/wiki/Density_wave_theory)», qui theorizes que les bras d’un Galaxy sont des zones de densité plus élevée, mais en flux constant, comme un bourrage de trafic. Il semble stable et solide, mais les étoiles sont en fait en déplacement et en provenance des bras lorsqu’ils se déplacent sur leurs ellipses respectives. Dans notre système, les particules n’existent jamais sur le processeur : nous générons les cartes et les orientons toutes sur le GPU, de sorte que le système entier est simplement un état initial + Time. Elle a progressé comme suit :
 
 ![Progression du système de particules avec rendu GPU](images/spiral-galaxy-arms-500px.jpg)
 
 Progression du système de particules avec rendu GPU
 
 
-Une fois que suffisamment de ellipses ont été ajoutées et sont définies pour pivoter, le galaxies a commencé à former des «bras» où le mouvement des étoiles converge. L’espacement des étoiles sur chaque tracé elliptique a été donné à caractère aléatoire, et chaque étoile a ajouté un peu de caractère aléatoire positionnel. Cela a créé une distribution d’aspect plus naturelle du mouvement en étoile et de la forme ARM. Enfin, nous avons ajouté la capacité de piloter la couleur en fonction de la distance par rapport au centre.
+Une fois que suffisamment de ellipses ont été ajoutées et sont définies pour pivoter, le galaxies a commencé à former des « bras » où le mouvement des étoiles converge. L’espacement des étoiles sur chaque tracé elliptique a été donné à caractère aléatoire, et chaque étoile a ajouté un peu de caractère aléatoire positionnel. Cela a créé une distribution d’aspect plus naturelle du mouvement en étoile et de la forme ARM. Enfin, nous avons ajouté la capacité de piloter la couleur en fonction de la distance par rapport au centre.
 
 ### <a name="creating-the-motion-of-the-stars"></a>Création du mouvement des étoiles
 
@@ -147,7 +147,7 @@ Le fait d’effectuer des clouds plein écran et d’essayer de les brouiller au
 
 ### <a name="a-bit-of-context-first"></a>Un peu de contexte en premier
 
-Lors de l’utilisation des textures dans un jeu de la taille de texture rarement correspond à la zone que nous souhaitons utiliser dans, mais nous pouvons utiliser différents types de filtrage pour obtenir la carte graphique pour interpoler la couleur que nous voulons des pixels de la texture de texture ([defiltragedeTexture<C3/>](https://msdn.microsoft.com/library/dn642451.aspx)). Le filtrage qui nous intéresse est le [Filtrage bilinéaire](https://msdn.microsoft.com/library/windows/desktop/bb172357.aspx) qui calcule la valeur de tout pixel à l’aide des 4 voisins les plus proches.
+Lorsque vous utilisez des textures dans un jeu, la taille de la texture correspond rarement à la zone dans laquelle nous voulons l’utiliser, mais nous pouvons utiliser un autre type de filtrage de texture pour faire en sorte que la carte graphique interpole la couleur souhaitée à partir des pixels de la texture ([filtrage de texture](https://msdn.microsoft.com/library/dn642451.aspx)). Le filtrage qui nous intéresse est le [Filtrage bilinéaire](https://msdn.microsoft.com/library/windows/desktop/bb172357.aspx) qui calcule la valeur de tout pixel à l’aide des 4 voisins les plus proches.
 
 ![Original avant le filtrage](images/texture-1.png)
 
@@ -165,14 +165,14 @@ x3 revient à une résolution complète.
 
 Cela nous a permis d’obtenir la partie Cloud avec uniquement une fraction du coût d’origine. Au lieu d’ajouter des clouds à la résolution complète, nous ne dessinons que 1/64th des pixels et remontons la texture à la résolution complète.
 
-![À gauche, avec une mise à l’échelle de 1/8 à la résolution complète; et Right, avec 3 mises à l’échelle à l’aide de la puissance 2.](images/stars-upscaled-300px.jpg)
+![À gauche, avec une mise à l’échelle de 1/8 à la résolution complète ; et Right, avec 3 mises à l’échelle à l’aide de la puissance 2.](images/stars-upscaled-300px.jpg)
 
-À gauche, avec une mise à l’échelle de 1/8 à la résolution complète; et Right, avec 3 mises à l’échelle à l’aide de la puissance 2.
+À gauche, avec une mise à l’échelle de 1/8 à la résolution complète ; et Right, avec 3 mises à l’échelle à l’aide de la puissance 2.
 
 
 Notez que la tentative de passer de 1/64th de la taille à la taille maximale d’un point de vue serait complètement différente, car la carte graphique utiliserait toujours 4 pixels dans notre configuration pour colorer une zone plus grande et les artefacts commencent à apparaître.
 
-Ensuite, si nous ajoutons des étoiles de résolution complète avec des cartes plus petites, nous obtenons l’intégralité de Galaxy:
+Ensuite, si nous ajoutons des étoiles de résolution complète avec des cartes plus petites, nous obtenons l’intégralité de Galaxy :
 
 ![Résultat final du rendu Galaxy à l’aide des étoiles de résolution complète](images/full-galaxy-500px.png)
 
@@ -187,7 +187,7 @@ Notre dernière méthode de Galaxy en 3D.
 
 Nous avons ouvert le code de l’application Galaxy Explorer et nous l’avons rendu disponible sur [GitHub](https://github.com/Microsoft/GalaxyExplorer) pour que les développeurs s’appuient sur.
 
-Vous souhaitez en savoir plus sur le processus de développement de l’Explorateur Galaxy? Consultez toutes les mises à jour précédentes du projet sur le [canal Microsoft HoloLens YouTube](https://www.youtube.com/playlist?list=PLZCHH_4VqpRj0Nl46J0LNRkMyBNU4knbL).
+Vous souhaitez en savoir plus sur le processus de développement de l’Explorateur Galaxy ? Consultez toutes les mises à jour précédentes du projet sur le [canal Microsoft HoloLens YouTube](https://www.youtube.com/playlist?list=PLZCHH_4VqpRj0Nl46J0LNRkMyBNU4knbL).
 
 ## <a name="about-the-authors"></a>À propos des auteurs
 
@@ -203,6 +203,6 @@ Vous souhaitez en savoir plus sur le processus de développement de l’Explorat
 </table>
 
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a>Articles associés
 * [Explorateur Galaxy sur GitHub](https://github.com/Microsoft/GalaxyExplorer)
 * [Mises à jour des projets de l’Explorateur Galaxy sur YouTube](https://www.youtube.com/playlist?list=PLZCHH_4VqpRj0Nl46J0LNRkMyBNU4knbL)

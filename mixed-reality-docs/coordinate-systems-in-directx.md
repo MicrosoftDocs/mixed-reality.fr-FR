@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Réalité mixte, localisateur spatial, frame de référence spatiale, système de coordonnées spatiales, étape spatiale, exemple de code, stabilisation d’image, point d’ancrage spatial, magasin d’ancrage spatial, perte de suivi, procédure pas à pas
-ms.openlocfilehash: 5a48e0a829ba8647718e28ec20760d8a764b13fe
-ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
+ms.openlocfilehash: a0bce897c1982715af24f0bf7c398cdee10f017f
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65628974"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436224"
 ---
 # <a name="coordinate-systems-in-directx"></a>Systèmes de coordonnées dans DirectX
 
@@ -37,16 +37,16 @@ Votre application ne doit pas créer de SpatialCoordinateSystems directement, ma
 
 Tous les systèmes de coordonnées retournés par ces objets sont droitiers, avec + y vers le haut, + x vers la droite et + z vers l’arrière. Vous pouvez vous souvenir de la direction vers laquelle pointe l’axe z positif en pointant les doigts de votre gauche ou de droite dans la direction x positive et en les plaçant dans la direction y positive. La direction vers laquelle pointe votre pouce (vers vous ou à l'opposé) correspond à la direction dans laquelle pointe l’axe z positif pour ce système de coordonnées. L’illustration suivante décrit ces deux systèmes de coordonnées.
 
-![Systèmes de coordonnées à gauche et à droite](images/left-hand-right-hand.gif)<br>
+![systèmes de coordonnées à gauche et à droite](images/left-hand-right-hand.gif)<br>
 *Systèmes de coordonnées à gauche et à droite*
 
 Pour démarrer dans un SpatialCoordinateSystem en fonction de la position d’un HoloLens, utilisez la classe <a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatiallocator" target="_blank">SpatialLocator</a> pour créer une image de référence attachée ou stationnaire, comme décrit dans les sections ci-dessous.
 
 ## <a name="place-holograms-in-the-world-using-a-spatial-stage"></a>Placer des hologrammes dans le monde à l’aide d’une étape spatiale
 
-Le système de coordonnées pour les casques immersifs immersifs de la réalité Windows mixed est accessible à l’aide de la propriété statique <a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialstageframeofreference.current" target="_blank">SpatialStageFrameOfReference:: Current</a> . Cette API fournit un système de coordonnées, des informations indiquant si le joueur est assis ou mobile, la limite d’une zone sûre pour se déplacer si le joueur est mobile, et indique si le casque est directionnel. Il existe également un gestionnaire d’événements pour les mises à jour de la phase spatiale.
+Le système de coordonnées pour les casques immersifs immersifs de la réalité Windows mixed est accessible à l’aide de la propriété statique <a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialstageframeofreference.current" target="_blank">SpatialStageFrameOfReference :: Current</a> . Cette API fournit un système de coordonnées, des informations indiquant si le joueur est assis ou mobile, la limite d’une zone sûre pour se déplacer si le joueur est mobile, et indique si le casque est directionnel. Il existe également un gestionnaire d’événements pour les mises à jour de la phase spatiale.
 
-Tout d’abord, nous obtenons la phase spatiale et m’abonnons aux mises à jour: 
+Tout d’abord, nous obtenons la phase spatiale et m’abonnons aux mises à jour : 
 
 Code pour **l’initialisation de la phase spatiale**
 
@@ -172,10 +172,10 @@ void SpatialStageManager::OnCurrentChanged(Object^ /*o*/)
 }
 ```
 
-L’ensemble des vertex qui définissent les limites de l’étape sont fournis dans l’ordre des aiguilles d’une montre. Le shell Windows Mixed Reality dessine une clôture à la limite lorsque l’utilisateur l’approche; vous souhaiterez peut-être triangulaire la zone à votre convenance. L’algorithme suivant peut être utilisé pour triangulairer la phase.
+L’ensemble des vertex qui définissent les limites de l’étape sont fournis dans l’ordre des aiguilles d’une montre. Le shell Windows Mixed Reality dessine une clôture à la limite lorsque l’utilisateur l’approche ; vous souhaiterez peut-être triangulaire la zone à votre convenance. L’algorithme suivant peut être utilisé pour triangulairer la phase.
 
 
-Code pour triangulaire de la **Phase spatiale**
+Code pour **triangulaire de la phase spatiale**
 
 ```
 std::vector<unsigned short> SpatialStageManager::TriangulatePoints(std::vector<float3> const& vertices)
@@ -284,7 +284,7 @@ La classe [SpatialStationaryFrameOfReference](https://msdn.microsoft.com/library
 
 Pour obtenir un SpatialStationaryFrameOfReference, utilisez la classe [SpatialLocator](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatiallocator.aspx) et appelez [CreateStationaryFrameOfReferenceAtCurrentLocation](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatiallocator.createstationaryframeofreferenceatcurrentlocation.aspx).
 
-À partir du code du modèle d’application holographique Windows:
+À partir du code du modèle d’application holographique Windows :
 
 ```
            // The simplest way to render world-locked holograms is to create a stationary reference frame
@@ -293,7 +293,7 @@ Pour obtenir un SpatialStationaryFrameOfReference, utilisez la classe [SpatialLo
            referenceFrame = locator.CreateStationaryFrameOfReferenceAtCurrentLocation();
 ```
 * Les frames de référence stationnaires sont conçus pour fournir une position la mieux adaptée par rapport à l’espace global. Les positions individuelles dans ce frame de référence sont autorisées à dériver légèrement. Cela est normal, car l’appareil en apprend davantage sur l’environnement.
-* Lorsque le positionnement précis des hologrammes individuels est requis, un SpatialAnchor doit être utilisé pour ancrer l’hologramme individuel à une position dans le monde réel (par exemple, un point que l’utilisateur indique d’avoir un intérêt particulier). Les positions d’ancrage ne dérivent pas, mais peuvent être corrigées; le point d’ancrage utilise la position corrigée à partir de l’image suivante, une fois la correction effectuée.
+* Lorsque le positionnement précis des hologrammes individuels est requis, un SpatialAnchor doit être utilisé pour ancrer l’hologramme individuel à une position dans le monde réel (par exemple, un point que l’utilisateur indique d’avoir un intérêt particulier). Les positions d’ancrage ne dérivent pas, mais peuvent être corrigées ; le point d’ancrage utilise la position corrigée à partir de l’image suivante, une fois la correction effectuée.
 
 ## <a name="place-holograms-in-the-world-using-spatial-anchors"></a>Placer des hologrammes dans le monde à l’aide d’ancres spatiales
 
@@ -325,7 +325,7 @@ Une fois que vous êtes opérationnel avec les ancres spatiales Azure, vous pouv
 
 Pour cet exemple de code, nous avons modifié le modèle d’application holographique Windows pour créer des ancres lorsque le geste **appuyé** est détecté. Le cube est ensuite placé au point d’ancrage pendant la passe de rendu.
 
-Étant donné que plusieurs points d’ancrage sont pris en charge par la classe d’assistance, nous pouvons placer autant de cubes que vous le souhaitez à l’aide de cet exemple de code!
+Étant donné que plusieurs points d’ancrage sont pris en charge par la classe d’assistance, nous pouvons placer autant de cubes que vous le souhaitez à l’aide de cet exemple de code !
 
 Notez que les ID des ancres sont des éléments que vous contrôlez dans votre application. Dans cet exemple, nous avons créé un modèle d’affectation de noms qui est séquentiel en fonction du nombre d’ancres actuellement stockées dans la collection d’ancres de l’application.
 
@@ -367,8 +367,8 @@ Notez que les ID des ancres sont des éléments que vous contrôlez dans votre a
 
 ### <a name="asynchronously-load-and-cache-the-spatialanchorstore"></a>Charger et mettre en cache de façon asynchrone SpatialAnchorStore
 
-Voyons comment écrire une classe SampleSpatialAnchorHelper qui permet de gérer cette persistance, notamment:
-* Stockage d’une collection d’ancres en mémoire, indexées par une clé Platform:: String.
+Voyons comment écrire une classe SampleSpatialAnchorHelper qui permet de gérer cette persistance, notamment :
+* Stockage d’une collection d’ancres en mémoire, indexées par une clé Platform :: String.
 * Chargement des ancres à partir du SpatialAnchorStore du système, qui est conservé distinct de la collection en mémoire locale.
 * Enregistrement de la collection en mémoire locale des ancres dans le SpatialAnchorStore quand l’application choisit de le faire.
 
@@ -487,7 +487,7 @@ Lorsque votre application reprend, ou à tout moment nécessaire pour le impleme
 
 Pour restaurer les ancres à partir du SpatialAnchorStore, restaurez chacune d’elles qui vous intéresse à votre propre collection en mémoire.
 
-Vous avez besoin de votre propre base de données en mémoire de SpatialAnchors; un moyen d’associer des chaînes à l’SpatialAnchors que vous créez. Dans notre exemple de code, nous choisissons d’utiliser un Windows:: Foundation:: Collections:: IMap pour stocker les ancres, ce qui facilite l’utilisation de la même clé et de la même valeur de données pour SpatialAnchorStore.
+Vous avez besoin de votre propre base de données en mémoire de SpatialAnchors ; un moyen d’associer des chaînes à l’SpatialAnchors que vous créez. Dans notre exemple de code, nous choisissons d’utiliser un Windows :: Foundation :: Collections :: IMap pour stocker les ancres, ce qui facilite l’utilisation de la même clé et de la même valeur de données pour SpatialAnchorStore.
 
 ```
    // This is an in-memory anchor list that is separate from the anchor store.
@@ -551,7 +551,7 @@ Parfois, vous devez effacer l’état de l’application et écrire de nouvelles
 
 ### <a name="example-relating-anchor-coordinate-systems-to-stationary-reference-frame-coordinate-systems"></a>Exemple : Association de systèmes de coordonnées d’ancrage à des systèmes de coordonnées de cadre de référence stationnaire
 
-Supposons que vous disposiez d’une ancre et que vous vouliez associer un nom du système de coordonnées de votre ancre à l’SpatialStationaryReferenceFrame que vous utilisez déjà pour la plupart de votre autre contenu. Vous pouvez utiliser [TryGetTransformTo](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialcoordinatesystem.trygettransformto.aspx) pour obtenir une transformation du système de coordonnées de l’ancre à celle du cadre de référence fixe:
+Supposons que vous disposiez d’une ancre et que vous vouliez associer un nom du système de coordonnées de votre ancre à l’SpatialStationaryReferenceFrame que vous utilisez déjà pour la plupart de votre autre contenu. Vous pouvez utiliser [TryGetTransformTo](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialcoordinatesystem.trygettransformto.aspx) pour obtenir une transformation du système de coordonnées de l’ancre à celle du cadre de référence fixe :
 
 ```
    // In this code snippet, someAnchor is a SpatialAnchor^ that has been initialized and is valid in the current environment.
@@ -564,8 +564,8 @@ Supposons que vous disposiez d’une ancre et que vous vouliez associer un nom d
    }
 ```
 
-Ce processus est utile de deux manières:
-1. Elle vous indique si les deux frames de référence peuvent être compris entre eux, et;
+Ce processus est utile de deux manières :
+1. Elle vous indique si les deux frames de référence peuvent être compris entre eux, et ;
 2. Si c’est le cas, il vous fournit une transformation pour passer directement d’un système de coordonnées à l’autre.
 
 Avec ces informations, vous comprenez la relation spatiale entre les objets entre les deux frames de référence.
@@ -586,9 +586,9 @@ Notez que cela s’applique à toute la plage d’appareils Windows Mixed Realit
 
 ### <a name="use-a-reference-frame-attached-to-the-device"></a>Utiliser un cadre de référence attaché à l’appareil
 
-Ces sections décrivent ce que nous avons modifié dans le modèle d’application holographique Windows pour activer un cadre de référence associé à un appareil à l’aide de cette API. Notez que cet hologramme «attaché» fonctionne avec les hologrammes fixes ou ancrés, et peut également être utilisé lorsque l’appareil est momentanément incapable de trouver sa position dans le monde.
+Ces sections décrivent ce que nous avons modifié dans le modèle d’application holographique Windows pour activer un cadre de référence associé à un appareil à l’aide de cette API. Notez que cet hologramme « attaché » fonctionne avec les hologrammes fixes ou ancrés, et peut également être utilisé lorsque l’appareil est momentanément incapable de trouver sa position dans le monde.
 
-Tout d’abord, nous avons modifié le modèle pour stocker un SpatialLocatorAttachedFrameOfReference au lieu d’un SpatialStationaryFrameOfReference:
+Tout d’abord, nous avons modifié le modèle pour stocker un SpatialLocatorAttachedFrameOfReference au lieu d’un SpatialStationaryFrameOfReference :
 
 À partir de **HolographicTagAlongSampleMain. h**:
 
@@ -616,7 +616,7 @@ Au cours de la mise à jour, nous obtenons désormais le système de coordonnée
 
 ### <a name="get-a-spatial-pointer-pose-and-follow-the-users-gaze"></a>Obtenir une pose de pointeur spatial et suivre le point de regard de l’utilisateur
 
-Nous souhaitons que notre exemple d’hologramme suive le [regard](gaze.md)de l’utilisateur, de la même façon que le shell holographique peut suivre le regard de l’utilisateur. Pour cela, nous devons obtenir le SpatialPointerPose à partir du même horodatage.
+Nous souhaitons que notre exemple d’hologramme suive le [regard](gaze-and-commit.md)de l’utilisateur, de la même façon que le shell holographique peut suivre le regard de l’utilisateur. Pour cela, nous devons obtenir le SpatialPointerPose à partir du même horodatage.
 
 ```
 SpatialPointerPose^ pose = SpatialPointerPose::TryGetAtTimestamp(currentCoordinateSystem, prediction->Timestamp);
@@ -624,9 +624,9 @@ SpatialPointerPose^ pose = SpatialPointerPose::TryGetAtTimestamp(currentCoordina
 
 Ce SpatialPointerPose contient les informations nécessaires pour positionner l’hologramme en fonction de l' [en-tête actuel de l’utilisateur](gaze-in-directx.md).
 
-Pour des raisons de confort de l’utilisateur, nous utilisons l’interpolation linéaire («Lerp») pour lisser la modification de position de sorte qu’elle se produise sur une période donnée. L’utilisateur est plus à l’aise avec le verrouillage de l’hologramme. Lerping la position de la balise, le long de l’hologramme, nous permet également de stabiliser l’hologramme en amortissant le mouvement. Si ce n’est pas le cas, l’utilisateur voit l’instabilité de l’hologramme en raison de ce qui est normalement considéré comme des mouvements imperceptibles de la tête de l’utilisateur.
+Pour des raisons de confort de l’utilisateur, nous utilisons l’interpolation linéaire (« Lerp ») pour lisser la modification de position de sorte qu’elle se produise sur une période donnée. L’utilisateur est plus à l’aise avec le verrouillage de l’hologramme. Lerping la position de la balise, le long de l’hologramme, nous permet également de stabiliser l’hologramme en amortissant le mouvement. Si ce n’est pas le cas, l’utilisateur voit l’instabilité de l’hologramme en raison de ce qui est normalement considéré comme des mouvements imperceptibles de la tête de l’utilisateur.
 
-À partir de **StationaryQuadRenderer::P ositionhologram**:
+À partir de **StationaryQuadRenderer ::P ositionhologram**:
 
 ```
    const float& dtime = static_cast<float>(timer.GetElapsedSeconds());
@@ -653,7 +653,7 @@ Pour des raisons de confort de l’utilisateur, nous utilisons l’interpolation
 >[!NOTE]
 >Dans le cas d’un panneau de débogage, vous pouvez choisir de repositionner l’hologramme sur le côté afin qu’il n’obstrue pas votre vue. Voici un exemple de ce que vous pouvez faire.
 
-Pour **StationaryQuadRenderer::P ositionhologram**:
+Pour **StationaryQuadRenderer ::P ositionhologram**:
 
 ```
        // If you're making a debug view, you might not want the tag-along to be directly in the
@@ -670,7 +670,7 @@ Pour **StationaryQuadRenderer::P ositionhologram**:
 
 Il n’est pas suffisant de positionner simplement l’hologramme, qui dans ce cas est un quadruple. Nous devons également faire pivoter l’objet pour faire face à l’utilisateur. Notez que cette rotation se produit dans l’espace universel, car ce type de billboarding permet à l’hologramme de conserver une partie de l’environnement de l’utilisateur. L’affichage de l’espacement d’affichage n’est pas aussi agréable, car l’hologramme est verrouillé à l’orientation d’affichage. dans ce cas, vous devez également interpoler entre les matrices de vue de gauche et de droite afin d’acquérir une transformation d’affichage de l’espace d’affichage qui n’interrompt pas le rendu stéréo. Ici, nous allons faire pivoter sur les axes X et Z pour faire face à l’utilisateur.
 
-À partir de **StationaryQuadRenderer:: Update**:
+À partir de **StationaryQuadRenderer :: Update**:
 
 ```
    // Seconds elapsed since previous frame.
@@ -717,7 +717,7 @@ Il n’est pas suffisant de positionner simplement l’hologramme, qui dans ce c
 
 Pour cet exemple, nous choisissons également d’afficher l’hologramme dans le système de coordonnées du SpatialLocatorAttachedReferenceFrame, où nous avons positionné l’hologramme. (Si nous avions décidé d’effectuer le rendu à l’aide d’un autre système de coordonnées, nous aurions besoin d’acquérir une transformation du système de coordonnées de l’appareil de référence associé à l’appareil vers ce système de coordonnées.)
 
-À partir de **HolographicTagAlongSampleMain:: Render**:
+À partir de **HolographicTagAlongSampleMain :: Render**:
 
 ```
    // The view and projection matrices for each holographic camera will change
@@ -730,16 +730,16 @@ Pour cet exemple, nous choisissons également d’afficher l’hologramme dans l
        );
 ```
 
-C’est tout ! L’hologramme va à présent «débusquer» une position qui est de 2 mètres devant la direction du regard de l’utilisateur.
+C’est tout ! L’hologramme va à présent « débusquer » une position qui est de 2 mètres devant la direction du regard de l’utilisateur.
 
 >[!NOTE]
 >Cet exemple charge également du contenu supplémentaire. consultez StationaryQuadRenderer. cpp.
 
 ## <a name="handling-tracking-loss"></a>Gestion des pertes de suivi
 
-Lorsque l’appareil ne peut pas se trouver dans le monde entier, l’application rencontre une «perte de suivi». Les applications Windows Mixed Reality doivent être en mesure de gérer ces interruptions du système de suivi positionnel. Ces interruptions peuvent être observées et les réponses créées à l’aide de l’événement LocatabilityChanged sur le SpatialLocator par défaut.
+Lorsque l’appareil ne peut pas se trouver dans le monde entier, l’application rencontre une « perte de suivi ». Les applications Windows Mixed Reality doivent être en mesure de gérer ces interruptions du système de suivi positionnel. Ces interruptions peuvent être observées et les réponses créées à l’aide de l’événement LocatabilityChanged sur le SpatialLocator par défaut.
 
-À partir de **AppMain:: SetHolographicSpace:**
+À partir de **AppMain :: SetHolographicSpace :**
 
 ```
    // Be able to respond to changes in the positional tracking state.
@@ -754,7 +754,7 @@ Lorsque votre application reçoit un événement LocatabilityChanged, elle peut 
 
 Le modèle d’application holographique Windows est fourni avec un gestionnaire LocatabilityChanged déjà créé pour vous. Par défaut, il affiche un avertissement dans la console de débogage lorsque le suivi positionnel n’est pas disponible. Vous pouvez ajouter du code à ce gestionnaire pour fournir une réponse en fonction des besoins de votre application.
 
-À partir de **AppMain. cpp:**
+À partir de **AppMain. cpp :**
 
 ```
    void HolographicApp1Main::OnLocatabilityChanged(SpatialLocator^ sender, Object^ args)
@@ -794,7 +794,7 @@ Le modèle d’application holographique Windows est fourni avec un gestionnaire
 
 Les API de [mappage spatial](spatial-mapping-in-directx.md) utilisent des systèmes de coordonnées pour obtenir des transformations de modèle pour les maillages de surface.
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a>Articles associés
 * [Systèmes de coordonnées](coordinate-systems.md)
 * [Ancres spatiales](spatial-anchors.md)
 * <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure Spatial Anchors</a>

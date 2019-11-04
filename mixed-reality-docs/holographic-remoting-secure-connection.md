@@ -3,15 +3,15 @@ title: Établissement d’une connexion sécurisée à l’aide de la communicat
 description: Cette page explique comment établir une connexion chiffrée sécurisée lors de l’utilisation de la communication à distance holographique.
 author: bethau
 ms.author: bethau
-ms.date: 08/01/2019
+ms.date: 10/21/2019
 ms.topic: article
 keywords: HoloLens, communication à distance, communication à distance holographique
-ms.openlocfilehash: 5bc039d7a1e500f577c4a30d2d082b718a45a8b4
-ms.sourcegitcommit: ca949efe0279995a376750d89e23d7123eb44846
+ms.openlocfilehash: 1142ba3bd8b0d05202ccd04885de5d70165872d1
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68718073"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73434193"
 ---
 # <a name="establishing-a-secure-connection-with-holographic-remoting"></a>Établissement d’une connexion sécurisée à l’aide de la communication à distance holographique
 
@@ -34,35 +34,35 @@ Le chiffrement est effectué à l’aide de l’implémentation TLS des platefor
 Les objets suivants doivent être implémentés pour permettre l’échange de certificats.
 
 >[!TIP]
->L’implémentation d’interfaces WinRT peut facilement être C++effectuée à l’aide de/WinRT. Les [API Author avec C++/WinRT](https://docs.microsoft.com/en-us/windows/uwp/cpp-and-winrt-apis/author-apis) chapitre décrivent cela en détail.
+>L’implémentation d’interfaces WinRT peut facilement être C++effectuée à l’aide de/WinRT. Les [API Author avec C++/WinRT](https://docs.microsoft.com//windows/uwp/cpp-and-winrt-apis/author-apis) chapitre décrivent cela en détail.
 
 >[!IMPORTANT]
->L' ```build\native\include\HolographicAppRemoting\Microsoft.Holographic.AppRemoting.idl``` intérieur du package NuGet contient une documentation détaillée sur l’API liée aux connexions sécurisées.
+>Le ```build\native\include\HolographicAppRemoting\Microsoft.Holographic.AppRemoting.idl``` à l’intérieur du package NuGet contient une documentation détaillée sur l’API liée aux connexions sécurisées.
 
-1) Objet de certificat, qui doit implémenter l' ```ICertificate``` interface.
+1) Objet de certificat, qui doit implémenter l’interface ```ICertificate```.
 
-    * Retourne le contenu binaire du certificat pfx à l’aide ```GetCertificatePfx``` de la méthode. Identique au contenu binaire d’un fichier. pfx.
-    * Retourne le nom d’objet du ```GetSubjectName```certificat à l’aide de.
-    * Retournez le mot de passe ```GetPfxPassword```pfx via. Retourne une chaîne vide pour un fichier PFX non protégé.
+    * Retourne le contenu binaire du certificat pfx à l’aide de la méthode ```GetCertificatePfx```. Identique au contenu binaire d’un fichier. pfx.
+    * Retourne le nom d’objet du certificat à l’aide de ```GetSubjectName```.
+    * Retourne le mot de passe pfx via ```GetPfxPassword```. Retourne une chaîne vide pour un fichier PFX non protégé.
 
-2) Fournisseur de certificats implémentant ```ICertificateProvider``` l’interface qui fournit un certificat lorsqu’il est ```GetCertificate``` demandé par le biais de la méthode.
+2) Fournisseur de certificats implémentant l’interface ```ICertificateProvider``` qui fournit un certificat lorsqu’il est demandé par le biais de la méthode ```GetCertificate```.
 
-3) Validateur de certificat implémentant l' ```ICertificateValidator``` interface. Sa tâche consiste à vérifier les certificats entrants.
-    * La ```PerformSystemValidation``` méthode doit retourner ```true``` lorsque la plateforme sous-jacente doit valider la chaîne de ```false``` certificats entrants, sinon.
-    * ```ValidateCertificate```est appelé par le contexte client pour demander la validation d’un certificat. Cette méthode accepte la chaîne de certificats (avec le premier certificat étant le sujet du certificat), le nom du serveur avec lequel la connexion est établie et si un contrôle de révocation doit être forcé. Le résultat de la validation du système sera fourni si la validation du système sous-jacent a été demandée. Pour continuer le traitement ```CertificateValidated``` avec le résultat approprié ou ```Cancel``` pour annuler la validation, vous devez appeler sur le ```ICertificateValidationCallback```passé.
+3) Validateur de certificat implémentant l’interface ```ICertificateValidator```. Sa tâche consiste à vérifier les certificats entrants.
+    * La méthode ```PerformSystemValidation``` doit retourner ```true``` lorsque la plateforme sous-jacente doit valider la chaîne de certificats entrants, ```false``` dans le cas contraire.
+    * ```ValidateCertificate``` est appelée par le contexte client pour demander la validation d’un certificat. Cette méthode accepte la chaîne de certificats (avec le premier certificat étant le sujet du certificat), le nom du serveur avec lequel la connexion est établie et si un contrôle de révocation doit être forcé. Le résultat de la validation du système sera fourni si la validation du système sous-jacent a été demandée. Pour continuer le traitement des ```CertificateValidated``` avec le résultat approprié ou ```Cancel``` l’annulation de la validation doit être appelée sur le ```ICertificateValidationCallback```passé.
 
 En outre, pour permettre l’échange d’un jeton sécurisé, les objets suivants doivent être implémentés.
 
-1) Fournisseur d’authentification qui implémente l' ```IAuthenticationProvider``` interface. Sa ```GetToken``` méthode est appelée par le contexte client pour demander un jeton pour l’authentification du client. Pour continuer ```TokenReceived``` à fournir le jeton d’authentification et poursuivre le processus de connexion ```Cancel``` , ou pour annuler le processus, il doit être appelé ```IAuthenticationProviderCallback```sur le passé.
-2) Récepteur d’authentification qui implémente l' ```IAuthenticationReceiver``` interface. Sa tâche consiste à valider les jetons entrants.
-    * La ```GetRealm``` méthode doit retourner le nom du domaine d’authentification.
-    * La ```ValidateToken``` méthode est appelée par le contexte réseau du serveur pour demander la validation d’un jeton d’authentification client. Pour continuer, appelez ```ValidationCompleted``` pour signaler la fin de la validation ```Cancel``` ou pour rejeter la connexion cliente. La connexion cliente est acceptée ou rejetée en fonction du résultat de validation ```ValidationCompleted```passé à. 
+1) Fournisseur d’authentification implémentant l’interface ```IAuthenticationProvider```. Sa méthode ```GetToken``` est appelée par le contexte client pour demander un jeton pour l’authentification du client. Pour continuer l' ```TokenReceived``` pour fournir le jeton d’authentification et poursuivre le processus de connexion ou ```Cancel``` pour annuler le processus doit être appelé sur le ```IAuthenticationProviderCallback```passé.
+2) Récepteur d’authentification implémentant l’interface ```IAuthenticationReceiver```. Sa tâche consiste à valider les jetons entrants.
+    * La méthode ```GetRealm``` doit retourner le nom du domaine d’authentification.
+    * La méthode ```ValidateToken``` est appelée par le contexte réseau du serveur pour demander la validation d’un jeton d’authentification client. Pour continuer, appelez ```ValidationCompleted``` pour signaler la fin de la validation ou ```Cancel``` pour refuser la connexion cliente. La connexion cliente est acceptée ou rejetée en fonction du résultat de validation passé à ```ValidationCompleted```. 
 
-Une fois ces objets implémentés ```ListenSecure``` , ils doivent être appelés à la place de ```Listen``` et ```ConnectSecure``` non ```Connect``` du contexte distant et du contexte de joueur, respectivement. ```ListenSecure```requiert un fournisseur de certificats et un récepteur d' ```Listen```authentification supplémentaires sur. ```ConnectSecure```requiert un fournisseur d’authentification supplémentaire et un validateur de certificat sur ```Connect```.
+Une fois ces objets implémentés ```ListenSecure``` doit être appelé au lieu de ```Listen``` et ```ConnectSecure``` au lieu de ```Connect``` respectivement dans le contexte distant et le contexte du joueur. ```ListenSecure``` requiert un fournisseur de certificats et un récepteur d’authentification supplémentaires sur ```Listen```. ```ConnectSecure``` requiert un fournisseur d’authentification supplémentaire et un validateur de certificat sur ```Connect```.
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a>Articles associés
 * [Écriture d’une application hôte de communication à distance holographique](holographic-remoting-create-host.md)
 * [Écriture d’une application de lecteur de communication à distance holographique personnalisée](holographic-remoting-create-player.md)
 * [Résolution des problèmes et limitations de la communication à distance holographique](holographic-remoting-troubleshooting.md)
-* [Termes du contrat de licence du logiciel de communication à distance holographique](https://docs.microsoft.com/en-us/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
+* [Termes du contrat de licence de la communication à distance holographique](https://docs.microsoft.com//legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
 * [Déclaration de confidentialité Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839)

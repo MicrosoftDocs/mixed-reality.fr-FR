@@ -6,22 +6,22 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: système de coordonnées, système de coordonnées spatiales, orientation uniquement, à l’échelle assise, à l’échelle debout, à l’échelle de la pièce, à l’échelle mondiale, 360 de degrés, assis, debout, salle, monde, échelle, position, orientation, stationnaire, attaché, étage, Ancre, ancrage spatial, verrouillage universel, verrouillage universel, verrouillage du corps, verrouillage du corps, limites, persistance, partage, perte de suivi, ancrage spatial Cloud
-ms.openlocfilehash: f4b945a3ffb83b9ac0a94e0d793a19939aece3bb
-ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
+ms.openlocfilehash: 228f46f1962c39012571234da47ccec07aa67118
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66829863"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436144"
 ---
 # <a name="coordinate-systems"></a>Systèmes de coordonnées
 
-À la base, les applications de réalité mixte placent des [hologrammes](hologram.md) dans votre monde qui ressemblent à des objets réels. Cela implique de positionner et d’orienter précisément ces hologrammes à des endroits du monde qui sont significatifs pour l’utilisateur, qu’il s’agisse de son espace physique ou d’un domaine virtuel que vous avez créé. En cas de raisonnement quant à la position et à l’orientation de vos hologrammes, ou à toute autre géométrie telle [que les](gaze.md) positions de rayons ou de [main](gestures.md), Windows fournit divers systèmes de coordonnées réalistes dans lesquels cette géométrie peut être exprimée, appelée  **systèmes de coordonnées spatiales**.
+À leur cœur, les applications de réalité mixte placent des [hologrammes](hologram.md) dans votre monde qui ressemblent à des objets réels. Cela implique de positionner et d’orienter précisément ces hologrammes à des endroits du monde qui sont significatifs pour l’utilisateur, qu’il s’agisse de son espace physique ou d’un domaine virtuel que vous avez créé. En cas de raisonnement quant à la position et [à l’orientation](gaze-and-commit.md) de vos hologrammes, ou à toute autre géométrie telle que les positions de rayons ou de [main](hands-and-tools.md), Windows fournit divers systèmes de coordonnées réalistes dans lesquels cette géométrie peut être exprimée, appelée  **systèmes de coordonnées spatiales**.
 
 <br>
 
->[!VIDEO https://www.youtube.com/embed/TneGSeqVAXQ]
+<iframe width="940" height="530" src="https://www.youtube.com/embed/TneGSeqVAXQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## <a name="device-support"></a>Prise en charge des appareils
+## <a name="device-support"></a>Périphériques pris en charge
 
 <table>
     <colgroup>
@@ -33,7 +33,7 @@ ms.locfileid: "66829863"
     <tr>
         <td><strong>Fonctionnalité</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens (1ère génération)</strong></a></td>
-        <td><strong>HoloLens 2</strong></td>
+        <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>Casques immersifs</strong></a></td>
     </tr>
      <tr>
@@ -66,38 +66,44 @@ ms.locfileid: "66829863"
         <td>✔️</td>
         <td>❌</td>
     </tr>
+    <tr>
+        <td><a href="scene-understanding.md">Compréhension des scènes</a></td>
+        <td>❌</td>
+        <td>✔️</td>
+        <td>❌</td>
+    </tr>
 </table>
 
 ## <a name="mixed-reality-experience-scales"></a>Évolution de l’expérience de réalité mixte
 
-Les applications de réalité mixte peuvent concevoir une large gamme d’expériences utilisateur, à partir de visionneuses vidéo de 360 degrés qui ont juste besoin de l’orientation du casque, à des applications et des jeux à l’échelle mondiale, qui nécessitent un mappage spatial et des ancres spatiales:
+Les applications de réalité mixte peuvent concevoir une large gamme d’expériences utilisateur, à partir de visionneuses vidéo de 360 degrés qui ont juste besoin de l’orientation du casque, à des applications et des jeux à l’échelle mondiale, qui nécessitent un mappage spatial et des ancres spatiales :
 <br>
 
-| Mise à l’échelle | Configuration requise | Exemple d’expérience | 
+| Mise à l’échelle | Conditions préalables | Exemple d’expérience | 
 |----------|----------|----------|
-|  **Orientation uniquement** |  **Orientation du casque** (aligné en gravité) |  visionneuse vidéo 360 ° | 
+|  **Orientation uniquement** |  **Orientation du casque** (alignée en gravité) |  visionneuse vidéo 360 ° | 
 |  **À l’échelle assise** |  Ci-dessus, plus la **position du casque** par rapport à la position zéro |  Jeu de course ou simulateur d’espace | 
 |  **À l’échelle debout** |  Ci-dessus, plus l’origine de l' **étage** |  Jeu d’action dans lequel vous avez des canards et une densité  | 
 |  **Mise à l’échelle de l’espace** |  Ci-dessus, plus les limites de la **phase Polygon** |  Jeu de puzzle dans lequel vous parcourez le puzzle | 
 |  **À l’échelle mondiale** |  **Ancres spatiales** (et généralement le [mappage spatial](spatial-mapping.md)) |  Jeu avec des ennemis provenant de vos murs réels, tels que [RoboRaid](https://www.microsoft.com/p/roboraid/9nblggh5fv3j) | 
 
-Ces possibilités de mise à l’échelle suivent un modèle d’imbrication de poupées. Le principal concept de conception pour Windows Mixed Reality est qu’un casque donné prend en charge les applications conçues pour une mise à l’échelle de l’expérience cible, ainsi que toutes les échelles les plus petites:
+Ces possibilités de mise à l’échelle suivent un modèle d’imbrication de poupées. Le principal concept de conception pour Windows Mixed Reality est qu’un casque donné prend en charge les applications conçues pour une mise à l’échelle de l’expérience cible, ainsi que toutes les échelles les plus petites :
 <br>
 
 | suivi 6DOF | Défini par l’étage | suivi de 360 ° | Limites définies | Ancres spatiales | Expérience max. | 
 |----------|----------|----------|----------|----------|----------|
-|  Non |  - |  - |  - |  - |  **Orientation uniquement** | 
-|  **Oui** |  Non |  - |  - |  - |  **Positionné** | 
-|  **Oui** |  **Oui** |  Non |  - |  - |  **En aval** | 
-|  **Oui** |  **Oui** |  **Oui** |  Non |  - |  **Debout-360 °** | 
-|  **Oui** |  **Oui** |  **Oui** |  **Oui** |  Non |  **Divertissement** | 
+|  non |  - |  - |  - |  - |  **Orientation uniquement** | 
+|  **Oui** |  non |  - |  - |  - |  **Positionné** | 
+|  **Oui** |  **Oui** |  non |  - |  - |  **En aval** | 
+|  **Oui** |  **Oui** |  **Oui** |  non |  - |  **Debout-360 °** | 
+|  **Oui** |  **Oui** |  **Oui** |  **Oui** |  non |  **Divertissement** | 
 |  **Oui** |  **Oui** |  **Oui** |  **Oui** |  **Oui** |  **Réelles** | 
 
-Notez que le cadre de la phase de référence n’est pas encore pris en charge sur HoloLens. Une application de mise à l’échelle de la place sur HoloLens doit actuellement utiliser le [mappage spatial](spatial-mapping.md) pour rechercher le plancher et les murs de l’utilisateur.
+Notez que le cadre de la phase de référence n’est pas encore pris en charge sur HoloLens. Une application de mise à l’échelle de la place sur HoloLens doit actuellement utiliser le [mappage spatial](spatial-mapping.md) ou la [compréhension des scènes](scene-understanding.md) pour rechercher le plancher et les murs de l’utilisateur.
 
 ## <a name="spatial-coordinate-systems"></a>Systèmes de coordonnées spatiales
 
-Toutes les applications graphiques 3D utilisent des [systèmes de coordonnées cartésiens](https://docs.microsoft.com/windows/uwp/graphics-concepts/coordinate-systems) pour expliquer les positions et les orientations des objets dans les mondes virtuels qu’elles affichent. Ces systèmes de coordonnées établissent 3 axes perpendiculaires pour positionner les objets: un axe X, Y et Z.
+Toutes les applications graphiques 3D utilisent des [systèmes de coordonnées cartésiens](https://docs.microsoft.com/windows/uwp/graphics-concepts/coordinate-systems) pour expliquer les positions et les orientations des objets dans les mondes virtuels qu’elles affichent. Ces systèmes de coordonnées établissent 3 axes perpendiculaires pour positionner les objets : un axe X, Y et Z.
 
 En [réalité mixte](mixed-reality.md), vos applications ont une raison d’être des systèmes de coordonnées physiques et virtuels. Windows appelle un système de coordonnées qui a une signification réelle dans le système physique de **coordonnées spatiales**.
 
@@ -111,13 +117,13 @@ Dans les deux types de systèmes de coordonnées, l’axe X positif pointe vers 
 
 La clé du [rendu](rendering.md) holographique est la modification de la vue de l’application de ses hologrammes à mesure que l’utilisateur se déplace, afin de faire correspondre le mouvement de l’en-tête prédit. Vous pouvez créer des expériences à l' **échelle assises** qui respectent les modifications apportées à la position des têtes et à l’orientation des têtes de l’utilisateur à l’aide d’un **cadre stationnaire de référence**.
 
-Une partie du contenu doit ignorer les mises à jour de position de l’en-tête, à tout moment résolu à un titre et à une distance choisis. L’exemple principal est la vidéo de 360 degrés: étant donné que la vidéo est capturée à partir d’une perspective fixe unique, l’illusion de la position de la vue doit être déplacée par rapport au contenu, même si l’orientation de la vue doit changer à mesure que l’utilisateur regarde. Vous pouvez générer une telle **expérience d’orientation uniquement** à l’aide d’un **cadre de référence attaché**.
+Une partie du contenu doit ignorer les mises à jour de position de l’en-tête, à tout moment résolu à un titre et à une distance choisis. L’exemple principal est la vidéo de 360 degrés : étant donné que la vidéo est capturée à partir d’une perspective fixe unique, l’illusion de la position de la vue doit être déplacée par rapport au contenu, même si l’orientation de la vue doit changer à mesure que l’utilisateur regarde. Vous pouvez générer une telle **expérience d’orientation uniquement** à l’aide d’un **cadre de référence attaché**.
 
 ### <a name="stationary-frame-of-reference"></a>Cadre de référence stationnaire
 
 Le système de coordonnées fourni par un cadre stationnaire de référence permet de conserver les positions des objets près de l’utilisateur aussi stables que possible par rapport au monde, tout en respectant les modifications de la position de la tête de l’utilisateur.
 
-Pour les expériences en position assise dans un moteur de jeu comme [Unity](https://unity3d.com/), une image fixe de référence est ce qui définit l’« origine du monde » du moteur. Les objets placés à une coordonnée universelle spécifique utilisent le cadre stationnaire de référence pour définir leur position dans le monde réel à l’aide de ces mêmes coordonnées. Le contenu qui reste dans le monde, même au fur et à mesure que l’utilisateur se déplace, est connu sous le nom de contenu **à verrouillage universel** .
+Pour les expériences à l’échelle assises dans un moteur de jeu comme [Unity](https://unity3d.com/), une image fixe de référence est ce qui définit la « provenance mondiale » du moteur. Les objets placés à une coordonnée universelle spécifique utilisent le cadre stationnaire de référence pour définir leur position dans le monde réel à l’aide de ces mêmes coordonnées. Le contenu qui reste dans le monde, même au fur et à mesure que l’utilisateur se déplace, est connu sous le nom de contenu **à verrouillage universel** .
 
 Une application crée généralement une image fixe de référence au démarrage et utilise son système de coordonnées tout au long de la durée de vie de l’application. En tant que développeur d’applications dans Unity, vous pouvez simplement commencer à placer du contenu par rapport à l’origine, qui sera à la position et à l’orientation initiales de l’utilisateur. Si l’utilisateur se déplace vers un nouvel emplacement et veut poursuivre son expérience à l’échelle assise, vous pouvez recentrer l’origine du monde à cet emplacement.
 
@@ -163,7 +169,7 @@ Windows Mixed Reality résout le problème décrit dans la section précédente 
 
 À mesure que l’appareil apprend sur le monde, ces ancres spatiales peuvent ajuster leur position par rapport à l’autre en fonction des besoins pour s’assurer que chaque ancre reste précisément là où elle a été placée par rapport au monde réel. En plaçant un ancrage spatial à l’emplacement où l’utilisateur place un hologramme, puis en positionnant Cet hologramme par rapport à son ancrage spatial, vous pouvez vous assurer que l’hologramme maintient une stabilité optimale, même lorsque l’utilisateur se déplace sur des dizaines de mètres.
 
-Ce réglage continu des ancrages spatiaux l’un de l’autre est la principale différence entre les systèmes de coordonnées des ancres spatiales et des images fixes de référence:
+Ce réglage continu des ancrages spatiaux l’un de l’autre est la principale différence entre les systèmes de coordonnées des ancres spatiales et des images fixes de référence :
 
 * Les hologrammes placés dans le cadre stationnaire de référence conservent une relation rigide les uns avec les autres. Toutefois, à mesure que l’utilisateur parcourt de longues distances, le système de coordonnées de ce frame peut dépasser par rapport au monde pour s’assurer que les hologrammes à côté de l’utilisateur semblent stables.
 
@@ -195,7 +201,7 @@ En utilisant des <a href="https://docs.microsoft.com/azure/spatial-anchors/overv
 
 Nous vous déconseillons fortement de rendre le contenu verrouillé, qui reste à une position fixe dans l’affichage (par exemple, un HUD). En général, le contenu verrouillé est inconfortable pour les utilisateurs et ne ressemble pas à une partie naturelle de leur monde.
 
-Le contenu verrouillé doit généralement être remplacé par des hologrammes attachés à l’utilisateur ou placés dans le monde lui-même. Par exemple, les [curseurs](cursors.md) doivent généralement être poussés dans le monde, en se mettant à l’échelle naturellement pour refléter la position et la distance de l’objet sous le regard de l’utilisateur.
+Le contenu verrouillé doit généralement être remplacé par des hologrammes attachés à l’utilisateur ou placés dans le monde lui-même. Par exemple, les [curseurs](cursors.md) doivent généralement être poussés dans le monde entier, avec une mise à l’échelle naturelle pour refléter la position et la distance de l’objet sous le regard de l’utilisateur.
 
 ## <a name="handling-tracking-errors"></a>Gestion des erreurs de suivi
 
@@ -221,7 +227,7 @@ Parfois, lorsque vous commencez à utiliser un casque dans un environnement qui 
 
 Parfois, un logement ou un autre espace peut avoir deux zones identiques. Par exemple, deux salles de conférence identiques, deux zones d’angle identiques, deux affiches identiques identiques qui couvrent le champ de vision de l’appareil. Dans de tels scénarios, l’appareil peut parfois être confondu entre les parties identiques et les marquer comme étant identiques dans sa représentation interne. Cela peut entraîner l’affichage des hologrammes de certaines zones dans d’autres emplacements. L’appareil peut commencer à perdre souvent le suivi, car sa représentation interne de l’environnement a été endommagée. Dans ce cas, il est recommandé de réinitialiser la compréhension de l’environnement du système. Notez que la réinitialisation de la carte provoque la perte de tous les placements d’ancrage spatial. Cela permet au casque de suivre correctement les zones uniques de l’environnement. Toutefois, le problème peut se produire si l’appareil est à nouveau confondu entre les zones identiques.
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a>Articles associés
 * [Présentation GDC 2017 sur les systèmes de coordonnées spatiales et le rendu holographique](https://channel9.msdn.com/events/GDC/GDC-2017/GDC2017-008)
 * [Systèmes de coordonnées dans Unity](coordinate-systems-in-unity.md)
 * [Systèmes de coordonnées dans DirectX](coordinate-systems-in-directx.md)

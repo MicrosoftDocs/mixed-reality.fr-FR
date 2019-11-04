@@ -6,12 +6,12 @@ ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: procédure pas à pas, commande vocale, expression, reconnaissance, reconnaissance vocale, DirectX, plateforme, Cortana, Windows Mixed Reality
-ms.openlocfilehash: 728457a495616e5f65ec3986dfb6ac60231f9e46
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: be8c0e570a0e112e01b580ad571c06fe3482ff9f
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63548660"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437194"
 ---
 # <a name="voice-input-in-directx"></a>Entrée vocale dans DirectX
 
@@ -22,11 +22,11 @@ Cette rubrique explique comment implémenter des [commandes vocales](voice-input
 
 ## <a name="use-a-speechrecognizer-for-continuous-recognition-of-voice-commands"></a>Utiliser un SpeechRecognizer pour la reconnaissance continue des commandes vocales
 
-Dans cette section, nous décrivons comment utiliser la reconnaissance vocale continue pour activer les commandes vocales dans votre application. Cette procédure pas à pas utilise le code de l’exemple [HolographicVoiceInput](http://go.microsoft.com/fwlink/p/?LinkId=844964) . Lorsque l’exemple est en cours d’exécution, parlez le nom de l’une des commandes de couleur inscrite pour modifier la couleur du cube en rotation.
+Dans cette section, nous décrivons comment utiliser la reconnaissance vocale continue pour activer les commandes vocales dans votre application. Cette procédure pas à pas utilise le code de l’exemple [HolographicVoiceInput](https://go.microsoft.com/fwlink/p/?LinkId=844964) . Lorsque l’exemple est en cours d’exécution, parlez le nom de l’une des commandes de couleur inscrite pour modifier la couleur du cube en rotation.
 
-Tout d’abord, créez une instance **Windows:: Media:: SpeechRecognition:: SpeechRecognizer** .
+Tout d’abord, créez une instance **Windows :: Media :: SpeechRecognition :: SpeechRecognizer** .
 
-À partir de *HolographicVoiceInputSampleMain:: CreateSpeechConstraintsForCurrentState*:
+À partir de *HolographicVoiceInputSampleMain :: CreateSpeechConstraintsForCurrentState*:
 
 ```
 m_speechRecognizer = ref new SpeechRecognizer();
@@ -57,7 +57,7 @@ m_speechCommandList = ref new Platform::Collections::Vector<String^>();
    m_speechCommandData.push_back(float4(1.f, 0.f, 1.f, 1.f));
 ```
 
-Les commandes peuvent être spécifiées à l’aide de mots phonétiques qui ne se trouvent peut-être pas dans un dictionnaire:
+Les commandes peuvent être spécifiées à l’aide de mots phonétiques qui ne se trouvent peut-être pas dans un dictionnaire :
 
 ```
 m_speechCommandList->Append(StringReference(L"SpeechRecognizer"));
@@ -109,7 +109,7 @@ Votre gestionnaire d’événements **OnResultGenerated** reçoit les données d
 
 Utilisez les données toutefois applicables à votre scénario d’application. Dans notre exemple de code, nous modifions la couleur du cube d’hologramme en rotation en fonction de la commande de l’utilisateur.
 
-À partir de *HolographicVoiceInputSampleMain:: Update*:
+À partir de *HolographicVoiceInputSampleMain :: Update*:
 
 ```
 // Check for new speech input since the last frame.
@@ -134,7 +134,7 @@ Utilisez les données toutefois applicables à votre scénario d’application. 
 
 ## <a name="use-dictation-for-one-shot-recognition-of-speech-phrases-and-sentences"></a>Utiliser la dictée pour la reconnaissance d’une seule capture d’expressions et de phrases vocales
 
-Vous pouvez configurer un module de reconnaissance vocale pour écouter les expressions ou les phrases prononcées par l’utilisateur. Dans ce cas, nous appliquons un SpeechRecognitionTopicConstraint qui indique au module de reconnaissance vocale le type d’entrée à attendre. Le flux de travail de l’application est le suivant, pour ce type de cas d’usage:
+Vous pouvez configurer un module de reconnaissance vocale pour écouter les expressions ou les phrases prononcées par l’utilisateur. Dans ce cas, nous appliquons un SpeechRecognitionTopicConstraint qui indique au module de reconnaissance vocale le type d’entrée à attendre. Le flux de travail de l’application est le suivant, pour ce type de cas d’usage :
 1. Votre application crée le SpeechRecognizer, fournit des invites d’interface utilisateur et commence à écouter une commande qui est immédiatement parlée.
 2. L’utilisateur parle une expression ou une phrase.
 3. La reconnaissance de la parole de l’utilisateur est effectuée et un résultat est renvoyé à l’application. À ce stade, votre application doit fournir une invite d’interface utilisateur indiquant que la reconnaissance s’est produite.
@@ -252,15 +252,15 @@ catch (Exception^ exception)
    });
 ```
 
-**REMARQUE :** Plusieurs [SpeechRecognitionScenarios](https://msdn.microsoft.com/library/windows/apps/windows.media.speechrecognition.speechrecognitionscenario.aspx) prédéfinis sont disponibles pour optimiser la reconnaissance vocale.
-* Si vous souhaitez optimiser la dictée, utilisez le scénario de dictée:
+**Remarque :** Plusieurs [SpeechRecognitionScenarios](https://msdn.microsoft.com/library/windows/apps/windows.media.speechrecognition.speechrecognitionscenario.aspx) prédéfinis sont disponibles pour optimiser la reconnaissance vocale.
+* Si vous souhaitez optimiser la dictée, utilisez le scénario de dictée :
 
 ```
 // Compile the dictation topic constraint, which optimizes for speech dictation.
    auto dictationConstraint = ref new SpeechRecognitionTopicConstraint(SpeechRecognitionScenario::Dictation, "dictation");
    m_speechRecognizer->Constraints->Append(dictationConstraint);
 ```
-* Lorsque vous utilisez la reconnaissance vocale pour effectuer une recherche sur le Web, vous pouvez utiliser une contrainte de scénario spécifique au Web comme suit:
+* Lorsque vous utilisez la reconnaissance vocale pour effectuer une recherche sur le Web, vous pouvez utiliser une contrainte de scénario spécifique au Web comme suit :
 
 ```
 // Add a web search topic constraint to the recognizer.
@@ -332,7 +332,7 @@ void HolographicSpeechPromptSampleMain::OnSpeechQualityDegraded(SpeechRecognizer
    }
 ```
 
-Si vous n’utilisez pas de classes Ref pour créer votre application DirectX, vous devez vous désabonner de l’événement avant de libérer ou de recréer votre reconnaissance vocale. Le HolographicSpeechPromptSample a une routine pour arrêter la reconnaissance et se désabonner des événements de la façon suivante:
+Si vous n’utilisez pas de classes Ref pour créer votre application DirectX, vous devez vous désabonner de l’événement avant de libérer ou de recréer votre reconnaissance vocale. Le HolographicSpeechPromptSample a une routine pour arrêter la reconnaissance et se désabonner des événements de la façon suivante :
 
 ```
 Concurrency::task<void> HolographicSpeechPromptSampleMain::StopCurrentRecognizerIfExists()
@@ -363,15 +363,15 @@ Concurrency::task<void> HolographicSpeechPromptSampleMain::StopCurrentRecognizer
 
 Les exemples de reconnaissance vocale holographique utilisent la synthèse vocale pour fournir des instructions audibles à l’utilisateur. Cette rubrique décrit le processus de création d’un exemple de voix synthétisée et sa lecture à l’aide des API audio HRTF.
 
-Vous devez fournir vos propres invites vocales lors de la demande d’entrée de phrase. Cela peut également être utile pour indiquer à quel moment les commandes vocales peuvent être parlées, pour un scénario de reconnaissance continue. Voici un exemple de la procédure à suivre avec un synthétiseur vocal; Notez que vous pouvez également utiliser un clip vocal pré-enregistré, une interface utilisateur visuelle ou tout autre indicateur de ce qu’il faut prononcer, par exemple dans les scénarios où l’invite n’est pas dynamique.
+Vous devez fournir vos propres invites vocales lors de la demande d’entrée de phrase. Cela peut également être utile pour indiquer à quel moment les commandes vocales peuvent être parlées, pour un scénario de reconnaissance continue. Voici un exemple de la procédure à suivre avec un synthétiseur vocal ; Notez que vous pouvez également utiliser un clip vocal pré-enregistré, une interface utilisateur visuelle ou tout autre indicateur de ce qu’il faut prononcer, par exemple dans les scénarios où l’invite n’est pas dynamique.
 
-Tout d’abord, créez l’objet SpeechSynthesizer:
+Tout d’abord, créez l’objet SpeechSynthesizer :
 
 ```
 auto speechSynthesizer = ref new Windows::Media::SpeechSynthesis::SpeechSynthesizer();
 ```
 
-Vous avez également besoin d’une chaîne avec le texte à synthétiser:
+Vous avez également besoin d’une chaîne avec le texte à synthétiser :
 
 ```
 // Phrase recognition works best when requesting a phrase or sentence.
@@ -426,7 +426,7 @@ catch (Exception^ exception)
    });
 ```
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a>Articles associés
 * [Conception d’applications vocales](https://msdn.microsoft.com/library/dn596121.aspx)
 * [Son spatial dans DirectX](spatial-sound-in-directx.md)
 * [Exemple SpeechRecognitionAndSynthesis](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SpeechRecognitionAndSynthesis)

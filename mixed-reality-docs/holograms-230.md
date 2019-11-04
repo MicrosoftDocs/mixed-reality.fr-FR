@@ -3,46 +3,46 @@ title: MR spatial 230-spatial Mapping
 description: Suivez cette procédure pas à pas de codage à l’aide d’Unity, Visual Studio et HoloLens pour apprendre les concepts de mappage spatial.
 author: keveleigh
 ms.author: kurtie
-ms.date: 03/21/2018
+ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, Academy, didacticiel, mappage spatial, reconstruction de surface, maille
-ms.openlocfilehash: ed58676a0fda660cc6b4c197239aeb53166baa4d
-ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
+ms.openlocfilehash: cf4a2dd3e5eb74c0aaf849442e5f5e404d7cb661
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/02/2019
-ms.locfileid: "64993558"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73434579"
 ---
 >[!NOTE]
->Les didacticiels d’Académie de la réalité mixte ont été conçus avec les casques immersif (1er génération) et de réalité mixte à l’esprit.  Par conséquent, nous pensons qu’il est important de ne pas mettre en place ces didacticiels pour les développeurs qui cherchent toujours des conseils en matière de développement pour ces appareils.  Ces didacticiels ne seront **_pas_** mis à jour avec les derniers ensembles d’outils ou interactions utilisés pour HoloLens 2.  Ils seront conservés pour continuer à travailler sur les appareils pris en charge. Une nouvelle série de didacticiels sera publiée à l’avenir qui vous montrera comment développer pour HoloLens 2.  Cet avis sera mis à jour avec un lien vers ces didacticiels lors de leur publication.
+>Les didacticiels d’Académie de la réalité mixte ont été conçus avec les casques immersif (1er génération) et de réalité mixte à l’esprit.  Par conséquent, nous pensons qu’il est important de ne pas mettre en place ces didacticiels pour les développeurs qui cherchent toujours des conseils en matière de développement pour ces appareils.  Ces didacticiels ne seront **_pas_** mis à jour avec les derniers ensembles d’outils ou interactions utilisés pour HoloLens 2.  Ils seront conservés pour continuer à travailler sur les appareils pris en charge. [Une nouvelle série de didacticiels](mrlearning-base.md) a été publiée pour HoloLens 2.
 
 <br>
 
-# <a name="mr-spatial-230-spatial-mapping"></a>Monsieur spatial 230: Mappage spatial
+# <a name="mr-spatial-230-spatial-mapping"></a>MR spatial 230 : mappage spatial
 
-Le [mappage spatial](spatial-mapping.md) combine le monde réel et le monde virtuel ensemble en apprenant des hologrammes sur l’environnement. Dans l’spatial spatial 230 (Project Planetarium), nous allons apprendre à:
+Le [mappage spatial](spatial-mapping.md) combine le monde réel et le monde virtuel ensemble en apprenant des hologrammes sur l’environnement. Dans l’spatial spatial 230 (Project Planetarium), nous allons apprendre à :
 
 * Analyser l’environnement et transférer des données de HoloLens vers votre ordinateur de développement.
 * Explorez les nuanceurs et apprenez à les utiliser pour visualiser votre espace.
 * Décomposez le maillage de la pièce en plans simples à l’aide du traitement de maillage.
 * Allez au-delà des techniques de placement que nous avons appris dans les [notions de base de m. 101](holograms-101.md)et fournissez des commentaires sur l’endroit où un hologramme peut être placé dans l’environnement.
-* Explorez les effets d’occlusion. par conséquent, lorsque votre hologramme se trouve derrière un objet réel, vous pouvez toujours le voir avec la vision x-ray!
+* Explorez les effets d’occlusion. par conséquent, lorsque votre hologramme se trouve derrière un objet réel, vous pouvez toujours le voir avec la vision x-ray !
 
 >[!VIDEO https://www.youtube.com/embed/NSNYRkUX6Mw]
 
-## <a name="device-support"></a>Prise en charge des appareils
+## <a name="device-support"></a>Périphériques pris en charge
 
 <table>
 <tr>
 <th>Course</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Casques immersifs</a></th>
 </tr><tr>
-<td>Monsieur spatial 230: Mappage spatial</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> </td>
+<td>MR spatial 230 : mappage spatial</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> </td>
 </tr>
 </table>
 
 ## <a name="before-you-start"></a>Avant de commencer
 
-### <a name="prerequisites"></a>Prérequis
+### <a name="prerequisites"></a>Conditions préalables
 
 * Un PC Windows 10 configuré avec les [outils appropriés installés](install-the-tools.md).
 * Certaines fonctionnalités C# de programmation de base.
@@ -62,7 +62,7 @@ Le [mappage spatial](spatial-mapping.md) combine le monde réel et le monde virt
 
 ### <a name="notes"></a>Notes
 
-* Dans Visual Studio, l’option «Activer Uniquement mon code» doit êtredésactivée (décochée) sous Outils > Options > débogage pour atteindre les points d’arrêt dans votre code.
+* Dans Visual Studio, l’option « Activer Uniquement mon code » doit être désactivée (*décochée*) sous Outils > Options > débogage pour atteindre les points d’arrêt dans votre code.
 
 ## <a name="unity-setup"></a>Configuration de Unity
 
@@ -77,15 +77,15 @@ Le [mappage spatial](spatial-mapping.md) combine le monde réel et le monde virt
 * Dans le volet de l' **inspecteur** , recherchez et sélectionnez l’icône du **Windows Store** vert.
 * Développez **autres paramètres**.
 * Dans la section **rendu** , activez la case à cocher **prise en charge de la réalité virtuelle** .
-* Vérifiez que **Windows holographique** apparaît dans la liste des kits de développement logiciel (SDK) de **réalité virtuelle**. Si ce n’est pas **+** le cas, sélectionnez le bouton en bas de la liste et choisissez **Windows holographique**.
+* Vérifiez que **Windows holographique** apparaît dans la liste des kits de développement logiciel (SDK) de **réalité virtuelle**. Si ce n’est pas le cas, sélectionnez le bouton **+** au bas de la liste et choisissez **Windows holographique**.
 * Développez **paramètres de publication**.
-* Dans la section **fonctionnalités** , vérifiez les paramètres suivants:
+* Dans la section **fonctionnalités** , vérifiez les paramètres suivants :
     * InternetClientServer
     * PrivateNetworkClientServer
     * Microphone
     * SpatialPerception
 * Accédez à **modifier > paramètres du projet > qualité**
-* Dans le volet de l' **inspecteur** , sous l’icône Windows Store, sélectionnez la flèche déroulante noire sous la ligne «default» et définissez le paramètre par défaut sur **très faible**.
+* Dans le volet de l' **inspecteur** , sous l’icône Windows Store, sélectionnez la flèche déroulante noire sous la ligne « default » et définissez le paramètre par défaut sur **très faible**.
 * Accédez à **ressources > importer un package > package personnalisé**.
 * Accédez au dossier **. ..\holographicacademy-holograms-230-SpatialMapping\Starting** .
 * Cliquez sur **Planetarium. pour Unity**.
@@ -101,8 +101,8 @@ Le [mappage spatial](spatial-mapping.md) combine le monde réel et le monde virt
 * Dans le volet **hiérarchie** , sélectionnez l’objet **curseur** .
 * Dans le panneau **inspecteur** , cliquez sur la liste déroulante **couche** , puis sélectionnez **modifier les couches...** .
 * Nommez **User Layer 31** en «**SpatialMapping**».
-* Enregistrez la nouvelle scène: **Fichier > enregistrer la scène sous...**
-* Cliquez sur **nouveau dossier** et nommez le dossier Scenes.
+* Enregistrez la nouvelle scène : **fichier > enregistrer la scène sous...**
+* Cliquez sur **nouveau dossier** et nommez le dossier **scenes**.
 * Nommez le fichier «**Planetarium**» et enregistrez-le dans le dossier **scenes** .
 
 ## <a name="chapter-1---scanning"></a>Chapitre 1-analyse
@@ -110,21 +110,24 @@ Le [mappage spatial](spatial-mapping.md) combine le monde réel et le monde virt
 >[!VIDEO https://www.youtube.com/embed/888oW51z_cE]
 
 **Cherché**
+
 * Découvrez le SurfaceObserver et comment ses paramètres affectent l’expérience et les performances.
 * Créez une expérience de numérisation de salle pour collecter les mailles de votre salle.
 
-**Instructions**
+**Ample**
+
 * Dans le dossier **HoloToolkit-SpatialMapping-230\SpatialMapping\Prefabs** du panneau **projet** , recherchez le Prefab **SpatialMapping** .
 * Faites glisser & déposer le Prefab **SpatialMapping** dans le panneau de **hiérarchie** .
 
 **Création et déploiement (partie 1)**
+
 * Dans Unity, sélectionnez **fichier > paramètres de build**.
 * Cliquez sur **Ajouter des scènes ouvertes** pour ajouter la scène **Planetarium** à la Build.
-* Sélectionnez **plateforme Windows universelle** dans la liste **plateforme** , puis cliquez sur basculer la **plateforme**.
+* Sélectionnez **plateforme Windows universelle** dans la liste **plateforme** , puis cliquez sur **basculer la plateforme**.
 * Définissez le **SDK** sur le **type de build** **Universal 10** et UWP sur **D3D**.
 * Vérifiez **les C# projets Unity**.
 * Cliquez sur **Build**.
-* Créez un **dossier** nommé «App».
+* Créez un **dossier** nommé « App ».
 * Cliquez sur le dossier de l' **application** .
 * Appuyez sur le bouton **Sélectionner un dossier** .
 * Une fois la création d’Unity terminée, une fenêtre de l’Explorateur de fichiers s’affiche.
@@ -132,9 +135,9 @@ Le [mappage spatial](spatial-mapping.md) combine le monde réel et le monde virt
 * Double-cliquez sur **Planetarium. sln** pour charger le projet dans Visual Studio.
 * Dans Visual Studio, utilisez la barre d’outils supérieure pour changer la configuration en **Release**.
 * Remplacez la plateforme par **x86**.
-* Cliquez sur la flèche déroulante à droite de «ordinateur local», puis sélectionnez **ordinateur distant**.
+* Cliquez sur la flèche déroulante à droite de « ordinateur local », puis sélectionnez **ordinateur distant**.
 * Entrez l' [adresse IP de votre appareil](connecting-to-wi-fi-on-hololens.md#identifying-the-ip-address-of-your-hololens-on-the-wi-fi-network) dans le champ adresse et changez le mode d’authentification en **protocole universel (protocole non chiffré)** .
-* Cliquez sur déboguer **-> exécuter sans débogage** ou appuyez sur **CTRL + F5**.
+* Cliquez sur **Déboguer-> exécuter sans débogage** ou appuyez sur **CTRL + F5**.
 * Regardez le panneau de **sortie** dans Visual Studio pour l’état de génération et de déploiement.
 * Une fois votre application déployée, parcourez la salle. Vous verrez les surfaces environnantes couvertes par les maillages filaires noir et blanc.
 * Analysez votre environnement. Veillez à examiner les murs, les limites et les étages.
@@ -142,21 +145,23 @@ Le [mappage spatial](spatial-mapping.md) combine le monde réel et le monde virt
 **Génération et déploiement (partie 2)**
 
 Voyons maintenant comment le mappage spatial peut affecter les performances.
+
 * Dans Unity, sélectionnez **windows > Profiler**.
 * Cliquez sur **Ajouter profiler > GPU**.
-* Cliquez sur **> <Enter IP>du profileur actif** .
+* Cliquez sur **> du profileur Active <Enter IP>** .
 * Entrez l' **adresse IP** de votre HoloLens.
-* Cliquer sur **Se connecter**.
+* Cliquez sur **Se connecter**.
 * Observez le nombre de millisecondes nécessaires au rendu d’une trame par le GPU.
 * Arrêtez l’exécution de l’application sur l’appareil.
 * Revenez à Visual Studio et ouvrez **SpatialMappingObserver.cs**. Vous le trouverez dans le dossier HoloToolkit\SpatialMapping du projet assembly-CSharp (universel Windows).
-* Recherchez la fonction **éveillé ()** , puis ajoutez la ligne de code suivante: **TrianglesPerCubicMeter = 1200;**
+* Recherchez la fonction **éveillé ()** , puis ajoutez la ligne de code suivante : **TrianglesPerCubicMeter = 1200 ;**
 * Redéployez le projet sur votre appareil, puis **reconnectez le profileur**. Observez la modification du nombre de millisecondes pour le rendu d’un frame.
 * Arrêtez l’exécution de l’application sur l’appareil.
 
 **Enregistrer et charger dans Unity**
 
 Enfin, nous allons enregistrer notre maillage d’espace et le charger dans Unity.
+
 * Revenez à Visual Studio et supprimez la ligne **TrianglesPerCubicMeter** que vous avez ajoutée dans la fonction **éveillé ()** au cours de la section précédente.
 * Redéployez le projet sur votre appareil. Nous devons maintenant être en cours d’exécution avec des triangles **500** par mètre cube.
 * Ouvrez un navigateur et entrez dans votre adresseIP HoloLens pour accéder au **portail de périphériques Windows**.
@@ -176,28 +181,31 @@ Enfin, nous allons enregistrer notre maillage d’espace et le charger dans Unit
 * Basculez en vue **scène** pour voir l’ensemble de votre modèle d’espace affiché avec le nuanceur filaire.
 * Appuyez de nouveau sur le bouton **lecture** pour quitter le mode aperçu.
 
-**REMARQUE :** La prochaine fois que vous passerez en mode aperçu dans Unity, le maillage Room enregistré sera chargé par défaut.
+**Remarque :** La prochaine fois que vous passerez en mode aperçu dans Unity, le maillage Room enregistré sera chargé par défaut.
 
 ## <a name="chapter-2---visualization"></a>Chapitre 2-visualisation
 
 >[!VIDEO https://www.youtube.com/embed/RnkvXl-aXD4]
 
 **Cherché**
+
 * Découvrez les principes de base des nuanceurs.
 * Visualisez votre environnement.
 
-**Instructions**
+**Ample**
+
 * Dans le panneau de la **hiérarchie** Unity, sélectionnez l’objet **SpatialMapping** .
 * Dans le volet de l' **inspecteur** , recherchez le composant de **Gestionnaire de mappage spatial (script)** .
 * Cliquez sur le cercle situé à droite de la propriété **surface** .
 * Recherchez et sélectionnez le matériel **BlueLinesOnWalls** et fermez la fenêtre.
 * Dans le dossier **nuanciers** du panneau **projet** , double-cliquez sur **BlueLinesOnWalls** pour ouvrir le nuanceur dans Visual Studio.
-* Il s’agit d’un nuanceur de pixels (vertex à fragment) simple qui effectue les tâches suivantes:
+* Il s’agit d’un nuanceur de pixels (vertex à fragment) simple qui effectue les tâches suivantes :
     1. Convertit l’emplacement d’un vertex en espace universel.
     2. Vérifie la normale du vertex pour déterminer si un pixel est vertical.
     3. Définit la couleur du pixel pour le rendu.
 
 **Génération et déploiement**
+
 * Revenez à Unity et appuyez sur **Play** pour passer en mode aperçu.
 * Les lignes bleues sont affichées sur toutes les surfaces verticales de la maille de la salle (qui sont chargées automatiquement à partir de nos données d’analyse enregistrées).
 * Basculez vers l’onglet **scène** pour ajuster la vue de la pièce et voir comment l’intégralité du maillage de la salle apparaît dans Unity.
@@ -215,29 +223,33 @@ Unity fait un excellent travail d’aperçu des documents, mais il est toujours 
 >[!VIDEO https://www.youtube.com/embed/kaUKiNiDxwY]
 
 **Cherché**
+
 * Découvrez les techniques permettant de traiter les données de mappage spatiale pour une utilisation dans votre application.
 * Analyser les données de mappage spatiale pour rechercher des plans et supprimer des triangles.
 * Utilisez des plans pour le placement de l’hologramme.
 
-**Instructions**
+**Ample**
+
 * Dans le panneau **projet** d’Unity, dans le dossier **hologrammes** , recherchez l’objet **SpatialProcessing** .
 * Faites glisser & déposez l’objet **SpatialProcessing** dans le panneau de **hiérarchie** .
 
 SpatialProcessing Prefab comprend des composants pour traiter les données de mappage spatiale. **SurfaceMeshesToPlanes.cs** trouvera et générera des plans basés sur les données de mappage spatiale. Nous utiliserons des plans dans notre application pour représenter les murs, les étages et les plafonds. Ce Prefab comprend également **RemoveSurfaceVertices.cs** qui peut supprimer des vertex du maillage de mappage spatial. Cela peut être utilisé pour créer des trous dans la maille ou pour supprimer les triangles excédentaires qui ne sont plus nécessaires (car les plans peuvent être utilisés à la place).
+
 * Dans le panneau **projet** d’Unity, dans le dossier **hologrammes** , recherchez l’objet **SpaceCollection** .
 * Faites glisser et déposez l’objet **SpaceCollection** dans le panneau de **hiérarchie** .
 * Dans le volet **hiérarchie** , sélectionnez l’objet **SpatialProcessing** .
 * Dans le volet de l' **inspecteur** , recherchez le composant **Gestionnaire d’espace de lecture (script)** .
 * Double-cliquez sur **PlaySpaceManager.cs** pour l’ouvrir dans Visual Studio.
 
-PlaySpaceManager.cs contient le code spécifique à l’application. Nous ajouterons des fonctionnalités à ce script pour activer le comportement suivant:
+PlaySpaceManager.cs contient le code spécifique à l’application. Nous ajouterons des fonctionnalités à ce script pour activer le comportement suivant :
+
 1. Arrêtez la collecte des données de mappage spatiale après avoir dépassé la limite de temps d’analyse (10 secondes).
-2. Traiter les données de mappage spatiale:
+2. Traiter les données de mappage spatiale :
     1. Utilisez SurfaceMeshesToPlanes pour créer une représentation plus simple du monde comme plans (murs, étages, plafonds, etc.).
     2. Utilisez RemoveSurfaceVertices pour supprimer les triangles de surface qui se trouvent dans les limites du plan.
 3. Générez un ensemble d’hologrammes dans le monde et placez-les sur des plans muraux et de plancher près de l’utilisateur.
 
-Effectuez les exercices de codage marqués dans PlaySpaceManager.cs ou remplacez le script par la solution terminée ci-dessous:
+Effectuez les exercices de codage marqués dans PlaySpaceManager.cs ou remplacez le script par la solution terminée ci-dessous :
 
 ```cs
 using System.Collections.Generic;
@@ -384,7 +396,7 @@ public class PlaySpaceManager : Singleton<PlaySpaceManager>
         {
             // We do not have enough floors/walls to place our holograms on...
 
-            // 3.a: Re-enter scanning mode so the user can find more surfaces by 
+            // 3.a: Re-enter scanning mode so the user can find more surfaces by
             // calling StartObserver() on the SpatialMappingManager.Instance.
             SpatialMappingManager.Instance.StartObserver();
 
@@ -434,6 +446,7 @@ public class PlaySpaceManager : Singleton<PlaySpaceManager>
 ```
 
 **Génération et déploiement**
+
 * Avant de déployer sur HoloLens, appuyez sur le bouton de **lecture** dans Unity pour passer en mode lecture.
 * Une fois le maillage de la salle chargé à partir du fichier, attendez 10 secondes avant le début du traitement sur le maillage de mappage spatial.
 * Une fois le traitement terminé, les plans s’affichent pour représenter le plancher, les murs, le plafond, etc.
@@ -449,17 +462,20 @@ public class PlaySpaceManager : Singleton<PlaySpaceManager>
 >[!VIDEO https://www.youtube.com/embed/Srhtpid1uZc]
 
 **Cherché**
+
 * Déterminer si un hologramme peut tenir sur une surface.
 * Fournir des commentaires à l’utilisateur lorsqu’un hologramme ne peut pas être ajusté sur une surface.
 
-**Instructions**
+**Ample**
+
 * Dans le panneau de la **hiérarchie** Unity, sélectionnez l’objet **SpatialProcessing** .
-* Dans le volet de l' **inspecteur** , recherchez les maillages des surfaces du composant **plans (script)** .
+* Dans le volet de l' **inspecteur** , recherchez les **maillages des surfaces du composant plans (script)** .
 * Remplacez la valeur de la propriété **dessiner des plans** par **Nothing** pour effacer la sélection.
 * Remplacez la propriété **dessiner des plans** par **Wall**, afin que seuls les plans muraux soient rendus.
 * Dans le panneau **projet** , cliquez sur le dossier **scripts** , double-cliquez sur **Placeable.cs** pour l’ouvrir dans Visual Studio.
 
-Le script **positionnable** est déjà associé aux affiches et à la boîte de projection créées après la recherche du plan. Tout ce que nous devons faire, c’est supprimer les marques de commentaire de code, et ce script va obtenir ce qui suit:
+Le script **positionnable** est déjà associé aux affiches et à la boîte de projection créées après la recherche du plan. Tout ce que nous devons faire, c’est supprimer les marques de commentaire de code, et ce script va obtenir ce qui suit :
+
 1. Déterminez si un hologramme est ajusté sur une surface par Raycasting à partir du centre et quatre coins du cube englobant.
 2. Vérifiez la normale de la surface pour déterminer si elle est suffisamment lisse pour que l’hologramme se vide.
 3. Restituez un cube englobant autour de l’hologramme pour afficher sa taille réelle lors de son placement.
@@ -482,7 +498,7 @@ using Academy.HoloToolkit.Unity;
 /// </summary>
 public enum PlacementSurfaces
 {
-    // Horizontal surface with an upward pointing normal.    
+    // Horizontal surface with an upward pointing normal.
     Horizontal = 1,
 
     // Vertical surface with a normal facing the user.
@@ -909,7 +925,7 @@ public class Placeable : MonoBehaviour
     /// The target surface's normal vector.
     /// </param>
     /// <remarks>
-    /// The aligntoVerticalSurface parameter is ignored if the object
+    /// The alignToVerticalSurface parameter is ignored if the object
     /// is to be placed on a horizontalSurface
     /// </remarks>
     private void OrientObject(bool alignToVerticalSurface, Vector3 surfaceNormal)
@@ -1006,7 +1022,7 @@ public class Placeable : MonoBehaviour
             shadowAsset.GetComponent<Renderer>().sharedMaterial = NotPlaceableShadowMaterial;
         }
 
-        // Show the shadow asset as appropriate.        
+        // Show the shadow asset as appropriate.
         if (position != Vector3.zero)
         {
             // Position the shadow a small distance from the target surface, along the normal.
@@ -1052,6 +1068,7 @@ public class Placeable : MonoBehaviour
 ```
 
 **Génération et déploiement**
+
 * Comme précédemment, générez le projet et déployez sur HoloLens.
 * Attendez la fin de l’analyse et du traitement des données de mappage spatiale.
 * Lorsque vous voyez le système solaire, pointez le curseur en regard de la zone de projection ci-dessous et effectuez un mouvement de sélection pour le déplacer. Lorsque la zone de projection est sélectionnée, un cube englobant est visible autour de la zone de projection.
@@ -1063,29 +1080,33 @@ public class Placeable : MonoBehaviour
 >[!VIDEO https://www.youtube.com/embed/6Xrzh_w-7SE]
 
 **Cherché**
+
 * Détermine si un hologramme est bloqués par le maillage de mappage spatial.
 * Appliquez différentes techniques d’occlusion pour obtenir un effet amusant.
 
-**Instructions**
+**Ample**
 
-Tout d’abord, nous allons autoriser le maillage de mappage spatial à occultait d’autres hologrammes sans Boucher le monde réel:
+Tout d’abord, nous allons autoriser le maillage de mappage spatial à occultait d’autres hologrammes sans Boucher le monde réel :
+
 * Dans le volet **hiérarchie** , sélectionnez l’objet **SpatialProcessing** .
 * Dans le volet de l' **inspecteur** , recherchez le composant **Gestionnaire d’espace de lecture (script)** .
 * Cliquez sur le cercle situé à droite de la propriété **matériau secondaire** .
 * Recherchez et sélectionnez le matériel d' **occlusion** , puis fermez la fenêtre.
 
-Nous allons ensuite ajouter un comportement spécial à la terre, afin qu’elle soit en surbrillance en bleu chaque fois qu’elle est bloqués par un autre hologramme (comme le soleil) ou par le maillage de mappage spatial:
+Nous allons ensuite ajouter un comportement spécial à la terre, afin qu’elle soit en surbrillance en bleu chaque fois qu’elle est bloqués par un autre hologramme (comme le soleil) ou par le maillage de mappage spatial :
+
 * Dans le panneau **projet** , dans le dossier **hologrammes** , développez l’objet **SolarSystem** .
 * Cliquez sur **terre**.
 * Dans le panneau **inspecteur** , recherchez le matériau de la terre (composant le plus bas).
-* Dans la **liste**déroulante nuanceur, remplacez le nuanceur par **personnalisé > OcclusionRim**. Cela permet d’afficher une surbrillance bleue autour de la terre chaque fois qu’elle est bloqués par un autre objet.
+* Dans la **liste déroulante nuanceur**, remplacez le nuanceur par **personnalisé > OcclusionRim**. Cela permet d’afficher une surbrillance bleue autour de la terre chaque fois qu’elle est bloqués par un autre objet.
 
-Enfin, nous allons activer un effet de vision x-ray pour les planètes dans notre système solaire. Nous devons modifier **PlanetOcclusion.cs** (qui se trouve dans le dossier Scripts\SolarSystem) afin d’obtenir les informations suivantes:
+Enfin, nous allons activer un effet de vision x-ray pour les planètes dans notre système solaire. Nous devons modifier **PlanetOcclusion.cs** (qui se trouve dans le dossier Scripts\SolarSystem) afin d’obtenir les informations suivantes :
+
 1. Déterminez si une planète est bloqués par la couche SpatialMapping (maillages et plans d’espace).
 2. Affichez la représentation filaire d’une planète chaque fois qu’elle est bloqués par la couche SpatialMapping.
 3. Masquer la représentation filaire d’une planète lorsqu’elle n’est pas bloquée par la couche SpatialMapping.
 
-Suivez l’exercice de codage dans PlanetOcclusion.cs ou utilisez la solution suivante:
+Suivez l’exercice de codage dans PlanetOcclusion.cs ou utilisez la solution suivante :
 
 ```cs
 using UnityEngine;
@@ -1179,18 +1200,20 @@ public class PlanetOcclusion : MonoBehaviour
 ```
 
 **Génération et déploiement**
+
 * Générez et déployez l’application dans HoloLens, comme d’habitude.
 * Attendez la fin de l’analyse et du traitement des données de mappage spatiale (vous devriez voir apparaître des lignes bleues sur les murs).
 * Recherchez et sélectionnez la zone de projection du système solaire, puis activez la case à cocher en regard d’un mur ou derrière un compteur.
 * Vous pouvez afficher l’occlusion de base en masquant derrière les surfaces à l’homologue dans la zone d’affiche ou de projection.
 * Si vous recherchez la terre, il doit y avoir un effet de surbrillance bleu lorsqu’il se trouve derrière un autre hologramme ou une autre surface.
-* Regardez que les planètes se déplacent derrière le mur ou d’autres surfaces de la pièce. Vous avez maintenant une vision x-ray et vous pouvez voir leurs squelettes filaires!
+* Regardez que les planètes se déplacent derrière le mur ou d’autres surfaces de la pièce. Vous avez maintenant une vision x-ray et vous pouvez voir leurs squelettes filaires !
 
 ## <a name="the-end"></a>La fin
 
-Félicitations ! Vous avez maintenant terminé **l’heure spatiale 230: Mappage**spatial.
+Félicitations ! Vous avez maintenant terminé le **mappage spatial 230 : spatial**.
+
 * Vous savez comment analyser votre environnement et charger des données de mappage spatiale sur Unity.
 * Vous comprenez les notions de base des nuanceurs et comment les documents peuvent être utilisés pour revisualiser le monde.
 * Vous avez appris les nouvelles techniques de traitement permettant de trouver des plans et de supprimer des triangles d’une maille.
 * Vous avez pu déplacer et placer des hologrammes sur des surfaces qui ont été rendues logiques.
-* Vous avez connu différentes techniques d’occlusion et vous avez utilisé la puissance de la vision x-ray!
+* Vous avez connu différentes techniques d’occlusion et vous avez utilisé la puissance de la vision x-ray !

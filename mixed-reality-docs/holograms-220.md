@@ -3,44 +3,44 @@ title: Monsieur le son spatial 220-spatial
 description: Suivez cette procédure pas à pas de codage à l’aide de Unity, Visual Studio et HoloLens pour apprendre les concepts de son spatial.
 author: keveleigh
 ms.author: kurtie
-ms.date: 03/21/2018
+ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, Academy, didacticiel, son spatial
-ms.openlocfilehash: 50d17fe8c9a6e3f18b1309a59c9c41af982a7505
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: a3fc054927d73cf9ac21f831caa4ec23875977bd
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63526930"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73434726"
 ---
 >[!NOTE]
->Les didacticiels d’Académie de la réalité mixte ont été conçus avec les casques immersif (1er génération) et de réalité mixte à l’esprit.  Par conséquent, nous pensons qu’il est important de ne pas mettre en place ces didacticiels pour les développeurs qui cherchent toujours des conseils en matière de développement pour ces appareils.  Ces didacticiels ne seront **_pas_** mis à jour avec les derniers ensembles d’outils ou interactions utilisés pour HoloLens 2.  Ils seront conservés pour continuer à travailler sur les appareils pris en charge. Une nouvelle série de didacticiels sera publiée à l’avenir qui vous montrera comment développer pour HoloLens 2.  Cet avis sera mis à jour avec un lien vers ces didacticiels lors de leur publication.
+>Les didacticiels d’Académie de la réalité mixte ont été conçus avec les casques immersif (1er génération) et de réalité mixte à l’esprit.  Par conséquent, nous pensons qu’il est important de ne pas mettre en place ces didacticiels pour les développeurs qui cherchent toujours des conseils en matière de développement pour ces appareils.  Ces didacticiels ne seront **_pas_** mis à jour avec les derniers ensembles d’outils ou interactions utilisés pour HoloLens 2.  Ils seront conservés pour continuer à travailler sur les appareils pris en charge. [Une nouvelle série de didacticiels](mrlearning-base.md) a été publiée pour HoloLens 2.
 
 <br>
 
-# <a name="mr-spatial-220-spatial-sound"></a>Monsieur spatial 220: Son spatial
+# <a name="mr-spatial-220-spatial-sound"></a>MR spatial 220 : son spatial
 
-Le [son spatial](spatial-sound.md) passe par des hologrammes et leur donne la présence dans notre monde. Les hologrammes sont composés de la lumière et du son, et si vous perdez la vision de vos hologrammes, le son spatial peut vous aider à les trouver. Le son spatial n’est pas comme le son classique que vous entendez sur la radio, il s’agit d’un son positionné dans l’espace 3D. Avec un son spatial, vous pouvez faire en sorte que les hologrammes s’affichent derrière vous, en regard de vous ou même en tête. Dans ce cours, vous allez:
+Le [son spatial](spatial-sound.md) passe par des hologrammes et leur donne la présence dans notre monde. Les hologrammes sont composés de la lumière et du son, et si vous perdez la vision de vos hologrammes, le son spatial peut vous aider à les trouver. Le son spatial n’est pas comme le son classique que vous entendez sur la radio, il s’agit d’un son positionné dans l’espace 3D. Avec un son spatial, vous pouvez faire en sorte que les hologrammes s’affichent derrière vous, en regard de vous ou même en tête. Dans ce cours, vous allez :
 
 * Configurez votre environnement de développement pour utiliser le son spatial Microsoft.
 * Utilisez le son spatial pour améliorer les interactions.
-* Utilisez le son spatial conjointement avec le mappage spatial.
+* Utilisez le son spatial conjointement avec le [mappage spatial](spatial-mapping.md).
 * Comprendre la conception et la combinaison des meilleures pratiques.
 * Utilisez le son pour améliorer les effets spéciaux et amener l’utilisateur dans le monde de la réalité mixte.
 
-## <a name="device-support"></a>Prise en charge des appareils
+## <a name="device-support"></a>Périphériques pris en charge
 
 <table>
 <tr>
 <th>Course</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Casques immersifs</a></th>
 </tr><tr>
-<td>Monsieur spatial 220: Son spatial</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
+<td>MR spatial 220 : son spatial</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
 </table>
 
 ## <a name="before-you-start"></a>Avant de commencer
 
-### <a name="prerequisites"></a>Prérequis
+### <a name="prerequisites"></a>Conditions préalables
 
 * Un PC Windows 10 configuré avec les [outils appropriés installés](install-the-tools.md).
 * Certaines fonctionnalités C# de programmation de base.
@@ -60,7 +60,7 @@ Le [son spatial](spatial-sound.md) passe par des hologrammes et leur donne la pr
 
 ### <a name="errata-and-notes"></a>Errata et notes
 
-* L’option «Activer Uniquement mon code» doit être désactivée (décochée) dans Visual Studio sous Outils-> Options-> le débogage pour atteindre les points d’arrêt dans votre code.
+* L’option « Activer Uniquement mon code » doit être désactivée (*décochée*) dans Visual Studio sous outils-> Options-> le débogage pour atteindre les points d’arrêt dans votre code.
 
 ## <a name="chapter-1---unity-setup"></a>Chapitre 1-Configuration Unity
 
@@ -86,18 +86,18 @@ Par défaut, Unity ne charge pas de plug-in Spatializer. Les étapes suivantes p
 * Recherchez la liste déroulante du **plug-in Spatializer** , puis sélectionnez **MS HRTF Spatializer**.
 * Dans le volet **hiérarchie** , sélectionnez **HologramCollection > P0LY**.
 * Dans le panneau **inspecteur** , recherchez le composant **audio source** .
-* Cochez la case spatialiser.
+* Cochez la case **spatialiser** .
 * Faites glisser le curseur de **lissage spatial** jusqu’à la forme **3D**, ou entrez **1** dans la zone d’édition.
 
 Nous allons maintenant générer le projet dans Unity et configurer la solution dans Visual Studio.
 
 1. Dans Unity, sélectionnez **fichier > paramètres de build**.
 2. Cliquez sur **Ajouter des scènes ouvertes** pour ajouter la scène.
-3. Sélectionnez **plateforme Windows universelle** dans la liste **plateforme** , puis cliquez sur basculer la **plateforme**.
+3. Sélectionnez **plateforme Windows universelle** dans la liste **plateforme** , puis cliquez sur **basculer la plateforme**.
 4. Si vous développez spécifiquement pour HoloLens, définissez **appareil cible** sur **hololens**. Dans le cas contraire, laissez-le sur **un appareil**.
 5. Vérifiez que le **type de build** est défini sur **D3D** et que le **Kit de développement logiciel (SDK** ) est défini sur le **dernier installé** (qui doit être le SDK 16299 ou une version ultérieure).
 6. Cliquez sur **Build**.
-7. Créez un **dossier** nommé «App».
+7. Créez un **dossier** nommé « App ».
 8. Cliquez sur le dossier de l' **application** .
 9. Appuyez sur **Sélectionner un dossier**.
 
@@ -106,18 +106,18 @@ Lorsque Unity est terminé, une fenêtre de l’Explorateur de fichiers s’affi
 1. Ouvrez le dossier de l' **application** .
 2. Ouvrez la **solution Visual Studio décibels**.
 
-En cas de déploiement dans HoloLens:
+En cas de déploiement dans HoloLens :
 
 1. À l’aide de la barre d’outils supérieure dans Visual Studio, remplacez la cible Debug par **Release** et de ARM par **x86**.
 2. Cliquez sur la flèche déroulante en regard du bouton ordinateur local, puis sélectionnez **ordinateur distant**.
 3. Entrez **l’adresse IP de votre appareil HoloLens** et définissez le mode d’authentification sur **universel (protocole non chiffré)** . Cliquez sur **Sélectionner**. Si vous ne connaissez pas l’adresse IP de votre appareil, accédez à **paramètres > réseau & Internet > options avancées**.
-4. Dans la barre de menus supérieure, cliquez sur déboguer **-> exécuter sans débogage** ou appuyez sur **CTRL + F5**. S’il s’agit de la première fois que vous déployez sur votre appareil, vous devrez le coupler à [Visual Studio](using-visual-studio.md#pairing-your-device---hololens-1st-gen).
+4. Dans la barre de menus supérieure, cliquez sur **Déboguer-> exécuter sans débogage** ou appuyez sur **CTRL + F5**. S’il s’agit de la première fois que vous déployez sur votre appareil, vous devrez le [coupler à Visual Studio](using-visual-studio.md#pairing-your-device).
 
-En cas de déploiement sur un casque immersif:
+En cas de déploiement sur un casque immersif :
 
 1. À l’aide de la barre d’outils supérieure dans Visual Studio, remplacez la cible Debug par **Release** et de ARM par **x64**.
 2. Assurez-vous que la cible de déploiement est définie sur **ordinateur local**.
-3. Dans la barre de menus supérieure, cliquez sur déboguer **-> exécuter sans débogage** ou appuyez sur **CTRL + F5**.
+3. Dans la barre de menus supérieure, cliquez sur **Déboguer-> exécuter sans débogage** ou appuyez sur **CTRL + F5**.
 
 ## <a name="chapter-2---spatial-sound-and-interaction"></a>Chapitre 2-sons spatiaux et interaction
 
@@ -141,7 +141,7 @@ L’emplacement approprié pour le son va dépendre de l’hologramme. Par exemp
 Les instructions suivantes attachent un son spatial à un hologramme.
 
 * Dans le volet **hiérarchie** , développez **HologramCollection** , puis sélectionnez **P0LY**.
-* Dans le volet de l' **inspecteur** , dans le **audiosource**, cliquez sur le cercle en regard de **Audioclip** et sélectionnez polypointer dans la fenêtre contextuelle.
+* Dans le volet de l' **inspecteur** , dans le **audiosource**, cliquez sur le cercle en regard de **Audioclip** et sélectionnez **polypointer** dans la fenêtre contextuelle.
 * Cliquez sur le cercle en regard de **sortie** et sélectionnez **SoundEffects** dans la fenêtre contextuelle.
 
 Project décibel utilise un composant Unity **audiomixer** pour permettre l’ajustement des niveaux sonores pour les groupes de sons. En regroupant les sons de cette manière, le volume global peut être ajusté tout en conservant le volume relatif de chaque son.
@@ -151,7 +151,7 @@ Project décibel utilise un composant Unity **audiomixer** pour permettre l’aj
 
 Le fait de définir le niveau Doppler sur zéro désactive les modifications du pas en raison du mouvement (de l’hologramme ou de l’utilisateur). Un exemple classique de Doppler est un véhicule à déplacement rapide. À mesure que la voiture approche un écouteur stationnaire, la hauteur du moteur augmente. Lorsqu’il passe l’écouteur, le pas à pas est inférieur à la distance.
 
-### <a name="part-2---directing-the-users-gaze"></a>Partie 2: diriger le regard de l’utilisateur
+### <a name="part-2---directing-the-users-gaze"></a>Partie 2 : diriger le regard de l’utilisateur
 
 #### <a name="key-concepts"></a>Concepts clés
 
@@ -168,17 +168,17 @@ Les instructions suivantes permettent à P0LY de se masquer derrière vous, afin
 * Dans le volet **hiérarchie** , sélectionnez **gestionnaires**.
 * Dans le panneau **inspecteur** , recherchez **Gestionnaire d’entrée vocale**.
 * Dans le **Gestionnaire d’entrée vocal**, développez **Go Hide**.
-* **Ne modifiez aucune fonction** en polyactions **. GoHide**.
+* **Ne modifiez aucune fonction** en **polyactions. GoHide**.
 
-![Mot Go masquer](images/gohide.png)
+![Mot clé : go Hide](images/gohide.png)
 
-### <a name="part-3---gesture-feedback"></a>Partie 3: commentaires sur les mouvements
+### <a name="part-3---gesture-feedback"></a>Partie 3 : commentaires sur les mouvements
 
 #### <a name="key-concepts"></a>Concepts clés
 
 * Fournir à l’utilisateur une confirmation de mouvement positive à l’aide du son
 * N’encombrez pas les sons trop bruyants de l’utilisateur
-* Les sons subtils fonctionnent mieux: ne assombrissent pas l’expérience
+* Les sons subtils fonctionnent mieux : ne assombrissent pas l’expérience
 
 #### <a name="instructions"></a>Instructions
 
@@ -186,9 +186,9 @@ Les instructions suivantes permettent à P0LY de se masquer derrière vous, afin
 * Développez **EnergyHub** et sélectionnez **base**.
 * Dans le panneau **inspecteur** , cliquez sur **Ajouter un composant** et ajouter un gestionnaire de sons de **geste**.
 * Dans **Gestionnaire de sons de geste**, cliquez sur le cercle en regard de l' **élément de navigation démarré** et de la **navigation mise à jour** , puis sélectionnez **RotateClick** dans la fenêtre contextuelle pour les deux.
-* Double-cliquez sur «GestureSoundHandler» pour charger dans Visual Studio.
+* Double-cliquez sur « GestureSoundHandler » pour charger dans Visual Studio.
 
-Le gestionnaire de son geste effectue les tâches suivantes:
+Le gestionnaire de son geste effectue les tâches suivantes :
 
 * Créez et configurez un **audiosource**.
 * Placez le **audiosource** à l’emplacement du **gameobject**approprié.
@@ -201,18 +201,18 @@ Le gestionnaire de son geste effectue les tâches suivantes:
 3. Cliquez sur le dossier de l' **application** .
 4. Appuyez sur **Sélectionner un dossier**.
 
-Vérifiez que la barre d’outils indique «version finale», «x86» ou «x64», et «périphérique distant». Dans le cas contraire, il s’agit de l’instance de codage de Visual Studio. Vous devrez peut-être rouvrir la solution à partir du dossier de l’application.
+Vérifiez que la barre d’outils indique « version finale », « x86 » ou « x64 », et « périphérique distant ». Dans le cas contraire, il s’agit de l’instance de codage de Visual Studio. Vous devrez peut-être rouvrir la solution à partir du dossier de l’application.
 
 * Si vous y êtes invité, rechargez les fichiers projet.
 * Comme précédemment, déployez à partir de Visual Studio.
 
-Une fois l’application déployée:
+Une fois l’application déployée :
 
 * Observez la façon dont le son change au fur et à mesure que vous vous déplacez autour de P0LY.
-* Dites *«Go Hide»* pour faire en sorte que P0LY se déplace vers un emplacement derrière vous. Recherchez-le par le son.
+* Dites *« Go Hide »* pour faire en sorte que P0LY se déplace vers un emplacement derrière vous. Recherchez-le par le son.
 * Pointez le regard de la base du hub d’énergie. Appuyez et faites glisser vers la gauche ou vers la droite pour faire pivoter l’hologramme et notez la façon dont le bruit de clic confirme le mouvement.
 
-Remarque : Un volet de texte s’affiche avec vous. Elle contient les commandes vocales disponibles que vous pouvez utiliser tout au long de ce cours.
+Remarque : il existe un volet de texte qui s’étiquette avec vous. Elle contient les commandes vocales disponibles que vous pouvez utiliser tout au long de ce cours.
 
 ## <a name="chapter-3---spatial-sound-and-spatial-mapping"></a>Chapitre 3-sons spatiaux et mappage spatial
 
@@ -241,7 +241,7 @@ Par exemple, la définition d’une tasse sur une table doit rendre un son plus 
   * Définissez le **son de collecte** sur **Pick**.
   * Appuyez sur le signe + dans le coin inférieur droit, sous à la fois **action de collecte** et **action de placement**. Faites glisser EnergyHub à partir de la scène dans les champs **aucun (objet)** .
     * Sous **action de cueillette**, cliquez sur **aucune fonction** -> **EnergyHubBase** -> **ResetAnimation**.
-    * Sous **action de placement**, cliquez sur **no Function** -> **EnergyHubBase** -> **onselect**.
+    * Sous **action de placement**, cliquez sur **aucune fonction** -> **EnergyHubBase** -> **onselect**.
 
 ![Appuyez pour placer le son et l’action](images/holograms220-taptoplace.png)
 
@@ -258,7 +258,7 @@ Un exemple classique est un hall de concert. Lorsqu’un écouteur se trouve en 
 * Dans le volet **hiérarchie** , développez **HologramCollection** , puis sélectionnez **P0LY**.
 * Dans le panneau **inspecteur** , cliquez sur **Ajouter un composant** et ajouter un **émetteur audio**.
 
-La classe d’émetteur audio fournit les fonctionnalités suivantes:
+La classe d’émetteur audio fournit les fonctionnalités suivantes :
 
 * Restaure toutes les modifications apportées au volume du **audiosource**.
 * Exécute un **physique. RaycastNonAlloc** à partir de la position de l’utilisateur dans la direction du **gameobject** auquel le **AudioEmitter** est attaché.
@@ -281,7 +281,7 @@ Ce paramètre limite les fréquences AudioSource à 1500 Hz et inférieures.
 
 Ce paramètre réduit le volume du AudioSource à 90% de son niveau actuel.
 
-L’audio OCCLUDER implémente IAudioInfluencer pour:
+L’audio OCCLUDER implémente IAudioInfluencer pour :
 
 * Appliquez un effet d’occlusion à l’aide d’un **AudioLowPassFilter** qui est attaché à **audiosource** Managed buy the **AudioEmitter**.
 * Applique l’atténuation du volume à AudioSource.
@@ -302,26 +302,26 @@ Lorsque plusieurs Occluders se trouvent dans le chemin d’accès entre l’util
 * Dans le volet **hiérarchie** , sélectionnez **gestionnaires**.
 * Dans le panneau **inspecteur** , développez **Gestionnaire d’entrée vocal**.
 * Dans le **Gestionnaire d’entrée vocal**, développez **frais Go**.
-* **Ne modifiez aucune fonction** en polyactions **. GoCharge**.
+* **Ne modifiez aucune fonction** en **polyactions. GoCharge**.
 
-![Mot Facturation Go](images/gocharge.png)
+![Mot clé : facturation](images/gocharge.png)
 
 * Développez-le **ici**.
-* **Ne modifiez aucune fonction** en polyactions **. Comeback**.
+* **Ne modifiez aucune fonction** en **polyactions. Comeback**.
 
-![Mot Viens ici](images/comehere.png)
+![Mot clé : ici](images/comehere.png)
 
 #### <a name="build-and-deploy"></a>Génération et déploiement
 
 * Comme précédemment, générez le projet dans Unity et déployez-le dans Visual Studio.
 
-Une fois l’application déployée:
+Une fois l’application déployée :
 
-* Dites *«Go Fact»* pour que P0LY entre dans le hub d’énergie.
+* Dites *« Go Fact »* pour que P0LY entre dans le hub d’énergie.
 
 Notez la modification du son. Le bruit doit être atténué et un peu plus calme. Si vous êtes en mesure de vous positionner avec un mur ou un autre objet entre vous et le hub d’énergie, vous remarquerez un Muffling supplémentaire du son en raison de l’occlusion par le monde réel.
 
-* Dites *«venez ici»* pour que P0LY laisse le hub d’énergie et se positionne en face de vous.
+* Dites *« venez ici »* pour que P0LY laisse le hub d’énergie et se positionne en face de vous.
 
 Notez que l’occlusion sonore est supprimée une fois que P0LY a quitté le hub d’énergie. Si vous entendez encore des occlusions, P0LY peut être bloqués par le monde réel. Essayez de vous assurer que vous disposez d’une ligne de vue claire sur P0LY.
 
@@ -343,7 +343,7 @@ Si vous créez un scénario de réalité virtuelle, sélectionnez le modèle de 
 * Comprendre les considérations relatives à la conception d’un son efficace.
 * Apprenez à mélanger les techniques et les recommandations.
 
-### <a name="part-1---sound-and-experience-design"></a>Partie 1: conception du son et de l’expérience
+### <a name="part-1---sound-and-experience-design"></a>Partie 1 : conception du son et de l’expérience
 
 Cette section décrit les considérations et les recommandations relatives à la conception du son et de l’expérience.
 
@@ -389,7 +389,7 @@ Un niveau de volume de 100% est similaire à une expérience de réalité virtue
 
 #### <a name="use-the-unity-audiomixer-to-adjust-categories-of-sounds"></a>Utiliser Unity AudioMixer pour ajuster les catégories de sons
 
-Lors de la conception de votre combinaison, il est souvent utile de créer des catégories de son et d’augmenter ou de réduire leur volume en tant qu’unité. Cela permet de conserver les niveaux relatifs de chaque son tout en permettant de modifier rapidement et facilement la combinaison globale. Les catégories courantes incluent; effets sonores, ambiance, voix et musique en arrière-plan.
+Lors de la conception de votre combinaison, il est souvent utile de créer des catégories de son et d’augmenter ou de réduire leur volume en tant qu’unité. Cela permet de conserver les niveaux relatifs de chaque son tout en permettant de modifier rapidement et facilement la combinaison globale. Les catégories courantes incluent ; effets sonores, ambiance, voix et musique en arrière-plan.
 
 #### <a name="mix-sounds-based-on-the-users-gaze"></a>Mélanger des sons en fonction du point de regard de l’utilisateur
 
@@ -405,9 +405,9 @@ En imaginant votre combinaison comme un entonnoir inversé, avec les moins impor
 
 Les fonctionnalités vocales sont un scénario intéressant. En fonction de l’expérience que vous créez, vous souhaiterez peut-être avoir un son stéréo (non localisé) ou pour spatialer votre voix. Deux expériences Microsoft publiées illustrent des exemples excellents de chaque scénario.
 
-[HoloTour](http://www.microsoft.com/store/p/holotour/9nblggh5pj87) utilise une voix stéréo. Lorsque le narrateur décrit l’emplacement affiché, le son est cohérent et ne varie pas en fonction de la position de l’utilisateur. Cela permet au narrateur de décrire la scène sans sortir des sons spatiaux de l’environnement.
+[HoloTour](https://www.microsoft.com/store/p/holotour/9nblggh5pj87) utilise une voix stéréo. Lorsque le narrateur décrit l’emplacement affiché, le son est cohérent et ne varie pas en fonction de la position de l’utilisateur. Cela permet au narrateur de décrire la scène sans sortir des sons spatiaux de l’environnement.
 
-[Fragments](https://www.microsoft.com/store/p/fragments/9nblggh5ggm8) utilise une voix spatialisée sous la forme d’un détective. La voix du détective est utilisée pour attirer l’attention de l’utilisateur sur un indice important comme si un humain réel était dans la pièce. Cela permet un sens encore plus important de l’immersion dans l’expérience de résolution du mystère.
+Les [fragments](https://www.microsoft.com/store/p/fragments/9nblggh5ggm8) utilisent une voix spatiale sous la forme d’un détective. La voix du détective est utilisée pour attirer l’attention de l’utilisateur sur un indice important comme si un humain réel était dans la pièce. Cela permet un sens encore plus important de l’immersion dans l’expérience de résolution du mystère.
 
 ### <a name="part-3--performance"></a>Partie 3-performances
 
@@ -427,7 +427,7 @@ Dans Unity, vous pouvez marquer un fichier audio pour la diffusion en continu da
 
 ### <a name="objectives"></a>Objectifs
 
-* Ajoutez une profondeur à «Magic Windows».
+* Ajoutez une profondeur à « Magic Windows ».
 * Mettez l’utilisateur dans le monde virtuel.
 
 ### <a name="magic-windows"></a>Magic Windows
@@ -439,14 +439,14 @@ Dans Unity, vous pouvez marquer un fichier audio pour la diffusion en continu da
 
 #### <a name="instructions"></a>Instructions
 
-* Dans le volet **hiérarchie** , développez **HologramCollection** , puis sélectionnez subworld.
+* Dans le volet **hiérarchie** , développez **HologramCollection** , puis sélectionnez **subworld**.
 * Développez le sous- **monde** et sélectionnez **VoiceSource**.
 * Dans le panneau **inspecteur** , cliquez sur **Ajouter un composant** et ajouter un **effet utilisateur vocal**.
 
 Un composant **audiosource** sera ajouté à **VoiceSource**.
 
 * Dans **audiosource**, définissez **sortie** sur **UserVoice (Mixer)** .
-* Cochez la case spatialiser.
+* Cochez la case **spatialiser** .
 * Faites glisser le curseur de **lissage spatial** jusqu’à la forme **3D**, ou entrez **1** dans la zone d’édition.
 * Développez **paramètres audio 3D**.
 * Affectez au **niveau Doppler** la valeur **0**.
@@ -469,7 +469,7 @@ Les paramètres précédents configurent les paramètres du **AudioChorusFilter*
 
 Les paramètres précédents configurent les paramètres du **AudioEchoFilter** Unity utilisé pour faire écho à la voix de l’utilisateur.
 
-Le script de l’effet utilisateur vocal est chargé des opérations suivantes:
+Le script de l’effet utilisateur vocal est chargé des opérations suivantes :
 
 * Mesure de la distance entre l’utilisateur et le **gameobject** auquel le script est attaché.
 * Déterminer si l’utilisateur est confronté au **gameobject**.
@@ -486,20 +486,20 @@ L’effet User Voice utilise le composant sélecteur de flux MIC, à partir du [
 * Dans le **Gestionnaire d’entrée vocal**, développez afficher le sous- **monde**.
 * **Ne modifiez aucune fonction** en **UnderworldBase. OnEnable**.
 
-![Mot Afficher le sous-monde](images/showunderworld.png)
+![Mot clé : afficher le sous-monde](images/showunderworld.png)
 
 * Développez masquer le sous- **monde**.
 * **Ne modifiez aucune fonction** en **UnderworldBase. OnDisable**.
 
-![Mot Masquer le sous-monde](images/hideunderworld.png)
+![Mot clé : masquer le sous-monde](images/hideunderworld.png)
 
 #### <a name="build-and-deploy"></a>Génération et déploiement
 
 * Comme précédemment, générez le projet dans Unity et déployez-le dans Visual Studio.
 
-Une fois l’application déployée:
+Une fois l’application déployée :
 
-* Face à une surface (mur, plancher, table) et dites *«afficher le monde»* .
+* Face à une surface (mur, plancher, table) et dites *« afficher le monde »* .
 
 Le sous-monde s’affiche et tous les autres hologrammes sont masqués. Si vous ne voyez pas le sous-monde, assurez-vous que vous êtes face à une surface réaliste.
 
@@ -508,12 +508,12 @@ Le sous-monde s’affiche et tous les autres hologrammes sont masqués. Si vous 
 Des effets audio sont désormais appliqués à votre voix.
 
 * Quittez le sous-monde et notez la façon dont l’effet n’est plus appliqué.
-* Dites *«masquer le monde»* pour masquer le sous-monde.
+* Dites *« masquer le monde »* pour masquer le sous-monde.
 
 Le sous-monde est masqué et les hologrammes précédemment masqués réapparaissent.
 
 ## <a name="the-end"></a>La fin
 
-Félicitations ! Vous avez maintenant terminé **l’heure spatiale 220: Son**spatial.
+Félicitations ! Vous avez maintenant terminé le **son spatial 220 : spatial**.
 
-Écoutez l’univers et donnez vie à vos expériences!
+Écoutez l’univers et donnez vie à vos expériences !

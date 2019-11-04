@@ -2,20 +2,23 @@
 title: Étude de cas-développement des fonctionnalités de mappage spatial de HoloLens
 description: Lors de la création de nos premières applications pour Microsoft HoloLens, nous étions impatients de voir à quel moment nous pourrions pousser les limites du mappage spatial sur l’appareil.
 author: jevertt
-ms.author: jevertt
+ms.author: jemccull
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, HoloLens, mappage spatial
-ms.openlocfilehash: 602b629afa5900ff34c28b3a3a32725af06590b7
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 5142cb383d4408b29eb17eb5ede84d19b2533dc4
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63522718"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436725"
 ---
 # <a name="case-study---expanding-the-spatial-mapping-capabilities-of-hololens"></a>Étude de cas-développement des fonctionnalités de mappage spatial de HoloLens
 
 Lors de la création de nos premières applications pour Microsoft HoloLens, nous étions impatients de voir à quel moment nous pourrions pousser les limites du mappage spatial sur l’appareil. Jeff Evertt, ingénieur logiciel chez Microsoft Studios, explique comment une nouvelle technologie a été développée afin d’avoir davantage de contrôle sur la façon dont les hologrammes sont placés dans l’environnement réel d’un utilisateur.
+
+> [!NOTE]
+> HoloLens 2 implémente un nouveau [Runtime de présentation](scene-understanding.md)de la scène, qui fournit aux développeurs de réalité mixte une représentation environnementale structurée, conçue pour rendre le développement pour les applications qui prennent en charge l’environnement de manière intuitive. 
 
 ## <a name="watch-the-video"></a>Regarder la vidéo
 
@@ -23,9 +26,9 @@ Lors de la création de nos premières applications pour Microsoft HoloLens, nou
 
 ## <a name="beyond-spatial-mapping"></a>Au-delà du mappage spatial
 
-Alors que nous travaillions sur [Fragments](https://www.microsoft.com/p/fragments/9nblggh5ggm8) et [Young Conker](https://www.microsoft.com/p/young-conker/9nblggh5ggk1), deux des premiers jeux pour HoloLens, nous avons constaté que lorsque nous utilisions des hologrammes dans le monde physique, nous avions besoin d’un niveau de compréhension plus élevé de l’environnement utilisateur. Chaque jeu avait ses propres besoins spécifiques en matière de placement: Par exemple, dans les fragments, nous souhaitons pouvoir faire la distinction entre les différentes surfaces, telles que le plancher ou un tableau, pour placer des indices à des endroits pertinents. Nous souhaitons également pouvoir identifier les surfaces sur lesquelles les caractères holographiques de taille vie peuvent se trouver, tels qu’un canapé ou une chaise. Dans jeune Conker, nous souhaitons que Conker et ses adversaires soient en mesure d’utiliser des surfaces en relief dans la salle d’un joueur en tant que plateformes.
+Pendant que nous travaillions sur des [fragments](https://www.microsoft.com/p/fragments/9nblggh5ggm8) et des [jeunes Conkers](https://www.microsoft.com/p/young-conker/9nblggh5ggk1), deux des premiers jeux pour HoloLens, nous avons constaté que lorsque nous avions utilisé des hologrammes dans le monde physique, nous avions besoin d’un niveau de compréhension plus élevé de l’utilisateur environnement. Chaque jeu avait ses propres besoins spécifiques en matière de placement : en fragments, par exemple, nous souhaitons pouvoir faire la distinction entre les différentes surfaces, telles que le plancher ou une table, pour placer des indices dans des emplacements pertinents. Nous souhaitons également pouvoir identifier les surfaces sur lesquelles les caractères holographiques de taille vie peuvent se trouver, tels qu’un canapé ou une chaise. Dans jeune Conker, nous souhaitons que Conker et ses adversaires soient en mesure d’utiliser des surfaces en relief dans la salle d’un joueur en tant que plateformes.
 
-[Asobo Studios](http://www.asobostudio.com/index.html), notre partenaire de développement de ces jeux, est confronté à ce problème et a créé une technologie qui étend les fonctionnalités de mappage spatial de HoloLens. À l’aide de cela, nous pourrions analyser la salle d’un joueur et identifier des surfaces telles que des murs, des tables, des chaises et des sols. Elle nous a également donné la possibilité d’optimiser par rapport à un ensemble de contraintes pour déterminer le meilleur placement pour les objets holographiques.
+[Asobo Studios](https://www.asobostudio.com/index.html), notre partenaire de développement de ces jeux, est confronté à ce problème et a créé une technologie qui étend les fonctionnalités de mappage spatial de HoloLens. À l’aide de cela, nous pourrions analyser la salle d’un joueur et identifier des surfaces telles que des murs, des tables, des chaises et des sols. Elle nous a également donné la possibilité d’optimiser par rapport à un ensemble de contraintes pour déterminer le meilleur placement pour les objets holographiques.
 
 ## <a name="the-spatial-understanding-code"></a>Code de la compréhension spatiale
 
@@ -33,15 +36,15 @@ Nous avons pris le code d’origine de Asobo et créé une bibliothèque qui enc
 
 L’exemple Unity contient de nombreuses requêtes utiles qui vous permettent de rechercher des espaces vides sur les murs, de placer des objets sur le plafond ou sur des grands espaces sur le plancher, d’identifier des emplacements pour les caractères à asseoir et une multitude d’autres requêtes de compréhension spatiale.
 
-Bien que la solution de mappage spatial fournie par HoloLens soit conçue pour être suffisamment générique pour répondre aux besoins de la gamme complète des espaces à problème, le module de compréhension spatiale a été conçu pour prendre en charge les besoins de deux jeux spécifiques. Par conséquent, sa solution est structurée autour d’un processus et d’un ensemble d’hypothèses spécifiques:
-* **Taille fixe PlaySpace**: L’utilisateur spécifie la taille maximale de PlaySpace dans l’appel init.
-* **Processus d’analyse à usage unique**: Le processus nécessite une phase d’analyse discrète dans laquelle l’utilisateur se contourne et définit le PlaySpace. Les fonctions de requête ne fonctionneront pas tant que l’analyse n’aura pas été finalisée.
-* **«Peinture» PlaySpace pilotée par l’utilisateur**: Pendant la phase d’analyse, l’utilisateur se déplace et recherche des PlaySpace, ce qui a pour effet de peindre les zones qui doivent être incluses. La maille générée est importante pour fournir des commentaires de l’utilisateur au cours de cette phase.
-* **Installation à la page d’hébergement ou d’entreprise**: Les fonctions de requête sont conçues autour des surfaces plates et des parois à des angles droits. Il s’agit d’une limitation souple. Toutefois, pendant la phase d’analyse, une analyse de l’axe principal est effectuée pour optimiser la facettisation du maillage le long de l’axe principal et de l’axe secondaire.
+Bien que la solution de mappage spatial fournie par HoloLens soit conçue pour être suffisamment générique pour répondre aux besoins de la gamme complète des espaces à problème, le module de compréhension spatiale a été conçu pour prendre en charge les besoins de deux jeux spécifiques. Par conséquent, sa solution est structurée autour d’un processus et d’un ensemble d’hypothèses spécifiques :
+* **PlaySpace de taille fixe**: l’utilisateur spécifie la taille de PlaySpace maximale dans l’appel init.
+* **Processus d’analyse à usage unique**: le processus nécessite une phase d’analyse discrète dans laquelle l’utilisateur se contourne et définit le PlaySpace. Les fonctions de requête ne fonctionneront pas tant que l’analyse n’aura pas été finalisée.
+* **« Peinture » PlaySpace pilotée par l’utilisateur**: au cours de la phase d’analyse, l’utilisateur se déplace et explore le PlaySpace, ce qui a pour effet de peindre les zones qui doivent être incluses. La maille générée est importante pour fournir des commentaires de l’utilisateur au cours de cette phase.
+* **Configuration de la page d’hébergement ou**de l’entreprise : les fonctions de requête sont conçues autour des surfaces plates et des parois à des angles droits. Il s’agit d’une limitation souple. Toutefois, pendant la phase d’analyse, une analyse de l’axe principal est effectuée pour optimiser la facettisation du maillage le long de l’axe principal et de l’axe secondaire.
 
 ### <a name="room-scanning-process"></a>Processus d’analyse de la salle
 
-Lorsque vous chargez le module de compréhension spatiale, la première chose à faire est d’analyser votre espace. par conséquent, toutes les surfaces utilisables (telles que le plancher, le plafond et les murs) sont identifiées et étiquetées. Pendant le processus d’analyse, vous examinez votre espace et «peignez» les zones qui doivent être incluses dans l’analyse.
+Lorsque vous chargez le module de compréhension spatiale, la première chose à faire est d’analyser votre espace. par conséquent, toutes les surfaces utilisables (telles que le plancher, le plafond et les murs) sont identifiées et étiquetées. Pendant le processus d’analyse, vous examinez votre espace et « peignez » les zones qui doivent être incluses dans l’analyse.
 
 Le maillage vu pendant cette phase est un élément important de retour visuel qui permet aux utilisateurs de savoir quelles parties de la salle sont analysées. La DLL du module de compréhension spatiale stocke en interne le PlaySpace sous la forme d’une grille de cubes voxel de 8cm dimensionnés. Au cours de la phase initiale d’analyse, une analyse de composant principale est effectuée pour déterminer les axes de la salle. En interne, elle stocke son espace voxel aligné sur ces axes. Une maille est générée environ chaque seconde en extrayant le isosurface du volume voxel.
 
@@ -51,21 +54,21 @@ Mappage spatial maillage en blanc et compréhension du maillage PlaySpace en ver
 
 
 
-Le fichier SpatialUnderstanding.cs inclus gère le processus de phase d’analyse. Il appelle les fonctions suivantes:
-* **SpatialUnderstanding_Init**: Appelée une fois au début.
-* **GeneratePlayspace_InitScan**: Indique que la phase d’analyse doit commencer.
-* **GeneratePlayspace_UpdateScan_DynamicScan**: Appelé chaque frame pour mettre à jour le processus d’analyse. La position et l’orientation de la caméra sont transmises et sont utilisées pour le processus de peinture PlaySpace décrit ci-dessus.
-* **GeneratePlayspace_RequestFinish**: Appelé pour finaliser le PlaySpace. Cela utilisera les zones «peintes» pendant la phase d’analyse pour définir et verrouiller le PlaySpace. L’application peut interroger des statistiques pendant la phase d’analyse et interroger la maille personnalisée pour fournir des commentaires utilisateur.
-* **Import_UnderstandingMesh**: Au cours de l’analyse, le comportement **SpatialUnderstandingCustomMesh** fourni par le module et placé sur la Prefab de fonctionnement interrogera périodiquement la maille personnalisée générée par le processus. En outre, cette opération est effectuée une fois de plus après la finalisation de l’analyse.
+Le fichier SpatialUnderstanding.cs inclus gère le processus de phase d’analyse. Il appelle les fonctions suivantes :
+* **SpatialUnderstanding_Init**: appelée une fois au début.
+* **GeneratePlayspace_InitScan**: indique que la phase d’analyse doit commencer.
+* **GeneratePlayspace_UpdateScan_DynamicScan**: appelé chaque frame pour mettre à jour le processus d’analyse. La position et l’orientation de la caméra sont transmises et sont utilisées pour le processus de peinture PlaySpace décrit ci-dessus.
+* **GeneratePlayspace_RequestFinish**: appelé pour finaliser le PlaySpace. Cela utilisera les zones « peintes » pendant la phase d’analyse pour définir et verrouiller le PlaySpace. L’application peut interroger des statistiques pendant la phase d’analyse et interroger la maille personnalisée pour fournir des commentaires utilisateur.
+* **Import_UnderstandingMesh**: lors de l’analyse, le comportement de **SpatialUnderstandingCustomMesh** fourni par le module et placé sur le Prefab de compréhension interroge régulièrement le maillage personnalisé généré par le processus. En outre, cette opération est effectuée une fois de plus après la finalisation de l’analyse.
 
 Le workflow de numérisation, piloté par le comportement **SpatialUnderstanding** appelle **InitScan**, puis **UpdateScan** chaque frame. Lorsque la requête de statistiques signale une couverture raisonnable, l’utilisateur peut airtap d’appeler **RequestFinish** pour indiquer la fin de la phase d’analyse. **UpdateScan** continue à être appelé jusqu’à ce qu’il retourne la valeur indiquant que la dll a terminé le traitement.
 
 ## <a name="the-queries"></a>Les requêtes
 
-Une fois l’analyse terminée, vous pouvez accéder à trois types de requêtes différents dans l’interface:
-* **Requêtes de topologie**: Il s’agit de requêtes rapides basées sur la topologie de la salle analysée.
-* **Requêtes de forme**: Celles-ci utilisent les résultats de vos requêtes de topologie pour rechercher des surfaces horizontales qui correspondent parfaitement aux formes personnalisées que vous définissez.
-* **Requêtes de placement d’objets**: Il s’agit de requêtes plus complexes qui recherchent l’emplacement le mieux adapté en fonction d’un ensemble de règles et de contraintes pour l’objet.
+Une fois l’analyse terminée, vous pouvez accéder à trois types de requêtes différents dans l’interface :
+* **Requêtes de topologie**: il s’agit de requêtes rapides basées sur la topologie de la salle analysée.
+* **Requêtes de forme**: celles-ci utilisent les résultats de vos requêtes de topologie pour rechercher des surfaces horizontales qui correspondent parfaitement aux formes personnalisées que vous définissez.
+* **Requêtes de placement d’objets**: il s’agit de requêtes plus complexes qui recherchent l’emplacement le mieux adapté en fonction d’un ensemble de règles et de contraintes pour l’objet.
 
 Outre les trois requêtes principales, il existe une interface Raycasting qui peut être utilisée pour récupérer des types de surfaces avec balises et un maillage de salle étanche personnalisé peut être copié.
 
@@ -75,7 +78,7 @@ Dans la DLL, le gestionnaire de topologie gère l’étiquetage de l’environne
 
 Les heuristiques sont utilisées pour déterminer l’étage, le plafond et les murs. Par exemple, la surface horizontale la plus grande et la plus basse avec une surface d’exposition supérieure à 1 m2 est considérée comme le plancher. Notez que le chemin d’accès de l’appareil photo pendant le processus d’analyse est également utilisé dans ce processus.
 
-Un sous-ensemble des requêtes exposées par le gestionnaire de topologie est exposé via la DLL. Les requêtes de topologie exposées sont les suivantes:
+Un sous-ensemble des requêtes exposées par le gestionnaire de topologie est exposé via la DLL. Les requêtes de topologie exposées sont les suivantes :
 * QueryTopology_FindPositionsOnWalls
 * QueryTopology_FindLargePositionsOnWalls
 * QueryTopology_FindLargestWall
@@ -123,7 +126,7 @@ Notez que dans l’exemple Unity, chacune de ces requêtes est liée à un bouto
 
 Notez que l’analyse des formes fonctionne uniquement sur des surfaces horizontales. Un canapé, par exemple, est défini par la surface du siège plat et le haut à l’arrière de la canapé. La requête Shape recherche deux surfaces d’une taille, d’une hauteur et d’une plage d’aspect spécifiques, les deux surfaces étant alignées et connectées. À l’aide de la terminologie des API, le siège de la canapé et le haut de l’arrière du canapé sont des composants de forme et les exigences d’alignement sont des contraintes de composant de forme.
 
-Voici un exemple de requête défini dans l’exemple Unity (**ShapeDefinition.cs**) pour les objets «sittable»:
+Voici un exemple de requête défini dans l’exemple Unity (**ShapeDefinition.cs**) pour les objets « sittable » :
 
 
 
@@ -171,7 +174,7 @@ Le rectangle bleu met en surbrillance les résultats de la requête de forme de 
 
 Les requêtes de placement d’objet peuvent être utilisées pour identifier les emplacements idéaux dans la salle physique pour placer vos objets. Le solveur trouvera l’emplacement le mieux adapté en fonction des contraintes et règles d’objet. En outre, les requêtes d’objet sont conservées jusqu’à ce que l’objet soit supprimé avec des appels **Solver_RemoveObject** ou **Solver_RemoveAllObjects** , ce qui permet le placement de plusieurs objets avec restriction.
 
-Les requêtes de placement d’objet se composent de trois parties: le type de placement avec des paramètres, une liste de règles et une liste de contraintes. Pour exécuter une requête, utilisez l’API suivante:
+Les requêtes de placement d’objet se composent de trois parties : le type de placement avec des paramètres, une liste de règles et une liste de contraintes. Pour exécuter une requête, utilisez l’API suivante :
 
 
 
@@ -186,7 +189,7 @@ public static int Solver_PlaceObject(
                 [In] IntPtr placementConstraints,   // ObjectPlacementConstraint
                 [Out] IntPtr placementResult)
 ```
-Cette fonction accepte un nom d’objet, une définition de placement et une liste de règles et de contraintes. Les C# wrappers fournissent des fonctions d’assistance de construction pour faciliter la création de règles et de contraintes. La définition de placement contient le type de requête, à savoir l’un des éléments suivants:
+Cette fonction accepte un nom d’objet, une définition de placement et une liste de règles et de contraintes. Les C# wrappers fournissent des fonctions d’assistance de construction pour faciliter la création de règles et de contraintes. La définition de placement contient le type de requête, à savoir l’un des éléments suivants :
 
 
 
@@ -206,7 +209,7 @@ public enum PlacementType
                 };
 ```
 
-Chacun des types de placement a un ensemble de paramètres propre au type. La structure **ObjectPlacementDefinition** contient un jeu de fonctions d’assistance statiques pour la création de ces définitions. Par exemple, pour trouver un endroit où placer un objet sur l’étage, vous pouvez utiliser la fonction suivante: 
+Chacun des types de placement a un ensemble de paramètres propre au type. La structure **ObjectPlacementDefinition** contient un jeu de fonctions d’assistance statiques pour la création de ces définitions. Par exemple, pour trouver un endroit où placer un objet sur l’étage, vous pouvez utiliser la fonction suivante : 
 
 
 ```
@@ -255,9 +258,9 @@ List<ObjectPlacementRule> rules =
 
 En cas de réussite, une structure **ObjectPlacementResult** contenant la position, les dimensions et l’orientation de placement est retournée. En outre, le placement est ajouté à la liste interne des objets placés de la DLL. Les requêtes d’emplacement suivantes prennent en compte cet objet. Le fichier **LevelSolver.cs** dans l’exemple Unity contient plus d’exemples de requêtes.
 
-![Les zones bleues affichent le résultat de trois emplacements sur les requêtes d’étage avec les règles «éloigner de la position de la caméra».](images/away-from-camera-position-500px.png)
+![Les zones bleues affichent le résultat de trois emplacements sur les requêtes d’étage avec les règles « éloigner de la position de la caméra ».](images/away-from-camera-position-500px.png)
 
-Les zones bleues affichent le résultat de trois emplacements sur les requêtes d’étage avec les règles «éloigner de la position de la caméra».
+Les zones bleues affichent le résultat de trois emplacements sur les requêtes d’étage avec les règles « éloigner de la position de la caméra ».
 
 
 **Conseil**
@@ -297,7 +300,7 @@ struct RaycastResult
 
 En interne, raycast est calculé par rapport à la représentation voxel 8cm cube calculée du PlaySpace. Chaque voxel contient un ensemble d’éléments surface avec des données de topologie traitées (également appelées surfels). Le surfels contenu dans la cellule voxel intersectée est comparé et la meilleure correspondance est utilisée pour rechercher les informations de topologie. Ces données de topologie contiennent l’étiquetage renvoyé sous la forme de l’énumération **SurfaceTypes** , ainsi que la surface d’exposition de la surface intersectée.
 
-Dans l’exemple Unity, le curseur convertit chaque image de rayon. Tout d’abord, contre les conflits avec Unity; Deuxièmement, par rapport à la représentation mondiale du module de présentation; Enfin, sur les éléments d’interface utilisateur. Dans cette application, l’interface utilisateur est prioritaire, puis le résultat de la compréhension et enfin, les conflits avec Unity. Le **SurfaceType** est signalé en tant que texte en regard du curseur.
+Dans l’exemple Unity, le curseur convertit chaque image de rayon. Tout d’abord, contre les conflits avec Unity ; Deuxièmement, par rapport à la représentation mondiale du module de présentation ; Enfin, sur les éléments d’interface utilisateur. Dans cette application, l’interface utilisateur est prioritaire, puis le résultat de la compréhension et enfin, les conflits avec Unity. Le **SurfaceType** est signalé en tant que texte en regard du curseur.
 
 ![Raycast intersection de rapports de résultats avec le plancher.](images/raycast-result-500px.jpg)
 
@@ -306,7 +309,7 @@ Raycast intersection de rapports de résultats avec le plancher.
 
 ## <a name="get-the-code"></a>Obtenir le code
 
-Le code open source est disponible dans [MixedRealityToolkit](https://github.com/Microsoft/MixedRealityToolkit-Unity). Faites-le nous savoir sur les [forums de développement HoloLens](https://forums.hololens.com/) si vous utilisez le code dans un projet. Nous ne pouvons pas attendre pour voir ce que vous faites avec!
+Le code open source est disponible dans [MixedRealityToolkit](https://github.com/Microsoft/MixedRealityToolkit-Unity). Faites-le nous savoir sur les [forums de développement HoloLens](https://forums.hololens.com/) si vous utilisez le code dans un projet. Nous ne pouvons pas attendre pour voir ce que vous faites avec !
 
 ## <a name="about-the-author"></a>À propos de l’auteur
 
@@ -318,9 +321,9 @@ Le code open source est disponible dans [MixedRealityToolkit](https://github.com
 
 
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a>Articles associés
 * [Mappage spatial](spatial-mapping.md)
-* [Conception du mappage spatial](spatial-mapping-design.md)
+* [Compréhension des scènes](scene-understanding.md)
 * [Visualisation du balayage d’une pièce](room-scan-visualization.md)
 * [MixedRealityToolkit-Unity](https://github.com/Microsoft/MixedRealityToolkit-Unity)
-* [Asobo Studio: Leçons de la Frontline du développement HoloLens](http://www.gamesindustry.biz/articles/2016-05-12-asobo-lessons-from-the-frontline-of-ar-development)
+* [Asobo Studio : leçons de la Frontline du développement HoloLens](https://www.gamesindustry.biz/articles/2016-05-12-asobo-lessons-from-the-frontline-of-ar-development)

@@ -6,18 +6,18 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: rendu, hologramme
-ms.openlocfilehash: 45713fd7a30fc55a799da7e89ef52aff8f7eec46
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: a974b9d8a00713c28c27963a9f96379693db9b60
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67415410"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437523"
 ---
 # <a name="rendering"></a>Rendu
 
-Le rendu holographique permet à votre application de dessiner un hologramme dans un endroit précis dans le monde autour de l’utilisateur, qu’il soit placé précisément dans le monde physique ou dans un domaine virtuel que vous avez créé. Les [hologrammes](hologram.md) sont des objets faits de son et de lumière. Le rendu permet à votre application d’ajouter la lumière.
+Le rendu holographique permet à votre application de dessiner un hologramme dans un endroit précis dans le monde autour de l’utilisateur, qu’il soit placé précisément dans le monde physique ou dans un domaine virtuel que vous avez créé. Les [hologrammes](hologram.md) sont des objets de sons et de lumière. Le rendu permet à votre application d’ajouter la lumière.
 
-## <a name="device-support"></a>Prise en charge des appareils
+## <a name="device-support"></a>Périphériques pris en charge
 
 <table>
     <colgroup>
@@ -29,7 +29,7 @@ Le rendu holographique permet à votre application de dessiner un hologramme dan
     <tr>
         <td><strong>Fonctionnalité</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens (1ère génération)</strong></a></td>
-        <td><strong>HoloLens 2</strong></td>
+        <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>Casques immersifs</strong></a></td>
     </tr>
      <tr>
@@ -42,13 +42,13 @@ Le rendu holographique permet à votre application de dessiner un hologramme dan
 
 ## <a name="holographic-rendering"></a>Rendu holographique
 
-Le rendu de clé à holographique consiste à savoir si vous effectuez un rendu sur un affichage de type «voir», tel que HoloLens, qui permet à l’utilisateur de voir à la fois le monde physique et vos hologrammes, ou un affichage opaque comme un casque Windows Mixed realisation qui bloque le monde.
+Le rendu de clé à holographique consiste à savoir si vous effectuez un rendu sur un affichage de type « voir », tel que HoloLens, qui permet à l’utilisateur de voir à la fois le monde physique et vos hologrammes, ou un affichage opaque comme un casque Windows Mixed realisation qui bloque le monde.
 
-Les appareilsavec affichages, tels que les appareils [HoloLens](hololens-hardware-details.md), ajoutent de la lumière au monde. Les pixels noirs sont entièrement transparents, tandis que les pixels plus clairs sont de plus en plus opaques. Étant donné que la lumière des écrans est ajoutée à la lumière du monde réel, les pixels blancs sont un peu translucides.
+Les appareils avec **affichages**, tels que les appareils [HoloLens](hololens-hardware-details.md), ajoutent de la lumière au monde. Les pixels noirs sont entièrement transparents, tandis que les pixels plus clairs sont de plus en plus opaques. Étant donné que la lumière des écrans est ajoutée à la lumière du monde réel, les pixels blancs sont un peu translucides.
 
 Alors que le rendu stéréoscopique fournit une seule profondeur pour vos hologrammes, l’ajout d' [effets de terre](interaction-fundamentals.md) peut aider les utilisateurs à voir plus facilement l’aire de conception d’un hologramme. Une technique de mise à la terre consiste à ajouter une lueur autour d’un hologramme sur la surface adjacente, puis à effectuer le rendu d’une ombre contre cette lueur. De cette façon, votre ombre s’affiche pour soustraire la lumière de l’environnement. Le [son spatial](spatial-sound.md) est une autre indication de profondeur extrêmement importante, qui permet aux utilisateurs de connaître la distance et l’emplacement relatif d’un hologramme.
 
-Les appareils avec des **écrans opaques**, tels que les casques immersifs de [Windows Mixed Reality](immersive-headset-hardware-details.md), bloquent le monde. Les pixels noirs sont noirs et toute autre couleur apparaît comme cette couleur pour l’utilisateur. Votre application est responsable du rendu de tout ce que l’utilisateur voit. Il est donc encore plus important de maintenir une fréquence d’actualisation constante pour que les utilisateurs bénéficient d’une expérience confortable.
+Les appareils avec des **écrans opaques**, tels que les [casques immersifs de Windows Mixed Reality](immersive-headset-hardware-details.md), bloquent le monde. Les pixels noirs sont noirs et toute autre couleur apparaît comme cette couleur pour l’utilisateur. Votre application est responsable du rendu de tout ce que l’utilisateur voit. Il est donc encore plus important de maintenir une fréquence d’actualisation constante pour que les utilisateurs bénéficient d’une expérience confortable.
 
 ## <a name="predicted-rendering-parameters"></a>Paramètres de rendu prédits
 
@@ -74,7 +74,7 @@ Reportez-vous à l’article [rendu dans DirectX](rendering-in-directx.md) pour 
 
 ## <a name="holographic-cameras"></a>Caméras holographiques
 
-Windows Mixed Reality présente le concept de **caméra holographique**. Les caméras holographiques sont similaires à l’appareil photo traditionnel qui se trouve dans les textes graphiques 3D: ils définissent à la fois les propriétés extrinsèques (position et orientation) et les propriétés de caméra intrinsèques. (Par exemple, le champ de vue est utilisé pour afficher une scène 3D virtuelle.) Contrairement aux caméras 3D traditionnelles, l’application n’est pas en mesure de contrôler la position, l’orientation et les propriétés intrinsèques de l’appareil photo. Au lieu de cela, la position et l’orientation de la caméra holographique sont contrôlées implicitement par le mouvement de l’utilisateur. Le mouvement de l’utilisateur est relayé à l’application image par image via une transformation de vue. De même, les propriétés intrinsèques de l’appareil photo sont définies par les optiques calibrées de l’appareil et relayées par frame via la transformation de projection.
+Windows Mixed Reality présente le concept de **caméra holographique**. Les caméras holographiques sont similaires à l’appareil photo traditionnel qui se trouve dans les textes graphiques 3D : ils définissent à la fois les propriétés extrinsèques (position et orientation) et les propriétés de caméra intrinsèques. (Par exemple, le champ de vue est utilisé pour afficher une scène 3D virtuelle.) Contrairement aux caméras 3D traditionnelles, l’application n’est pas en mesure de contrôler la position, l’orientation et les propriétés intrinsèques de l’appareil photo. Au lieu de cela, la position et l’orientation de la caméra holographique sont contrôlées implicitement par le mouvement de l’utilisateur. Le mouvement de l’utilisateur est relayé à l’application image par image via une transformation de vue. De même, les propriétés intrinsèques de l’appareil photo sont définies par les optiques calibrées de l’appareil et relayées par frame via la transformation de projection.
 
 En général, votre application s’affiche pour une seule caméra stéréo. Toutefois, une boucle de rendu robuste prend en charge plusieurs caméras et prend en charge les caméras mono et stéréo. Par exemple, le système peut demander à votre application de s’afficher à partir d’une autre perspective lorsque l’utilisateur active une fonctionnalité comme la [capture de réalité mixte](mixed-reality-capture.md) (MRC), en fonction de la forme du casque en question. Les applications qui peuvent prendre en charge plusieurs caméras les obtiennent en [choisissant](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic.HolographicViewConfiguration#Windows_Graphics_Holographic_HolographicViewConfiguration) le [type](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic.HolographicViewConfigurationKind#Windows_Graphics_Holographic_HolographicViewConfigurationKind) de caméra qu’elles peuvent prendre en charge.
 
@@ -93,9 +93,9 @@ Lors du rendu des radiographie médicaux ou des volumes d’ingénierie en 3D, l
 ## <a name="supported-resolutions-on-hololens-2"></a>Résolutions prises en charge sur HoloLens 2
 
 > [!NOTE]
-> Plus d’instructions spécifiques à HoloLens 2 bientôt [disponible](index.md#news-and-notes).
+> Plus d’instructions spécifiques à HoloLens 2 bientôt [disponible](news.md).
 
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a>Articles associés
 * [Stabilité des hologrammes](hologram-stability.md)
 * [Rendu dans DirectX](rendering-in-directx.md)

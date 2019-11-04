@@ -6,28 +6,29 @@ ms.author: jemccull
 ms.date: 06/27/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: 1dd6c01768ddf5dda954f50e0f7507022bd59c3b
-ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
+ms.openlocfilehash: 5382a1cce38e8607042c21b8dd3157d1da2fa72e
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68701859"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437556"
 ---
 # <a name="2-adding-an-offline-mode-for-local-speech-to-text-translation"></a>2. Ajout d’un mode hors connexion pour la traduction vocale locale en texte
 
-Dans ce didacticiel, nous allons ajouter un mode hors connexion qui vous permet d’effectuer des traductions vocales en texte local quand nous ne pouvons pas nous connecter au service Azure. Nous simulerons également un état déconnecté.
+Dans ce didacticiel, nous allons ajouter un mode hors connexion qui vous permet d’effectuer des traductions vocales en texte local quand nous ne pouvons pas nous connecter au service Azure. Nous *simulerons* également un état déconnecté.
 
 ## <a name="instructions"></a>Instructions
 
-1. Sélectionnez l’objet Lunarcom_Base dans la hiérarchie, puis cliquez sur Ajouter un composant dans le panneau Inspecteur. Recherchez et sélectionnez la reconnaissance hors connexion Lunarcom.
+1. Sélectionnez l’objet Lunarcom_Base dans la hiérarchie.
+2. Cliquez sur Ajouter un composant dans le panneau Inspecteur. Recherchez et sélectionnez la reconnaissance hors connexion Lunarcom.
 
 ![Module4Chapter2step1im](images/module4chapter2step1im.PNG)
 
-2. Cliquez sur la liste déroulante dans LunarcomOfflineRecognizer, puis sélectionnez activé. Cela programme le projet pour qu’il agisse comme l’utilisateur n’a pas de connexion. 
+3. Cliquez sur la liste déroulante dans le LunarcomOfflineRecognizer et sélectionnez activé. Cela programme le projet pour qu’il agisse comme l’utilisateur n’a pas de connexion. 
 
 ![Module4Chapter2step1im](images/module4chapter2step2im.PNG)
 
-3. Maintenant, appuyez sur la touche lecture dans l’éditeur Unity et testez-la. Appuyez sur le microphone dans le coin inférieur gauche de la scène, puis commencez à parler. 
+4. Appuyez sur la touche lecture dans l’éditeur Unity et testez-la. Appuyez sur le microphone dans le coin inférieur gauche de la scène et commencez à parler. 
 
 > [!NOTE]
 > Étant donné que nous sommes hors connexion, la fonctionnalité de mise en éveil par mot a été désactivée. Vous devez cliquer sur le microphone chaque fois que vous souhaitez que votre voix soit reconnue en mode hors connexion. 
@@ -36,10 +37,10 @@ Vous trouverez ci-dessous un exemple de ce à quoi peut ressembler votre scène.
 
 ![Module4Chapter2exampleim](images/module4chapter2exampleim.PNG)
 
-## <a name="congratulations"></a>Félicitations
+## <a name="congratulations"></a>Félicitations !
 
-Le mode hors connexion a été activé. Désormais, lorsque vous êtes hors connexion, vous pouvez continuer à travailler sur votre projet avec le kit de développement logiciel (SDK) Speech! 
+Le mode hors connexion a été activé. Désormais, lorsque vous êtes hors connexion, vous pouvez continuer à travailler sur votre projet avec le kit de développement logiciel (SDK) Speech ! 
 
 
-[Didacticiel suivant: 3.  Ajout du composant Azure Cognitive Services Speech translation](mrlearning-speechSDK-ch3.md)
+[Didacticiel suivant : 3. Ajout du composant Azure Cognitive Services Speech translation](mrlearning-speechSDK-ch3.md)
 

@@ -1,19 +1,19 @@
 ---
-title: 'Étude de cas: mise à l’échelle des datascape sur les appareils avec des performances différentes'
+title: 'Étude de cas : mise à l’échelle des datascape sur les appareils avec des performances différentes'
 description: Cette étude de cas vous donne des informations sur la façon dont les développeurs Microsoft ont optimisé l’application datascape pour offrir une expérience attrayante sur les appareils avec un large éventail de fonctionnalités de performances.
 author: danandersson
 ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: casque immersif, optimisation des performances, VR, étude de cas
-ms.openlocfilehash: 990a5ee6de07b6416e3150a7885220409a9c8d93
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 05f97188c81d85685540be998111ecfc47d9ef9c
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63523415"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436507"
 ---
-# <a name="case-study---scaling-datascape-across-devices-with-different-performance"></a>Étude de cas: mise à l’échelle des datascape sur les appareils avec des performances différentes
+# <a name="case-study---scaling-datascape-across-devices-with-different-performance"></a>Étude de cas : mise à l’échelle des datascape sur les appareils avec des performances différentes
 
 Datascape est une application Windows Mixed Reality développée en interne chez Microsoft, où nous nous sommes concentrés sur l’affichage des données météorologiques sur des données de terrain. L’application explore les Insights uniques que les utilisateurs obtiennent de la découverte de données en réalité mixte en entourant l’utilisateur de la visualisation de données holographiques.
 
@@ -27,7 +27,7 @@ Notre principale difficulté de rendu est traitée par la transparence, car la t
 
 Une géométrie solide peut être rendue de l’avant vers l’arrière lors de l’écriture dans le tampon de profondeur, ce qui empêche la suppression de tout pixel futur situé derrière ce pixel. Cela empêche les pixels cachés d’exécuter le nuanceur de pixels, ce qui accélère considérablement le processus. Si la géométrie est triée de façon optimale, chaque pixel de l’écran est dessiné une seule fois.
 
-La géométrie transparente doit être triée de nouveau vers l’avant et s’appuie sur la fusion de la sortie du nuanceur de pixels sur le pixel actuel de l’écran. Cela peut entraîner le dessin de chaque pixel sur l’écran à plusieurs reprises par cadre, désigné sous le terme de «surdessin».
+La géométrie transparente doit être triée de nouveau vers l’avant et s’appuie sur la fusion de la sortie du nuanceur de pixels sur le pixel actuel de l’écran. Cela peut entraîner le dessin de chaque pixel sur l’écran à plusieurs reprises par cadre, désigné sous le terme de « surdessin ».
 
 Pour les PC HoloLens et standard, l’écran ne peut être rempli qu’à quelques instants, ce qui rend le rendu transparent problématique.
 
@@ -39,11 +39,11 @@ Nous avons retravaillé l’interface utilisateur plusieurs fois afin de réduir
 
 Pour la carte, nous avons utilisé un nuanceur personnalisé qui supprime les fonctionnalités standard Unity, telles que les ombres et l’éclairage complexe, en les remplaçant par un modèle d’éclairage simple et un calcul de brouillard personnalisé. Cela a produit un nuanceur de pixels simple et libère des cycles GPU.
 
-Nous sommes parvenus à faire en sorte que l’interface utilisateur et la carte soient rendues au budget, où nous n’avions pas besoin de modifier ces éléments en fonction du matériel; Toutefois, la visualisation des intempéries, en particulier le rendu du Cloud, s’est avérée plus complexe.
+Nous sommes parvenus à faire en sorte que l’interface utilisateur et la carte soient rendues au budget, où nous n’avions pas besoin de modifier ces éléments en fonction du matériel ; Toutefois, la visualisation des intempéries, en particulier le rendu du Cloud, s’est avérée plus complexe.
 
 ## <a name="background-on-cloud-data"></a>Informations de base sur le Cloud
 
-Nos données Cloud ont été téléchargées à partir http://nomads.ncep.noaa.gov/) des serveurs NOAA (et nous nous sommes parvenues dans trois couches 2D distinctes, chacune avec la hauteur supérieure et inférieure du Cloud, ainsi que la densité du Cloud pour chaque cellule de la grille. Les données ont été traitées dans une texture d’informations de Cloud où chaque composant était stocké dans le composant rouge, vert et bleu de la texture pour un accès facile sur le GPU.
+Nos données Cloud ont été téléchargées à partir des serveurs NOAA (https://nomads.ncep.noaa.gov/) et nous nous sommes parvenues dans trois couches 2D distinctes, chacune avec la hauteur supérieure et inférieure du Cloud, ainsi que la densité du Cloud pour chaque cellule de la grille. Les données ont été traitées dans une texture d’informations de Cloud où chaque composant était stocké dans le composant rouge, vert et bleu de la texture pour un accès facile sur le GPU.
 
 ## <a name="geometry-clouds"></a>Clouds Geometry
 
@@ -51,7 +51,7 @@ Pour vous assurer que nos machines à faible consommation d’énergie pourraien
 
 Nous avons tout d’abord essayé de produire des clouds en générant un maillage relief solide pour chaque couche en utilisant le rayon de la texture d’informations de Cloud par vertex pour générer la forme. Nous avons utilisé un nuanceur Geometry pour produire les sommets en haut et en bas du Cloud générant des formes Cloud solides. Nous avons utilisé la valeur de densité de la texture pour colorer le Cloud avec des couleurs plus sombres pour des clouds plus denses.
 
-**Nuanceur pour la création des vertex:**
+**Nuanceur pour la création des vertex :**
 
 ```
 v2g vert (appdata v)
@@ -106,7 +106,7 @@ Dans la mesure où les clouds sont de géométrie solide, ils peuvent être rend
 
 ## <a name="solid-particle-clouds"></a>Clouds particulaires solides
 
-Nous avions maintenant une solution de sauvegarde qui produisait une représentation correcte de nos données Cloud, mais était un peu lackluster dans le facteur «wow» et n’indiquait pas le sentiment que nous souhaitions pour nos machines haut de gamme.
+Nous avions maintenant une solution de sauvegarde qui produisait une représentation correcte de nos données Cloud, mais était un peu lackluster dans le facteur « wow » et n’indiquait pas le sentiment que nous souhaitions pour nos machines haut de gamme.
 
 L’étape suivante consistait à créer les clouds en les représentant avec environ 100 000 particules pour produire un look plus organique et volumétrique.
 
@@ -122,7 +122,7 @@ Chaque particule contenait à la fois une hauteur et un rayon. La hauteur était
 
 ![Forme de particule](images/particle-shape-700px.png)
 
-**Code du nuanceur présentant la distribution:**
+**Code du nuanceur présentant la distribution :**
 
 ```
 ComputeBuffer cloudPointBuffer = new ComputeBuffer(6, quadPointsStride);
@@ -170,13 +170,13 @@ Pour ce faire, nous avons simplement basculé l’ordre de tri initial des parti
 
 ![Clouds fluffy](images/fluffy-clouds-700px.jpg)
 
-Il s’est avéré bien, mais il s’est avéré trop lourd pour les machines les plus difficiles, car cela entraînerait le rendu de chaque pixel à l’écran des centaines de fois!
+Il s’est avéré bien, mais il s’est avéré trop lourd pour les machines les plus difficiles, car cela entraînerait le rendu de chaque pixel à l’écran des centaines de fois !
 
 ## <a name="render-off-screen-with-lower-resolution"></a>Rendre hors écran avec une résolution inférieure
 
 Pour réduire le nombre de pixels rendus par les Clouds, nous avons commencé à les afficher dans une mémoire tampon de résolution de trimestre (par rapport à l’écran) et à étirer le résultat final sur l’écran une fois que toutes les particules ont été dessinées. Cela nous a donné environ une accélération de 4 fois, mais il a été fourni avec quelques avertissements.
 
-**Code pour le rendu hors écran:**
+**Code pour le rendu hors écran :**
 
 ```
 cloudBlendingCommand = new CommandBuffer();
@@ -230,9 +230,9 @@ Pour notre effet vent, nous avons généré des bandes de triangle longues dans 
 
 Nous avons introduit des tampons d’ajout sur le nuanceur de calcul pour alimenter un sous-ensemble des bandes à dessiner. Avec une vue simple frustum l’élimination de la logique dans le nuanceur de calcul, nous pourrions déterminer si une bande était en dehors de la vue caméra et l’empêcher d’être ajoutée à la mémoire tampon d’envoi (push). Cela a considérablement réduit la quantité de bandes, ce qui libère des cycles nécessaires sur le GPU.
 
-**Code illustrant une mémoire tampon d’ajout:**
+**Code illustrant une mémoire tampon d’ajout :**
 
-*Nuanceur de calcul:*
+*Nuanceur de calcul :*
 
 ```
 AppendStructuredBuffer<int> culledParticleIdx;
@@ -306,16 +306,16 @@ Conception pour les pires scénarios et peut-être envisager l’utilisation d�
 <table style="border:0">
 <tr>
 <td style="border:0" width="60px"><img alt="Picture of Robert Ferrese" width="60" height="60" src="images/robert-ferrese-60px.jpg"></td>
-<td style="border:0"><b>Robert Ferrese</b><br>Ingénieur logiciel@Microsoft</td>
+<td style="border:0"><b>Robert Ferrese</b><br>Ingénieur logiciel @Microsoft</td>
 </tr>
 <tr>
 <td style="border:0" width="60px"><img alt="Picture of Dan Andersson" width="60" height="60" src="images/dan-andersson-60px.jpg"></td>
-<td style="border:0"><b>Dan Andersson</b><br>Ingénieur logiciel@Microsoft</td>
+<td style="border:0"><b>Dan Andersson</b><br>Ingénieur logiciel @Microsoft</td>
 </tr>
 </table>
 
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a>Articles associés
 * [Comprendre les performances de la réalité mixte](understanding-performance-for-mixed-reality.md)
 * [Recommandations en matière de performances pour Unity](performance-recommendations-for-unity.md)
 

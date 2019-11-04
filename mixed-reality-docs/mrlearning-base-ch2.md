@@ -6,16 +6,16 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: 45833ba22305acedb45bfdc9752c0b278a693190
-ms.sourcegitcommit: 9636573eabdc78db6875e831a9c894a2ff173a99
+ms.openlocfilehash: 6ce5d96e98fd5489632f942c9b9f4885a7aa1480
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69629182"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437781"
 ---
-# <a name="3-creating-user-interface-and-configure-mixed-reality-toolkit"></a>3. Création d’une interface utilisateur et configuration d’une réalité mixte Toolkit 
+# <a name="3-creating-user-interface-and-configure-mixed-reality-toolkit"></a>3. création d’une interface utilisateur et configuration d’une réalité mixte Toolkit 
 
-Dans la leçon précédente, vous avez appris certaines des possibilités offertes par le kit de MRTK (Mixed Reality Toolkit) en démarrant votre première application pour HoloLens 2. Dans cette leçon, vous allez apprendre à créer et à organiser des boutons avec des panneaux de texte d’interface utilisateur et à utiliser l’interaction par défaut (Touch) pour interagir avec chaque bouton. Vous allez également découvrir comment ajouter des actions et des effets simples, comme changer la taille, la sonorité et la couleur des objets. Ce module présente les concepts de base de la modification des profils MRTK, en commençant par la désactivation de la visualisation de maillage spatial. 
+Dans la leçon précédente, vous avez appris certaines des possibilités offertes par le kit de MRTK (Mixed Reality Toolkit) en démarrant votre première application pour HoloLens 2. Dans cette leçon, vous allez apprendre à créer et à organiser des boutons avec des panneaux de texte d’interface utilisateur et à utiliser l’interaction par défaut (Touch) pour interagir avec chaque bouton. Vous allez également découvrir comment ajouter des actions et des effets simples, comme changer la taille, la sonorité et la couleur des objets. Ce module présente les concepts de base de la modification des profils MRTK, en commençant par la désactivation de la visualisation de maillage de [mappage spatial](spatial-mapping.md) . 
 
 ## <a name="objectives"></a>Objectifs
 
@@ -32,7 +32,7 @@ Dans cette section, vous allez apprendre à personnaliser et à configurer les p
 
 ![MR213_BuildSettings](images/mrlearning-base-ch2-1step1im.PNG)
 
->Remarque : Par défaut, les profils MRTK ne sont pas modifiables. Il s’agit de modèles de profil par défaut que vous pouvez copier et personnaliser. Il existe plusieurs couches de personnalisation et de profils. Par conséquent, il est recommandé de copier et de personnaliser plusieurs profils lors de la configuration d’un ou de plusieurs paramètres.
+>Remarque : par défaut, les profils MRTK ne sont pas modifiables. Il s’agit de modèles de profil par défaut que vous pouvez copier et personnaliser. Il existe plusieurs couches de personnalisation et de profils. Par conséquent, il est recommandé de copier et de personnaliser plusieurs profils lors de la configuration d’un ou de plusieurs paramètres.
 >
 >Pour en savoir plus sur les profils MRTK et leur architecture, consultez la [documentation de MRTK](<https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/MixedRealityConfigurationGuide.html>).
 
@@ -50,11 +50,11 @@ Dans cette section, vous allez apprendre à personnaliser et à configurer les p
 
 ![MR213_BuildSettings](images/mrlearning-base-ch2-1step4im.PNG)
 
-5. Ensuite, vous allez ajuster les paramètres pour l’option d’affichage pour indiquer « occlusion ». Cela rend le maillage spatial invisible, mais masque toujours les objets de jeu derrière le maillage spatial, également appelé «occlusion».
+5. Ensuite, vous allez ajuster les paramètres pour l’option d’affichage pour indiquer « occlusion ». Cela rend le maillage de mappage spatial invisible, mais masque toujours les objets de jeu derrière le maillage de mappage spatial, également appelé « occlusion ».
 
 ![MR213_BuildSettings](images/mrlearning-base-ch2-1step5im.PNG)
 
->Remarque : Le maillage de mappage spatial n’est pas visible, mais il est toujours présent et vous pouvez interagir avec lui. Tout hologramme derrière le maillage de mappage spatial, tel qu’un hologramme derrière votre mur visible, n’est pas visible en raison du paramètre d’occlusion.
+>Remarque : si le maillage de mappage spatial n’est pas visible, il est toujours présent et vous pouvez interagir avec lui. Tout hologramme derrière le maillage de mappage spatial, tel qu’un hologramme derrière votre mur visible, n’est pas visible en raison du paramètre d’occlusion.
 
 Félicitations ! Vous venez de découvrir comment modifier un paramètre dans le profil MRTK. Comme vous pouvez le voir, pour pouvoir modifier les paramètres du MRTK, vous devez créer des copies des profils par défaut. Vous disposez toujours des profils par défaut, qui ne sont pas modifiables, pour revenir à si vous souhaitez créer un profil avec de nouveaux paramètres, ou vous pouvez vous référer aux profils par défaut. Vous pouvez ajuster de nombreux paramètres. Pour des informations de référence complètes sur les paramètres des profils MRTK, reportez-vous à la documentation du MRTK ici : https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html
 
@@ -83,7 +83,7 @@ Dans cette section, vous allez apprendre à utiliser le suivi de la main pour ap
 
 6. Ajoutez un cube à la scène. Cliquez avec le bouton droit sur la zone hiérarchie, sélectionnez un objet 3D, puis cliquez sur cube. Un cube doit maintenant se trouver dans votre affichage. Il apparaîtra très grand. Vous pouvez ajuster les coordonnées (tandis que le cube est toujours sélectionné dans la zone de hiérarchie) pour réduire la taille. Définissez comme ceci les valeurs de mise à l’échelle : x = 0,1, y = 0,1 et z = 0,1. Veillez à positionner le cube dans votre scène en le plaçant près du bouton enfonçable, mais sans recouvrir le bouton. Dans l’image ci-dessous, la position du cube est x = 0, y = 0,2 et z = 1. 
 
-   > Remarque : En règle générale, 1 unité dans Unity est à peu près équivalente à 1 mètre dans le monde physique. Il y a des exceptions à cela, par exemple quand les objets sont des enfants d’objets mis à l’échelle.
+   > Remarque : en règle générale, une unité Unity est à peu près équivalente à 1 mètre dans le monde physique. Il y a des exceptions à cela, par exemple quand les objets sont des enfants d’objets mis à l’échelle.
    
    ![MR213_BuildSettings](images/mrlearning-base-ch2-1step6ima.PNG)
 
@@ -97,7 +97,7 @@ Cliquez sur la liste déroulante qui indique aucune fonction. Sélectionnez Mesh
 
 ![MR213_BuildSettings](images/mrlearning-base-ch2-2step7imb.PNG)
 
-Accédez au panneau projet et recherchez le matériel pour lequel vous souhaitez le changer. Pour cet exemple, vous allez utiliser la documentation MRTK_Standard_Cyan, qui se trouve en tapant «cyan» dans la barre de recherche de l’onglet projet. (Le MRTK comprend de nombreux matériaux et couleurs à sélectionner.) Faites glisser le matériau vers la zone sous MeshRenderer. Material. Vous trouverez les matériaux du MRTK dans Assets>MixedRealityToolkit.SDK>StandardAssets>Materials (Ressources>MixedRealityToolkit.SDK>Ressources standard>Matériaux).
+Accédez au panneau projet et recherchez le matériel pour lequel vous souhaitez le changer. Pour cet exemple, vous allez utiliser la documentation MRTK_Standard_Cyan, qui se trouve en tapant « cyan » dans la barre de recherche de l’onglet projet. (Le MRTK comprend de nombreux matériaux et couleurs à sélectionner.) Faites glisser le matériau vers la zone sous MeshRenderer. Material. Vous trouverez les matériaux du MRTK dans Assets>MixedRealityToolkit.SDK>StandardAssets>Materials (Ressources>MixedRealityToolkit.SDK>Ressources standard>Matériaux).
 
 ![MR213_BuildSettings](images/mrlearning-base-ch2-1step7imc.PNG)
 
@@ -128,7 +128,7 @@ Répétez cette opération jusqu’à ce que vous ayez cinq boutons. consultez l
 
 ![Mrlearning Base Ch2 3Step2im](images/mrlearning-base-ch2-3step2im.PNG)
 
-3. Déplacez tous les boutons dans la nouvelle collection. Pour ce faire, sélectionnez les cinq objets de bouton dans votre hiérarchie et faites-les glisser tous sous l’objet de jeu ButtonCollection comme indiqué dans l’image ci-dessous. Conseil: sélectionnez plusieurs éléments en maintenant la touche CTRL enfoncée tout en sélectionnant des éléments.
+3. Déplacez tous les boutons dans la nouvelle collection. Pour ce faire, sélectionnez les cinq objets de bouton dans votre hiérarchie et faites-les glisser tous sous l’objet de jeu ButtonCollection comme indiqué dans l’image ci-dessous. Conseil : sélectionnez plusieurs éléments en maintenant la touche CTRL enfoncée tout en sélectionnant des éléments.
 
 ![Mrlearning Base Ch2 3Step3imb](images/mrlearning-base-ch2-3step3imb.PNG)
 
@@ -143,7 +143,7 @@ Le composant de collection d’objets grille vous permet d’organiser des bouto
 
 ![Mrlearning Base Ch2 3Step5im](images/mrlearning-base-ch2-3step5im.PNG)
 
->Remarque : Selon l’orientation des objets enfants ou de l’objet parent, vous devrez probablement ajuster différemment le paramètre d’orientation dans les projets futurs. Il peut également être nécessaire de définir différemment les champs Cell Width (Largeur de cellule) et Cell Height (Hauteur de cellule), en fonction de la taille des objets de votre collection.
+>Remarque : selon l’orientation des objets enfants ou parents, vous devrez probablement ajuster le paramètre d’orientation différemment dans les futurs projets. Il peut également être nécessaire de définir différemment les champs Cell Width (Largeur de cellule) et Cell Height (Hauteur de cellule), en fonction de la taille des objets de votre collection.
 
 ### <a name="adding-text-into-your-scene"></a>Ajout de texte dans votre scène
 
@@ -168,7 +168,7 @@ Dans cette section, vous allez découvrir comment ajouter et modifier du texte d
 ![Lesson2 Chapter4 Step5](images/Lesson2_Chapter4_Step5.JPG)
 
 ## <a name="congratulations"></a>Félicitations !
-Dans cette leçon, vous avez découvert comment copier, personnaliser et configurer un paramètre de profil MRTK (par exemple la visibilité du maillage avec reconnaissance spatiale). Vous avez également découvert comment interagir avec un bouton pour déclencher des événements en utilisant des mains suivies sur HoloLens 2. Enfin, vous avez découvert comment créer une interface utilisateur simple avec Text Mesh Pro d’Unity, le composant de collection d’objets de grille du MRTK.
+Dans cette leçon, vous avez appris à copier, personnaliser et configurer un paramètre de profil MRTK (par exemple, la visibilité spatiale du maillage). Vous avez également appris à interagir avec un bouton pour déclencher des événements à l’aide d’un suivi des mains sur le HoloLens 2. Enfin, vous avez découvert comment créer une interface utilisateur simple avec Text Mesh Pro d’Unity, le composant de collection d’objets de grille du MRTK.
 
-[Leçon suivante : 4. Placement du contenu dynamique et utilisation de solveurs](mrlearning-base-ch3.md)
+[Leçon suivante : 4. placement de contenu dynamique et utilisation de solveurs](mrlearning-base-ch3.md)
 

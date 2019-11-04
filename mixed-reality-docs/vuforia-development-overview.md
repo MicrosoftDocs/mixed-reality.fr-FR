@@ -1,17 +1,17 @@
 ---
 title: Utilisation de Vuforia avec Unity
 description: Tirez parti de Vuforia pour créer des applications Windows Mixed Reality dans Unity.
-author: ailyadis
-ms.author: ''
+author: thetuvix
+ms.author: alexturn
 ms.date: 01/28/2019
 ms.topic: article
 keywords: Vuforia, marqueurs, coordonnées, frame de référence, suivi
-ms.openlocfilehash: c0d2f6d0707e1ddd3ee00d3eb80af9fb459f252b
-ms.sourcegitcommit: c2a5bff423feba7d29d5431c870b6017c2fe1bc2
+ms.openlocfilehash: 0ab87a6262cbe74fd116fdc0a7045961bf8695d9
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66750352"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437137"
 ---
 # <a name="using-vuforia-engine-with-unity"></a>Utilisation du moteur Vuforia avec Unity
 
@@ -25,7 +25,7 @@ Les applications de moteur Vuforia existantes qui ont été générées pour les
 
 [Installez les versions recommandées](install-the-tools.md) de Visual Studio et Unity, puis configurez Unity pour utiliser Visual Studio et l’IDE et le compilateur préférés. 
 
-Lors de l’installation d’Unity, veillez à installer le «serveur principal de scripts .NET Windows Store» ou le «backend de script IL2CPP Windows Store». En outre, veillez à sélectionner «prise en charge de la réalité augmentée Vuforia» pour activer le moteur Vuforia dans Unity.
+Lors de l’installation d’Unity, veillez à installer le « serveur principal de scripts .NET Windows Store » ou le « backend de script IL2CPP Windows Store ». En outre, veillez à sélectionner « prise en charge de la réalité augmentée Vuforia » pour activer le moteur Vuforia dans Unity.
 
 
 ## <a name="getting-started-with-vuforia-engine"></a>Prise en main du moteur Vuforia
@@ -43,8 +43,8 @@ Le développement d’une application de moteur Vuforia pour HoloLens est fondam
 1.  Télécharger l' [exemple de moteur Vuforia pour HoloLens](https://assetstore.unity.com/packages/templates/packs/vuforia-hololens-sample-101553) à partir du magasin d’actifs Unity
 2.  Appliquer les [options de moteur Unity recommandées pour l’alimentation et les performances](performance-recommendations-for-unity.md)
 3.  Ajoutez les exemples de scènes aux scènes dans la Build.
-4.  Définissez votre cible de génération de plateforme pour «plateforme Windows universelle» dans les paramètres de génération > de fichiers.
-5.  Sélectionnez les paramètres de configuration de build de la plateforme suivants: 
+4.  Définissez votre cible de génération de plateforme pour « plateforme Windows universelle » dans les paramètres de génération > de fichiers.
+5.  Sélectionnez les paramètres de configuration de build de la plateforme suivants : 
    * Appareil cible = HoloLens
    * Type de build = D3D
    * SDK = dernière version installée
@@ -52,15 +52,15 @@ Le développement d’une application de moteur Vuforia pour HoloLens est fondam
    * Générer et exécuter sur = ordinateur local
 6.  Définissez un **nom de produit**unique, dans **paramètres du lecteur**, pour servir de nom à l’application lorsqu’elle est installée sur HoloLens.
 7.  Vérifier la **réalité augmentée de Vuforia** et **la réalité virtuelle prise en charge** dans les **paramètres du lecteur > paramètres XR**
-8.  En outre, sous **paramètres de XR**, assurez-vous que «Windows Mixed Reality» est ajouté à la liste des kits de développement logiciel (SDK) de **réalité virtuelle**
+8.  En outre, sous **paramètres de XR**, assurez-vous que « Windows Mixed Reality » est ajouté à la liste des kits de développement logiciel (SDK) de **réalité virtuelle**
 9.  Vérifiez les fonctionnalités suivantes dans les paramètres du lecteur > paramètres de publication 
    * InternetClient
    * WebCam
-   * SpatialPerception: Si vous envisagez d’utiliser l’API observateur de surface
+   * SpatialPerception : Si vous envisagez d’utiliser l’API observateur de surface
 10. Sélectionnez générer pour générer un projet Visual Studio
 11. Générer le fichier exécutable à partir de Visual Studio et l’installer sur votre HoloLens
 
-Remarque : À partir de la version 7,2, l’exemple de moteur Vuforia pour HoloLens inclut un exemple de scène, y compris l’utilisation d’exemples de cibles de modèle
+Remarque : à compter de la version 7,2, l’exemple de moteur Vuforia pour HoloLens inclut un exemple de scène, y compris l’utilisation d’exemples de cibles de modèle
 
 ## <a name="the-vuforia-developer-portal"></a>Portail des développeurs Vuforia
 
@@ -70,12 +70,12 @@ Les développeurs qui cherchent à créer leurs propres expériences AR avec le 
 
 Le [suivi étendu](https://library.vuforia.com/articles/Training/Extended-Tracking) crée une carte de l’environnement pour maintenir le suivi, même lorsqu’une cible n’est plus en vue. Il s’agit de l’équivalent Vuforia Engines du mappage spatial effectué par HoloLens. Lorsque vous activez le suivi étendu sur une cible, vous permettez à la pose de cette cible d’être passée au système de mappage spatial. De cette façon, les cibles peuvent exister à la fois dans les systèmes de coordonnées spatiales du moteur Vuforia et HoloLens, mais pas simultanément.
 
-![Fenêtre Paramètres Unity](images/vuforia-extendedtracking.png)<br>
+![fenêtre Paramètres Unity](images/vuforia-extendedtracking.png)<br>
 *Fenêtre Paramètres Unity*
 
 **Activation du suivi étendu sur une cible**
 
-Le moteur Vuforia transforme automatiquement la pose d’une cible qui utilise le suivi étendu dans le système de coordonnées spatiales HoloLens. Cela permet à HoloLens de prendre le suivi et d’intégrer tout contenu qui augmente dans la carte spatiale de l’environnement cible. Ce processus intervient entre le moteur Vuforia et les API de réalité mixte dans Unity et ne nécessite pas de programmation par le développeur; il est géré automatiquement.
+Le moteur Vuforia transforme automatiquement la pose d’une cible qui utilise le suivi étendu dans le système de coordonnées spatiales HoloLens. Cela permet à HoloLens de prendre le suivi et d’intégrer tout contenu qui augmente dans le mappage spatial de l’environnement de la cible. Ce processus intervient entre le moteur Vuforia et les API de réalité mixte dans Unity et ne nécessite pas de programmation par le développeur ; il est géré automatiquement.
 
 **Voici ce qui se produit...**
 1. Le dispositif de suivi cible de Vuforia reconnaît la cible
@@ -86,16 +86,16 @@ Le moteur Vuforia transforme automatiquement la pose d’une cible qui utilise l
 
 Le développeur peut contrôler ce processus, pour retourner le contrôle à Vuforia, en désactivant le suivi étendu sur le TargetBehaviour.
 
-**REMARQUE :** À compter de Vuforia 7,2, le suivi étendu n’est plus activé sur une base par cible. Au lieu de cela, les développeurs peuvent activer le suivi des appareils pour activer des fonctionnalités similaires sur toutes les cibles de la scène.
+**Remarque :** À compter de Vuforia 7,2, le suivi étendu n’est plus activé sur une base par cible. Au lieu de cela, les développeurs peuvent activer le suivi des appareils pour activer des fonctionnalités similaires sur toutes les cibles de la scène.
 
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a>Articles associés
 * [Installer les outils](install-the-tools.md)
 * [Systèmes de coordonnées](coordinate-systems.md)
 * [Mappage spatial](spatial-mapping.md)
 * [Appareil photo dans Unity](camera-in-unity.md)
 * [Exportation et création de solutions Unity Visual Studio](exporting-and-building-a-unity-visual-studio-solution.md)
-* [Documentation Vuforia: Développement pour Windows 10 dans Unity](https://library.vuforia.com/articles/Solution/Developing-for-Windows-10-in-Unity)
-* [Documentation Vuforia: Comment installer l’extension Vuforia Unity](https://library.vuforia.com/articles/Solution/Installing-the-Unity-Extension)
-* [Documentation Vuforia: Utilisation de l’exemple HoloLens dans Unity](https://library.vuforia.com/articles/Solution/Working-with-the-HoloLens-sample-in-Unity)
-* [Documentation Vuforia: Suivi étendu dans Vuforia](https://library.vuforia.com/articles/Training/Extended-Tracking)
+* [Documentation Vuforia : développement pour Windows 10 dans Unity](https://library.vuforia.com/articles/Solution/Developing-for-Windows-10-in-Unity)
+* [Documentation Vuforia : comment installer l’extension Vuforia Unity](https://library.vuforia.com/articles/Solution/Installing-the-Unity-Extension)
+* [Documentation Vuforia : utilisation de l’exemple HoloLens dans Unity](https://library.vuforia.com/articles/Solution/Working-with-the-HoloLens-sample-in-Unity)
+* [Documentation Vuforia : suivi étendu dans Vuforia](https://library.vuforia.com/articles/Training/Extended-Tracking)

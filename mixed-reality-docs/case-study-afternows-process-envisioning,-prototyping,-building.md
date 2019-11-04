@@ -1,31 +1,31 @@
 ---
-title: 'Étude de cas: AfterNow, prototypage, création de processus'
+title: Étude de cas-processus de AfterNow
 description: AfterNow, création de prototypes, création de processus
 author: rwinj
 ms.author: randyw
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, AfterNow, Visioning, prototypage, génération
-ms.openlocfilehash: 778ce2ff8ff69a5cdff1cc22b192100a9ab33347
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: d555c61c5c8ba917c99a94da594551658a717e70
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63523499"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436937"
 ---
-# <a name="case-study---afternows-process---envisioning-prototyping-building"></a>Étude de cas: AfterNow, prototypage, création de processus
+# <a name="case-study---afternows-process"></a>Étude de cas-processus de AfterNow
 
-Chez [AfterNow](https://www.afternow.io/), nous travaillons avec vous pour transformer vos idées et aspirations en concrètes, en produits entièrement opérationnels et en expériences prêtes pour le marché. Mais avant d’écrire une seule ligne de code, nous créons un plan à l’aide d’un processus appelé «vision».
+Chez [AfterNow](https://www.afternow.io/), nous travaillons avec vous pour transformer vos idées et aspirations en concrètes, en produits entièrement opérationnels et en expériences prêtes pour le marché. Mais avant d’écrire une seule ligne de code, nous créons un plan à l’aide d’un processus appelé « vision ».
 
-![Qu’est-ce que l’approche?](images/whatisenvisioning-640px.png)
+![Qu’est-ce que l’approche ?](images/whatisenvisioning-640px.png)
 
-## <a name="what-is-envisioning"></a>Qu’est-ce que l’approche?
+## <a name="what-is-envisioning"></a>Qu’est-ce que l’approche ?
 
 L’approvisionnement est un processus idéation utilisé pour la conception du produit. Nous simplifions un grand pool d’idées en un ou plusieurs concepts réalistes calculés à exécuter.
 
 Ce processus va mettre en lumière un grand nombre de problèmes et de blocages susceptibles d’apparaître dans le produit. Une défaillance précoce et rapide permet d’économiser beaucoup de temps et d’argent.
 
-Tout au long de ce processus, nous vous fournirons des notes sur les idées et les conclusions du groupe. Lorsque nous aurons terminé, vous recevrez un document d’un script et une vidéo de notre étape «agir», une simulation du produit proposé en action. Il s’agit de plans concrets pour votre produit, une infrastructure que vous pouvez conserver. Dans l’idéal, l’étape suivante consiste à créer le produit, ce qui nous permet de tester et d’expérimenter la véritable affaire.
+Tout au long de ce processus, nous vous fournirons des notes sur les idées et les conclusions du groupe. Lorsque nous aurons terminé, vous recevrez un document d’un script et une vidéo de notre étape « agir », une simulation du produit proposé en action. Il s’agit de plans concrets pour votre produit, une infrastructure que vous pouvez conserver. Dans l’idéal, l’étape suivante consiste à créer le produit, ce qui nous permet de tester et d’expérimenter la véritable affaire.
 
 Voici une lecture quotidienne du processus, le temps nécessaire à chaque étape et la personne dont vous aurez besoin pour votre équipe.
 
@@ -49,13 +49,13 @@ Il est important de sélectionner les participants appropriés à ce processus. 
 
 ## <a name="day-1---map"></a>JOUR 1-mapper
 
-**Répertorier les objectifs & les contraintes; définir un objectif à long terme-5 minutes**
+**Répertorier les objectifs & les contraintes ; définir un objectif à long terme-5 minutes**
 
-Si nous étions entièrement optimistes, qu’est-ce que notre objectif à long terme? Pourquoi créer cette solution en réalité mixte et quels sont les problèmes que nous essayons de résoudre?
+Si nous étions entièrement optimistes, qu’est-ce que notre objectif à long terme ? Pourquoi créer cette solution en réalité mixte et quels sont les problèmes que nous essayons de résoudre ?
 
 **Liste des questions sur les sprints-5 minutes**
 
-Soyez un peu pragmatique et répertoriez les appréhensions au format de question. Comment pouvons-nous faire échouer? Pour atteindre l’objectif à long terme, qu’est-ce qui doit être vrai? Si le projet a échoué, que peut-il en avoir provoqué?
+Soyez un peu pragmatique et répertoriez les appréhensions au format de question. Comment pouvons-nous faire échouer ? Pour atteindre l’objectif à long terme, qu’est-ce qui doit être vrai ? Si le projet a échoué, que peut-il en avoir provoqué ?
 
 **Créer une carte de fluides-jusqu’à 1 heure**
 
@@ -65,18 +65,18 @@ Il s’agit d’une carte fonctionnelle approximative (non détaillée). Nous é
 
 L’objectif de cet exercice est d’améliorer notre compréhension collective du problème. Ici, nous pouvons ajouter des éléments à la carte et corriger les erreurs qu’elle contient. Si une partie du processus peut être développée plus en détail, nous communiquons avec l’expert.
 
-Notre meilleure pratique pour ce processus se produit lorsque nous prenons des remarques individuelles dans la manière dont nous pouvons utiliser le format HMW. HMW est une technique développée par P & G dans le 70S. Il s’agit d’une méthode de note qui se présente sous la forme d’une question qui, en fin de compte, se traduit par des notes organisées et classées par ordre de priorité. Nous allons nous contenter d’une idée par note de pense-bête qui commence par l’expression «comment faire.» Par exemple, comment pouvons-nous communiquer les valeurs de [votre entreprise] en réalité mixte?
+Notre meilleure pratique pour ce processus se produit lorsque nous prenons des remarques individuelles dans la manière dont nous pouvons utiliser le format HMW. HMW est une technique développée par P & G dans le 70S. Il s’agit d’une méthode de note qui se présente sous la forme d’une question qui, en fin de compte, se traduit par des notes organisées et classées par ordre de priorité. Nous allons nous contenter d’une idée par note de pense-bête qui commence par l’expression « comment faire. » Par exemple, comment pouvons-nous communiquer les valeurs de [votre entreprise] en réalité mixte ?
 
-![Organiser et décider](images/organize-and-decide-640px.png)<br>
+![organiser et décider](images/organize-and-decide-640px.png)<br>
 *Organiser et décider*
 
 **Organiser les notes HMW**
 
-Nous prenons toutes les notes «comment pouvons-nous» et nous les collant sur un mur. Nous les catégoriserons ensuite dans des thèmes perceptibles au fur et à mesure de leur apparition.
+Nous prenons toutes les notes « comment pouvons-nous » et nous les collant sur un mur. Nous les catégoriserons ensuite dans des thèmes perceptibles au fur et à mesure de leur apparition.
 
 **Voter sur HMW notes**
 
-Une fois que toutes les notes se trouvent dans les catégories appropriées, nous voterons sur nos questions préférées. Tout le monde obtient deux votes; le décideur obtient quatre votes.
+Une fois que toutes les notes se trouvent dans les catégories appropriées, nous voterons sur nos questions préférées. Tout le monde obtient deux votes ; le décideur obtient quatre votes.
 
 **Choisir une cible**
 
@@ -104,12 +104,12 @@ Nous consacrons huit minutes à la création de huit frames. C’est là que nou
 
 Nous consacrons 30 minutes à esquisser des storyboards. Nous prenons les meilleures variations d’idées de 8S bizarres et créons un Storyboard à trois volets de l’idée.
 
-![Esquisser des storyboards](images/sketching-storyboards-640px.png)<br>
+![les storyboards d’esquisse](images/sketching-storyboards-640px.png)<br>
 *Esquisser des storyboards*
 
 ## <a name="day-3---decide"></a>JOUR 3-décider
 
-Ce jour implique un grand nombre de critique et de vote. Voici la répartition:
+Ce jour implique un grand nombre de critique et de vote. Voici la répartition :
 
 **Critique silencieux**
 

@@ -6,57 +6,57 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, réalité mixte, Académie, Unity, didacticiel, API, fonctions, stockage, hololens, immersif, VR
-ms.openlocfilehash: 5f3d0c6990249bc32e4c0f55c72dd884c4c2214e
-ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
+ms.openlocfilehash: 79c276d45163465c9921d02343d41d52d5f094e7
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67694557"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437989"
 ---
 >[!NOTE]
 >Les didacticiels d’Académie de la réalité mixte ont été conçus avec les casques immersif (1er génération) et de réalité mixte à l’esprit.  Par conséquent, nous pensons qu’il est important de ne pas mettre en place ces didacticiels pour les développeurs qui cherchent toujours des conseils en matière de développement pour ces appareils.  Ces didacticiels ne seront **_pas_** mis à jour avec les derniers ensembles d’outils ou interactions utilisés pour HoloLens 2.  Ils seront conservés pour continuer à travailler sur les appareils pris en charge. Une nouvelle série de didacticiels sera publiée à l’avenir qui vous montrera comment développer pour HoloLens 2.  Cet avis sera mis à jour avec un lien vers ces didacticiels lors de leur publication.
 
 <br> 
 
-# <a name="mr-and-azure-305-functions-and-storage"></a>MR et Azure 305: Fonctions et stockage
+# <a name="mr-and-azure-305-functions-and-storage"></a>MR et Azure 305 : fonctions et stockage
 
 ![produit final-début](images/AzureLabs-Lab5-00.png)
 
 Dans ce cours, vous allez apprendre à créer et à utiliser des Azure Functions et à stocker des données avec une ressource de stockage Azure, au sein d’une application de réalité mixte.
 
-*Azure Functions* est un service Microsoft, qui permet aux développeurs d’exécuter de petits morceaux de code, «functions», dans Azure. Cela permet de déléguer le travail au Cloud, plutôt qu’à votre application locale, ce qui peut avoir de nombreux avantages. *Azure Functions* prend en charge plusieurs langages de\#développement,\#notamment C, F, node. js, Java et php. Pour plus d’informations, consultez l' [article Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-overview).
+*Azure Functions* est un service Microsoft, qui permet aux développeurs d’exécuter de petits morceaux de code, « functions », dans Azure. Cela permet de déléguer le travail au Cloud, plutôt qu’à votre application locale, ce qui peut avoir de nombreux avantages. *Azure Functions* prend en charge plusieurs langages de développement, notamment C\#, F\#, node. js, Java et php. Pour plus d’informations, consultez l' [article Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-overview).
 
 Le *stockage Azure* est un service Cloud Microsoft qui permet aux développeurs de stocker des données, avec l’assurance qu’elles seront hautement disponibles, sécurisées, durables, évolutives et redondantes. Cela signifie que Microsoft traitera toutes les tâches de maintenance et les problèmes critiques pour vous. Pour plus d’informations, consultez l' [article stockage Azure](https://docs.microsoft.com/azure/storage/common/storage-introduction).
 
-Une fois ce cours terminé, vous disposerez d’une application de casque immersif en réalité mixte, qui sera en mesure d’effectuer les opérations suivantes:
+Une fois ce cours terminé, vous disposerez d’une application de casque immersif en réalité mixte, qui sera en mesure d’effectuer les opérations suivantes :
 
 1.  Permet à l’utilisateur de faire un regard sur une scène.
-2.  Déclencher la génération d’objets quand l’utilisateur passe d’un «bouton» en 3D.
+2.  Déclencher la génération d’objets quand l’utilisateur passe d’un « bouton » en 3D.
 3.  Les objets générés sont choisis par une fonction Azure.
 4.  À mesure que chaque objet est généré, l’application stocke le type d’objet dans un *fichier Azure*, situé dans le *stockage Azure*.
 5.  Lors du chargement d’une deuxième fois, les données du *fichier Azure* sont récupérées et utilisées pour relire les actions de génération à partir de l’instance précédente de l’application.
 
 Dans votre application, c’est à vous de savoir comment vous allez intégrer les résultats à votre conception. Ce cours est conçu pour vous apprendre à intégrer un service Azure à votre projet Unity. C’est votre travail d’utiliser les connaissances que vous avez acquises dans ce cours pour améliorer votre application de réalité mixte.
 
-## <a name="device-support"></a>Prise en charge des appareils
+## <a name="device-support"></a>Périphériques pris en charge
 
 <table>
 <tr>
 <th>Course</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Casques immersifs</a></th>
 </tr><tr>
-<td>MR et Azure 305: Fonctions et stockage</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
+<td>MR et Azure 305 : fonctions et stockage</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
 </table>
 
 > [!NOTE]
 > Bien que ce cours se concentre principalement sur les casques de Windows Mixed Reality (VR), vous pouvez également appliquer ce que vous allez apprendre dans ce cours à Microsoft HoloLens. À mesure que vous suivez le cours, vous verrez des remarques sur les modifications que vous devrez peut-être utiliser pour prendre en charge HoloLens.
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables
 
 > [!NOTE]
 > Ce didacticiel est conçu pour les développeurs qui ont une expérience de base C#avec Unity et. Sachez également que les conditions préalables et les instructions écrites dans ce document représentent les éléments qui ont été testés et vérifiés au moment de l’écriture (mai 2018). Vous êtes libre d’utiliser le logiciel le plus récent, tel qu’indiqué dans l’article [installer les outils](install-the-tools.md) , bien qu’il ne soit pas supposé que les informations de ce cours correspondent parfaitement à ce que vous trouverez dans les logiciels plus récents que ceux répertoriés ci-dessous.
 
-Nous vous recommandons d’utiliser le matériel et les logiciels suivants pour ce cours:
+Nous vous recommandons d’utiliser le matériel et les logiciels suivants pour ce cours :
 
 - Un PC de développement, [compatible avec Windows Mixed Reality](https://support.microsoft.com/help/4039260/windows-10-mixed-reality-pc-hardware-guidelines) pour le développement d’écouteurs immersif (VR)
 - [Windows 10 automne Creators Update (ou version ultérieure) avec le mode développeur activé](install-the-tools.md#installation-checklist)
@@ -95,7 +95,7 @@ Pour utiliser le **service de stockage Azure**, vous devez créer et configurer 
 
     1.  Insérez un *nom* pour votre compte. n’oubliez pas que ce champ accepte uniquement des chiffres et des lettres minuscules.
 
-    2.  Pour *modèle de déploiement*, sélectionnez Resource **Manager**.
+    2.  Pour *modèle de déploiement*, sélectionnez **Resource Manager**.
 
     3.  Pour *type de compte*, sélectionnez **stockage (à usage général v1)** .
 
@@ -127,11 +127,11 @@ Pour utiliser le **service de stockage Azure**, vous devez créer et configurer 
 
 7.  Cliquez sur les notifications pour explorer votre nouvelle instance de service.
 
-    ![Accéder à la ressource](images/AzureLabs-Lab5-05.png)
+    ![accéder à la ressource](images/AzureLabs-Lab5-05.png)
 
 8.  Cliquez sur le bouton **atteindre la ressource** dans la notification pour explorer votre nouvelle instance de service. Vous êtes dirigé vers votre nouvelle instance de service de *compte de stockage* .
 
-    ![clés d'accès](images/AzureLabs-Lab5-06.png)
+    ![touches d’accès rapide](images/AzureLabs-Lab5-06.png)
 
 9.  Cliquez sur *clés d’accès*pour afficher les points de terminaison de ce service Cloud. Utilisez *le bloc-notes* ou une version similaire pour copier l’une de vos clés pour une utilisation ultérieure. Notez également la valeur de la *chaîne de connexion* , car elle sera utilisée dans la classe *AzureServices* , que vous allez créer ultérieurement.
 
@@ -139,11 +139,11 @@ Pour utiliser le **service de stockage Azure**, vous devez créer et configurer 
 
 ## <a name="chapter-2---setting-up-an-azure-function"></a>Chapitre 2-Configuration d’une fonction Azure
 
-Vous allez maintenant écrire une  **fonction** Azure dans le service Azure.
+Vous allez maintenant écrire une **fonction** Azure dans le service Azure.
 
 Vous pouvez utiliser une **fonction Azure** pour effectuer presque tout ce que vous feriez avec une fonction classique dans votre code, à la différence que cette fonction est accessible par n’importe quelle application disposant d’informations d’identification pour accéder à votre compte Azure.
 
-Pour créer une fonction Azure:
+Pour créer une fonction Azure :
 
 1.  À partir de votre *portail Azure*, cliquez sur **nouveau** dans l’angle supérieur gauche, recherchez *Function App*, puis cliquez sur **entrée**.
 
@@ -240,7 +240,7 @@ Ce qui suit est une configuration classique pour le développement avec une réa
 Configurez et testez votre casque immersif en réalité mixte.
 
 > [!NOTE]
-> Vous n’aurez **pas** besoin de contrôleurs de mouvement pour ce cours. Si vous avez besoin de la prise en charge de la configuration du casque immersif, consultez [l’article Configuration de la réalité mixte](https://support.microsoft.com/en-au/help/4043101/windows-10-set-up-windows-mixed-reality).
+> Vous n’aurez **pas** besoin de contrôleurs de mouvement pour ce cours. Si vous avez besoin de la prise en charge de la configuration du casque immersif, consultez [l’article Configuration de la réalité mixte](https://support.microsoft.com/help/4043101/windows-10-set-up-windows-mixed-reality).
 
 1.  Ouvrez Unity et cliquez sur **nouveau**.
 
@@ -250,15 +250,15 @@ Configurez et testez votre casque immersif en réalité mixte.
 
     ![Donnez un nom au nouveau projet Unity](images/AzureLabs-Lab5-18.png)
 
-3.  Si Unity est ouvert, il est conseillé de vérifier que l' **éditeur de script** par défaut est défini sur **Visual Studio**. Accédez à **modifier** > les**Préférences** , puis à partir de la nouvelle fenêtre, accédez à **outils externes**. Remplacez l' **éditeur de script externe** par **Visual Studio 2017**. Fermez la fenêtre **Préférences** .
+3.  Si Unity est ouvert, il est conseillé de vérifier que l' **éditeur de script** par défaut est défini sur **Visual Studio**. Accédez à **modifier** > **Préférences** puis, dans la nouvelle fenêtre, accédez à **outils externes**. Remplacez l' **éditeur de script externe** par **Visual Studio 2017**. Fermez la fenêtre **Préférences** .
 
     ![définir Visual Studio comme éditeur de script](images/AzureLabs-Lab5-19.png)
 
-4.  Ensuite, accédez à **fichier** > **paramètres de build** et basculez la plateforme sur **plateforme Windows universelle**, en cliquant sur le bouton **changer de plateforme** .
+4.  Accédez ensuite à **fichier** > **paramètres de build** et basculez la plateforme sur **plateforme Windows universelle**, en cliquant sur le bouton changer de **plateforme** .
 
     ![basculer la plateforme sur UWP](images/AzureLabs-Lab5-20.png)
 
-5.  Accédez à **fichier** > **paramètres de build** et assurez-vous que:
+5.  Accédez à **fichier** > **paramètres de build** et assurez-vous que :
 
     1. L' **appareil cible** est défini sur **n’importe quel appareil**.
 
@@ -278,11 +278,11 @@ Configurez et testez votre casque immersif en réalité mixte.
 
             ![Ajouter des scènes ouvertes](images/AzureLabs-Lab5-21.png)
 
-        2.  Créez un dossier pour cela, ainsi que toute nouvelle scène, puis sélectionnez le bouton **nouveau dossier** pour créer un nouveau dossier, puis nommez- le Scenes.
+        2.  Créez un dossier pour cela, ainsi que toute nouvelle scène, puis sélectionnez le bouton **nouveau dossier** pour créer un nouveau dossier, puis nommez-le **scenes**.
 
             ![créer un dossier de scènes](images/AzureLabs-Lab5-22.png)
 
-        3.  Ouvrez le dossier scenes nouvellement créé, puis dans le champ **nom de fichier:** , tapez **FunctionsScene**, puis cliquez sur  **Enregistrer**.
+        3.  Ouvrez le dossier **scenes** nouvellement créé, puis dans le champ **nom de fichier :** , tapez **FunctionsScene**, puis cliquez sur **Enregistrer**.
 
             ![enregistrer les fonctions, scène](images/AzureLabs-Lab5-23.png)
 
@@ -294,7 +294,7 @@ Configurez et testez votre casque immersif en réalité mixte.
 
     ![paramètres du lecteur dans Inspector](images/AzureLabs-Lab5-25.png)
 
-8.  Dans ce volet, quelques paramètres doivent être vérifiés:
+8.  Dans ce volet, quelques paramètres doivent être vérifiés :
 
     1.  Sous l’onglet **autres paramètres** :
 
@@ -302,7 +302,7 @@ Configurez et testez votre casque immersif en réalité mixte.
         2.  Le **backend de script** doit être **.net**
         3.  Le **niveau de compatibilité** de l’API doit être **.net 4,6**
 
-    2.  Dans l’onglet **paramètres de publication** , sous **fonctionnalités**, activez la case à cocher:
+    2.  Dans l’onglet **paramètres de publication** , sous **fonctionnalités**, activez la case à cocher :
         
         -  **InternetClient**
 
@@ -312,20 +312,20 @@ Configurez et testez votre casque immersif en réalité mixte.
 
         ![définir les paramètres XR](images/AzureLabs-Lab5-27.png)
 
-9.  De retour dans les *paramètres de build* , les *projets C# Unity* ne sont plus grisés. Cochez la case en regard de cette option.
+9.  De retour dans les *paramètres de build* , les  *C# projets Unity* ne sont plus grisés. Cochez la case en regard de cette option.
 
     ![Tick (projets c#)](images/AzureLabs-Lab5-28.png)
 
 10.  Fermez la fenêtre Paramètres de Build.
 
-11. Enregistrez votre scène et votre projet (**fichier** > **Save Scene/file** > **Save Project**).
+11. Enregistrez votre scène et votre projet (**fichier** > **enregistrer la scène/le fichier** > enregistrer le **projet**).
 
 ## <a name="chapter-4---setup-main-camera"></a>Chapitre 4-configurer l’appareil photo principal
 
 > [!IMPORTANT]
 > Si vous souhaitez ignorer les composants de la *configuration Unity* de ce cours et continuer directement dans le code, n’hésitez pas à [Télécharger ce fichier. pour Unity](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20305%20-%20Functions%20and%20storage/Azure-MR-305.unitypackage)et à l’importer dans votre projet en tant que [package personnalisé](https://docs.unity3d.com/Manual/AssetPackages.html). Elle contient également les dll du chapitre suivant. Après l’importation, passez [au chapitre 7](#chapter-7---create-the-azureservices-class). 
 
-1.  Dans le *volet hiérarchie*, vous trouverez un objet appelé **caméra principale**, cet objet représente le point de vue «Head» une fois que vous êtes «dans» votre application.
+1.  Dans le *volet hiérarchie*, vous trouverez un objet appelé **caméra principale**, cet objet représente le point de vue « Head » une fois que vous êtes « dans » votre application.
 
 2.  Avec le tableau de bord Unity devant vous, sélectionnez la **caméra principale gameobject**. Vous remarquerez que le *panneau Inspecteur* (généralement situé à droite dans le tableau de bord) affichera les différents composants de ce *gameobject*, avec la *transformation* en haut, suivi de l' *appareil photo*et d’autres composants. Vous devez réinitialiser la transformation de la caméra principale, afin qu’elle soit positionnée correctement.
 
@@ -333,21 +333,21 @@ Configurez et testez votre casque immersif en réalité mixte.
 
     ![réinitialiser la transformation](images/AzureLabs-Lab5-29.png)
 
-4.  Ensuite, mettez à jour le composant **transformer** pour qu’il ressemble à ce qui suit:
+4.  Ensuite, mettez à jour le composant **transformer** pour qu’il ressemble à ce qui suit :
 
     |         |    TRANSFORMATION-POSITION   |       |
     | :-----: | :-----------------------: | :----:|
-    | **X**   | **Y**                     | **Z** |
+    | **X**   | **Y**                     | **Lettre** |
     | 0       | 1                         | 0     |    
 
     |       | TRANSFORMATION-ROTATION |       |
     | :---: | :------------------: | :----:|
-    | **X** | **Y**                | **Z** |
+    | **X** | **Y**                | **Lettre** |
     | 0     | 0                    | 0     |
 
     |       | TRANSFORMATION-METTRE À L’ÉCHELLE |       |
     | :---: | :---------------: | :---: |
-    | **X** | **Y**             | **Z** |
+    | **X** | **Y**             | **Lettre** |
     | 1     | 1                 | 1     |
 
     ![définir la transformation de l’appareil photo](images/AzureLabs-Lab5-30.png)
@@ -362,12 +362,12 @@ Configurez et testez votre casque immersif en réalité mixte.
 
     |       | TRANSFORMATION-POSITION |       |
     | :---: | :------------------: | :---: |
-    | **X** | **Y**                | **Z** |
+    | **X** | **Y**                | **Lettre** |
     | 0     | 0                    | 4     |
 
     |       | TRANSFORMATION-METTRE À L’ÉCHELLE |       |
     | :---: | :---------------: | :---: |
-    | **X** | **Y**             | **Z** |
+    | **X** | **Y**             | **Lettre** |
     | 10    | 1                 | 10    |
 
     ![définir la position et l’échelle du plan](images/AzureLabs-Lab5-32.png)
@@ -382,15 +382,15 @@ Configurez et testez votre casque immersif en réalité mixte.
 
         |       | TRANSFORMATION-POSITION |       |
         | :---: | :------------------: |:-----:|
-        | **X** | **Y**                | **Z** |
-        | 0     | 3                    | 5\.     |
+        | **X** | **Y**                | **Lettre** |
+        | 0     | 3                    | 5     |
 
 
         ![définir la transformation du bouton de pointage](images/AzureLabs-Lab5-34.png)
 
         ![mode scène de bouton en regard](images/AzureLabs-Lab5-35.png)
 
-    3.  Cliquez sur le bouton **de liste** déroulante des balises et cliquez sur **Ajouter une étiquette** pour ouvrir le *volet balises & couches*.
+    3.  Cliquez sur le bouton de liste déroulante **des balises** et cliquez sur **Ajouter une étiquette** pour ouvrir le *volet balises & couches*.
 
         ![Ajouter une nouvelle balise](images/AzureLabs-Lab5-36.png)
 
@@ -412,7 +412,7 @@ Configurez et testez votre casque immersif en réalité mixte.
 
         |       | TRANSFORMATION-POSITION |       |
         | :---: | :------------------: |:----: |
-        | **X** |**Y**                 | **Z** |
+        | **X** |**Y**                 | **Lettre** |
         | 0     | -1                   | 0     |
 
         ![mettre à jour la transformation de point de génération de forme](images/AzureLabs-Lab5-40.png)
@@ -421,40 +421,40 @@ Configurez et testez votre casque immersif en réalité mixte.
 
 6.  Vous allez ensuite créer un objet **texte 3D** pour fournir des commentaires sur l’état du service Azure.
 
-    Cliquez à nouveau avec le bouton droit sur **GazeButton** dans le panneau hiérarchie et ajoutez**un objet** **3D 3D Object** > en tant qu' *enfant*.
+    Cliquez à nouveau avec le bouton droit sur **GazeButton** dans le panneau de hiérarchie et ajoutez un objet **3D** > objet de **texte** 3D en tant qu' *enfant*.
 
     ![créer un objet texte 3D](images/AzureLabs-Lab5-42.png)
 
 7.  Renommez l’objet **3D Text** en **AzureStatusText**.
 
-8.  Modifiez la transformation de l’objet **AzureStatusText** comme suit:
+8.  Modifiez la transformation de l’objet **AzureStatusText** comme suit :
 
     |       | TRANSFORMATION-POSITION |       |
     | :---: | :------------------: | :---: |
-    | **X** | **Y**                | **Z** |
+    | **X** | **Y**                | **Lettre** |
     | 0     | 0                    | -0,6  |
 
     |       | TRANSFORMATION-METTRE À L’ÉCHELLE |       |
     | :---: | :---------------: | :---: |
-    | **X** | **Y**             | **Z** |
-    | 0.1   | 0.1               | 0.1   |
+    | **X** | **Y**             | **Lettre** |
+    | 0,1   | 0,1               | 0,1   |
 
 
     > [!NOTE]
     > Ne vous inquiétez pas si elle semble être décentrée, car cela sera résolu lorsque le composant de maillage de texte ci-dessous sera mis à jour.
 
-9.  Modifiez le composant de **maillage de texte** pour qu’il corresponde à ce qui suit:
+9.  Modifiez le composant de **maillage de texte** pour qu’il corresponde à ce qui suit :
 
     ![définir le composant de maillage de texte](images/AzureLabs-Lab5-43.png)
 
     > [!TIP]
-    > La couleur sélectionnée ici est la couleur hexadécimale: **000000FF**, cependant, n’hésitez pas à choisir les vôtres, assurez-vous simplement qu’elles sont lisibles.
+    > La couleur sélectionnée ici est la couleur hexadécimale : **000000FF**, bien que vous ne soyez pas libre de choisir la vôtre, assurez-vous qu’elle est lisible.
 
-10. La structure de votre volet de hiérarchie doit maintenant ressembler à ceci:
+10. La structure de votre volet de hiérarchie doit maintenant ressembler à ceci :
 
     ![maillage de texte en mode scène](images/AzureLabs-Lab5-43b.png)
 
-10. Votre scène doit maintenant ressembler à ceci:
+10. Votre scène doit maintenant ressembler à ceci :
 
     ![maillage de texte en mode scène](images/AzureLabs-Lab5-44.png)
 
@@ -465,11 +465,11 @@ Vous allez utiliser le stockage Azure pour Unity (qui utilise lui-même le kit d
 
 Il existe actuellement un problème connu dans Unity qui nécessite que les plug-ins soient reconfigurés après l’importation. Ces étapes (4-7 dans cette section) ne sont plus nécessaires une fois que le bogue a été résolu.
 
-Pour importer le kit de développement logiciel (SDK) dans votre propre projet, assurez-vous d’avoir téléchargé la dernière version [de «. pour Unity» à partir de GitHub](https://aka.ms/azstorage-unitysdk). Ensuite, procédez comme suit:
+Pour importer le kit de développement logiciel (SDK) dans votre propre projet, assurez-vous d’avoir téléchargé la dernière version [de « . pour Unity » à partir de GitHub](https://aka.ms/azstorage-unitysdk). Ensuite, procédez comme suit :
 
-1.  Ajoutez le fichier **. pour Unity** à Unity à l’aide de l’option de menu**package personnalisé** du**package** > d’importation de **ressources** > .
+1.  Ajoutez le fichier **. pour Unity** à Unity à l’aide de l’option de menu **ressources** > **importer le package** > **package personnalisé** .
 
-2.  Dans la zone **importer le package Unity** qui s’affiche, vous pouvez tout sélectionner sous**stockage**du **plug-in** > . Décochez tout le reste, car il n’est pas nécessaire pour ce cours.
+2.  Dans la zone **importer le package Unity** qui s’affiche, vous pouvez sélectionner tout dans le module de **stockage** > de **plug-in** . Décochez tout le reste, car il n’est pas nécessaire pour ce cours.
 
     ![importer dans le package](images/AzureLabs-Lab5-45.png)
 
@@ -477,22 +477,22 @@ Pour importer le kit de développement logiciel (SDK) dans votre propre projet, 
 
 4.  Accédez au dossier *stockage* sous *plug-ins*, dans la vue projet, puis sélectionnez les plug-ins suivants *uniquement*:
 
-    -   Microsoft.Data.Edm
-    -   Microsoft.Data.OData
-    -   Microsoft.WindowsAzure.Storage
+    -   Microsoft. Data. Edm
+    -   Microsoft. Data. OData
+    -   Microsoft. WindowsAzure. Storage
     -   Newtonsoft. JSON
     -   System. spatial
 
         ![décocher une plateforme](images/AzureLabs-Lab5-46.png)
 
-5.  Une fois *ces plug-ins spécifiques* sélectionnés, décochez  *toutes les plateformes* et décochez  *WSAPlayer* , puis cliquez sur **appliquer**.
+5.  Une fois *ces plug-ins spécifiques* sélectionnés, **décochez** *toutes les plateformes* et **décochez** *WSAPlayer* , puis cliquez sur **appliquer**.
 
     ![appliquer des dll de plateforme](images/AzureLabs-Lab5-47.png)
 
     > [!NOTE]
     > Nous marqueons ces plug-ins particuliers à utiliser uniquement dans l’éditeur Unity. Cela est dû au fait qu’il existe différentes versions des mêmes plug-ins dans le dossier WSA qui seront utilisées après l’exportation du projet à partir d’Unity.
 
-6.  Dans le dossier de plug-in de *stockage* , sélectionnez uniquement:
+6.  Dans le dossier de plug-in de *stockage* , sélectionnez uniquement :
 
     -   Microsoft. Data. services. client
 
@@ -503,13 +503,13 @@ Pour importer le kit de développement logiciel (SDK) dans votre propre projet, 
     ![ne pas appliquer de traitement](images/AzureLabs-Lab5-49.png)
 
     > [!NOTE]
-    > Nous marquant ce plug-in «ne pas traiter», car l’assembly Unity Patcher a des difficultés à traiter ce plug-in. Le plug-in fonctionne toujours même s’il n’est pas traité.
+    > Nous marquant ce plug-in « ne pas traiter », car l’assembly Unity Patcher a des difficultés à traiter ce plug-in. Le plug-in fonctionne toujours même s’il n’est pas traité.
 
 ## <a name="chapter-7---create-the-azureservices-class"></a>Chapitre 7-créer la classe AzureServices
 
 La première classe que vous allez créer est la classe *AzureServices* .
 
-La classe *AzureServices* est chargée des opérations suivantes:
+La classe *AzureServices* est chargée des opérations suivantes :
 
 -   Stockage des informations d’identification du compte Azure.
 
@@ -517,9 +517,9 @@ La classe *AzureServices* est chargée des opérations suivantes:
 
 -   Le chargement et le téléchargement du fichier de données dans votre stockage cloud Azure.
 
-Pour créer cette classe:
+Pour créer cette classe :
 
-1.  Cliquez avec le bouton droit dans le dossier *Asset* , situé dans le panneau projet, **créez** > le**dossier**. Nommez le dossier **scripts**.
+1.  Cliquez avec le bouton droit sur le dossier *Asset* , situé dans le panneau projet, **créez** > **dossier**. Nommez le dossier **scripts**.
 
     ![créer un dossier](images/AzureLabs-Lab5-50.png)
 
@@ -527,7 +527,7 @@ Pour créer cette classe:
 
 2.  Double-cliquez sur le dossier que vous venez de créer pour l’ouvrir.
 
-3.  Cliquez avec le bouton droit dans le dossier, puis **créez**  >   **C# le script**. Appelez le script *AzureServices*.
+3.  Cliquez avec le bouton droit dans le dossier, **créez** >  **C# script**. Appelez le script *AzureServices*.
 
 4.  Double-cliquez sur la nouvelle classe *AzureServices* pour l’ouvrir avec *Visual Studio*.
 
@@ -612,7 +612,7 @@ Pour créer cette classe:
     > [!IMPORTANT]
     > Veillez à remplacer les valeurs de *point de terminaison* et de *chaîne de connexion* par les valeurs de votre stockage Azure, qui se trouvent dans le portail Azure.
 
-8.  Vous devez maintenant ajouter le code des méthodes *éveillés ()* et *Start ()* . Ces méthodes sont appelées lorsque la classe est initialisée:
+8.  Vous devez maintenant ajouter le code des méthodes *éveillés ()* et *Start ()* . Ces méthodes sont appelées lorsque la classe est initialisée :
 
     ```csharp
         private void Awake()
@@ -653,22 +653,22 @@ Pour créer cette classe:
 
 Le prochain script à créer est la classe *ShapeFactory* . Le rôle de cette classe est de créer une nouvelle forme, lorsqu’elle est demandée, et de conserver un historique des formes créées dans une *liste d’historique des formes*. Chaque fois qu’une forme est créée, la liste de l' *historique des formes* est mise à jour dans la classe *AzureService* , puis stockée dans votre *stockage Azure*. Lorsque l’application démarre, si un fichier stocké est trouvé dans votre *stockage Azure*, la liste de l' *historique des formes* est récupérée et relue, avec l’objet **texte 3D** qui indique si la forme générée provient du stockage ou de la nouvelle.
 
-Pour créer cette classe:
+Pour créer cette classe :
 
 1.  Accédez au dossier **scripts** que vous avez créé précédemment.
 
-2.  Cliquez avec le bouton droit dans le dossier, puis **créez**  >   **C# le script**. Appelez le script *ShapeFactory*.
+2.  Cliquez avec le bouton droit dans le dossier, **créez** >  **C# script**. Appelez le script *ShapeFactory*.
 
 3.  Double-cliquez sur le nouveau script *ShapeFactory* pour l’ouvrir avec *Visual Studio*.
 
-4.  Vérifiez que la classe *ShapeFactory* comprend les espaces de noms suivants:
+4.  Vérifiez que la classe *ShapeFactory* comprend les espaces de noms suivants :
 
     ```csharp
         using System.Collections.Generic;
         using UnityEngine;
     ```
 
-5.  Ajoutez les variables ci-dessous à la classe *ShapeFactory* , puis remplacez les fonctions *Start ()* et *éveillé ()* par celles ci-dessous:
+5.  Ajoutez les variables ci-dessous à la classe *ShapeFactory* , puis remplacez les fonctions *Start ()* et *éveillé ()* par celles ci-dessous :
 
     ```csharp
         /// <summary>
@@ -705,7 +705,7 @@ Pour créer cette classe:
         }
     ```
 
-6.  La méthode *createShape ()* génère les formes primitives, en fonction du paramètre *entier* fourni. Le paramètre booléen est utilisé pour spécifier si la forme actuellement créée provient d’un stockage ou d’une nouvelle. Placez le code suivant dans votre classe *ShapeFactory* , sous les méthodes précédentes:
+6.  La méthode *createShape ()* génère les formes primitives, en fonction du paramètre *entier* fourni. Le paramètre booléen est utilisé pour spécifier si la forme actuellement créée provient d’un stockage ou d’une nouvelle. Placez le code suivant dans votre classe *ShapeFactory* , sous les méthodes précédentes :
 
     ```csharp
         /// <summary>
@@ -763,15 +763,15 @@ Le dernier script que vous devez créer est la classe de *regard* .
 
 Cette classe est chargée de créer un **Raycast** qui sera projeté à l’avance de la caméra principale, pour détecter l’objet que l’utilisateur examine. Dans ce cas, le Raycast doit déterminer si l’utilisateur regarde l’objet **GazeButton** dans la scène et déclencher un comportement.
 
-Pour créer cette classe:
+Pour créer cette classe :
 
 1.  Accédez au dossier **scripts** que vous avez créé précédemment.
 
-2.  Cliquez avec le bouton droit dans le panneau projet, puis **créez**  >   **C# script**. Appelez le point de *regard*du script.
+2.  Cliquez avec le bouton droit dans le panneau projet, puis **créez** >  **C# script**. Appelez le point de *regard*du script.
 
 3.  Double-cliquez sur le nouveau script de *regard* pour l’ouvrir avec *Visual Studio.*
 
-4.  Assurez-vous que l’espace de noms suivant est inclus en haut du script:
+4.  Assurez-vous que l’espace de noms suivant est inclus en haut du script :
 
     ```csharp
         using UnityEngine;
@@ -887,7 +887,7 @@ Pour créer cette classe:
         }
     ```
 
-7.  Ajoutez le code suivant, qui créera un objet curseur au démarrage, avec la méthode *Update ()* , qui exécutera la méthode Raycast, ainsi que l’emplacement où la valeur booléenne GazeEnabled est basculée:
+7.  Ajoutez le code suivant, qui créera un objet curseur au démarrage, avec la méthode *Update ()* , qui exécutera la méthode Raycast, ainsi que l’emplacement où la valeur booléenne GazeEnabled est basculée :
 
     ```csharp
         /// <summary>
@@ -1027,17 +1027,17 @@ Pour créer cette classe:
 
 10.  Enregistrez vos modifications dans Visual Studio avant de revenir à Unity.
 
-11.  Cliquez et faites glisser *la classe* pointage du dossier scripts vers l’objet **caméra principal** dans le *panneau hiérarchie*.
+11.  Cliquez et faites glisser *la classe pointage du dossier* scripts vers l’objet **caméra principal** dans le *panneau hiérarchie*.
 
 ## <a name="chapter-10---completing-the-azureservices-class"></a>Chapitre 10-réalisation de la classe AzureServices
 
-Avec les autres scripts en place, il est désormais possible d' *effectuer* la classe *AzureServices* . Pour ce faire, procédez comme suit:
+Avec les autres scripts en place, il est désormais possible d' *effectuer* la classe *AzureServices* . Pour ce faire, procédez comme suit :
 
 1.  Ajout d’une nouvelle méthode nommée *CreateCloudIdentityAsync ()* , pour configurer les variables d’authentification nécessaires à la communication avec Azure.
 
     > Cette méthode vérifie également l’existence d’un fichier précédemment stocké contenant la liste de formes.
     >
-    > **Si le fichier est trouvé**, il désactive le point d’interdépendance de *l’utilisateur et*déclenche la création de la forme, en fonction du modèle de formes, tel qu’il est stocké dans le **fichier de stockage Azure**. L’utilisateur peut voir cela, car la **maille de texte** fournira «stockage» ou «nouveau», en fonction de l’origine des formes.
+    > **Si le fichier est trouvé**, il désactive le point d’interdépendance de *l’utilisateur et*déclenche la création de la forme, en fonction du modèle de formes, tel qu’il est stocké dans le **fichier de stockage Azure**. L’utilisateur peut voir cela, car la **maille de texte** fournira « stockage » ou « nouveau », en fonction de l’origine des formes.
     >
     > **Si aucun fichier n’est trouvé**, il active le point de *regard*, ce qui permet à l’utilisateur de créer des formes lors de la recherche de l’objet **GazeButton** dans la scène.
 
@@ -1088,7 +1088,7 @@ Avec les autres scripts en place, il est désormais possible d' *effectuer* la c
         }
     ```
 
-2.  L’extrait de code suivant se trouve dans la méthode *Start ()* ; où un appel sera effectué à la méthode *CreateCloudIdentityAsync ()* . N’hésitez pas à effectuer une copie sur votre méthode *Start ()* actuelle, avec les éléments suivants:
+2.  L’extrait de code suivant se trouve dans la méthode *Start ()* ; où un appel sera effectué à la méthode *CreateCloudIdentityAsync ()* . N’hésitez pas à effectuer une copie sur votre méthode *Start ()* actuelle, avec les éléments suivants :
 
     ```csharp
         private void Start()
@@ -1157,7 +1157,7 @@ Avec les autres scripts en place, il est désormais possible d' *effectuer* la c
         }
     ```
 
-5.  Ajoutez une méthode pour récupérer le texte stocké dans le fichier situé dans votre *fichier de stockage Azure* et le désérialiser dans une liste.
+5.  Ajoutez une méthode pour récupérer le texte stocké dans le fichier situé dans votre *fichier de stockage Azure* et le *désérialiser* dans une liste.
 
 6.  Une fois ce processus terminé, la méthode réactive le point de regard pour permettre à l’utilisateur d’ajouter des formes à la scène.
 
@@ -1195,7 +1195,7 @@ Avec les autres scripts en place, il est désormais possible d' *effectuer* la c
 
 ## <a name="chapter-11---build-the-uwp-solution"></a>Chapitre 11-créer la solution UWP
 
-Pour commencer le processus de génération:
+Pour commencer le processus de génération :
 
 1.  Accédez à **fichier** > **paramètres de build**.
 
@@ -1207,19 +1207,19 @@ Pour commencer le processus de génération:
 
 4.  Une fois la génération de Unity terminée (cela peut prendre un certain temps), une fenêtre de l' *Explorateur de fichiers* s’ouvre à l’emplacement de votre Build (Vérifiez la barre des tâches, car elle ne s’affiche pas toujours au-dessus de votre Windows, mais vous informera de l’ajout d’une nouvelle fenêtre).
 
-## <a name="chapter-12---deploying-your-application"></a>Chapitre 12: déploiement de votre application
+## <a name="chapter-12---deploying-your-application"></a>Chapitre 12 : déploiement de votre application
 
-Pour déployer votre application:
+Pour déployer votre application :
 
-1.  Accédez au dossier de l' *application* qui a été créé dans le [dernier chapitre](#chapter-11---build-the-uwp-solution). Vous verrez un fichier avec le nom de votre application, avec l’extension «. sln», que vous devez double-cliquer, afin de l’ouvrir dans *Visual Studio*.
+1.  Accédez au dossier de l' *application* qui a été créé dans le [dernier chapitre](#chapter-11---build-the-uwp-solution). Vous verrez un fichier avec le nom de votre application, avec l’extension « . sln », que vous devez double-cliquer, afin de l’ouvrir dans *Visual Studio*.
 
 2.  Dans la **plateforme**de la solution, sélectionnez **x86, ordinateur local**.
 
-3.  Dans la **configuration** de la solution, sélectionnez Déboguer.
+3.  Dans la **configuration** de la solution, sélectionnez **Déboguer**.
 
-    > Pour Microsoft HoloLens, il peut s’avérer plus facile de définir cette valeur sur *machine*distante, afin de ne pas être attaché à votre ordinateur. Toutefois, vous devez également effectuer les opérations suivantes:
-    > - Vous devez connaître l' **adresse IP** de votre HoloLens, qui se trouve dans les **paramètres** > **réseau &**  > **Options avancées**de**Wi-Fi** > Internet. IPv4 correspond à l’adresse que vous devez utiliser. 
-    > - Assurez-vous que le **mode développeur** est **activé**; trouvé dans **paramètres** > **mise à jour & sécurité** > **pour les développeurs**.
+    > Pour Microsoft HoloLens, il peut s’avérer plus facile de définir cette valeur sur *machine distante*, afin de ne pas être attaché à votre ordinateur. Toutefois, vous devez également effectuer les opérations suivantes :
+    > - Identifiez l' **adresse IP** de votre HoloLens, qui se trouve dans les **paramètres** > **réseau & Internet** > les **Options avancées**du **Wi-Fi** > ; IPv4 est l’adresse que vous devez utiliser. 
+    > - Assurez-vous que le **mode développeur** est **activé**; trouvé dans **paramètres** > **mettre à jour &**  > **de sécurité pour les développeurs**.
 
     ![déployer la solution](images/AzureLabs-Lab5-55.png)
 

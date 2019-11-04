@@ -6,12 +6,12 @@ ms.author: thmignon
 ms.date: 07/12/2018
 ms.topic: article
 keywords: 3D, logo, icône, modélisation, lanceur, lanceur 3D, vignette, cube dynamique, lien profond, secondarytile, vignette secondaire, UWP
-ms.openlocfilehash: 4a8d4a696ff6ef19d7332b20580f1f5ee67bf045
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: be47b590e4fd1a847ac47d9cfbcbe824c544dd59
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63516743"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438016"
 ---
 # <a name="implement-3d-app-launchers-uwp-apps"></a>Implémenter des lanceurs d’applications en 3D (applications UWP)
 
@@ -24,7 +24,7 @@ La [base de la réalité Windows Mixed](navigating-the-windows-mixed-reality-hom
 
 ## <a name="3d-app-launcher-creation-process"></a>processus de création du lanceur d’applications 3D
 
-La création d’un lanceur d’applications 3D comporte trois étapes:
+La création d’un lanceur d’applications 3D comporte trois étapes :
 1. [Conception et concept](3d-app-launcher-design-guidance.md)
 2. [Modélisation et exportation](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md)
 3. Intégration dans votre application (cet article)
@@ -33,24 +33,24 @@ les ressources 3D à utiliser comme lanceurs pour votre application doivent êtr
 
 ## <a name="configuring-the-3d-launcher"></a>Configuration du lanceur 3D
 
-Lorsque vous créez un projet dans Visual Studio, cela a pour effet de créer une vignette par défaut simple qui affiche le nom et le logo de votre application. Pour remplacer cette représentation 2D par un modèle 3D personnalisé, modifiez le manifeste d’application de votre application de manière à inclure l’élément «MixedRealityModel» dans le cadre de votre définition de vignette par défaut. Pour revenir au lanceur 2D, supprimez simplement la définition MixedRealityModel du manifeste.
+Lorsque vous créez un projet dans Visual Studio, cela a pour effet de créer une vignette par défaut simple qui affiche le nom et le logo de votre application. Pour remplacer cette représentation 2D par un modèle 3D personnalisé, modifiez le manifeste d’application de votre application de manière à inclure l’élément « MixedRealityModel » dans le cadre de votre définition de vignette par défaut. Pour revenir au lanceur 2D, supprimez simplement la définition MixedRealityModel du manifeste.
 
 ### <a name="xml"></a>XML
 
 Tout d’abord, recherchez le manifeste du package d’application dans votre projet actuel. Par défaut, le manifeste sera nommé Package. appxmanifest. Si vous utilisez Visual Studio, cliquez avec le bouton droit sur le manifeste dans votre afficheur de solution, puis sélectionnez **afficher la source** pour ouvrir le fichier XML à modifier. 
 
-En haut du manifeste, ajoutez le schéma uap5 et incluez-le en tant qu’espace de noms pouvant être ignoré:
+En haut du manifeste, ajoutez le schéma uap5 et incluez-le en tant qu’espace de noms pouvant être ignoré :
 
 ```xml
-<Package xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" 
-         xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" 
-         xmlns:uap2="http://schemas.microsoft.com/appx/manifest/uap/windows10/2" 
-         xmlns:uap5="http://schemas.microsoft.com/appx/manifest/uap/windows10/5"
+<Package xmlns:mp="https://schemas.microsoft.com/appx/2014/phone/manifest" 
+         xmlns:uap="https://schemas.microsoft.com/appx/manifest/uap/windows10" 
+         xmlns:uap2="https://schemas.microsoft.com/appx/manifest/uap/windows10/2" 
+         xmlns:uap5="https://schemas.microsoft.com/appx/manifest/uap/windows10/5"
          IgnorableNamespaces="uap uap2 uap5 mp"
-         xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10">
+         xmlns="https://schemas.microsoft.com/appx/manifest/foundation/windows10">
 ```
 
-Spécifiez ensuite la valeur «MixedRealityModel» dans la vignette par défaut de votre application:
+Spécifiez ensuite la valeur « MixedRealityModel » dans la vignette par défaut de votre application :
 
 ```xml
 <Applications>
@@ -72,28 +72,28 @@ Spécifiez ensuite la valeur «MixedRealityModel» dans la vignette par défaut 
 </Applications>
 ```
 
-Les éléments MixedRealityModel acceptent un chemin d’accès de fichier pointant vers une ressource 3D stockée dans votre package d’application. Actuellement, seuls les modèles 3D fournis à l’aide du format de fichier. GLB et créés par rapport aux [instructions de création de ressources 3D Windows Mixed Reality](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md) sont pris en charge. Les ressources doivent être stockées dans le package d’application et l’animation n’est pas prise en charge actuellement. Si le paramètre «Path» est laissé vide, Windows affiche la ardoise 2D au lieu du lanceur 3D. **Remarque:** la ressource. GLB doit être marquée comme «contenu» dans vos paramètres de génération avant de générer et d’exécuter votre application.
+Les éléments MixedRealityModel acceptent un chemin d’accès de fichier pointant vers une ressource 3D stockée dans votre package d’application. Actuellement, seuls les modèles 3D fournis à l’aide du format de fichier. GLB et créés par rapport aux [instructions de création de ressources 3D Windows Mixed Reality](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md) sont pris en charge. Les ressources doivent être stockées dans le package d’application et l’animation n’est pas prise en charge actuellement. Si le paramètre « Path » est laissé vide, Windows affiche la ardoise 2D au lieu du lanceur 3D. **Remarque :** la ressource. GLB doit être marquée comme « contenu » dans vos paramètres de génération avant de générer et d’exécuter votre application.
 
 
-![Sélectionnez le. GLB dans votre Explorateur de solutions et utilisez la section Propriétés pour le marquer comme «contenu» dans les paramètres de génération.](images/buildsetting-content-300px.png)<br>
-*Sélectionnez le. GLB dans votre Explorateur de solutions et utilisez la section Propriétés pour le marquer comme «contenu» dans les paramètres de génération.*
+![sélectionnez le. GLB dans votre Explorateur de solutions et utilisez la section Propriétés pour le marquer comme « contenu » dans les paramètres de génération](images/buildsetting-content-300px.png)<br>
+*Sélectionnez le. GLB dans votre Explorateur de solutions et utilisez la section Propriétés pour le marquer comme « contenu » dans les paramètres de génération.*
 
 ### <a name="bounding-box"></a>Cadre englobant
 
 Un cadre englobant peut être utilisé pour ajouter éventuellement une zone de mémoire tampon supplémentaire autour de l’objet. Le cadre englobant est spécifié à l’aide d’un point central et d’étendues qui indiquent la distance entre le centre du rectangle englobant et ses bords le long de chaque axe. Les unités du cadre englobant peuvent être mappées à 1 unité = 1 mètre. Si aucun cadre englobant n’est fourni, l’un d’eux est automatiquement ajusté à la maille de l’objet. Si le cadre englobant fourni est plus petit que le modèle, il sera redimensionné pour s’ajuster à la maille.
 
-La prise en charge de l’attribut cadre englobant sera fournie avec la mise à jour Windows RS4 en tant que propriété sur l’élément MixedRealityModel. Pour définir un cadre englobant tout d’abord en haut du manifeste de l’application, ajoutez le schéma uap6 et incluez-le en tant qu’espaces de noms pouvant être ignorés:
+La prise en charge de l’attribut cadre englobant sera fournie avec la mise à jour Windows RS4 en tant que propriété sur l’élément MixedRealityModel. Pour définir un cadre englobant tout d’abord en haut du manifeste de l’application, ajoutez le schéma uap6 et incluez-le en tant qu’espaces de noms pouvant être ignorés :
 
 ```xml
-<Package xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" 
-         xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" 
-         xmlns:uap2="http://schemas.microsoft.com/appx/manifest/uap/windows10/2" 
-         xmlns:uap5="http://schemas.microsoft.com/appx/manifest/uap/windows10/5"
-         xmlns:uap6="http://schemas.microsoft.com/appx/manifest/uap/windows10/6"
+<Package xmlns:mp="https://schemas.microsoft.com/appx/2014/phone/manifest" 
+         xmlns:uap="https://schemas.microsoft.com/appx/manifest/uap/windows10" 
+         xmlns:uap2="https://schemas.microsoft.com/appx/manifest/uap/windows10/2" 
+         xmlns:uap5="https://schemas.microsoft.com/appx/manifest/uap/windows10/5"
+         xmlns:uap6="https://schemas.microsoft.com/appx/manifest/uap/windows10/6"
          IgnorableNamespaces="uap uap2 uap5 uap6 mp"
-         xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10">
+         xmlns="https://schemas.microsoft.com/appx/manifest/foundation/windows10">
 ```
-Ensuite, sur le MixedRealityModel, définissez la propriété SpatialBoundingBox pour définir le cadre englobant: 
+Ensuite, sur le MixedRealityModel, définissez la propriété SpatialBoundingBox pour définir le cadre englobant : 
 
 ```xml
         <uap:DefaultTile Wide310x150Logo="Assets\WideLogo.png" >
@@ -116,16 +116,16 @@ Lorsque vous utilisez Unity, le projet doit être généré et ouvert dans Visua
 > Cette fonctionnalité a été ajoutée dans le cadre de la mise à jour de 2017 automne Creators Update (RS3) pour les casques immersifs (VR) et dans le cadre de la mise à jour du 2018 d’avril (RS4) pour HoloLens. Assurez-vous que votre application cible une version du SDK Windows supérieure ou égale à 10.0.16299 sur les casques immersifs (VR) et 10.0.17125 sur HoloLens. Vous trouverez les SDK Windows les plus récentes [ici](https://developer.microsoft.com/windows/downloads/windows-10-sdk).
 
 >[!IMPORTANT]
->les liens secondaryTiles (3D Deep Links) fonctionnent uniquement avec les applications UWP 2D. Toutefois, vous pouvez créer un lanceur d' [applications en 3D](implementing-3d-app-launchers.md) pour lancer une application exclusive à partir de la page d’hébergement de Windows Mixed Reality.
+>les liens secondaryTiles (3D Deep Links) fonctionnent uniquement avec les applications UWP 2D. Toutefois, vous pouvez créer un [lanceur d’applications en 3D](implementing-3d-app-launchers.md) pour lancer une application exclusive à partir de la page d’hébergement de Windows Mixed Reality.
 
 Vos applications 2D peuvent être améliorées pour Windows Mixed Reality en ajoutant la possibilité de placer des modèles 3D à partir de votre application dans la [page d’accueil Windows Mixed Real](navigating-the-windows-mixed-reality-home.md) comme des liens détaillés vers le contenu de votre application 2D, comme des [vignettes secondaires 2D](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-secondary-tiles) sur le site de démarrage de Windows menus. Par exemple, vous pouvez créer des photosphères de 360 ° qui se lient directement à une application de visionneuse de photos 360 °, ou permettre aux utilisateurs de placer du contenu 3D à partir d’une collection de ressources qui ouvre une page de détails à propos de l’auteur. Il s’agit simplement de quelques façons d’étendre les fonctionnalités de votre application 2D avec du contenu 3D.
 
-### <a name="creating-a-3d-secondarytile"></a>Création d’un «secondaryTile» 3D
+### <a name="creating-a-3d-secondarytile"></a>Création d’un « secondaryTile » 3D
 
-Vous pouvez placer du contenu 3D à partir de votre application à l’aide de «secondaryTiles» en définissant un modèle de réalité mixte au moment de la création. Les modèles de réalité mixte sont créés en référençant une ressource 3D dans votre package d’application et en définissant éventuellement un cadre englobant. 
+Vous pouvez placer du contenu 3D à partir de votre application à l’aide de « secondaryTiles » en définissant un modèle de réalité mixte au moment de la création. Les modèles de réalité mixte sont créés en référençant une ressource 3D dans votre package d’application et en définissant éventuellement un cadre englobant. 
 
 > [!NOTE]
-> La création de «secondaryTiles» à partir d’une vue exclusive n’est pas prise en charge actuellement.
+> La création de « secondaryTiles » à partir d’une vue exclusive n’est pas prise en charge actuellement.
 
 ```cs
 using Windows.UI.StartScreen;
@@ -164,11 +164,11 @@ Un cadre englobant peut être utilisé pour ajouter une zone de mémoire tampon 
 > [!NOTE]
 > Ce composant sera pris en charge à partir de la mise à jour de Windows RS4. Assurez-vous que votre application cible une version du SDK Windows supérieure ou égale à 10.0.17125 si vous envisagez d’utiliser cette fonctionnalité
 
-Vous pouvez définir le comportement d’activation d’un secondaryTile 3D afin de contrôler la manière dont il réagit lorsqu’un utilisateur le sélectionne. Cela peut être utilisé pour placer des objets 3D dans la zone de vie de la réalité mixte qui sont informatifs ou décoratifs Purley. Les types de comportement d’activation suivants sont pris en charge:
-1. Par défaut : Quand un utilisateur sélectionne l’secondaryTile 3D, l’application est activée
-2. None : Lorsque les utilisateurs sélectionnent l’secondaryTile 3D, rien ne se produit et l’application n’est pas activée.
+Vous pouvez définir le comportement d’activation d’un secondaryTile 3D afin de contrôler la manière dont il réagit lorsqu’un utilisateur le sélectionne. Cela peut être utilisé pour placer des objets 3D dans la zone de vie de la réalité mixte qui sont informatifs ou décoratifs Purley. Les types de comportement d’activation suivants sont pris en charge :
+1. Par défaut : lorsqu’un utilisateur sélectionne l’secondaryTile 3D, l’application est activée
+2. Aucun : lorsque les utilisateurs sélectionnent le secondaryTile 3D, rien ne se produit et l’application n’est pas activée.
 
-### <a name="obtaining-and-updating-an-existing-secondarytile"></a>Obtention et mise à jour d’un «secondaryTile» existant
+### <a name="obtaining-and-updating-an-existing-secondarytile"></a>Obtention et mise à jour d’un « secondaryTile » existant
 
 Les développeurs peuvent obtenir une liste de leurs vignettes secondaires existantes, y compris les propriétés qu’ils ont spécifiées précédemment. Ils peuvent également mettre à jour les propriétés en modifiant la valeur, puis en appelant UpdateAsync ().
 
@@ -195,14 +195,14 @@ les liens en profondeur 3D (secondaryTiles) peuvent être créés uniquement lor
 
 ## <a name="tile-notifications"></a>Notifications par vignette
 
-Les notifications par vignette ne prennent pas actuellement en charge l’envoi d’une mise à jour avec une ressource 3D. Cela signifie que les développeurs ne seront pas en mesure d’effectuer les opérations suivantes:
-* Notifications Push
+Les notifications par vignette ne prennent pas actuellement en charge l’envoi d’une mise à jour avec une ressource 3D. Cela signifie que les développeurs ne seront pas en mesure d’effectuer les opérations suivantes :
+* Notifications push
 * Interrogation périodique
 * Notifications planifiées
 
 Pour plus d’informations sur les autres fonctionnalités et attributs de vignettes et sur la façon dont ils sont utilisés pour les mosaïques 2D, consultez la [documentation vignettes pour les applications UWP](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-creating-tiles).
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a>Articles associés
 
 * [Exemple de modèle de réalité mixte](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MixedRealityModel) contenant un lanceur d’application 3D.
 * [Guide de conception du lanceur d’applications 3D](3d-app-launcher-design-guidance.md)

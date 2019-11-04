@@ -1,25 +1,25 @@
 ---
-title: Étude de cas-capture et création de contenu pour HoloTour
-description: HoloTour pour Microsoft HoloLens fournit des présentations personnelles en 3D immersifs d’emplacements sous forme à travers le monde.
+title: Étude de cas-HoloTour
+description: HoloTour pour Microsoft HoloLens fournit des présentations personnelles en 3D immersifs d’emplacements sous forme à travers le monde. Cette étude de cas vous guidera tout au long du processus de capture et de création du contenu utilisé pour HoloTour.
 author: DannyAskew
 ms.author: daaske
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloTour, HoloLens, Windows Mixed Reality
-ms.openlocfilehash: 6c9e5f44c439310883c8b0271187a7b2263b0854
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 035bec9b0d46a31978bc91f23bfb3a5ee47d6247
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63518299"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436926"
 ---
-# <a name="case-study---capturing-and-creating-content-for-holotour"></a>Étude de cas-capture et création de contenu pour HoloTour
+# <a name="case-study---holotour"></a>Étude de cas-HoloTour
 
-HoloTour pour Microsoft HoloLens fournit des présentations personnelles en 3D immersifs d’emplacements sous forme à travers le monde. À mesure que les concepteurs, les artistes, les producteurs, les concepteurs audio et les développeurs qui travaillent sur ce projet, la création d’un rendu 3D convaincant d’un emplacement bien connu prend une fusion unique des encadrement créatives et technologiques.
+HoloTour pour Microsoft HoloLens fournit des présentations personnelles en 3D immersifs d’emplacements sous forme à travers le monde. À mesure que les concepteurs, les artistes, les producteurs, les concepteurs audio et les développeurs qui travaillent sur ce projet, la création d’un rendu 3D convaincant d’un emplacement bien connu prend une fusion unique des encadrement créatives et technologiques. Cette étude de cas vous guidera tout au long du processus de capture et de création du contenu utilisé pour HoloTour.
 
 ## <a name="the-tech"></a>Le Tech
 
-Avec HoloTour, nous souhaitons permettre aux utilisateurs de visiter certaines des destinations les plus étonnantes du monde, comme les [Ruins de Machu Picchu](https://en.wikipedia.org/wiki/Machu_Picchu) au Pérou ou la journée moderne [Piazza Navona](https://en.wikipedia.org/wiki/Piazza_Navona) en Italie, directement à partir de leurs propres salles vivantes. Notre équipe a fait de l’esprit l’objectif de la HoloTour «vous sentir comme vous le faites.» L’expérience était plus qu’une simple image ou une vidéo. En tirant parti de l’affichage unique, du suivi et de la technologie audio de HoloLens, nous avons pensé que nous avions pratiquement pu vous transporter vers un autre emplacement. Nous aurions besoin de capturer les paysages, les sons et la géométrie à trois dimensions de chaque emplacement visité, puis de le recréer dans notre application.
+Avec HoloTour, nous souhaitons permettre aux utilisateurs de visiter certaines des destinations les plus étonnantes du monde, comme les [Ruins de Machu Picchu](https://en.wikipedia.org/wiki/Machu_Picchu) au Pérou ou la journée moderne [Piazza Navona](https://en.wikipedia.org/wiki/Piazza_Navona) en Italie, directement à partir de leurs propres salles vivantes. Notre équipe a fait de l’esprit l’objectif de la HoloTour « vous sentir comme vous le faites. » L’expérience était plus qu’une simple image ou une vidéo. En tirant parti de l’affichage unique, du suivi et de la technologie audio de HoloLens, nous avons pensé que nous avions pratiquement pu vous transporter vers un autre emplacement. Nous aurions besoin de capturer les paysages, les sons et la géométrie à trois dimensions de chaque emplacement visité, puis de le recréer dans notre application.
 
 Pour ce faire, nous avons besoin d’une caméra de 360 ° pour la capture audio directionnelle. Elle devait être capturée à une résolution extrêmement élevée, afin que le pied de page apparaisse plus clair lorsqu’il est lu sur un HoloLens et que les caméras doivent être positionnées de manière étroite pour réduire les artefacts d’assemblage. Nous voulions une couverture sphérique complète, pas seulement le long de l’horizon, mais au-dessus et au-dessous. La plate-forme devait également être portable pour que nous puissions l’emporter dans le monde entier. Nous avons évalué les options prêtes à l’emploi et réalisé qu’elles n’étaient tout simplement pas suffisantes pour réaliser notre vision, en raison de la résolution, du coût ou de la taille. Si nous n’avons pas trouvé de plate-forme de caméra qui répond à nos besoins, nous devrions en créer une nous.
 
@@ -42,7 +42,6 @@ Nous avons mis à niveau notre plate-forme à partir de Velcro et de carton vers
 
 La vidéo de 360 la plate-forme de Machu Picchu. 
 
-
 ## <a name="behind-the-scenes"></a>En arrière-plan
 
 Avant de filmer, nous devions déterminer les emplacements que nous souhaitons inclure dans notre visite virtuelle. Rome était le premier emplacement que nous avons prévu d’expédier et nous voulions le faire juste, donc nous avons décidé de faire un voyage à l’avance. Nous avons envoyé une équipe de six personnes, y compris des artistes, des concepteurs et des producteurs, pour une visite en personne aux sites que nous envisageons. Le trajet a duré environ 9 jours – 2,5 pour voyages, le reste pour la filmation. (Pour Machu Picchu, nous avons choisi de ne pas faire un voyage Scout, de rechercher à l’avance et de réserver quelques jours de mémoire tampon pour la pellicule.)
@@ -58,7 +57,7 @@ Une fois le voyage Scout terminé, un plan final a été créé pour la filmatio
 
 ### <a name="capturing-the-video"></a>Capture de la vidéo
 
-Le fait d’effectuer quelques opérations simples au cours de la capture peut simplifier considérablement le traitement. Par exemple, chaque fois que vous assemblez des images à partir de plusieurs caméras, vous obtenez des artefacts visuels, car chaque caméra a une vue légèrement différente. Plus les objets sont proches de l’appareil photo, plus la différence entre les vues est grande, et plus les artefacts de combinaison sont volumineux. Voici un moyen simple de visualiser le problème: maintenez votre pouce devant votre visage et examinez-le avec un seul œil. Basculez maintenant les yeux. Vous verrez que votre curseur semble se déplacer par rapport à l’arrière-plan. Si vous vous éloignez encore de votre visage et que vous répétez l’expérience, votre curseur s’affiche pour vous déplacer moins. Ce mouvement apparent est semblable au problème de combinaison que nous avons rencontré: Vos yeux, comme nos appareils photo, ne voient pas exactement la même image, car ils sont séparés par une petite distance.
+Le fait d’effectuer quelques opérations simples au cours de la capture peut simplifier considérablement le traitement. Par exemple, chaque fois que vous assemblez des images à partir de plusieurs caméras, vous obtenez des artefacts visuels, car chaque caméra a une vue légèrement différente. Plus les objets sont proches de l’appareil photo, plus la différence entre les vues est grande, et plus les artefacts de combinaison sont volumineux. Voici un moyen simple de visualiser le problème : maintenez votre pouce devant votre visage et examinez-le avec un seul œil. Basculez maintenant les yeux. Vous verrez que votre curseur semble se déplacer par rapport à l’arrière-plan. Si vous vous éloignez encore de votre visage et que vous répétez l’expérience, votre curseur s’affiche pour vous déplacer moins. Ce mouvement apparent est semblable au problème de combinaison que nous avons rencontré : vos yeux, comme nos appareils photo, ne voient pas exactement la même image, car ils sont séparés par une petite distance.
 
 Étant donné qu’il est beaucoup plus facile d’éviter les pires artefacts tout en filmant plutôt que de les corriger dans le traitement, nous avons essayé de garder les gens et les choses loin de l’appareil photo dans l’espoir que nous pourrions éliminer le besoin d’agrafer des objets de plus en plus étroits. La maintenance d’un grand effacement autour de notre appareil photo était probablement l’un des plus grands défis que nous avions au cours de la prise de vue et nous devions nous rendre créatif pour le faire fonctionner. L’utilisation de guides locaux était une aide importante pour la gestion des foules, mais nous avons également découvert que l’utilisation de signes (et parfois de petits cônes ou sacs de haricot) pour marquer notre espace de film était raisonnablement efficace, surtout puisque nous avons uniquement besoin d’obtenir une petite quantité de métrage à chaque emplacement. Souvent, la meilleure façon d’obtenir une bonne capture consistait à arriver très tôt le matin, avant la plupart des gens.
 
@@ -70,14 +69,14 @@ Une coupe approximative du métrage de Pantheon avant la combinaison.
 
 ### <a name="processing-the-video"></a>Traitement de la vidéo
 
-La capture du contenu de 360 ° n’est que la première étape: un traitement important est nécessaire pour convertir le métrage de la caméra brute que nous avons capturé dans les ressources finales que vous voyez dans HoloTour. Une fois que nous étions à nouveau à l’usage, nous avions besoin de prendre la vidéo de 14 flux de caméra différents et de les convertir en une vidéo continue unique avec des artefacts minimaux. Notre équipe technique a utilisé un certain nombre d’outils pour combiner et peaufiner le métrage capturé et nous avons développé un pipeline pour optimiser le traitement le plus possible. Le métrage devait être combiné, corrigé de la couleur, puis composite pour supprimer les éléments et les artefacts gênants, ou pour ajouter des poches supplémentaires de vie et de mouvement, le tout avec l’objectif d’améliorer ce sentiment d’être réellement présent.
+La capture du contenu de 360 ° n’est que la première étape : un traitement important est nécessaire pour convertir le métrage de la caméra brute que nous avons capturé dans les ressources finales que vous voyez dans HoloTour. Une fois que nous étions à nouveau à l’usage, nous avions besoin de prendre la vidéo de 14 flux de caméra différents et de les convertir en une vidéo continue unique avec des artefacts minimaux. Notre équipe technique a utilisé un certain nombre d’outils pour combiner et peaufiner le métrage capturé et nous avons développé un pipeline pour optimiser le traitement le plus possible. Le métrage devait être combiné, corrigé de la couleur, puis composite pour supprimer les éléments et les artefacts gênants, ou pour ajouter des poches supplémentaires de vie et de mouvement, le tout avec l’objectif d’améliorer ce sentiment d’être réellement présent.
 
 ![Une coupe approximative du métrage de Pantheon avant la combinaison.](images/rough-cut-pantheon-500px.png)
 
 Une coupe approximative du métrage de Pantheon avant la combinaison. 
 
 
-Pour combiner les vidéos, nous avons utilisé un outil appelé [PTGui](http://www.ptgui.com/) et nous l’avons intégré dans notre pipeline de traitement. Dans le cadre du traitement après le traitement, nous avons extrait les images de nos vidéos et avons trouvé un modèle d’assemblage qui était parfait pour l’un de ces cadres. Nous avons ensuite appliqué ce modèle à un plug-in personnalisé que nous avons écrit, ce qui permettait à nos artistes d’effectuer des réglages et d’ajuster le modèle d’assemblage directement lors de la composition dans After Effects. 
+Pour combiner les vidéos, nous avons utilisé un outil appelé [PTGui](https://www.ptgui.com/) et nous l’avons intégré dans notre pipeline de traitement. Dans le cadre du traitement après le traitement, nous avons extrait les images de nos vidéos et avons trouvé un modèle d’assemblage qui était parfait pour l’un de ces cadres. Nous avons ensuite appliqué ce modèle à un plug-in personnalisé que nous avons écrit, ce qui permettait à nos artistes d’effectuer des réglages et d’ajuster le modèle d’assemblage directement lors de la composition dans After Effects. 
 
 ![Capture d’écran de PTGui montrant le métrage Pantheon.](images/stitching-tool-pantheon-500px.png)
 
@@ -130,7 +129,7 @@ Pantheon le métrage avec la fontaine supprimée. Elle sera remplacée par une r
 
 ## <a name="final-thoughts"></a>Réflexions finales
 
-Évidemment, il y avait plus de création de ce contenu que ce que nous avons abordé ici. Il y a quelques scènes: nous aimerions les appeler «perspectives inactives», y compris la bulle de l’air chaud et la lutte contre la Gladiator dans le Colosseum, qui prenait une approche plus créative. Nous les traiterons dans une prochaine étude de cas.
+Évidemment, il y avait plus de création de ce contenu que ce que nous avons abordé ici. Il y a quelques scènes : nous aimerions les appeler « perspectives inactives », y compris la bulle de l’air chaud et la lutte contre la Gladiator dans le Colosseum, qui prenait une approche plus créative. Nous les traiterons dans une prochaine étude de cas.
 
 Nous espérons que les solutions de partage à certains des plus grands défis que nous avions en production sont utiles aux autres développeurs et que vous êtes inspiré de l’utilisation de certaines de ces techniques pour créer vos propres expériences immersifs pour HoloLens. (Et si vous le faites, assurez-vous de le partager avec nous sur le [Forum de développement d’applications HoloLens](https://forums.hololens.com/)!)
 
@@ -153,5 +152,5 @@ Nous espérons que les solutions de partage à certains des plus grands défis q
 
 
 
-## <a name="see-also"></a>Voir aussi
-* [Vidéo : Microsoft HoloLens : HoloTour](https://www.youtube.com/watch?v=pLd9WPlaMpY)
+## <a name="see-also"></a>Articles associés
+* [Vidéo : Microsoft HoloLens : HoloTour](https://www.youtube.com/watch?v=pLd9WPlaMpY)

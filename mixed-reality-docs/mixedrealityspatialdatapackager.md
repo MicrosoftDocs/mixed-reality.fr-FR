@@ -6,12 +6,12 @@ ms.author: alreynol
 ms.date: 05/16/2019
 ms.topic: article
 keywords: LBE, MixedRealitySpatialDataPackager. exe, MixedRealitySpatialDataPackager
-ms.openlocfilehash: 7ad1159af9eecd3ca3622dd25cc1f49fb0b1700a
-ms.sourcegitcommit: d565a69a9320e736304372b3f010af1a4d286a62
+ms.openlocfilehash: 52556e4028407086f943c4b765a8bcfad2744eac
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65942105"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438477"
 ---
 # <a name="mixed-reality-spatial-data-packager-documentation"></a>Documentation du package de données spatiales de la réalité mixte
 
@@ -19,20 +19,43 @@ ms.locfileid: "65942105"
 > Cet outil et son fonctionnement sont proposés tels quels. Elle est sujette à modification sans aucun préavis et peut ne pas être compatible avec les futures versions de Windows ou de Windows Mixed Reality HMD.
 
 ## <a name="download"></a>Télécharger
- Téléchargez [MixedRealitySpatialDataPackager ici](http://download.microsoft.com/download/A/1/2/A12B8A90-B3F7-4ED9-A4BB-D59DDCDAA125/MixedRealitySpatialDataPackager.zip)
+ Téléchargez [MixedRealitySpatialDataPackager ici](https://download.microsoft.com/download/A/1/2/A12B8A90-B3F7-4ED9-A4BB-D59DDCDAA125/MixedRealitySpatialDataPackager.zip)
 
-## <a name="quickstart"></a>Démarrage rapide
+## <a name="device-support"></a>Périphériques pris en charge
+
+<table>
+    <colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    </colgroup>
+    <tr>
+        <td><strong>Fonctionnalité</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens (1ère génération)</strong></a></td>
+        <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Casques immersifs</strong></a></td>
+    </tr>
+     <tr>
+        <td>Package de données spatiales de réalité mixte</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>✔️</td>
+    </tr>
+</table>
+
+## <a name="quickstart"></a>Didacticiel
 
 L’outil mélangeur de données spatiales de réalité mixte copie les données spatiales d’une application cible d’un ordinateur vers un autre à l’aide d’un processus d’exportation et d’importation en deux étapes. L’outil doit être exécuté avec des privilèges d’administrateur et supprimer les données spatiales existantes lors de l’importation. L’exportation laisse les données spatiales existantes intactes.
 
-Principales exigences et limitations:
+Principales exigences et limitations :
 
 1. L’outil doit être exécuté avec des privilèges d’administrateur 
 2. Vous devrez peut-être redémarrer le PC si le portail de réalité mixte est instable après l’exécution de l’outil
 3. L’outil ne s’exécute pas quand des incompatibilités ou des incompatibilités de version de données spatiales sont rencontrées
 4. L’outil efface les données spatiales existantes lors de l’importation
 5. En cas d’échec du processus d’importation, les données précédentes ne peuvent pas être restaurées, sauf si elles ont été sauvegardées en l’exportant précédemment
-6. La qualité de la fonctionnalité d’importation est subordonné au mode «lecture seule» pour les données cartographiques spatiales
+6. La qualité de la fonctionnalité d’importation est subordonné au mode « lecture seule » pour les données cartographiques spatiales
 ***
 
 ## <a name="mapping-best-practices"></a>Meilleures pratiques de mappage
@@ -51,7 +74,7 @@ Principales exigences et limitations:
 Nous avons fourni MRSpatialPackagerHelperScript. ps1 qui exécute les outils de mappage de package. 
 
 
-Les paramètres de script sont définis ci-dessous:
+Les paramètres de script sont définis ci-dessous :
 
 ```
 -AppName <String>

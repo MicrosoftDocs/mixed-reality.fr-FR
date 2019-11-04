@@ -6,17 +6,17 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: 9d42811157db108baad51eab3f367a06a11b7f7b
-ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
+ms.openlocfilehash: 5d8194e9a51bdb0ce32f345b4adfbfaf408c5396
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68701977"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438384"
 ---
-# <a name="2-getting-unity-ready-for-development"></a>2. Obtention d’Unity prête pour le développement 
+# <a name="2-getting-unity-ready-for-development"></a>2. obtention d’Unity prête pour le développement 
 
 
-Dans ce didacticiel, nous allons apprendre à préparer et à configurer Unity pour le développement d’applications, notamment l’importation du kit de développement de la réalité mixte, la configuration des paramètres de génération et la préparation de notre scène.
+Dans ce didacticiel, vous allez apprendre à préparer et à configurer Unity pour le développement d’applications, notamment l’importation de la boîte à outils de réalité mixte, la configuration des paramètres de génération et la préparation de votre scène.
 
 ## <a name="objectives"></a>Objectifs
 
@@ -30,19 +30,19 @@ Dans ce didacticiel, nous allons apprendre à préparer et à configurer Unity p
 
 1. Téléchargez et enregistrez le package Unity du kit d’outils de réalité mixte en cliquant [ici.](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/download/v2.0.0-RC2.1/Microsoft.MixedReality.Toolkit.Unity.Foundation-v2.0.0-RC2.1.unitypackage)
 
-2. Dans Unity, cliquez sur le menu composants et sélectionnez Importer un package, puis cliquez sur package personnalisé.
+2. Dans Unity, cliquez sur le menu composants, sélectionnez Importer un package, puis cliquez sur package personnalisé.
 
 ![Module3Chapter2step2im](images/module3chapter2step2im.PNG)
 
-3. Sélectionnez le package Unity que vous venez de télécharger à partir du lien fourni à l’étape 1. Une fois que la fenêtre contextuelle d’importation s’affiche dans Unity, cliquez sur le bouton Importer pour commencer l’importation. L’importation du MRTK peut prendre plusieurs minutes.
+3. Sélectionnez le package Unity que vous venez de télécharger à partir du lien fourni à l’étape 1. Une fois que la fenêtre contextuelle d’importation s’affiche dans Unity, cliquez sur le bouton Importer pour commencer l’importation de la MRTK. Cette opération peut prendre plusieurs minutes.
 
 ![Module3Chapter2step3im](images/module3chapter2step3im.PNG)
 
-> Remarque : Le package téléchargé se trouve dans votre dossier local où vous avez enregistré le fichier. L’image ci-dessus ne décrit pas où se trouve le package.
+> Remarque : le package téléchargé se trouve dans votre dossier local, où vous avez enregistré le fichier. L’image ci-dessus ne décrit pas où se trouve le package.
 
-4. Créez une nouvelle scène. Pour ce faire, cliquez sur fichier, puis sélectionnez nouvelle scène». Enregistrez la scène en tant que HLSharedProjectMain.
+4. Créez une nouvelle scène. Pour ce faire, cliquez sur fichier et sélectionnez nouvelle scène. Enregistrez-le en tant que HLSharedProjectMain.
 
-> Remarque: vous pouvez recevoir une fenêtre contextuelle qui ressemble à l’image ci-dessous. Pour le moment, cliquez sur non.
+> Remarque : vous pouvez recevoir une fenêtre contextuelle qui ressemble à l’image ci-dessous. Pour le moment, cliquez sur non.
 >
 > ![Module3Chapter2note1im](images/module3chapter2note1im.PNG)
 
@@ -58,7 +58,7 @@ Dans ce didacticiel, nous allons apprendre à préparer et à configurer Unity p
 
 ![Module3Chapter2step6imc](images/module3chapter2step6imc.PNG)
 
-7. Faites défiler vers le dessous et décochez activer le système de diagnostic si vous souhaitez masquer la fenêtre de diagnostic. Nous vous recommandons de conserver la fenêtre de diagnostic activée pendant le développement d’applications pour surveiller les performances et la désactiver pendant les démonstrations de production ou d’application. 
+7. Faites défiler vers le dessous et décochez activer le système de diagnostic si vous souhaitez masquer la fenêtre de diagnostic. Nous vous recommandons de laisser la fenêtre de diagnostics activée pendant le développement d’applications pour surveiller les performances, puis la désactiver pendant les démonstrations de production ou d’application. 
 
 ![Module3Chapter2step7ima](images/module3chapter2step7ima.PNG)
 
@@ -66,15 +66,15 @@ Dans ce didacticiel, nous allons apprendre à préparer et à configurer Unity p
 
 ![Module3Chapter2step8im](images/module3chapter2step8im.PNG)
 
-9. Une fois terminé, cliquez sur la zone qui indique ajouter des scènes ouvertes. Maintenant, accédez au panneau inspecteur et vérifiez que la case à cocher située à droite de Virtual Reality pris en charge (comme indiqué dans l’image ci-dessous) est cochée. Vérifiez également que la case à cocher en regard de scenes/HLSharedProjectMain est également activée comme indiqué dans l’image ci-dessous.
+9. Une fois terminé, cliquez sur la zone intitulée ajouter des scènes ouvertes. Maintenant, accédez au panneau de l’inspecteur et vérifiez que la case à cocher située à droite de la réalité virtuelle prise en charge (comme indiqué dans l’image ci-dessous) est activée. Assurez-vous également que la case à cocher en regard de scenes/HLSharedProjectMain est également activée, comme illustré dans l’image ci-dessous.
 
 ![Module3Chapter2step9im](images/module3chapter2step9im.PNG)
 
-10. Dans la section paramètres de publication du panneau Inspecteur, faites défiler l’écran jusqu’à fonctionnalités, puis vérifiez que les cases à cocher suivantes sont activées:
+10. Dans la section paramètres de publication du panneau Inspecteur, faites défiler l’écran jusqu’à fonctionnalités et vérifiez que les cases à cocher suivantes sont activées :
 
 ![Module3Chapter2step9imb](images/module3chapter2step9imb.PNG)
 
-11. Importez le package personnalisé appelé SharingAssetCollection qui peut être téléchargé [ici.](https://github.com/microsoft/MixedRealityLearning/releases/tag/development)
+11. Importez le package personnalisé appelé SharingAssetCollection, qui peut être téléchargé [ici.](https://github.com/microsoft/MixedRealityLearning/releases/tag/development)
 
 ![Module3Chapter2step12im](images/module3chapter2step11im.PNG)
 
@@ -82,14 +82,14 @@ Dans ce didacticiel, nous allons apprendre à préparer et à configurer Unity p
 
 ![Module3Chapter2step12im](images/module3chapter2step12im.PNG)
 
-   > Remarque : Vous pouvez remarquer qu’une fenêtre contextuelle s’affiche lorsque vous cliquez sur le Prefab, qui vous demande des informations sur TMP Essentials. Cliquez sur Importer les bases TMP comme vous le souhaitez. Si cette fenêtre contextuelle s’affiche, vous devrez peut-être supprimer le Prefab de votre hiérarchie et le faire glisser à nouveau dans votre hiérarchie pour éviter les erreurs liées au texte potentiel.
+   > Remarque : vous pouvez remarquer qu’une fenêtre contextuelle s’affiche lorsque vous cliquez sur Prefab pour vous poser des questions sur TMP Essentials. Cliquez sur Importer les bases TMP comme vous le souhaitez. Si cette fenêtre contextuelle s’affiche, vous devrez peut-être supprimer le Prefab de votre hiérarchie et le faire glisser à nouveau dans votre hiérarchie pour éviter les erreurs liées au texte potentiel.
    >
 >![Module3Chapter2note2im](images/module3chapter2note2im.PNG)
 
 
-## <a name="congratulations"></a>Félicitations
+## <a name="congratulations"></a>Félicitations !
 
 Votre projet Unity est maintenant prêt pour la photonique. Dans les didacticiels à venir, nous nous appuyons sur cette scène et notre projet Unity vers une expérience partagée complète.
 
-[Didacticiel suivant: 3. Connexion de plusieurs utilisateurs](mrlearning-sharing(photon)-ch3.md)
+[Didacticiel suivant : 3. connexion de plusieurs utilisateurs](mrlearning-sharing(photon)-ch3.md)
 

@@ -1,17 +1,17 @@
 ---
 title: Comptes sur HoloLens
 description: Comment configurer et gérer des comptes d’utilisateur sur HoloLens.
-author: ''
+author: tmlyon
 ms.author: toddly
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, utilisateur, compte, AAD, ADFS, compte Microsoft, MSA, informations d’identification
-ms.openlocfilehash: 14f43b08b6ccb396bcf39c4082c840c65ac78cf9
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 5579cf53948b8bdbd4b41973dde7b8fc70a5aa31
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63516816"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437084"
 ---
 # <a name="accounts-on-hololens"></a>Comptes sur HoloLens
 
@@ -40,7 +40,7 @@ Dans un compte d’appareil unique, les utilisateurs peuvent lier des informatio
 
 ## <a name="using-single-sign-on-within-an-app"></a>Utilisation de l’authentification unique dans une application
 
-En tant que développeur d’applications, vous pouvez tirer parti d’une identité connectée à HoloLens avec les [API du gestionnaire de compte Windows](https://msdn.microsoft.com/library/windows/apps/xaml/windows.security.authentication.web.core.aspx), comme vous le feriez sur d’autres appareils Windows. Des exemples de code pour ces API sont disponibles [ici](http://go.microsoft.com/fwlink/p/?LinkId=620621).
+En tant que développeur d’applications, vous pouvez tirer parti d’une identité connectée à HoloLens avec les [API du gestionnaire de compte Windows](https://msdn.microsoft.com/library/windows/apps/xaml/windows.security.authentication.web.core.aspx), comme vous le feriez sur d’autres appareils Windows. Des exemples de code pour ces API sont disponibles [ici](https://go.microsoft.com/fwlink/p/?LinkId=620621).
 
 Les interruptions de compte qui peuvent se produire, telles que la demande de consentement de l’utilisateur pour les informations de compte, l’authentification à deux facteurs, etc., doivent être gérées lorsque l’application demande un jeton d’authentification.
 

@@ -6,14 +6,14 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: cb4645d197238d8712719625bf11eac0650a8246
-ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
+ms.openlocfilehash: b83c7ac39d522fc2b799591fa02608d5fc5cc930
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68701870"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437568"
 ---
-# <a name="5-integrating-azure-spatial-anchors-into-a-shared-experience"></a>5. Intégration des ancres spatiales Azure dans un environnement partagé
+# <a name="5-integrating-azure-spatial-anchors-into-a-shared-experience"></a>5. intégration des ancres spatiales Azure dans un environnement partagé
 
 Dans cette leçon, nous apprenons à intégrer les ancres spatiales Azure (ASA) dans notre expérience partagée. ASA permet à plusieurs appareils colocalisés d’avoir une référence commune si leur environnement physique est d’ancrer des expériences virtuelles, de sorte que tous les participants voient les objets dans le même emplacement physique.
 
@@ -26,7 +26,7 @@ Cherché
 
 ### <a name="instructions"></a>Instructions
 
-1. Enregistrez le projet de la leçon précédente (contrôle + S) et nommez-le «HLSharedProjectMainPart5. Unity» afin qu’il soit plus facile à trouver lorsque vous en avez besoin à nouveau.
+1. Enregistrez le projet de la leçon précédente (contrôle + S) et nommez-le « HLSharedProjectMainPart5. Unity » afin qu’il soit plus facile à trouver lorsque vous en avez besoin à nouveau.
 
 2. Sélectionnez le Prefab TableAnchor sous l’objet parent MixedRealityPlayspace et supprimez-le.
 
@@ -37,21 +37,23 @@ Cherché
 
 ![Module3hapter5step5im](images/module3chapter5step5im.PNG)
 
-4. À présent, dans la hiérarchie, sélectionnez ShareAzureAnchorButton et déplacez votre attention sur le panneau de l’informat. Faites défiler vers le bas jusqu’au menu déroulant illustré dans l’image ci-dessous, puis sélectionnez AnchorModuleScript et cliquez sur ShareAnchorNetework ().
+4. À présent, dans la hiérarchie, sélectionnez ShareAzureAnchorButton et déplacez votre attention sur le panneau de l’informat. Faites défiler vers le bas jusqu’au menu déroulant illustré dans l’image ci-dessous, sélectionnez AnchorModuleScript, puis cliquez sur ShareAnchorNetework ().
 
 ![Module3hapter5step6im](images/module3chapter5step6im.PNG)
 
-5. Sélectionnez GetAzureAnchorButton (Voir l’étape 4), puis replacez votre attention sur le panneau Inspecteur. Faites défiler vers le bas jusqu’au menu déroulant illustré dans l’image ci-dessous, puis sélectionnez AnchorModuleScript, puis cliquez sur GetSharedAnchorNetwork () et Save.
+5. Sélectionnez GetAzureAnchorButton (Voir l’étape 4) et replacez votre attention sur le panneau Inspecteur. Faites défiler vers le bas jusqu’au menu déroulant illustré dans l’image ci-dessous, puis sélectionnez AnchorModuleScript, puis cliquez sur GetSharedAnchorNetwork () et Save.
 
 ![Module3hapter5step7im](images/module3chapter5step7im.PNG)
 
-6. Pour tester le module de partage, cliquez sur le bouton «Démarrer une session ASA Azure» pour démarrer la session d’ancrages spatiaux Azure, puis créez le point d’ancrage Azure en cliquant sur le bouton «créer une ancre Azure» et patientez pendant la création de l’ancre Azure. Une fois l’ancre Azure créée, cliquez sur le bouton «partager l’ancre Azure» pour partager l’ancre Azure créée à partir du HoloLens.
+6. Pour tester le module de partage, cliquez sur le bouton « Démarrer une session ASA Azure », qui démarre la session d’ancrages spatiaux Azure, puis crée le point d’ancrage Azure en cliquant sur le bouton « créer un point d’ancrage Azure ». Attendez que le point d’ancrage Azure soit créé. Une fois l’ancre Azure créée, cliquez sur le bouton « partager l’ancre Azure » pour partager l’ancre Azure créée à partir du HoloLens.
 
-7. Pour recevoir le point d’ancrage Azure partagé dans un autre HoloLens, cliquez sur «Démarrer la session ASA Azure» pour démarrer et accéder à la session ASA active, puis cliquez sur le bouton «obtenir Azure Anchor» pour obtenir l’ancre Azure partagée à partir de l’autre HoloLens.
+7. Pour recevoir le point d’ancrage Azure partagé dans un autre HoloLens, cliquez sur « Démarrer la session ASA Azure » pour démarrer et accéder à la session ASA actuelle.
 
-   > Remarque : Tous les détails des actions correspondantes sur les boutons individuels s’affichent dans la fenêtre de débogage.
+8. Cliquez sur le bouton « procurez-vous Azure Anchor » pour récupérer l’ancre Azure partagée à partir de l’autre HoloLens.
 
-## <a name="congratulations"></a>Félicitations
+   > Remarque : tous les détails des actions correspondantes sur les boutons individuels s’affichent dans la fenêtre de débogage.
 
-Dans cette leçon, vous avez appris à intégrer les nouvelles ancres spatiales d’Azure pour aligner les appareils colocalisés dans un environnement partagé. Cette leçon conclut également le module de partage. Nous avons appris à configurer un nouveau compte de photons, à intégrer photons et retentissante dans une nouvelle application Unity, à configurer des avatars et des objets partagés, puis à aligner plusieurs participants à l’aide de ASA. 
+## <a name="congratulations"></a>Félicitations !
+
+Dans cette leçon, vous avez appris à intégrer les nouvelles ancres spatiales d’Azure pour aligner les appareils colocalisés dans un environnement partagé. Cela conclut également le module de partage. Nous avons appris à configurer un nouveau compte de photons, à intégrer photons et retentissante dans une nouvelle application Unity, à configurer des avatars et des objets partagés, puis à aligner plusieurs participants à l’aide de ASA. 
 

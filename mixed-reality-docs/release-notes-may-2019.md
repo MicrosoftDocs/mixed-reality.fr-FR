@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 07/11/2019
 ms.topic: article
 keywords: Notes de publication, version, Windows 10, Build, 19h1, OS, mai 2019
-ms.openlocfilehash: fe2532429842a2acd7868349a8df19214e9ae155
-ms.sourcegitcommit: 8f3ff9738397d9b9fdf4703b14b89d416f0186a5
+ms.openlocfilehash: f5163e128c3f1e1b68d827b09078b565a58c5a4d
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67843308"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438320"
 ---
 # <a name="release-notes---may-2019"></a>Notes de publication-mai 2019
 
@@ -19,13 +19,13 @@ La **mise à jour de Windows 10 mai 2019** (également appelée 19H1) comprend d
 
 Pour effectuer une mise à jour vers la dernière version sur PC pour les casques de Windows Mixed Realing (VR), ouvrez l’application **paramètres** , accédez à **mettre à jour & sécurité**, puis sélectionnez le bouton **Rechercher les mises à jour** . Sur un PC Windows 10, vous pouvez également installer manuellement la mise à jour de Windows 10 2019 à l’aide de l' [outil de création de médias Windows](https://www.microsoft.com/software-download/windows10).
 
-**Dernière version pour ordinateur de bureau:** Mise à jour de Windows 10 mai 2019 (**10.0.18362.116**)<br>
+**Dernière version pour ordinateur de bureau :** Mise à jour de Windows 10 mai 2019 (**10.0.18362.116**)<br>
 
 ## <a name="new-features-for-windows-mixed-reality-immersive-headsets"></a>Nouvelles fonctionnalités pour les casques immersifs de Windows Mixed Reality
 
 ### <a name="win32-slates"></a>Ardoises Win32
 
-#### <a name="what-does-it-do"></a>Qu’est-ce que c’est? 
+#### <a name="what-does-it-do"></a>Qu’est-ce que c’est ? 
 Avec la mise à jour de Windows 10 mai 2019, nous avons introduit la possibilité de lancer des applications Win32 classiques, telles que des navigateurs Web, des applications de communication et des applications de streaming multimédia, dans Windows Mixed Reality. 
 
 ![Windows Win32](images/mr-win32-slates-1.png)
@@ -33,12 +33,12 @@ Avec la mise à jour de Windows 10 mai 2019, nous avons introduit la possibilit�
 ![Navigateur Win32](images/mr-win32-slates-2.png)
 
 #### <a name="how-to-launch"></a>Comment lancer
-Pour lancer une application Win32 dans Windows Mixed Reality, ouvrez le panneau épingles via le bouton Windows de votre contrôleur et sélectionnez «toutes les applications» sur le côté droit du panneau.  Vous trouverez un dossier appelé «applications classiques», accédez à celui-ci et vous pourrez sélectionner et lancer la plupart des applications Win32 installées sur votre ordinateur.
+Pour lancer une application Win32 dans Windows Mixed Reality, ouvrez le panneau épingles via le bouton Windows de votre contrôleur et sélectionnez « toutes les applications » sur le côté droit du panneau.  Vous trouverez un dossier appelé « applications classiques », accédez à celui-ci et vous pourrez sélectionner et lancer la plupart des applications Win32 installées sur votre ordinateur.
 
 ![Pin_Panel Win32](images/mr-win32-slates-pinspanel.png)
 
-#### <a name="please-help-us-improve"></a>Aidez-nous à améliorer!
-Nous cherchons continuellement à améliorer la compatibilité.  Si vous constatez que votre application Win32 classique favorite ne se comporte pas correctement dans Windows Mixed Reality, envoyez vos commentaires via notre [Hub de commentaires](https://support.microsoft.com/en-us/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub).
+#### <a name="please-help-us-improve"></a>Aidez-nous à améliorer !
+Nous cherchons continuellement à améliorer la compatibilité.  Si vous constatez que votre application Win32 classique favorite ne se comporte pas correctement dans Windows Mixed Reality, envoyez vos commentaires via notre [Hub de commentaires](https://support.microsoft.com//help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub).
 
 ## <a name="hololens-1st-gen-long-term-servicing"></a>HoloLens (1ère génération) maintenance à long terme
 
@@ -61,7 +61,7 @@ Utilisez l' [application Hub de commentaires sur votre PC Windows 10](give-us-fe
 * [Notes de publication - Mai 2016](release-notes-may-2016.md)
 * [Notes de publication - Mars 2016](release-notes-march-2016.md)
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a>Articles associés
 * [Prise en charge des casques immersifs (lien externe)](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality)
 * [Prise en charge de HoloLens (lien externe)](https://support.microsoft.com/products/hololens)
 * [Installer les outils](install-the-tools.md)

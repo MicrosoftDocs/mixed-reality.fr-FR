@@ -6,22 +6,22 @@ ms.author: crderr
 ms.date: 03/21/2018
 ms.topic: article
 keywords: critères de qualité des applications, réalité mixte, application de réalité mixte
-ms.openlocfilehash: 8e635585c0981d81bf71fb5577232af28f2a0fdd
-ms.sourcegitcommit: 150d258a23130026c8792da383a3993657841fb4
+ms.openlocfilehash: f98111ebe9aacc30778e86501be41e6ac5f6d165
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67024494"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437050"
 ---
 # <a name="app-quality-criteria"></a>Critères de qualité des applications
 
 Ce document décrit les principaux facteurs qui ont un impact sur la qualité des applications de réalité mixte. Pour chaque facteur, les informations suivantes sont fournies
-* Vue d’ensemble: brève description du facteur de qualité et de la raison pour laquelle il est important.
-* Impact sur l’appareil: le type de l’appareil de la réalité mixte de la fenêtre est affecté.
-* Critères de qualité: comment évaluer le facteur de qualité.
-* Comment mesurer: méthodes pour mesurer (ou expérimenter) le problème.
-* Recommandations: Résumé des approches pour offrir une meilleure expérience utilisateur.
-* Ressources: ressources de conception et de développement pertinentes qui sont utiles pour créer de meilleures expériences d’application.
+* Vue d’ensemble : brève description du facteur de qualité et de la raison pour laquelle il est important.
+* Impact sur l’appareil : le type de l’appareil de la réalité mixte de la fenêtre est affecté.
+* Critères de qualité : comment évaluer le facteur de qualité.
+* Comment mesurer : méthodes pour mesurer (ou expérimenter) le problème.
+* Recommandations : Résumé des approches pour offrir une meilleure expérience utilisateur.
+* Ressources : ressources de conception et de développement pertinentes qui sont utiles pour créer de meilleures expériences d’application.
 
 ## <a name="frame-rate"></a>Fréquence d’images
 
@@ -51,11 +51,11 @@ La fréquence d’images est le premier pilier de la stabilité de l’hologramm
 
 |  Meilleures  |  Présente |  Incident |
 --- | --- | ---
-| L’application répond régulièrement à l’objectif des images par seconde (FPS) pour l’appareil cible: 60fps sur HoloLens; 90fps sur ultra PC; et 60fps sur les PC grand public. | L’application présente des interruptions intermittentes de la trame sans gêner l’expérience de base. ou la valeur FPS est toujours inférieure à l’objectif souhaité, mais n’empêche pas l’expérience de l’application. | L’application rencontre une baisse de la fréquence d’images en moyenne toutes les dix secondes ou moins. |
+| L’application répond régulièrement à l’objectif des images par seconde (FPS) pour l’appareil cible : 60fps sur HoloLens ; 90fps sur ultra PC ; et 60fps sur les PC grand public. | L’application présente des interruptions intermittentes de la trame sans gêner l’expérience de base. ou la valeur FPS est toujours inférieure à l’objectif souhaité, mais n’empêche pas l’expérience de l’application. | L’application rencontre une baisse de la fréquence d’images en moyenne toutes les dix secondes ou moins. |
 
 ### <a name="how-to-measure"></a>Comment mesurer
 
-* Un graphique de fréquence d’images en temps réel est fourni par le biais du [portail d’appareils Windows](using-the-windows-device-portal.md#system-performance) sous «performances système».
+* Un graphique de fréquence d’images en temps réel est fourni par le biais du [portail d’appareils Windows](using-the-windows-device-portal.md#system-performance) sous « performances système ».
 * Pour le débogage de développement, ajoutez un compteur de diagnostic de fréquence d’images dans l’application. Consultez ressources pour obtenir un exemple de compteur.
 * Les chutes de fréquence d’images peuvent être rencontrées dans l’appareil pendant que l’application est en cours d’exécution en déplaçant votre tête d’un côté à l’autre. Si l’hologramme présente un mouvement instable inattendue, la fréquence d’images faible ou le plan de stabilité est probablement la cause.
 
@@ -84,7 +84,7 @@ La fréquence d’images est le premier pilier de la stabilité de l’hologramm
 
 ## <a name="hologram-stability"></a>Stabilité de l’hologramme
 
-Les hologrammes stables augmenteront la convivialité et l’incroyableté de votre application et créeront une expérience d’affichage plus confortable pour l’utilisateur. La qualité de la stabilité des hologrammes résulte d’un développement d’applications correct et de la capacité de l’appareil à comprendre (suivre) son environnement. Alors que la fréquence d’images est le premier pilier de la stabilité, d’autres facteurs peuvent avoir un impact sur la stabilité, notamment:
+Les hologrammes stables augmenteront la convivialité et l’incroyableté de votre application et créeront une expérience d’affichage plus confortable pour l’utilisateur. La qualité de la stabilité des hologrammes résulte d’un développement d’applications correct et de la capacité de l’appareil à comprendre (suivre) son environnement. Alors que la fréquence d’images est le premier pilier de la stabilité, d’autres facteurs peuvent avoir un impact sur la stabilité, notamment :
 
 * Utilisation du plan de stabilisation
 * Distance aux ancres spatiales
@@ -114,11 +114,11 @@ Les hologrammes stables augmenteront la convivialité et l’incroyableté de vo
 
 |  Meilleures  |  Présente |  Incident |
 --- | --- | ---
-|  Les hologrammes semblent constamment stables. | Le contenu secondaire présente un mouvement inattendu; ou un mouvement inattendu ne fait pas obstacle à l’expérience globale de l’application. | Le contenu principal du cadre présente un mouvement inattendu. |
+|  Les hologrammes semblent constamment stables. | Le contenu secondaire présente un mouvement inattendu ; ou un mouvement inattendu ne fait pas obstacle à l’expérience globale de l’application. | Le contenu principal du cadre présente un mouvement inattendu. |
 
 ### <a name="how-to-measure"></a>Comment mesurer
 
-Lors de l’usure de l’appareil et de l’affichage de l’expérience:
+Lors de l’usure de l’appareil et de l’affichage de l’expérience :
 
 * Déplacez votre tête d’un côté à l’autre, si les hologrammes affichent un mouvement inattendu, alors une fréquence d’images faible ou un alignement incorrect du plan de stabilité sur le plan focal est la cause probable.
 * Déplacez-vous autour des hologrammes et de l’environnement, recherchez des comportements tels que natation et jumpiness. Ce type de mouvement est probablement dû au fait que l’appareil n’effectue pas le suivi de l’environnement ou à la distance vers l’ancrage spatial.
@@ -150,7 +150,7 @@ Lors de l’usure de l’appareil et de l’affichage de l’expérience:
 
 ## <a name="holograms-position-on-real-surfaces"></a>Position des hologrammes sur les surfaces réelles
 
-Un mauvais alignement des hologrammes avec des objets physiques (s’ils sont destinés à être placés les uns par rapport aux autres) est une indication claire de l’absence d’Union des hologrammes et du monde réel. La précision de la position doit être relative aux besoins du scénario; par exemple, le positionnement de surface général peut utiliser la carte spatiale, mais un positionnement plus précis nécessitera l’utilisation de marqueurs et d’étalonnage.
+Un mauvais alignement des hologrammes avec des objets physiques (s’ils sont destinés à être placés les uns par rapport aux autres) est une indication claire de l’absence d’Union des hologrammes et du monde réel. La précision de la position doit être relative aux besoins du scénario ; par exemple, le positionnement de surface général peut utiliser la carte spatiale, mais un positionnement plus précis nécessitera l’utilisation de marqueurs et d’étalonnage.
 
 ### <a name="device-impact"></a>Impact de l’appareil
 
@@ -176,7 +176,7 @@ Un mauvais alignement des hologrammes avec des objets physiques (s’ils sont de
 
 |  Meilleures  |  Présente |  Incident |
 --- | --- | ---
-| Les hologrammes s’alignent sur la surface généralement dans la plage de centimètres en pouces. Si une plus grande précision est requise, l’application doit fournir un moyen efficace de collaboration au sein de la spécification de l’application souhaitée. | N/D | Les hologrammes apparaissent non alignés avec l’objet cible physique en rompant le plan de surface ou en s’éloignant de l’aire. Si la précision est requise, les hologrammes doivent répondre aux spécifications de proximité du scénario. | 
+| Les hologrammes s’alignent sur la surface généralement dans la plage de centimètres en pouces. Si une plus grande précision est requise, l’application doit fournir un moyen efficace de collaboration au sein de la spécification de l’application souhaitée. | N/A | Les hologrammes apparaissent non alignés avec l’objet cible physique en rompant le plan de surface ou en s’éloignant de l’aire. Si la précision est requise, les hologrammes doivent répondre aux spécifications de proximité du scénario. | 
 
 ### <a name="how-to-measure"></a>Comment mesurer
 
@@ -203,7 +203,7 @@ Un mauvais alignement des hologrammes avec des objets physiques (s’ils sont de
 
 #### <a name="tools-and-tutorials"></a>Outils et didacticiels
 
-* [Réalité mixte - Fonctionnalités spatiales - Cours 230 : Mappage spatial](holograms-230.md)
+* [MR spatial 230 : mappage spatial](holograms-230.md)
 * [Boîte à outils MR, bibliothèques de mappage spatiale](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/SpatialMapping/README.md)
 * [Kit de complément MR, exemple d’étalonnage d’affiches](https://github.com/Microsoft/MixedRealityCompanionKit/tree/master/PosterCalibrationSample)
 * [Kit de complément MR, IPD Kinect](https://github.com/Microsoft/MixedRealityCompanionKit/tree/master/KinectIPD)
@@ -246,7 +246,7 @@ Les développeurs d’applications contrôlent l’emplacement des yeux des util
 </tr><tr>
 <td> Présente</td><td> Le contenu se trouve dans le Guide d’affichage et de mouvement, mais il n’utilise pas ou n’utilise pas le plan de découpage.</td>
 </tr><tr>
-<td> Incident </td><td> Le contenu est présenté trop près ( &lt;généralement 1,25 m ou &lt;50cm pour les hologrammes fixes nécessitant une observation plus proche).</td>
+<td> Incident </td><td> Le contenu est présenté trop près (généralement &lt;1,25 m, ou &lt;50cm pour les hologrammes fixes nécessitant une observation plus proche.)</td>
 </tr>
 </table>
 
@@ -297,7 +297,7 @@ Indépendamment de l’affichage des problèmes liés à la zone de confort, les
 
 |  Meilleures  |  Présente |  Incident |
 --- | --- | ---
-|  Basculement de profondeur limitée ou naturelle qui ne permet pas à l’utilisateur de se concentrer de manière non naturelle. | Commutateur à profondeur brusque: il s’agit du noyau et est conçu pour l’expérience de l’application, ou le commutateur de profondeur brusque provoqué par un contenu réel inattendu. | Commutateur de profondeur cohérent ou basculement de profondeur brusque qui n’est pas nécessaire ou essentiel à l’expérience de l’application. | 
+|  Basculement de profondeur limitée ou naturelle qui ne permet pas à l’utilisateur de se concentrer de manière non naturelle. | Commutateur à profondeur brusque : il s’agit du noyau et est conçu pour l’expérience de l’application, ou le commutateur de profondeur brusque provoqué par un contenu réel inattendu. | Commutateur de profondeur cohérent ou basculement de profondeur brusque qui n’est pas nécessaire ou essentiel à l’expérience de l’application. | 
 
 ### <a name="how-to-measure"></a>Comment mesurer
 
@@ -368,7 +368,7 @@ Dans Windows Mixed Reality, le moteur audio fournit le composant d’acoustique 
 
 #### <a name="tools-and-tutorials"></a>Outils et didacticiels
 
-* [Réalité mixte - Fonctionnalités spatiales - Cours 220 : Son spatial](holograms-220.md)
+* [MR spatial 220 : son spatial](holograms-220.md)
 * [MRToolkit, audio spatial](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/SpatialSound/README.md)
 
 ## <a name="focus-on-holographic-frame-fov-boundaries"></a>Focalisation sur les limites du cadre holographique
@@ -429,7 +429,7 @@ Les expériences utilisateur bien conçues peuvent créer et gérer le contexte 
 
 ## <a name="content-reacts-to-user-position"></a>Le contenu réagit à la position de l’utilisateur
 
-Les hologrammes doivent réagir à la position de l’utilisateur à peu près de la même façon que les objets «réels». L’un des éléments d’interface utilisateur qui ne peuvent pas nécessairement supposer que la position d’un utilisateur est stationnaire et s’adapte au mouvement de l’utilisateur est une considération notable. La conception d’une application qui s’adapte correctement à la position de l’utilisateur crée une expérience plus crédible et la rend plus facile à utiliser.
+Les hologrammes doivent réagir à la position de l’utilisateur à peu près de la même façon que les objets « réels ». L’un des éléments d’interface utilisateur qui ne peuvent pas nécessairement supposer que la position d’un utilisateur est stationnaire et s’adapte au mouvement de l’utilisateur est une considération notable. La conception d’une application qui s’adapte correctement à la position de l’utilisateur crée une expérience plus crédible et la rend plus facile à utiliser.
 
 ### <a name="device-impact"></a>Impact de l’appareil
 
@@ -460,7 +460,7 @@ Les hologrammes doivent réagir à la position de l’utilisateur à peu près d
 <td> Présente </td><td> L’interface utilisateur s’adapte à la position de l’utilisateur, mais peut empêcher l’affichage du contenu de la clé qui oblige l’utilisateur à ajuster sa position.</td>
 </tr><tr>
 <td> Incident </td><td><ol>
-<li>Les éléments d’interface utilisateur sont perdus ou verrouillés au cours du mouvement, provoquant ainsi un retour à (ou une recherche) anormal des contrôles.</li><li>Les éléments d’interface utilisateur limitent l’affichage du contenu principal.</li><li><a href="billboarding-and-tag-along.md">Le</a> déplacement de l’interface utilisateur n’est pas optimisé pour l’affichage de la distance et de l’inertie, en particulier avec les éléments de balisage.</li>
+<li>Les éléments d’interface utilisateur sont perdus ou verrouillés au cours du mouvement, provoquant ainsi un retour à (ou une recherche) anormal des contrôles.</li><li>Les éléments d’interface utilisateur limitent l’affichage du contenu principal.</li><li>Le déplacement de l’interface utilisateur n’est pas optimisé pour l’affichage de la distance et de l’inertie, en particulier avec les éléments de <a href="billboarding-and-tag-along.md">balisage</a> .</li>
 </ol></td>
 </tr>
 </table>
@@ -488,7 +488,7 @@ Les hologrammes doivent réagir à la position de l’utilisateur à peu près d
 
 #### <a name="tools-and-tutorials"></a>Outils et didacticiels
 
-* [Réalité mixte - Entrées - Cours 210 : Pointage du regard](holograms-210.md)
+* [Monsieur-entrée 210 : point de regard](holograms-210.md)
 
 ## <a name="input-interaction-clarity"></a>Clarté d’interaction d’entrée
 
@@ -523,7 +523,7 @@ La clarté de l’interaction d’entrée est essentielle à l’utilisation d�
 ### <a name="how-to-measure"></a>Comment mesurer
 
 * L’application utilise des [méthodes d’entrée standard](interaction-fundamentals.md) cohérentes.
-* Si l’application a des entrées personnalisées, elle est clairement communiquée à:
+* Si l’application a des entrées personnalisées, elle est clairement communiquée à :
 * Expérience de première exécution
 * Écrans d’introduction
 * Info-bulles
@@ -546,9 +546,7 @@ La clarté de l’interaction d’entrée est essentielle à l’utilisation d�
 * [Suivre de la tête et stabiliser](gaze-and-dwell.md)
 * [Curseurs](cursors.md)
 * [Confort et point de regard](comfort.md#gaze-direction)
-* [Mouvements](gestures.md)
 * [Entrée vocale](voice-input.md)
-* [Commander avec la voix](voice-design.md)
 * [Contrôleurs de mouvement](motion-controllers.md)
 * [Guide de portage des entrées pour Unity](input-porting-guide-for-unity.md)
 * [Saisie au clavier dans Unity](keyboard-input-in-unity.md)
@@ -562,13 +560,13 @@ La clarté de l’interaction d’entrée est essentielle à l’utilisation d�
 
 #### <a name="tools-and-tutorials"></a>Outils et didacticiels
 
-* [Étude de cas: La poursuite de l’informatique plus personnelle](case-study-the-pursuit-of-more-personal-computing.md#less-interface-in-your-face)
-* [Étude de Cast: Apprentissage de la conception de l’interface utilisateur et des interactions HoloStudio](case-study-3-holostudio-ui-and-interaction-design-learnings.md)
-* [Exemple d’application: Table périodique des éléments](periodic-table-of-the-elements.md)
-* [Exemple d’application: Module lunaire](lunar-module.md)
-* [Réalité mixte - Entrées - Cours 210 : Pointage du regard](holograms-210.md)
-* [Réalité mixte - Entrées - Cours 211 : Mouvements](holograms-211.md)
-* [Réalité mixte - Entrées - Cours 212 : Voix](holograms-212.md)
+* [Étude de cas : la poursuite de l’informatique plus personnelle](case-study-the-pursuit-of-more-personal-computing.md#less-interface-in-your-face)
+* [Étude de Cast : interface utilisateur HoloStudio et apprentissages de conception d’interaction](case-study-3-holostudio-ui-and-interaction-design-learnings.md)
+* [Exemple d’application : table périodique des éléments](periodic-table-of-the-elements.md)
+* [Exemple d’application : module lunaire](lunar-module.md)
+* [Monsieur-entrée 210 : point de regard](holograms-210.md)
+* [Entrée MR 211 : gestes](holograms-211.md)
+* [Entrée MR 212 : voix](holograms-212.md)
 
 ## <a name="interactable-objects"></a>Objets interactifs
 
@@ -598,11 +596,11 @@ Un bouton a longtemps été une métaphore utilisée pour déclencher un événe
 
 |  Meilleures  |  Présente |  Incident |
 --- | --- | ---
-|  Quelle que soit la forme, les objets interactifs sont reconnaissables par des signaux audio et visuels dans les trois États: inactif, ciblé et sélectionné. «Regardez-le, dites-le» est clair et constamment utilisé tout au long de l’expérience. Les objets sont mis à l’échelle et distribués pour permettre le ciblage gratuit des erreurs. | L’utilisateur peut reconnaître un objet comme étant en interaction avec des retours audio ou visuels, et peut cibler et activer l’objet. | En l’absence de signaux visuels ou audio, l’utilisateur ne peut pas reconnaître un objet pouvant être en interaction. Les interactions sont sujettes aux erreurs en raison de l’échelle de l’objet ou de la distance entre les objets. | 
+|  Quelle que soit la forme, les objets interactifs sont reconnaissables par des signaux audio et visuels dans les trois États : inactif, ciblé et sélectionné. « Regardez-le, dites-le » est clair et constamment utilisé tout au long de l’expérience. Les objets sont mis à l’échelle et distribués pour permettre le ciblage gratuit des erreurs. | L’utilisateur peut reconnaître un objet comme étant en interaction avec des retours audio ou visuels, et peut cibler et activer l’objet. | En l’absence de signaux visuels ou audio, l’utilisateur ne peut pas reconnaître un objet pouvant être en interaction. Les interactions sont sujettes aux erreurs en raison de l’échelle de l’objet ou de la distance entre les objets. | 
 
 ### <a name="how-to-measure"></a>Comment mesurer
 
-* Les objets interactifs sont reconnaissables comme «interactifs»; y compris les boutons, les menus et le contenu spécifique à l’application. En règle générale, il doit exister un signal visuel et audio pour cibler les objets interactifs.
+* Les objets interactifs sont reconnaissables comme « interactifs »; y compris les boutons, les menus et le contenu spécifique à l’application. En règle générale, il doit exister un signal visuel et audio pour cibler les objets interactifs.
 
 ### <a name="recommendations"></a>Recommandations
 
@@ -610,7 +608,7 @@ Un bouton a longtemps été une métaphore utilisée pour déclencher un événe
 * Les commentaires visuels doivent être différenciés pour chaque État d’entrée (inactif, ciblé, sélectionné)
 * Les objets interactifs doivent être mis à l’échelle et placés en vue d’une erreur de ciblage libre.
 * Les objets interactifs groupés (tels qu’une barre de menus ou une liste) doivent avoir un espacement correct pour le ciblage.
-* Les boutons et les menus qui prennent en charge les commandes vocales doivent fournir des étiquettes de texte pour le mot clé de commande («consultez-le», dites-le «»)
+* Les boutons et les menus qui prennent en charge les commandes vocales doivent fournir des étiquettes de texte pour le mot clé de commande (« consultez-le », dites-le «»)
 
 ### <a name="resources"></a>Ressources
 
@@ -619,7 +617,7 @@ Un bouton a longtemps été une métaphore utilisée pour déclencher un événe
 * [Objet avec interaction possible](interactable-object.md)
 * [Texte dans Unity](text-in-unity.md)
 * [Rectangle englobant et barre de l’application](app-bar-and-bounding-box.md)
-* [Commander avec la voix](voice-design.md)
+* [Entrée vocale](voice-input.md)
 
 #### <a name="tools-and-tutorials"></a>Outils et didacticiels
 
@@ -672,9 +670,9 @@ Les applications qui requièrent des données de mappage spatiale s’appuient s
 #### <a name="documentation"></a>Documentation
 
 * [Visualisation du balayage d’une pièce](room-scan-visualization.md)
-* [Étude de cas: Développement des fonctionnalités de mappage spatial de HoloLens](case-study-expanding-the-spatial-mapping-capabilities-of-hololens.md)
-* [Étude de cas: Conception de son spatial pour HoloTour](case-study-spatial-sound-design-for-holotour.md)
-* [Étude de cas: Création d’une expérience immersive dans des fragments](case-study-creating-an-immersive-experience-in-fragments.md)
+* [Étude de cas : développement des fonctionnalités de mappage spatial de HoloLens](case-study-expanding-the-spatial-mapping-capabilities-of-hololens.md)
+* [Étude de cas : conception de son spatial pour HoloTour](case-study-spatial-sound-design-for-holotour.md)
+* [Étude de cas : création d’une expérience immersive dans des fragments](case-study-creating-an-immersive-experience-in-fragments.md)
 
 #### <a name="tools-and-tutorials"></a>Outils et didacticiels
 
@@ -759,7 +757,7 @@ Un contrôle de progression offre un retour à l’utilisateur lorsqu’une long
 
 ### <a name="recommendations"></a>Recommandations
 
-* Fournissez un animateur de chargement des données qui indique la progression dans toutes les situations où l’utilisateur peut percevoir cette application comme étant bloquée ou bloquée. Une règle raisonnable est toute activité de «chargement» qui peut prendre plus de 5 secondes.
+* Fournissez un animateur de chargement des données qui indique la progression dans toutes les situations où l’utilisateur peut percevoir cette application comme étant bloquée ou bloquée. Une règle raisonnable est toute activité de « chargement » qui peut prendre plus de 5 secondes.
 
 ### <a name="resources"></a>Ressources
 

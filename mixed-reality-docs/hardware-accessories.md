@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Guide pratique, accessoires, Bluetooth, BT, contrôleur, boîtier de commande, cliquez sur Xbox
-ms.openlocfilehash: c25f849cbf05a78ba2fe7118dbe160d05e0f5e3f
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 566d4217fb674057e1dc3d9791b247185bf61d32
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63526611"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73435147"
 ---
 # <a name="hardware-accessories"></a>Accessoires matériels
 
@@ -19,33 +19,33 @@ Les appareils Windows Mixed Reality prennent en charge les accessoires. Vous all
 
 Deux scénarios courants d’utilisation des accessoires avec HoloLens sont les substituts du mouvement d’appui à l’air et du clavier virtuel. Pour ce faire, les deux accessoires les plus courants sont les claviers **HoloLens** et **Bluetooth**. Microsoft HoloLens comprend une radio Bluetooth 4,1 et prend en charge les profils [HID Bluetooth](https://en.wikipedia.org/wiki/List_of_Bluetooth_profiles#Human_Interface_Device_Profile_.28HID.29) et [Bluetooth GATT](https://en.wikipedia.org/wiki/List_of_Bluetooth_profiles#Generic_Attribute_Profile_.28GATT.29) .
 
-Les casques immersifs Windows Mixed Reality requièrent des accessoires pour l' [entrée au-](gaze.md) delà du point de vue et de la [voix](voice-input.md). Les accessoires pris en charge incluent le **clavier et la souris**, le **boîtier**de soumanette et les contrôleurs de **[mouvement](motion-controllers.md)** .
+Les casques immersifs Windows Mixed Reality requièrent des accessoires pour l’entrée au-delà du [point de vue](gaze-and-commit.md) et de la [voix](voice-input.md). Les accessoires pris en charge incluent le **clavier et la souris**, le **boîtier de soumanette**et les **[contrôleurs de mouvement](motion-controllers.md)** .
 
 ## <a name="pairing-bluetooth-accessories"></a>Association des accessoires Bluetooth
 
-Le couplage d’un périphérique Bluetooth avec Microsoft HoloLens est semblable au couplage d’un périphérique Bluetooth à un ordinateur de bureau ou un appareil mobile Windows 10:
+Le couplage d’un périphérique Bluetooth avec Microsoft HoloLens est semblable au couplage d’un périphérique Bluetooth à un ordinateur de bureau ou un appareil mobile Windows 10 :
 1. Dans le menu Démarrer, ouvrez l’application **paramètres** .
 2. Accéder aux **appareils**
 3. Activer la radio Bluetooth si elle est désactivée à l’aide du commutateur Slider
 4. Mettez votre appareil Bluetooth en mode d’appariement. Cela varie d’un appareil à l’appareil. Sur la plupart des appareils Bluetooth, cette opération s’effectue en appuyant sur un ou plusieurs boutons.
 5. Attendez que le nom de l’appareil apparaisse dans la liste des périphériques Bluetooth. Dans ce cas, sélectionnez l’appareil, puis sélectionnez le bouton de **paire** . Si vous avez de nombreux périphériques Bluetooth à proximité, vous devrez peut-être faire défiler vers le bas de la liste des appareils Bluetooth pour voir l’appareil que vous essayez de coupler.
-6. Lorsque vous associez des périphériques Bluetooth à une capacité d’entrée (par exemple: Claviers Bluetooth), un code pin à 6 ou 8 chiffres peut s’afficher. Veillez à taper ce code PIN sur le périphérique, puis appuyez sur entrée pour terminer le jumelage avec Microsoft HoloLens.
+6. Lorsque vous associez des périphériques Bluetooth à une capacité d’entrée (par exemple, des claviers Bluetooth), un code pin à 6 ou 8 chiffres peut s’afficher. Veillez à taper ce code PIN sur le périphérique, puis appuyez sur entrée pour terminer le jumelage avec Microsoft HoloLens.
 
 ## <a name="motion-controllers"></a>Contrôleurs de mouvement
 
-Les contrôleurs de [mouvement](motion-controllers.md) Windows Mixed Reality sont pris en charge par les casques immersifs, mais pas HoloLens. Ces contrôleurs offrent un suivi précis et réactif des mouvements dans votre champ de vue à l’aide des capteurs du casque immersif, ce qui signifie qu’il n’est pas nécessaire d’installer le matériel sur les murs de votre espace. Chaque contrôleur est doté de plusieurs méthodes d’entrée.
+Les [contrôleurs de mouvement](motion-controllers.md) Windows Mixed Reality sont pris en charge par les casques immersifs, mais pas HoloLens. Ces contrôleurs offrent un suivi précis et réactif des mouvements dans votre champ de vue à l’aide des capteurs du casque immersif, ce qui signifie qu’il n’est pas nécessaire d’installer le matériel sur les murs de votre espace. Chaque contrôleur est doté de plusieurs méthodes d’entrée.
 
 ![Contrôleurs de mouvement Windows Mixed Reality](images/winmr-ck-1080x1080-350px.jpg)
 
 ## <a name="hololens-clicker"></a>Clicker de HoloLens
 
-L’interutilisateur HoloLens est le premier périphérique périphérique créé spécifiquement pour HoloLens et est inclus dans l’édition de développement HoloLens. L’utilisateur de l’un des clickers HoloLens permet à un utilisateur de cliquer et de faire défiler avec un déplacement minimal pour remplacer le mouvement d’appui sur l’air. Ce n’est pas un remplacement pour tous les [mouvements](gestures.md). Par exemple, les gestes de [floraison](gestures.md#bloom) et de redimensionnement [ou de déplacement](gestures.md#composite-gestures) utilisent des mouvements manuels. L’interclic HoloLens est un dispositif de capteur d’orientation avec un bouton simple. Il se connecte à HoloLens à l’aide de la BTLE (Bluetooth Low Energy).
+L’interutilisateur HoloLens est le premier périphérique périphérique créé spécifiquement pour HoloLens et est inclus dans l’édition de développement HoloLens. L’utilisateur de l’un des clickers HoloLens permet à un utilisateur de cliquer et de faire défiler avec un déplacement minimal pour remplacer le mouvement d’appui sur l’air. Ce n’est pas un remplacement pour tous les [mouvements](gaze-and-commit.md#composite-gestures). Par exemple, les gestes de [floraison](system-gesture.md#bloom) et de [redimensionnement ou de déplacement](gaze-and-commit.md#composite-gestures) utilisent des mouvements manuels. L’interclic HoloLens est un dispositif de capteur d’orientation avec un bouton simple. Il se connecte à HoloLens à l’aide de la BTLE (Bluetooth Low Energy).
 
 ![Clicker du HoloLens](images/hololens-clicker-500px.jpg)
 
 Pour sélectionner un [hologramme](hologram.md), pointez dessus, puis cliquez sur. L’orientation du clic n’a pas d’importance pour cette opération. Pour faire défiler ou panoramiquer, cliquez et maintenez le bouton enfoncé, puis faites pivoter l’utilisateur vers le haut ou vers le haut ou vers la gauche/droite. Lors du défilement, vous atteignez la vitesse la plus rapide avec un minimum de +/-15 ° de rotation du poignet. Le déplacement d’autres ne permet pas de faire défiler plus rapidement.
 
-Il y a deux voyants à l’intérieur du clic:
+Il y a deux voyants à l’intérieur du clic :
 * La DEL blanche indique si l’appareil est couplé (clignotement) ou en charge (plein)
 * Le voyant orange indique que la batterie de l’appareil est faible (clignotement) ou a subi une défaillance (pleine)
 
@@ -67,7 +67,7 @@ D’autres marques de manette Bluetooth peuvent fonctionner avec des appareils W
 
 Tant que le périphérique prend en charge les profils HID Bluetooth ou GATT, il sera en mesure de s’associer à HoloLens. Les autres périphériques HID et du GATT Bluetooth, en plus du clavier, de la souris et du module de clic de l’appareil HoloLens, peuvent nécessiter une application complémentaire sur Microsoft HoloLens pour être entièrement fonctionnelle.
 
-Les périphériques non pris en charge sont les suivants:
+Les périphériques non pris en charge sont les suivants :
 * Les périphériques dans les profils audio Bluetooth ne sont pas pris en charge.
 * Les périphériques audio Bluetooth, tels que les haut-parleurs et les casques, peuvent apparaître comme étant disponibles dans l’application paramètres, mais ne sont pas pris en charge pour être utilisés avec Microsoft HoloLens comme point de terminaison audio.
 * Les téléphones et les PC compatibles Bluetooth ne sont pas pris en charge pour le transfert de fichiers.

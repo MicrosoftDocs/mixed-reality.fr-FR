@@ -6,14 +6,14 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: a6367a1be1bcaeab911b925641dbb3a66998c2dc
-ms.sourcegitcommit: 599bbdd861ce6ff11b6cfb345a0a995f8b7bf85b
+ms.openlocfilehash: 4baef90f8e00e5da1063c708ae24d2057e0dc227
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68977991"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438372"
 ---
-# <a name="1-integrating-and-using-speech-recognition-and-transcription"></a>1. Intégration et utilisation de la reconnaissance vocale et de la transcription
+# <a name="1-integrating-and-using-speech-recognition-and-transcription"></a>1. intégration et utilisation de la reconnaissance vocale et de la transcription
 
 Ce didacticiel crée une application de réalité mixte qui explore l’utilisation du kit de développement logiciel (SDK) Azure Cognitive Services Speech avec le HoloLens 2. À la fin de cette série de didacticiels, vous serez en mesure d’utiliser le microphone de votre appareil pour transcrire la parole en temps réel, traduire votre discours en d’autres langues et tirer parti de la fonctionnalité d’intention du kit de développement logiciel (SDK) Speech pour comprendre les commandes vocales à l’aide de intelligence artificielle.
 
@@ -56,7 +56,7 @@ Ce didacticiel crée une application de réalité mixte qui explore l’utilisat
 
 ![module4Chapter1step9imb](images/module4chapter1step9imb.PNG)
 
-8. Votre scène contient maintenant plusieurs nouveaux éléments à partir du MRTK. Enregistrez votre scène sous un nom différent en cliquant sur «fichier», puis sur «Enregistrer sous» et nommez votre scène SpeechScene. 
+8. Votre scène contient maintenant plusieurs nouveaux éléments à partir du MRTK. Enregistrez votre scène sous un nom différent en cliquant sur « fichier », puis sur « Enregistrer sous » et nommez votre scène SpeechScene. 
 
 > Remarque : Si vous appuyez sur lire sur votre scène après avoir ajouté le MRTK à votre projet et qu’il n’entre pas en mode lecture, vous devrez peut-être redémarrer Unity. 
 
@@ -80,7 +80,7 @@ Ce didacticiel crée une application de réalité mixte qui explore l’utilisat
 
 ![Module4Chapter1step12imc](images/module4chapter1step12imc.PNG)
 
-13. Maintenant, sous commandes vocales, accédez à «paramètres généraux» et définissez «comportement de démarrage» sur «démarrage manuel».
+13. Maintenant, sous commandes vocales, accédez à « paramètres généraux » et définissez « comportement de démarrage » sur « démarrage manuel ».
 
 ![Module4Chapter1step13imb](images/module4chapter1step13imb.PNG)
 
@@ -96,13 +96,13 @@ Ce didacticiel crée une application de réalité mixte qui explore l’utilisat
 
 ![Module4Chapter1step13im](images/module4chapter1step13im.PNG)
 
-17. Pour connecter notre application à Azure Cognitive Services, vous devez entrer une clé d’abonnement (également appelée clé API) pour le service vocal. Suivez les instructions [ici](https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/get-started) pour obtenir une clé d’abonnement gratuite. Une fois que vous avez obtenu la clé d’abonnement, entrez-la dans le champ clé de l’API du service vocal du composant LunarcomController dans le panneau Inspecteur, comme indiqué dans l’image ci-dessous.
+17. Pour connecter notre application à Azure Cognitive Services, vous devez entrer une clé d’abonnement (également appelée clé API) pour le service vocal. Suivez les instructions [ici](https://docs.microsoft.com//azure/cognitive-services/speech-service/get-started) pour obtenir une clé d’abonnement gratuite. Une fois que vous avez obtenu la clé d’abonnement, entrez-la dans le champ clé de l’API du service vocal du composant LunarcomController dans le panneau Inspecteur, comme indiqué dans l’image ci-dessous.
 
-18. Entrez la région que vous avez choisie lorsque vous vous êtes inscrit à la clé d’abonnement dans le champ région du service vocal du composant LunarcomController dans le panneau Inspecteur. Par exemple, pour la région «ouest des États-Unis» dans «ouestr»
+18. Entrez la région que vous avez choisie lorsque vous vous êtes inscrit à la clé d’abonnement dans le champ région du service vocal du composant LunarcomController dans le panneau Inspecteur. Par exemple, pour la région « ouest des États-Unis » dans « ouestr »
 
 ![Module4Chapter1step15im](images/module4chapter1step15im.PNG)
 
-19. Dans votre hiérarchie, développez l’objet Lunarcom_Base en cliquant sur la flèche à gauche de celui-ci. Ensuite, faites de même pour son objet enfant, «terminal», comme indiqué dans l’image ci-dessous.
+19. Dans votre hiérarchie, développez l’objet Lunarcom_Base en cliquant sur la flèche à gauche de celui-ci. Ensuite, faites de même pour son objet enfant, « terminal », comme indiqué dans l’image ci-dessous.
 
 20. Tandis que Lunarcom_Base est sélectionné, cliquez et faites glisser Lunarcom Text de la hiérarchie vers l’emplacement du texte de sortie dans le composant LunarcomController du panneau Inspecteur, comme indiqué dans l’image ci-dessous.
 
@@ -133,7 +133,7 @@ Ce didacticiel crée une application de réalité mixte qui explore l’utilisat
 ![Lesson1 Chapter5 étape1](images/Lesson1Chapter5Step1.JPG)
 
 2. Vérifiez que la scène que vous souhaitez essayer figure dans la liste « Scenes in Build » (Scènes dans la génération) en cliquant sur le bouton « Add Open Scenes » (Ajouter des scènes ouvertes).
-3. Appuyez sur le bouton Paramètres du lecteur et accédez à paramètres de publication. Sous fonctionnalités, activez: Internet, serveur client Internet, serveur client de réseau privé, microphone et perception spatiale.
+3. Appuyez sur le bouton Paramètres du lecteur et accédez à paramètres de publication. Sous fonctionnalités, activez : Internet, serveur client Internet, serveur client de réseau privé, microphone et perception spatiale.
 4. Dans les mêmes paramètres de lecteur, accédez à paramètres XR et sélectionnez la réalité virtuelle prise en charge sur activé.
 5. Appuyez sur le bouton Build (Générer) pour commencer le processus de génération.
 
@@ -143,18 +143,18 @@ Ce didacticiel crée une application de réalité mixte qui explore l’utilisat
 
 ![Lesson1 Chapter5 étape 4](images/Lesson1Chapter5Step4.JPG)
 
-> REMARQUE : Si la génération échoue, essayez de renouveler l’opération, éventuellement après avoir redémarré Unity. Si vous voyez une erreur comme « Error : CS0246 = The type or namespace name “XX” could not be found (are you missing a using directive or an assembly reference?) » (CS0246 = le type ou le nom de l’espace de noms « XX » est introuvable (une directive using ou une référence d’assembly est-elle manquante ?) », vous devrez peut-être installer [SDK Windows 10 (10.0.18362.0)](<https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk>)
+> Remarque : si la génération échoue, réessayez de générer ou redémarrez Unity, puis recommencez l’opération. Si vous voyez une erreur telle que « erreur : CS0246 = le type ou le nom d’espace de noms «XX » est introuvable (vous manque-t-il une directive using ou une référence d’assembly ?)», vous devrez peut-être installer le [Kit de développement logiciel (SDK) Windows 10 (10.0.18362.0)](<https://developer.microsoft.com//windows/downloads/windows-10-sdk>)
 
-7. Une fois la génération terminée, ouvrez le dossier créé qui contient vos fichiers d’application nouvellement générés. Double-cliquez sur le fichier solution «. sln» pour ouvrir le fichier solution dans Visual Studio.
+7. Une fois la génération terminée, ouvrez le dossier créé qui contient vos fichiers d’application nouvellement générés. Double-cliquez sur le fichier solution « . sln » pour ouvrir le fichier solution dans Visual Studio.
 
-> Remarque : Veillez à ouvrir le dossier créé (par exemple, le dossier « App », si vous avez suivi les conventions de nommage indiquées aux étapes précédentes), car il existe un fichier .sln portant le même nom en dehors de ce dossier qui ne doit pas être confondu avec le fichier .sln situé dans le dossier de génération. 
+> Remarque : Veillez à ouvrir le dossier qui vient d’être créé (par exemple, le dossier « application », si vous respectez les conventions d’affectation des noms des étapes précédentes), dans la mesure où il y aura un fichier. sln portant le même nom en dehors de ce dossier, à ne pas confondre avec le fichier. sln dans le dossier Build. 
 
 ![Leçon 1 Chapitre 5 Étape 5](images/Lesson1Chapter5Step5.JPG)
 
-> Remarque : Si Visual Studio vous invite à installer de nouveaux composants, prenez un moment pour vous assurer que tous les composants requis sont installés comme spécifié dans la [page « Installer les outils »](install-the-tools.md).
+> Remarque : si Visual Studio vous invite à installer de nouveaux composants, prenez un moment pour vous assurer que tous les composants requis sont installés comme indiqué dans [la page « installer les outils »](install-the-tools.md)
 
-8. Branchez l’appareil HoloLens 2 à votre PC avec le câble USB. Bien que les instructions de cette leçon supposent que vous déployez un test avec un appareil HoloLens 2, vous pouvez choisir d’effectuer le déploiement sur l’[émulateur HoloLens 2](using-the-hololens-emulator.md) ou de créer un [package d’application pour effectuer un chargement indépendant](<https://docs.microsoft.com/en-us/windows/uwp/packaging/packaging-uwp-apps>).
-9. Avant d’effectuer la génération sur votre appareil, vérifiez que ce dernier est en mode développeur. S’il s’agit de votre premier déploiement sur l’appareil HoloLens 2, Visual Studio peut vous demander de l’associer à un code confidentiel. Veuillez suivre [ces instructions](https://docs.microsoft.com/en-us/windows/mixed-reality/using-visual-studio) si vous devez activer le mode développeur ou associer l’appareil à Visual Studio.
+8. Branchez l’appareil HoloLens 2 à votre PC avec le câble USB. Bien que les instructions de cette leçon supposent que vous déployez un test avec un appareil HoloLens 2, vous pouvez choisir d’effectuer le déploiement sur l’[émulateur HoloLens 2](using-the-hololens-emulator.md) ou de créer un [package d’application pour effectuer un chargement indépendant](<https://docs.microsoft.com//windows/uwp/packaging/packaging-uwp-apps>).
+9. Avant d’effectuer la génération sur votre appareil, vérifiez que ce dernier est en mode développeur. S’il s’agit de votre premier déploiement sur l’appareil HoloLens 2, Visual Studio peut vous demander de l’associer à un code confidentiel. Veuillez suivre [ces instructions](https://docs.microsoft.com//windows/mixed-reality/using-visual-studio) si vous devez activer le mode développeur ou associer l’appareil à Visual Studio.
 
 10. Configurez Visual Studio en vue d’effectuer la génération sur votre appareil HoloLens 2 en sélectionnant la configuration « Release » et l’architecture « ARM ».
 
@@ -164,9 +164,9 @@ Ce didacticiel crée une application de réalité mixte qui explore l’utilisat
 
 ![Lesson1 Chapter5 Step9](images/Lesson1Chapter5Step9.JPG)
 
-## <a name="congratulations"></a>Félicitations
+## <a name="congratulations"></a>Félicitations !
 
 Vous avez configuré la reconnaissance vocale dans votre application, optimisée par Azure. Exécutez l’application pour vous assurer que toutes les fonctions et fonctionnalités fonctionnent correctement. Commencez par dire le mot de mise en éveil que vous avez tapé à l’étape 22, activer terminal. Sélectionnez le bouton microphone pour démarrer la reconnaissance vocale. Commencez à parler. Vous verrez vos mots transcrits dans le terminal à mesure que vous parlez. Appuyez une deuxième fois sur le bouton microphone pour arrêter la reconnaissance vocale. Dites rejeter le terminal pour masquer le terminal Lunarcom. Dans la leçon suivante, nous allons apprendre à utiliser de manière dynamique la reconnaissance vocale de l’appareil pour les situations où le kit de développement logiciel (SDK) Speech d’Azure n’est pas disponible en raison de la déconnexion de HoloLens 2.
 
-[Didacticiel suivant: 2. Ajout d’un mode hors connexion pour la traduction de parole en texte locale](mrlearning-speechSDK-ch2.md)
+[Didacticiel suivant : 2. Ajout d’un mode hors connexion pour la traduction vocale locale en texte](mrlearning-speechSDK-ch2.md)
 

@@ -6,14 +6,17 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Entrée vocale, KeywordRecognizer, GrammarRecognizer, microphone, dictée, voix
-ms.openlocfilehash: ef8114a1c877fe9b858122e0c64628d4b71a69cd
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: d1cd2a2b954a195bc3f2688d915965f89aa30f98
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63548681"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438196"
 ---
 # <a name="voice-input-in-unity"></a>Entrée vocale dans Unity
+
+>[!NOTE]
+>Au lieu d’utiliser les informations ci-dessous, envisagez d’utiliser le plug-in Unity pour le kit de développement logiciel (SDK) cognitive Speech services qui offre de meilleurs résultats de précision vocale et fournit un accès facile au décodage vocal en texte et à des fonctionnalités vocales avancées telles que la boîte de dialogue, intentionnellement interaction, traduction, synthèse vocale et reconnaissance vocale en langage naturel. Recherchez l’exemple et documentation ici : https://docs.microsoft.com//azure/cognitive-services/speech-service/quickstart-csharp-unity   
 
 Unity expose trois façons d’ajouter une [entrée vocale](voice-input.md) à votre application Unity.
 
@@ -25,22 +28,22 @@ Avec KeywordRecognizer (l’un des deux types de PhraseRecognizers), votre appli
 ## <a name="enabling-the-capability-for-voice"></a>Activation de la fonctionnalité de voix
 
 La fonctionnalité **microphone** doit être déclarée pour qu’une application tire parti de l’entrée vocale.
-1. Dans l’éditeur Unity, accédez aux paramètres du lecteur en accédant à «modifier les paramètres du projet > > Player».
-2. Cliquer sur l’onglet «Windows Store»
-3. Dans la section «fonctionnalités de > des paramètres de publication», vérifiez la fonctionnalité du **microphone** .
+1. Dans l’éditeur Unity, accédez aux paramètres du lecteur en accédant à « modifier les paramètres du projet > > Player ».
+2. Cliquer sur l’onglet « Windows Store »
+3. Dans la section « fonctionnalités de > des paramètres de publication », vérifiez la fonctionnalité du **microphone** .
 
 ## <a name="phrase-recognition"></a>Reconnaissance d’expressions
 
-Pour permettre à votre application d’écouter des expressions spécifiques parlées par l’utilisateur, puis de prendre des mesures, vous devez:
+Pour permettre à votre application d’écouter des expressions spécifiques parlées par l’utilisateur, puis de prendre des mesures, vous devez :
 1. Spécifier les expressions à écouter à l’aide d’un KeywordRecognizer ou d’un GrammarRecognizer
 2. Gérer l’événement OnPhraseRecognized et entreprendre une action correspondant à l’expression reconnue
 
 ### <a name="keywordrecognizer"></a>KeywordRecognizer
 
 **Espace de noms :** *UnityEngine. Windows. Speech*<br>
-**Modes** *KeywordRecognizer*, *PhraseRecognizedEventArgs*, *SpeechError*, *SpeechSystemStatus*
+**Types :** *KeywordRecognizer*, *PhraseRecognizedEventArgs*, *SpeechError*, *SpeechSystemStatus*
 
-Nous aurons besoin de quelques instructions d’utilisation pour enregistrer des séquences de touches:
+Nous aurons besoin de quelques instructions d’utilisation pour enregistrer des séquences de touches :
 
 ```
 using UnityEngine.Windows.Speech;
@@ -48,14 +51,14 @@ using System.Collections.Generic;
 using System.Linq;
 ```
 
-Nous allons ensuite ajouter quelques champs à votre classe pour stocker le module de reconnaissance et de mot clé-> dictionnaire d’actions:
+Nous allons ensuite ajouter quelques champs à votre classe pour stocker le module de reconnaissance et de mot clé-> dictionnaire d’actions :
 
 ```
 KeywordRecognizer keywordRecognizer;
 Dictionary<string, System.Action> keywords = new Dictionary<string, System.Action>();
 ```
 
-Ajoutez maintenant un mot clé au dictionnaire (par exemple, à l’intérieur d’une méthode Start ()). Nous ajoutons le mot clé «Activate» dans cet exemple:
+Ajoutez maintenant un mot clé au dictionnaire (par exemple, à l’intérieur d’une méthode Start ()). Nous ajoutons le mot clé « Activate » dans cet exemple :
 
 ```
 //Create keywords for keyword recognizer
@@ -65,7 +68,7 @@ keywords.Add("activate", () =>
 });
 ```
 
-Créez le module de reconnaissance de mot clé et dites-lui ce que nous souhaitons reconnaître:
+Créez le module de reconnaissance de mot clé et dites-lui ce que nous souhaitons reconnaître :
 
 ```
 keywordRecognizer = new KeywordRecognizer(keywords.Keys.ToArray());
@@ -77,7 +80,7 @@ Inscrivez-vous maintenant à l’événement OnPhraseRecognized
 keywordRecognizer.OnPhraseRecognized += KeywordRecognizer_OnPhraseRecognized;
 ```
 
-Voici un exemple de gestionnaire:
+Voici un exemple de gestionnaire :
 
 ```
 private void KeywordRecognizer_OnPhraseRecognized(PhraseRecognizedEventArgs args)
@@ -91,7 +94,7 @@ private void KeywordRecognizer_OnPhraseRecognized(PhraseRecognizedEventArgs args
 }
 ```
 
-Enfin, commencez à reconnaître!
+Enfin, commencez à reconnaître !
 
 ```
 keywordRecognizer.Start();
@@ -102,15 +105,15 @@ keywordRecognizer.Start();
 **Espace de noms :** *UnityEngine. Windows. Speech*<br>
 **Types**: *GrammarRecognizer*, *PhraseRecognizedEventArgs*, *SpeechError*, *SpeechSystemStatus*
 
-Le GrammarRecognizer est utilisé si vous spécifiez votre grammaire de reconnaissance à l’aide de SRGS. Cela peut être utile si votre application contient plus de seulement quelques mots-clés, si vous souhaitez reconnaître des expressions plus complexes ou si vous souhaitez facilement activer et désactiver des ensembles de commandes. Consultez : [Créez des grammaires à l’aide du code XML SRGS](https://msdn.microsoft.com/library/hh378349(v=office.14).aspx) pour les informations de format de fichier.
+Le GrammarRecognizer est utilisé si vous spécifiez votre grammaire de reconnaissance à l’aide de SRGS. Cela peut être utile si votre application contient plus de seulement quelques mots-clés, si vous souhaitez reconnaître des expressions plus complexes ou si vous souhaitez facilement activer et désactiver des ensembles de commandes. Voir : [créer des grammaires à l’aide de SRGS XML](https://msdn.microsoft.com/library/hh378349(v=office.14).aspx) pour les informations de format de fichier.
 
-Une fois que vous disposez de la grammaire SRGS et que celle-ci se trouve dans votre projet dans un [dossier StreamingAssets](http://docs.unity3d.com/Manual/StreamingAssets.html):
+Une fois que vous disposez de la grammaire SRGS et que celle-ci se trouve dans votre projet dans un [dossier StreamingAssets](https://docs.unity3d.com/Manual/StreamingAssets.html):
 
 ```
 <PROJECT_ROOT>/Assets/StreamingAssets/SRGS/myGrammar.xml
 ```
 
-Créez un GrammarRecognizer et transmettez-lui le chemin d’accès à votre fichier SRGS:
+Créez un GrammarRecognizer et transmettez-lui le chemin d’accès à votre fichier SRGS :
 
 ```
 private GrammarRecognizer grammarRecognizer;
@@ -133,7 +136,7 @@ private void Grammar_OnPhraseRecognized(PhraseRecognizedEventArgs args)
 }
 ```
 
-Enfin, commencez à reconnaître!
+Enfin, commencez à reconnaître !
 
 ```
 grammarRecognizer.Start();
@@ -144,23 +147,23 @@ grammarRecognizer.Start();
 **Espace de noms :** *UnityEngine. Windows. Speech*<br>
 **Types**: *DictationRecognizer*, *SpeechError*, *SpeechSystemStatus*
 
-Utilisez DictationRecognizer pour convertir la parole de l’utilisateur en texte. Le DictationRecognizer expose les fonctionnalités de [dictée](voice-input.md#dictation) et prend en charge l’inscription et l’écoute des événements d’hypothèse et d’expression terminés, ce qui vous permet de fournir des commentaires à l’utilisateur pendant qu’il parle et après. Les méthodes Start () et Stop () respectivement activent et désactivent la reconnaissance de la dictée. Une fois le module de reconnaissance terminé, il doit être supprimé à l’aide de la méthode Dispose () pour libérer les ressources qu’il utilise. Les ressources seront libérées automatiquement pendant la garbage collection à un coût de performances supplémentaire si elles ne sont pas libérées avant cela.
+Utilisez DictationRecognizer pour convertir la parole de l’utilisateur en texte. Le DictationRecognizer expose les fonctionnalités de [dictée](voice-input.md#dictation) et prend en charge l’inscription et l’écoute des événements d’hypothèse et d’expression terminés, ce qui vous permet de fournir des commentaires à l’utilisateur pendant qu’il parle et par la suite. Les méthodes Start () et Stop () respectivement activent et désactivent la reconnaissance de la dictée. Une fois le module de reconnaissance terminé, il doit être supprimé à l’aide de la méthode Dispose () pour libérer les ressources qu’il utilise. Les ressources seront libérées automatiquement pendant la garbage collection à un coût de performances supplémentaire si elles ne sont pas libérées avant cela.
 
-Il n’y a que quelques étapes nécessaires pour commencer à utiliser la dictée:
+Il n’y a que quelques étapes nécessaires pour commencer à utiliser la dictée :
 1. Créer un nouveau DictationRecognizer
 2. Gérer les événements de dictée
 3. Démarrer le DictationRecognizer
 
 ### <a name="enabling-the-capability-for-dictation"></a>Activation de la fonctionnalité de dictée
 
-La fonctionnalité «client Internet», en plus de la fonctionnalité «microphone» mentionnée ci-dessus, doit être déclarée pour qu’une application tire parti de la dictée.
-1. Dans l’éditeur Unity, accédez aux paramètres du lecteur en accédant à la page «modifier les paramètres du projet > > Player».
-2. Cliquer sur l’onglet «Windows Store»
-3. Dans la section «fonctionnalités de > des paramètres de publication», vérifiez la capacité de **internetclient**
+La fonctionnalité « client Internet », en plus de la fonctionnalité « microphone » mentionnée ci-dessus, doit être déclarée pour qu’une application tire parti de la dictée.
+1. Dans l’éditeur Unity, accédez aux paramètres du lecteur en accédant à la page « modifier les paramètres du projet > > Player ».
+2. Cliquer sur l’onglet « Windows Store »
+3. Dans la section « fonctionnalités de > des paramètres de publication », vérifiez la capacité de **internetclient**
 
 ### <a name="dictationrecognizer"></a>DictationRecognizer
 
-Créez un DictationRecognizer de la manière suivante:
+Créez un DictationRecognizer de la manière suivante :
 
 ```
 dictationRecognizer = new DictationRecognizer();
@@ -176,13 +179,13 @@ Quatre événements de dictée peuvent être souscrits et gérés pour implémen
 
 Cet événement est déclenché après la suspension de l’utilisateur, généralement à la fin d’une phrase. La chaîne complète reconnue est retournée ici.
 
-Tout d’abord, abonnez-vous à l’événement DictationResult:
+Tout d’abord, abonnez-vous à l’événement DictationResult :
 
 ```
 dictationRecognizer.DictationResult += DictationRecognizer_DictationResult;
 ```
 
-Gérez ensuite le rappel DictationResult:
+Gérez ensuite le rappel DictationResult :
 
 ```
 private void DictationRecognizer_DictationResult(string text, ConfidenceLevel confidence)
@@ -195,13 +198,13 @@ private void DictationRecognizer_DictationResult(string text, ConfidenceLevel co
 
 Cet événement est déclenché en continu pendant que l’utilisateur parle. À mesure que le module de reconnaissance écoute, il fournit du texte sur ce qu’il est entendu jusqu’à présent.
 
-Tout d’abord, abonnez-vous à l’événement DictationHypothesis:
+Tout d’abord, abonnez-vous à l’événement DictationHypothesis :
 
 ```
 dictationRecognizer.DictationHypothesis += DictationRecognizer_DictationHypothesis;
 ```
 
-Gérez ensuite le rappel DictationHypothesis:
+Gérez ensuite le rappel DictationHypothesis :
 
 ```
 private void DictationRecognizer_DictationHypothesis(string text)
@@ -214,13 +217,13 @@ private void DictationRecognizer_DictationHypothesis(string text)
 
 Cet événement est déclenché lorsque le module de reconnaissance s’arrête, qu’il s’agisse de l’appel de Stop (), d’un délai d’attente ou d’une autre erreur.
 
-Tout d’abord, abonnez-vous à l’événement DictationComplete:
+Tout d’abord, abonnez-vous à l’événement DictationComplete :
 
 ```
 dictationRecognizer.DictationComplete += DictationRecognizer_DictationComplete;
 ```
 
-Gérez ensuite le rappel DictationComplete:
+Gérez ensuite le rappel DictationComplete :
 
 ```
 private void DictationRecognizer_DictationComplete(DictationCompletionCause cause)
@@ -233,13 +236,13 @@ private void DictationRecognizer_DictationComplete(DictationCompletionCause caus
 
 Cet événement est déclenché lorsqu’une erreur se produit.
 
-Tout d’abord, abonnez-vous à l’événement DictationError:
+Tout d’abord, abonnez-vous à l’événement DictationError :
 
 ```
 dictationRecognizer.DictationError += DictationRecognizer_DictationError;
 ```
 
-Gérez ensuite le rappel DictationError:
+Gérez ensuite le rappel DictationError :
 
 ```
 private void DictationRecognizer_DictationError(string error, int hresult)
@@ -267,19 +270,19 @@ dictationRecognizer.Dispose();
 **Conseil**
 * Les méthodes Start () et Stop () respectivement activent et désactivent la reconnaissance de la dictée.
 * Une fois le module de reconnaissance terminé, il doit être supprimé à l’aide de la méthode Dispose () pour libérer les ressources qu’il utilise. Les ressources seront libérées automatiquement pendant la garbage collection à un coût de performances supplémentaire si elles ne sont pas libérées avant cela.
-* Les délais d’attente se produisent après un laps de temps défini. Vous pouvez vérifier ces délais d’attente dans l’événement DictationComplete. Deux délais d’attente doivent être pris en compte:
+* Les délais d’attente se produisent après un laps de temps défini. Vous pouvez vérifier ces délais d’attente dans l’événement DictationComplete. Deux délais d’attente doivent être pris en compte :
    1. Si le module de reconnaissance démarre et n’entend aucun audio pendant les cinq premières secondes, il expire.
    2. Si le module de reconnaissance a donné un résultat, mais émet un silence pendant vingt secondes, il expire.
 
 ## <a name="using-both-phrase-recognition-and-dictation"></a>Utilisation de la reconnaissance et de la dictée des expressions
 
-Si vous souhaitez utiliser la reconnaissance d’expression et la dictée dans votre application, vous devez l’arrêter complètement avant de pouvoir démarrer l’autre. Si vous avez plusieurs KeywordRecognizers en cours d’exécution, vous pouvez les arrêter en même temps avec:
+Si vous souhaitez utiliser la reconnaissance d’expression et la dictée dans votre application, vous devez l’arrêter complètement avant de pouvoir démarrer l’autre. Si vous avez plusieurs KeywordRecognizers en cours d’exécution, vous pouvez les arrêter en même temps avec :
 
 ```
 PhraseRecognitionSystem.Shutdown();
 ```
 
-Pour restaurer tous les reconnaisseurs à leur état précédent, après l’arrêt du DictationRecognizer, vous pouvez appeler:
+Pour restaurer tous les reconnaisseurs à leur état précédent, après l’arrêt du DictationRecognizer, vous pouvez appeler :
 
 ```
 PhraseRecognitionSystem.Restart();

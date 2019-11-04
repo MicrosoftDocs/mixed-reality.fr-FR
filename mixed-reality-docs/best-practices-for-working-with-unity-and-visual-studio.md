@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: déployer, Unity, Visual Studio, HoloLens, HoloLens 2, casque immersif
-ms.openlocfilehash: b2c345a8cc9bddcbc447531eb5f6cdacc62f2e98
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: f897c9280505b1e84f8e6342729f1598d4b2f559
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63522314"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436967"
 ---
 # <a name="best-practices-for-working-with-unity-and-visual-studio"></a>Meilleures pratiques pour l’utilisation d’Unity et de Visual Studio
 
@@ -25,7 +25,7 @@ La prise en charge du serveur principal de script .NET dans Unity est dépréci�
 2) Désactiver les analyses logicielles anti-programme malveillant pour votre projet & les dossiers de build
    - Ouvrir la **protection contre les menaces contre les Virus &** sous votre application Paramètres Windows 10
    - Sélectionnez **gérer les paramètres** sous **virus & les paramètres de protection contre les menaces**
-   - Sélectionnez **Ajouter ou supprimer** des exclusions sous  la section exclusions.
+   - Sélectionnez **Ajouter ou supprimer des exclusions** sous la section **exclusions** .
    - Cliquez sur **Ajouter une exclusion** , puis sélectionnez le dossier qui contient le code de votre projet Unity et les sorties de génération
 3) Utiliser un SSD pour la génération
 
@@ -35,7 +35,7 @@ En outre, envisagez d’installer l' [extension Visual Studio *UnityScriptAnalyz
 
 ## <a name="visual-studio-tools-for-unity"></a>Outils Visual Studio pour Unity
 
-Télécharger [outils Visual Studio pour Unity](https://docs.microsoft.com/en-us/visualstudio/cross-platform/getting-started-with-visual-studio-tools-for-unity?view=vs-2019)
+Télécharger [outils Visual Studio pour Unity](https://docs.microsoft.com/visualstudio/cross-platform/getting-started-with-visual-studio-tools-for-unity?view=vs-2019)
 
 **Avantages de Outils Visual Studio pour Unity**
 * Déboguez Unity en mode de lecture de l’éditeur à partir de Visual Studio en plaçant des points d’arrêt, en évaluant des variables et des expressions complexes.
@@ -55,9 +55,9 @@ Les solutions Visual Studio UWP archivées dans le contrôle de code source peuv
 
 ## <a name="use-text-format-assets-for-easy-comparison-of-content-changes"></a>Utiliser des ressources au format texte pour faciliter la comparaison des modifications de contenu
 
-Le stockage des ressources au format texte facilite l’examen des différences de modification de contenu dans Visual Studio. Vous pouvez l’activer dans «modifier les paramètres du projet > l’éditeur de >» en modifiant le mode de **sérialisation des ressources** pour **forcer le texte**. Toutefois, la fusion de modifications de fichiers de ressources texte est sujette aux erreurs et n’est pas recommandée. envisagez donc d’activer des extractions binaires exclusives dans votre système de contrôle de code source.
+Le stockage des ressources au format texte facilite l’examen des différences de modification de contenu dans Visual Studio. Vous pouvez l’activer dans « modifier les paramètres du projet > l’éditeur de > » en modifiant le mode de **sérialisation des ressources** pour **forcer le texte**. Toutefois, la fusion de modifications de fichiers de ressources texte est sujette aux erreurs et n’est pas recommandée. envisagez donc d’activer des extractions binaires exclusives dans votre système de contrôle de code source.
 
-## <a name="see-also"></a>Voir aussi
-- [Visual Studio Tools pour Unity](https://visualstudiogallery.msdn.microsoft.com/8d26236e-4a64-4d64-8486-7df95156aba9)
+## <a name="see-also"></a>Articles associés
+- [Outils Visual Studio pour Unity](https://visualstudiogallery.msdn.microsoft.com/8d26236e-4a64-4d64-8486-7df95156aba9)
 - [Optimisation des temps de génération pour IL2CPP](https://docs.unity3d.com/Manual/IL2CPP-OptimizingBuildTimes.html)
 - [*UnityScriptAnalyzer* Extension Visual Studio](https://github.com/Microsoft/MixedRealityCompanionKit/tree/master/UnityScriptAnalyzer)

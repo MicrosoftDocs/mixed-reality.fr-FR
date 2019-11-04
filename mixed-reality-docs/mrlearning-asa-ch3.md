@@ -6,16 +6,16 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: 45a71cada97dff4a2fb32f2eaf7700816f2e0d42
-ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
+ms.openlocfilehash: 77d639a88d8b4c71dc5fbe1c78565c4c3f91d36c
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702026"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438414"
 ---
-# <a name="3-displaying-azure-spatial-anchor-feedback"></a>3. Affichage des commentaires sur l’ancrage spatial Azure
+# <a name="3-displaying-azure-spatial-anchor-feedback"></a>3. affichage des commentaires sur l’ancrage spatial Azure
 
-Dans cette leçon, vous allez apprendre à fournir aux utilisateurs des commentaires sur la détection d’ancrage, les événements et l’état lors de l’utilisation d’ancres spatiales Azure.
+Dans cette leçon, vous allez apprendre à fournir aux utilisateurs des commentaires sur la découverte d’ancrage, les événements et l’état lors de l’utilisation d’ancres spatiales Azure.
 
 ## <a name="objectives"></a>Objectifs
 
@@ -27,12 +27,12 @@ Dans cette leçon, vous allez apprendre à fournir aux utilisateurs des commenta
 
 ### <a name="set-up-asa-feedback-ui-panel"></a>Panneau de l’interface utilisateur de configuration des commentaires ASA
 
-1. Dans cette leçon, nous n’utilisons pas les boutons «SaveAnchorToDisk» et «ShareAnchor». pour ce faire, sélectionnez les deux boutons et désactivez la case à cocher dans le panneau inspecteur (comme indiqué ci-dessous) pour masquer ces boutons.
+1. Dans cette leçon, nous n’utilisons pas les boutons « SaveAnchorToDisk » et « ShareAnchor », donc sélectionnez les deux boutons et désactivez la case à cocher dans le panneau inspecteur (comme indiqué ci-dessous) pour masquer ces boutons.
    
 
 ![module2chapter3step1im](images/module2chapter3step1im.PNG)
 
-2. Ensuite, créez le panneau d’instructions. Commencez par cliquer avec le bouton droit sur le bouton «instructions», pointez sur «objet 3D», puis sélectionnez «textmeshpro-Text».
+2. Créez le panneau d’instructions. Commencez par cliquer avec le bouton droit sur le bouton « instructions », pointez sur « objet 3D », puis sélectionnez « textmeshpro-Text ».
 
 ![module2chapter3step2im](images/module2chapter3step2im.PNG)
 
@@ -40,38 +40,38 @@ Dans cette leçon, vous allez apprendre à fournir aux utilisateurs des commenta
 
 ![module2chapter3step3im](images/module2chapter3step3im.PNG)
 
-4. Remplacez le nom de l’objet TextMeshPro par «FeedbackPanel».
+4. Remplacez le nom de l’objet TextMeshPro par « FeedbackPanel ».
    
 
 ![module2chapter3step4im](images/module2chapter3step4im.PNG)
 
-5. Dans le panneau projet, sélectionnez «ressources», cliquez avec le bouton droit, puis sélectionnez «Afficher dans l’Explorateur».
+5. Dans le panneau projet, sélectionnez « ressources », cliquez avec le bouton droit, puis sélectionnez « Afficher dans l’Explorateur ».
    
 
 ![module2chapter3step4im](images/module2chapter3step5im.PNG)
 
 Cliquez [ici](https://onedrive.live.com/?authkey=%21ABXEC8PvyQu8Qd8&id=5B7335C4342BCB0E%21395636&cid=5B7335C4342BCB0E) pour télécharger les fichiers nécessaires dans les étapes suivantes.
 
-6. Une fois que l’Explorateur s’ouvre, sélectionnez le dossier ressources, puis le dossier «ASAmodulesAssets» et copiez le script de commentaires d’ancrage et les fichiers de script du module d’ancrage dans le dossier. 
+6. Une fois que l’Explorateur s’ouvre, sélectionnez le dossier ressources, puis le dossier « ASAmodulesAssets » et copiez le script de commentaires d’ancrage et les fichiers de script du module d’ancrage dans le dossier. 
 
 ![module2chapter3step5im](images/module2chapter3step6im.PNG)
 
-> Remarque: Si vous recevez un message vous demandant si vous souhaitez remplacer l’ancien ou conserver l’ancien, veillez à sélectionner remplacer.
+> Remarque : Si vous recevez un message contextuel vous demandant si vous souhaitez remplacer l’ancien ou conserver l’ancien, sélectionnez remplacer.
 
-7. Revenez à présent au dossier Assets. Ensuite, accédez au dossier «AzureSpatialAnchorsPlugin», puis au dossier exemples et enfin au dossier scripts, et copiez le wrapper de démonstration des ancres spatiales Azure dans ce dossier. 
+7. Revenez au dossier Assets. Ensuite, accédez au dossier « AzureSpatialAnchorsPlugin », suivi du dossier exemples et enfin du dossier scripts. Copiez ensuite le wrapper de démonstration des ancres spatiales Azure dans ce dossier. 
 
 ![module2chapter3step8im](images/module2chapter3step7im.PNG)
 
-8. Maintenant que les fichiers sont téléchargés, assurez-vous que le texte «feedbackpanel» est sélectionné, dans la hiérarchie ASA_feedback et cliquez sur «Ajouter un composant», puis ajoutez le script de commentaires d’ancrage en le recherchant et en le sélectionnant une fois qu’il apparaît. 
+8. Maintenant que les fichiers sont téléchargés, assurez-vous que le texte « feedbackpanel » est sélectionné dans la hiérarchie ASA_feedback, cliquez sur « Ajouter un composant » et ajoutez le script d’ancrage de commentaires en le recherchant et en le sélectionnant une fois qu’il apparaît. 
 
 ![module2chapter3step8im](images/module2chapter3step8im.PNG)
 
-9. Faites glisser l’objet de texte «feedbackPanel» de la hiérarchie ASA_Feedback vers l’emplacement vide sous le script, comme indiqué dans l’image ci-dessous. 
+9. Faites glisser l’objet de texte « feedbackPanel » de la hiérarchie ASA_Feedback vers l’emplacement vide sous le script, comme indiqué dans l’image ci-dessous. 
 
 ![module2chapter3step9im](images/module2chapter3step9im.PNG)
 
-## <a name="congratulations"></a>Félicitations
+## <a name="congratulations"></a>Félicitations !
 
-Dans cette leçon, nous avons appris à créer un panneau d’interface utilisateur pour afficher l’état actuel de l’expérience d’ancrage spatial Azure pour fournir à l’utilisateur des commentaires en temps réel.
+Dans cette leçon, nous avons appris à créer un panneau d’interface utilisateur pour afficher l’état actuel de l’expérience d’ancrage spatial Azure pour fournir aux utilisateurs des commentaires en temps réel.
 
 

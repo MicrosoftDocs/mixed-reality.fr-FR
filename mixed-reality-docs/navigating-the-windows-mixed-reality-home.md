@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Shell, système d’exploitation, plateforme, maison, maison, accueil, environnement, démarrer, menu Démarrer, menu Accueil, pin, application, lancer des applications, placer des applications, téléporter, déplacer, naviguer
-ms.openlocfilehash: 1ca6dd66506a64ad2e1c21870fee2725ddf20bd8
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 9de4cb44505d6cf4d0d3e4bd0fd9c5ee681063a5
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63525212"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438160"
 ---
 # <a name="navigating-the-windows-mixed-reality-home"></a>Navigation dans la page d’hébergement Windows Mixed Reality
 
@@ -23,9 +23,9 @@ Votre foyer est également l’emplacement où vous allez utiliser le menu Déma
 
 ![Menu Démarrer sur Microsoft HoloLens](images/start-500px.png)
 
-Le menu Démarrer se compose des éléments suivants:
+Le menu Démarrer se compose des éléments suivants :
 * Informations système (État du réseau, pourcentage de batterie, heure actuelle et volume)
-* Cortana (sur les casques immersifs, une vignette de démarrage; sur HoloLens, en haut du début)
+* Cortana (sur les casques immersifs, une vignette de démarrage ; sur HoloLens, en haut du début)
 * Applications épinglées
 * Bouton toutes les applications (signe plus)
 * Boutons photo et vidéo pour la capture de la [réalité mixte](mixed-reality-capture.md)
@@ -36,8 +36,8 @@ Basculez entre les vues applications épinglées et toutes les applications en s
 
 Pour lancer une application, sélectionnez-la au démarrage. Le menu Démarrer disparaît et l’application s’ouvre en mode placement, sous la forme d’une fenêtre 2D ou d’un [modèle 3D](implementing-3d-app-launchers.md).
 
-Pour exécuter l’application, vous devez la placer dans votre foyer:
-1. Utilisez votre point d’interposition [ou contrôleur](gaze.md) pour positionner l’application là où vous le souhaitez. Elle s’ajuste automatiquement (en taille et en position) pour se conformer à l’espace où vous la placez.
+Pour exécuter l’application, vous devez la placer dans votre foyer :
+1. Utilisez votre point d’interposition [ou contrôleur](gaze-and-commit.md) pour positionner l’application là où vous le souhaitez. Elle s’ajuste automatiquement (en taille et en position) pour se conformer à l’espace où vous la placez.
 2. Placez l’application à l’aide d’air-TAP (HoloLens) ou du bouton de sélection (casques immersifs). Pour annuler et revenir au menu Démarrer, utilisez le geste de touche ou le bouton Windows.
 
 les [applications 2D](building-2d-apps.md), créées pour un ordinateur de bureau, un appareil mobile ou une Xbox, peuvent être modifiées pour s’exécuter en tant qu’applications immersives de réalité mixte à l’aide de l' [API HolographicSpace](https://msdn.microsoft.com/library/windows/apps/windows.graphics.holographic.holographicspace.aspx). Une application immersive fait sortir l’utilisateur de son lieu de départ et d’une expérience immersive. Les utilisateurs peuvent retourner chez eux avec le geste (HoloLens) ou en appuyant sur le bouton Windows de leur contrôleur (casques immersifs).
@@ -50,7 +50,7 @@ Les applications peuvent également être lancées via une API app-to-App ou via
 
 Sélectionnez **ajuster** dans la barre de l’application pour afficher les contrôles permettant de déplacer, de mettre à l’échelle et de faire pivoter le contenu de réalité mixte. Lorsque vous avez terminé, sélectionnez **terminé**.
 
-![La ardoise du magasin en mode ajustement (cadre bleu). Remarque: la barre d’application (haut) a changé pour inclure les boutons «terminé» et «supprimer».](images/adjust-500px.png)
+![La ardoise du magasin en mode ajustement (cadre bleu). Remarque : la barre d’application (haut) a changé pour inclure les boutons « terminé » et « supprimer ».](images/adjust-500px.png)
 
 Différentes applications peuvent avoir des options supplémentaires dans la barre des applications. Par exemple, Microsoft Edge possède des options de *défilement*, de *glisser-déplacer*et de *Zoom* . 
 
@@ -62,24 +62,24 @@ Le bouton **précédent** permet de revenir aux écrans affichés précédemment
 
 Avec **HoloLens**, vous vous déplacez dans l’espace physique pour vous déplacer dans votre foyer.
 
-Avecles casques immersifs, vous pouvez également vous familiariser avec vos PlaySpace pour vous déplacer dans une zone similaire dans le monde virtuel. Pour vous déplacer sur des distances plus longues, vous pouvez utiliser le stick analogique sur votre contrôleur pour «parcourir» virtuellement , ou vous pouvez utiliser la téléportage pour passer immédiatement plus de distances.
+Avec les **casques immersifs**, vous pouvez également vous familiariser avec vos PlaySpace pour vous déplacer dans une zone similaire dans le monde virtuel. Pour vous déplacer sur des distances plus longues, vous pouvez utiliser le stick analogique sur votre contrôleur pour « parcourir » virtuellement, ou vous pouvez utiliser la *téléportage* pour passer immédiatement plus de distances.
 
 ![Téléporting dans la page d’hébergement Windows Mixed Reality](images/teleportation-500px.png)
 
-**Pour vous téléporter:**
+**Pour vous téléporter :**
 1. Affichez le réticule de téléportation.
-   * À l’aide de contrôleurs de [mouvement](motion-controllers.md): Appuyez sur le stick analogique et maintenez-le à cette position.
-   * À l’aide d’un contrôleur Xbox: Appuyez sur le stick analogique gauche vers l’avant et maintenez-le à cette position.
+   * À l’aide de [contrôleurs de mouvement](motion-controllers.md): Appuyez sur le stick analogique et maintenez-le à cette position.
+   * À l’aide d’un contrôleur Xbox : Appuyez sur le stick analogique gauche vers l’avant et maintenez-le à cette position.
    * À l’aide de la souris, cliquez avec le bouton droit sur le bouton de la souris (et utilisez la roulette de défilement pour faire pivoter la direction de votre choix lorsque vous vous reportez).
 2. Placez le réticule là où vous souhaitez vous téléporter.
-   * À l’aide de contrôleurs de [mouvement](motion-controllers.md): Inclinez le contrôleur (sur lequel vous conservez le stick analogique) pour déplacer le réticule.
-   * À l’aide d’un contrôleur Xbox: utilisez votre point de [regard](gaze.md) pour déplacer le réticule.
-   * À l’aide d’une souris: déplacez votre souris pour déplacer le réticule.
+   * À l’aide de [contrôleurs de mouvement](motion-controllers.md): Inclinez le contrôleur (sur lequel vous conservez le stick analogique) pour déplacer le réticule.
+   * À l’aide d’un contrôleur Xbox : utilisez votre point de [regard](gaze-and-commit.md) pour déplacer le réticule.
+   * À l’aide d’une souris : déplacez votre souris pour déplacer le réticule.
 3. Relâchez le bouton pour vous téléporter où le réticule a été placé.
 
-**Pour «parcourir» virtuellement:**
-* À l’aide de contrôleurs de [mouvement](motion-controllers.md): cliquez sur le stick analogique et maintenez-le enfoncé, puis déplacez le stick analogique dans le sens où vous souhaitez «parcourir».
-* À l’aide d’un contrôleur Xbox: cliquez sur le stick analogique gauche et maintenez-le enfoncé, puis déplacez le stick analogique dans le sens où vous souhaitez «parcourir».
+**Pour « parcourir » virtuellement :**
+* À l’aide de [contrôleurs de mouvement](motion-controllers.md): cliquez sur le stick analogique et maintenez-le enfoncé, puis déplacez le stick analogique dans le sens où vous souhaitez « parcourir ».
+* À l’aide d’un contrôleur Xbox : cliquez sur le stick analogique gauche et maintenez-le enfoncé, puis déplacez le stick analogique dans le sens où vous souhaitez « parcourir ».
 
 ## <a name="immersive-headset-input-support"></a>Prise en charge des entrées du casque immersif
 
@@ -87,54 +87,54 @@ Les [casques immersifs Windows Mixed Reality](immersive-headset-hardware-details
 
 ### <a name="motion-controllers"></a>Contrôleurs de mouvement
 
-La meilleure expérience Windows Mixed Reality sera avec les contrôleurs de [mouvement](motion-controllers.md) Windows Mixed Real qui prennent en charge le suivi de 6 degrés de liberté en utilisant uniquement les capteurs de votre casque-aucun appareil photo ou marqueur externe n’est nécessaire.
+La meilleure expérience Windows Mixed Reality sera avec les [contrôleurs de mouvement](motion-controllers.md) Windows Mixed Real qui prennent en charge le suivi de 6 degrés de liberté en utilisant uniquement les capteurs de votre casque-aucun appareil photo ou marqueur externe n’est nécessaire.
 
 Commandes de navigation bientôt disponibles.
 
 ### <a name="gamepad"></a>Boîtier de commande
-* **Stick analogique gauche:**
-  * Appuyez de façon prolongé sur le stick analogique gauche pour faire apparaître le réticule de [téléportation](navigating-the-windows-mixed-reality-home.md#getting-around-your-home).
+* **Stick analogique gauche :**
+  * Appuyez sur le stick analogique gauche et maintenez-le enfoncé pour faire apparaître le réticule de [téléportation](navigating-the-windows-mixed-reality-home.md#getting-around-your-home) .
   * Appuyez sur le stick analogique à gauche, à droite ou à gauche pour déplacer les petits incréments vers la gauche, vers la droite ou vers l’arrière.
-  * Cliquez sur le stick analogique gauche et maintenez-le enfoncé, puis déplacez le stick analogique dans le sens où vous souhaitez [virtuellement «parcourir».](navigating-the-windows-mixed-reality-home.md#getting-around-your-home)
+  * Cliquez sur le stick analogique gauche et maintenez-le enfoncé, puis déplacez le stick analogique dans le sens où vous souhaitez [virtuellement « parcourir ».](navigating-the-windows-mixed-reality-home.md#getting-around-your-home)
 * Appuyez sur le **Stick à droite** vers la gauche ou vers la droite pour faire pivoter la direction que vous avez dirigée de 45 degrés.
-* Le fait d’appuyer sur le bouton **a** effectue une opération SELECT et agit comme le mouvement [air TAP](gestures.md#air-tap) .
-* Le fait d’appuyer sur le bouton du **repère** permet d’ouvrir le [menu Démarrer](navigating-the-windows-mixed-reality-home.md#start-menu) et agit comme [le geste.](gestures.md#bloom)
-* Le fait d’appuyer sur les déclencheurs de **gauche et de droite** vous permet d’effectuer un zoom avant et arrière sur une application de bureau 2D avec laquelle vous interagissez à l’origine.
+* Le fait d’appuyer sur le bouton **a** effectue une opération SELECT et agit comme le mouvement [air TAP](gaze-and-commit.md#composite-gestures) .
+* Le fait d’appuyer sur le bouton du **repère** permet d’ouvrir le [menu Démarrer](navigating-the-windows-mixed-reality-home.md#start-menu) et agit comme [le geste.](system-gesture.md#bloom)
+* Le fait d’appuyer sur les **déclencheurs de gauche et de droite** vous permet d’effectuer un zoom avant et arrière sur une application de bureau 2D avec laquelle vous interagissez à l’origine.
 
 ### <a name="keyboard-and-mouse"></a>Clavier et souris
 
 **Remarque :** Utilisez la **touche Windows + Y** pour faire basculer la souris entre le Bureau de votre PC et la page d’hébergement Windows Mixed Reality.
 
-Dans la page d’hébergement de Windows Mixed Reality:
-* Le fait d’appuyer sur le bouton **gauche** de la souris permet d’effectuer une sélection et agit comme le mouvement d’appui sur l' [air](gestures.md#air-tap) .
-* Maintenir le **bouton droit** enfoncé de la souris permet d’afficher le réticule de [téléportation](navigating-the-windows-mixed-reality-home.md#getting-around-your-home).
-* Le fait d’appuyer sur la touche **Windows** du clavier affiche le [menu Démarrer](navigating-the-windows-mixed-reality-home.md#start-menu) et agit comme [le geste.](gestures.md#bloom)
-* Quand vous [Gazing](gaze.md) dans une application de bureau 2D, vous pouvez **Cliquer** avec le bouton droit pour sélectionner, **cliquer avec le bouton droit** pour afficher les menus contextuels et utiliser la **roulette de défilement** pour faire défiler (comme sur le Bureau de votre PC).
+Dans la page d’hébergement de Windows Mixed Reality :
+* Le fait d’appuyer sur le bouton **gauche** de la souris permet d’effectuer une sélection et agit comme le mouvement d’appui sur l' [air](gaze-and-commit.md#composite-gestures) .
+* En maintenant le bouton droit de la souris **, vous** Affichez le réticule de [téléportation](navigating-the-windows-mixed-reality-home.md#getting-around-your-home) .
+* Le fait d’appuyer sur la touche **Windows** du clavier affiche le [menu Démarrer](navigating-the-windows-mixed-reality-home.md#start-menu) et agit comme [le geste.](system-gesture.md#bloom)
+* Quand vous [Gazing](gaze-and-commit.md) dans une application de bureau 2D, vous pouvez **Cliquer** avec le bouton droit pour sélectionner, **cliquer avec le bouton droit** pour afficher les menus contextuels et utiliser la **roulette de défilement** pour faire défiler (comme sur le Bureau de votre PC).
 
 ## <a name="cortana"></a>Cortana
 
 [Cortana](voice-input.md#hey-cortana) est votre assistant personnel dans Windows Mixed Reality, tout comme sur les PC et les téléphones. HoloLens possède un microphone intégré, mais les casques immersifs peuvent nécessiter du matériel supplémentaire. Utilisez Cortana pour ouvrir des applications, redémarrer votre appareil, Rechercher des éléments en ligne et bien plus encore. Les développeurs peuvent également choisir d' [intégrer Cortana](https://dev.windows.com/cortana) dans leurs expériences.
 
-Vous pouvez également utiliser des commandes vocales pour vous familiariser avec votre foyer. Par exemple, pointez sur un bouton (en utilisant du [regard](gaze.md) ou un contrôleur, en fonction de l’appareil) et dites «sélectionner». D’autres commandes vocales incluent «Go,», «large», «Small», «Close» et «me suis».
+Vous pouvez également utiliser des commandes vocales pour vous familiariser avec votre foyer. Par exemple, pointez sur un bouton (en utilisant du [regard](gaze-and-commit.md) ou un contrôleur, en fonction de l’appareil) et dites « sélectionner ». D’autres commandes vocales incluent « Go, », « large », « Small », « Close » et « me suis ».
 
 ## <a name="store-settings-and-system-apps"></a>Stocker, paramètres et applications système
 
-Windows Mixed Reality possède un certain nombre d’applications intégrées, telles que:
+Windows Mixed Reality possède un certain nombre d’applications intégrées, telles que :
 * **Microsoft Store** pour accéder aux applications et aux Jeux
 * **Hub de commentaires** pour envoyer des commentaires sur les applications système et système
 * **Paramètres** pour configurer les paramètres système ([y compris la mise en réseau](connecting-to-wi-fi-on-hololens.md) et les mises à jour système)
 * **Microsoft Edge** pour parcourir les sites Web
 * **Photos** pour afficher et partager des photos et des vidéos
-* **Étalonnage** (HoloLens uniquement) pour ajuster l’expérience HoloLens à l’utilisateur actuel
-* **Apprendre les gestes** (HoloLens) ou **Découvrez la réalité mixte** (casques immersifs) pour en savoir plus sur l’utilisation de votre appareil
+* **Étalonnage** (hololens uniquement) pour l’adaptation de l’expérience HoloLens à l’utilisateur actuel
+* **Apprenez les gestes** (HoloLens) ou **Découvrez la réalité mixte** (casques immersifs) pour en savoir plus sur l’utilisation de votre appareil
 * **visionneuse 3D** pour décorer votre monde avec du contenu de réalité mixte
-* **Portail de réalité mixte** (Desktop) pour la configuration et la gestion de votre casque immersif et la diffusion en continu d’un aperçu instantané de votre vue dans le casque, pour que d’autres utilisateurs puissent les voir.
+* **Portail de réalité mixte** (Desktop) pour la configuration et la gestion de votre casque immersif et la diffusion en continu d’un aperçu instantané de votre vue dans le casque pour que d’autres utilisateurs puissent les voir.
 * **Films et TV** pour visionner des vidéos 360 et les derniers films et émissions TV
 * **Cortana** pour tous les besoins de votre assistant virtuel
-* **Ordinateur de bureau** (casques immersifs) pour afficher votre moniteur de bureau dans un casque immersif
+* **Bureau** (casques immersifs) pour afficher votre moniteur de bureau dans un casque immersif
 * **Explorateur de fichiers** Accéder aux fichiers et aux dossiers situés sur votre appareil
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a>Articles associés
 * [Vues d’applications](app-views.md)
 * [Contrôleurs de mouvement](motion-controllers.md)
 * [Accessoires matériels](hardware-accessories.md)
