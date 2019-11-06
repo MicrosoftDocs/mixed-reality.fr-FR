@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 7/29/2019
 ms.topic: article
 keywords: OpenXR, Khronos, BasicXRApp, réalité mixte OpenXR portail des développeurs, DirectX, natif, moteur personnalisé d’application native, intergiciel
-ms.openlocfilehash: cf8795e6fed7db9fd0743d0902ce1585d56fa5e0
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: d29b59d7dec19e5423c83ea6e61bb5625c8981dd
+ms.sourcegitcommit: 2e54d0aff91dc31aa0020c865dada3ae57ae0ffc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438137"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73641134"
 ---
 # <a name="openxr"></a>OpenXR
 
@@ -90,7 +90,7 @@ Il existe trois types d’extensions OpenXR :
 * [Articulation manuelle + maille](hands-and-tools.md)
 * [Suivre du regard](eye-tracking.md)
 * [Configurations d’affichage secondaire (capture de réalité mixte)](mixed-reality-capture-for-developers.md#render-from-the-pv-camera-opt-in)
-* [Mappage spatial](spatial-mapping.md)
+* [Compréhension des scènes](scene-understanding.md)
 * Interopérabilité avec les API SDK Windows
 
 Bien que certaines de ces extensions puissent démarrer en tant qu’extensions MSFT spécifiques au fournisseur, Microsoft et d’autres fournisseurs de Runtime OpenXR travaillent ensemble pour concevoir des extensions EXT ou KHR inter-fournisseurs pour la plupart de ces fonctionnalités.  Cela permet au code que vous écrivez pour que ces fonctionnalités soient portables entre les fournisseurs de Runtime, tout comme avec la spécification principale.

@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: DirectX, rendu holographique, native, application native, application WinRT, application WinRT, API de plateforme, moteur personnalisé, intergiciel
-ms.openlocfilehash: 698ccb57a39189b9c0634c47ad6cbd6325c06caa
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: e77ee5053e69aef502481d18618e604c6bfb5939
+ms.sourcegitcommit: 2e54d0aff91dc31aa0020c865dada3ae57ae0ffc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73435585"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73641091"
 ---
 # <a name="directx-development-overview"></a>Vue d’ensemble du développement DirectX
 
@@ -49,7 +49,7 @@ Pour offrir la meilleure expérience possible aux utilisateurs de vos appslicati
 * [Suivre de la tête et du regard dans DirectX](gaze-in-directx.md)
 * [Mains et contrôleurs de mouvement dans DirectX](hands-and-motion-controllers-in-directx.md)
 * [Entrée vocale dans DirectX](voice-input-in-directx.md)
-* [Son spatial dans DirectX](spatial-sound-in-directx.md)
+* [Son spatial](https://docs.microsoft.com/windows/win32/coreaudio/spatial-sound)
 * [Mappage spatial dans DirectX](spatial-mapping-in-directx.md)
 
 

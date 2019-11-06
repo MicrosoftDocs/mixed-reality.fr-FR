@@ -1,31 +1,25 @@
 ---
 title: Eye-tracking
-description: HoloLens 2 permet d’accéder à un nouveau niveau de compréhension contextuelle et humaine au sein de l’expérience holographique en offrant aux développeurs la capacité d’utiliser des informations sur ce que les utilisateurs regardent.
+description: HoloLens 2 permet à un nouveau niveau de contexte et de compréhension humaine au sein de l’expérience holographique en offrant aux développeurs la possibilité d’utiliser des informations sur ce que l’utilisateur examine.
 author: sostel
 ms.author: sostel
 ms.date: 10/29/2019
 ms.topic: article
 keywords: Suivi oculaire, réalité mixte, entrée, point de regard, étalonnage
-ms.openlocfilehash: 60de5ceb9f55ca7e2f74856af9bd75567763e382
-ms.sourcegitcommit: a5dc182da237f63f0487d40a2e11894027208b6c
+ms.openlocfilehash: 63520ee8d7d3ce73405776fccc62290cbbadd0a8
+ms.sourcegitcommit: 2e54d0aff91dc31aa0020c865dada3ae57ae0ffc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73441117"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73641142"
 ---
 # <a name="eye-tracking-on-hololens-2"></a>Eye-tracking sur HoloLens 2
 
 ![Démonstration du suivi oculaire dans MRTK](images/mrtk_et_scenemenu.jpg)
 
-HoloLens 2 permet d’accéder à un nouveau niveau de compréhension contextuelle et humaine au sein de l’expérience holographique en offrant aux développeurs la capacité d’utiliser des informations sur ce que les utilisateurs regardent. Cette page fournit une vue d’ensemble de cette nouvelle fonctionnalité destinée aux développeurs et aux concepteurs sur la façon dont ils peuvent tirer parti du suivi oculaire pour divers cas d’usage et des conseils de base pour les développeurs. 
+HoloLens 2 permet à un nouveau niveau de contexte et de compréhension humaine au sein de l’expérience holographique en offrant aux développeurs la possibilité d’utiliser des informations sur ce que l’utilisateur examine. Cette page fournit une vue d’ensemble de cette nouvelle fonctionnalité destinée aux développeurs et aux concepteurs sur la façon dont ils peuvent tirer parti du suivi oculaire pour divers cas d’usage et des conseils de base pour les développeurs. 
 
-
-## <a name="calibration"></a>Auto 
-Pour que le suivi des yeux fonctionne correctement, chaque utilisateur doit passer par un [étalonnage d’utilisateur de suivi oculaire](calibration.md) pour lequel l’utilisateur doit examiner un ensemble de cibles holographiques. Cela permet à l’appareil d’ajuster le système pour une expérience d’affichage plus confortable et de meilleure qualité pour l’utilisateur et pour garantir un suivi visuel précis en même temps. Le suivi oculaire doit fonctionner pour la plupart des utilisateurs, mais dans de rares cas, un utilisateur peut ne pas être en mesure de l’étalonner correctement.
-Pour en savoir plus sur l’étalonnage et sur la façon de garantir une expérience sans heurts, consultez notre page d’étalonnage de l' [utilisateur de suivi oculaire](calibration.md) .
-
-
-## <a name="device-support"></a>Périphériques pris en charge
+### <a name="device-support"></a>Périphériques pris en charge
 <table>
 <colgroup>
     <col width="25%" />
@@ -46,6 +40,24 @@ Pour en savoir plus sur l’étalonnage et sur la façon de garantir une expéri
      <td>❌</td>
 </tr>
 </table>
+
+<br>
+
+## <a name="calibration"></a>Auto 
+Pour que le suivi des yeux fonctionne correctement, chaque utilisateur doit passer par un [étalonnage d’utilisateur de suivi oculaire](calibration.md) pour lequel l’utilisateur doit examiner un ensemble de cibles holographiques. Cela permet à l’appareil d’ajuster le système pour une expérience d’affichage plus confortable et de meilleure qualité pour l’utilisateur et pour garantir un suivi visuel précis en même temps. 
+
+Le suivi oculaire doit fonctionner pour la plupart des utilisateurs, mais dans de rares cas, un utilisateur peut ne pas être en mesure de l’étalonner correctement. L’étalonnage peut échouer pour diverses raisons, y compris mais sans s’y limiter : 
+* L’utilisateur a précédemment choisi le processus d’étalonnage
+* L’utilisateur a été distrait et n’a pas suivi les objectifs d’étalonnage
+* L’utilisateur dispose de certains types de lentilles de contact et de lunettes que le système ne prend pas encore en charge. 
+* L’utilisateur a des conditions oculaires, des conditions oculaires ou une chirurgie oculaire que le système ne prend pas encore en charge  
+* Facteurs externes inhibant le suivi des yeux fiables, tels que les taches sur le Visor ou les lunettes, le soleil et les occlusions directs, en raison des cheveux en face des yeux
+
+Les développeurs doivent veiller à fournir une prise en charge adéquate pour les utilisateurs pour lesquels les données de suivi oculaire peuvent ne pas être disponibles (qui ne peuvent pas être correctement étalonnes). Nous avons fourni des recommandations pour les solutions de secours dans la section en bas de cette page. 
+
+Pour en savoir plus sur l’étalonnage et sur la façon de garantir une expérience sans heurts, consultez notre page d’étalonnage de l' [utilisateur de suivi oculaire](calibration.md) .
+
+<br>
 
 ## <a name="available-eye-tracking-data"></a>Données de suivi oculaire disponibles
 Avant de passer en revue les cas d’utilisation spécifiques pour les entrées de regard oculaire, nous souhaitons rapidement souligner les fonctionnalités fournies par l' [API de suivi oculaire](https://docs.microsoft.com/uwp/api/windows.perception.people.eyespose) HoloLens 2. Les développeurs accèdent à un seul point d’accès en regard (origine du regard et direction) à environ _30 i/s (30 Hz)_ .
@@ -103,35 +115,33 @@ ATTENTION : pour en savoir plus, consultez nos [instructions relatives à la co
 
 ## <a name="using-eye-gaze-for-interaction"></a>Utilisation de l’œil en regard de l’interaction
 La création d’une interaction qui tire parti du ciblage visuel à déplacement rapide peut être difficile.
-D’un côté, les yeux se déplacent tellement vite que vous devez être attentif à l’utilisation de l’entrée de regard, car sinon l’utilisateur peut trouver l’expérience écrasante ou gênante. En revanche, vous pouvez également créer des expériences véritablement magiques qui exciteront vos utilisateurs ! Pour vous aider, consultez notre présentation des principaux avantages, défis et recommandations de conception pour [une interaction](eye-gaze-interaction.md)avec les yeux. 
+D’un côté, les yeux se déplacent tellement vite que vous devez être attentif à l’utilisation des entrées de regard, car sinon les utilisateurs peuvent se rendre compte de l’expérience insurmontable ou gênante. En revanche, vous pouvez également créer des expériences véritablement magiques qui exciteront vos utilisateurs ! Pour vous aider, consultez notre présentation des principaux avantages, défis et recommandations de conception pour [une interaction](eye-gaze-interaction.md)avec les yeux. 
 
 <br>
  
-## <a name="dev-guidance-what-if-eye-tracking-is-not-available"></a>Guide de développement : que se passe-t-il si le suivi oculaire n’est pas disponible ?
-Dans certaines situations, votre application ne recevra peut-être aucune donnée de suivi oculaire pour différentes raisons, notamment :
-* L’utilisateur a ignoré l’étalonnage du suivi oculaire.
-* L’utilisateur a étalonné, mais a décidé de ne pas accorder à votre application l’autorisation d’utiliser ses données de suivi visuel.
-* L’utilisateur dispose de lunettes uniques ou d’une condition oculaire que le système ne prend pas encore en charge.
-* Facteurs externes qui empêchent le suivi des yeux fiables, tels que les taches sur le Visor ou les lunettes, les lumières et les occlusions directs du soleil en raison des cheveux devant les yeux.
+## <a name="fallback-solutions-when-eye-tracking-is-not-available"></a>Solutions de secours lorsque le suivi oculaire n’est pas disponible
+Dans de rares cas, les données de suivi oculaire peuvent ne pas être disponibles.
+Cela peut être dû à différentes raisons, parmi lesquelles les plus courantes sont répertoriées ci-dessous :
+* Le système n’a pas pu [étalonner l’utilisateur](calibration.md).
+* L’utilisateur a ignoré l' [étalonnage](calibration.md).   
+* L’utilisateur est étalonné, mais il a décidé de ne pas accorder à votre application l’autorisation d’utiliser ses données de suivi visuel.    
+* L’utilisateur dispose de lunettes uniques ou d’une condition oculaire que le système ne prend pas encore en charge.    
+* Facteurs externes qui empêchent le suivi des yeux fiables, tels que les taches sur le Visor ou les lunettes, les lumières et les occlusions directs du soleil en raison des cheveux devant les yeux.   
+Par conséquent, les développeurs doivent s’assurer qu’il existe une prise en charge de secours appropriée pour ces utilisateurs. Sur la page [suivi des yeux dans DirectX](gaze-in-directx.md#fallback-when-eye-tracking-is-not-available) , nous expliquons les API requises pour détecter si les données de suivi visuel sont disponibles. 
 
-Pour vous, en tant que développeur d’applications, cela signifie que vous devez prendre en compte la prise en charge des utilisateurs pour lesquels les données de suivi oculaire peuvent ne pas être disponibles. Nous vous expliquons tout d’abord comment détecter si le suivi oculaire est disponible et comment résoudre le cas où il n’est pas disponible pour différentes applications.
+Comme décrit ci-dessus, il existe plusieurs raisons pour lesquelles les données de suivi oculaire peuvent ne pas être disponibles.   
+Alors que certains utilisateurs peuvent avoir des axent décidés de révoquer l’accès à leurs données de suivi visuel et qu’ils sont OK avec le compromis d’une expérience utilisateur inférieure à la confidentialité de ne pas fournir l’accès à leurs données de suivi visuel, dans certains cas cela peut être involontaire.  
+Par conséquent, si votre application utilise le suivi oculaire et qu’il s’agit d’une partie importante de l’expérience, nous vous recommandons de le communiquer clairement à l’utilisateur.     
+En informant l’utilisateur, pourquoi le suivi des yeux est essentiel pour votre application (peut-être même répertorier certaines fonctionnalités améliorées) afin de tirer le meilleur parti de votre application, peut aider l’utilisateur à mieux comprendre ce qu’il abandonne.    
+Aidez l’utilisateur à identifier la raison pour laquelle le suivi oculaire peut ne pas fonctionner (sur la base des vérifications ci-dessus) et propose des suggestions pour résoudre rapidement les problèmes potentiels.  
+Par exemple, si vous pouvez détecter que le système prend en charge le suivi oculaire, l’utilisateur est étalonné et même a donné son autorisation, mais aucune donnée de suivi oculaire n’est reçue, alors cela peut pointer vers d’autres problèmes tels que les traînées ou les yeux bloqués.    
+Notez cependant qu’il y a de rares cas d’utilisateurs pour lesquels le suivi oculaire peut simplement ne pas fonctionner.    
+Par conséquent, n’hésitez pas à le faire en autorisant à ignorer ou même à désactiver les rappels pour activer le suivi visuel dans votre application.
 
-### <a name="1-how-to-detect-that-eye-tracking-is-available"></a>1. Comment détecter que le suivi oculaire est disponible
-Quelques vérifications permettent de déterminer si les données de suivi visuel sont disponibles. Vérifier si...
-* ... le système prend en charge le suivi visuel. Appelez la *méthode*suivante : [Windows. perception. People. EyesPose. IsSupported ()](https://docs.microsoft.com/uwp/api/windows.perception.people.eyespose.issupported#Windows_Perception_People_EyesPose_IsSupported)
-
-* ... l’utilisateur est étalonné. Appelez la *propriété*suivante : [Windows. perception. People. EyesPose. IsCalibrationValid](https://docs.microsoft.com/uwp/api/windows.perception.people.eyespose.iscalibrationvalid#Windows_Perception_People_EyesPose_IsCalibrationValid)
-
-* ... l’utilisateur a donné à votre application l’autorisation d’utiliser ses données de suivi visuel : récupérez le _« GazeInputAccessStatus »_ actuel. Vous trouverez un exemple de la procédure à suivre pour [demander l’accès aux entrées de regard](https://docs.microsoft.com/windows/mixed-reality/gaze-in-directX#requesting-access-to-gaze-input).
-
-En outre, vous souhaiterez peut-être vérifier que vos données de suivi oculaire ne sont pas obsolètes en ajoutant un délai d’expiration entre les mises à jour reçues des données de suivi oculaire et en configurant le point de vue dans le point de vue ci-dessous. 
-
-Comme décrit ci-dessus, il existe plusieurs raisons pour lesquelles les données de suivi oculaire peuvent ne pas être disponibles. Alors que certains utilisateurs peuvent avoir des axent décidés de révoquer l’accès à leurs données de suivi visuel et qu’ils sont OK avec le compromis d’une expérience utilisateur inférieure à la confidentialité de ne pas fournir l’accès à leurs données de suivi visuel, dans certains cas cela peut être involontaire. Par conséquent, si votre application utilise le suivi oculaire et qu’il s’agit d’une partie importante de l’expérience, nous vous recommandons de le communiquer clairement à l’utilisateur. En informant l’utilisateur, pourquoi le suivi des yeux est essentiel pour votre application (peut-être même répertorier certaines fonctionnalités améliorées) afin de tirer le meilleur parti de votre application, peut aider l’utilisateur à mieux comprendre ce qu’il abandonne. Aidez l’utilisateur à identifier la raison pour laquelle le suivi oculaire peut ne pas fonctionner (sur la base des vérifications ci-dessus) et propose des suggestions pour résoudre rapidement les problèmes potentiels. Par exemple, si vous pouvez détecter que le système prend en charge le suivi oculaire, l’utilisateur est étalonné et même a donné son autorisation, mais aucune donnée de suivi oculaire n’est reçue, alors cela peut pointer vers d’autres problèmes tels que les traînées ou les yeux bloqués. Notez cependant qu’il y a de rares cas d’utilisateurs pour lesquels le suivi oculaire peut simplement ne pas fonctionner. Par conséquent, n’hésitez pas à le faire en autorisant à ignorer ou même à désactiver les rappels pour activer le suivi visuel dans votre application.
-
-### <a name="2-fallback-for-apps-using-eye-gaze-as-a-primary-input-pointer"></a>2. la solution de secours pour les applications utilisant des yeux en forme de point d’entrée principal
+### <a name="fallback-for-apps-using-eye-gaze-as-a-primary-input-pointer"></a>Secours pour les applications utilisant des yeux en forme de point d’entrée principal
 Si votre application utilise le point d’entrée de l’œil pour sélectionner rapidement des hologrammes dans la scène, mais que les données de suivi oculaire ne sont pas disponibles, nous vous recommandons de revenir à la tête de regard et de commencer à montrer le curseur en tête. Nous vous recommandons d’utiliser un délai d’expiration (par exemple, 500 – 1500 ms) pour déterminer s’il faut basculer ou non. Cela permet d’éviter de faire apparaître un curseur à chaque fois que le système risque de perdre brièvement le suivi en raison de mouvements oculaires rapides ou de clignotements. Si vous êtes un développeur Unity, la solution de secours automatique à la tête de regard est déjà gérée dans le kit de développement de la réalité mixte. Si vous êtes un développeur DirectX, vous devez gérer ce commutateur vous-même.
 
-### <a name="3-fallback-for-other-eye-tracking-specific-applications"></a>3. secours pour d’autres applications spécifiques au suivi des yeux
+### <a name="fallback-for-other-eye-tracking-specific-applications"></a>Secours pour d’autres applications spécifiques au suivi des yeux
 Votre application peut utiliser des regards à l’aide d’une méthode unique adaptée aux yeux, par exemple pour animer les yeux d’un avatar ou pour attirer l’attention sur les yeux cartes thermiques en se basant sur des informations précises sur l’attention visuelle. Dans ce cas, il n’y a pas de secours clair. Si le suivi oculaire n’est pas disponible, il se peut que vous deviez simplement désactiver ces fonctionnalités.
 Là encore, nous vous recommandons de communiquer clairement à l’utilisateur qui ne sait pas que la fonctionnalité ne fonctionne pas.
 
