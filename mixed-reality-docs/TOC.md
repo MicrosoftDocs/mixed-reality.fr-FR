@@ -39,6 +39,7 @@
 ### [Visualisation du balayage d’une pièce](room-scan-visualization.md)
 ### [Compréhension des scènes](scene-understanding.md)
 ### [Ancres spatiales](spatial-anchors.md)
+### [Son](spatial-sound.md)
 ### [Mappage spatial](spatial-mapping.md)
 ### [Mouvement système](system-gesture.md)
 ### [Types d’applications de réalité mixte](types-of-mixed-reality-apps.md)
@@ -65,7 +66,6 @@
 ### Style
 #### [Couleurs, éclairage et matériaux](color,-light-and-materials.md)
 #### [Mettre à l’échelle](scale.md)
-#### [Son spatial](spatial-sound.md)
 #### [Conception du son spatial](spatial-sound-design.md)
 #### [Typographie](typography.md)
 ### Contrôles et comportements
@@ -193,7 +193,6 @@
 #### [Suivre de la tête et pointer du regard](gaze-in-directx.md)
 #### [Mains et contrôleurs de mouvement](hands-and-motion-controllers-in-directx.md)
 #### [Entrée vocale](voice-input-in-directx.md)
-#### [Son spatial](spatial-sound-in-directx.md)
 #### [Mappage spatial](spatial-mapping-in-directx.md)
 #### [Compréhension des scènes](scene-understanding-sdk.md)
 #### [Ancres spatiales partagées](shared-spatial-anchors-in-directx.md)
