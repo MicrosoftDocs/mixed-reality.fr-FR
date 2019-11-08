@@ -1,372 +1,167 @@
 ---
 layout: LandingPage
-title: Concevoir
-description: Cette aide a été écrite par des concepteurs, des développeurs, des responsables de programme et les chercheurs de Microsoft, dont les travaux couvrent les appareils holographiques (par exemple HoloLens) et les appareils immersifs (par exemple les casques Windows Mixed Reality Acer et HP). Considérez donc ce travail comme un ensemble de rubriques expliquant « comment concevoir pour les afficheurs Windows placés sur la tête ».
-author: rwinj
-ms.author: randyw
-ms.date: 03/21/2018
+title: Commencer à concevoir et à créer des prototypes
+description: Si vous êtes prêt à vous lancer, découvrez les concepts de base dont vous avez besoin pour commencer à concevoir et à créer des prototypes.
+author: grbury
+ms.author: grbury
+ms.date: 08/24/2019
 ms.topic: article
 ms.localizationpriority: high
-keywords: Windows Mixed Reality, conception, interaction, style, couleur, modèles d’application, contrôles, exemples d’applications, Mixed Reality Toolkit, MRTK
-ms.openlocfilehash: 6601f4c2dd75e6e555dd79bc92abcccc15eb1ab4
-ms.sourcegitcommit: 30246ab9b9be44a3c707061753e53d4bf401eb6b
+keywords: réalité mixte, découvrir, distribuer, index, page d’accueil, conception, développement, tutoriels, exemples d’applications, principes fondamentaux, études de cas, ressources, procédures HoloLens, projets open source, concepts principaux, interaction
+ms.openlocfilehash: 2bd2b3fef713bfe74f91714be100c7a02e46f8ac
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/22/2019
-ms.locfileid: "67326188"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73435741"
 ---
-# <a name="design-for-mixed-reality"></a>Conception pour la réalité mixte
-
-![Conception pour la réalité mixte](images/Bicycle-Leschi10.gif)
+# <a name="start-designing-and-prototyping"></a>Commencer à concevoir et à créer des prototypes
 
 
-Cette aide a été écrite par des concepteurs, des développeurs, des responsables de programme et les chercheurs de Microsoft, dont les travaux couvrent les appareils holographiques tels qu’HoloLens et les appareils immersifs tels que les casques Windows Mixed Reality Acer et HP. Considérez donc ce travail comme un ensemble de rubriques expliquant comment concevoir pour les afficheurs Windows placés sur la tête.
+![Concepts principaux](images/text_in_unity_viewingangle.jpg)
 
+## <a name="expand-your-design-processcase-study-expanding-the-design-process-for-mixed-realitymd"></a>[Développer votre processus de conception](case-study-expanding-the-design-process-for-mixed-reality.md)
 
-## <a name="article-categories"></a>Catégories d’articles
-
-<ul class="panelContent cardsF">
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="images/GetStartedIcon.png" alt="Getting started icon">
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>Bien démarrer avec la conception</h3>
-                        <p>
-                            <a href="mixed-reality.md">Qu’est-ce que la réalité mixte ?</a>
-                        </p>
-                        <p>
-                            <a href="about-this-design-guidance.md">À propos de cette aide</a>
-                        </p>
-                        <p>
-                            <a href="case-study-my-first-year-on-the-hololens-design-team.md">Ma première année au sein de l’équipe de conception</a>
-                        </p>
-                        <p>
-                            <a href="case-study-expanding-the-design-process-for-mixed-reality.md">Développement du processus de conception pour la réalité mixte</a>
-                        </p>
-                        <p>
-                            <a href="case-study-the-pursuit-of-more-personal-computing.md">À la recherche d’une informatique plus personnelle</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="images/Interaction_Icon_120x130.png" alt="MR design system and tools icon">
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>Outils et système de conception de réalité mixte</h3>
-                        <p>
-                            <a href="comfort.md">Confort</a>
-                        </p>
-            <p>
-                            <a href="interaction-fundamentals.md">Interactions instinctives</a>
-                        </p>
-                        <p>
-                            <a href="hands-and-tools.md">Mains et contrôleurs de mouvement</a>
-                        </p>
-                        <p>
-                            <a href="hands-free.md">Mains-libres</a>
-                        </p>
-                         <p>
-                            <a href="gaze-and-commit.md">Suivre de la tête et valider</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="images/Style_Icon_120x130.png" alt="Style icon">
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>Style</h3>
-                        <p>
-                            <a href="color,-light-and-materials.md">Couleurs, éclairage et matériaux</a>
-                        </p>
-                         <p>
-                            <a href="spatial-sound-design.md">Conception du son spatial</a>
-                        </p>
-                        <p>
-                            <a href="typography.md">Typographie</a>
-                        </p>
-                        <p>
-                            <a href="scale.md">Mettre à l’échelle</a>
-                        </p>                      
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="images/App_patterns_Icon_120x130.png" alt="App patterns icon">
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>Modèles d’application</h3>
-                        <p>
-                            <a href="types-of-mixed-reality-apps.md">Types d’applications de réalité mixte</a>
-                        </p>
-                        <p>
-                            <a href="room-scan-visualization.md">Visualisation du balayage d’une pièce</a>
-                        </p>
-                        <p>
-                            <a href="cursors.md">Curseurs</a>
-                        </p>
-                        <p>
-                            <a href="billboarding-and-tag-along.md">Billboarding et tag-along</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="images/Controls_Icon_120x130.png" alt="Controls icon">
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>Contrôles</h3>
-                        <p>
-                            <a href="text-in-unity.md">Texte dans Unity</a>
-                        </p>
-                        <p>
-                            <a href="interactable-object.md">Objet avec interaction</a>
-                        </p>
-                        <p>
-                            <a href="object-collection.md">Collection d’objets</a>
-                        </p>
-                        <p>
-                            <a href="progress.md">Affichage de la progression</a>
-                        </p>
-                        <p>
-                            <a href="app-bar-and-bounding-box.md">Rectangle englobant et barre de l’application</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>    
-</ul>
-
-
-## <a name="sample-apps"></a>Exemples d’applications
-
-Créez des expériences de qualité à partir d’exemples conçus et créés par notre équipe.
+Quand Microsoft a lancé l’appareil HoloLens auprès d’un public de développeurs enthousiastes en 2016, l’équipe s’était déjà associée à des studios à l’intérieur et à l’extérieur de Microsoft pour créer les expériences de lancement de l’appareil. Ces équipes ont appris sur le tas, trouvant des opportunités et des défis dans le nouveau domaine de la conception de réalité mixte. [En savoir plus](case-study-expanding-the-design-process-for-mixed-reality.md)
 
 <br>
-<ul id="cardtypes-W" class="cardsW panelContent" style="display: flex; margin-top: 0px;">
-    <li>
-        <a href="periodic-table-of-the-elements.md" title="Tableau périodique des éléments" data-linktype="absolute-path">
-            <div class="cardSize">
-                <div class="cardPadding">
-                    <div class="card">
-                        <div class="cardImageOuter">
-                            <div class="cardImage">
-                                <img src="images/periodictableofelementsapp-tile.jpg" alt="Periodic Table of the Elements< icon">
-                            </div>
-                        </div>
-                        <div class="cardText">
-                            <h3>Tableau périodique des éléments</h3>
-                            <p>Découvrez comment composer un tableau d’objets dans l’espace 3D avec différents types de surface à l’aide d’une collection d’objets.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </a>        
-    </li>
-    <li>
-        <a href="lunar-module.md" title="Module lunaire" data-linktype="absolute-path">
-            <div class="cardSize">
-                <div class="cardPadding">
-                    <div class="card">
-                        <div class="cardImageOuter">
-                            <div class="cardImage">
-                                <img src="images/lunar-module-tile.png" alt="Lunar Module icon">
-                            </div>
-                        </div>
-                        <div class="cardText">
-                            <h3>Module lunaire</h3>
-                            <p>Découvrez comment étendre les mouvements de base d’HoloLens avec un suivi des deux mains et l’entrée d’une manette. Xbox.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </a>
-    </li>
-    <li>
-        <a href="galaxy-explorer.md" title="Galaxy Explorer" data-linktype="absolute-path">
-            <div class="cardSize">
-                <div class="cardPadding">
-                    <div class="card">
-                        <div class="cardImageOuter">
-                            <div class="cardImage">
-                                <img src="images/galaxyexplorer-tile.jpg" alt="Galaxy Explorer icon">
-                            </div>
-                        </div>
-                        <div class="cardText">
-                            <h3>Galaxy Explorer</h3>
-                            <p>Le projet Galaxy Explorer est prêt. Vous avez partagé vos idées avec la communauté, vous avez choisi une application, vous avez regardé une équipe la créer et vous pouvez maintenant en obtenir le code source.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </a>
-    </li>
-</ul>
+
+---
+
+## <a name="what-are-the-core-concepts-of-an-experience"></a>Quels sont les principaux concepts d’une expérience ?
+
+### <a name="keep-the-user-comfortable---comfortcomfortmd"></a>[Faire en sorte que l’utilisateur soit toujours à l’aise : confort](comfort.md)
+Pour garantir un confort maximal sur les afficheurs placés sur la tête, il est important que les concepteurs et les développeurs créent du contenu et le présentent d’une manière qui imite le fonctionnement de ces indicateurs dans le monde naturel.
+
+<br>
+
+### <a name="consider-how-the-user-sees-the-world---holographic-frameholographic-framemd"></a>[Réfléchir à la façon dont l’utilisateur voit le monde : image holographique](holographic-frame.md)
+Les utilisateurs voient le monde de la réalité mixte par le biais d’une fenêtre d’affichage rectangulaire alimentée par leur casque. Sur l’appareil HoloLens, cette zone rectangulaire est appelée « image holographique » et permet aux utilisateurs de voir le contenu numérique superposé au monde réel qui les entoure.
+
+<br>
+
+### <a name="types-of-mixed-reality-appstypes-of-mixed-reality-appsmd"></a>[Types d’applications de réalité mixte](types-of-mixed-reality-apps.md)
+L’un des avantages du développement d’applications pour la réalité mixte est qu’il existe un éventail d’expériences que la plateforme peut prendre en charge. Des environnements virtuels entièrement immersifs à la couche d’informations légère sur l’environnement actuel d’un utilisateur, la réalité mixte fournit un ensemble d’outils robustes pour donner vie à toute expérience.
+
+<br>
+
+### <a name="keeping-holograms-in-place---coordinate-systemscoordinate-systemsmd"></a>[Maintenir les hologrammes en place : systèmes de coordonnées](coordinate-systems.md)
+Les applications de réalité mixte placent essentiellement les hologrammes dans votre monde de sorte qu’ils ressemblent à des objets réels. Cela implique de positionner précisément ces hologrammes à des endroits significatifs pour l’utilisateur, qu’il s’agisse d’une salle physique ou d’un monde virtuel que vous avez créé.
+
+<br>
+
+### <a name="making-holographic-objects-feel-real---spatial-mappingspatial-mappingmd"></a>[Faire en sorte que les objets holographiques semblent réels : mappage spatial](spatial-mapping.md)
+Le mappage spatial permet de placer des objets sur des surfaces réelles. Cela permet d’ancrer les objets dans le monde de l’utilisateur et de tirer parti des indicateurs de profondeur dans le monde réel.
+
+<br>
+
+
+---
+
+<br>
+
+![Facteurs de conception des interactions](images/MRTK_BoundingBox_Main.png)
+
+## <a name="interaction-design-factors-to-consider"></a>Facteurs de conception des interactions à prendre en compte
+
+
+### <a name="choose-an-interaction-model-for-your-customerinteraction-fundamentalsmd"></a>[Choisir un modèle d’interaction pour votre client](interaction-fundamentals.md)
+Les interactions simples et instinctuelles sont étroitement liées dans la plateforme Mixed Reality. Nous avons suivi trois étapes pour que les développeurs et concepteurs d’applications puissent proposer des interactions faciles et intuitives à leurs clients.
+
+<br>
+
+### <a name="hands-and-motion-controllershands-and-toolsmd"></a>[Mains et contrôleurs de mouvement](hands-and-tools.md)
+Les utilisateurs peuvent toucher et manipuler les hologrammes directement avec une ou deux mains comme ils le font avec des objets réels. Ou avec des contrôleurs de mouvement, vous pouvez étendre les capacités physiques de l’utilisateur en proposant des interactions précises sur un large éventail de distances.
+
+<br>
+
+### <a name="directly-commanding-objects-with-voice-inputvoice-inputmd"></a>[Commande directe d’objets par entrée vocale](voice-input.md)
+La voix est l’un des principaux types d’entrée sur HoloLens. Elle vous permet de commander directement un hologramme sans avoir à utiliser de gestes. Une entrée vocale peut être un moyen naturel de communiquer votre intention.
+
+<br>
+
+### <a name="leveraging-the-users-eye-gazeeye-trackingmd"></a>[Tirer parti du pointage du regard de l’utilisateur](eye-tracking.md)
+HoloLens 2 permet d’accéder à un nouveau niveau de compréhension contextuelle et humaine au sein de l’expérience holographique en offrant aux développeurs la capacité d’utiliser des informations sur ce que les utilisateurs regardent.
+
+<br>
+
+### <a name="color-light-and-materialscolor-light-and-materialsmd"></a>[Couleurs, éclairage et matériaux](color,-light-and-materials.md)
+La conception de contenu pour la réalité mixte nécessite d’accorder une attention particulière à la couleur, à l’éclairage et aux matériaux de chacune des ressources visuelles utilisées dans votre expérience.
+
+<br>
+
+### <a name="suggesting-the-scale-of-an-objectscalemd"></a>[Suggérer l’échelle d’un objet](scale.md)
+L’une des clés pour afficher du contenu qui semble réaliste sous forme holographique est de simuler les caractéristiques visuelles du monde réel aussi fidèlement que possible. Cela consiste à incorporer autant d’indicateurs visuels que possible susceptibles de nous aider (dans le monde réel) à comprendre la position des objets, leur taille et leur composition.
+
+<br>
+
+### <a name="clear-and-readable-typographytypographymd"></a>[Typographie claire et lisible](typography.md)
+Tout comme la typographie sur les écrans 2D, l’objectif est d’être clair et lisible. Avec l’aspect tridimensionnel de la réalité mixte, il est possible d’affecter le texte et l’expérience utilisateur globale beaucoup mieux.
+
+<br>
+
+
+---
+
+## <a name="choose-a-prototyping-option"></a>Choisir une option de prototypage  
+
+:::row:::   
+    :::column:::    
+       [![Découvrir Unity](images/unity_logo.png)](https://learn.unity.com/)<br>
+        **[Découvrir Unity](https://learn.unity.com/)**<br>
+        Découvrez comment créer des expériences interactives avec Unity. Apprenez par la pratique, du début à la fin.
+    :::column-end:::    
+    :::column:::    
+        [![Mixed Reality Toolkit (MRTK)](images/MRTK-small_logo.png)](https://github.com/Microsoft/MixedRealityToolkit-Unity)<br>
+        **[Mixed Reality Toolkit (MRTK)](https://github.com/Microsoft/MixedRealityToolkit-Unity)**<br>  
+        Avec l’interaction spatiale et les composants d’interface utilisateur, démarrez la conception et le développement de votre réalité mixte avec Unity.   
+    :::column-end:::
+    :::column:::    
+        [![Mixed Reality Design Labs](images/MRDL_logo.png)](https://github.com/Microsoft/MRDL_Unity_PeriodicTable)<br>
+        **[Mixed Reality Design Labs](https://github.com/Microsoft/MRDL_Unity_PeriodicTable)**<br>  
+        Obtenez des exemples d’applications qui vous montrent comment utiliser les composants de MRTK pour créer de superbes expériences de réalité mixte.
+    :::column-end:::        
+    :::column:::    
+        [![Microsoft Maquette](images/Maquette_logo.png)](https://www.maquette.ms/)<br>
+        **[Microsoft Maquette](https://www.maquette.ms/)**<br>  
+        Conception de réalité virtuelle. Microsoft maquette rend le prototypage spatial facile, rapide et immersif. 
+    :::column-end:::    
+:::row-end:::
+
+<br>
+
+---
 
 
 
-## <a name="design-tools"></a>Outils de conception
+## <a name="what-would-you-like-to-do-next"></a>Que voulez-vous faire à présent ?
+
+:::row:::
+    :::column:::
+       [![Comprendre les principes de base](images/icon-lightbulb.jpg)](index.md#understand-the-basics)<br>
+        **[Comprendre les principes de base](index.md#understand-the-basics)**<br>
+        Approfondissez votre compréhension de ce qui définit la réalité mixte et de la manière de l’utiliser.
+    :::column-end:::
+    :::column:::
+        [![Participer à un événement](images/icon-calendar.jpg)](sf-academy-events.md)<br>
+         **[Participer à un événement](sf-academy-events.md)**<br>
+        Venez voir le matériel et participer à un atelier pratique pour créer votre première application HoloLens 2.
+    :::column-end:::
+    :::column:::
+        [![Installer les outils](images/icon-design.jpg)](install-the-tools.md)<br>
+         **[Installer les outils](install-the-tools.md)**<br>
+        Utilisez la liste de vérification de l’installation pour obtenir les outils dont vous avez besoin pour créer des applications pour HoloLens et la réalité mixte.
+    :::column-end:::
+    :::column:::
+        [![Commencer à développer](images/icon-developer.jpg)](development.md)<br>
+        **[Commencer à développer](development.md)**<br>
+        Choisissez un chemin de développement en fonction de votre niveau de compétence, de votre méthode de travail ou de la plateforme qui vous intéresse.
+    :::column-end:::
+:::row-end:::
 
 
-<ul id="cardtypes-D" class="cardsD panelContent" style="display: flex; margin-top: 0px;">
-    <li>
-    <a href="https://microsoft.github.io/MixedRealityToolkit-Unity/README.html#ui-and-interaction-building-blocks" title="Mixed Reality Toolkit - Unity" data-linktype="absolute-path">
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="images/MRTKandUnity.png" alt="Mixed Reality Toolkit - Unity">
-                        </div>
-                    </div>                    
-            <div class="cardText">
-                        <h3>Mixed Reality Toolkit - Unity</h3>
-                        <p> </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </a>  
-    </li>
-    <li>
-    <a href="https://github.com/Microsoft/MixedRealityToolkit" title="Mixed Reality Toolkit" data-linktype="absolute-path">
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="images/MRTK.png" alt="Mixed Reality Toolkit">
-                        </div>
-                    </div>                    
-            <div class="cardText">
-                        <h3>Mixed Reality Toolkit</h3>
-                        <p> </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </a>  
-    </li>       
-            <li>
-    <a href="https://www.simplygon.com" title="Simplygon" data-linktype="absolute-path">
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="images/Simplygon.png" alt="Simplygon">
-                        </div>
-                    </div>                    
-            <div class="cardText">
-                        <h3>Simplygon</h3>
-                        <p> </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </a>  
-    </li>
-</ul>
+<br>
+
+<br>
 
 
-## <a name="general-design-resources"></a>Ressources de conception générales
-
-<ul id="cardtypes-D" class="cardsD panelContent" style="display: flex; margin-top: 0px;">
-    <li>
-    <a href="http://fluent.microsoft.com" title="Système de conception Fluent" data-linktype="absolute-path">
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="images/Fluent.png" alt="Fluent Design System">
-                        </div>
-                    </div>                    
-            <div class="cardText">
-                        <h3>Système de conception Fluent</h3>
-                        <p> </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </a>  
-    </li>
-    <li>
-    <a href="https://www.microsoft.com/design/inclusive" title="Conception inclusive chez Microsoft" data-linktype="absolute-path">
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="images/Inclusive.png" alt="Inclusive design at Microsoft">
-                        </div>
-                    </div>                    
-            <div class="cardText">
-                        <h3>Conception inclusive chez Microsoft</h3>
-                        <p> </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </a>  
-    </li>   
-        <li>
-    <a href="https://developer.microsoft.com/windows/apps/design" title="Conception d’applications de plateforme Windows universelle (UWP)" data-linktype="absolute-path">
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="images/UWP.png" alt="Universal Windows Platform (UWP) app design">
-                        </div>
-                    </div>                    
-            <div class="cardText">
-                        <h3>Conception d’applications de plateforme Windows universelle (UWP)</h3>
-                        <p> </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </a>  
-    </li>   
-</ul>
