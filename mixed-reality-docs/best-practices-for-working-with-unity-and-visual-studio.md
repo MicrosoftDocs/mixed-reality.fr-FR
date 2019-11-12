@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: déployer, Unity, Visual Studio, HoloLens, HoloLens 2, casque immersif
-ms.openlocfilehash: f897c9280505b1e84f8e6342729f1598d4b2f559
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 88eaa69f1349e3303a93d9d634479d8265eb417c
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73436967"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926552"
 ---
 # <a name="best-practices-for-working-with-unity-and-visual-studio"></a>Meilleures pratiques pour l’utilisation d’Unity et de Visual Studio
 

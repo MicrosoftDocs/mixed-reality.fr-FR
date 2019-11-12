@@ -6,33 +6,33 @@ ms.author: kkennedy
 ms.date: 03/21/2018
 ms.topic: article
 keywords: image volumétrique, rendu volume, performances, réalité mixte
-ms.openlocfilehash: dc0e75b916ab7cc96be1eccb4ad32ac71f5b75ff
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 1b3ec59adf4f6449ed3f12d7f98f329c4e963ea5
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63548633"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926679"
 ---
 # <a name="volume-rendering"></a>Rendu du volume
 
-Pour les volumes d’ingénierie ou d’IRM médicaux, consultez [rendu en volume sur Wikipédia](https://en.wikipedia.org/wiki/Volume_rendering). Ces « images volumétriques » contiennent des informations riches avec de l’opacité et des couleurs dans tout le volume qui ne peuvent pas être facilement exprimées comme surfaces telles que les [maillages polygonaux](https://en.wikipedia.org/wiki/Polygon_mesh).
+Pour les volumes d’ingénierie ou d’IRM médicaux, consultez [rendu en volume sur Wikipédia](https://en.wikipedia.org/wiki/Volume_rendering). Ces « images volumétriques » contiennent des informations enrichies avec opacité et couleur dans tout le volume qui ne peuvent pas être facilement exprimées comme des surfaces telles que des [maillages polygones](https://en.wikipedia.org/wiki/Polygon_mesh).
 
 Solutions clés pour améliorer les performances
-1. INCORRECTE Approche naïve: Afficher tout le volume, s’exécute généralement trop lentement
-2. ÉTAT Plan sécant: Afficher une seule tranche du volume
-3. ÉTAT Sous-volume de coupe: Afficher uniquement quelques couches du volume
-4. ÉTAT Réduire la résolution du rendu du volume (voir «Mixed Resolution Scene Rendering»)
+1. MAUVAISE : approche naïve : afficher tout le volume, s’exécute généralement trop lentement
+2. BONNE : plan sécant : afficher une seule tranche du volume
+3. BONNE : couper le sous-volume : afficher uniquement quelques couches du volume
+4. BONNE : réduire la résolution du rendu du volume (voir « Mixed Resolution Scene Rendering »)
 
-Il n’existe qu’une certaine quantité d’informations qui peuvent être transférées de l’application à l’écran dans n’importe quel cadre particulier. il s’agit de la bande passante de mémoire totale. En outre, tout traitement (ou «ombrage») requis pour transformer ces données en vue de leur présentation nécessite également du temps. Les principales considérations à prendre en compte lors du rendu du volume sont les suivantes:
+Il n’existe qu’une certaine quantité d’informations qui peuvent être transférées de l’application à l’écran dans n’importe quel cadre particulier. il s’agit de la bande passante de mémoire totale. En outre, tout traitement (ou « ombrage ») requis pour transformer ces données en vue de leur présentation nécessite également du temps. Les principales considérations à prendre en compte lors du rendu du volume sont les suivantes :
 * Screen-largeur * Screen-hauteur * Screen-Count * volume-Layers-on-pixel = total-volume-Samples per-Frame
-* 1028 * 720 * 2 * 256 = 378961920 (100%) (Full res volume: exemples trop nombreux)
-* 1028 * 720 * 2 * 1 = 1480320 (0,3% du total) (tranche fine: 1 échantillon par pixel, s’exécute sans heurts)
-* 1028 * 720 * 2 * 10 = 14803200 (3,9% de l’intégralité) (sous-volume de volume: 10 échantillons par pixel, s’exécutent assez facilement, semble 3D)
-* 200 * 200 * 2 * 256 = 20480000 (5% de l’ensemble) (volume de ressources inférieur: moins de pixels, volume complet, semble 3D mais flou)
+* 1028 * 720 * 2 * 256 = 378961920 (100%) (Full res volume : exemples trop nombreux)
+* 1028 * 720 * 2 * 1 = 1480320 (0,3% de l’intégralité) (tranche fine : 1 échantillon par pixel, s’exécute sans heurts)
+* 1028 * 720 * 2 * 10 = 14803200 (3,9% de l’intégralité) (sous-volume : 10 échantillons par pixel, s’exécute de manière assez fluide, semble 3D)
+* 200 * 200 * 2 * 256 = 20480000 (5% de l’ensemble) (volume de ressources inférieur : moins de pixels, volume complet, semble 3D mais un peu flou)
 
 ## <a name="representing-3d-textures"></a>Représentation de textures 3D
 
-Sur le processeur:
+Sur le processeur :
 
 ```
 public struct Int3 { public int X, Y, Z; /* ... */ }
@@ -67,7 +67,7 @@ public struct Int3 { public int X, Y, Z; /* ... */ }
  }
 ```
 
-Sur le GPU:
+Sur le GPU :
 
 ```
 float3 _VolBufferSize;
@@ -87,7 +87,7 @@ float3 _VolBufferSize;
 
 ## <a name="shading-and-gradients"></a>Ombrage et dégradés
 
-Comment ombrer un volume, par exemple MRI, pour une visualisation utile. La méthode principale consiste à avoir une «fenêtre d’intensité» (un minimum et un maximum) dont vous souhaitez voir les intensités, et simplement mettre à l’échelle dans cet espace pour voir l’intensité en noir et blanc. Une «rampe de couleurs» peut ensuite être appliquée aux valeurs de cette plage et être stockée sous la forme d’une texture, de sorte que différentes parties du spectre d’intensité peuvent avoir des couleurs différentes:
+Comment ombrer un volume, par exemple MRI, pour une visualisation utile. La méthode principale consiste à avoir une « fenêtre d’intensité » (un minimum et un maximum) dont vous souhaitez voir les intensités, et simplement mettre à l’échelle dans cet espace pour voir l’intensité en noir et blanc. Une « rampe de couleurs » peut ensuite être appliquée aux valeurs de cette plage et être stockée sous la forme d’une texture, de sorte que différentes parties du spectre d’intensité peuvent avoir des couleurs différentes :
 
 ```
 float4 ShadeVol( float intensity ) {
@@ -98,7 +98,7 @@ float4 ShadeVol( float intensity ) {
    color.rgba = tex2d( ColorRampTexture, float2( unitIntensity, 0 ) );
 ```
 
-Dans de nombreuses applications que nous stockons dans notre volume à la fois une valeur d’intensité brute et un «index de segmentation» (pour segmenter différentes parties telles que la peau et le segment, ces segments sont généralement créés par des experts dans des outils dédiés). Cela peut être combiné avec l’approche ci-dessus pour mettre une couleur différente, ou même une gamme de couleurs différente pour chaque index de segment:
+Dans de nombreuses applications que nous stockons dans notre volume à la fois une valeur d’intensité brute et un « index de segmentation » (pour segmenter différentes parties telles que la peau et le segment, ces segments sont généralement créés par des experts dans des outils dédiés). Cela peut être combiné avec l’approche ci-dessus pour mettre une couleur différente, ou même une gamme de couleurs différente pour chaque index de segment :
 
 ```
 // Change color to match segment index (fade each segment towards black):
@@ -107,7 +107,7 @@ Dans de nombreuses applications que nous stockons dans notre volume à la fois u
 
 ## <a name="volume-slicing-in-a-shader"></a>Découpage de volume dans un nuanceur
 
-La première étape consiste à créer un «plan de découpage» qui peut se déplacer dans le volume, le découpage et la façon dont les valeurs d’analyse sont à chaque point. Cela suppose qu’il existe un cube «VolumeSpace», qui représente l’endroit où le volume se trouve dans l’espace universel, qui peut être utilisé comme référence pour placer les points:
+La première étape consiste à créer un « plan de découpage » qui peut se déplacer dans le volume, le découpage et la façon dont les valeurs d’analyse sont à chaque point. Cela suppose qu’il existe un cube « VolumeSpace », qui représente l’endroit où le volume se trouve dans l’espace universel, qui peut être utilisé comme référence pour placer les points :
 
 ```
 // In the vertex shader:
@@ -122,7 +122,7 @@ La première étape consiste à créer un «plan de découpage» qui peut se dé
 
 ## <a name="volume-tracing-in-shaders"></a>Suivi de volume dans les nuanceurs
 
-Comment utiliser le GPU pour effectuer le suivi des sous-volumes (en examinant quelques voxels, puis les couches sur les données de l’arrière vers l’avant):
+Comment utiliser le GPU pour effectuer le suivi des sous-volumes (en examinant quelques voxels, puis les couches sur les données de l’arrière vers l’avant) :
 
 ```
 float4 AlphaBlend(float4 dst, float4 src) {
@@ -166,7 +166,7 @@ float4 AlphaBlend(float4 dst, float4 src) {
 
 ## <a name="whole-volume-rendering"></a>Rendu de volume complet
 
-En modifiant le code de sous-volume ci-dessus, nous obtenons:
+En modifiant le code de sous-volume ci-dessus, nous obtenons :
 
 ```
 float4 volTraceSubVolume(float3 objPosStart, float3 cameraPosVolSpace) {
@@ -179,13 +179,13 @@ float4 volTraceSubVolume(float3 objPosStart, float3 cameraPosVolSpace) {
 
 ## <a name="mixed-resolution-scene-rendering"></a>Rendu de scène à résolution mixte
 
-Comment restituer une partie de la scène avec une résolution faible et la remettre en place:
+Comment restituer une partie de la scène avec une résolution faible et la remettre en place :
 1. Configurer deux caméras hors écran, une pour suivre chaque œil qui met à jour chaque image
 2. Configurer deux cibles de rendu basse résolution (par exemple, 200x200 chacune), que les caméras affichent
 3. Configurer un Quad qui se déplace devant l’utilisateur
 
-Chaque frame:
+Chaque frame :
 1. Dessinez les cibles de rendu pour chaque œil à basse résolution (données de volume, nuanceurs onéreux, etc.).
 2. Dessinez la scène normalement en tant que résolution complète (mailles, UI, etc.)
 3. Dessinez une quadruple face avant l’utilisateur, sur la scène, et projetez les rendus basse résolution sur cela.
-4. Résultat: combinaison visuelle d’éléments à pleine résolution avec des données de volume à faible résolution mais à haute densité.
+4. Résultat : combinaison visuelle d’éléments à pleine résolution avec des données de volume à faible résolution mais à haute densité.

@@ -6,16 +6,16 @@ ms.author: shentan
 ms.date: 04/21/2019
 ms.topic: article
 keywords: Windows Mixed Reality, conception, interaction, voix
-ms.openlocfilehash: bfcaef787b22f17da9627a53c92c43f5cb1e1d9b
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 350acfbe777869f150b7c90c93124e10e155168d
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437217"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926712"
 ---
 # <a name="voice-commanding"></a>Commander avec la voix
 
-Lorsque vous utilisez des commandes vocales, le regard est généralement utilisé comme mécanisme de ciblage, par exemple, comme un pointeur (« sélectionner ») ou pour adresser votre commande à une application (« voir, dire »). Bien entendu, certaines commandes vocales ne nécessitent pas de cible. C’est le cas, par exemple, des commandes « aller au menu Démarrer » ou « Hey Cortana ».
+Lorsque vous utilisez des commandes vocales, le point de regard est généralement utilisé comme mécanisme de ciblage, qu’il s’agisse d’un pointeur (« Select ») ou d’une application (« voir », par exemple). Bien entendu, certaines commandes vocales ne nécessitent pas de cible. C’est le cas, par exemple, des commandes « aller au menu Démarrer » ou « Hey Cortana ».
 
 
 ## <a name="device-support"></a>Périphériques pris en charge

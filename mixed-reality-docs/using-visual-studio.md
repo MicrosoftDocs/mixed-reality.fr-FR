@@ -1,24 +1,24 @@
 ---
 title: Utilisation de Visual Studio pour déployer et déboguer
-description: Comment générer, déboguer et déployer des applications pour HoloLens et Windows Mixed Reality à l’aide de Visual Studio.
+description: Découvrez comment générer, déboguer et déployer des applications pour HoloLens et Windows Mixed Reality à l’aide de Visual Studio.
 author: pbarnettms
 ms.author: pbarnett
 ms.date: 10/24/2019
 ms.topic: article
 keywords: Visual Studio, HoloLens, réalité mixte, débogage, déployer
-ms.openlocfilehash: 2b84183417a1bd4eaa90eef58bebe2b65966b933
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 07854c800008658835b169607d85d562682cf194
+ms.sourcegitcommit: b6b76275fad90df6d9645dd2bc074b7b2168c7c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437286"
+ms.lasthandoff: 11/11/2019
+ms.locfileid: "73914120"
 ---
 # <a name="using-visual-studio-to-deploy-and-debug"></a>Utilisation de Visual Studio pour déployer et déboguer
 
 Que vous souhaitiez utiliser DirectX ou Unity pour développer votre application de réalité mixte, vous allez utiliser Visual Studio pour le débogage et le déploiement. Dans cette section, vous allez apprendre à :
-* Guide pratique pour déployer des applications sur votre casque Windows (HoloLens ou Windows Mixed Reality) à l’aide de Visual Studio.
-* Comment utiliser l’émulateur HoloLens intégré à Visual Studio.
-* Comment déboguer des applications de réalité mixte.
+* Déployez des applications sur votre casque Windows (HoloLens ou Windows Mixed Reality) à l’aide de Visual Studio.
+* Utilisez l’émulateur HoloLens intégré à Visual Studio.
+* Déboguez des applications de réalité mixte.
 
 ## <a name="prerequisites"></a>Conditions préalables
 1. Consultez [installer les outils](install-the-tools.md) pour obtenir des instructions d’installation.
@@ -59,7 +59,7 @@ Si vous travaillez avec un casque Windows Mixed Reality connecté à votre PC, v
 2. Sélectionnez **machine distante** dans le menu déroulant cible de déploiement ![cible de déploiement de l’ordinateur distant dans Visual Studio](images/remotemachinesetting_arm64.png)
 3. Pour C++ les projets JavaScript et, accédez à **propriétés du projet > > propriétés de configuration > débogage**. Pour C# les projets, une boîte de dialogue s’affiche automatiquement pour configurer votre connexion.
   a. Entrez l’adresse IP de votre appareil dans le champ **adresse** ou nom de l' **ordinateur** . Recherchez l’adresse IP sur votre HoloLens sous **paramètres > réseau & Internet > options avancées**ou demandez à Cortana « qu’est-ce que mon adresse IP ? ».
-  b. Définir le mode d’authentification sur le **protocole universel (protocole non chiffré)** ![la boîte de dialogue Connexion à distance dans Visual Studio](images/remotedeploy.png)
+  b. Définissez le mode d’authentification sur la boîte de dialogue de connexion à distance **(protocole non chiffré)** ![dans Visual Studio](images/remotedeploy.png)
 4. Sélectionnez **Déboguer > démarrer le débogage** pour déployer votre application et démarrer le débogage![exécuter sans débogage dans Visual Studio](images/deploywithdebugging.png)
 5. La première fois que vous déployez une application sur votre HoloLens à partir de votre PC, vous êtes invité à entrer un code confidentiel. Suivez les instructions **de jumelage de vos appareils** ci-dessous.
 

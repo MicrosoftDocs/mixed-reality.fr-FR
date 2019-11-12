@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: mouvements, contrôleurs de mouvement, Unity, point de regard, entrée
-ms.openlocfilehash: a7ca5a895015ba0458f0f64f1422612e797f5067
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: a85797bfb443f33147c116e90a02c88abda63c67
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73435229"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926571"
 ---
 # <a name="gestures-and-motion-controllers-in-unity"></a>Mouvements et contrôleurs de mouvement dans Unity
 
@@ -145,7 +145,7 @@ Unity utilise actuellement ses API *d’entrée. GetButton/Input. GetAxis* pour 
 
 Pour utiliser les API d’entrée Unity générales, vous commencez généralement par associer des boutons et des axes aux noms logiques dans le [Gestionnaire d’entrée Unity](https://docs.unity3d.com/Manual/ConventionalGameInput.html), en liant un bouton ou des ID d’axe à chaque nom. Vous pouvez ensuite écrire du code qui fait référence à ce nom d’axe/bouton logique.
 
-Par exemple, pour mapper le bouton de déclenchement du contrôleur de mouvement gauche à l’action envoyer, accédez à **modifier > paramètres du projet > entrée** dans Unity, puis développez les propriétés de la section envoyer sous axes. Modifiez le bouton ou la propriété du **bouton Alt positif** pour lire **le bouton de** la manette de jeu **14**, comme suit :
+Par exemple, pour mapper le bouton de déclenchement du contrôleur de mouvement gauche à l’action envoyer, accédez à **modifier > paramètres du projet > entrée** dans Unity, puis développez les propriétés de la section envoyer sous axes. Modifiez le bouton **positif** ou la propriété **ALT positive du bouton** pour lire le bouton de la manette de jeu **14**, comme suit :
 
 ![](images/unity-input-manager.png) InputManager Unity<br>
 *InputManager Unity*
@@ -446,7 +446,7 @@ void Start()
 
 ### <a name="start-capturing-gestures"></a>Démarrer la capture des mouvements
 
-Par défaut, un *GestureRecognizer* ne surveille pas l’entrée tant que *StartCapturingGestures ()* n’est pas appelé. Il est possible qu’un événement de mouvement soit généré après l’appel de *StopCapturingGestures ()* si l’entrée a été effectuée avant le frame dans lequel *StopCapturingGestures ()* a été traité. Le *GestureRecognizer* se souvient s’il était activé ou désactivé pendant la trame Previou dans laquelle le mouvement s’est réellement produit. il est donc fiable pour démarrer et arrêter la surveillance des mouvements en fonction du point de vue du regard de ce frame.
+Par défaut, un *GestureRecognizer* ne surveille pas l’entrée tant que *StartCapturingGestures ()* n’est pas appelé. Il est possible qu’un événement de mouvement soit généré après l’appel de *StopCapturingGestures ()* si l’entrée a été effectuée avant le frame dans lequel *StopCapturingGestures ()* a été traité. Le *GestureRecognizer* se souvient s’il était activé ou désactivé pendant l’image précédente dans laquelle le mouvement s’est réellement produit. il est donc fiable pour démarrer et arrêter la surveillance des mouvements en fonction du point de vue du regard de ce frame.
 
 ```cs
 recognizer.StartCapturingGestures();

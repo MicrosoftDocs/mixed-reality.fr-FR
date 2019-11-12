@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, réalité mixte, Academy, Unity, didacticiel, API, Media Services, streaming video, 360, immersif, VR
-ms.openlocfilehash: 6585aa731ff7ebb89beae67ab0b61ac5ef026e47
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: e0350d69eed9b922e174bc521107beac7d11b1bc
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438567"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926827"
 ---
 >[!NOTE]
 >Les didacticiels d’Académie de la réalité mixte ont été conçus avec les casques immersif (1er génération) et de réalité mixte à l’esprit.  Par conséquent, nous pensons qu’il est important de ne pas mettre en place ces didacticiels pour les développeurs qui cherchent toujours des conseils en matière de développement pour ces appareils.  Ces didacticiels ne seront **_pas_** mis à jour avec les derniers ensembles d’outils ou interactions utilisés pour HoloLens 2.  Ils seront conservés pour continuer à travailler sur les appareils pris en charge. Une nouvelle série de didacticiels sera publiée à l’avenir qui vous montrera comment développer pour HoloLens 2.  Cet avis sera mis à jour avec un lien vers ces didacticiels lors de leur publication.
@@ -619,7 +619,7 @@ Pour créer cette classe :
 
 ## <a name="chapter-6---create-the-gaze-class"></a>Chapitre 6-créer la classe en regard
 
-Cette classe est chargée de créer un **Raycast** qui se transmettra à l’avant à partir de la **caméra principale**, pour détecter l’objet que l’utilisateur examine. Dans ce cas, le **Raycast** doit déterminer si l’utilisateur regarde l’objet **GazeButton** dans la scène et déclencher un comportement.
+Cette classe est chargée de créer un **Raycast** qui sera projeté à l’avance de la **caméra principale**, pour détecter l’objet que l’utilisateur examine. Dans ce cas, le **Raycast** doit déterminer si l’utilisateur regarde l’objet **GazeButton** dans la scène et déclencher un comportement.
 
 Pour créer cette classe :
 
@@ -828,7 +828,7 @@ Pour générer :
 
 3.  Accédez à **fichier > paramètres de build**, puis cliquez sur **Build**.
 
-4.  Vous serez invité à sélectionner le dossier dans lequel vous souhaitez buildThe la solution.
+4.  Vous serez invité à sélectionner le dossier dans lequel vous souhaitez générer la solution.
 
 5.  Créez un dossier **Builds** et, dans ce dossier, créez un autre dossier avec le nom approprié de votre choix.
 

@@ -6,12 +6,12 @@ ms.author: thmignon
 ms.date: 07/12/2018
 ms.topic: article
 keywords: 3D, logo, icône, modélisation, lanceur, lanceur 3D, vignette, cube dynamique, lien profond, secondarytile, vignette secondaire, UWP
-ms.openlocfilehash: be47b590e4fd1a847ac47d9cfbcbe824c544dd59
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 5d18f699792760c39df4f814bde470fb9f889db7
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438016"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926769"
 ---
 # <a name="implement-3d-app-launchers-uwp-apps"></a>Implémenter des lanceurs d’applications en 3D (applications UWP)
 
@@ -164,7 +164,7 @@ Un cadre englobant peut être utilisé pour ajouter une zone de mémoire tampon 
 > [!NOTE]
 > Ce composant sera pris en charge à partir de la mise à jour de Windows RS4. Assurez-vous que votre application cible une version du SDK Windows supérieure ou égale à 10.0.17125 si vous envisagez d’utiliser cette fonctionnalité
 
-Vous pouvez définir le comportement d’activation d’un secondaryTile 3D afin de contrôler la manière dont il réagit lorsqu’un utilisateur le sélectionne. Cela peut être utilisé pour placer des objets 3D dans la zone de vie de la réalité mixte qui sont informatifs ou décoratifs Purley. Les types de comportement d’activation suivants sont pris en charge :
+Vous pouvez définir le comportement d’activation d’un secondaryTile 3D afin de contrôler la manière dont il réagit lorsqu’un utilisateur le sélectionne. Cela peut être utilisé pour placer des objets 3D dans la zone de vie de la réalité mixte, qui sont purement informatifs ou décoratifs. Les types de comportement d’activation suivants sont pris en charge :
 1. Par défaut : lorsqu’un utilisateur sélectionne l’secondaryTile 3D, l’application est activée
 2. Aucun : lorsque les utilisateurs sélectionnent le secondaryTile 3D, rien ne se produit et l’application n’est pas activée.
 

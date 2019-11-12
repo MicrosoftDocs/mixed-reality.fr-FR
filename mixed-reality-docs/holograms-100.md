@@ -6,12 +6,12 @@ ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: la réalité mixte, Windows Mixed Reality, HoloLens, immersif, VR, Mr, prise en main, hologramme, Academy, didacticiel
-ms.openlocfilehash: 5e9a90af6b80333addbde2a2e11086372483b7c3
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 0600383b3cca3f580f014597217afc6ae78836dd
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73434777"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926642"
 ---
 >[!NOTE]
 >Les didacticiels d’Académie de la réalité mixte ont été conçus avec les casques immersif (1er génération) et de réalité mixte à l’esprit.  Par conséquent, nous pensons qu’il est important de ne pas mettre en place ces didacticiels pour les développeurs qui cherchent toujours des conseils en matière de développement pour ces appareils.  Ces didacticiels ne seront **_pas_** mis à jour avec les derniers ensembles d’outils ou interactions utilisés pour HoloLens 2.  Ils seront conservés pour continuer à travailler sur les appareils pris en charge. [Une nouvelle série de didacticiels](mrlearning-base.md) a été publiée pour HoloLens 2.
@@ -156,7 +156,7 @@ Maintenant que nous avons créé notre cube, il est temps d’effectuer une vér
 ### <a name="initial-setup"></a>Configuration initiale
 
 1. Sur votre PC de développement, dans Unity, ouvrez le **fichier >** la fenêtre Paramètres de Build.
-2. Remplacez **plateforme** par **plateforme Windows universelle** , puis cliquez sur **basculer Platfrom**
+2. Remplacez **Platform** par **plateforme Windows universelle** , puis cliquez sur **switch Platform** .
 
 ### <a name="for-hololens-use-unity-remoting"></a>Pour utiliser la communication à distance Unity pour HoloLens
 

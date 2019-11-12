@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: DirectX, rendu holographique, native, application native, application WinRT, application WinRT, API de plateforme, moteur personnalisé, intergiciel
-ms.openlocfilehash: e77ee5053e69aef502481d18618e604c6bfb5939
-ms.sourcegitcommit: 2e54d0aff91dc31aa0020c865dada3ae57ae0ffc
+ms.openlocfilehash: 0af73314c3c93d230ef87ed468f718f5b3e1813c
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73641091"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926631"
 ---
 # <a name="directx-development-overview"></a>Vue d’ensemble du développement DirectX
 
@@ -44,7 +44,7 @@ Les rubriques suivantes décrivent les exigences de base liées à l’ajout de 
 
 ## <a name="adding-mixed-reality-capabilities-and-inputs"></a>Ajout de fonctionnalités et d’entrées de réalité mixte
 
-Pour offrir la meilleure expérience possible aux utilisateurs de vos appslication immersifs, vous pouvez prendre en charge les principaux blocs de construction suivants :
+Pour permettre aux utilisateurs de votre application immersif de tirer le meilleur parti possible, vous devez prendre en charge les principaux blocs de construction suivants :
 
 * [Suivre de la tête et du regard dans DirectX](gaze-in-directx.md)
 * [Mains et contrôleurs de mouvement dans DirectX](hands-and-motion-controllers-in-directx.md)

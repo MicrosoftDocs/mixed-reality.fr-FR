@@ -6,18 +6,18 @@ ms.author: jlyons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Portail des appareils Windows, HoloLens
-ms.openlocfilehash: cc83a4e987d77be53222b8e9537eeec359446465
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 972fe2e828a0a054925a45b4f6965c668f6da078
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438215"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926745"
 ---
 # <a name="using-the-windows-device-portal"></a>Utilisation du portail d’appareils Windows
 
 <table>
 <tr>
-<th>Fonctionnalité</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (1re génération)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"><a href="immersive-headset-hardware-details.md">Casques immersifs</a></th>
+<th>Fonctionnalité</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (1re génération)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"><a href="immersive-headset-hardware-details.md">Casques immersifs</a></th>
 </tr><tr>
 <td> Windows Device Portal</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"></td>
 </tr>
@@ -160,7 +160,7 @@ Utilisez la page MRC pour enregistrer les flux multimédias issus du casque Holo
 > [!NOTE]
 > Il existe des [limitations à la MRC simultanée](mixed-reality-capture-for-developers.md#simultaneous-mrc-limitations):
 > * Si une application tente d’accéder à la caméra photo/vidéo alors que le portail de périphériques Windows enregistre une vidéo, l’enregistrement vidéo s’arrête.
->   * HoloLens 2 n’arrête pas l’enregistrement de la vidéo si l’application crée une ACE avec le mode SharedReadOnly.
+>   * HoloLens 2 n’arrête pas l’enregistrement de la vidéo si l’application accède à la caméra photo/vidéo avec le mode SharedReadOnly.
 > * Si une application utilise activement la caméra photo/vidéo, le portail d’appareils Windows peut prendre une photo ou enregistrer une vidéo.
 > * Streaming en direct :
 >   * HoloLens (1re génération) empêche une application d’accéder à la caméra photo/vidéo pendant la diffusion en direct à partir du portail de périphériques Windows.

@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, réalité mixte, Academy, Unity, didacticiel, API, Machine Learning, ml, Machine Learning Studio, hololens, immersif, VR
-ms.openlocfilehash: c86c592573dd39d926869d8cce6025fa264cc90f
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: e302e287049cd746a436904c2af2bcc2b0835796
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437923"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926617"
 ---
 >[!NOTE]
 >Les didacticiels d’Académie de la réalité mixte ont été conçus avec les casques immersif (1er génération) et de réalité mixte à l’esprit.  Par conséquent, nous pensons qu’il est important de ne pas mettre en place ces didacticiels pour les développeurs qui cherchent toujours des conseils en matière de développement pour ces appareils.  Ces didacticiels ne seront **_pas_** mis à jour avec les derniers ensembles d’outils ou interactions utilisés pour HoloLens 2.  Ils seront conservés pour continuer à travailler sur les appareils pris en charge. Une nouvelle série de didacticiels sera publiée à l’avenir qui vous montrera comment développer pour HoloLens 2.  Cet avis sera mis à jour avec un lien vers ces didacticiels lors de leur publication.
@@ -410,7 +410,7 @@ Pour importer ce package :
 
     ![Importation du package MLProducts Unity](images/AzureLabs-Lab7-41.png)
 
-5.  Dans le dossier du **panneau Projet** , cliquez sur le dossier **scenes** , puis double-cliquez sur la scène dans (appelée **MR_MachineLearningScene**). La scène s’ouvre (Voir l’image ci-dessous). Si les losanges rouges sont manquants, cliquez simplement sur le bouton **gizmos** , en haut à droite du **panneau du jeu**.
+5.  Dans le dossier du **panneau Projet** , cliquez sur le dossier **scenes** et double-cliquez sur la scène dans (appelée **MR_MachineLearningScene**). La scène s’ouvre (Voir l’image ci-dessous). Si les losanges rouges sont manquants, cliquez simplement sur le bouton **gizmos** , en haut à droite du **panneau du jeu**.
 
     ![Importation du package MLProducts Unity](images/AzureLabs-Lab7-44.png)
 
@@ -731,7 +731,7 @@ Pour créer cette classe :
 
             Debug.LogFormat("Score request built");
 
-            // Serialise the request
+            // Serialize the request
             string json = JsonConvert.SerializeObject(ro);
 
             using (UnityWebRequest www = UnityWebRequest.Post(serviceEndpoint, "POST"))
@@ -849,7 +849,7 @@ Pour déployer votre application :
 
 1.  Accédez à votre nouvelle build Unity (le dossier de l' **application** ) et ouvrez le fichier solution avec **Visual Studio**.
 
-2.  Avec Visual Studio Open, vous devez restaurer les packages NuGet. pour ce faire, cliquez avec le bouton droit sur votre solution MachineLearningLab_Build, à partir de la Explorateur de solutions (à droite de Visual Studio), puis cliquez sur restaurer les packages NuGet :
+2.  Avec Visual Studio Open, vous devez restaurer les packages NuGet. pour ce faire, vous pouvez cliquer avec le bouton droit sur votre solution MachineLearningLab_Build, à partir de la Explorateur de solutions (située à droite de Visual Studio), puis en cliquant sur restaurer les packages NuGet :
 
     ![Ajouter des packages NuGet](images/AzureLabs-Lab7-57.png)
 

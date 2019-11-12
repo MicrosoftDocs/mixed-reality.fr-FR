@@ -6,12 +6,12 @@ ms.author: branbray
 ms.date: 03/21/2018
 ms.topic: article
 keywords: réalité mixte, holographique, AR, VR, Mr, XR, réalité augmentée, réalité virtuelle, explication
-ms.openlocfilehash: 83beca8b6abad56fc37800ddfc9faad0d21859bf
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 601e42c03e827f0f531f9dcf937a0dd34b008dc3
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437878"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926773"
 ---
 # <a name="what-is-mixed-reality"></a>Qu’est-ce que la réalité mixte ?
 
@@ -71,7 +71,7 @@ La plupart des téléphones portables sur le marché n’ont pas de capacités d
 <br>
 
 ![le spectre de la réalité mixte](images/MixedRealitySpectrum.jpg)<br>
-*Specturm de la réalité mixte*
+*Le spectre de la réalité mixte*
 
 <br>
 
@@ -120,5 +120,5 @@ Souvent, il est préférable de réfléchir au type d’expérience qu’une app
 * [Qu’est-ce qu’un hologramme ?](hologram.md)
 * [Comprendre les principes de base de la réalité mixte](index.md#understand-the-basics)
 * [Démarrer la création et le prototypage](design.md)
-* [Découvrez les outils et l’architecture](development.md)
+* [Découvrir les outils et l’architecture](development.md)
 

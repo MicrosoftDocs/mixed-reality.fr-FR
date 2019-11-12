@@ -6,12 +6,12 @@ ms.author: alreynol
 ms.date: 05/16/2019
 ms.topic: article
 keywords: LBE, MixedRealitySpatialDataPackager. exe, MixedRealitySpatialDataPackager
-ms.openlocfilehash: 52556e4028407086f943c4b765a8bcfad2744eac
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 331fa6dc752c64eeaa5bc2e9d1dd6b2c15049a27
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438477"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926758"
 ---
 # <a name="mixed-reality-spatial-data-packager-documentation"></a>Documentation du package de données spatiales de la réalité mixte
 
@@ -66,7 +66,7 @@ Principales exigences et limitations :
 4. Réduire les surfaces vides et sans texture, par exemple placer une plage de différentes affiches sur des murs blancs
 5. Mapper l’espace sans objets dynamiques dans la scène, tels que le déplacement de personnes
 6. Verrouiller la carte lors de l’importation (disponible par le biais de la version préliminaire d’Insider)
-7. Déverrouillez la carte et relancez l’analyse des environnement lorsque la qualité du suivi est dégradée et/ou qu’il y a des modifications dans l’environnement (éclairage ou modifications dans la disposition des objets).
+7. Déverrouillez la carte et relancez l’analyse de l’environnement en cas de dégradation de la qualité et/ou d’évolution de l’environnement (éclairage ou modifications dans la disposition des objets).
 ***
 
 ## <a name="running-mixed-reality-spatial-data-packager-with-companion-script"></a>Exécution d’un package de données spatiales de réalité mixte avec un script compagnon
@@ -107,7 +107,7 @@ Les paramètres de script sont définis ci-dessous :
 ```
 Package Family Name for holoshell: HoloShell_cw5n1h2txyewy
 User SID for Administrator: S-1-5-21-1279937937-3984375698-1043392598-499
-Lock map value succesfully set to 0
+Lock map value successfully set to 0
 
 Running: C:\bin\MixedRealitySpatialDataPackager.exe export D:\temp\ HoloShell_cw5n1h2txyewy S-1-5-21-1279937937-3984375698-1043392598-499
 
@@ -197,7 +197,7 @@ Failed to find local user for passed in user SID
 3. Unable to create directory at <PATH> for export
 ```
 
-### <a name="if-there-was-an-error-related-to-starting-and-stoping-spectrumsharedrealitysvc"></a>En cas d’erreur liée au démarrage et à l’arrêt du spectre/SharedRealitySvc
+### <a name="if-there-was-an-error-related-to-starting-and-stopping-spectrumsharedrealitysvc"></a>En cas d’erreur liée au démarrage et à l’arrêt du spectre/SharedRealitySvc
 ```
 1. Unable to open service manager <SERVICE>
 2. Timed out trying to start/stop <SERVICE>

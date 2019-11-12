@@ -6,12 +6,12 @@ ms.author: grbury
 ms.date: 02/10/2019
 ms.topic: article
 keywords: expérience partagée, réalité mixte, hologramme, ancrage spatial, multi-utilisateur, multi
-ms.openlocfilehash: 4e71bdefa32d2f6cf3b85b074c3d9fcbdb6aa909
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: c846bcd8c9c52f1f169d306df3afd4f982656078
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437469"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926930"
 ---
 # <a name="shared-experiences-in-mixed-reality"></a>Expériences partagées dans la réalité mixte
 
@@ -166,7 +166,7 @@ Tirez parti de [MixedReality-WebRTC](https://github.com/microsoft/mixedreality-w
 
 ## <a name="presenter-spectator-applications-and-demos"></a>Présentateur-applications et démonstrations pour spectateur
 
-Tirez parti de [MixedReality-SpectatorView](https://github.com/microsoft/MixedReality-SpectatorView) pour intégrer les [fonctionnalités de vue de specator](spectator-view.md) à votre application.  Activez les autres appareils (HL, Android, iOS et les caméras vidéo) pour voir ce que l’HoloLens voit d’une perspective différente au même emplacement, et recevoir des mises à jour sur les interactions de l’utilisateur de l’ordinateur hôte HoloLens qui interagit avec les hologrammes.  Regardez, prenez des photos et enregistrez une vidéo de ce que fait l’hôte avec les hologrammes de l’application, de votre propre perspective spatiale avec l’accompagnement spectateur de la même application.
+Tirez parti de [MixedReality-SpectatorView](https://github.com/microsoft/MixedReality-SpectatorView) pour placer les fonctionnalités de la [vue spectateur](spectator-view.md) dans votre application.  Activez les autres appareils (HL, Android, iOS et les caméras vidéo) pour voir ce que l’HoloLens voit d’une perspective différente au même emplacement, et recevoir des mises à jour sur les interactions de l’utilisateur de l’ordinateur hôte HoloLens qui interagit avec les hologrammes.  Regardez, prenez des photos et enregistrez une vidéo de ce que fait l’hôte avec les hologrammes de l’application, de votre propre perspective spatiale avec l’accompagnement spectateur de la même application.
 
 **Remarque :** Les images sont prises via la capture d’écran sur les appareils iOS/Android.
 

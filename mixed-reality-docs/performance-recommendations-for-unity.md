@@ -6,12 +6,12 @@ ms.author: trferrel
 ms.date: 03/26/2019
 ms.topic: article
 keywords: graphiques, UC, GPU, rendu, garbage collection, hololens
-ms.openlocfilehash: 724ec24408e70360fda07c59a4ca2ffc30b49c1f
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: f3fdda94c417d9f8e8980a90e8928282789e3d0f
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438129"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926868"
 ---
 # <a name="performance-recommendations-for-unity"></a>Recommandations en matière de performances pour Unity
 
@@ -273,7 +273,7 @@ Les techniques qui fonctionnent en mode plein écran peuvent être assez onéreu
 
 ### <a name="optimal-lighting-settings"></a>Paramètres d’éclairage optimaux
 
-L' [éclairage global](https://docs.unity3d.com/Manual/GIIntro.html) en temps réel dans Unity peut fournir des résultats visuels nombre, mais implique des calculs d’éclairage très coûteux. Il est recommandé de désactiver l’éclairage global en temps réel pour chaque fichier de scène Unity via la **fenêtre** > le **rendu** > **paramètres d’éclairage** > de décocher l' **éclairage global en temps réel**.
+L' [éclairage global](https://docs.unity3d.com/Manual/GIIntro.html) en temps réel dans Unity peut fournir des résultats visuels remarquables, mais implique des calculs d’éclairage très coûteux. Il est recommandé de désactiver l’éclairage global en temps réel pour chaque fichier de scène Unity via la **fenêtre** > le **rendu** > **paramètres d’éclairage** > de décocher l' **éclairage global en temps réel**.
 
 En outre, il est recommandé de désactiver toutes les captures instantanées, car celles-ci ajoutent des passes GPU coûteuses à une scène Unity. Les ombres peuvent être désactivées par lumière, mais peuvent également être contrôlées de façon holistique via des paramètres de qualité.
 
@@ -301,7 +301,7 @@ Une approximation facile pour comparer les nuanceurs en matière de performances
 
     ![Opérations de nuanceur standard Unity](images/unity-standard-shader-compilation.png)
 
-#### <a name="optmize-pixel-shaders"></a>Nuanceurs de pixels Optmize
+#### <a name="optimize-pixel-shaders"></a>Optimiser les nuanceurs de pixels
 
 Si vous examinez les résultats des statistiques compilées à l’aide de la méthode ci-dessus, le [nuanceur de fragments](https://en.wikipedia.org/wiki/Shader#Pixel_shaders) exécutera généralement plus d’opérations que le [nuanceur de sommets](https://en.wikipedia.org/wiki/Shader#Vertex_shaders) en moyenne. Le nuanceur de fragments, également connu sous le nom de nuanceur de pixels, est exécuté par pixel sur la sortie de l’écran, tandis que le nuanceur de sommets est exécuté uniquement par sommet de tous les maillages dessinés à l’écran. 
 
