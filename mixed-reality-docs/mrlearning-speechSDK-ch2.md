@@ -6,41 +6,40 @@ ms.author: jemccull
 ms.date: 06/27/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: 5382a1cce38e8607042c21b8dd3157d1da2fa72e
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 962d7d4750cf59fe56de4af9088c90e8ecd0aa16
+ms.sourcegitcommit: b6b76275fad90df6d9645dd2bc074b7b2168c7c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437556"
+ms.lasthandoff: 11/11/2019
+ms.locfileid: "73913208"
 ---
-# <a name="2-adding-an-offline-mode-for-local-speech-to-text-translation"></a><span data-ttu-id="43120-105">2. Ajout d’un mode hors connexion pour la traduction vocale locale en texte</span><span class="sxs-lookup"><span data-stu-id="43120-105">2. Adding an offline mode for local speech-to-text translation</span></span>
+# <a name="2-adding-an-offline-mode-for-local-speech-to-text-translation"></a><span data-ttu-id="966b3-105">2. Ajout d’un mode hors connexion pour la traduction vocale locale en texte</span><span class="sxs-lookup"><span data-stu-id="966b3-105">2. Adding an offline mode for local speech-to-text translation</span></span>
 
-<span data-ttu-id="43120-106">Dans ce didacticiel, nous allons ajouter un mode hors connexion qui vous permet d’effectuer des traductions vocales en texte local quand nous ne pouvons pas nous connecter au service Azure.</span><span class="sxs-lookup"><span data-stu-id="43120-106">In this tutorial, we'll add an offline mode that lets you perform local speech-to-text translation when we are unable to connect to the Azure service.</span></span> <span data-ttu-id="43120-107">Nous *simulerons* également un état déconnecté.</span><span class="sxs-lookup"><span data-stu-id="43120-107">We will also *simulate* a disconnected state.</span></span>
+<span data-ttu-id="966b3-106">Dans ce didacticiel, nous allons ajouter un mode hors connexion qui vous permet d’effectuer des traductions vocales en texte local quand nous ne pouvons pas nous connecter au service Azure.</span><span class="sxs-lookup"><span data-stu-id="966b3-106">In this tutorial, we'll add an offline mode that lets you perform local speech-to-text translation when we are unable to connect to the Azure service.</span></span> <span data-ttu-id="966b3-107">Nous *simulerons* également un état déconnecté.</span><span class="sxs-lookup"><span data-stu-id="966b3-107">We will also *simulate* a disconnected state.</span></span>
 
-## <a name="instructions"></a><span data-ttu-id="43120-108">Instructions</span><span class="sxs-lookup"><span data-stu-id="43120-108">Instructions</span></span>
+## <a name="instructions"></a><span data-ttu-id="966b3-108">Instructions</span><span class="sxs-lookup"><span data-stu-id="966b3-108">Instructions</span></span>
 
-1. <span data-ttu-id="43120-109">Sélectionnez l’objet Lunarcom_Base dans la hiérarchie.</span><span class="sxs-lookup"><span data-stu-id="43120-109">Select the Lunarcom_Base object in the hierarchy.</span></span>
-2. <span data-ttu-id="43120-110">Cliquez sur Ajouter un composant dans le panneau Inspecteur.</span><span class="sxs-lookup"><span data-stu-id="43120-110">Click Add Component in the Inspector panel.</span></span> <span data-ttu-id="43120-111">Recherchez et sélectionnez la reconnaissance hors connexion Lunarcom.</span><span class="sxs-lookup"><span data-stu-id="43120-111">Search for and select the Lunarcom Offline Recognition.</span></span>
+1. <span data-ttu-id="966b3-109">Sélectionnez l’objet Lunarcom_Base dans la hiérarchie.</span><span class="sxs-lookup"><span data-stu-id="966b3-109">Select the Lunarcom_Base object in the hierarchy.</span></span>
 
-![Module4Chapter2step1im](images/module4chapter2step1im.PNG)
+2. <span data-ttu-id="966b3-110">Cliquez sur Ajouter un composant dans le panneau Inspecteur.</span><span class="sxs-lookup"><span data-stu-id="966b3-110">Click Add Component in the Inspector panel.</span></span> <span data-ttu-id="966b3-111">Recherchez et sélectionnez la reconnaissance hors connexion Lunarcom.</span><span class="sxs-lookup"><span data-stu-id="966b3-111">Search for and select the Lunarcom Offline Recognition.</span></span>
 
-3. <span data-ttu-id="43120-113">Cliquez sur la liste déroulante dans le LunarcomOfflineRecognizer et sélectionnez activé.</span><span class="sxs-lookup"><span data-stu-id="43120-113">Click the drop-down in the LunarcomOfflineRecognizer and select Enabled.</span></span> <span data-ttu-id="43120-114">Cela programme le projet pour qu’il agisse comme l’utilisateur n’a pas de connexion.</span><span class="sxs-lookup"><span data-stu-id="43120-114">This programs the project to act like the user doesn't have a connection.</span></span> 
+    ![Module4Chapter2step1im](images/module4chapter2step1im.PNG)
 
-![Module4Chapter2step1im](images/module4chapter2step2im.PNG)
+3. <span data-ttu-id="966b3-113">Cliquez sur la liste déroulante dans le LunarcomOfflineRecognizer et sélectionnez activé.</span><span class="sxs-lookup"><span data-stu-id="966b3-113">Click the drop-down in the LunarcomOfflineRecognizer and select Enabled.</span></span> <span data-ttu-id="966b3-114">Cela programme le projet pour qu’il agisse comme l’utilisateur n’a pas de connexion.</span><span class="sxs-lookup"><span data-stu-id="966b3-114">This programs the project to act like the user doesn't have a connection.</span></span>
 
-4. <span data-ttu-id="43120-116">Appuyez sur la touche lecture dans l’éditeur Unity et testez-la.</span><span class="sxs-lookup"><span data-stu-id="43120-116">Press Play in Unity Editor, and test it.</span></span> <span data-ttu-id="43120-117">Appuyez sur le microphone dans le coin inférieur gauche de la scène et commencez à parler.</span><span class="sxs-lookup"><span data-stu-id="43120-117">Press the microphone in the bottom-left corner in the scene and begin speaking.</span></span> 
+    ![Module4Chapter2step1im](images/module4chapter2step2im.PNG)
 
-> [!NOTE]
-> <span data-ttu-id="43120-118">Étant donné que nous sommes hors connexion, la fonctionnalité de mise en éveil par mot a été désactivée.</span><span class="sxs-lookup"><span data-stu-id="43120-118">Because we’re offline, wake word functionality has been disabled.</span></span> <span data-ttu-id="43120-119">Vous devez cliquer sur le microphone chaque fois que vous souhaitez que votre voix soit reconnue en mode hors connexion.</span><span class="sxs-lookup"><span data-stu-id="43120-119">You'll need to physically click the microphone every time you wish to have your speech recognized when offline.</span></span> 
+4. <span data-ttu-id="966b3-116">Appuyez sur la touche lecture dans l’éditeur Unity et testez-la.</span><span class="sxs-lookup"><span data-stu-id="966b3-116">Press Play in Unity Editor, and test it.</span></span> <span data-ttu-id="966b3-117">Appuyez sur le microphone dans le coin inférieur gauche de la scène et commencez à parler.</span><span class="sxs-lookup"><span data-stu-id="966b3-117">Press the microphone in the bottom-left corner in the scene and begin speaking.</span></span>
 
-<span data-ttu-id="43120-120">Vous trouverez ci-dessous un exemple de ce à quoi peut ressembler votre scène.</span><span class="sxs-lookup"><span data-stu-id="43120-120">Below is an example of what your scene could look like.</span></span>
+    >[!NOTE]
+    ><span data-ttu-id="966b3-118">Étant donné que nous sommes hors connexion, la fonctionnalité de mise en éveil par mot a été désactivée.</span><span class="sxs-lookup"><span data-stu-id="966b3-118">Because we’re offline, wake word functionality has been disabled.</span></span> <span data-ttu-id="966b3-119">Vous devez cliquer sur le microphone chaque fois que vous souhaitez que votre voix soit reconnue en mode hors connexion.</span><span class="sxs-lookup"><span data-stu-id="966b3-119">You'll need to physically click the microphone every time you wish to have your speech recognized when offline.</span></span>
 
-![Module4Chapter2exampleim](images/module4chapter2exampleim.PNG)
+    <span data-ttu-id="966b3-120">Vous trouverez ci-dessous un exemple de ce à quoi peut ressembler votre scène.</span><span class="sxs-lookup"><span data-stu-id="966b3-120">Below is an example of what your scene could look like.</span></span>
 
-## <a name="congratulations"></a><span data-ttu-id="43120-122">Félicitations !</span><span class="sxs-lookup"><span data-stu-id="43120-122">Congratulations</span></span>
+    ![Module4Chapter2exampleim](images/module4chapter2exampleim.PNG)
 
-<span data-ttu-id="43120-123">Le mode hors connexion a été activé.</span><span class="sxs-lookup"><span data-stu-id="43120-123">The offline mode has been enabled.</span></span> <span data-ttu-id="43120-124">Désormais, lorsque vous êtes hors connexion, vous pouvez continuer à travailler sur votre projet avec le kit de développement logiciel (SDK) Speech !</span><span class="sxs-lookup"><span data-stu-id="43120-124">Now, when you're offline, you can still work on your project with the speech-SDK!</span></span> 
+## <a name="congratulations"></a><span data-ttu-id="966b3-122">Félicitations !</span><span class="sxs-lookup"><span data-stu-id="966b3-122">Congratulations</span></span>
 
+<span data-ttu-id="966b3-123">Le mode hors connexion a été activé.</span><span class="sxs-lookup"><span data-stu-id="966b3-123">The offline mode has been enabled.</span></span> <span data-ttu-id="966b3-124">Désormais, lorsque vous êtes hors connexion, vous pouvez continuer à travailler sur votre projet avec le kit de développement logiciel (SDK) Speech !</span><span class="sxs-lookup"><span data-stu-id="966b3-124">Now, when you're offline, you can still work on your project with the speech-SDK!</span></span>
 
-[<span data-ttu-id="43120-125">Didacticiel suivant : 3. Ajout du composant Azure Cognitive Services Speech translation</span><span class="sxs-lookup"><span data-stu-id="43120-125">Next Tutorial: 3.  Adding the Azure Cognitive Services speech translation component</span></span>](mrlearning-speechSDK-ch3.md)
-
+[<span data-ttu-id="966b3-125">Didacticiel suivant : 3. Ajout du composant Azure Cognitive Services Speech translation</span><span class="sxs-lookup"><span data-stu-id="966b3-125">Next Tutorial: 3. Adding the Azure Cognitive Services speech translation component</span></span>](mrlearning-speechSDK-ch3.md)
