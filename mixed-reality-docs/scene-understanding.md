@@ -6,12 +6,12 @@ ms.author: szymons
 ms.date: 07/08/2019
 ms.topic: article
 keywords: Compréhension des scènes, mappage spatial, Windows Mixed Reality, Unity
-ms.openlocfilehash: 7ee0cf3af8012a053733896a8bf92192306b7f8b
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: fdfe40571ac8893dcb3a3ba8fe3bb12707c800e4
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437493"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926922"
 ---
 # <a name="scene-understanding"></a>Compréhension des scènes
 
@@ -95,7 +95,7 @@ La génération de maillages de navigation précis nécessite toujours un traite
 
 ### <a name="visualization"></a>Sessions
 
-Bien qu’il soit possible d’utiliser la [visualisation de mappage spatial](spatial-mapping.md#visualization) pour obtenir des commentaires en temps réel sur l’environnement, il existe de nombreux scénarios dans lesquels la simplicité des objets planaires et étanches améliore les performances ou la qualité visuelle. La projection d’ombre et les techniques de mise à la terre décrites à l’aide du mappage spatial peuvent être plus attrayantes si elles sont projetées sur les surfaces planes fournies par quads ou la maille étanche planaire. Cela est particulièrement vrai pour les environnements/scénarios dans lesquels la pré-analyse n’est pas optimale en raison du fait que la scène est déduite, et les environnements complets et les hypothèses planaires réduisent les artefacts.
+Bien qu’il soit possible d’utiliser la [visualisation de mappage spatial](spatial-mapping.md#visualization) pour obtenir des commentaires en temps réel sur l’environnement, il existe de nombreux scénarios dans lesquels la simplicité des objets planaires et étanches améliore les performances ou la qualité visuelle. La projection d’ombre et les techniques de mise à la terre décrites à l’aide du mappage spatial peuvent être plus attrayantes si elles sont projetées sur les surfaces planes fournies par quads ou la maille étanche planaire. Cela est particulièrement vrai pour les environnements/scénarios où la pré-analyse complète n’est pas optimale en raison du fait que la scène est déduite, et les environnements complets et les hypothèses planaires réduisent les artefacts.
 
 En outre, le nombre total de surfaces retournées par le mappage spatial est limité par le cache spatial interne, tandis que la version de la vue de la représentation spatiale du maillage de mappage spatial peut accéder aux données de mappage spatiale qui ne sont pas mises en cache. Pour cette raison, la compréhension de la scène est plus adaptée à la capture des représentations de maillage pour les espaces plus larges (par exemple, plus grande qu’une seule pièce) pour la visualisation ou le traitement du maillage. La maille mondiale retournée avec EnableWorldMesh aura un niveau de détail cohérent tout au long de, ce qui peut générer une visualisation plus agréable si elle est rendue sous forme filaire.
 

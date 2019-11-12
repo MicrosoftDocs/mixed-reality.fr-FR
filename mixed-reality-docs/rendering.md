@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: rendu, hologramme
-ms.openlocfilehash: a974b9d8a00713c28c27963a9f96379693db9b60
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 9c32d8ddf5a1fb9e9d991211756ba1306f4d3fa9
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437523"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926857"
 ---
 # <a name="rendering"></a>Rendu
 

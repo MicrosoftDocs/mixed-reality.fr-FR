@@ -6,18 +6,21 @@ ms.author: sostel
 ms.date: 10/29/2019
 ms.topic: article
 keywords: Suivi oculaire, réalité mixte, entrée, point de regard, étalonnage
-ms.openlocfilehash: 63520ee8d7d3ce73405776fccc62290cbbadd0a8
-ms.sourcegitcommit: 2e54d0aff91dc31aa0020c865dada3ae57ae0ffc
+ms.openlocfilehash: 88c1827d3656ceb851e8f778daa2303b88dd17c8
+ms.sourcegitcommit: b6b76275fad90df6d9645dd2bc074b7b2168c7c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73641142"
+ms.lasthandoff: 11/11/2019
+ms.locfileid: "73913224"
 ---
 # <a name="eye-tracking-on-hololens-2"></a>Eye-tracking sur HoloLens 2
 
 ![Démonstration du suivi oculaire dans MRTK](images/mrtk_et_scenemenu.jpg)
 
-HoloLens 2 permet à un nouveau niveau de contexte et de compréhension humaine au sein de l’expérience holographique en offrant aux développeurs la possibilité d’utiliser des informations sur ce que l’utilisateur examine. Cette page fournit une vue d’ensemble de cette nouvelle fonctionnalité destinée aux développeurs et aux concepteurs sur la façon dont ils peuvent tirer parti du suivi oculaire pour divers cas d’usage et des conseils de base pour les développeurs. 
+HoloLens 2 permet à un nouveau niveau de contexte et de compréhension humaine au sein de l’expérience holographique en offrant aux développeurs la possibilité d’utiliser des informations sur ce que l’utilisateur examine. Cette page explique aux développeurs comment ils peuvent tirer parti du suivi oculaire pour divers cas d’usage, ainsi que des éléments à rechercher lors de la conception d’interactions utilisateur en regard de regard. 
+
+L’API de suivi oculaire a été conçue en tenant compte de la confidentialité de l’utilisateur, ce qui évite de transmettre des informations identifiables, en particulier toute biométrie. Pour les applications pouvant suivre le suivi oculaire, l’utilisateur doit accorder à l’application l’autorisation d’utiliser les informations de suivi oculaire. 
+
 
 ### <a name="device-support"></a>Périphériques pris en charge
 <table>
@@ -94,13 +97,16 @@ Il existe d’autres cas d’usage supplémentaires pour les _actions implicites
 - **Hologrammes précis :** Des hologrammes qui réagissent à la légère sur le regard. Cela peut aller d’un léger éclat aux éléments de l’interface utilisateur, une fleur très lente à un chien virtuel qui commence à regarder l’utilisateur et wagging sa queue. Cette interaction peut fournir un sens intéressant de la connectivité et de la satisfaction dans votre application.
 
 ### <a name="attention-tracking"></a>Suivi de l’attention   
-Des informations sur l’emplacement ou les utilisateurs qui regardent sont un outil très puissant pour évaluer la convivialité des conceptions et pour identifier les problèmes dans les flux de travail efficaces. La visualisation et l’analyse du suivi oculaire sont une pratique courante dans différents domaines d’application. Avec HoloLens 2, nous fournissons une nouvelle dimension à cette compréhension, car les hologrammes 3D peuvent être placés dans des contextes réels et évalués en conséquence. La [boîte à outils de la réalité mixte](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Main.html) fournit des exemples de base pour la journalisation et le chargement des données de suivi visuel et comment les visualiser.
+Les informations relatives à l’emplacement ou à l’utilisateur que les utilisateurs regardent peuvent être un outil très puissant : ils peuvent aider à évaluer la convivialité des conceptions et à identifier les problèmes dans les workflows pour les rendre plus efficaces.
+La visualisation et l’analyse du suivi oculaire sont une pratique courante dans différents domaines d’application. Avec HoloLens 2, nous fournissons une nouvelle dimension à cette compréhension, car les hologrammes 3D peuvent être placés dans des contextes réels et évalués en conséquence. La [boîte à outils de la réalité mixte](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Main.html) fournit des exemples de base pour la journalisation et le chargement des données de suivi visuel et comment les visualiser.
+Microsoft s’attache à faciliter l’innovation tout en veillant à ce que les utilisateurs bénéficient d’une expérience éclairée et transparente quant à l’utilisation de leurs informations de suivi visuel.  Nous travaillons avec nos développeurs et nos équipes d’expérience utilisateur pour fournir des conseils aux tiers qui garantissent que les expériences sont centrées sur l’utilisateur.  
+
 
 Autres applications possibles dans ce domaine : 
--   **Œil à distance-visualisation du regard :** Visualisez ce que les collaborateurs distants examinent pour améliorer la compréhension partagée.
--   **Études de recherche des utilisateurs :** Le suivi de l’attention peut vous aider à mieux comprendre la façon dont nous percevons et faisons appel à notre environnement, qui peut aider à améliorer les modèles d’intention de l’homme pour plus d’instinctual. 
--   **Formation :** Amélioration de la formation des novices grâce à une meilleure compréhension des modèles de recherche visuelle des experts et de leur coordination manuelle pour les tâches complexes, telles que l’analyse des données médicales ou les machines à fonctionner.
--   **Évaluations de la conception et recherche sur le marché :** Le suivi oculaire est un outil courant pour les recherches sur le marché lors de l’évaluation des conceptions de site Web et de produit. Avec HoloLens 2, nous pouvons l’étendre aux espaces 3D en fusionnant les variantes de conception de produits numériques avec l’environnement physique. 
+-   **Œil à distance-visualisation du regard :** Œil à distance-visualisations de regard : Visualisez ce que les collaborateurs distants cherchent à pouvoir fournir des commentaires immédiats et faciliter le traitement des informations plus précises.
+-   **Études de recherche des utilisateurs :** Le suivi de l’attention peut aider les chercheurs à obtenir plus d’informations sur la façon dont les utilisateurs perçoivent et accèdent à l’environnement naturel, sans interférer, pour concevoir davantage de instinctual humains-Computer-interactions. Le suivi oculaire peut fournir des informations qui ne sont pas directement articulées par les participants à l’étude, qui peuvent être facilement manquées par le chercheur. 
+-   **Surveillance des formations et des performances :** Pratiquez et optimisez l’exécution des tâches en identifiant plus efficacement les goulots d’étranglement dans le workflow d’exécution. Le suivi oculaire peut fournir des informations concrètes, en temps réel et objectives pour contribuer à l’amélioration de la formation, de la productivité et de la sécurité dans l’espace de travail. 
+-   Études **de conception, marketing et recherche de consommateurs :** Le suivi oculaire permet aux entreprises commerciales d’effectuer des études marketing et de consommation dans des environnements réels ou d’analyser ce qui capture l’attention de l’utilisateur pour améliorer la conception du produit ou de l’espace. 
 
 ### <a name="additional-use-cases"></a>Cas d’usage supplémentaires
 - **Jeux :** Avez-vous déjà souhaité des superalimentations ? Voilà votre chance ! Vous pouvez faire en lévitation les hologrammes. Prenez des faisceaux laser de vos yeux, essayez-le dans [RoboRaid pour HoloLens 2](https://www.microsoft.com/p/roboraid/9nblggh5fv3j).
@@ -116,10 +122,9 @@ ATTENTION : pour en savoir plus, consultez nos [instructions relatives à la co
 ## <a name="using-eye-gaze-for-interaction"></a>Utilisation de l’œil en regard de l’interaction
 La création d’une interaction qui tire parti du ciblage visuel à déplacement rapide peut être difficile.
 D’un côté, les yeux se déplacent tellement vite que vous devez être attentif à l’utilisation des entrées de regard, car sinon les utilisateurs peuvent se rendre compte de l’expérience insurmontable ou gênante. En revanche, vous pouvez également créer des expériences véritablement magiques qui exciteront vos utilisateurs ! Pour vous aider, consultez notre présentation des principaux avantages, défis et recommandations de conception pour [une interaction](eye-gaze-interaction.md)avec les yeux. 
-
-<br>
  
 ## <a name="fallback-solutions-when-eye-tracking-is-not-available"></a>Solutions de secours lorsque le suivi oculaire n’est pas disponible
+
 Dans de rares cas, les données de suivi oculaire peuvent ne pas être disponibles.
 Cela peut être dû à différentes raisons, parmi lesquelles les plus courantes sont répertoriées ci-dessous :
 * Le système n’a pas pu [étalonner l’utilisateur](calibration.md).
@@ -127,9 +132,9 @@ Cela peut être dû à différentes raisons, parmi lesquelles les plus courantes
 * L’utilisateur est étalonné, mais il a décidé de ne pas accorder à votre application l’autorisation d’utiliser ses données de suivi visuel.    
 * L’utilisateur dispose de lunettes uniques ou d’une condition oculaire que le système ne prend pas encore en charge.    
 * Facteurs externes qui empêchent le suivi des yeux fiables, tels que les taches sur le Visor ou les lunettes, les lumières et les occlusions directs du soleil en raison des cheveux devant les yeux.   
+
 Par conséquent, les développeurs doivent s’assurer qu’il existe une prise en charge de secours appropriée pour ces utilisateurs. Sur la page [suivi des yeux dans DirectX](gaze-in-directx.md#fallback-when-eye-tracking-is-not-available) , nous expliquons les API requises pour détecter si les données de suivi visuel sont disponibles. 
 
-Comme décrit ci-dessus, il existe plusieurs raisons pour lesquelles les données de suivi oculaire peuvent ne pas être disponibles.   
 Alors que certains utilisateurs peuvent avoir des axent décidés de révoquer l’accès à leurs données de suivi visuel et qu’ils sont OK avec le compromis d’une expérience utilisateur inférieure à la confidentialité de ne pas fournir l’accès à leurs données de suivi visuel, dans certains cas cela peut être involontaire.  
 Par conséquent, si votre application utilise le suivi oculaire et qu’il s’agit d’une partie importante de l’expérience, nous vous recommandons de le communiquer clairement à l’utilisateur.     
 En informant l’utilisateur, pourquoi le suivi des yeux est essentiel pour votre application (peut-être même répertorier certaines fonctionnalités améliorées) afin de tirer le meilleur parti de votre application, peut aider l’utilisateur à mieux comprendre ce qu’il abandonne.    
@@ -153,10 +158,10 @@ Cette page vous a espérons vous fournir une bonne vue d’ensemble pour vous ai
 ## <a name="see-also"></a>Articles associés
 * [Étalonnage](calibration.md)
 * [Confort](comfort.md)
-* [Interaction avec l’œil-regard](eye-gaze-interaction.md)
+* [Interaction par pointage du regard](eye-gaze-interaction.md)
 * [Œil-point de regard sur DirectX](gaze-in-directx.md)
 * [Œil-point d’interfaut](https://aka.ms/mrtk-eyes)
-* [Point de regard et validation](gaze-and-commit.md)
+* [Pointer et valider](gaze-and-commit.md)
 * [Entrée vocale](voice-design.md)
 
 

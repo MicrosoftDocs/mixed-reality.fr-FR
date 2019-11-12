@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: 77d639a88d8b4c71dc5fbe1c78565c4c3f91d36c
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 9f57cb9874aade2d6b19d0c061fd83eb04b9ef11
+ms.sourcegitcommit: b6b76275fad90df6d9645dd2bc074b7b2168c7c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438414"
+ms.lasthandoff: 11/11/2019
+ms.locfileid: "73914380"
 ---
 # <a name="3-displaying-azure-spatial-anchor-feedback"></a>3. affichage des commentaires sur l’ancrage spatial Azure
 
@@ -45,28 +45,11 @@ Dans cette leçon, vous allez apprendre à fournir aux utilisateurs des commenta
 
 ![module2chapter3step4im](images/module2chapter3step4im.PNG)
 
-5. Dans le panneau projet, sélectionnez « ressources », cliquez avec le bouton droit, puis sélectionnez « Afficher dans l’Explorateur ».
-   
-
-![module2chapter3step4im](images/module2chapter3step5im.PNG)
-
-Cliquez [ici](https://onedrive.live.com/?authkey=%21ABXEC8PvyQu8Qd8&id=5B7335C4342BCB0E%21395636&cid=5B7335C4342BCB0E) pour télécharger les fichiers nécessaires dans les étapes suivantes.
-
-6. Une fois que l’Explorateur s’ouvre, sélectionnez le dossier ressources, puis le dossier « ASAmodulesAssets » et copiez le script de commentaires d’ancrage et les fichiers de script du module d’ancrage dans le dossier. 
-
-![module2chapter3step5im](images/module2chapter3step6im.PNG)
-
-> Remarque : Si vous recevez un message contextuel vous demandant si vous souhaitez remplacer l’ancien ou conserver l’ancien, sélectionnez remplacer.
-
-7. Revenez au dossier Assets. Ensuite, accédez au dossier « AzureSpatialAnchorsPlugin », suivi du dossier exemples et enfin du dossier scripts. Copiez ensuite le wrapper de démonstration des ancres spatiales Azure dans ce dossier. 
-
-![module2chapter3step8im](images/module2chapter3step7im.PNG)
-
-8. Maintenant que les fichiers sont téléchargés, assurez-vous que le texte « feedbackpanel » est sélectionné dans la hiérarchie ASA_feedback, cliquez sur « Ajouter un composant » et ajoutez le script d’ancrage de commentaires en le recherchant et en le sélectionnant une fois qu’il apparaît. 
+5. Assurez-vous que le texte « feedbackpanel » est sélectionné dans la hiérarchie ASA_feedback, cliquez sur « Ajouter un composant » et ajoutez le script d’ancrage de commentaires en le recherchant et en le sélectionnant une fois qu’il apparaît. 
 
 ![module2chapter3step8im](images/module2chapter3step8im.PNG)
 
-9. Faites glisser l’objet de texte « feedbackPanel » de la hiérarchie ASA_Feedback vers l’emplacement vide sous le script, comme indiqué dans l’image ci-dessous. 
+6. Faites glisser l’objet de texte « feedbackPanel » de la hiérarchie ASA_Feedback vers l’emplacement vide sous le script, comme indiqué dans l’image ci-dessous. 
 
 ![module2chapter3step9im](images/module2chapter3step9im.PNG)
 

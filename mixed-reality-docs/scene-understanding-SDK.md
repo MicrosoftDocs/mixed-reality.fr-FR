@@ -6,12 +6,12 @@ ms.author: szymons
 ms.date: 07/08/2019
 ms.topic: article
 keywords: Compréhension des scènes, mappage spatial, Windows Mixed Reality, Unity
-ms.openlocfilehash: e31c0b1c954516db2dbb025d849dba3e3203a04b
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: b7d4103697d94f5e59c77237b4948f62e4e4b621
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438299"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926903"
 ---
 # <a name="scene-understanding-sdk-overview"></a>Présentation du SDK présentation de Scene
 
@@ -23,7 +23,7 @@ Le kit de développement logiciel (SDK) SceneUnderstanding peut être téléchar
 
 [SDK SceneUnderstanding](https://www.nuget.org/packages/Microsoft.MixedReality.SceneUnderstanding/)
 
-**Remarque :** la version la plus récente dépend de la version préliminaire de exploitation et vous devez activer les packages de préversions pour les afficher.
+**Remarque :** la version la plus récente dépend des packages de préversion et vous devrez activer les packages de préversions pour les afficher.
 
 Depuis la version 0.5.2022-RC, Scene Understanding prend en charge les C# projections de langage pour et C++ permettant aux applications de développer des applications pour les plateformes Win32 ou UWP. À compter de cette version, SceneUnderstanding prend en charge Unity dans le cadre de la prise en charge de l’éditeur, avec la SceneObserver qui est utilisée uniquement pour communiquer avec HoloLens2. 
 
@@ -35,7 +35,7 @@ Si vous utilisez le kit de développement logiciel (SDK) dans un projet Unity, u
 
 ### <a name="the-scene"></a>La scène
 
-Votre appareil de réalité mixte intègre constamment des informations sur ce qu’il voit dans votre environnement. La compréhension de la scène entonnoir toutes ces sources de données et produit une seule abstraction cohésive. La compréhension des scènes génère des scènes qui constituent une composition de [SceneObjects](scene-understanding-SDK.md#sceneobjects) représentant une instance d’une seule chose (par exemple, un mur/un plafond/étage). Les objets de scène sont eux-mêmes une composition de [SceneComponents](scene-understanding-SDK.md#scenecomponents) qui représentent des éléments plus granulaires qui composent ce SceneObject. Les exemples de composants sont les Quad et les maillages, mais à l’avenir, ils peuvent représenter des zones englobantes, des mehses de collision, des métadonnées, etc.
+Votre appareil de réalité mixte intègre constamment des informations sur ce qu’il voit dans votre environnement. La compréhension de la scène entonnoir toutes ces sources de données et produit une seule abstraction cohésive. La compréhension des scènes génère des scènes qui constituent une composition de [SceneObjects](scene-understanding-SDK.md#sceneobjects) représentant une instance d’une seule chose (par exemple, un mur/un plafond/étage). Les objets de scène sont eux-mêmes une composition de [SceneComponents](scene-understanding-SDK.md#scenecomponents) qui représentent des éléments plus granulaires qui composent ce SceneObject. Les exemples de composants sont les quadruples et les maillages, mais à l’avenir, ils pourraient représenter des zones englobantes, des maillages de collision, des métadonnées, etc.
 
 Le processus de conversion des données de capteur brutes en scène est une opération potentiellement coûteuse qui peut prendre des secondes pour les espaces moyens (~ 10x10m) à minutes pour les espaces de très grande taille (~ 50x50m). par conséquent, il ne s’agit pas d’un objet qui est calculé par l’appareil sans demande de l’application. Au lieu de cela, la génération de scènes est déclenchée par votre application à la demande. La classe SceneObserver a des méthodes statiques qui peuvent calculer ou désérialiser une scène, que vous pouvez ensuite énumérer/interagir avec. L’action « Compute » est exécutée à la demande et s’exécute sur l’UC, mais dans un processus séparé (le pilote de réalité mixte). Toutefois, pendant que nous effectuons le calcul dans un autre processus, les données de scène obtenues sont stockées et conservées dans votre application dans l’objet de scène. 
 
@@ -43,7 +43,7 @@ Vous trouverez ci-dessous un diagramme qui illustre ce processus et montre des e
 
 ![Diagramme de processus](images/SU-ProcessFlow.png)
 
-La partie gauche est un diagramme du runtime de réalité mixte qui est toujours actif et s’exécute dans son propre processus. Ce Runtime est chargé d’effectuer le suivi des appareils, le mappage spatial et d’autres opérations que la présentation de Scene utilise pour comprendre et expliquer le monde autour de vous. Sur le côté droit du diagramme, nous présentons deux applications théoriques qui utilisent la compréhension des scènes. La première application interface avec MRTK, qui utilise le kit de développement logiciel (SDK) de scène en interne, la deuxième application calcule et utilise deux instances de scène sepereate. Les trois scènes dans ce diagramme génèrent des instances distinctes des scènes, le pilote ne suit pas l’état global qui est partagé entre les applications et les objets de scène dans une scène ne sont pas trouvés dans un autre. La compréhension de la scène fournit un mécanisme de suivi au fil du temps, mais cette opération s’effectue à l’aide du kit de développement logiciel (SDK) et du code, le code qui effectue ce suivi s’exécute dans le kit de développement logiciel (SDK) du processus de votre application
+La partie gauche est un diagramme du runtime de réalité mixte qui est toujours actif et s’exécute dans son propre processus. Ce Runtime est chargé d’effectuer le suivi des appareils, le mappage spatial et d’autres opérations que la présentation de Scene utilise pour comprendre et expliquer le monde autour de vous. Sur le côté droit du diagramme, nous présentons deux applications théoriques qui utilisent la compréhension des scènes. La première application interface avec MRTK, qui utilise le kit de développement logiciel (SDK) de scène en interne, la deuxième application calcule et utilise deux instances de scène distinctes. Les trois scènes dans ce diagramme génèrent des instances distinctes des scènes, le pilote ne suit pas l’état global qui est partagé entre les applications et les objets de scène dans une scène ne sont pas trouvés dans un autre. La compréhension de la scène fournit un mécanisme de suivi au fil du temps, mais cette opération s’effectue à l’aide du kit de développement logiciel (SDK) et le code qui effectue ce suivi s’exécute dans le kit de développement logiciel (SDK) dans le processus de votre application.
 
 Étant donné que chaque scène stocke ses données dans l’espace mémoire de votre application, vous pouvez supposer que toutes les fonctions de l’objet de la scène ou de ses données internes sont toujours exécutées dans le processus de votre application.
 
@@ -95,7 +95,7 @@ Ci-dessous, nous présentons un exemple de structure dans sa forme plate et logi
 </tr>
 </table>
 
-Cette illustration met en évidence la différence entre la disposition physique et logique de la scène. À droite, nous voyons la disposition hiérarchique des données que votre application voit lors de l’énumération de la scène. À gauche, nous voyons que la scène est en fait composée de 12 composants distincts qui sont accessibles individuellement si nécessaire. Lors du traitement d’une nouvelle scène, nous pensons que les applications parcourent cette hiérarchie logiquement, toutefois, lors du suivi entre les mises à jour de la scène, certaines applications peuvent uniquement être intéressées à cibler des composants spécifiques qui sont partagés entre deux scènes.
+Cette illustration met en évidence la différence entre la disposition physique et logique de la scène. À gauche, nous voyons la disposition hiérarchique des données que votre application voit lors de l’énumération de la scène. À droite, nous voyons que la scène est en fait composée de 12 composants distincts qui sont accessibles individuellement si nécessaire. Lors du traitement d’une nouvelle scène, nous pensons que les applications parcourent cette hiérarchie logiquement, toutefois, lors du suivi entre les mises à jour de la scène, certaines applications peuvent uniquement être intéressées à cibler des composants spécifiques qui sont partagés entre deux scènes.
 
 ## <a name="api-overview"></a>Vue d’ensemble des API
 
@@ -223,7 +223,7 @@ firstFloor = (SceneObject)myNextScene.FindComponent(firstFloor.Id);
 
 if (firstFloor != null)
 {
-    // We found it again, we can now update the transforms of all objects we attatched to this floor transform
+    // We found it again, we can now update the transforms of all objects we attached to this floor transform
 }
 ```
 
@@ -249,7 +249,7 @@ foreach (var mesh in firstFloor.Meshes)
 }
 ```
 
-Notez qu’il s’agit du SceneObject qui a la transformation par rapport à l’origine de la scène. Cela est dû au fait que SceneObject représente une instance d’un « élément » et qu’il est localisable dans l’espace, les Quad et les maillages représentent une géométrie transformée par rapport à leur parent. Il est possible pour des SceneObjects distincts de référencer le même SceneComponewnts SceneMesh/SceneQuad, et il est également possible qu’un SceneObject ait plus d’un SceneMesh/SceneQuad.
+Notez qu’il s’agit du SceneObject qui a la transformation par rapport à l’origine de la scène. Cela est dû au fait que SceneObject représente une instance d’un « élément » et qu’il est localisable dans l’espace, les Quad et les maillages représentent une géométrie transformée par rapport à leur parent. Il est possible pour des SceneObjects distincts de référencer le même SceneComponents SceneMesh/SceneQuad, et il est également possible qu’un SceneObject ait plus d’un SceneMesh/SceneQuad.
 
 ### <a name="dealing-with-transforms"></a>Traitement des transformations
 
@@ -285,7 +285,7 @@ public class SceneRootComponent : MonoBehavior
 }
 ```
 
-Chaque `SceneObject` a une propriété `Position` et `Orientation` qui peut être utilisée pour positionner le contenu correspondant par rapport à l’origine du `Scene`contenant. Par exemple, l’exemple suivantes suppose que le jeu est un enfant de la racine de la scène et affecte sa position et sa rotation locales pour qu’il s’aligne sur un `SceneObject`donné :
+Chaque `SceneObject` a une propriété `Position` et `Orientation` qui peut être utilisée pour positionner le contenu correspondant par rapport à l’origine du `Scene`contenant. Par exemple, l’exemple suivant suppose que le jeu est un enfant de la racine de la scène et affecte sa position et sa rotation locales pour qu’il s’aligne sur un `SceneObject`donné :
 
 ```cs
 void SetLocalTransformFromSceneObject(GameObject gameObject, SceneObject sceneObject)
@@ -324,14 +324,14 @@ foreach (var sceneObject in myScene.SceneObjects)
                 // Step 1: Create a new game object for the quad itself as a child of the scene root
                 // Step 2: Set the local transform from quads[0].Position and quads[0].Orientation
                 // Step 3: Create your hologram and set it as a child of the quad's game object
-                // Step 4: Set the hologram's local tranform to a translation (location.x, location.y, 0)
+                // Step 4: Set the hologram's local transform to a translation (location.x, location.y, 0)
             }
         }
     }
 }
 ```
 
-Les étapes 1-4 sont fortement dépendantes de votre infrastructure/implémentation particulière, mais les thèmes doivent être similaires. Il est important de noter que le quad représente simplement un plan 2D limité qui est localisé dans l’espace. En faisant savoir à votre moteur/infrastructure où se trouve le quad et la racine de vos objets par rapport au Quad, vos hologrammes se trouveront correctement avec repect dans le monde réel. Pour obtenir des informations plus détaillées, consultez nos exemples sur les quatre cœurs qui présentent des implémentations spécifiques.
+Les étapes 1-4 sont fortement dépendantes de votre infrastructure/implémentation particulière, mais les thèmes doivent être similaires. Il est important de noter que le quad représente simplement un plan 2D limité qui est localisé dans l’espace. En faisant savoir à votre moteur/infrastructure où se trouve le quad et la racine de vos objets par rapport au Quad, vos hologrammes se trouveront correctement en ce qui concerne le monde réel. Pour obtenir des informations plus détaillées, consultez nos exemples sur les quatre cœurs qui présentent des implémentations spécifiques.
 
 ### <a name="mesh"></a>Déjà
 

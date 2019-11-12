@@ -6,12 +6,12 @@ ms.author: crderr
 ms.date: 03/21/2018
 ms.topic: article
 keywords: critères de qualité des applications, réalité mixte, application de réalité mixte
-ms.openlocfilehash: f98111ebe9aacc30778e86501be41e6ac5f6d165
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: d167e141b536f9247d22e40afefa718ecc399f5a
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437050"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926587"
 ---
 # <a name="app-quality-criteria"></a>Critères de qualité des applications
 
@@ -124,7 +124,7 @@ Lors de l’usure de l’appareil et de l’affichage de l’expérience :
 * Déplacez-vous autour des hologrammes et de l’environnement, recherchez des comportements tels que natation et jumpiness. Ce type de mouvement est probablement dû au fait que l’appareil n’effectue pas le suivi de l’environnement ou à la distance vers l’ancrage spatial.
 * Si un grand nombre ou plusieurs hologrammes se trouvent dans le cadre, observez le comportement de l’hologramme à différentes profondes tout en déplaçant la position de votre tête d’un côté à l’autre, si shakiness apparaît que cela est probablement dû au plan de stabilisation.
 
-### <a name="recomendations"></a>Recommandations
+### <a name="recommendations"></a>Recommandations
 
 * Ajoutez un compteur de fréquence d’images au début du travail de développement.
 * Utilisez le plan de stabilisation.
@@ -188,7 +188,7 @@ Un mauvais alignement des hologrammes avec des objets physiques (s’ils sont de
 * La carte spatiale est utile pour placer des objets sur des surfaces lorsque la précision n’est pas requise.
 * Pour une meilleure précision, utilisez des marqueurs ou des affiches pour définir les hologrammes et un contrôleur Xbox (ou un mécanisme d’alignement manuel) pour l’étalonnage final.
 * Envisagez de casser des hologrammes très grands en parties logiques et en alignant chaque partie sur l’aire de conception.
-* Une distance incorrecte (IPD) peut également affecter l’alignement de l’hologramme. Configurez toujours HoloLens sur l’IPD de l’utilisateur.
+* La définition incorrecte de la distance interpupillary (IPD) peut également affecter l’alignement de l’hologramme. Configurez toujours HoloLens sur l’IPD de l’utilisateur.
 
 ### <a name="resources"></a>Ressources
 
@@ -523,7 +523,7 @@ La clarté de l’interaction d’entrée est essentielle à l’utilisation d�
 ### <a name="how-to-measure"></a>Comment mesurer
 
 * L’application utilise des [méthodes d’entrée standard](interaction-fundamentals.md) cohérentes.
-* Si l’application a des entrées personnalisées, elle est clairement communiquée à :
+* Si l’application possède une entrée personnalisée, elle est clairement communiquée par le biais des éléments suivants :
 * Expérience de première exécution
 * Écrans d’introduction
 * Info-bulles

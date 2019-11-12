@@ -6,44 +6,42 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: c7cbdca3c22253042a9be44a194fca8925f0f446
-ms.sourcegitcommit: 599bbdd861ce6ff11b6cfb345a0a995f8b7bf85b
+ms.openlocfilehash: 490b9f6142208a190748b6d76c57be493172c1e5
+ms.sourcegitcommit: b6b76275fad90df6d9645dd2bc074b7b2168c7c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68977965"
+ms.lasthandoff: 11/11/2019
+ms.locfileid: "73913202"
 ---
 # <a name="3-adding-the-azure-cognitive-services-speech-translation-component"></a>3. Ajout du composant Azure Cognitive Services Speech translation
 
-Dans ce didacticiel, nous allons découvrir le composant Azure Cognitive Services Speech translation dans notre projet et le traduire en trois langages différents. 
+Dans ce didacticiel, nous allons découvrir le composant Azure Cognitive Services Speech translation dans notre projet et le traduire en trois langages différents.
 
 ## <a name="instructions"></a>Instructions
 
-1. Sélectionnez l’objet Lunarcom_Base dans la hiérarchie, puis cliquez sur Ajouter un composant dans le panneau Inspecteur. Recherchez et sélectionnez LunarcomTranslationRecognizer.
+1. Sélectionnez l’objet Lunarcom_Base dans la hiérarchie, puis cliquez sur Ajouter un composant dans le panneau Inspecteur. Recherchez et sélectionnez Lunarcom translation Recognizer.
 
-![Module4Chapter3step1im](images/module4chapter3step1im.PNG)
+    ![Module4Chapter3step1im](images/module4chapter3step1im.PNG)
 
-> Remarque : Assurez-vous que le simulateur en mode hors connexion est désactivé avant de tester le traducteur Speech-SDK. Pour pouvoir effectuer la conversion, vous devez être connecté à Internet. Consultez l’image ci-dessous, où trouver ce paramètre. 
->
-> ![Module4Chapter3noteim](images/module4chapter3noteim.PNG)
+    Désactivez le simulateur en mode hors connexion.
 
-2. Cliquez sur la liste déroulante dans LunarcomTranslationRecognizer, puis sélectionnez la langue vers laquelle vous souhaitez effectuer la conversion.
+    ![Module4Chapter3noteim](images/module4chapter3noteim.PNG)
 
-![Module4Chapter3step2im](images/module4chapter3step2im.PNG)
+    >[!IMPORTANT]
+    >Avant de poursuivre, assurez-vous que le simulateur en mode hors connexion est désactivé, comme illustré dans l’image ci-dessus, avant de tester le traducteur du kit de développement logiciel (SDK) Speech. Pour pouvoir effectuer la conversion, vous devez être connecté à Internet.
 
-3. À présent, exécutez l’application et testez le convertisseur en cliquant sur le bouton satellite, puis commencez à parler. Appuyez de nouveau sur le bouton satellite pour arrêter la reconnaissance. Vous trouverez ci-dessous un exemple de ce à quoi doit ressembler votre scène. N’hésitez pas à modifier la langue sous la liste déroulante «langue cible» (Voir l’image ci-dessus) pour explorer la traduction dans d’autres langues.
+2. Cliquez sur la liste déroulante dans le module de reconnaissance des traductions Lunarcom, puis sélectionnez la langue vers laquelle vous souhaitez effectuer la conversion.
 
-> Remarque : Avant de procéder à des tests, assurez-vous que le simulateur hors connexion est désactivé, comme indiqué dans l’image ci-dessous.
->
-> ![Module4Chapter3noteim](images/module4chapter3noteim.PNG)
+    ![Module4Chapter3step2im](images/module4chapter3step2im.PNG)
 
-Vous trouverez ci-dessous un exemple de ce à quoi votre scène devrait ressembler:
+3. À présent, exécutez l’application et testez le convertisseur en cliquant sur le bouton satellite, puis commencez à parler. Appuyez de nouveau sur le bouton satellite pour arrêter la reconnaissance. Vous trouverez ci-dessous un exemple de ce à quoi doit ressembler votre scène. N’hésitez pas à modifier la langue sous la liste déroulante « langue cible » (Voir l’image ci-dessus) pour explorer la traduction dans d’autres langues.
 
-![Module4Chapter3exampleim](images/module4chapter3exampleim.PNG)
+    Vous trouverez ci-dessous un exemple de ce à quoi votre scène devrait ressembler :
 
-## <a name="congratulations"></a>Félicitations
+    ![Module4Chapter3exampleim](images/module4chapter3exampleim.PNG)
 
-À présent, votre projet peut traduire les mots que vous parlez dans plusieurs langues différentes. N’hésitez pas à vous amuser avec les langages et à tester l’exactitude de la traduction. 
+## <a name="congratulations"></a>Félicitations !
 
-[Didacticiel suivant: 4. Configuration des intentions et compréhension du langage naturel](mrlearning-speechSDK-ch4.md)
+À présent, votre projet peut traduire les mots que vous parlez dans plusieurs langues différentes. N’hésitez pas à vous amuser avec les langages et à tester l’exactitude de la traduction.
 
+[Didacticiel suivant : 4. Configuration de l’intention et compréhension du langage naturel](mrlearning-speechSDK-ch4.md)

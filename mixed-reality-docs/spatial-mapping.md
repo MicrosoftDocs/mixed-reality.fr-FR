@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: mappage spatial, HoloLens, réalité mixte, reconstruction de surface, maille
-ms.openlocfilehash: 2988056b5caf50a4428d39c725bfe5432867a9c0
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: c4e2f9e49cfe4df9cf875d18b19d62e25c200d76
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437455"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926739"
 ---
 # <a name="spatial-mapping"></a>Mappage spatial
 
@@ -64,13 +64,13 @@ Ces volumes peuvent être fixes (à un emplacement fixe par rapport au monde ré
 
 À mesure que le HoloLens recueille de nouvelles données sur l’environnement et que les modifications apportées à l’environnement se produisent, les surfaces spatiales s’affichent, disparaissent et changent.
 
-## <a name="spatial-mapping-vs-scene-undesranding-worldmesh"></a>Mappage spatial et scène Undesranding WorldMesh
+## <a name="spatial-mapping-vs-scene-understanding-worldmesh"></a>Mappage spatial et compréhension de scène WorldMesh
 Pour HoloLens 2, il est possible d’interroger une version statique des données de mappage spatiale à l’aide de [Scene Understanding SDK](scene-understanding-SDK.md) (paramètre EnableWorldMesh). Voici les différences entre deux méthodes d’accès aux données de mappage spatiale :
 * API de mappage spatial :
    * Plage limitée : les données de mappage spatiale disponibles pour les applications dans une taille limitée mise en cache pour l’utilisateur.
    * Fournit des mises à jour à faible latence des régions de maillage modifiées par le biais d’événements SurfacesChanged.
    * Niveau variable de détails contrôlés par des triangles par paramètre de compteur cubique.
-* SDK Scene compris :
+* SDK Understanding :
    * Plage illimitée : fournit toutes les données de mappage spatiale analysées dans le rayon de la requête.
    * Fournit un instantané statique des données de mappage spatiale. L’obtention des données de mappage spatiale mises à jour requiert l’exécution d’une nouvelle requête pour l’ensemble du maillage.
    * Niveau de détail cohérent des détails contrôlés par le paramètre RequestedMeshLevelOfDetail.
@@ -366,7 +366,7 @@ Voici quelques exemples de différents types de traitement de maillage qui peuve
 * Il est judicieux d’effectuer des tests avec des utilisateurs réels (et idéalement non-surveillés), car ils ne peuvent pas utiliser le HoloLens ou votre application exactement de la même façon que vous le faites. En fait, il peut être surpris de savoir comment le comportement, les connaissances et les hypothèses de personnes divergentes peuvent être !
 
 ## <a name="troubleshooting"></a>Dépannage
-* Pour que les maillages de surface soient correctement orientés, chaque GameObject doit être actif avant d’être envoyé à SurfaceObeserver pour que sa maille soit construite. Dans le cas contraire, les mailles s’affichent dans votre espace mais subissent une rotation à des angles inhabituels.
+* Pour que les maillages de surface soient correctement orientés, chaque GameObject doit être actif avant d’être envoyé à SurfaceObserver pour que sa maille soit construite. Dans le cas contraire, les mailles s’affichent dans votre espace mais subissent une rotation à des angles inhabituels.
 * Le GameObject qui exécute le script qui communique avec le SurfaceObserver doit être défini sur l’origine. Dans le cas contraire, tous les GameObjects que vous créez et envoyez au SurfaceObserver pour que leurs maillages soient construits auront un décalage égal au décalage de l’objet de jeu parent. Cela peut faire apparaître plusieurs mètres dans vos mails, ce qui rend très difficile le débogage de ce qui se passe.
 
 ## <a name="see-also"></a>Articles associés
