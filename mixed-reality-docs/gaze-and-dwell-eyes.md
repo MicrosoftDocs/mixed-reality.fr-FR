@@ -7,12 +7,12 @@ ms.date: 10/29/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Suivi du regard, réalité mixte, entrée, suivre du regard, suivi rétinien, suivi du mouvement des yeux, HoloLens 2, sélection basée sur le regard, fixer
-ms.openlocfilehash: 5130fd3c1ecd551788f61f8abb8d02cdedeb4181
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 0ec5d5e3b7f56038c7be9930a4468d286b388a65
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437805"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926605"
 ---
 # <a name="eye-gaze-and-dwell"></a>Pointer du regard et fixer
 

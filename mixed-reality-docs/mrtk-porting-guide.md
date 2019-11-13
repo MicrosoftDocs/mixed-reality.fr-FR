@@ -3,16 +3,16 @@ title: Préparer une application existante pour HoloLens 2
 description: Conçu pour les développeurs qui disposent déjà d’une application HoloLens (1re génération) et/ou d’une ancienne version de MRTK, et qui souhaitent effectuer le portage de MRTK version 2 vers HoloLens 2.
 author: grbury
 ms.author: grbury
-ms.date: 10/14/19
+ms.date: 10/14/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Windows Mixed Reality, test, MRTK, MRTK version 2, HoloLens 2
-ms.openlocfilehash: e1256cfaf9253a31161a836f75a90c64d17cf093
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 41e6f8b3632a53663f237deb54a3144fb8ad79e8
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438355"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926212"
 ---
 # <a name="get-your-existing-app-ready-for-hololens-2"></a>Préparer une application existante pour HoloLens 2
 
