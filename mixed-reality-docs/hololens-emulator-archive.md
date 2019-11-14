@@ -3,15 +3,15 @@ title: Archive de l’émulateur HoloLens
 description: Liste des builds publiées de l’émulateur Microsoft HoloLens.
 author: pbarnettms
 ms.author: pbarnett
-ms.date: 9/11/2019
+ms.date: 11/11/2019
 ms.topic: article
 keywords: HoloLens, émulateur, builds, versions
-ms.openlocfilehash: c2d0c8d9e81bae906c786a32f08d0e701638535e
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: f9ce72febfd07b7dc743b9ee202e8c4353f1de96
+ms.sourcegitcommit: f2b7c6381006fab6d0472fcaa680ff7fb79954d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73434203"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74064227"
 ---
 # <a name="hololens-2-emulator-archive"></a>Archive de l’émulateur HoloLens 2
 
@@ -19,6 +19,7 @@ L’émulateur HoloLens (1er génération) et l’émulateur HoloLens 2 s’inst
 
 |  Build |  Date de publication |  Notes | 
 |----------|----------|----------|
+|  [10.0.18362.1039 de build de l’émulateur HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2110553) | 11 novembre 2019 | Build HoloLens 2 de novembre 2019. |
 |  [10.0.18362.1034 de build de l’émulateur HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2106649) | 8 octobre 2019 | Build HoloLens 2 d’octobre 2019.  L’émulateur vous invite à effectuer une mise à jour vers une nouvelle version lors de l’exécution d’une version antérieure à la dernière version disponible.  Lors de l’utilisation de l’émulateur sur la mise à jour Windows 10 2019 ou version ultérieure, le nouvel onglet configuration NAT permet aux développeurs d’ouvrir des ports pour les applications qui s’exécutent sur des appareils distincts pour se connecter à l’émulateur et l’onglet mises à jour affiche les versions d’émulateur disponibles.  Pour plus d’informations, consultez la documentation de l' [émulateur HoloLens](using-the-hololens-emulator.md) . |
 |  [10.0.18362.1031 de build de l’émulateur HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2103724) | 11 septembre 2019 | Build de 2019 HoloLens 2 de septembre.  L’onglet réseau s’affiche dans la fenêtre outils de l’émulateur lors de l’exécution de l’émulateur sur la mise à jour Windows 10 2019 ou une version plus récente. |
 |  [10.0.18362.1028 de build de l’émulateur HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2101019) | 14 août 2019 | Build HoloLens 2 d’août 2019.  Les modèles d’application holographique ne sont plus inclus, mais sont disponibles dans la Visual Studio Marketplace.  L’émulateur fonctionne désormais lorsque les kits de développement logiciel (SDK) sont installés dans un emplacement personnalisé. |

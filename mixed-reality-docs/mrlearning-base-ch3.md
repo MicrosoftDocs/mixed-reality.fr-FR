@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: 32a77d6032335ab3ae769b85c5f947440658743f
-ms.sourcegitcommit: b6b76275fad90df6d9645dd2bc074b7b2168c7c8
+ms.openlocfilehash: ade7a839e03a306332bf18f1db49805f59c71429
+ms.sourcegitcommit: f2b7c6381006fab6d0472fcaa680ff7fb79954d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2019
-ms.locfileid: "73913541"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74064256"
 ---
 # <a name="4-placing-dynamic-content-and-using-solvers"></a>4. placement de contenu dynamique et utilisation de solveurs
 
@@ -72,7 +72,7 @@ Dans cette section, nous allons configurer l’objet de jeu de cube créé préc
 
     ![mrlearning-base-CH3-3-step2b. png](images/mrlearning-base-ch3-3-step2b.png)
 
-3. Définissez les distances maximale et minimale de la vue radiale sur 0 afin que le cube n’ait pas de distance entre celui-ci et le poignet de l’utilisateur. Une fois ces valeurs définies, le cube est parfaitement aligné avec le poignet. Vous pouvez également ajuster le champ sens de référence pour ajuster le comportement de l’orientation du cube, par exemple si vous souhaitez autoriser l’objet à pivoter avec la poignet de l’utilisateur en définissant la direction de référence pour orienter avec l’objet suivi.
+3. Définissez les distances maximale et minimale de la vue radiale sur 0 afin que le cube n’ait pas de distance entre celui-ci et le poignet de l’utilisateur. Une fois ces valeurs définies, le cube est parfaitement aligné avec le poignet. Vous pouvez également ajuster le champ sens de référence pour ajuster le comportement de l’orientation du cube, par exemple si vous souhaitez autoriser l’objet à pivoter avec la poignet de l’utilisateur en définissant le sens de référence sur orienté objet.
 
     ![mrlearning-base-CH3-3-step3. png](images/mrlearning-base-ch3-3-step3.png)
 
