@@ -6,16 +6,16 @@ ms.author: nobarr
 ms.date: 08/27/2019
 ms.topic: article
 keywords: main, menu, bouton, accès rapide, disposition
-ms.openlocfilehash: ee958806ac462535b33164bb4faa4bf1aa29e709
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: b4ea7411be22633e82a88d1c91b6b2b1edbea735
+ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73439250"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74105632"
 ---
 # <a name="hand-menu"></a>Menu de la main
 
-![Emplacement de la main ulnar](images/MRTK_UX_HandMenu.png)
+![Emplacement de la main ulnar](images/UX/UX_Hero_HandMenu.jpg)
 
 Les menus manuels permettent aux utilisateurs d’afficher rapidement une interface utilisateur attachée à la main pour les fonctions fréquemment utilisées. 
 
@@ -127,9 +127,33 @@ Nous avons fait des recherches utilisateur avec différents emplacements et disp
 
 ---
 
+## <a name="hand-menu-in-mrtkmixed-reality-toolkit-for-unity"></a>Menu de la main dans MRTK (ensemble d’outils de réalité mixte) pour Unity
+**[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** fournit des scripts et des exemples de scènes pour le menu de la main. Le script HandConstraintPalmUp Solver vous permet de joindre facilement des objets aux mains avec différentes options configurables.
+
+* [Menu MRTK avec HandConstraint et HandConstraintPalmUp](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_Solver.md#hand-menu-with-handconstraint-and-handconstraintpalmup)
+
+
+<br>
+
+---
+
 
 ## <a name="see-also"></a>Articles associés
 
+* [Curseurs](cursors.md)
+* [Rayon de la main](point-and-commit.md)
+* [Button](button.md)
 * [Objet avec interaction possible](interactable-object.md)
-* [Manipulation directe avec les mains](direct-manipulation.md)
-* [Mains et contrôleurs de mouvement](hands-and-tools.md)
+* [Rectangle englobant et barre de l’application](app-bar-and-bounding-box.md)
+* [Manoeuvr](direct-manipulation.md)
+* [Menu de la main](hand-menu.md)
+* [Menu proche](near-menu.md)
+* [Collection d’objets](object-collection.md)
+* [Commande vocale](voice-input.md)
+* [Clavier](keyboard.md)
+* [Bulle](tooltip.md)
+* [Médias](slate.md)
+* [Curseur](slider.md)
+* [Billboarding et tag-along](billboarding-and-tag-along.md)
+* [Affichage de la progression](progress.md)
+* [Aimantation de surface](surface-magnetism.md)

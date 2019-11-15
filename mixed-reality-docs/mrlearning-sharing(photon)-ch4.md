@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: b4713caf2c4d913fe8f5b01c08b3cd0152e32cd9
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 34b8165888c13b0c94be8951d5a4fdc07fab5308
+ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438368"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74106034"
 ---
 # <a name="4-sharing-object-movements-with-multiple-users"></a>4. partage des mouvements d’objets avec plusieurs utilisateurs
 
@@ -62,11 +62,13 @@ Remarque : Si vous cliquez sur l’un des objets Prefab et que vous la libérez
 >Remarque : Assurez-vous que les positions caméra principale et SharedPlayground sont définies sur 0, 0, 0.
 >
 
-9. Créez un nouvel objet de jeu défini en tant qu’objet enfant sur l’objet parent SharedPlayground pour créer un objet. Cliquez avec le bouton droit sur l’objet parent, puis sélectionnez Créer vide. 
+9. Sélectionnez l’objet « SharedPlayground » et cliquez avec le bouton droit sur la souris pour choisir l’option « créer vide » afin de créer un objet de jeu vide en tant qu’enfant de l’objet de jeu « SharedPlayground ».
+
+   ![Module3chapter4step6im](images/module3chapter4step6im.PNG)
 
 10. Après avoir sélectionné le nouvel objet dans votre hiérarchie, remplacez le nom de l’objet par TableAnchor dans le panneau Inspecteur. En outre, cliquez sur Ajouter un composant et recherchez le composant TableAnchor. Sélectionnez-le et ajoutez-le à l’objet. 
 
-![Module3Chapter4step6im](images/module3chapter4step7im.PNG)
+![Module3Chapter4step7im](images/module3chapter4step7im.PNG)
 
 11. À partir du panneau projet dans le dossier Prefabs, faites glisser la table Prefab dans l’objet enfant « TableAnchor » que vous venez de créer.
 
@@ -79,9 +81,9 @@ Remarque : Si vous cliquez sur l’un des objets Prefab et que vous la libérez
 ## <a name="congratulations"></a>Félicitations !
 
 
-Une fois cette opération terminée, tous les utilisateurs qui rejoignent votre projet Unity peuvent déplacer le lanceur lunaire. Tous les mouvements sont synchronisés afin que chaque utilisateur puisse voir les interactions entre eux. Ces concepts constituent les blocs de construction fondamentaux pour les expériences de collaboration complètes et partagées. 
+Une fois cette opération terminée, recherchez le module lunaire. Après cela, tous les utilisateurs qui rejoignent votre projet Unity peuvent déplacer le lanceur lunaire.  Tous les mouvements sont synchronisés afin que chaque utilisateur puisse voir les interactions entre eux. Ces concepts constituent les blocs de construction fondamentaux pour les expériences de collaboration complètes et partagées. 
 
-Bien que tous les utilisateurs soient connectés dans le cadre d’une expérience partagée et puissent voir les mouvements relatifs des objets, l’application n’est toujours pas en mesure d’aligner avec précision les avatars et les objets afin que les utilisateurs locaux puissent voir les objets et les objets dans le même emplacement au sein du réelles. Pour pouvoir ancrer des expériences partagées locales, chaque appareil doit avoir une compréhension commune de l’environnement physique. Dans ce module, nous allons y parvenir en utilisant les [ancres spatiales Azure](<https://azure.microsoft.com//services/spatial-anchors/>) (ASA) qui seront implémentées dans la prochaine leçon.
+Bien que tous les utilisateurs soient connectés dans le cadre d’une expérience partagée et puissent voir les mouvements relatifs des objets, l’application n’est toujours pas en mesure d’aligner correctement les avatars et les objets, de sorte que les utilisateurs locaux n’ont pas pu voir les autres et les objets dans le même emplacement dans le monde physique. Pour pouvoir ancrer des expériences partagées locales, chaque appareil doit avoir une compréhension commune de l’environnement physique. Dans ce module, nous allons y parvenir en utilisant les [ancres spatiales Azure](<https://azure.microsoft.com//services/spatial-anchors/>) (ASA) qui seront implémentées dans la prochaine leçon.
 
 Avant de passer à la leçon suivante, nous devrons suivre le module ASA Learning qui traite des principes fondamentaux de ASA, de la création de comptes et de ressources Azure, ainsi que d’autres blocs de construction fondamentaux nécessaires avant de pouvoir intégrer cela dans notre expérience partagée.
 

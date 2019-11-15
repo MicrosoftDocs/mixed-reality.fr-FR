@@ -6,16 +6,16 @@ ms.author: jennyk
 ms.date: 06/06/2019
 ms.topic: article
 keywords: Réalité mixte, contrôles, interaction, interface utilisateur, expérience utilisateur
-ms.openlocfilehash: 36ca1feeba0e3bf028c64fe7b559d263a8088b96
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 5305af97e9811134212fc6c730727962bb9e8353
+ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438642"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74105802"
 ---
 # <a name="interactable-object"></a>Objet interagi
 
-![Objets Interactible](images/InteractableExamples.png)
+![Objets Interactible](images/UX/UX_Hero_Interactable.jpg)
 
 Un bouton a longtemps été une métaphore utilisée pour déclencher un événement dans le monde abstrait en 2D. Dans le monde de la réalité mixte en trois dimensions, nous n’avons plus à limiter le monde de l’abstraction. Tout peut être un **objet** pouvant être utilisé qui déclenche un événement. Un objet pouvant être en interaction peut être représenté sous la forme d’un objet à partir d’une tasse de café sur la table. Nous utilisons toujours les boutons traditionnels dans certaines situations, par exemple dans l’interface utilisateur du dialogue. La représentation visuelle du bouton dépend du contexte.
 
@@ -261,9 +261,9 @@ Lorsque vous créez des boutons pour une interaction directe, nous vous recomman
 ---
 
 
-## <a name="creating-interactable-object-with-mixed-reality-toolkit-mrtk"></a>Création d’un objet interactif avec Mixed Reality Toolkit (MRTK)
+## <a name="interactable-object-in-mrtkmixed-reality-toolkit-for-unit"></a>Objet interactif dans MRTK (ensemble d’outils de réalité mixte) pour l’unité
 
-Dans la **[boîte à outils de réalité mixte](https://github.com/Microsoft/MixedRealityToolkit-Unity)** , vous trouverez la série de scripts Unity et de prefabs qui vous aideront à créer des objets interactifs. Vous pouvez les utiliser pour faire en sorte que les objets répondent à différents types d’États d’interaction d’entrée.
+Dans **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** , vous pouvez utiliser le script en [**interaction**](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.SDK/Features/UX/Interactable/Scripts) pour faire en sorte que les objets répondent à différents types d’États d’interaction d’entrée. Il prend en charge différents types de thèmes qui vous permettent de définir des États visuels en contrôlant des propriétés d’objet telles que la couleur, la taille, le matériau et le nuanceur.
 
 * [Sur](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Interactable.html)
 * [Button](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Button.html)
@@ -277,9 +277,23 @@ Le nuanceur standard de MixedRealityToolkit fournit diverses options telles que 
 
 ---
 
+
 ## <a name="see-also"></a>Articles associés
 
-* [Cadre englobant](app-bar-and-bounding-box.md)
+* [Curseurs](cursors.md)
+* [Rayon de la main](point-and-commit.md)
+* [Button](button.md)
+* [Objet avec interaction possible](interactable-object.md)
+* [Rectangle englobant et barre de l’application](app-bar-and-bounding-box.md)
+* [Manoeuvr](direct-manipulation.md)
+* [Menu de la main](hand-menu.md)
+* [Menu proche](near-menu.md)
 * [Collection d’objets](object-collection.md)
+* [Commande vocale](voice-input.md)
+* [Clavier](keyboard.md)
+* [Bulle](tooltip.md)
+* [Médias](slate.md)
+* [Curseur](slider.md)
 * [Billboarding et tag-along](billboarding-and-tag-along.md)
-* [Entrée vocale](voice-input.md)
+* [Affichage de la progression](progress.md)
+* [Aimantation de surface](surface-magnetism.md)

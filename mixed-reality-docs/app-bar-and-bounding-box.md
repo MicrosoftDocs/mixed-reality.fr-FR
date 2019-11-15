@@ -6,19 +6,16 @@ ms.author: adlinv
 ms.date: 06/07/2019
 ms.topic: article
 keywords: Windows Mixed Reality, barre d’application, cadre englobant
-ms.openlocfilehash: f09187bc2a3969a8f844711052e15433f5449d6d
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 97afc0df02fd8460547e955d4fcf3e33a4e9f566
+ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437056"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74105761"
 ---
 # <a name="bounding-box-and-app-bar"></a>Cadre englobant et barre de l’application
-![La délimitation est l’interface standard pour la manipulation d’objets en réalité mixte.](images/640px-boundingbox-hero.jpg)<br>
-
+![délimitation est l’interface standard pour la manipulation d’objets en réalité mixte.](images/640px-boundingbox-hero.jpg)<br>
 <br>
-
----
 
 ## <a name="what-is-the-bounding-box"></a>Qu’est-ce que le cadre englobant ?
 
@@ -95,15 +92,33 @@ La barre de l’application est un menu de niveau objet qui contient une série 
 <br>
 
 
+## <a name="bounding-box-in-mrtkmixed-reality-toolkit-for-unity"></a>Cadre englobant dans MRTK (ensemble d’outils de réalité mixte) pour Unity
+**[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** fournit des scripts et des prefabs pour le cadre englobant et la barre de l’application. Vous pouvez ajouter une zone englobante en affectant simplement le script BoundingBox.cs à n’importe quel objet.
 
-**Pour le développement d’applications Unity, consultez [la barre des applications dans le Toolkit de réalité mixte-Unity.](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_AppBar.html)**
+* [MRTK-zone englobante](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_BoundingBox.html)
+
 
 <br>
 
 ---
 
+
 ## <a name="see-also"></a>Articles associés
+
+* [Curseurs](cursors.md)
+* [Rayon de la main](point-and-commit.md)
+* [Button](button.md)
 * [Objet avec interaction possible](interactable-object.md)
-* [Texte dans Unity](text-in-unity.md)
+* [Rectangle englobant et barre de l’application](app-bar-and-bounding-box.md)
+* [Manoeuvr](direct-manipulation.md)
+* [Menu de la main](hand-menu.md)
+* [Menu proche](near-menu.md)
 * [Collection d’objets](object-collection.md)
+* [Commande vocale](voice-input.md)
+* [Clavier](keyboard.md)
+* [Bulle](tooltip.md)
+* [Médias](slate.md)
+* [Curseur](slider.md)
+* [Billboarding et tag-along](billboarding-and-tag-along.md)
 * [Affichage de la progression](progress.md)
+* [Aimantation de surface](surface-magnetism.md)

@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: ac345ecafee3a09e3b5ad58344310234e60354a1
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: fb7074849c5a07a95b370b5bfa75228fac36ba5b
+ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926882"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74105961"
 ---
 # <a name="1-getting-started-with-azure-spatial-anchors"></a>1. prise en main des ancres spatiales Azure
 
@@ -30,9 +30,9 @@ Avant de commencer, téléchargez et importez les ressources suivantes :
 
 [Ancres spatiales Azure v 1.1.0](https://github.com/Azure/azure-spatial-anchors-samples/releases/download/v1.1.0/AzureSpatialAnchors.unitypackage)
 
-[Pack d’actifs du module de base RM v 1.2](https://github.com/microsoft/MixedRealityLearning/releases/download/1.2/BaseModuleAssets-1.2.unitypackage)
+[Unity. HoloLens2. GettingStarted. Tutorials. Asset. 2.1.0.0. pour Unity](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.1.0.0/Unity.HoloLens2.GettingStarted.Tutorials.Asset.2.1.0.0.unitypackage)
 
-[ASA module Asset Pack v 1.3.1](https://github.com/Developer-OI/MixedRealityLearning/releases/download/ASA_1.3/ASAModuleAssets_1.3.1.unitypackage)
+[Unity. HoloLens2. AzureSpatialAnchor. Tutorials. Asset. 2.1.0.0. pour Unity](https://github.com/microsoft/MixedRealityLearning/releases/download/azure-spatial-anchor-v2.1.0.0/Unity.HoloLens2.AzureSpatialAnchor.Tutorials.Asset.2.1.0.0.unitypackage)
 
 [Package du kit de 2.1.0 de la réalité mixte](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/tag/v2.1.0)
 
@@ -66,7 +66,7 @@ Une fenêtre contextuelle s’affiche, fournissant une liste d’outils et de pa
 
 > Remarque : Soyez patient. l’importation prendra quelques minutes. 
 
-6. Importez le [Pack de ressources du module de base Mr](https://github.com/microsoft/MixedRealityLearning/releases/tag/1.2) . À l’étape 5, revenez à Unity, cliquez sur ressources, puis pointez sur Importer le package. Cliquer sur le package personnalisé... Les fichiers de votre ordinateur s’affichent à nouveau. Accédez à l’emplacement où vous avez stocké le Pack de ressources du module de base. et sélectionnez-le. Cliquez sur Ouvrir.
+6. Importez [Unity. HoloLens2. gettingstarted. Tutorials. Asset. 2.1.0.0. pour Unity](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.1.0.0/Unity.HoloLens2.GettingStarted.Tutorials.Asset.2.1.0.0.unitypackage) Next. À l’étape 5, revenez à Unity, cliquez sur ressources, puis pointez sur Importer le package. Cliquer sur le package personnalisé... Les fichiers de votre ordinateur s’affichent à nouveau. Accédez à l’emplacement où vous avez stocké le Pack de ressources du module de base. et sélectionnez-le. Cliquez sur Ouvrir.
 
 ![module2chapter1step5bim](images/module2chapter1step5bim.PNG)
 

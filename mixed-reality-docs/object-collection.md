@@ -6,16 +6,16 @@ ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, contrôles, conception
-ms.openlocfilehash: 8f3629c6d9465383efc901ed784a3719cd6fdfb2
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 98fec76558502658511faf3f18d623bfa5a49dc2
+ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438169"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74106005"
 ---
 # <a name="object-collection"></a>Collection d’objets
 
-![Collection d’objets utilisée dans la table périodique de l’application d’éléments](images/640px-objectcollection-hero-640px.jpg)<br>
+![Collection d’objets utilisée dans la table périodique de l’application d’éléments](images/UX/UX_Hero_ObjectCollection.jpg)<br>
 
 
 La collection d’objets est un contrôle de disposition qui vous permet de disposer un tableau d’objets dans une forme à trois dimensions prédéfinie. Il prend en charge divers styles de surface : **plan, cylindre, sphère** et **radial**. Vous pouvez ajuster le rayon et la taille des objets, ainsi que l’espace entre eux. La collection d’objets prend en charge n’importe quel objet d’Unity, à la fois 2D et 3D. Dans la **[boîte à outils de la réalité mixte](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ObjectCollection.html)** , nous avons créé un script Unity et des exemples qui vous aideront à créer une collection d’objets.
@@ -44,7 +44,36 @@ Vous pouvez également utiliser des images 2D avec la collection d’objets. Les
 ![un exemple d’images 2D avec la collection d’objets](images/940px-layout-2dimages.jpg)<br>
 *Exemples d’utilisation de la collection d’objets avec des images 2D*
 
+<br>
+
+---
+
+## <a name="object-collection-in-mrtkmixed-reality-toolkit-for-unity"></a>Collection d’objets dans MRTK (Mixed Reality Toolkit) pour Unity
+
+* [MRTK-collection d’objets](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ObjectCollection.html)
+
+
+<br>
+
+---
+
+
 ## <a name="see-also"></a>Articles associés
-* [Scripts et prefabs pour la collection d’objets dans le Toolkit de réalité mixte sur GitHub](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_ObjectCollection.md)
+
+* [Curseurs](cursors.md)
+* [Rayon de la main](point-and-commit.md)
+* [Button](button.md)
 * [Objet avec interaction possible](interactable-object.md)
-* [Cadre englobant](app-bar-and-bounding-box.md)
+* [Rectangle englobant et barre de l’application](app-bar-and-bounding-box.md)
+* [Manoeuvr](direct-manipulation.md)
+* [Menu de la main](hand-menu.md)
+* [Menu proche](near-menu.md)
+* [Collection d’objets](object-collection.md)
+* [Commande vocale](voice-input.md)
+* [Clavier](keyboard.md)
+* [Bulle](tooltip.md)
+* [Médias](slate.md)
+* [Curseur](slider.md)
+* [Billboarding et tag-along](billboarding-and-tag-along.md)
+* [Affichage de la progression](progress.md)
+* [Aimantation de surface](surface-magnetism.md)

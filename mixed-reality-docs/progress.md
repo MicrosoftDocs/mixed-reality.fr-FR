@@ -6,18 +6,18 @@ ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, design, Controls, UI, UX
-ms.openlocfilehash: 43b4802e7c821c98c847509ace950f381da12f95
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: aafcd8eebbabfc5b53d09348d513f62def909da6
+ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437538"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74105979"
 ---
-# <a name="displaying-progress"></a>Affichage de la progression
+# <a name="progress-indicator"></a>Indicateur de progression
 
 <br>
 
-<img src="images/HoloLens2_Loader.gif" alt="Progress ring example in HoloLens" width="940px">
+<img src="images/UX/MRTK_ProgressIndicator.gif" alt="Progress ring example in HoloLens" width="940px">
 
 Un contrôle de progression offre un retour à l’utilisateur lorsqu’une longue opération est en cours. Cela peut signifier que l’utilisateur ne peut pas interagir avec l’application lorsque l’indicateur de progression est visible et peut également indiquer le temps d’attente en fonction de l’indicateur utilisé.
 
@@ -88,9 +88,32 @@ Il est important de fournir les informations de l’utilisateur sur ce qui se pa
 
 ---
 
+## <a name="progress-indicator-in-mrtkmixed-reality-toolkit-for-unity"></a>Indicateur de progression dans MRTK (ensemble d’outils de réalité mixte) pour Unity
+
+* [MRTK-indicateur de progression prefabs](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.SDK/Features/UX/Prefabs/ProgressIndicators)
+* [MRTK-service de transition de scène](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Extensions/SceneTransitionService/SceneTransitionServiceOverview.html)
+
+
+<br>
+
+---
+
 ## <a name="see-also"></a>Articles associés
-* [Scripts de progression et prefabs sur le Toolkit de réalité mixte](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/Features/UX/Prefabs/Loader)
-* [Cadre englobant](app-bar-and-bounding-box.md)
+
+* [Curseurs](cursors.md)
+* [Rayon de la main](point-and-commit.md)
+* [Button](button.md)
 * [Objet avec interaction possible](interactable-object.md)
+* [Rectangle englobant et barre de l’application](app-bar-and-bounding-box.md)
+* [Manoeuvr](direct-manipulation.md)
+* [Menu de la main](hand-menu.md)
+* [Menu proche](near-menu.md)
 * [Collection d’objets](object-collection.md)
+* [Commande vocale](voice-input.md)
+* [Clavier](keyboard.md)
+* [Bulle](tooltip.md)
+* [Médias](slate.md)
+* [Curseur](slider.md)
 * [Billboarding et tag-along](billboarding-and-tag-along.md)
+* [Affichage de la progression](progress.md)
+* [Aimantation de surface](surface-magnetism.md)

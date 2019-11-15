@@ -6,14 +6,16 @@ ms.author: hakons
 ms.date: 10/03/2019
 ms.topic: article
 keywords: GGv, voix, Cortana, discours, entrée
-ms.openlocfilehash: 1b0a57ad680b7f779201e99dea24bfe746820c44
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 7264b0b8882928f64860bc5a30b97683306cb19c
+ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437149"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74105772"
 ---
 # <a name="voice-input"></a>Entrée vocale
+
+![Entrée vocale](images/UX/UX_Hero_VoiceCommand.jpg)
 
 La voix est l’un des principaux types d’entrée sur HoloLens. Elle vous permet de directement commander un hologramme sans avoir à utiliser des gestes à la [main](gaze-and-commit.md#composite-gestures). L’entrée vocale peut être un moyen naturel de communiquer votre intention. La voix est particulièrement intéressante pour traverser les interfaces complexes, car elle permet aux utilisateurs de couper les menus imbriqués avec une commande.
 
@@ -274,9 +276,9 @@ Lorsque la voix est utilisée correctement, l’utilisateur **comprend ce qu’i
 ## <a name="communication"></a>Communication
 
 Pour les applications qui souhaitent tirer parti des options de traitement d’entrée audio personnalisées fournies par HoloLens, il est important de comprendre les différentes [catégories de flux audio](https://msdn.microsoft.com/library/windows/desktop/hh404178(v=vs.85).aspx) que votre application peut consommer. Windows 10 prend en charge plusieurs catégories de flux et HoloLens en utilise trois pour permettre un traitement personnalisé afin d’optimiser la qualité audio du microphone adaptée à la parole, à la communication et à d’autres qui peuvent être utilisées pour l’audio de l’environnement ambiant. scénarios de capture (par exemple, « Camcorder »).
-* La catégorie de flux AudioCategory_Communications est personnalisée pour les scénarios de qualité des appels et de narration et fournit au client un flux audio mono 16kHz 24bit de la voix de l’utilisateur.
-* La catégorie de flux AudioCategory_Speech est personnalisée pour le moteur de reconnaissance de la parole HoloLens (Windows) et lui fournit un flux mono 16kHz 24bit de la voix de l’utilisateur. Cette catégorie peut être utilisée par les moteurs de reconnaissance vocale tiers si nécessaire.
-* La catégorie de flux AudioCategory_Other est personnalisée pour l’enregistrement audio de l’environnement ambiant et fournit au client un flux audio stéréo de 48 bits.
+* La catégorie de flux de AudioCategory_Communications est personnalisée pour les scénarios de qualité des appels et de narration et fournit au client un flux audio mono 16kHz 24bit de la voix de l’utilisateur.
+* La catégorie de flux de AudioCategory_Speech est personnalisée pour le moteur de reconnaissance de la parole HoloLens (Windows) et lui fournit un flux mono 16kHz 24bit de la voix de l’utilisateur. Cette catégorie peut être utilisée par les moteurs de reconnaissance vocale tiers si nécessaire.
+* La catégorie de flux de AudioCategory_Other est personnalisée pour l’enregistrement audio de l’environnement ambiant et fournit au client un flux audio stéréo de 48 bits.
 
 Tout ce traitement audio est l’accélération matérielle, ce qui signifie que les fonctionnalités se déchargent beaucoup moins d’énergie que si le même traitement a été effectué sur l’UC HoloLens. Évitez d’exécuter un autre traitement d’entrée audio sur le processeur pour maximiser la durée de vie de la batterie du système et tirer parti du traitement des entrées audio déchargées et intégrées.
 
@@ -290,8 +292,20 @@ Si vous rencontrez des problèmes à l’aide de « SELECT » et de « Hey Co
 
 Pour la version 2017 de Windows Mixed Reality Edition, la logique de gestion des points de terminaison audio fonctionnera correctement (éternellement) après la déconnexion et la réinitialisation du PC Desktop après la première connexion HMD. Avant le premier événement de déconnexion/dans le cas de l’utilisation de WMR OOBE, l’utilisateur peut rencontrer différents problèmes de fonctionnalité audio, qu’il s’agisse d’aucun audio ou d’aucune commutation audio, en fonction de la configuration du système avant de connecter le HMD pour la première fois.
 
+<br>
+
+---
+
+## <a name="voice-input-in-mrtkmixed-reality-toolkit-for-unity"></a>Entrée vocale dans MRTK (ensemble d’outils de réalité mixte) pour Unity
+Avec **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** , vous pouvez facilement affecter une commande vocale à n’importe quel objet. Utilisez le **profil d’entrée vocale** de MRTK pour définir vos mots clés. En affectant le script **SpeechInputHandler** , vous pouvez faire en sorte qu’un objet réponde aux mots clés définis dans le profil d’entrée vocal. SpeechInputHandler fournit également une étiquette de confirmation vocale pour améliorer la confiance de l’utilisateur.
+
+* [Commande MRTK-Voice](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Speech.html)
+
+
+---
+
 ## <a name="see-also"></a>Articles associés
-* [Point de regard et validation](gaze-and-commit.md)
+* [Pointer et valider](gaze-and-commit.md)
 * [Interactions instinctuelles](interaction-fundamentals.md)
 * [Entrée MR 212 : voix](holograms-212.md)
 * [Entrée vocale dans DirectX](voice-input-in-directx.md)
