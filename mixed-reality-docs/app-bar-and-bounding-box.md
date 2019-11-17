@@ -6,15 +6,15 @@ ms.author: adlinv
 ms.date: 06/07/2019
 ms.topic: article
 keywords: Windows Mixed Reality, barre d’application, cadre englobant
-ms.openlocfilehash: 97afc0df02fd8460547e955d4fcf3e33a4e9f566
-ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
+ms.openlocfilehash: e4f519cba459efac25f6c1370b07fcda4def30a1
+ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74105761"
+ms.lasthandoff: 11/17/2019
+ms.locfileid: "74143173"
 ---
 # <a name="bounding-box-and-app-bar"></a>Cadre englobant et barre de l’application
-![délimitation est l’interface standard pour la manipulation d’objets en réalité mixte.](images/640px-boundingbox-hero.jpg)<br>
+![délimitation est l’interface standard pour la manipulation d’objets en réalité mixte.](images/UX/UX_Hero_BoundingBox.jpg)<br>
 <br>
 
 ## <a name="what-is-the-bounding-box"></a>Qu’est-ce que le cadre englobant ?
@@ -119,6 +119,7 @@ La barre de l’application est un menu de niveau objet qui contient une série 
 * [Bulle](tooltip.md)
 * [Médias](slate.md)
 * [Curseur](slider.md)
+* [Nuance](shader.md)
 * [Billboarding et tag-along](billboarding-and-tag-along.md)
 * [Affichage de la progression](progress.md)
 * [Aimantation de surface](surface-magnetism.md)

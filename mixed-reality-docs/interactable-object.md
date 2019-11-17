@@ -6,12 +6,12 @@ ms.author: jennyk
 ms.date: 06/06/2019
 ms.topic: article
 keywords: Réalité mixte, contrôles, interaction, interface utilisateur, expérience utilisateur
-ms.openlocfilehash: 5305af97e9811134212fc6c730727962bb9e8353
-ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
+ms.openlocfilehash: 73c8a3ce9e01f580ecbae23f2178871642c4540e
+ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74105802"
+ms.lasthandoff: 11/17/2019
+ms.locfileid: "74143260"
 ---
 # <a name="interactable-object"></a>Objet interagi
 
@@ -294,6 +294,7 @@ Le nuanceur standard de MixedRealityToolkit fournit diverses options telles que 
 * [Bulle](tooltip.md)
 * [Médias](slate.md)
 * [Curseur](slider.md)
+* [Nuance](shader.md)
 * [Billboarding et tag-along](billboarding-and-tag-along.md)
 * [Affichage de la progression](progress.md)
 * [Aimantation de surface](surface-magnetism.md)
