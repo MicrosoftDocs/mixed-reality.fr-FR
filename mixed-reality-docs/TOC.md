@@ -84,6 +84,7 @@
 #### [Info-bulle](tooltip.md)
 #### [Tablette](slate.md)
 #### [Curseur](slider.md)
+#### [Nuanceur](shader.md)
 #### [Billboarding et tag-along](billboarding-and-tag-along.md)
 #### [Affichage de la progression](progress.md)
 #### [Aimantation de surface](surface-magnetism.md)
