@@ -6,12 +6,12 @@ ms.author: cmeekhof
 ms.date: 04/30/2019
 ms.topic: article
 keywords: mains, contrôleurs de mouvement, DirectX, entrée, hologrammes
-ms.openlocfilehash: 7b8222e5e539eb95b07cc24d6b49106bd174b490
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 54eaacc3f0dccf728b5438c020a5efd7e0788251
+ms.sourcegitcommit: 4081dc2356fec0ea3625f1d989689cfbbb3fcf5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73435196"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74203331"
 ---
 # <a name="hands-and-motion-controllers-in-directx"></a>Contrôleurs mains et motion dans DirectX
 
@@ -99,16 +99,16 @@ Cela entraîne les meilleures pratiques suivantes lors du rendu et du ciblage av
 ## <a name="cross-device-input-properties"></a>Propriétés d’entrée entre appareils
 L’API SpatialInteractionSource prend en charge les contrôleurs et les systèmes de suivi de main avec un large éventail de fonctionnalités. Un certain nombre de ces fonctionnalités sont communes entre les types d’appareils. Par exemple, le suivi des mains et les contrôleurs de mouvement fournissent tous deux une action « sélectionner » et une position 3D. Dans la mesure du possible, l’API mappe ces fonctionnalités communes aux mêmes propriétés sur le SpatialInteractionSource.  Cela permet aux applications de prendre en charge plus facilement un large éventail de types d’entrée. Le tableau suivant décrit les propriétés prises en charge et leur comparaison entre les types d’entrée.
 
-| Propriété | Description | Gestes HoloLens | Contrôleurs de mouvement | Mains articulées|
+| Propriété | Description | Gestes HoloLens (1ère génération) | Contrôleurs de mouvement | Mains articulées|
 |--- |--- |--- |--- |--- |
-| [SpatialInteractionSource ::**main**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsource.handedness) | La main droite ou gauche/le contrôleur. | Pas de prise en charge | Prise en charge | Prise en charge |
-| [SpatialInteractionSourceState ::**IsSelectPressed**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate.isselectpressed) | État actuel du bouton principal. | Robinet d’air | Stead | Robinet à air lâche (pincement vertical) |
-| [SpatialInteractionSourceState ::**IsGrasped**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate.isgrasped) | État actuel du bouton de manipulation. | Pas de prise en charge | Bouton de manipulation | Pincer ou fermer la main |
-| [SpatialInteractionSourceState ::**IsMenuPressed**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate.ismenupressed) | État actuel du bouton de menu.    | Pas de prise en charge | Bouton de menu | Pas de prise en charge |
+| [SpatialInteractionSource ::**main**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsource.handedness) | La main droite ou gauche/le contrôleur. | Non prise en charge | Prise en charge | Prise en charge |
+| [SpatialInteractionSourceState ::**IsSelectPressed**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate.isselectpressed) | État actuel du bouton principal. | Robinet d’air | Déclencheur | Robinet à air lâche (pincement vertical) |
+| [SpatialInteractionSourceState ::**IsGrasped**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate.isgrasped) | État actuel du bouton de manipulation. | Non prise en charge | Bouton de manipulation | Pincer ou fermer la main |
+| [SpatialInteractionSourceState ::**IsMenuPressed**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate.ismenupressed) | État actuel du bouton de menu.    | Non prise en charge | Bouton de menu | Non prise en charge |
 | [SpatialInteractionSourceLocation ::**position**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsourcelocation.position) | Emplacement XYZ de la main ou de la position de la poignée sur le contrôleur. | Emplacement Palm | Poignée de pose position | Emplacement Palm |
-| [SpatialInteractionSourceLocation ::**orientation**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsourcelocation.orientation) | Quaternion représentant l’orientation de la main ou de la poignée sur le contrôleur. | Pas de prise en charge | Poignée d’orientation de pose | Orientation Palm |
-| [SpatialPointerInteractionSourcePose ::**position**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialpointerinteractionsourcepose.position#Windows_UI_Input_Spatial_SpatialPointerInteractionSourcePose_Position) | Origine du rayon de pointage. | Pas de prise en charge | Prise en charge | Prise en charge |
-| [SpatialPointerInteractionSourcePose ::**ForwardDirection**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialpointerinteractionsourcepose.forwarddirection#Windows_UI_Input_Spatial_SpatialPointerInteractionSourcePose_ForwardDirection) | Direction du rayon de pointage. | Pas de prise en charge | Prise en charge | Prise en charge |
+| [SpatialInteractionSourceLocation ::**orientation**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsourcelocation.orientation) | Quaternion représentant l’orientation de la main ou de la poignée sur le contrôleur. | Non prise en charge | Poignée d’orientation de pose | Orientation Palm |
+| [SpatialPointerInteractionSourcePose ::**position**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialpointerinteractionsourcepose.position#Windows_UI_Input_Spatial_SpatialPointerInteractionSourcePose_Position) | Origine du rayon de pointage. | Non prise en charge | Prise en charge | Prise en charge |
+| [SpatialPointerInteractionSourcePose ::**ForwardDirection**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialpointerinteractionsourcepose.forwarddirection#Windows_UI_Input_Spatial_SpatialPointerInteractionSourcePose_ForwardDirection) | Direction du rayon de pointage. | Non prise en charge | Prise en charge | Prise en charge |
 
 Certaines des propriétés ci-dessus ne sont pas disponibles sur tous les appareils, et l’API fournit un moyen de les tester. Par exemple, vous pouvez inspecter la propriété [SpatialInteractionSource :: IsGraspSupported](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsource.isgraspsupported) pour déterminer si la source fournit une action saisissante.
 
@@ -122,7 +122,7 @@ Vous pouvez accéder à la **poignée** à l’aide de [SpatialInteractionSource
 * **Axe avant de l’orientation de la poignée**: quand vous fermez partiellement votre main (comme si vous détenir le contrôleur), le rayon qui pointe vers l’avant dans le tube formé par vos doigts non thumbs.
 * **Axe vers le haut de l’orientation**: l’axe vers le haut, impliqué dans les définitions Right et Forward.
 
-Vous pouvez accéder à la **pose du pointeur** par le biais de [SpatialInteractionSourceState ::P ropriétés :: TryGetLocation (...) :: SourcePointerPose](https://docs.microsoft.com/uwp/api/windows.ui.input.spatial.spatialinteractionsourcelocation#Windows_UI_Input_Spatial_SpatialInteractionSourceLocation_SourcePointerPose) ou [SpatialInteractionSourceState :: TryGetPointerPose (...) :: TryGetInteractionSourcePose](https://docs.microsoft.com/uwp/api/windows.ui.input.spatial.spatialpointerpose#Windows_UI_Input_Spatial_SpatialPointerPose_TryGetInteractionSourcePose_Windows_UI_Input_Spatial_SpatialInteractionSource_) .
+Vous pouvez accéder à la **pose du pointeur** par le biais de [SpatialInteractionSourceState ::P ropriétés :: TryGetLocation (...) :: SourcePointerPose](https://docs.microsoft.com/uwp/api/windows.ui.input.spatial.spatialinteractionsourcelocation#Windows_UI_Input_Spatial_SpatialInteractionSourceLocation_SourcePointerPose) ou [SpatialInteractionSourceState :: TryGetPointerPose (...) :: TryGetInteractionSourcePose](https://docs.microsoft.com/uwp/api/windows.ui.input.spatial.spatialpointerpose#Windows_UI_Input_Spatial_SpatialPointerPose_TryGetInteractionSourcePose_Windows_UI_Input_Spatial_SpatialInteractionSource_).
 
 ## <a name="controller-specific-input-properties"></a>Propriétés d’entrée spécifiques au contrôleur
 Pour les contrôleurs, SpatialInteractionSource a une propriété de contrôleur avec des fonctionnalités supplémentaires.
@@ -195,7 +195,7 @@ std::thread createObserverThread([this, currentState]()
 });
 createObserverThread.detach();
 ```
-Le démarrage d’un thread détaché n’est qu’une option pour gérer les appels asynchrones.  Vous pouvez également utiliser la nouvelle fonctionnalité [co_await](https://docs.microsoft.com//windows/uwp/cpp-and-winrt-apis/concurrency) prise en charge par C++/WinRT.
+Le démarrage d’un thread détaché n’est qu’une option pour gérer les appels asynchrones.  Vous pouvez également utiliser les nouvelles fonctionnalités de [co_await](https://docs.microsoft.com//windows/uwp/cpp-and-winrt-apis/concurrency) prises en charge C++par/WinRT.
 
 Une fois que vous avez un objet HandMeshObserver, vous devez le conserver pendant la durée pendant laquelle son SpatialInteractionSource correspondant est actif.  Ensuite, chaque frame, vous pouvez lui demander la dernière mémoire tampon de vertex qui représente la main en appelant [GetVertexStateForPose](https://docs.microsoft.com//uwp/api/windows.perception.people.handmeshobserver.getvertexstateforpose) et en passant une instance [HandPose](https://docs.microsoft.com//uwp/api/windows.perception.people.handpose) qui représente le pose pour lequel vous souhaitez obtenir des sommets.  Chaque vertex de la mémoire tampon a une position et un normal.  Voici un exemple d’obtention de l’ensemble actuel de vertex pour une maille.  Comme précédemment, la variable *CurrentState* représente une instance de [SpatialInteractionSourceState](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate).
 
@@ -228,7 +228,7 @@ Pour utiliser SpatialGestureRecognizer, gérez l’événement [InteractionDetec
 
 Sur HoloLens (First Gen), les interactions et les gestes doivent généralement dériver leur ciblage du point de vue de l’utilisateur, au lieu d’essayer d’effectuer un rendu ou une interaction directement à l’emplacement de la main. Une fois qu’une interaction a démarré, les mouvements relatifs de la main peuvent être utilisés pour contrôler le mouvement, comme avec la manipulation ou le mouvement de navigation.
 
-## <a name="see-also"></a>Articles associés
+## <a name="see-also"></a>Voir également
 * [Suivre de la tête et du regard dans DirectX](gaze-in-directx.md)
 * [Modèle d’entrée de manipulation directe](direct-manipulation.md)
 * [Modèle d’entrée de point et de validation](point-and-commit.md)
