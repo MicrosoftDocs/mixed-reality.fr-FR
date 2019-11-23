@@ -27,7 +27,7 @@ Comme promis, nous allons vous faire découvrir d’incroyables outils de réali
 
 <table>
 <tr>
-<th style="width: 400px; text-align:left;">Content</th><th style="width: 125px; text-align:left;">Publication</th><th style="width: 125px; text-align:left;">DISPONIBLE DÈS MAINTENANT !</th>
+<th style="width: 400px; text-align:left;">Contenu</th><th style="width: 125px; text-align:left;">Publication</th><th style="width: 125px; text-align:left;">DISPONIBLE DÈS MAINTENANT !</th>
 </tr> 
 <tr>
 <td><b>Guides de portage</b> <br>1. HoloToolKit (HTK)/Mixed Reality Toolkit (MRTK) vers MRTK version 2
@@ -47,7 +47,7 @@ Comme promis, nous allons vous faire découvrir d’incroyables outils de réali
 <td>Conseils sur la conception et le développement pour HoloLens 2</td><td>2019 octobre</td><td> <ul><li><a href=https://docs.microsoft.com/windows/mixed-reality/>vue d’ensemble de la réalité mixte</a><li><a href=https://docs.microsoft.com/windows/mixed-reality/design>Conception et prototypage</a><li><a href=https://docs.microsoft.com/windows/mixed-reality/development>Architecture et outils de développement</a></td>
 </tr>
 <tr>
-  <td>Nouvelles informations sur les</td><td>2019 octobre</td><td> <ul><li><a href=https://docs.microsoft.com/windows/mixed-reality/unreal-development-overview>Présentation du développement inréel</a></td>
+  <td>Nouvelles informations sur les</td><td>2019 octobre</td><td> <ul><li><a href=https://docs.microsoft.com/windows/mixed-reality/unreal-development-overview>Vue d’ensemble du développement Unreal</a></td>
 </tr>
 <tr>
   <td>Conception Microsoft Fluent</td><td>2019 octobre</td><td> <ul><li><a href=https://www.microsoft.com/design/fluent/>page de conception de la réalité mixte</a></td>

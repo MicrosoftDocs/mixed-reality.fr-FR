@@ -49,7 +49,7 @@ Manipuler des objets (déplacer/faire pivoter/mettre à l’échelle) avec une i
 
 HoloSketch prend en charge la souris, le clavier, les gestes et les commandes vocales Bluetooth.
 
-## <a name="background"></a>Arrière-plan
+## <a name="background"></a>Présentation
 
 ### <a name="importance-of-experiencing-your-design-in-the-device"></a>Importance de la conception de l’appareil
 
@@ -126,7 +126,7 @@ Avant de télécharger vers votre dossier OneDrive, suivez les étapes ci-dessou
    ![dans le menu ressources, sélectionnez « Générer AssetBundles » pour générer le fichier.](images/holosketch-15a-assetbundles.png)
 
 
-13. **Téléchargez le fichier généré dans le dossier/Files/Documents/HoloSketch sur OneDrive.** Téléchargez le fichier asset_unique_name uniquement. Vous n’avez pas besoin de charger des fichiers manifeste ou un fichier AssetBundles. <br>
+13. **Téléchargez le fichier généré dans le dossier/Files/Documents/HoloSketch sur OneDrive.** Charge uniquement le fichier asset_unique_name. Vous n’avez pas besoin de charger des fichiers manifeste ou un fichier AssetBundles. <br>
 ![ajouter des fichiers à des fichiers/documents/HoloSketch/dossier](images/holosketch-onedriveupload-1000px.png)
 ![vous verrez ajouter un objet 3D dans le menu OneDrive de HoloSketch](images/holosketch-14-onedriveexample-1000px.jpg)
 

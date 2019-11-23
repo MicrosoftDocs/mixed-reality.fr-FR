@@ -23,7 +23,7 @@ Unity comprend la prise en charge complète du mappage spatial, qui est exposé 
 
 Pour utiliser le mappage spatial dans votre application, vous devez définir la capacité spatialPerception dans votre AppxManifest.
 
-## <a name="device-support"></a>Périphériques pris en charge
+## <a name="device-support"></a>Prise en charge des appareils
 
 <table>
     <colgroup>
@@ -470,14 +470,14 @@ La dll de compréhension stocke en interne le PlaySpace sous la forme d’une gr
 ![maille générée produite à partir du volume voxel](images/su-custommesh.jpg)<br>
 *Maille générée produite à partir du volume voxel*
 
-## <a name="troubleshooting"></a>Dépannage
+## <a name="troubleshooting"></a>Résolution des problèmes
 * Vérifiez que vous avez défini la fonctionnalité [SpatialPerception](#setting-the-spatialperception-capability)
 * Lorsque le suivi est perdu, l’événement OnSurfaceChanged suivant supprime tous les maillages.
 
 ## <a name="spatial-mapping-in-mixed-reality-toolkit"></a>Mappage spatial dans le Toolkit de réalité mixte
 Pour plus d’informations sur l’utilisation du mappage spatial avec Mixed Reality Toolkit v2, consultez la <a href="https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/SpatialAwareness/SpatialAwarenessGettingStarted.html" target="_blank">section relative à la sensibilisation spatiale</a> des documents MRTK.
 
-## <a name="see-also"></a>Articles associés
+## <a name="see-also"></a>Voir également
 * [MR spatial 230 : mappage spatial](holograms-230.md)
 * [Systèmes de coordonnées](coordinate-systems.md)
 * [Systèmes de coordonnées dans Unity](coordinate-systems-in-unity.md)

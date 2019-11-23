@@ -30,7 +30,7 @@ ms.locfileid: "73437853"
 
 ---
 
-## <a name="device-support"></a>Périphériques pris en charge
+## <a name="device-support"></a>Prise en charge des appareils
 
 <table>
 <colgroup>
@@ -64,12 +64,12 @@ Les contrôleurs de mouvement Windows Mixed Reality permettent un suivi précis 
 
 **Éléments**
 * Suivi optique
-* Stead
+* Déclencheur
 * Bouton de manipulation
 * Stick
 * Pavé tactile
 
-## <a name="setup"></a>Installation
+## <a name="setup"></a>Configurer
 
 ### <a name="before-you-begin"></a>Avant de commencer
 
@@ -142,7 +142,7 @@ Si les contrôleurs sont désactivés après l’appariement, leur état s’aff
 
 * Vérifiez que vos contrôleurs fonctionnent correctement :
     1. Lancez le **portail de réalité mixte** et entrez votre page d’hébergement de la réalité mixte.
-    2. Déplacez vos contrôleurs et vérifiez le suivi, les boutons de test et vérifiez que la [téléportage](navigating-the-windows-mixed-reality-home.md#getting-around-your-home) fonctionne. Si ce n’est pas le cas, consultez [résolution des problèmes du contrôleur de mouvement](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality#motion-controllers).
+    2. Bougez vos commandes et vérifiez le suivi, testez les boutons et vérifiez que la [téléportation](navigating-the-windows-mixed-reality-home.md#getting-around-your-home) fonctionne. Si ce n’est pas le cas, consultez [résolution des problèmes du contrôleur de mouvement](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality#motion-controllers).
 
 ## <a name="gazing-and-pointing"></a>Gazing et pointage
 
@@ -218,7 +218,7 @@ Les applications qui souhaitent traiter différemment les positions en fonction 
 Ces États de suivi du contrôleur de mouvement sont définis comme suit :
 * **Précision élevée :** Alors que le contrôleur de mouvement se trouve dans le champ de vision du casque, il fournit généralement des positions à grande précision, en fonction du suivi visuel. Notez qu’un contrôleur mobile qui laisse momentanément le champ de vue ou est momentanément masqué à partir des capteurs du casque (par exemple, par l’autre côté de l’utilisateur) continue à retourner des poses de grande précision pendant une brève période, en fonction du suivi inertiel du contrôleur. automatiquement.
 * **Haute précision (risque de perte) :** Lorsque l’utilisateur déplace le contrôleur de mouvement au-delà du bord du champ de vue du casque, le casque ne pourra bientôt pas suivre la position du contrôleur. L’application sait quand le contrôleur a atteint cette limite d’aide en regardant le **SourceLossRisk** REACH 1,0. À ce stade, l’application peut choisir de suspendre les gestes de contrôleur qui nécessitent un flux constant de poses très haute qualité.
-* **Précision approximative :** Lorsque le contrôleur a perdu le suivi visuel suffisamment longtemps, les positions du contrôleur sont découpées à des positions de précision approximatives. À ce stade, le système va verrouiller le contrôleur à l’utilisateur, en effectuant le suivi de la position de l’utilisateur lors de son déplacement, tout en exposant l’orientation réelle du contrôleur à l’aide de ses capteurs d’orientation internes. De nombreuses applications qui utilisent des contrôleurs pour pointer et activer des éléments d’interface utilisateur peuvent fonctionner normalement, tout en ayant une précision approximative, sans que l’utilisateur ne remarque. Les applications avec des exigences d’entrée plus lourdes peuvent choisir de déterminer ce déplacement de la **haute** précision à une précision **approximative** en inspectant la propriété **PositionAccuracy** , par exemple pour fournir à l’utilisateur un hitbox plus généreux sur les cibles hors écran pendant ce temps.
+* **Précision approximative :** Lorsque le contrôleur a perdu le suivi visuel suffisamment longtemps, les positions du contrôleur sont découpées à des positions de précision approximatives. À ce stade, le système va verrouiller le contrôleur à l’utilisateur, en effectuant le suivi de la position de l’utilisateur lors de son déplacement, tout en exposant l’orientation réelle du contrôleur à l’aide de ses capteurs d’orientation internes. De nombreuses applications qui utilisent des contrôleurs pour pointer et activer des éléments d’interface utilisateur peuvent fonctionner normalement, tout en ayant une précision approximative, sans que l’utilisateur ne remarque. Les applications avec des exigences d’entrée plus lourdes peuvent choisir de déterminer ce déplacement de la **haute** précision à une précision **approximative** en inspectant la propriété **PositionAccuracy** , par exemple pour accorder à l’utilisateur un hitbox plus généreux sur les cibles hors écran pendant cette période.
 * **Aucune position :** Alors que le contrôleur peut fonctionner à des fins de précision approximative pendant une longue période, le système sait parfois que même une position verrouillée par le corps n’est pas significative pour le moment. Par exemple, un contrôleur qui vient d’être activé n’a peut-être jamais été observé visuellement, ou un utilisateur peut mettre un contrôleur qui est ensuite récupéré par une autre personne. À ce moment-là, le système ne fournit aucune position à l’application, et **TryGetPosition** retourne la valeur false.
 
 ## <a name="interactions-low-level-spatial-input"></a>Interactions : entrée spatiale de bas niveau
@@ -251,7 +251,7 @@ Pour plus d’informations sur la façon de charger dynamiquement des modèles d
  
 [Image de ligne des contrôleurs de mouvement pleine résolution dans' ' 'noir' ' '](images/motioncontrollers-black.png)
 
-## <a name="faq"></a>Forum Aux Questions
+## <a name="faq"></a>Questions fréquentes (FAQ)
 
 ### <a name="can-i-pair-motion-controllers-to-multiple-pcs"></a>Puis-je coupler des contrôleurs de mouvement à plusieurs PC ?
 
@@ -269,7 +269,7 @@ Dans la [page d’hébergement de la réalité mixte Windows](navigating-the-win
 
 Pas pour les applications Windows universelles.
 
-## <a name="troubleshooting"></a>Dépannage
+## <a name="troubleshooting"></a>Résolution des problèmes
 
 Consultez [résolution des problèmes du contrôleur de mouvement](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality#motion-controllers) dans le Guide du passionné.
 
@@ -277,7 +277,7 @@ Consultez [résolution des problèmes du contrôleur de mouvement](https://docs.
 
 [Faites-nous part](give-us-feedback.md) de vos commentaires dans le hub de commentaires à l’aide de la catégorie « > d’entrée de réalité mixte ».
 
-## <a name="see-also"></a>Articles associés
+## <a name="see-also"></a>Voir également
 * [Mouvements et contrôleurs de mouvement dans Unity](gestures-and-motion-controllers-in-unity.md)
 * [Mains et contrôleurs de mouvement dans DirectX](hands-and-motion-controllers-in-directx.md)
 * [Mouvements](gaze-and-commit.md#composite-gestures)
