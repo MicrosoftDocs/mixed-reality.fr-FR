@@ -6,12 +6,12 @@ ms.author: szymons
 ms.date: 07/08/2019
 ms.topic: article
 keywords: Compréhension des scènes, mappage spatial, Windows Mixed Reality, Unity
-ms.openlocfilehash: fdfe40571ac8893dcb3a3ba8fe3bb12707c800e4
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: bacec5e6a9bfda49d4ad6d3dd849156c9cc09add
+ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926922"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74539704"
 ---
 # <a name="scene-understanding"></a>Compréhension des scènes
 
@@ -19,7 +19,29 @@ La présentation des scènes fournit aux développeurs de réalité mixte une re
 
 ![Maillage de mappage spatial, intitulé surfaces planées, maillage étanche](images/SUScenarios.png)
 
-Ce document est destiné à fournir une vue d’ensemble du scénario et à clarifier la relation avec la compréhension des scènes et le partage spatial. Pour plus d’informations sur le fonctionnement de scene et sur son développement, consultez la documentation de [Présentation de Scene Understanding SDK](scene-understanding-SDK.md) .
+Ce document est destiné à fournir une vue d’ensemble du scénario et à clarifier la relation avec la compréhension des scènes et le partage spatial.
+
+## <a name="developing-with-scene-understanding"></a>Développement avec la compréhension de la scène
+
+Cet article sert uniquement à présenter la scène présentation du runtime et des concepts. Si vous recherchez de la documentation sur la manière de développer avec la compréhension de scène, vous pouvez être intéressé par les éléments suivants :
+
+[Présentation du SDK présentation de Scene](scene-understanding-SDK.md)
+
+Vous pouvez télécharger l’exemple d’application Scene Understanding à partir de l’exemple de site GitHub :
+
+[Exemple de compréhension de scène](https://github.com/sceneunderstanding-microsoft/unitysample)
+
+Si vous n’avez pas de périphérique et que vous souhaitez accéder à des exemples de scènes pour essayer de comprendre les scènes, il existe des scènes dans l’exemple de dossier de ressources :
+
+[Exemples de scènes de vision](https://github.com/sceneunderstanding-microsoft/unitysample/tree/master/Assets/Resources/SerializedScenesForPCPath)
+
+### <a name="sdk"></a>Kit de développement logiciel
+
+Si vous recherchez des informations spécifiques sur le développement pour les Understandiing de scène, pour plus d’informations sur le fonctionnement de scenes et sur son développement, consultez la documentation de [Présentation de Scene Understanding SDK](scene-understanding-SDK.md) .
+
+
+### <a name="sample"></a>Exemple
+
 
 ## <a name="device-support"></a>Périphériques pris en charge
 

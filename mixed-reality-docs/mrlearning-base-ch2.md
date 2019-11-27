@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: 0595010a0b443d88e3f208b785903e3f6cc99295
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: f0a54bb591479dbe8ffa719cb5e6a9d846f67f9e
+ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926529"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74539742"
 ---
 # <a name="3-creating-user-interface-and-configure-mixed-reality-toolkit"></a>3. création d’une interface utilisateur et configuration d’une réalité mixte Toolkit
 
@@ -29,7 +29,7 @@ Dans la leçon précédente, vous avez appris certaines des possibilités offert
 
 Dans cette section, vous allez apprendre à personnaliser et à configurer les profils MRTK par défaut en ajustant l’option d’affichage du maillage de la sensibilisation spatiale. Vous pouvez suivre ces mêmes principes pour ajuster des paramètres ou des valeurs dans les profils MRTK.
 
-1. Sélectionnez MRTK (Mixed-Reality Toolkit) dans la hiérarchie BaseScene. Dans le panneau Inspecteur, recherchez le script Mixed Reality Toolkit et sélectionnez le profil actif comme indiqué dans la figure ci-dessous. Double-cliquez sur celui-ci pour l’ouvrir.
+1. Sélectionnez MRTK (Mixed-Reality Toolkit) dans la hiérarchie BaseScene. Dans le panneau Inspecteur, recherchez le script Mixed Reality Toolkit et sélectionnez le profil actif comme indiqué dans la figure ci-dessous. Double-cliquez pour l’ouvrir.
 
     ![MR213_BuildSettings](images/mrlearning-base-ch2-1-step1.png)
 
@@ -46,7 +46,7 @@ Dans cette section, vous allez apprendre à personnaliser et à configurer les p
 
     ![MR213_BuildSettings](images/mrlearning-base-ch2-1-step2b.png)
 
-    Cliquez sur **cloner** pour créer une copie du profil MRTK. Avec votre propre copie du profil MRTK, vous pouvez maintenant personnaliser des paramètres de ce profil. Vous devrez également répéter l’étape de copie et de personnalisation pour tous les profils supplémentaires imbriqués sous ce profil, comme décrit dans les étapes suivantes.
+    Cliquez sur **cloner** pour créer une copie du profil MRTK. Avec votre propre copie du profil MRTK, vous avez désormais la possibilité de personnaliser les paramètres de ce profil. Vous devrez également répéter l’étape de copie et de personnalisation pour tous les profils supplémentaires imbriqués sous ce profil, comme décrit dans les étapes suivantes.
 
 3. Désactiver la visibilité du maillage de reconnaissance spatiale. Pour ce faire, recherchez les paramètres système de sensibilisation spatiale comme indiqué dans l’image ci-dessous. Assurez-vous que l’option **activer le système de sensibilisation spatiale** est cochée. Cliquez sur le bouton **cloner** à droite du profil système de sensibilisation spatiale pour remplacer le profil par défaut par une copie personnalisable. Dans la fenêtre contextuelle qui s’affiche, appuyez sur le bouton **cloner** , comme indiqué dans la deuxième image ci-dessous.
 
@@ -99,9 +99,9 @@ Dans cette section, vous allez apprendre à utiliser le suivi de la main pour ap
     ![MR213_BuildSettings](images/mrlearning-base-ch2-2-step6b.png)
 
     >[!NOTE]
-    >En règle générale, 1 unité dans Unity est à peu près équivalente à 1 mètre dans le monde physique. Il y a des exceptions à cela, par exemple quand les objets sont des enfants d’objets mis à l’échelle.
+    >En règle générale, 1 unité dans Unity est à peu près équivalente à 1 mètre dans le monde physique. Il existe des exceptions à cela ; par exemple, lorsque des objets sont des enfants d’objets mis à l’échelle.
 
-5. Avec l’objet de jeu PressableButtonHoloLens2 sélectionné, dans l’inspecteur, faites défiler vers le bas pour rechercher la section événements du composant (script) pouvant être interagi.
+5. Avec l’objet de jeu PressableButtonHoloLens2 sélectionné, faites défiler vers le bas de l’inspecteur pour localiser la section événements du composant (script) pouvant être interagi.
 
     ![MR213_BuildSettings](images/mrlearning-base-ch2-2-step4.png)
 
@@ -123,11 +123,11 @@ Dans cette section, vous allez apprendre à utiliser le suivi de la main pour ap
 
     L’événement est maintenant défini : ainsi, quand l’utilisateur appuie sur le bouton, le cube change de couleur en fonction du matériau que vous avez spécifié. Dans cet exemple, la couleur du cube passe à cyan.
 
-8. Ensuite, vous allez configurer l’action liée au relâchement du bouton : ainsi, après le relâchement, le bouton revient à sa couleur par défaut. Répétez l’étape 7 ci-dessus. Mais cette fois, avec l’événement OnRelease au lieu de l’élément OnPress MRTK_Standard_LightGray, comme indiqué dans l’image ci-dessous.
+8. Ensuite, vous allez configurer l’action de mise en sortie de sorte qu’au moment de la mise en place, le bouton repasse à sa couleur par défaut. Répétez l’étape 7, ci-dessus. Toutefois, cette fois, avec l’événement OnRelease au lieu de l’élément OnPress MRTK_Standard_LightGray, comme indiqué dans l’image ci-dessous.
 
     ![MR213_BuildSettings](images/mrlearning-base-ch2-2-step8.png)
 
-    Désormais, lorsque le bouton est enfoncé, il passe à une nouvelle couleur cyan. Lorsque le bouton est relâché, il passe à la couleur par défaut que vous avez spécifiée (par exemple, gris clair). Appuyez sur le bouton de lecture en haut de l’écran pour l’essayer dans l’éditeur ou le déployer sur votre HoloLens 2 pour effectuer un test. Pour en savoir plus sur la simulation dans l’éditeur, y compris la simulation manuelle, lisez la [page de documentation sur la simulation de MRTK](<https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/InputSimulation/InputSimulationService.html>).
+    Désormais, lorsque le bouton est enfoncé, il passe à une nouvelle couleur ; bleu. Lorsque le bouton est relâché, il revient à la couleur par défaut que vous avez spécifiée (par exemple, gris clair). Appuyez sur le bouton de lecture en haut de l’écran pour l’essayer dans l’éditeur ou sur déployer sur votre HoloLens 2 pour le tester. Pour en savoir plus sur la simulation dans l’éditeur, y compris la simulation manuelle, lisez la [page de documentation sur la simulation de MRTK](<https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/InputSimulation/InputSimulationService.html>).
 
 ### <a name="creating-a-panel-of-buttons-using-mrtks-grid-object-collection"></a>Création d’un panneau de boutons avec la collection d’objets de grille du MRTK
 
@@ -141,7 +141,7 @@ Dans cette section, vous allez apprendre à aligner automatiquement plusieurs bo
 
     ![Mrlearning Base Ch2 3Step1im](images/mrlearning-base-ch2-3step1im.PNG)
 
-2. Regroupez les boutons sous un objet de jeu parent vide. Pour que les boutons de la collection de grille s’importent, vous devez regrouper vos boutons sous un objet parent commun. Cliquez avec le bouton droit dans le hiearachy, puis cliquez sur créer vide. Ceci crée un objet de jeu vide où vous pouvez placer tous les boutons. Il s’affiche sous la forme gameObject. Cliquez avec le bouton droit et renommez-le, ButtonCollection.
+2. Regroupez les boutons sous un objet de jeu parent vide. Pour que les boutons de la collection de grille s’importent, vous devez regrouper vos boutons sous un objet parent commun. Cliquez avec le bouton droit sur hiearachy, puis cliquez sur créer vide. Ceci crée un objet de jeu vide où vous pouvez placer tous les boutons. Il s’affiche sous la forme gameObject. Cliquez avec le bouton droit et renommez-le, ButtonCollection.
 
     ![Mrlearning Base Ch2 3Step2im](images/mrlearning-base-ch2-3step2im.PNG)
 
@@ -155,7 +155,7 @@ Dans cette section, vous allez apprendre à aligner automatiquement plusieurs bo
 
     Le composant de collection d’objets grille vous permet d’organiser des boutons ou un ensemble d’objets dans une ligne, une colonne ou une grille soignée. Il s’agit de l’un des blocs de construction fournis par le MRTK qui vous offre un moyen simple et rapide de créer des interfaces utilisateur attrayantes.
 
-5. Configurez la collection d’objets de grille. Pour vous assurer que tous les boutons sont en face de l’utilisateur, sélectionnez orienter le type. Sélectionnez ensuite face parent Forward comme indiqué dans l’image ci-dessous. Ensuite, changez la taille de la cellule pour définir l’espace entre vos boutons. Commencez par 0,05 unités par 0,05 unités pour la largeur de cellule et la hauteur de cellule comme indiqué dans l’image ci-dessous. Assurez-vous que la distance est définie sur 0 et que le jeu de lignes a la valeur 1. Cliquez sur mettre à jour la collection. La scène ressemble à l’image ci-dessous.
+5. Configurez la collection d’objets de grille. Pour vous assurer que tous les boutons sont en face de l’utilisateur, sélectionnez orienter le type. Sélectionnez ensuite face parent Forward comme indiqué dans l’image ci-dessous. Ensuite, changez la taille de la cellule pour définir l’espace entre vos boutons. Commencez par 0,05 unités par 0,05 unités pour la largeur de cellule et la hauteur de cellule, comme indiqué dans l’image ci-dessous. Assurez-vous que la distance est définie sur 0 et que le jeu de lignes a la valeur 1. Cliquez sur mettre à jour la collection. La scène ressemble à l’image ci-dessous.
 
     ![Mrlearning Base Ch2 3Step5im](images/mrlearning-base-ch2-3-step5.png)
 
@@ -164,7 +164,7 @@ Dans cette section, vous allez apprendre à aligner automatiquement plusieurs bo
 
 ### <a name="adding-text-into-your-scene"></a>Ajout de texte dans votre scène
 
-Dans cette section, vous allez découvrir comment ajouter et modifier du texte dans votre expérience de réalité mixte. Si vous ne l’avez pas déjà fait, vérifiez que TextMeshPro est activé dans Unity en suivant les instructions expliquées [ici](https://docs.unity3d.com/Packages/com.unity.textmeshpro@2.0/manual/index.html#installation).
+Dans cette section, vous allez découvrir comment ajouter et modifier du texte dans votre expérience de réalité mixte. Si vous ne l’avez pas déjà fait, vérifiez que TextMeshPro est activé dans Unity en suivant les instructions fournies [ici](https://docs.unity3d.com/Packages/com.unity.textmeshpro@2.0/manual/index.html#installation).
 
 1. Sélectionnez l’objet parent ButtonCollection, puis cliquez avec le bouton droit sur le regroupement. Développez objet 3D dans le menu déroulant. Sélectionnez ensuite TextMeshPro-Text. Vous devez voir un objet TextMeshPro sous la collection de boutons comme indiqué dans l’image ci-dessous.
 
@@ -174,11 +174,11 @@ Dans cette section, vous allez découvrir comment ajouter et modifier du texte d
 
     ![Lesson2 chapter4 step3](images/mrlearning-base-ch2-4-step3.png)
 
-3. Dans le champ de texte du composant TextMeshPro du panneau Inspecteur, tapez « Button collection Text » et ajustez les propriétés d’alignement sur Center et Top, comme indiqué dans l’image ci-dessous.
+3. Dans le champ de texte du composant TextMeshPro du panneau Inspecteur, tapez « Button collection Text » et ajustez les propriétés d’alignement sur Center et Top, comme illustré dans l’image ci-dessous.
 
     ![Lesson2 chapter4 étape 4](images/mrlearning-base-ch2-4-step4.png)
 
-4. Pour modifier les valeurs de texte sur les objets bouton, cliquez sur la flèche en regard de n’importe quel bouton pour la développer et accéder à l’objet SeeItSayItLabel. Accédez à TextMeshPro où vous pouvez modifier le texte en fonction de vos boutons, comme décrit dans les étapes ci-dessus.
+4. Pour modifier les valeurs de texte sur les objets bouton, cliquez sur la flèche en regard de n’importe quel bouton pour la développer et accéder à l’objet SeeItSayItLabel. Accédez à TextMeshPro, où vous pouvez modifier le texte en fonction de vos boutons, comme décrit dans les étapes ci-dessus.
 
     ![Lesson2 Chapter4 Step5](images/Lesson2_Chapter4_Step5.JPG)
 

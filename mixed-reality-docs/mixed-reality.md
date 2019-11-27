@@ -6,14 +6,16 @@ ms.author: branbray
 ms.date: 03/21/2018
 ms.topic: article
 keywords: réalité mixte, holographique, AR, VR, Mr, XR, réalité augmentée, réalité virtuelle, explication
-ms.openlocfilehash: 601e42c03e827f0f531f9dcf937a0dd34b008dc3
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: 65588902565ee0c5a1710f823311ccdecc23230e
+ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926773"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74539558"
 ---
 # <a name="what-is-mixed-reality"></a>Qu’est-ce que la réalité mixte ?
+
+![Pointer et valider avec des mains sur HoloLens 2](images/02_MixedRealitySlashMixedReality.png)
 
 La réalité mixte est le résultat de la fusion du monde physique avec le monde numérique. Prochaine évolution de l’interaction entre l’utilisateur, l’ordinateur et l’environnement, la réalité mixte permet de donner libre cours à nos imaginations. Elle est rendue possible grâce à l’évolution de la vision par ordinateur, de la puissance de traitement graphique, de la technologie d’affichage et des systèmes d’entrée. Le terme « *réalité mixte* » a été introduit à l’origine dans un document de 1994 par Paul Milgram et Fumio Kishino, «[une taxonomie du visuel de la réalité mixte » s’affiche](https://etclab.mie.utoronto.ca/people/paul_dir/IEICE94/ieice.html). Leur document a introduit le concept de *continuum de virtualisation*et s’est concentré sur la manière dont la catégorisation de taxonomie appliquée s’affiche. Depuis, l’application de la réalité mixte va au-delà des affichages. Il comprend également les entrées environnementales, le son spatial et l’emplacement.
 
