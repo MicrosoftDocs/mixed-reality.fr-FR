@@ -5,13 +5,13 @@ author: thetuvix
 ms.author: alexturn
 ms.date: 7/29/2019
 ms.topic: article
-keywords: OpenXR, Khronos, BasicXRApp, réalité mixte OpenXR portail des développeurs, DirectX, natif, moteur personnalisé d’application native, intergiciel
-ms.openlocfilehash: 67d2ab42a40aa04eb9dcd6881a4392a81c0f3b8f
-ms.sourcegitcommit: b6b76275fad90df6d9645dd2bc074b7b2168c7c8
+keywords: OpenXR, Khronos, BasicXRApp, réalité mixte OpenXR portail des développeurs, DirectX, native, application native, moteur personnalisé, intergiciel
+ms.openlocfilehash: aa91918e20b4276b7453bae1a05ad18df9d8ab0e
+ms.sourcegitcommit: 4d43a8f40e3132605cee9ece9229e67d985db645
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2019
-ms.locfileid: "73914391"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74491134"
 ---
 # <a name="openxr"></a>OpenXR
 
@@ -74,6 +74,10 @@ Pour tester le runtime OpenXR Windows Mixed Reality, vous pouvez installer l' <a
 Le projet <a href="https://github.com/Microsoft/OpenXR-SDK-VisualStudio/tree/master/samples/BasicXrApp" target="_blank">BasicXrApp</a> illustre un exemple OpenXR simple avec deux fichiers projet Visual Studio, un pour une application de bureau Win32 et un pour une application UWP 2 UWP.  Étant donné que la solution contient un projet UWP HoloLens, vous avez besoin de la [charge de travail de développement plateforme Windows universelle](install-the-tools.md#installation-checklist) installée dans Visual Studio pour l’ouvrir entièrement.
 
 Notez que, bien que les fichiers de projet Win32 et UWP soient distincts en raison des différences d’empaquetage et de déploiement, le code de l’application à l’intérieur de chaque projet est de 100% le même !
+
+Après la génération d’un bureau OpenXR Win32. EXE, vous pouvez l’utiliser avec un casque VR sur toute plateforme Desktop VR qui prend en charge OpenXR, qu’il s’agisse d’un casque Windows Mixed Reality ou de tout autre casque.
+
+Après avoir créé un package d’application OpenXR UWP, vous pouvez [déployer ce package](using-visual-studio.md) sur un appareil hololens 2 ou sur l’émulateur hololens 2.
 
 ## <a name="openxr-app-best-practices-for-hololens-2"></a>Meilleures pratiques pour les applications OpenXR pour HoloLens 2
 
@@ -189,7 +193,7 @@ Il existe trois types d’extensions OpenXR :
 
 Bien que certaines de ces extensions puissent démarrer en tant qu’extensions MSFT spécifiques au fournisseur, Microsoft et d’autres fournisseurs de Runtime OpenXR travaillent ensemble pour concevoir des extensions EXT ou KHR inter-fournisseurs pour la plupart de ces fonctionnalités.  Cela permet au code que vous écrivez pour que ces fonctionnalités soient portables entre les fournisseurs de Runtime, tout comme avec la spécification principale.
 
-## <a name="troubleshooting"></a>Dépannage
+## <a name="troubleshooting"></a>Résolution des problèmes
 
 Voici quelques conseils de dépannage pour le runtime OpenXR Windows Mixed Reality.  Si vous avez d’autres questions sur la <a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html" target="_blank">spécification OpenXR 1,0</a>, visitez les <a href="https://community.khronos.org/c/openxr" target="_blank">Forums Khronos OpenXR</a> ou la <a href="https://khr.io/slack" target="_blank">marge #openxr canal</a>.
 
@@ -217,7 +221,7 @@ L’élément de menu « configurer OpenXR » peut ne pas être disponible si 
 
 Notez que l’élément de menu « configurer OpenXR » n’apparaît pas si le runtime Windows Mixed Reality OpenXR est déjà installé et actif.  Vous pouvez installer le [portail des développeurs OpenXR de la réalité mixte](#getting-the-mixed-reality-openxr-developer-portal) pour déterminer l’état actuel du runtime OpenXR sur votre système.
 
-## <a name="see-also"></a>Articles associés
+## <a name="see-also"></a>Voir également
 
 * <a href="https://www.khronos.org/openxr/" target="_blank">Plus d’informations sur OpenXR</a>
 * <a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html" target="_blank">Spécification OpenXR 1,0</a>

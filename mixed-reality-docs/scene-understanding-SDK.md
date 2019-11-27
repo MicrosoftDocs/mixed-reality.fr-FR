@@ -6,12 +6,12 @@ ms.author: szymons
 ms.date: 07/08/2019
 ms.topic: article
 keywords: Compréhension des scènes, mappage spatial, Windows Mixed Reality, Unity
-ms.openlocfilehash: b7d4103697d94f5e59c77237b4948f62e4e4b621
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
-ms.translationtype: MT
+ms.openlocfilehash: f38145c4124a9f162e58188c6179dc29c22e864e
+ms.sourcegitcommit: 4d43a8f40e3132605cee9ece9229e67d985db645
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926903"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74491122"
 ---
 # <a name="scene-understanding-sdk-overview"></a>Présentation du SDK présentation de Scene
 
@@ -47,7 +47,7 @@ La partie gauche est un diagramme du runtime de réalité mixte qui est toujours
 
 Étant donné que chaque scène stocke ses données dans l’espace mémoire de votre application, vous pouvez supposer que toutes les fonctions de l’objet de la scène ou de ses données internes sont toujours exécutées dans le processus de votre application.
 
-### <a name="layout"></a>Mise en page
+### <a name="layout"></a>Disposition
 
 Pour travailler avec la compréhension des scènes, il peut être utile de savoir et de comprendre comment le runtime représente des composants logiquement et physiquement. La scène représente des données avec une disposition spécifique qui a été choisie comme simple tout en conservant une structure sous-jacente qui est pliable pour répondre aux exigences futures sans avoir besoin de révisions majeures. Pour ce faire, la scène stocke tous les composants (blocs de construction pour tous les objets de scène) dans une liste plate et définit la hiérarchie et la composition par le biais de références où des composants spécifiques référencent d’autres.
 
@@ -122,7 +122,7 @@ SceneObjects peut avoir l’un des éléments suivants :
 <tr><td>Arrière-plan</td><td>Le SceneObject est connu pour <b>ne pas</b> être l’un des autres types d’objets de scène reconnus. Cette classe ne doit pas être confondue avec Unknown, où l’arrière-plan est connu comme étant un mur/plancher/plafond, etc... alors que inconnu n’est pas encore catégorisé.</b></td></tr>
 <tr><td>Encastre</td><td>Un mur physique. Les murs sont supposés être des structures environnementales immobilières.</td></tr>
 <tr><td>Floor</td><td>Les étages sont des surfaces sur lesquelles il est possible de parcourir. Remarque : les escaliers ne sont pas des étages. Notez également que les étages supposent une surface pouvant être guidée et qu’il n’y a donc pas d’hypothèse explicite d’un étage singulier. Structures à plusieurs niveaux, rampes, etc... doit tous être classifiés en tant que plancher.</td></tr>
-<tr><td>plafond</td><td>Surface supérieure d’une salle.</td></tr>
+<tr><td>Plafond</td><td>Surface supérieure d’une salle.</td></tr>
 <tr><td>Plateforme</td><td>Grande surface plate sur laquelle vous pouvez placer des hologrammes. Elles ont tendance à représenter des tables, des plans de plan et d’autres grandes surfaces horizontales.</td></tr>
 <tr><td>World</td><td>Étiquette réservée pour les données géométriques indépendantes de l’étiquetage. La maille générée par la définition de l’indicateur de mise à jour EnableWorldMesh est classée comme monde.</td></tr>
 <tr><td>Inconnu</td><td>Cet objet de scène n’a pas encore été classé et affecté un genre. Cela ne doit pas être confondu avec l’arrière-plan, car cet objet peut être n’importe quoi, le système n’a pas encore pu trouver une classification suffisamment importante pour l’informatique.</td></tr>
@@ -133,9 +133,19 @@ SceneObjects peut avoir l’un des éléments suivants :
 
 Un SceneMesh est un SceneComponent qui se rapproche de la géométrie des objets géométriques arbitraires à l’aide d’une liste de triangles. Les SceneMeshes sont utilisés dans plusieurs contextes différents, ils peuvent représenter des composants de la structure de cellules étanches ou en tant que WorldMesh qui représente le maillage de mappage spatial non lié à la scène. Les données d’index et de vertex fournies avec chaque maille utilisent la même disposition familière que les [mémoires tampons de vertex et d’index](https://msdn.microsoft.com/library/windows/desktop/bb147325%28v=vs.85%29.aspx) utilisées pour le rendu des maillages de triangle dans toutes les API de rendu modernes. Notez que, dans la compréhension de la scène, les maillages utilisent des index 32 bits et peuvent avoir besoin d’être décomposés en segments pour certains moteurs de rendu.
 
+#### <a name="winding-order-and-coordinate-systems"></a>Ordre d’enroulement et systèmes de coordonnées
+
+Toutes les mailles produites par la compréhension des scènes sont supposées retourner des maillages dans un système de coordonnées droitiers à l’aide de l’ordre de séquencement des aiguilles d’une montre. 
+
+Remarque : les builds du système d’exploitation antérieures à. 191105 peuvent présenter un bogue connu dans lequel les maillages « universels » renvoient dans l’ordre de sortie dans le sens inverse des aiguilles d’une montre, qui a été résolu par la suite.
+
 ### <a name="scenequad"></a>SceneQuad
 
 Un SceneQuad est un SceneComponent qui représente des surfaces 2D qui occupent le monde 3D. SceneQuads peut être utilisé de la même façon que les plans ARKit ARPlaneAnchor ou ARCore, mais ils offrent des fonctionnalités de haut niveau comme des canevas 2D à utiliser par les applications plates, ou une expérience utilisateur améliorée. des API spécifiques 2D sont fournies pour les quatre cœurs qui facilitent l’utilisation de l’emplacement et de la disposition, et le développement (à l’exception du rendu) avec quatre cœurs doit avoir un sens plus semblable à l’utilisation de canevas 2D que les maillages 3D.
+
+#### <a name="scenequad-shape"></a>Forme SceneQuad
+
+SceneQuads définit une surface rectangulaire délimitée en 2D. Toutefois, les SceneQuads représentent des surfaces avec des formes arbitraires et potentiellement complexes (par exemple, une table en forme de bouée). Pour représenter la forme complexe de la surface d’un quadruple, vous pouvez utiliser l’API GetSurfaceMask pour afficher la forme de la surface dans une mémoire tampon d’image que vous fournissez. Si le SceneObject qui a le quad a également une maille, les triangles de maillage doivent être équivalents à cette image rendue, ils représentent tous les deux une géométrie réelle de la surface, juste en coordonnées 2D ou 3D.
 
 ## <a name="scene-understanding-sdk-details-and-reference"></a>Description et informations de référence du SDK
 
@@ -255,7 +265,7 @@ Notez qu’il s’agit du SceneObject qui a la transformation par rapport à l�
 
 La compréhension des scènes a fait une tentative délibérée d’alignement avec les représentations de scène 3D traditionnelles lors du traitement des transformations. Chaque scène est donc confinée à un système de coordonnées unique, à l’instar des représentations environnementales 3D les plus courantes. Les SceneObjects fournissent chacun leur emplacement sous la forme d’une position et d’une orientation au sein de ce système de coordonnées. Si votre application traite des scènes qui étendent la limite de ce qu’une origine unique fournit peut ancrer SceneObjects à SpatialAnchors, ou générer plusieurs scènes et les fusionner, mais pour des raisons de simplicité, nous supposons que des scènes étanches existent dans leur propre origine localisée par un NodeId défini par Scene. OriginSpatialGraphNodeId.
 
-Le code Unity suivant, par exemple, montre comment utiliser la perception de Windows et les API Unity pour aligner les systèmes de coordonnées ensemble. Pour plus d’informations sur les API de perception Windows et sur les [objets natifs de réalité mixte en Unity](https://docs.microsoft.com//windows/mixed-reality/unity-xrdevice-advanced) pour plus d’informations sur l’obtention d’un SpatialCoordinateSystem qui correspond à Unity, consultez [SpatialCoordinateSystem](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialcoordinatesystem) et [SpatialGraphInteropPreview](https://docs.microsoft.com//uwp/api/windows.perception.spatial.preview.spatialgraphinteroppreview) . environnement d’origine, ainsi que la méthode d’extension `.ToUnity()` pour la conversion entre `System.Numerics.Matrix4x4` et `UnityEngine.Matrix4x4`.
+Le code Unity suivant, par exemple, montre comment utiliser la perception de Windows et les API Unity pour aligner les systèmes de coordonnées ensemble. Pour plus d’informations sur les API de perception de Windows et sur les [objets natifs de réalité mixte en Unity](https://docs.microsoft.com//windows/mixed-reality/unity-xrdevice-advanced) , consultez [SpatialCoordinateSystem](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialcoordinatesystem) et [SpatialGraphInteropPreview](https://docs.microsoft.com//uwp/api/windows.perception.spatial.preview.spatialgraphinteroppreview) pour plus d’informations sur l’obtention d’un SpatialCoordinateSystem qui correspond à l’origine universelle de Unity, ainsi que sur la méthode d’extension `.ToUnity()` pour la conversion entre `System.Numerics.Matrix4x4` et `UnityEngine.Matrix4x4`.
 
 ```cs
 public class SceneRootComponent : MonoBehavior
@@ -358,7 +368,7 @@ Les mémoires tampons d’index/vertex doivent être > = nombre d’index/vertex
 
 À ce stade, vous devez comprendre les principaux blocs de construction de la scène présentation du runtime et du kit de développement logiciel (SDK). La majeure partie de la puissance et de la complexité se trouve dans les modèles d’accès, l’interaction avec les frameworks 3D et les outils qui peuvent être écrits sur ces API pour effectuer des tâches plus avancées telles que la planification spatiale, l’analyse de la salle, la navigation, la physique, etc. Nous espérons capturer ces exemples dans des exemples qui devraient vous guider dans la bonne direction pour que vos scénarios brillent. S’il existe des exemples ou des scénarios que nous n’adressons pas, faites-le nous savoir et nous essaierons de documenter/prototyper ce dont vous avez besoin.
 
-## <a name="see-also"></a>Articles associés
+## <a name="see-also"></a>Voir également
 
 * [Mappage spatial](spatial-mapping.md)
 * [Compréhension des scènes](scene-understanding.md)
