@@ -7,14 +7,16 @@ ms.author: grbury
 ms.date: 11/15/2019
 ms.topic: overview
 keywords: Windows Mixed Reality, conception, modèles d’application, contrôles, style, HoloLens, interaction, éléments UX, comportements, blocs de construction
-ms.openlocfilehash: c454190cf376f39974efec1ea416afbdb9db1a10
-ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
+ms.openlocfilehash: 8dd90a555faea62f69750847ddd6e6df4d9d0314
+ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2019
-ms.locfileid: "74143203"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74539663"
 ---
 # <a name="ux-elements-overview"></a>Vue d’ensemble des éléments UX
+
+![Utilisateur HoloLens 2 interagissant avec les boutons holographiques](images/06_AppPatterns.png)
 
 ## <a name="style"></a>Style
 
