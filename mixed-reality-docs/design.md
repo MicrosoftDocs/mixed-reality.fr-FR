@@ -8,17 +8,17 @@ ms.date: 08/24/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: réalité mixte, découvrir, distribuer, index, page d’accueil, conception, développement, tutoriels, exemples d’applications, principes fondamentaux, études de cas, ressources, procédures HoloLens, projets open source, concepts principaux, interaction
-ms.openlocfilehash: 2bd2b3fef713bfe74f91714be100c7a02e46f8ac
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 92af4ddba96f659f0af812672599d4a90bf00224
+ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73435741"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74539598"
 ---
 # <a name="start-designing-and-prototyping"></a>Commencer à concevoir et à créer des prototypes
 
 
-![Concepts principaux](images/text_in_unity_viewingangle.jpg)
+![Image de maillage 3D](images/03_Design.png)
 
 ## <a name="expand-your-design-processcase-study-expanding-the-design-process-for-mixed-realitymd"></a>[Développer votre processus de conception](case-study-expanding-the-design-process-for-mixed-reality.md)
 
@@ -98,6 +98,10 @@ L’une des clés pour afficher du contenu qui semble réaliste sous forme holog
 ### <a name="clear-and-readable-typographytypographymd"></a>[Typographie claire et lisible](typography.md)
 Tout comme la typographie sur les écrans 2D, l’objectif est d’être clair et lisible. Avec l’aspect tridimensionnel de la réalité mixte, il est possible d’affecter le texte et l’expérience utilisateur globale beaucoup mieux.
 
+<br>
+
+### <a name="ux-elements-for-the-mixed-realityapp-patterns-landingpagemd"></a>[Éléments d’expérience utilisateur pour la réalité mixte](app-patterns-landingpage.md)
+Découvrez les principales composantes des interactions spatiales et de l’interface utilisateur en réalité mixte.
 <br>
 
 

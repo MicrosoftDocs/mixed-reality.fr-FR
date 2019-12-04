@@ -8,17 +8,16 @@ ms.date: 08/27/2019
 ms.topic: overview
 ms.localizationpriority: high
 keywords: Mixed Reality, développer, développement, HoloLens, unity, directx
-ms.openlocfilehash: b37a9261f56b19edb3dde11cbeedc40a6e503e35
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 2c3416ffc1f3259c7be8f105a55427e3c29826fb
+ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73435681"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74539568"
 ---
 # <a name="learn-the-tools-and-architecture"></a>Découvrir les outils et l’architecture
 
-
-![Équipes travaillant avec des matériaux dans la Mixed Reality Academy](images/Development_Hero.png)
+![Sphère 3D abstraite](images/07_Development.png)
 
 ## <a name="expand-your-design-processcase-study-expanding-the-design-process-for-mixed-realitymd"></a>[Développer votre processus de conception](case-study-expanding-the-design-process-for-mixed-reality.md)
 
