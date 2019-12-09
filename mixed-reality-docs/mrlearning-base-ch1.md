@@ -7,12 +7,12 @@ ms.date: 11/01/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: d4e58e2c9236ba35b4394fd80cde3843edaa6f57
-ms.sourcegitcommit: 4d43a8f40e3132605cee9ece9229e67d985db645
+ms.openlocfilehash: cae2398582d399f2bad56b354694f7e99ef8681c
+ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 11/26/2019
-ms.locfileid: "74491202"
+ms.locfileid: "74539688"
 ---
 # <a name="2-initializing-your-project-and-first-application"></a>2. Initialisation de votre projet et de votre première application
 
@@ -102,7 +102,7 @@ Dans cette première leçon, vous allez découvrir certaines fonctionnalités du
 5. Une fois la génération terminée, ouvrez le dossier créé qui contient vos fichiers d’application nouvellement générés. Double-cliquez sur la solution *MixedRealityBase.sln* (ou le nom correspondant si vous avez utilisé un autre nom pour votre projet) pour ouvrir le fichier solution dans Visual Studio.
 
     > [!NOTE]
-    > Veillez à ouvrir le dossier créé (par exemple, le dossier *App* si vous avez suivi les conventions de nommage indiquées aux étapes précédentes), car il existe un fichier .sln portant le même nom en dehors de ce dossier qui ne doit pas être confondu avec le fichier .sln situé dans le dossier de génération. La structure de dossiers doit ressembler à celle de l’image ci-dessous.
+    > Veillez à ouvrir le dossier créé (par exemple, le dossier *App* si vous avez suivi les conventions de nommage indiquées aux étapes précédentes), car il existe un fichier .sln portant le même nom en dehors de ce dossier, qui ne doit pas être confondu avec le fichier .sln situé dans le dossier de génération. La structure de dossiers doit ressembler à celle de l’image ci-dessous.
     >
     > Si Visual Studio vous invite à installer de nouveaux composants, prenez un moment pour vous assurer que tous les composants requis sont installés comme spécifié dans la [page « Installer les outils »](install-the-tools.md).
 
