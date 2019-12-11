@@ -7,12 +7,12 @@ ms.date: 10/24/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Visual Studio, HoloLens, Mixed Reality, déboguer, déployer
-ms.openlocfilehash: fecd9db8777b6947c3ea19a02e428459c78c935b
-ms.sourcegitcommit: 4d43a8f40e3132605cee9ece9229e67d985db645
+ms.openlocfilehash: b7e6a8d538670a53de20a2f3a2850639e756da1a
+ms.sourcegitcommit: 05fa75193059a2dac4b580a9eef7b6c4bb64d8d7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74491184"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74830839"
 ---
 # <a name="using-visual-studio-to-deploy-and-debug"></a>Utilisation de Visual Studio pour le déploiement et le débogage
 
@@ -23,7 +23,7 @@ Que vous choisissiez de développer votre application de réalité mixte dans Di
 
 ## <a name="prerequisites"></a>Conditions préalables
 1. Consultez [Installer les outils](install-the-tools.md) pour obtenir des instructions d’installation.
-2. Créez un projet d’application Windows universelle dans Visual Studio.  Pour HoloLens (1re génération), utilisez Visual Studio 2017 ou une version plus récente.  Pour HoloLens 2, utilisez Visual Studio 2019 version 16.2 ou ultérieure. Les langages C# et C++ sont pris en charge. (Ou suivez les instructions pour [créer une application intégrée dans Unity](holograms-100.md).)
+2. Créez un projet d’application Windows universelle dans Visual Studio.  Pour HoloLens (1re génération), utilisez Visual Studio 2017 ou une version plus récente.  Pour HoloLens 2, utilisez Visual Studio 2019 version 16.2 ou ultérieure. Les langages C# et C++ sont pris en charge. (Ou suivez les instructions pour [créer une application dans Unity](holograms-100.md).)
 
 ## <a name="enabling-developer-mode"></a>Activation du mode développeur
 
