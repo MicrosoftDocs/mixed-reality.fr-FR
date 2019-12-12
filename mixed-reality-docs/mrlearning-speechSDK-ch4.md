@@ -6,16 +6,16 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: 9235452d9dce38e9d849821a694a5d4c710d8e87
-ms.sourcegitcommit: b6b76275fad90df6d9645dd2bc074b7b2168c7c8
+ms.openlocfilehash: e712fc2fd66b1add5b16b7dd8e6c37551aefe43a
+ms.sourcegitcommit: 9005b3fdfa87ac8fdc18a594a681e25c00ac5ce1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2019
-ms.locfileid: "73913312"
+ms.lasthandoff: 12/11/2019
+ms.locfileid: "75003208"
 ---
 # <a name="4-setting-up-intent-and-natural-language-understanding"></a>4. Configuration de l’intention et de la compréhension du langage naturel
 
-Dans cette leçon, nous allons explorer la fonctionnalité d’intention du service Azure Speech. La fonctionnalité d’intention nous permet d’équiper notre application avec des commandes vocales en intelligence artificielle, où les utilisateurs peuvent indiquer des commandes vocales non spécifiques, tout en ayant l’intention de les interpréter par le système. Au cours de cette leçon, nous allons configurer notre portail Azure LUIS, configurer nos intentions/entités/énoncés, publier notre ressource intentionnelle, connecter notre application Unity à notre ressource intentionnelle et effectuer notre premier appel d’API d’intention.
+Dans cette leçon, vous allez explorer la fonctionnalité d’intention du service Azure Speech. La fonctionnalité d’intention vous permet d’équiper notre application avec des commandes vocales en intelligence artificielle, où les utilisateurs peuvent indiquer des commandes vocales non spécifiques tout en gardant leur intention compréhensible par le système. Au cours de cette leçon, nous allons configurer notre portail Azure LUIS, configurer nos intentions/entités/énoncés, publier notre ressource intentionnelle, connecter notre application Unity à notre ressource intentionnelle et effectuer notre premier appel d’API d’intention.
 
 ## <a name="objectives"></a>Objectifs
 
@@ -25,7 +25,7 @@ Dans cette leçon, nous allons explorer la fonctionnalité d’intention du serv
 
 ## <a name="instructions"></a>Instructions
 
-1. Autorisez votre ordinateur à activer la dictée. pour ce faire, accédez à paramètres Windows, sélectionnez « confidentialité », puis « parole » et enfin « entrée manuscrite & typage » et activez Speech services et suggestions de saisie.
+1. Autorisez votre ordinateur à activer la dictée. Pour ce faire, accédez à paramètres Windows, sélectionnez « confidentialité », puis « parole », suivi de « entrée manuscrite & typage » et activez Speech services et suggestions de saisie.
 
     ![Module4Chapter4step1aim](images/module4chapter4step1aim.PNG)
 
@@ -45,12 +45,12 @@ Dans cette leçon, nous allons explorer la fonctionnalité d’intention du serv
 
     ![mrlearning-Speech-CH4-1-step3b. png](images/mrlearning-speech-ch4-1-step3b.png)
 
-4. Sélectionnez vos **emplacements de création** et d' **exécution**, dans le cadre de ce didacticiel, utilisez *(États-Unis) Ouest des États-Unis*. Choisissez ensuite *F0 (5 appels par seconde, 10 000 appels par mois)* pour le niveau **tarifaire de création** et le **niveau tarifaire du Runtime**. Enfin, cliquez sur le bouton **créer** pour créer la ressource ainsi que le nouveau groupe de ressources.
+4. Sélectionnez votre **emplacement de création** et l' **emplacement d’exécution**. Pour les besoins de ce didacticiel, utilisez *(États-Unis) Ouest des États-Unis*, puis choisissez *F0 (5 appels par seconde, 10 000 appels par mois)* pour le niveau **tarifaire de création** et le **niveau tarifaire d’exécution**. Enfin, cliquez sur le bouton **créer** pour créer la ressource, ainsi que sur le nouveau groupe de ressources.
 
     ![mrlearning-Speech-CH4-1-step4. png](images/mrlearning-speech-ch4-1-step4.png)
 
     >[!NOTE]
-    >Une fois que vous avez cliqué sur le bouton créer, vous devez attendre que le service soit créé. cette opération peut prendre quelques minutes.
+    >Après avoir cliqué sur le bouton créer, vous devez attendre que le service soit créé, ce qui peut prendre quelques minutes.
 
 5. Une fois le processus de création de la ressource terminé, vous verrez le message **votre déploiement est terminé**.
 
@@ -59,7 +59,7 @@ Dans cette leçon, nous allons explorer la fonctionnalité d’intention du serv
 6. À l’aide du même compte d’utilisateur, connectez-vous au portail [Language Understanding intelligent service (Luis)](https://www.luis.ai/) , sélectionnez votre pays et acceptez les conditions d’utilisation.
 
     >[!NOTE]
-    >Quand vous atteignez le portail Language Understanding, vous devrez peut-être vous connecter, si ce n’est déjà fait, avec les mêmes informations d’identification que votre Portail Azure. Si vous utilisez LUIS pour la première fois, vous devez faire défiler vers le bas de la page d’accueil, pour rechercher et cliquer sur le bouton « créer une application LUIS ».
+    >Quand vous atteignez le portail Language Understanding, vous devrez peut-être vous connecter, si ce n’est déjà fait, avec les mêmes informations d’identification que votre Portail Azure. Si vous utilisez LUIS pour la première fois, vous devez faire défiler vers le bas de la page d’accueil pour rechercher et cliquer sur le bouton « créer une application LUIS ».
 
 7. Une fois connecté, cliquez sur mes applications (si vous n’êtes pas actuellement dans cette section). Vous pouvez ensuite cliquer sur créer une nouvelle application. Nommez la nouvelle application « Speech SDK Learning module ». Ajoutez également « module d’apprentissage du kit de développement logiciel (SDK) Speech » au champ Description. Cliquez ensuite sur « terminé ».
 
@@ -82,11 +82,11 @@ Dans cette leçon, nous allons explorer la fonctionnalité d’intention du serv
     >[!NOTE]
     >Vous devez maintenant avoir 2 intentions-« PressButton » et « None ».
 
-10. Sous ressources de l’application sur la gauche, sélectionnez « entités », puis cliquez sur « créer une entité » et nommez-la « action » et conservez le type d’entité « simple ».
+10. Sous ressources de l’application sur la gauche, sélectionnez « entités », cliquez sur « créer une nouvelle entité », nommez-la « action » et conservez le type d’entité « simple ».
 
     ![Module4Chapter4step11im](images/module4chapter4step11im.PNG)
 
-11. Cliquez de nouveau sur « créer une nouvelle entité » et nommez-la « cible » et conservez le type d’entité « simple ».
+11. Cliquez à nouveau sur « créer une nouvelle entité » et nommez-la « cible ». Conservez également le type d’entité « simple ».
 
     ![Module4Chapter4step12im](images/module4chapter4step12im.PNG)
 
@@ -94,7 +94,7 @@ Dans cette leçon, nous allons explorer la fonctionnalité d’intention du serv
 
     ![Module4Chapter4step13im](images/module4chapter4step13im.PNG)
 
-13. Cliquez sur la liste déroulante « Afficher les options » à droite, puis sélectionnez « Afficher les valeurs d’entité ».
+13. Cliquez sur la liste déroulante « Afficher les options » à droite et sélectionnez « Afficher les valeurs d’entité ».
 
     ![Module4Chapter4step14aim](images/module4chapter4step14aim.PNG)
 
@@ -121,11 +121,11 @@ Dans cette leçon, nous allons explorer la fonctionnalité d’intention du serv
     >
     > ![Module4Chapter4noteim](images/module4chapter4noteim.PNG)
 
-18. À présent, cliquez sur « publier » dans le coin supérieur droit. Assurez-vous que la liste déroulante indique « production », puis cliquez sur « publier » dans la fenêtre contextuelle.
+18. Cliquez sur « publier » dans le coin supérieur droit. Assurez-vous que la liste déroulante indique « production », puis cliquez sur « publier » dans la fenêtre contextuelle.
 
     ![Module4Chapter4step19im](images/module4chapter4step19im.PNG)
 
-19. Une fois publiée, une barre verte doit apparaître en haut de la page.  Cliquez sur la barre verte pour atteindre la page « gérer ».
+19. Une fois publiée, une barre verte doit apparaître en haut de la page. Cliquez sur la barre verte pour afficher la page « gérer ».
 
     ![Module4Chapter4step20im](images/module4chapter4step20im.PNG)
 
@@ -133,7 +133,7 @@ Dans cette leçon, nous allons explorer la fonctionnalité d’intention du serv
 
     ![Module4Chapter4step21im](images/module4chapter4step21im.PNG)
 
-21. Sélectionnez locataire dans la première liste déroulante, puis sélectionnez paiement à l’accès dans la liste déroulante nom de l’abonnement. Sous LUIS nom de la ressource, choisissez la ressource que nous avons créée ci-dessus dans les étapes 1-5. Cliquez ensuite sur « affecter la ressource ».
+21. Sélectionnez locataire dans la première liste déroulante et sélectionnez « paiement à l’accès » dans la liste déroulante nom de l’abonnement. Sous LUIS nom de la ressource, choisissez la ressource que nous avons créée ci-dessus dans les étapes 1-5. Cliquez ensuite sur « affecter la ressource ».
 
     ![Module4Chapter4step22im](images/module4chapter4step22im.PNG)
 
@@ -163,4 +163,4 @@ Dans cette leçon, nous allons explorer la fonctionnalité d’intention du serv
 
 ## <a name="congratulations"></a>Félicitations !
 
-Dans cette leçon, nous avons appris à ajouter des commandes vocales dotées de l’intelligence artificielle. À présent, votre programme peut reconnaître l’intention des utilisateurs même s’ils ne dictent pas de commandes vocales précises.
+Dans cette leçon, vous avez appris à ajouter des commandes vocales dotées de l’intelligence artificielle. À présent, votre programme peut reconnaître l’intention des utilisateurs, même s’ils ne sont pas en train de dicter des commandes vocales précises !

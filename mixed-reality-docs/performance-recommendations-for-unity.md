@@ -6,18 +6,18 @@ ms.author: trferrel
 ms.date: 03/26/2019
 ms.topic: article
 keywords: graphiques, UC, GPU, rendu, garbage collection, hololens
-ms.openlocfilehash: f3fdda94c417d9f8e8980a90e8928282789e3d0f
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: 6507667904cfa26dfad1ccf1402cc75f14386609
+ms.sourcegitcommit: 9005b3fdfa87ac8fdc18a594a681e25c00ac5ce1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926868"
+ms.lasthandoff: 12/11/2019
+ms.locfileid: "75003198"
 ---
 # <a name="performance-recommendations-for-unity"></a>Recommandations en matière de performances pour Unity
 
 Cet article s’appuie sur la discussion présentée dans [recommandations de performances pour la réalité mixte](understanding-performance-for-mixed-reality.md) , mais se concentre sur les apprentissages spécifiques à l’environnement du moteur Unity.
 
-Il est également vivement conseillé aux développeurs de passer en revue les [paramètres d’environnement recommandés pour l’article Unity](Recommended-settings-for-unity.md). Cet article contient du contenu avec certaines des configurations de scène les plus importantes en ce qui concerne la création d’applications de réalité mixte performantes. Certains de ces paramètres recommandés sont également mis en surbrillance ci-dessous.
+Il est également vivement conseillé aux développeurs de passer en revue les [paramètres d’environnement recommandés pour l’article Unity](Recommended-settings-for-unity.md). Cet article contient du contenu avec certaines des configurations de scène les plus importantes pour créer des applications de réalité mixte performantes. Certains de ces paramètres recommandés sont également mis en surbrillance ci-dessous.
 
 ## <a name="how-to-profile-with-unity"></a>Profilage avec Unity
 
@@ -38,7 +38,7 @@ Le contenu ci-dessous couvre des pratiques de performances plus approfondies, en
 
 #### <a name="cache-references"></a>Références du cache
 
-Il est recommandé de mettre en cache les références à tous les composants et GameObjects pertinents lors de l’initialisation. Cela est dû au fait que les appels de fonction répétitifs, tels que *[GetComponent\<t > ()](https://docs.unity3d.com/ScriptReference/GameObject.GetComponent.html)* , sont beaucoup plus coûteux par rapport au coût de mémoire pour stocker un pointeur. Cela s’applique également à l' [appareil photo. main régulièrement utilisé. main](https://docs.unity3d.com/ScriptReference/Camera-main.html). *Camera. main* utilise en fait simplement *[FindGameObjectsWithTag ()](https://docs.unity3d.com/ScriptReference/GameObject.FindGameObjectsWithTag.html)* en dessous, qui effectue une recherche coûteuse dans votre graphique de scène pour un objet Camera avec la balise *« MainCamera »* .
+Il est recommandé de mettre en cache les références à tous les composants et GameObjects pertinents lors de l’initialisation. Cela est dû au fait que les appels de fonction répétitifs, tels que *[GetComponent\<t > ()](https://docs.unity3d.com/ScriptReference/GameObject.GetComponent.html)* , sont beaucoup plus coûteux par rapport au coût de mémoire pour stocker un pointeur. Cela s’applique également à l' [appareil photo. main](https://docs.unity3d.com/ScriptReference/Camera-main.html)régulièrement utilisé. *Camera. main* utilise en fait simplement *[FindGameObjectsWithTag ()](https://docs.unity3d.com/ScriptReference/GameObject.FindGameObjectsWithTag.html)* en-dessous, ce qui effectue une recherche coûteuse dans votre graphique de scène pour un objet Camera avec la balise *« MainCamera »* .
 
 ```CS
 using UnityEngine;
@@ -148,7 +148,7 @@ Toutes les fonctions de rappel Unity répétitives (c.-à-d. Update) qui sont ex
 
 1) **Fonctions de rappel vides**
 
-    Bien que le code ci-dessous puisse paraître inoffensif dans votre application, en particulier puisque chaque script Unity s’initialise automatiquement avec ce bloc de code, ces rappels vides peuvent en fait devenir très coûteux. Unity fonctionne de façon alternée par rapport à une limite de code non managé/managé, entre le code UnityEngine et votre code d’application. Le changement de contexte sur ce pont est assez coûteux même s’il n’y a rien à exécuter. Cela devient particulièrement problématique si votre application a 100 GameObjects avec des composants qui ont des rappels Unity répétitifs vides.
+    Bien que le code ci-dessous puisse paraître inoffensif dans votre application, en particulier puisque chaque script Unity s’initialise automatiquement avec ce bloc de code, ces rappels vides peuvent en fait devenir très coûteux. Unity fonctionne de façon alternée par rapport à une limite de code non managé/managé, entre le code UnityEngine et votre code d’application. Le changement de contexte sur ce pont est assez onéreux, même s’il n’y a rien à exécuter. Cela devient particulièrement problématique si votre application a 100 GameObjects avec des composants qui ont des rappels Unity répétitifs vides.
 
     ```CS
     void Update()
@@ -157,7 +157,7 @@ Toutes les fonctions de rappel Unity répétitives (c.-à-d. Update) qui sont ex
     ```
 
 >[!NOTE]
-> Update () est la manifestation la plus courante de ce problème de performance, mais d’autres rappels Unity répétitifs, tels que les suivants, peuvent également être aussi mauvais si ce n’est pas pire : FixedUpdate (), LateUpdate (), OnPostRender», OnPreRender (), OnRenderImage (), etc. 
+> Update () est la manifestation la plus courante de ce problème de performance, mais d’autres rappels Unity répétitifs, tels que les suivants peuvent être aussi mauvais, si ce n’est pas pire : FixedUpdate (), LateUpdate (), OnPostRender», OnPreRender (), OnRenderImage (), etc. 
 
 2) **Opérations à privilégier en cours d’exécution par frame**
 
@@ -190,9 +190,9 @@ Toutes les fonctions de rappel Unity répétitives (c.-à-d. Update) qui sont ex
 
 1) **Physique**
 
-    r) en général, le moyen le plus simple d’améliorer la physique consiste à limiter le temps consacré à la physique ou au nombre d’itérations par seconde. Bien entendu, cela permet de réduire la précision de la simulation. Voir [timemanager](https://docs.unity3d.com/Manual/class-TimeManager.html) dans Unity
+    r) en règle générale, le moyen le plus simple d’améliorer la physique consiste à limiter le temps consacré à la physique ou au nombre d’itérations par seconde. Bien entendu, cela permet de réduire la précision de la simulation. Voir [timemanager](https://docs.unity3d.com/Manual/class-TimeManager.html) dans Unity
 
-    b) le type de conflits dans Unity a des caractéristiques de performances très différentes. L’ordre ci-dessous répertorie les conflits les plus performants pour les conflits les plus performants, de gauche à droite. Il est plus important d’éviter les conflits de maille qui sont beaucoup plus coûteux que les conflits primitifs.
+    b) le type de conflits dans Unity a des caractéristiques de performances très différentes. L’ordre ci-dessous répertorie les conflits les plus performants pour les conflits les plus performants, de gauche à droite. Il est plus important d’éviter les conflits de maille, qui sont beaucoup plus chers que les conflits primitifs.
 
         Sphere < Capsule < Box <<< Mesh (Convex) < Mesh (non-Convex)
 
@@ -238,15 +238,15 @@ Pour plus d’informations, consultez *traitement par lot statique* sous [créer
 
 #### <a name="dynamic-batching"></a>Traitement par lot dynamique
 
-Étant donné qu’il est difficile de marquer les objets comme *statiques* pour le développement HoloLens, le traitement par lot dynamique peut être un excellent outil pour compenser cette fonctionnalité non compensée. Bien entendu, il peut également être utile sur les casques immersifs. Le traitement par lots dynamique dans Unity peut être difficile à activer, car GameObjects doit **partager les mêmes documents** et **b) répondre à une longue liste d’autres critères**.
+Étant donné qu’il est difficile de marquer les objets comme *statiques* pour le développement HoloLens, le traitement par lot dynamique peut être un excellent outil pour compenser cette fonctionnalité non compensée. Bien entendu, il peut également être utile sur les casques immersifs. Toutefois, le traitement dynamique dans Unity peut être difficile à activer, car GameObjects doit **partager les mêmes documents** et **b) répondre à une longue liste d’autres critères**.
 
 Pour obtenir la liste complète, lisez *traitement dynamique par lot* sous l' [appel de dessin](https://docs.unity3d.com/Manual/DrawCallBatching.html) . En règle générale, les GameObjects ne sont plus valides pour être regroupés de manière dynamique, car les données de maillage associées ne peuvent pas dépasser 300 sommets.
 
 #### <a name="other-techniques"></a>Autres techniques
 
-Le traitement par lot ne peut se produire que si plusieurs GameObjects sont en mesure de partager le même document. En général, cette opération est bloquée par la nécessité pour GameObjects d’avoir une texture unique pour leur matériau respectif. Il est courant de combiner les textures en une seule grande texture, une méthode appelée « [Atlas des textures](https://en.wikipedia.org/wiki/Texture_atlas)».
+Le traitement par lot ne peut se produire que si plusieurs GameObjects sont en mesure de partager le même document. En règle générale, cette opération est bloquée par la nécessité pour GameObjects d’avoir une texture unique pour leur matériau respectif. Il est courant de combiner les textures en une seule grande texture, une méthode appelée « [Atlas des textures](https://en.wikipedia.org/wiki/Texture_atlas)».
 
-En outre, il est généralement préférable de combiner les mailles en un seul GameObject, lorsque cela est possible et raisonnable. Chaque convertisseur dans Unity a des appels de dessin associés et envoie un maillage combiné sous un convertisseur.
+En outre, il est généralement préférable de combiner les mailles en un seul GameObject, lorsque cela est possible et raisonnable. Chaque convertisseur d’Unity a ses appels de dessin associés et envoie un maillage combiné sous un convertisseur.
 
 >[!NOTE]
 > Modification des propriétés du convertisseur. la documentation au moment de l’exécution crée une copie du matériau et, par conséquent, interrompt le traitement par lot. Utilisez Renderr. sharedMaterial pour modifier les propriétés des matériaux partagés entre les GameObjects.
@@ -265,7 +265,7 @@ La fidélité de la plage de profondeur réduite rend la [lutte z](https://en.wi
 
 **Tampon de stencil désactivé**
 
-Quand Unity crée une [texture de rendu avec une profondeur de 16 bits](https://docs.unity3d.com/ScriptReference/RenderTexture-depth.html), aucune mémoire tampon de stencil n’est créée. La sélection du format de profondeur 24 bits, par documentation Unity, créera une mémoire tampon z de 24 bits ainsi qu’une [mémoire tampon de stencil de 8 bits](https://docs.unity3d.com/Manual/SL-Stencil.html) (si 32 bits est applicable sur l’appareil, ce qui est généralement le cas, par exemple, HoloLens).
+Quand Unity crée une [texture de rendu avec une profondeur de 16 bits](https://docs.unity3d.com/ScriptReference/RenderTexture-depth.html), aucune mémoire tampon de stencil n’est créée. La sélection du format de profondeur de 24 bits, par documentation Unity, créera une mémoire tampon z de 24 bits, ainsi qu’un [tampon de stencil de 8 bits] (https://docs.unity3d.com/Manual/SL-Stencil.html) (si 32 bits est applicable sur un appareil, ce qui est généralement le cas, par exemple, HoloLens).
 
 ### <a name="avoid-full-screen-effects"></a>Éviter les effets plein écran
 
@@ -275,7 +275,7 @@ Les techniques qui fonctionnent en mode plein écran peuvent être assez onéreu
 
 L' [éclairage global](https://docs.unity3d.com/Manual/GIIntro.html) en temps réel dans Unity peut fournir des résultats visuels remarquables, mais implique des calculs d’éclairage très coûteux. Il est recommandé de désactiver l’éclairage global en temps réel pour chaque fichier de scène Unity via la **fenêtre** > le **rendu** > **paramètres d’éclairage** > de décocher l' **éclairage global en temps réel**.
 
-En outre, il est recommandé de désactiver toutes les captures instantanées, car celles-ci ajoutent des passes GPU coûteuses à une scène Unity. Les ombres peuvent être désactivées par lumière, mais peuvent également être contrôlées de façon holistique via des paramètres de qualité.
+En outre, il est recommandé de désactiver tous les casts instantanés, car ils ajoutent également des passes GPU coûteuses à une scène Unity. Les ombres peuvent être désactivées par lumière, mais peuvent également être contrôlées de façon holistique via des paramètres de qualité.
 
 **Modifiez** > **paramètres du projet**, puis sélectionnez la catégorie **qualité** > sélectionnez **faible qualité** pour la plateforme UWP. Il est également possible de définir simplement la propriété **Shadows** pour **Désactiver les ombres**.
 
@@ -290,7 +290,7 @@ Le nombre de polygones est généralement réduit par
 
 Une approximation facile pour comparer les nuanceurs en matière de performances consiste à identifier le nombre moyen d’opérations qui s’exécutent chaque fois au moment de l’exécution. Cela peut être fait facilement dans Unity.
 
-1) Sélectionnez votre élément de nuanceur ou sélectionnez un matériau, puis dans le coin supérieur droit de la fenêtre de l’inspecteur, sélectionnez l’icône d’engrenage, puis **sélectionnez le nuanceur** .
+1) Sélectionnez votre élément de nuanceur ou sélectionnez un matériau, puis dans le coin supérieur droit de la fenêtre de l’inspecteur, sélectionnez l’icône d’engrenage, puis sélectionnez le **nuanceur** .
 
     ![Sélectionner le nuanceur dans Unity](images/Select-shader-unity.png)
 2) Une fois l’élément de nuanceur sélectionné, cliquez sur le bouton **« compiler et afficher le code »** sous la fenêtre de l’inspecteur.
@@ -303,7 +303,7 @@ Une approximation facile pour comparer les nuanceurs en matière de performances
 
 #### <a name="optimize-pixel-shaders"></a>Optimiser les nuanceurs de pixels
 
-Si vous examinez les résultats des statistiques compilées à l’aide de la méthode ci-dessus, le [nuanceur de fragments](https://en.wikipedia.org/wiki/Shader#Pixel_shaders) exécutera généralement plus d’opérations que le [nuanceur de sommets](https://en.wikipedia.org/wiki/Shader#Vertex_shaders) en moyenne. Le nuanceur de fragments, également connu sous le nom de nuanceur de pixels, est exécuté par pixel sur la sortie de l’écran, tandis que le nuanceur de sommets est exécuté uniquement par sommet de tous les maillages dessinés à l’écran. 
+En examinant les résultats des statistiques compilées à l’aide de la méthode ci-dessus, le [nuanceur de fragments](https://en.wikipedia.org/wiki/Shader#Pixel_shaders) exécute généralement plus d’opérations que le [nuanceur de sommets](https://en.wikipedia.org/wiki/Shader#Vertex_shaders), en moyenne. Le nuanceur de fragments, également connu sous le nom de nuanceur de pixels, est exécuté par pixel sur la sortie de l’écran, tandis que le nuanceur de sommets est exécuté uniquement par sommet de tous les maillages dessinés à l’écran. 
 
 Par conséquent, les nuanceurs de fragments ont plus d’instructions que les nuanceurs vertex en raison de tous les calculs d’éclairage, les nuanceurs de fragments sont presque toujours exécutés sur un jeu de données plus volumineux. Par exemple, si la sortie d’écran est une image de 2k Ko, le nuanceur de fragments peut être exécuté 2000 * 2000 = 4 millions fois. En cas de rendu de deux yeux, ce nombre est doublé puisqu’il y a deux écrans. Si une application de réalité mixte a plusieurs passes, des effets de la publication plein écran ou un rendu de plusieurs mailles sur le même pixel, ce nombre augmente considérablement. 
 
@@ -327,11 +327,11 @@ En règle générale, le surdessin peut être atténué en éliminant les objets
 
 ## <a name="memory-recommendations"></a>Recommandations de mémoire
 
-L’allocation de mémoire excessive & les opérations de désallocation peuvent avoir des effets négatifs sur votre application holographique, ce qui se traduit par des performances incohérentes, des trames figées et d’autres comportements nuisibles. Il est particulièrement important de comprendre les considérations relatives à la mémoire lors du développement dans Unity, car la gestion de la mémoire est contrôlée par le garbage collector.
+L’allocation de mémoire excessive & les opérations de désallocation peuvent avoir des effets négatifs sur votre application holographique, ce qui entraîne des performances incohérentes, des trames figées et d’autres comportements nuisibles. Il est particulièrement important de comprendre les considérations relatives à la mémoire lors du développement dans Unity, car la gestion de la mémoire est contrôlée par le garbage collector.
 
 #### <a name="garbage-collection"></a>Garbage collection
 
-Les applications holographiques vont perdre le temps de calcul au garbage collector (GC) quand le GC est activé pour analyser les objets qui ne sont plus dans l’étendue lors de l’exécution et où leur mémoire doit être libérée pour pouvoir être réutilisée. Les allocations constantes et les désallocations requièrent généralement que le garbage collector s’exécute plus fréquemment, ce qui nuit aux performances et à l’expérience de l’utilisateur.
+Les applications holographiques perdront le traitement du temps de calcul au garbage collector (GC) quand le GC est activé pour analyser les objets qui ne sont plus dans la portée pendant l’exécution et où leur mémoire doit être libérée, de sorte qu’elle peut être mise à disposition en vue d’une réutilisation. Les allocations constantes et les désallocations requièrent généralement que le garbage collector s’exécute plus fréquemment, ce qui nuit aux performances et à l’expérience de l’utilisateur.
 
 Unity a fourni une excellente page qui explique en détail comment le garbage collector fonctionne et des conseils pour écrire du code plus efficace en ce qui concerne la gestion de la mémoire.
 - [Optimisation des garbage collection dans les jeux Unity](https://unity3d.com/learn/tutorials/topics/performance-optimization/optimizing-garbage-collection-unity-games?playlist=44069)
@@ -349,11 +349,11 @@ Le mise en pool d’objets est une technique populaire pour réduire le coût de
 
 - [Didacticiel de mise en pool d’objets dans Unity](https://unity3d.com/learn/tutorials/topics/scripting/object-pooling) 
 
-## <a name="startup-performance"></a>Performances de démarrage
+## <a name="startup-performance"></a>Performances au démarrage
 
-Vous devez envisager de démarrer votre application avec une plus petite scène, puis d’utiliser *[SceneManager. LoadSceneAsync](https://docs.unity3d.com/ScriptReference/SceneManagement.SceneManager.LoadSceneAsync.html)* pour charger le reste de la scène. Cela permet à votre application d’accéder à un État interactif aussi rapide que possible. N’oubliez pas qu’il peut y avoir un pic d’UC important pendant l’activation de la nouvelle scène et que tout contenu rendu peut être saccadé ou déposé. Pour contourner ce cas, vous pouvez affecter la valeur false à la propriété AsyncOperation. allowSceneActivation sur la scène en cours de chargement, attendre le chargement de la scène, effacer l’écran en noir, puis rétablir la valeur true pour terminer l’activation de la scène.
+Vous devez envisager de démarrer votre application avec une plus petite scène, puis d’utiliser *[SceneManager. LoadSceneAsync](https://docs.unity3d.com/ScriptReference/SceneManagement.SceneManager.LoadSceneAsync.html)* pour charger le reste de la scène. Cela permet à votre application d’accéder à un État interactif aussi rapide que possible. N’oubliez pas qu’il peut y avoir un pic d’UC important pendant l’activation de la nouvelle scène et que tout contenu rendu peut être saccadé ou déposé. Pour contourner ce cas, vous pouvez définir la propriété AsyncOperation. allowSceneActivation sur « false » sur la scène en cours de chargement, attendre le chargement de la scène, désélectionner l’écran en noir, puis rétablir la valeur « true » pour terminer l’activation de la scène.
 
-N’oubliez pas que pendant le chargement, l’écran de démarrage holographique s’affiche à l’attention de l’utilisateur.
+N’oubliez pas que pendant le chargement de la scène de démarrage, l’écran de démarrage holographique s’affiche à l’attention de l’utilisateur.
 
 ## <a name="see-also"></a>Articles associés
 - [Optimisation du rendu graphique dans les jeux Unity](https://unity3d.com/learn/tutorials/temas/performance-optimization/optimizing-graphics-rendering-unity-games?playlist=44069)
