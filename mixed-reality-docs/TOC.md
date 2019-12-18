@@ -64,10 +64,13 @@
 ## Éléments de l’expérience utilisateur
 ### [Vue d’ensemble](app-patterns-landingpage.md)
 ### Style
-#### [Couleurs, éclairage et matériaux](color,-light-and-materials.md)
+#### [Couleurs, éclairage et matériaux](color-light-and-materials.md)
 #### [Mettre à l’échelle](scale.md)
-#### [Conception du son spatial](spatial-sound-design.md)
 #### [Typographie](typography.md)
+### Son spatial
+#### [Conception du son spatial](spatial-sound-design.md)
+#### [Étude de cas : Holotour ](case-study-spatial-sound-design-for-holotour.md)
+#### [Étude de cas : Roboraid](case-study-using-spatial-sound-in-roboraid.md)
 
 ### Contrôles et comportements
 #### [Curseurs](cursors.md)
@@ -126,6 +129,12 @@
 ###### [3. Connexion de plusieurs utilisateurs](mrlearning-sharing(photon)-ch3.md)
 ###### [4. Partage de mouvements d’objet avec plusieurs utilisateurs](mrlearning-sharing(photon)-ch4.md)
 ###### [5. Intégration d’ancres spatiales Azure dans une expérience partagée](mrlearning-sharing(photon)-ch5.md)
+##### Tutoriels sur le contenu audio spatial
+###### [1. Ajout de contenu audio spatial dans votre projet](unity-spatial-audio-ch1.md)
+###### [2. Spatialisation des sons d’interaction avec les boutons](unity-spatial-audio-ch2.md)
+###### [3. Spatialisation du contenu audio d’une vidéo](unity-spatial-audio-ch3.md)
+###### [4. Activation et désactivation de contenu audio spatial au moment de l’exécution](unity-spatial-audio-ch4.md)
+###### [5. Utilisation de la réverbération pour ajouter une distance à du contenu audio spatial](unity-spatial-audio-ch5.md)
 #### Exemples d’applications open source HoloLens (1ère gen)
 ##### [Tableau périodique des éléments](periodic-table-of-the-elements.md)
 ##### [Lunar Module](lunar-module.md)
@@ -208,7 +217,7 @@
 #### [Mappage spatial](spatial-mapping-in-directx.md)
 #### [Compréhension des scènes](scene-understanding-sdk.md)
 #### [Ancres spatiales partagées](shared-spatial-anchors-in-directx.md)
-#### [Entrée à l’aide du clavier, de la souris et du contrôleur de jeu](keyboard,-mouse,-and-controller-input-in-directx.md)
+#### [Entrée à l’aide du clavier, de la souris et du contrôleur de jeu](keyboard-mouse-and-controller-input-in-directx.md)
 #### [Utilisation de code XAML avec les applications holographiques](using-xaml-with-holographic-directx-apps.md)
 #### [Suivi des codes QR](qr-code-tracking.md)
 ### [Expériences partagées dans Mixed Reality](shared-experiences-in-mixed-reality.md)
