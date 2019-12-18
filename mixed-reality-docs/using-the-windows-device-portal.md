@@ -6,18 +6,18 @@ ms.author: jlyons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Portail des appareils Windows, HoloLens
-ms.openlocfilehash: 972fe2e828a0a054925a45b4f6965c668f6da078
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: 9bb8116330d88c532b955ef497d29fe98c86fddb
+ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926745"
+ms.lasthandoff: 12/17/2019
+ms.locfileid: "75182019"
 ---
 # <a name="using-the-windows-device-portal"></a>Utilisation du portail d’appareils Windows
 
 <table>
 <tr>
-<th>Fonctionnalité</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (1re génération)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"><a href="immersive-headset-hardware-details.md">Casques immersifs</a></th>
+<th>Fonctionnalité</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (1ère génération)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"><a href="immersive-headset-hardware-details.md">Casques immersifs</a></th>
 </tr><tr>
 <td> Windows Device Portal</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"></td>
 </tr>
@@ -30,8 +30,8 @@ Cette documentation concerne spécifiquement le portail de périphériques Windo
 ## <a name="setting-up-hololens-to-use-windows-device-portal"></a>Configuration de HoloLens pour utiliser le portail d’appareils Windows
 
 1. Mettez HoloLens sous tension et allumez l’appareil.
-2. Effectuer le geste qui consiste à [maintenir sa paume de main vers le haut en serrant ses doigts et à les ouvrir](system-gesture.md#bloom) pour lancer le menu principal.
-3. Pointez avec le regard de la vignette **paramètres** et effectuez le mouvement d' [appui sur l’air](gaze-and-commit.md#composite-gestures) . Effectuez un second appui sur l’air pour placer l’application dans votre environnement. L’application Paramètres démarre une fois placée.
+2. Effectuez le [mouvement de démarrage](https://docs.microsoft.com/hololens/hololens2-basic-usage#start-gesture) pour HoloLens2 ou [fleuri](https://docs.microsoft.com/hololens/hololens1-basic-usage#open-the-start-menu-with-bloom) sur HoloLens (1ère génération) pour lancer le menu principal. 
+3. Pointez avec le regard de la vignette **paramètres** et effectuez le mouvement d' [appui](https://docs.microsoft.com/hololens/hololens1-basic-usage#select-holograms-with-gaze-and-air-tap) sur hololens (1re génération) ou sélectionnez-le sur hololens 2 en le [touchant ou en utilisant un rayon de la main](https://docs.microsoft.com/hololens/hololens2-basic-usage). 
 4. Sélectionnez l’élément de menu **Mettre à jour**.
 5. Sélectionnez l’élément de menu **Pour les développeurs**.
 6. Activez **Mode développeur**.

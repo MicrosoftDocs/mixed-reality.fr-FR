@@ -6,16 +6,16 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: rendu, hologramme
-ms.openlocfilehash: 9c32d8ddf5a1fb9e9d991211756ba1306f4d3fa9
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: 8984a16d92ed2f2b72d99e103eaae81b8eba742b
+ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926857"
+ms.lasthandoff: 12/17/2019
+ms.locfileid: "75182029"
 ---
 # <a name="rendering"></a>Rendu
 
-Le rendu holographique permet à votre application de dessiner un hologramme dans un endroit précis dans le monde autour de l’utilisateur, qu’il soit placé précisément dans le monde physique ou dans un domaine virtuel que vous avez créé. Les [hologrammes](hologram.md) sont des objets de sons et de lumière. Le rendu permet à votre application d’ajouter la lumière.
+Le rendu holographique permet à votre application de dessiner un hologramme dans un endroit précis dans le monde autour de l’utilisateur, qu’il soit placé précisément dans le monde physique ou dans un domaine virtuel que vous avez créé. Les [hologrammes](hologram.md) sont des objets faits de son et de lumière. Le rendu permet à votre application d’ajouter la lumière.
 
 ## <a name="device-support"></a>Périphériques pris en charge
 
@@ -83,17 +83,21 @@ En général, votre application s’affiche pour une seule caméra stéréo. Tou
 Lors du rendu des radiographie médicaux ou des volumes d’ingénierie en 3D, les techniques de [rendu de volume](volume-rendering.md) sont souvent utilisées. Ces techniques peuvent être particulièrement intéressantes dans la réalité mixte, où les utilisateurs peuvent visualiser naturellement ce volume d’un angle clé, simplement en déplaçant leur tête.
 
 ## <a name="supported-resolutions-on-hololens-1st-gen"></a>Résolutions prises en charge sur HoloLens (1ère génération)
-> [!NOTE]
-> D’autres mises à jour sont à venir. [Afficher la liste des mises à jour](release-notes-april-2018.md)
 
-* Les résolutions actuelles et maximales prises en charge sont les propriétés de la configuration de la [vue](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic.HolographicViewConfiguration#Windows_Graphics_Holographic_HolographicViewConfiguration). HoloLens est défini sur la résolution maximale, à savoir 720p (1268x720) par défaut.
-* La taille de la fenêtre d’affichage la plus basse prise en charge est de 50% de 720p, soit 360p (634x360). Sur HoloLens, il s’agit d’un ViewportScaleFactor de 0,5.
-* Tout ce qui est inférieur à 540p n’est **pas recommandé** en raison de la dégradation visuelle, mais peut être utilisé pour identifier les goulots d’étranglement dans le taux de remplissage des pixels.
+* La taille maximale de la fenêtre d’affichage est une propriété du [HolographicDisplay](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicdisplay). HoloLens est défini sur la taille maximale de la fenêtre d’affichage, à savoir 720p (1268x720) par défaut.
+* La taille de la fenêtre d’affichage peut être modifiée en définissant ViewportScaleFactor sur HolographicCamera. Ce facteur d’échelle est compris entre 0 et 1.
+* La taille de la fenêtre d’affichage la plus faible prise en charge sur HoloLens (1re génération) est de 50% de 720p, soit 360p (634x360). Il s’agit d’un ViewportScaleFactor de 0,5.
+* Toute valeur inférieure à 540p n’est pas recommandée en raison de la dégradation visuelle, mais elle peut être utilisée pour identifier les goulots d’étranglement dans le taux de remplissage des pixels.
 
 ## <a name="supported-resolutions-on-hololens-2"></a>Résolutions prises en charge sur HoloLens 2
 
-> [!NOTE]
-> Plus d’instructions spécifiques à HoloLens 2 bientôt [disponible](news.md).
+* Les tailles de cible de rendu actuelles et maximales prises en charge sont les propriétés de la configuration de la [vue](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic.HolographicViewConfiguration#Windows_Graphics_Holographic_HolographicViewConfiguration). HoloLens 2 est défini sur la taille maximale de la cible de rendu, qui est 1440x936 par défaut.
+* Les applications peuvent modifier la taille des mémoires tampons cibles de rendu en appelant la méthode RequestRenderTargetSize pour demander une nouvelle taille de cible de rendu. Une nouvelle taille de cible de rendu sera choisie, qui satisfait ou dépasse la taille de la cible de rendu demandée. Cette API modifie la taille de la mémoire tampon de la cible de rendu, qui nécessite une réallocation de mémoire sur le GPU. Les implications de cette méthode sont les suivantes : la taille de la cible de rendu peut être réduite pour réduire la sollicitation de la mémoire sur le GPU, et cette méthode ne doit pas être appelée à fréquence élevée.
+* Les applications peuvent toujours modifier la taille de la fenêtre d’affichage de la même façon que pour HoloLens 1. Cela ne provoque pas la réallocation de mémoire sur le GPU, il peut donc être modifié à fréquence élevée, mais ne peut pas être utilisé pour réduire la sollicitation de la mémoire sur le GPU.
+* La taille de la fenêtre d’affichage la plus basse prise en charge sur HoloLens 2 est 634x412. Il s’agit d’un ViewportScaleFactor d’environ 0,44 lorsque la taille de la cible de rendu par défaut est utilisée.
+* Si la taille de la cible de rendu est inférieure à la taille de la fenêtre d’affichage la plus basse prise en charge, le facteur d’échelle de la fenêtre d’affichage est ignoré.
+* Toute valeur inférieure à 540p n’est pas recommandée en raison de la dégradation visuelle, mais elle peut être utilisée pour identifier les goulots d’étranglement dans le taux de remplissage des pixels.
+
 
 
 ## <a name="see-also"></a>Articles associés

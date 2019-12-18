@@ -6,12 +6,12 @@ ms.author: cmeekhof
 ms.date: 10/22/2019
 ms.topic: article
 keywords: Réalité mixte, gestes, interaction, conception
-ms.openlocfilehash: 417811fff9d98e459dc0047d46ea065acfced4ef
-ms.sourcegitcommit: f2b7c6381006fab6d0472fcaa680ff7fb79954d6
+ms.openlocfilehash: 9cfee1104cb9b8135dae51bea73850062fadd25c
+ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74064239"
+ms.lasthandoff: 12/17/2019
+ms.locfileid: "75181999"
 ---
 # <a name="system-gesture"></a>Mouvement système
 
@@ -33,7 +33,7 @@ Le mouvement système est un mouvement manuel utilisé pour appeler le menu Dém
         <td><a href="immersive-headset-hardware-details.md"><strong>Casques immersifs</strong></a></td>
     </tr>
      <tr>
-        <td>Fleuri</td>
+        <td>Bourgeon</td>
         <td>✔️</td>
         <td>❌</td>
         <td>❌</td>
@@ -52,7 +52,7 @@ Le mouvement système est un mouvement manuel utilisé pour appeler le menu Dém
     </tr>
 </table>
 
-## <a name="bloom"></a>Fleuri
+## <a name="bloom"></a>Bourgeon
 Pour afficher le menu Démarrer dans HoloLens (1ère génération), nous avons conçu « fleuri », qui est un geste symbolique imitant la fleur florale. Il est propre à l’interaction surefooted, facile à effectuer et rapide à rappeler. Pour effectuer le mouvement de floraison sur HoloLens (1ère génération), tenez votre main avec votre paume, puis ouvrez votre main en répartissant vos doigts.
 
 :::row:::
@@ -70,7 +70,7 @@ Pour afficher le menu Démarrer dans HoloLens (1ère génération), nous avons c
 
 ---
 
-## <a name="wrist-button"></a>Bouton de poignet
+## <a name="start-gesture"></a>Démarrer le mouvement
 Dans HoloLens 2, nous avons remplacé le geste fleuri par un bouton de poignet virtuel qui permet d’autres interactions instinctual qui ne nécessitent pas d’apprentissage supplémentaire. En présentant les utilisateurs du bouton sur le poignet, ils peuvent accéder de manière intuitive et appuyer dessus.
 
 :::row:::
@@ -89,8 +89,15 @@ Dans HoloLens 2, nous avons remplacé le geste fleuri par un bouton de poignet v
 ---
 
 
-## <a name="eye-gaze-and-palm-up-pinch"></a>Pincez-vous pour les yeux et les paumes
-Nous avons également conçu une solution unique pour faciliter l’accès à HoloLens 2. Ce geste oblige les utilisateurs à examiner le bouton de poignet, puis à utiliser la même main pour effectuer un pincement de palmier à l’aide de leur doigt et de leur doigt d’index.<br>
+## <a name="one-handed-start-gesture"></a>Mouvement de démarrage à une main
+
+> [!IMPORTANT]
+> Pour que le mouvement de démarrage à la main fonctionne :
+>
+> 1. Vous devez effectuer la mise à jour vers la mise à jour de novembre 2019 (Build 18363,1039) ou version ultérieure.
+> 1. Vos yeux doivent être étalonnés sur l’appareil afin que le suivi visuel fonctionne correctement. Si vous ne voyez pas les points d’orbite autour de l’icône de démarrage lorsque vous l’examinez, vos yeux ne sont pas étalonnés sur l’appareil.
+
+Vous pouvez également effectuer le mouvement de démarrage avec une seule main. Pour ce faire, tenez votre main avec votre paume et regardez l' **icône de démarrage** sur votre poignet interne. **Tout en gardant un œil sur l’icône**, pincez votre doigt et votre index ensemble.<br>
 :::row:::
     :::column:::
         bouton de poignet ![](images/wrist-button-ready.png)<br>

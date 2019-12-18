@@ -6,17 +6,26 @@ ms.author: nopohl
 ms.date: 10/21/2019
 ms.topic: article
 keywords: HoloLens, communication à distance, communication à distance holographique
-ms.openlocfilehash: 9ff6a5f7594eb67dd4c1c8690812ab724cac9012
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: f051dbf24cab550470a312933ffb99e1ba595257
+ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926648"
+ms.lasthandoff: 12/17/2019
+ms.locfileid: "75181959"
 ---
 # <a name="holographic-remoting-version-history"></a>Historique des versions de la communication à distance holographique
 
 > [!IMPORTANT]
 > Ce guide est spécifique à la communication à distance holographique sur HoloLens 2.
+
+## Version 2.0.18.0 (17 décembre 2019)<a name="v2.0.18"></a>
+* Ajout de la prise en charge de HolographicViewConfiguration : https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicviewconfiguration
+* Correction de divers bogues qui mènent à des incidents.
+* Correction d’un bogue où un rappel HolographicSpace. CameraAdded était nécessaire pour qu’un HolographicCamera soit accepté et apparaissait comme caméra ajoutée dans le HoloraphicFrame.
+
+## Version 2.0.16 (11 novembre 2019)<a name="2.0.16"></a>
+* Correction du blocage dans le suivi du code QR.
+* Correction de l’exception unhandeled en raison d’une attente de blocage dans le thread principal.
 
 ## Version 2.0.14 (26 octobre 2019)<a name="v2.0.14"></a>
 * Prise en charge des nouvelles API PerceptionDevice (mise à jour de novembre 2019 de Windows 10).
@@ -50,4 +59,4 @@ ms.locfileid: "73926648"
 * [Écriture d’une application hôte de communication à distance holographique](holographic-remoting-create-host.md)
 * [Résolution des problèmes et limitations de la communication à distance holographique](holographic-remoting-troubleshooting.md)
 * [Termes du contrat de licence de la communication à distance holographique](https://docs.microsoft.com/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
-* [Déclaration de confidentialité Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839)
+* [Déclaration de confidentialité de Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839)
