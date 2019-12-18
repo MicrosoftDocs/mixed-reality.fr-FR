@@ -1,61 +1,64 @@
 ---
 title: Son spatial dans Unity
-description: Lit le son spatial qui provient d’un point 3D spécifique dans votre scène Unity.
+description: Lire le son spatial à partir d’un point 3D spécifique dans votre scène Unity.
 author: kegodin
 ms.author: kegodin
 ms.date: 11/07/2019
 ms.topic: article
 keywords: Unity, son spatial, HRTF, taille de la salle
-ms.openlocfilehash: c96717d9df9b89fbb09f0b4466ee3a9bf5c8a149
-ms.sourcegitcommit: 2e54d0aff91dc31aa0020c865dada3ae57ae0ffc
+ms.openlocfilehash: 3e7d0ea231545d5112d182dffbc02f217ca4a4a7
+ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73641077"
+ms.lasthandoff: 12/17/2019
+ms.locfileid: "75181989"
 ---
-# <a name="spatial-sound-in-unity"></a><span data-ttu-id="f1e84-104">Son spatial dans Unity</span><span class="sxs-lookup"><span data-stu-id="f1e84-104">Spatial Sound in Unity</span></span>
+# <a name="spatial-sound-in-unity"></a><span data-ttu-id="c1cf0-104">Son spatial dans Unity</span><span class="sxs-lookup"><span data-stu-id="c1cf0-104">Spatial sound in Unity</span></span>
 
-<span data-ttu-id="f1e84-105">Cette page contient des liens vers des ressources qui vous aideront à utiliser et à concevoir avec Microsoft HRTF Spatializer dans vos projets de réalité mixte Unity.</span><span class="sxs-lookup"><span data-stu-id="f1e84-105">This page links to resources to help you use and design with the Microsoft HRTF spatializer in your Unity mixed reality projects.</span></span>
+<span data-ttu-id="c1cf0-105">Cette page contient des liens vers des ressources pour le son spatial dans Unity.</span><span class="sxs-lookup"><span data-stu-id="c1cf0-105">This page links to resources for spatial sound in Unity.</span></span>
 
-## <a name="enable-spatialization"></a><span data-ttu-id="f1e84-106">Activer Spatialization</span><span class="sxs-lookup"><span data-stu-id="f1e84-106">Enable spatialization</span></span>
+## <a name="spatializer-options"></a><span data-ttu-id="c1cf0-106">Options de Spatializer</span><span class="sxs-lookup"><span data-stu-id="c1cf0-106">Spatializer options</span></span>
+<span data-ttu-id="c1cf0-107">Les options Spatializer pour les applications de réalité mixte sont les suivantes :</span><span class="sxs-lookup"><span data-stu-id="c1cf0-107">Spatializer options for mixed reality applications include:</span></span>
+* <span data-ttu-id="c1cf0-108">*Spatializer MS HRTF*.</span><span class="sxs-lookup"><span data-stu-id="c1cf0-108">The *MS HRTF Spatializer*.</span></span> <span data-ttu-id="c1cf0-109">Unity fournit cela dans le cadre du package facultatif *Windows Mixed Reality* .</span><span class="sxs-lookup"><span data-stu-id="c1cf0-109">Unity provides this as part of the *Windows Mixed Reality* optional package.</span></span>
+  * <span data-ttu-id="c1cf0-110">Cela s’exécute sur le processeur dans une architecture à source unique à coût plus élevé.</span><span class="sxs-lookup"><span data-stu-id="c1cf0-110">This runs on CPU in a higher-cost 'single-source' architecture.</span></span>
+  * <span data-ttu-id="c1cf0-111">Elle est fournie à des fins de compatibilité descendante avec les applications HoloLens d’origine.</span><span class="sxs-lookup"><span data-stu-id="c1cf0-111">This is provided for backwards compatibility with original HoloLens applications.</span></span>
+* <span data-ttu-id="c1cf0-112">*Microsoft Spatializer*.</span><span class="sxs-lookup"><span data-stu-id="c1cf0-112">The *Microsoft Spatializer*.</span></span> <span data-ttu-id="c1cf0-113">Celui-ci est disponible à partir du [dépôt github Microsoft Spatializer](https://github.com/microsoft/spatialaudio-unity).</span><span class="sxs-lookup"><span data-stu-id="c1cf0-113">This is available from the [Microsoft spatializer GitHub repository](https://github.com/microsoft/spatialaudio-unity).</span></span>
+  * <span data-ttu-id="c1cf0-114">Cela utilise une architecture à plusieurs sources moins onéreuse.</span><span class="sxs-lookup"><span data-stu-id="c1cf0-114">This uses a lower-cost 'multi-source' architecture.</span></span>
+  * <span data-ttu-id="c1cf0-115">Sur HoloLens 2, cette valeur est déchargée sur un accélérateur matériel.</span><span class="sxs-lookup"><span data-stu-id="c1cf0-115">On HoloLens 2, this is offloaded to a hardware accelerator.</span></span>
 
-<span data-ttu-id="f1e84-107">Activez le **Spatializer MS HRTF** dans les paramètres audio de votre projet.</span><span class="sxs-lookup"><span data-stu-id="f1e84-107">Enable the **MS HRTF Spatializer** in your project's audio settings.</span></span> <span data-ttu-id="f1e84-108">Pour plus d’informations, consultez la [documentation Spatializer de Unity](https://docs.unity3d.com/Manual/VRAudioSpatializer.html).</span><span class="sxs-lookup"><span data-stu-id="f1e84-108">For more details, see [Unity's spatializer documentation](https://docs.unity3d.com/Manual/VRAudioSpatializer.html).</span></span> 
+<span data-ttu-id="c1cf0-116">Pour les nouvelles applications, nous vous recommandons *Microsoft Spatializer*.</span><span class="sxs-lookup"><span data-stu-id="c1cf0-116">For new applications, we recommend the *Microsoft Spatializer*.</span></span>
 
-<span data-ttu-id="f1e84-109">Attachez une **source audio** à un objet de la hiérarchie et activez Spatialization en activant la case à cocher **activer Spatialization** et en déplaçant le curseur de **lissage spatial** sur « 1 ».</span><span class="sxs-lookup"><span data-stu-id="f1e84-109">Attach an **Audio Source** to an object in the hierarchy, and enable spatialization by checking the **Enable spatialization** checkbox and moving the **Spatial Blend** slider to '1'.</span></span> <span data-ttu-id="f1e84-110">Pour plus d’informations, consultez [la documentation sur la source audio de Unity](https://docs.unity3d.com/2019.3/Documentation/Manual/class-AudioSource.html).</span><span class="sxs-lookup"><span data-stu-id="f1e84-110">For more details, see [Unity's audio source documentation](https://docs.unity3d.com/2019.3/Documentation/Manual/class-AudioSource.html).</span></span> 
+## <a name="enable-spatialization"></a><span data-ttu-id="c1cf0-117">Activer Spatialization</span><span class="sxs-lookup"><span data-stu-id="c1cf0-117">Enable spatialization</span></span>
 
-## <a name="design-with-spatialization"></a><span data-ttu-id="f1e84-111">Conception avec Spatialization</span><span class="sxs-lookup"><span data-stu-id="f1e84-111">Design with spatialization</span></span>
+<span data-ttu-id="c1cf0-118">Utilisez [NuGet pour Unity](https://github.com/GlitchEnzo/NuGetForUnity/releases/latest) pour installer _Microsoft. SpatialAudio. Spatializer. Unity_ et choisissez **Microsoft Spatializer** dans les paramètres audio de votre projet.</span><span class="sxs-lookup"><span data-stu-id="c1cf0-118">Use [NuGet for Unity](https://github.com/GlitchEnzo/NuGetForUnity/releases/latest) to install _Microsoft.SpatialAudio.Spatializer.Unity_ and choose **Microsoft Spatializer** in your project's audio settings.</span></span> <span data-ttu-id="c1cf0-119">Alors :</span><span class="sxs-lookup"><span data-stu-id="c1cf0-119">Then:</span></span>
+* <span data-ttu-id="c1cf0-120">Attacher une **source audio** à un objet dans la hiérarchie</span><span class="sxs-lookup"><span data-stu-id="c1cf0-120">Attach an **Audio Source** to an object in the hierarchy</span></span>
+* <span data-ttu-id="c1cf0-121">Cochez la case **Enable Spatialization**</span><span class="sxs-lookup"><span data-stu-id="c1cf0-121">Check the **Enable spatialization** checkbox</span></span>
+* <span data-ttu-id="c1cf0-122">Déplacez le curseur de **lissage spatial** sur « 1 »</span><span class="sxs-lookup"><span data-stu-id="c1cf0-122">Move the **Spatial Blend** slider to '1'</span></span>
 
-### <a name="distance-based-attenuation"></a><span data-ttu-id="f1e84-112">Atténuation basée sur la distance</span><span class="sxs-lookup"><span data-stu-id="f1e84-112">Distance-based attenuation</span></span>
-<span data-ttu-id="f1e84-113">La dégradation basée sur les distances par défaut d’Unity a une distance minimale de 1 mètre et une distance maximale de 500 mètres, avec un Rolloff logarithmique.</span><span class="sxs-lookup"><span data-stu-id="f1e84-113">Unity's default distance-based decay has a minimum distance of 1 meter and a maximum distance of 500 meters, with a logarithmic rolloff.</span></span> <span data-ttu-id="f1e84-114">Cela peut fonctionner pour votre scénario, ou vous pouvez constater que les sources s’atténuent trop rapidement ou trop lentement.</span><span class="sxs-lookup"><span data-stu-id="f1e84-114">This may work for your scenario, or you may find sources attenuate too quickly or too slowly.</span></span> <span data-ttu-id="f1e84-115">Pour plus d’informations sur [la](https://docs.unity3d.com/2019.3/Documentation/Manual/class-AudioSource.html) définition de ces courbes dans Unity, consultez [conception de sons en réalité mixte](spatial-sound-design.md) pour obtenir les paramètres recommandés pour les courbes de dégradation des distances.</span><span class="sxs-lookup"><span data-stu-id="f1e84-115">See [sound design in mixed reality](spatial-sound-design.md) for recommended settings for distance decay curves, and see [Unity's audio source documentation](https://docs.unity3d.com/2019.3/Documentation/Manual/class-AudioSource.html) for information on setting these curves in Unity.</span></span>
+<span data-ttu-id="c1cf0-123">Pour plus de détails, voir:</span><span class="sxs-lookup"><span data-stu-id="c1cf0-123">For more details, see:</span></span>
+* [<span data-ttu-id="c1cf0-124">Dépôt GitHub Microsoft Spatializer</span><span class="sxs-lookup"><span data-stu-id="c1cf0-124">Microsoft spatializer GitHub repository</span></span>](https://github.com/microsoft/spatialaudio-unity)
+* [<span data-ttu-id="c1cf0-125">Didacticiel Spatializer de Microsoft</span><span class="sxs-lookup"><span data-stu-id="c1cf0-125">Microsoft's spatializer tutorial</span></span>](unity-spatial-audio-ch1.md)
+* [<span data-ttu-id="c1cf0-126">Documentation de la source audio de Unity</span><span class="sxs-lookup"><span data-stu-id="c1cf0-126">Unity's audio source documentation</span></span>](https://docs.unity3d.com/2019.3/Documentation/Manual/class-AudioSource.html)
+* [<span data-ttu-id="c1cf0-127">Documentation Spatializer de Unity</span><span class="sxs-lookup"><span data-stu-id="c1cf0-127">Unity's spatializer documentation</span></span>](https://docs.unity3d.com/Manual/VRAudioSpatializer.html)
 
-### <a name="environment"></a><span data-ttu-id="f1e84-116">Environment</span><span class="sxs-lookup"><span data-stu-id="f1e84-116">Environment</span></span>
-<span data-ttu-id="f1e84-117">Le **Spatializer MS HRTF** comprend un composant de réverbération de salle avec [quatre paramètres de réverbération](https://docs.microsoft.com/windows/win32/api/hrtfapoapi/ne-hrtfapoapi-hrtfenvironment) et un « petit » comme valeur par défaut.</span><span class="sxs-lookup"><span data-stu-id="f1e84-117">The **MS HRTF Spatializer** includes a room reverb component with [four reverb settings](https://docs.microsoft.com/windows/win32/api/hrtfapoapi/ne-hrtfapoapi-hrtfenvironment) and a default of 'small'.</span></span> <span data-ttu-id="f1e84-118">Le paramètre de la salle peut être modifié par programmation pour chaque source audio en joignant le script C# suivant à chaque objet dans Unity qui a une source audio spatiale :</span><span class="sxs-lookup"><span data-stu-id="f1e84-118">The room setting can be changed programmatically for each audio source by attaching the following C# script to each object in Unity that has a spatialized Audio Source:</span></span>
+## <a name="distance-based-attenuation"></a><span data-ttu-id="c1cf0-128">Atténuation basée sur la distance</span><span class="sxs-lookup"><span data-stu-id="c1cf0-128">Distance-based attenuation</span></span>
+<span data-ttu-id="c1cf0-129">La dégradation basée sur les distances par défaut d’Unity a une distance minimale de 1 mètre et une distance maximale de 500 mètres, avec un Rolloff logarithmique.</span><span class="sxs-lookup"><span data-stu-id="c1cf0-129">Unity's default distance-based decay has a minimum distance of 1 meter and a maximum distance of 500 meters, with a logarithmic rolloff.</span></span> <span data-ttu-id="c1cf0-130">Ces paramètres peuvent fonctionner pour votre scénario, ou vous pouvez constater que les sources s’atténuent trop rapidement ou trop lentement.</span><span class="sxs-lookup"><span data-stu-id="c1cf0-130">These settings may work for your scenario, or you may find that sources attenuate too quickly or too slowly.</span></span> <span data-ttu-id="c1cf0-131">Pour plus de détails, voir:</span><span class="sxs-lookup"><span data-stu-id="c1cf0-131">For more details, see:</span></span>
+* <span data-ttu-id="c1cf0-132">[Conception audio en réalité mixte](spatial-sound-design.md) pour les paramètres recommandés.</span><span class="sxs-lookup"><span data-stu-id="c1cf0-132">[Sound design in mixed reality](spatial-sound-design.md) for recommended settings.</span></span>
+* <span data-ttu-id="c1cf0-133">[Documentation de la source audio de Unity](https://docs.unity3d.com/2019.3/Documentation/Manual/class-AudioSource.html) pour obtenir des instructions sur la définition de ces courbes.</span><span class="sxs-lookup"><span data-stu-id="c1cf0-133">[Unity's audio source documentation](https://docs.unity3d.com/2019.3/Documentation/Manual/class-AudioSource.html) for instructions on setting these curves.</span></span>
 
-```cs
-using UnityEngine;
-   using System.Collections;
-   public class SetHRTF : MonoBehaviour    {
-       public enum ROOMSIZE { Small, Medium, Large, None };
-       public ROOMSIZE room = ROOMSIZE.Small;  // Small is regarded as the "most average"
-       // defaults and docs from MSDN
-       // https://msdn.microsoft.com/library/windows/desktop/mt186602(v=vs.85).aspx
-       AudioSource audiosource;
-       void Awake()
-       {
-           audiosource = this.gameObject.GetComponent<AudioSource>();
-           if (audiosource == null)
-           {
-               print("SetHRTFParams needs an audio source to do anything.");
-               return;
-           }
-           audiosource.spatialize = 1; // we DO want spatialized audio
-           audiosource.spread = 0; // we dont want to reduce our angle of hearing
-           audiosource.spatialBlend = 1;   // we do want to hear spatialized audio
-           audiosource.SetSpatializerFloat(1, (float)room);    // 1 is the roomsize param
-       }
-   }
-```
+## <a name="reverb"></a><span data-ttu-id="c1cf0-134">Réverbération</span><span class="sxs-lookup"><span data-stu-id="c1cf0-134">Reverb</span></span>
+<span data-ttu-id="c1cf0-135">Le _Spatializer Microsoft_ désactive les effets postérieurs à Spatializer par défaut.</span><span class="sxs-lookup"><span data-stu-id="c1cf0-135">The _Microsoft Spatializer_ disables post-spatializer effects by default.</span></span> <span data-ttu-id="c1cf0-136">Pour activer la réverbération et d’autres effets pour les sources spatiales :</span><span class="sxs-lookup"><span data-stu-id="c1cf0-136">To enable reverb and other effects for spatialized sources:</span></span>
+* <span data-ttu-id="c1cf0-137">Attacher le composant de niveau d’envoi de l' **effet de salle** à chaque source</span><span class="sxs-lookup"><span data-stu-id="c1cf0-137">Attach the **Room Effect Send Level** component to each source</span></span>
+* <span data-ttu-id="c1cf0-138">Ajustez la courbe de niveau d’envoi pour chaque source, afin de contrôler le gain sur le son renvoyé au graphique pour le traitement des effets</span><span class="sxs-lookup"><span data-stu-id="c1cf0-138">Adjust the send level curve for each source, to control the gain on the audio sent back to the graph for effects processing</span></span>
 
-## <a name="unity-spatial-sound-examples"></a><span data-ttu-id="f1e84-119">Exemples de sons spatiaux Unity</span><span class="sxs-lookup"><span data-stu-id="f1e84-119">Unity spatial sound examples</span></span>
-<span data-ttu-id="f1e84-120">La boîte à outils de réalité mixte (MRTK) comprend des exemples de façons d’appliquer des effets audio en réalité mixte : les [démonstrations MRTK](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.Examples/Demos/Audio).</span><span class="sxs-lookup"><span data-stu-id="f1e84-120">The Mixed Reality Toolkit (MRTK) includes examples of ways to apply audio effects in mixed reality: [MRTK demos](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.Examples/Demos/Audio).</span></span>
+<span data-ttu-id="c1cf0-139">Pour plus d’informations, consultez [le chapitre 5 du didacticiel Spatializer](unity-spatial-audio-ch5.md) .</span><span class="sxs-lookup"><span data-stu-id="c1cf0-139">See [Chapter 5 of the spatializer tutorial](unity-spatial-audio-ch5.md) for details.</span></span>
+
+## <a name="unity-spatial-sound-examples"></a><span data-ttu-id="c1cf0-140">Exemples de sons spatiaux Unity</span><span class="sxs-lookup"><span data-stu-id="c1cf0-140">Unity spatial sound examples</span></span>
+<span data-ttu-id="c1cf0-141">Pour obtenir des exemples de son spatial dans Unity, consultez :</span><span class="sxs-lookup"><span data-stu-id="c1cf0-141">For examples of spatial sound in Unity, see:</span></span>
+* [<span data-ttu-id="c1cf0-142">Démonstrations MRTK</span><span class="sxs-lookup"><span data-stu-id="c1cf0-142">MRTK demos</span></span>](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.Examples/Demos/Audio)
+* <span data-ttu-id="c1cf0-143">[Exemple de projet Microsoft Spatializer](https://github.com/microsoft/spatialaudio-unity/tree/master/Samples/MicrosoftSpatializerSample)</span><span class="sxs-lookup"><span data-stu-id="c1cf0-143">The [Microsoft Spatializer sample project](https://github.com/microsoft/spatialaudio-unity/tree/master/Samples/MicrosoftSpatializerSample)</span></span>
+
+## <a name="next-steps"></a><span data-ttu-id="c1cf0-144">Étapes suivantes</span><span class="sxs-lookup"><span data-stu-id="c1cf0-144">Next steps</span></span>
+* [<span data-ttu-id="c1cf0-145">Conception audio en réalité mixte</span><span class="sxs-lookup"><span data-stu-id="c1cf0-145">Sound design in mixed reality</span></span>](spatial-sound-design.md)
+* [<span data-ttu-id="c1cf0-146">Didacticiel Spatializer de Microsoft</span><span class="sxs-lookup"><span data-stu-id="c1cf0-146">Microsoft's spatializer tutorial</span></span>](unity-spatial-audio-ch1.md)
 
