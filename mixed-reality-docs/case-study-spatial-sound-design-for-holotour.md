@@ -6,78 +6,67 @@ ms.author: jsylte
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, HoloLens, HoloTour, son spatial, étude de cas
-ms.openlocfilehash: e1da80bd647084aa4d7839c0f1b1848b46c2b1b4
-ms.sourcegitcommit: 2e54d0aff91dc31aa0020c865dada3ae57ae0ffc
+ms.openlocfilehash: f2dd704089d9c76b7ba175a4a1ad5cebf9ec6c68
+ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73641156"
+ms.lasthandoff: 12/17/2019
+ms.locfileid: "75181924"
 ---
-# <a name="case-study---spatial-sound-design-for-holotour"></a>Étude de cas-conception de son spatial pour HoloTour
+# <a name="case-study-spatial-sound-design-for-holotour"></a>Étude de cas : conception de son spatial pour HoloTour
 
-Pour créer une visite virtuelle 3D véritablement immersif pour Microsoft HoloLens, les vidéos panoramiques et les scènes holographiques ne font qu’une partie de la formule. Le concepteur audio Jason Syltebo discute de la façon dont le son a été capturé et traité pour vous faire croire que vous êtes en fait dans chacun des emplacements de HoloTour.
+Les vidéos panoramiques et les paysages holographiques ne font qu’une partie de la formule pour une visite virtuelle Microsoft HoloLens véritablement immersif. Cet article décrit comment le son a été utilisé pour vous faire croire que vous êtes en fait à chaque emplacement HoloTour.
 
 ## <a name="the-tech"></a>Le Tech
 
-La belle image et les scènes holographiques que vous voyez dans HoloTour ne sont qu’une partie de la création d’une expérience de réalité mixte incroyable. Alors que les hologrammes ne peuvent apparaître que visuellement devant un utilisateur, la fonctionnalité de [son spatial](spatial-sound.md) de HoloLens permet à l’utilisateur de sortir de toutes les directions, ce qui donne à l’utilisateur une expérience sensorielle plus complète.
+La belle image et les scènes holographiques que vous voyez dans HoloTour ne sont qu’une partie d’une expérience de réalité mixte incroyable. Bien que les hologrammes ne puissent apparaître visuellement qu’à l’avant d’un utilisateur, le [son spatial](spatial-sound.md) fourni par HoloLens dans toutes les directions fournit une expérience sensorielle plus complète.
 
-Le son spatial nous permet de fournir des signaux audio pour indiquer une direction dans laquelle l’utilisateur doit s’allumer, ou pour informer l’utilisateur qu’il y a plus d’hologrammes à afficher dans son espace. Nous pouvons également joindre un son directement à un hologramme et mettre à jour continuellement la direction et la distance de l’hologramme à partir d’un utilisateur pour le faire paraître si le son provient directement de cet objet.
+Le son spatial fournit des signaux pour indiquer une direction que l’utilisateur doit activer ou pour informer l’utilisateur qu’il y a plus d’hologrammes à afficher dans son espace. Nous pouvons également joindre un son directement à un hologramme et mettre à jour continuellement la direction et la distance de l’hologramme de l’utilisateur. Cette technique semble si le son provient directement de cet objet.
 
-Avec HoloTour, nous voulions tirer parti des capacités spatiales de HoloLens pour créer un environnement ambiant à 360 degrés, synchronisé avec la vidéo afin de révéler les points importants de certains emplacements.
+Pour HoloTour, nous souhaitons tirer parti des capacités spatiales de HoloLens pour créer un environnement ambiant à 360 degrés qui est synchronisé avec la vidéo afin de révéler les points forts de certains emplacements.
 
 ## <a name="behind-the-scenes"></a>En arrière-plan
 
-Nous avons créé des expériences HoloTour de deux emplacements différents : Rome et Machu Picchu. Pour faire en sorte que ces présentations soient authentiques et attrayantes, nous souhaitons éviter d’utiliser des sons génériques et capturer des données audio directement à partir des emplacements où nous avions le film.
+Nous avons créé des expériences HoloTour de deux emplacements différents : Rome et Machu Picchu. Pour faire en sorte que ces présentations soient authentiques et attrayantes, nous souhaitons capturer le son à partir des emplacements où nous avons fait des films au lieu d’utiliser des sons génériques.
 
-### <a name="capturing-the-audio"></a>Capture de l’audio
+### <a name="capture-the-audio"></a>Capturer l’audio
 
-Dans notre [étude de cas sur la capture du contenu visuel pour HoloTour](case-study-capturing-and-creating-content-for-holotour.md), nous avons parlé de la conception personnalisée de notre plate-forme de caméra. Elle comprenait 14 caméras GoPro contenues dans un boîtier en 3D, conçue pour les dimensions spécifiques du trépied. Pour capturer de l’audio à partir de cette plate-forme, nous avons ajouté une baie à quatre microphones sous les caméras, qui alimentait une unité d’enregistrement à 4 canaux compacte qui se trouvait à la base du trépied. Nous avons choisi des microphones qui ne se sont pas exécutés correctement, mais qui ont un encombrement très faible, afin de ne pas occultait la vue de l’appareil photo.
+Dans notre [étude de cas sur la capture du contenu visuel pour HoloTour](case-study-capturing-and-creating-content-for-holotour.md), nous parlerons de la conception de notre plate-forme de caméra. Il a été constitué de 14 caméras GoPro dans un logement en 3D qui a été conçu pour s’adapter au trépied. Pour capturer de l’audio, nous avons ajouté un tableau à quatre microphones sous les caméras. Le son a été alimenté dans une unité d’enregistrement à quatre canaux compacte à la base du trépied. Nous avons choisi des microphones qui s’exécutaient bien, mais suffisamment petits pour éviter toute interférence avec les caméras.
 
 ![une caméra personnalisée et un microphone](images/camera-rig-microphones-300px.png)<br>
 *Caméra personnalisée et plate-forme de microphone*
 
-Ce programme d’installation a capturé un son dans quatre directions à partir de l’emplacement précis de notre appareil photo, ce qui nous permet de recréer un panorama en 3D acoustique à l’aide d’un son spatial, que nous pourrions synchroniser ultérieurement avec la vidéo de 360 degrés.
+Ce programme d’installation capture le son dans quatre directions. Nous avons enregistré suffisamment d’informations pour recréer un panoramique acoustique 3D de son spatial, que nous pourrions synchroniser ultérieurement avec la vidéo de 360 degrés.
 
-L’un des défis liés à l’audio de la baie de caméra est que vous êtes à la merci de ce qui est enregistré au moment de la capture. Même si la capture vidéo est correcte, la capture de sons peut devenir problématique en raison de sons d’appareil photo tels que Sirens, les avions ou les vents élevés. Pour nous assurer que nous avions tous les éléments dont nous avons besoin, nous avons utilisé une série d’unités d’enregistrement mono et stéréo pour obtenir des éléments ambiants asynchrones à des points d’intérêt spécifiques à chaque emplacement. Cette capture est importante, car elle offre au concepteur de sons la possibilité de rechercher du contenu propre et utilisable qui peut être utilisé dans le cadre de la publication en production pour créer un intérêt et ajouter de la direction.
+L’un des défis de l’audio de la baie de caméra est que vous êtes à la merci des sons de l’appareil photo, tels que les Sirens, les avions ou les vents élevés. Pour vous assurer que nous avions tous les éléments sonores nécessaires, nous avons également utilisé des enregistreurs mobiles stéréo et mono pour capturer des sons ambiants asynchrones à des points d’intérêt spécifiques à chaque emplacement. Ces enregistrements fournissent le contenu propre au concepteur de sons pour ajouter de l’intérêt et améliorer la direction dans la suite de la production.
 
-Tout jour de capture donné génère un grand nombre de fichiers. Il était important de développer un système pour assurer le suivi des fichiers qui correspondent à un emplacement particulier ou à une capture d’appareil photo. Notre unité d’enregistrement a été configurée de manière à ce qu’elle renomme automatiquement les fichiers par date et prenne le nombre et nous y revenons à la fin de la journée sur les lecteurs externes. Au moins, il est important de faire une SLAT verbale du début des enregistrements audio, car cela permet d’identifier facilement le contenu et de faire en sorte que les noms de fichiers deviennent un problème. Nous avons également important pour nous de vous présenter visuellement la capture de la plateforme de la caméra, car la vidéo et l’audio ont été enregistrés comme des médias distincts et devaient être synchronisés pendant la publication.
+Chaque jour de capture génère de nombreux fichiers. Il était donc important de développer un système pour effectuer le suivi des fichiers qui correspondent à un emplacement ou à une capture d’appareil photo spécifique. Notre unité d’enregistrement a été configurée pour nommer automatiquement les fichiers par date et « Take ». Nous avons sauvegardé des fichiers sur des lecteurs externes à la fin de chaque jour. Nous avons également découvert qu’il était important d’ajouter oralement le début des enregistrements audio. Cette précaution permet d’identifier facilement le contenu en cas de problème de nom de fichier. Il était également important de visualiser visuellement la capture de la caméra, car la vidéo et l’audio ont été enregistrés comme des supports distincts et devaient être synchronisés au cours de la publication.
 
-### <a name="editing-the-audio"></a>Modification de l’audio
+### <a name="edit-the-audio"></a>Modifier l’audio
 
-En retour au Studio après le trajet, la première étape de l’assemblage d’une expérience de l’État oral et immersif consiste à passer en revue l’ensemble de la capture audio pour un emplacement, à choisir les meilleures prises et à identifier les surbrillances qui pourraient être appliquées de façon créative pendant intégration. L’audio est ensuite modifié et nettoyé. Par exemple, un avertisseur bruyant qui dure une seconde ou donc, et se répète plusieurs fois, peut être remplacée par des sections de l’audio ambiant en mode silencieux de la même capture.
+En retour au Studio après le trajet, la première étape de l’assemblage d’une expérience de l’entrée auditive directionnelle et immersive consiste à passer en revue tous les éléments audio capturés pour un emplacement. Nous choisissons la meilleure prise et identifiez les mises en évidence qui peuvent être appliquées au cours de l’intégration. L’audio est ensuite modifié et nettoyé. Par exemple, un signal d’explosion de voiture qui dure une seconde ou, et se répète plusieurs fois, peut être remplacé par un son ambiant plus calme de la même session de capture.
 
-Une fois que la modification vidéo d’un emplacement a été établie, le concepteur de sons peut synchroniser l’audio correspondant. À ce stade, nous avons travaillé avec la capture d’appareil photo et la capture mobile pour décider quels éléments, ou la combinaison de ces éléments, travailleront pour créer une scène audio immersive. Nous avons trouvé une technique utile pour ajouter tous les éléments de son dans un éditeur audio et créer des maquettes linéaires rapides pour expérimenter différentes idées de combinaison. Cela nous a permis de mieux former des idées lorsqu’il était temps de créer les scènes HoloTour réelles.
+Une fois que la modification vidéo d’un emplacement est définie, le concepteur de sons peut synchroniser l’audio correspondant. À ce stade, nous évaluons à la fois les captures de la caméra et des sons mobiles pour décider quels éléments fonctionnent pour créer une scène audio immersive. Nous avons découvert qu’il était utile de placer tous les éléments sonores dans un éditeur audio et de créer des maquettes linéaires rapides pour expérimenter différentes idées de combinaison. Cette étape nous a permis d’obtenir des idées améliorées pour le moment où il était temps de créer les scènes HoloTour réelles.
 
-### <a name="assembling-the-scene"></a>Assemblage de la scène
+### <a name="assemble-the-scene"></a>Assembler la scène
 
-La première étape de la création d’une scène ambiante 3D consiste à créer un lit de sons généraux de bouclage ambiant qui prendront en charge d’autres fonctions et éléments de son interactifs dans une scène. Dans ce cas, nous avons adopté une approche holistique pour les différentes techniques d’implémentation déterminées par les besoins spécifiques et les critères de conception d’une scène particulière. Certaines scènes peuvent être indexées à l’aide de la capture de la caméra synchronisée, tandis que d’autres peuvent nécessiter une approche plus organisée qui utilise des sons, des éléments interactifs et des effets sonores et de musique plus cinématographiques pour des moments plus cinématiques dans HoloTour.
+La première étape de la création d’une scène ambiante 3D consiste à créer un lit de sons généraux de bouclage ambiant qui prendront en charge d’autres fonctions et éléments de son interactifs dans une scène. Nous prenons une approche holistique de l’implémentation, telle que déterminée par les critères de conception d’une scène particulière. Certaines scènes peuvent être indexées vers à l’aide de la capture d’appareil photo synchronisée. Davantage de moments « cinématiques » peuvent nécessiter une approche organisée qui repose sur des sons, des éléments interactifs et de la musique disposés discrètement.
 
-Lors de l’indexation sur l’utilisation de l’audio de capture de l’appareil photo, nous avons placé des signaux audio ambiants compatibles avec le son spatial correspondant aux coordonnées directionnelles de l’orientation de l’appareil photo, de telle sorte que la vue de la caméra Nord lise l’audio du microphone Nord et de la même manière pour les autres directions cardinales. Ces émetteurs sont verrouillés dans le monde entier, ce qui signifie que l’utilisateur peut librement changer sa tête par rapport à ces émetteurs et que le son change en conséquence, en modélisant efficacement le son de la position debout à cet emplacement. Écoutez Piazza Navona ou Pantheon pour obtenir des exemples de scènes qui utilisent une bonne combinaison de l’audio capturé par l’appareil photo.
+Lorsque nous avons indexé l’audio de capture d’appareil photo, nous avons placé des émetteurs audio spatiaux compatibles avec le son spatial qui correspondaient à l’orientation directionnelle des caméras. La vue de la caméra Nord lit les données audio du microphone Nord, et de la même façon pour les autres directions cardinales. Ces émetteurs sont verrouillés dans le monde, ce qui signifie que lorsque l’utilisateur change sa tête par rapport à ces émetteurs, le son change. Cette technique modélise efficacement le son de la position debout à cet emplacement. Écoutez Piazza Navona ou Pantheon pour obtenir des exemples de scènes qui utilisent un bon mélange de données audio capturées par une caméra.
 
-Une approche différente impliquait la lecture d’une ambiance stéréo en boucle avec les émetteurs de sons spatiaux placés autour de la scène en lisant des sons uniques qui sont aléatoires en termes de fréquence de volume, de tangage et de déclenchement. Cela crée une ambiance avec un sens amélioré de la direction. Dans Aguas Calientes, par exemple, vous pouvez écouter comment chaque quadrant du panorama a des émetteurs spécifiques qui mettent intentionnellement en évidence des zones spécifiques de la géographie, mais fonctionnent ensemble pour créer une ambiance immersive globale.
+Dans une approche différente, nous affichons parfois l’ambiance stéréo en boucle conjointement avec les émetteurs de sons spatiaux placés autour de la scène. Ces émetteurs émettent des sons uniques d’une fréquence de déclenchement et de volume aléatoires. Cette technique crée une ambiance qui a un sens amélioré de la direction. Dans Aguas alienates, par exemple, vous pouvez savoir comment chaque quadrant du panorama a des émetteurs spécifiques qui mettent en évidence des zones spécifiques de la géographie, mais qui travaillent ensemble pour créer une ambiance immersive globale.
 
-## <a name="tips-and-tricks"></a>Trucs et astuces
+## <a name="tips-and-tricks"></a>Conseils et astuces
 
-Lorsque vous regroupez des données audio pour une scène, vous pouvez utiliser d’autres méthodes pour mettre en évidence la direction et l’immersion, en utilisant pleinement les capacités spatiales du son de HoloLens. Nous avons fourni une liste d’éléments ci-dessous, à écouter la prochaine fois que vous essayez HoloTour.
-* **Rechercher les cibles**: il s’agit de sons qui se déclenchent uniquement lorsque vous examinez un objet ou une zone spécifique du cadre holographique. Par exemple, si vous recherchez dans la direction du café situé à la rue dans Piazza Navona de Rome, vous déclenchez légèrement les sons d’un restaurant occupé.
-* **Vision locale**: bien que HoloTour contienne certains temps où votre guide de visite guidée, assisté par des hologrammes, explorera un sujet en détail. Par exemple, à mesure que la façade du Pantheon se résout pour révéler le Oculus, le son reverberating placé en tant qu’émetteur 3D à partir de l’intérieur de la Pantheon encourage l’utilisateur à explorer le modèle intérieur.
-* **Orientation améliorée**: dans de nombreuses scènes, nous avons placé des sons de différentes façons pour les ajouter à la direction. Dans la scène Pantheon, par exemple, le son de la Fontaine a été placé comme un émetteur distinct suffisamment proche de l’utilisateur afin qu’il puisse obtenir un sens de « Sonic parallaxe » lorsqu’il parcourt l’espace de lecture. Dans la scène Salinas de Maras, le point de vue individuel de certains des petits flux a été placé en tant qu’émetteurs distincts pour créer un environnement ambiant plus immersif, mettant l’utilisateur en place avec les sons authentiques de cet emplacement.
-* **Émetteur de spline**: cet émetteur de son spatial spécial se déplace dans l’espace 3D par rapport à la position visuelle de l’objet auquel il est attaché. Par exemple, l’apprentissage dans Machu Picchu, où nous avons utilisé un émetteur de spline pour donner un sens distinct de la direction et du mouvement.
-* **Musique et SFX**: certains aspects des HoloTour qui représentent une approche plus stylisée ou cinématographique utilisent la musique et les effets sonores pour renforcer l’impact émotionnelle. Dans la bataille Gladiator à la fin de la visite de Rome, des effets spéciaux tels que whooshes ou des s ont été utilisés pour aider à renforcer l’effet des étiquettes apparaissant en scène.
-
-## <a name="about-the-author"></a>À propos de l’auteur
-
-<table style="border-collapse:collapse">
-<tr>
-<td style="border-style: none" width="60px"><img alt="Picture of Jason Syltebo" width="60" height="60" src="images/syltebo.png"></td>
-<td style="border-style: none"><b>Jason Syltebo</b><br>@Microsoft du concepteur audio</td>
-</tr>
-</table>
+Il existe d’autres façons de mettre en évidence la direction et d’améliorer l’immersion pour tirer pleinement parti des fonctionnalités de son spatial de HoloLens. Nous avons fourni une liste ici. Écoutez ces effets la prochaine fois que vous essaierez HoloTour.
+* **Rechercher les cibles :** Ces sons sont déclenchés lorsque vous examinez un objet ou une zone spécifique du cadre holographique. Par exemple, regardez sur le café de Rome dans Piazza Navona pour déclencher discrètement des sons occupés-restaurants.
+* **Vision locale :** Bien que HoloTour contienne certains « temps » dans lesquels votre guide de visite guidée, assisté par des hologrammes, explore un sujet en profondeur. Par exemple, à mesure que la façade du Pantheon se résout pour révéler le Oculus, le son reverberating qui a été placé en tant qu’émetteur en 3D à partir de l’Pantheon encourage l’utilisateur à explorer l’intérieur.
+* **Orientation améliorée :** Dans de nombreuses scènes, nous avons placé des sons de différentes façons pour les ajouter à la direction. Dans la scène Pantheon, par exemple, le son de la Fontaine a été placé comme un émetteur distinct suffisamment proche de l’utilisateur pour qu’il puisse obtenir un sens « Sonic parallaxe » lorsqu’ils parcourent l’espace de lecture. Dans la scène Salinas de Maras du Pérou, les sons des petits flux individuels ont été placés en tant qu’émetteurs distincts pour créer un environnement ambiant plus immersif, mettant l’utilisateur avec les sons authentiques de cet emplacement.
+* **Émetteur de spline :** Ces émetteurs se déplacent dans l’espace 3D par rapport à la position visuelle de l’objet auquel ils sont attachés. Un exemple est le train dans Machu Picchu, où nous avons utilisé un émetteur de spline pour donner un sens distinct de la direction et du mouvement.
+* **Musique et SFX :** Certains aspects des HoloTour qui représentent une approche plus stylisée ou cinématographique utilisent des effets sonores et musicaux pour renforcer l’impact émotionnelle. Dans la bataille Gladiator à la fin de la visite de Rome, par exemple, des effets spéciaux comme les whooshes et les batteurs aident à renforcer l’effet des étiquettes qui s’affichent en arrière-plan.
 
 ## <a name="see-also"></a>Articles associés
 * [Son spatial](spatial-sound.md)
 * [Conception du son spatial](spatial-sound-design.md)
 * [Son spatial dans Unity](spatial-sound-in-unity.md)
 * [Vidéo : Microsoft HoloLens : HoloTour](https://www.youtube.com/watch?v=pLd9WPlaMpY)
-
- 

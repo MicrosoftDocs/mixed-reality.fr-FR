@@ -6,16 +6,16 @@ ms.author: hakons
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, HoloLens, RoboRaid, son spatial
-ms.openlocfilehash: 9be5c461c1546d241e559f6b2f874656a29b019a
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 1482c914d261cae698a1460873b217b0683cd16b
+ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73436499"
+ms.lasthandoff: 12/17/2019
+ms.locfileid: "75181939"
 ---
 # <a name="case-study---using-spatial-sound-in-roboraid"></a>Étude de cas-utilisation du son spatial dans RoboRaid
 
-Charles SINEX, responsable audio de l’équipe Microsoft HoloLens Experience, discute des défis uniques qu’il a rencontrés lors de la création de l’audio pour [RoboRaid](https://www.microsoft.com/p/roboraid/9nblggh5fv3j), une réalité mixte tir en première mains.
+Cet article décrit les défis uniques que l’équipe de l’expérience Microsoft HoloLens a rencontrés lors de la création de l’audio pour [RoboRaid](https://www.microsoft.com/p/roboraid/9nblggh5fv3j), une première personne de la réalité mixte.
 
 ## <a name="the-tech"></a>Le Tech
 
@@ -35,7 +35,7 @@ Le son spatial peut être exigeant sur le processeur. Pour une expérience occup
 
 Le mécanicien Dodging est l’un des aspects les plus importants du jeu dans RoboRaid, et tout ce que nous avons pensé était véritablement propre à l’expérience HoloLens. Par conséquent, nous voulions que les densités soient très satisfaisantes pour le joueur. Nous avons obtenu le « Whizz-by » Doppler pour paraître assez tôt dans le développement. Initialement, mon plan consistait à utiliser une boucle et à la manipuler en temps réel en utilisant le volume, le tangage et le filtre. L’implémentation de cette opération a été très élaborée. par conséquent, avant de valider des ressources pour réellement créer, nous avons créé un prototype peu coûteux à l’aide d’une ressource avec l’effet Doppler intégré à juste pour savoir comment il a pensé *. Notre développement talentueux l’a fait pour que la WHIZZ de cette ressource soit lue exactement 0,7 secondes avant que le projectile n’ait été passé par l’oreille du joueur et que les résultats ont été très impressionnants ! Inutile de préciser que nous avons fossé la solution la plus complexe et implémenté le prototype.
 
-\* * (Si vous souhaitez plus d’informations sur la création d’une ressource audio avec l’effet Doppler intégré, consultez un article du concepteur de sons Charles Deenan appelé [100 Whooshes en 2 minutes](https://designingsound.org/2010/02/charles-deenen-special-100-whooshes-in-2-minutes/).) *
+*(Pour plus d’informations sur la création d’un élément multimédia audio avec l’effet Doppler intégré, consultez [100 Whooshes dans 2 minutes](http://designingsound.org/2010/02/26/charles-deenen-special-100-whooshes-in-2-minutes/).)*  
 <br>
 ![Dodging avec succès, le projectile récompense le joueur avec un son satisfaisant Whizz.](images/successful-dodge-roboraid-500px.jpg)
 
@@ -73,24 +73,17 @@ L’une des astuces que j’ai découvertes pour faire de certains événements 
 
 Vous pouvez l’essayer vous-même en utilisant les ressources audio ci-dessous :
 
-**Scénario 1**
+**Scénario 1**
 1. Téléchargez [roboraid_enemy_explo_mono. wav](images/roboraid-enemy-explo-mono.wav) et définissez la lecture via un son spatial et affectez-le à un événement.
 2. Téléchargez [roboraid_enemy_explo_stereo. wav](images/roboraid-enemy-explo-stereo.wav) et définissez la lecture en stéréo 2D et attribuez-lui le même événement que ci-dessus. Étant donné que ces éléments multimédias sont normalisés en Unity, Atténuez le volume des deux ressources afin qu’elles ne soient pas découpées.
 3. Lire les deux sons ensemble. Déplacez votre tête pour comprendre le son spatial.
 
-**Scénario 2**
+**Scénario 2**
 1. Téléchargez [roboraid_enemy_explo_summed. wav](images/roboraid-enemy-explo-summed.wav) et définissez la lecture via un son spatial et assignez à un événement.
 2. Lisez cette ressource seule et comparez-la à l’événement du scénario 1.
 3. Essayez un autre équilibre entre les fichiers mono et stéréo.
 
-## <a name="about-the-author"></a>À propos de l’auteur
 
-<table style="border-collapse:collapse">
-<tr>
-<td style="border-style: none" width="60px"><img alt="Picture of Charles Sinex" width="60" height="60" src="images/genericusertile.jpg"></td>
-<td style="border-style: none"><b>Charles SINEX</b><br>Ingénieur audio @Microsoft</td>
-</tr>
-</table>
 
 ## <a name="see-also"></a>Articles associés
 * [Son spatial](spatial-sound.md)
