@@ -6,16 +6,16 @@ ms.author: kkennedy
 ms.date: 03/21/2018
 ms.topic: article
 keywords: image volumétrique, rendu volume, performances, réalité mixte
-ms.openlocfilehash: 1b3ec59adf4f6449ed3f12d7f98f329c4e963ea5
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: 04931df5e4225225e4c11c3f6d72801e2d58f646
+ms.sourcegitcommit: 317653cd8500563c514464f0337c1f230a6f3653
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926679"
+ms.lasthandoff: 12/28/2019
+ms.locfileid: "75503828"
 ---
 # <a name="volume-rendering"></a>Rendu du volume
 
-Pour les volumes d’ingénierie ou d’IRM médicaux, consultez [rendu en volume sur Wikipédia](https://en.wikipedia.org/wiki/Volume_rendering). Ces « images volumétriques » contiennent des informations enrichies avec opacité et couleur dans tout le volume qui ne peuvent pas être facilement exprimées comme des surfaces telles que des [maillages polygones](https://en.wikipedia.org/wiki/Polygon_mesh).
+Pour les volumes d’ingénierie ou d’IRM médicaux, consultez [rendu en volume sur Wikipédia](https://en.wikipedia.org/wiki/Volume_rendering). Ces « images volumétriques » contiennent des informations riches avec de l’opacité et des couleurs dans tout le volume qui ne peuvent pas être facilement exprimées comme surfaces telles que les [maillages polygonaux](https://en.wikipedia.org/wiki/Polygon_mesh).
 
 Solutions clés pour améliorer les performances
 1. MAUVAISE : approche naïve : afficher tout le volume, s’exécute généralement trop lentement
@@ -23,7 +23,7 @@ Solutions clés pour améliorer les performances
 3. BONNE : couper le sous-volume : afficher uniquement quelques couches du volume
 4. BONNE : réduire la résolution du rendu du volume (voir « Mixed Resolution Scene Rendering »)
 
-Il n’existe qu’une certaine quantité d’informations qui peuvent être transférées de l’application à l’écran dans n’importe quel cadre particulier. il s’agit de la bande passante de mémoire totale. En outre, tout traitement (ou « ombrage ») requis pour transformer ces données en vue de leur présentation nécessite également du temps. Les principales considérations à prendre en compte lors du rendu du volume sont les suivantes :
+Il n’existe qu’une certaine quantité d’informations qui peuvent être transférées de l’application à l’écran dans n’importe quel cadre particulier, ce qui correspond à la bande passante de mémoire totale. En outre, tout traitement (ou « ombrage ») requis pour transformer ces données en vue de leur présentation nécessite du temps. Les principales considérations à prendre en compte lors du rendu du volume sont les suivantes :
 * Screen-largeur * Screen-hauteur * Screen-Count * volume-Layers-on-pixel = total-volume-Samples per-Frame
 * 1028 * 720 * 2 * 256 = 378961920 (100%) (Full res volume : exemples trop nombreux)
 * 1028 * 720 * 2 * 1 = 1480320 (0,3% de l’intégralité) (tranche fine : 1 échantillon par pixel, s’exécute sans heurts)
@@ -98,7 +98,7 @@ float4 ShadeVol( float intensity ) {
    color.rgba = tex2d( ColorRampTexture, float2( unitIntensity, 0 ) );
 ```
 
-Dans de nombreuses applications que nous stockons dans notre volume à la fois une valeur d’intensité brute et un « index de segmentation » (pour segmenter différentes parties telles que la peau et le segment, ces segments sont généralement créés par des experts dans des outils dédiés). Cela peut être combiné avec l’approche ci-dessus pour mettre une couleur différente, ou même une gamme de couleurs différente pour chaque index de segment :
+Dans la plupart de nos applications, nous stockons dans notre volume à la fois une valeur d’intensité brute et un « index de segmentation » (pour segmenter différentes parties, telles que la peau et le segment ; ces segments sont généralement créés par des experts dans des outils dédiés). Cela peut être combiné avec l’approche ci-dessus pour mettre une couleur différente, ou même une gamme de couleurs différente pour chaque index de segment :
 
 ```
 // Change color to match segment index (fade each segment towards black):
@@ -181,11 +181,11 @@ float4 volTraceSubVolume(float3 objPosStart, float3 cameraPosVolSpace) {
 
 Comment restituer une partie de la scène avec une résolution faible et la remettre en place :
 1. Configurer deux caméras hors écran, une pour suivre chaque œil qui met à jour chaque image
-2. Configurer deux cibles de rendu basse résolution (par exemple, 200x200 chacune), que les caméras affichent
+2. Configurer deux cibles de rendu basse résolution (par exemple, 200x200 chacune) à laquelle les caméras s’affichent
 3. Configurer un Quad qui se déplace devant l’utilisateur
 
 Chaque frame :
 1. Dessinez les cibles de rendu pour chaque œil à basse résolution (données de volume, nuanceurs onéreux, etc.).
 2. Dessinez la scène normalement en tant que résolution complète (mailles, UI, etc.)
-3. Dessinez une quadruple face avant l’utilisateur, sur la scène, et projetez les rendus basse résolution sur cela.
-4. Résultat : combinaison visuelle d’éléments à pleine résolution avec des données de volume à faible résolution mais à haute densité.
+3. Dessinez une quadruple face avant l’utilisateur, sur la scène, et projetez les rendus de faible résolution sur cela
+4. Résultat : combinaison visuelle d’éléments à pleine résolution avec des données de volume à faible résolution mais à haute densité

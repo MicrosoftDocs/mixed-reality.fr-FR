@@ -6,12 +6,12 @@ ms.author: wguyman
 ms.date: 06/12/2019
 ms.topic: article
 keywords: appareil photo, hololens, caméra couleur, frontal, hololens 2, CV, vision par ordinateur, fiduciaire, marqueurs, code QR, QR, photo, vidéo
-ms.openlocfilehash: e906da63b07643ccbf386c6fc72cc3c58006ae72
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: f4c62a1c2ad7cf4de569e815ffc405fbcb06744a
+ms.sourcegitcommit: d0da0214fdd2bbac5a91a5d895bf0e87413b29b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438503"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597622"
 ---
 # <a name="locatable-camera"></a>Appareil photo localisable
 
@@ -25,10 +25,10 @@ HoloLens intègre une caméra universelle montée sur l’avant de l’appareil,
 * La lumière blanche sur la confidentialité dans le monde s’illumine quand l’appareil photo est actif
 * L’appareil photo prend en charge les modes suivants (tous les modes sont des proportions 16:9) à 30, 24, 20, 15 et 5 i/s :
 
-  |  Video  |  Preview  |  Subsist  |  Champ horizontal de l’affichage (H-angle d’affichage) |  Utilisation suggérée | 
+  |  Video  |  Préversion  |  Subsist  |  Champ horizontal de l’affichage (H-angle d’affichage) |  Utilisation suggérée | 
   |----------|----------|----------|----------|----------|
-  |  1280 x 720 |  1280 x 720 |  1280 x 720 |  45deg  |  (mode par défaut avec stabilisation vidéo) | 
-  |  N/A |  N/A |  2048x1152 |  67deg |  Image toujours la plus haute résolution | 
+  |  1280x720 |  1280x720 |  1280x720 |  45deg  |  (mode par défaut avec stabilisation vidéo) | 
+  |  NON APPLICABLE |  NON APPLICABLE |  2048x1152 |  67deg |  Image toujours la plus haute résolution | 
   |  1408x792 |  1408x792 |  1408x792 |  48deg |  Résolution de suranalyse (remplissage) avant la stabilisation vidéo | 
   |  1344x756 |  1344x756 |  1344x756 |  67deg |  Mode vidéo grand angle avec suranalyse | 
   |  896x504 |  896x504 |  896x504 |  48deg |  Mode faible puissance/faible résolution pour les tâches de traitement des images | 
@@ -40,7 +40,7 @@ HoloLens intègre une caméra universelle montée sur l’avant de l’appareil,
 * HoloLens 2 prend en charge différents profils d’appareil photo. Découvrez comment [découvrir et sélectionner les fonctionnalités de l’appareil photo](https://docs.microsoft.com//windows/uwp/audio-video-camera/camera-profiles).
 * L’appareil photo prend en charge les profils et résolutions suivants (tous les modes vidéo sont des proportions 16:9) :
   
-  | Profil                                         | Video     | Preview   | Subsist     | Fréquences d’images | Champ horizontal de l’affichage (H-angle d’affichage) | Utilisation suggérée                             |
+  | Profil                                         | Video     | Préversion   | Subsist     | Fréquences d’images | Champ horizontal de l’affichage (H-angle d’affichage) | Utilisation suggérée                             |
   |-------------------------------------------------|-----------|-----------|-----------|-------------|----------------------------------|---------------------------------------------|
   | Hérité, 0 BalancedVideoAndPhoto, 100             | 2272x1278 | 2272x1278 |           | 15, 30       | 64,69                            | Enregistrement vidéo de haute qualité                |
   | Hérité, 0 BalancedVideoAndPhoto, 100             | 896x504   | 896x504   |           | 15, 30       | 64,69                            | Aperçu du flux pour la capture de photos de haute qualité |
@@ -49,8 +49,8 @@ HoloLens intègre une caméra universelle montée sur l’avant de l’appareil,
   | BalancedVideoAndPhoto, 120                       | 1504x846  | 1504x846  |           | 15, 30       | 64,69                            | Scénarios de longue durée                     |
   | Visioconférence, 100                           | 1952x1100 | 1952x1100 | 1952x1100 | 15, 30, 60    | 64,69                            | Vidéoconférence, scénarios de longue durée |
   | Visioconférence, 100                           | 1504x846  | 1504x846  |           | 5, 15, 30, 60  | 64,69                            | Vidéoconférence, scénarios de longue durée |
-  | Visioconférence, 100 BalancedVideoAndPhoto, 120 | 1920 x 1080 | 1920 x 1080 | 1920 x 1080 | 15, 30       | 64,69                            | Vidéoconférence, scénarios de longue durée |
-  | Visioconférence, 100 BalancedVideoAndPhoto, 120 | 1280 x 720  | 1280 x 720  | 1280 x 720  | 15, 30       | 64,69                            | Vidéoconférence, scénarios de longue durée |
+  | Visioconférence, 100 BalancedVideoAndPhoto, 120 | 1920x1080 | 1920x1080 | 1920x1080 | 15, 30       | 64,69                            | Vidéoconférence, scénarios de longue durée |
+  | Visioconférence, 100 BalancedVideoAndPhoto, 120 | 1280x720  | 1280x720  | 1280x720  | 15, 30       | 64,69                            | Vidéoconférence, scénarios de longue durée |
   | Visioconférence, 100 BalancedVideoAndPhoto, 120 | 1128x636  |           |           | 15, 30       | 64,69                            | Vidéoconférence, scénarios de longue durée |
   | Visioconférence, 100 BalancedVideoAndPhoto, 120 | 960 x 540   |           |           | 15, 30       | 64,69                            | Vidéoconférence, scénarios de longue durée |
   | Visioconférence, 100 BalancedVideoAndPhoto, 120 | 760x428   |           |           | 15, 30       | 64,69                            | Vidéoconférence, scénarios de longue durée |
@@ -69,11 +69,11 @@ Lorsque HoloLens prend des photos et des vidéos, les images capturées incluent
 
 La « caméra » dans la documentation HoloLens peut faire référence à la « caméra de jeu virtuelle » (le frustum rendu de l’application à). Sauf indication contraire, « Camera » sur cette page fait référence à la caméra de couleurs RVB réelle.
 
-Les détails de cette page traitent de l’utilisation de la classe [MediaFrameReference](https://docs.microsoft.com//uwp/api/windows.media.capture.frames.mediaframereference) . Toutefois, il existe également des API permettant d’extraire des emplacements et des intrinsèques de caméra à l’aide d' [attributs Media Foundation](https://msdn.microsoft.com/library/windows/desktop/mt740395(v=vs.85).aspx). Pour plus d’informations, reportez-vous à l' [exemple de suivi de visage holographique](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/HolographicFaceTracking) .
+Les détails de cette page couvrent l’utilisation de la classe [MediaFrameReference](https://docs.microsoft.com//uwp/api/windows.media.capture.frames.mediaframereference) . Toutefois, il existe également des API permettant d’extraire des emplacements et des intrinsèques de caméra à l’aide d' [attributs Media Foundation](https://msdn.microsoft.com/library/windows/desktop/mt740395(v=vs.85).aspx). Pour plus d’informations, reportez-vous à l' [exemple de suivi de visage holographique](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/HolographicFaceTracking) .
 
 ### <a name="images-with-coordinate-systems"></a>Images avec systèmes de coordonnées
 
-Chaque image (qu’il s’agisse de photo ou de vidéo) comprend un [SpatialCoordinateSystem](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialcoordinatesystem) enraciné à l’appareil photo au moment de la capture, qui est accessible à l’aide de la propriété [CoordinateSystem](https://docs.microsoft.com//uwp/api/windows.media.capture.frames.mediaframereference.coordinatesystem#Windows_Media_Capture_Frames_MediaFrameReference_CoordinateSystem) de votre [MediaFrameReference](https://docs.microsoft.com//uwp/api/Windows.Media.Capture.Frames.MediaFrameReference). En outre, chaque cadre contient une description du modèle d’objectif de l’appareil photo, qui se trouve dans la propriété [CameraIntrinsics](https://docs.microsoft.com//uwp/api/windows.media.capture.frames.videomediaframe.cameraintrinsics#Windows_Media_Capture_Frames_VideoMediaFrame_CameraIntrinsics) . Ensemble, ces transformations définissent pour chaque pixel un rayon dans l’espace 3D représentant le chemin emprunté par les photons qui ont produit le pixel. Ces rayons peuvent être liés à d’autres contenus dans l’application en obtenant la transformation du système de coordonnées du cadre vers un autre système de coordonnées (par exemple, à partir d’une [image stationnaire de référence](coordinate-systems.md#stationary-frame-of-reference)). Pour résumer, chaque frame d’image fournit les éléments suivants :
+Chaque image (qu’il s’agisse d’une photo ou d’une vidéo) comprend un [SpatialCoordinateSystem](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialcoordinatesystem) enraciné à l’appareil photo au moment de la capture, qui est accessible à l’aide de la propriété [CoordinateSystem](https://docs.microsoft.com//uwp/api/windows.media.capture.frames.mediaframereference.coordinatesystem#Windows_Media_Capture_Frames_MediaFrameReference_CoordinateSystem) de votre [MediaFrameReference](https://docs.microsoft.com//uwp/api/Windows.Media.Capture.Frames.MediaFrameReference). En outre, chaque frame contient une description du modèle d’objectif de l’appareil photo, qui se trouve dans la propriété [CameraIntrinsics](https://docs.microsoft.com//uwp/api/windows.media.capture.frames.videomediaframe.cameraintrinsics#Windows_Media_Capture_Frames_VideoMediaFrame_CameraIntrinsics) . Ensemble, ces transformations définissent pour chaque pixel un rayon dans l’espace 3D représentant le chemin emprunté par les photons qui ont produit le pixel. Ces rayons peuvent être liés à d’autres contenus dans l’application en obtenant la transformation du système de coordonnées du cadre vers un autre système de coordonnées (par exemple, à partir d’une [image stationnaire de référence](coordinate-systems.md#stationary-frame-of-reference)). Pour résumer, chaque frame d’image fournit les éléments suivants :
 * Données de pixels (au format RGB/NV12/JPEG/etc.)
 * Un [SpatialCoordinateSystem](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialcoordinatesystem) à partir de l’emplacement de capture
 * Une classe [CameraIntrinsics](https://docs.microsoft.com//uwp/api/windows.media.capture.frames.videomediaframe.cameraintrinsics#Windows_Media_Capture_Frames_VideoMediaFrame_CameraIntrinsics) contenant le mode de l’objectif de l’appareil photo
@@ -90,7 +90,7 @@ Pour passer de « CameraIntrinsics » et « CameraCoordinateSystem » à vot
 
 Sur HoloLens, les flux vidéo et d’images fixes ne sont pas déformés dans le pipeline de traitement d’image du système avant que les frames ne soient mis à disposition de l’application (le flux de préversion contient les frames déformés d’origine). Étant donné que seules les CameraIntrinsics sont disponibles, les applications doivent supposer que les images d’images représentent une caméra Pinhole parfaite.
 
-Sur HoloLens (première génération), la fonction de désdistortion dans le processeur d’images peut toujours provoquer une erreur pouvant atteindre 10 pixels lors de l’utilisation de CameraIntrinsics dans les métadonnées de frame. Dans de nombreux cas d’utilisation, cette erreur n’a pas d’importance, mais si vous alignez des hologrammes sur des affiches/marqueurs réels, par exemple, et que vous remarquez un décalage de < 10px (à peu près 11mm pour les hologrammes positionnés sur 2 mètres), cette erreur peut être due à une déformation. 
+Sur HoloLens (première génération), la fonction d’intorsion dans le processeur d’images peut toujours provoquer une erreur pouvant atteindre 10 pixels lors de l’utilisation de CameraIntrinsics dans les métadonnées de frame. Dans de nombreux cas d’utilisation, cette erreur n’a pas d’importance, mais si vous alignez des hologrammes sur des affiches/marqueurs réels, par exemple, et que vous remarquez un décalage de < 10px (à peu près 11mm pour les hologrammes positionnés sur 2 mètres), cette erreur de distorsion peut en être la cause. 
 
 ## <a name="locatable-camera-usage-scenarios"></a>Scénarios d’utilisation d’appareil photo localisables
 
@@ -105,7 +105,7 @@ De nombreuses applications de réalité mixte utilisent une image ou un modèle 
 Pour reconnaître un modèle visuel, puis placer cet objet dans l’espace universel des applications, vous avez besoin de quelques éléments :
 1. Boîte à outils de reconnaissance de modèle d’image, telle que le code QR, les balises AR, le Finder de visages, les traceurs de cercle, la reconnaissance optique, etc.
 2. Collecter les trames d’image au moment de l’exécution et les transmettre à la couche de reconnaissance
-3. Déprojetez leurs emplacements d’images dans des positions universelles ou des rayons de monde probables. Voir
+3. Déprojetez leurs emplacements d’images dans des positions universelles ou des rayons de monde probables. 
 4. Positionner vos modèles virtuels sur ces emplacements mondiaux
 
 Voici quelques liens importants sur le traitement des images :
@@ -122,7 +122,7 @@ Le maintien d’une fréquence d’images d’application interactive est essent
 5. Thread principal : déplace le modèle virtuel pour trouver les points clés trouvés
 6. Thread principal : répéter à l’étape 2
 
-Certains systèmes de marqueurs d’images ne fournissent qu’un seul emplacement de pixel (les autres fournissent la transformation complète, auquel cas cette section n’est pas nécessaire), qui équivaut à un rayon d’emplacements possibles. Pour atteindre un emplacement 3D unique, nous pouvons ensuite tirer parti de plusieurs rayons et trouver le résultat final en fonction de leur intersection approximative. Pour ce faire, vous devez :
+Certains systèmes de marqueurs d’images ne fournissent qu’un seul emplacement de pixel (les autres fournissent la transformation complète, auquel cas cette section n’est pas nécessaire), qui équivaut à un rayon d’emplacements possibles. Pour atteindre un emplacement 3D unique, nous pouvons ensuite tirer parti de plusieurs rayons et trouver le résultat final en fonction de leur intersection approximative. Pour ce faire, procédez comme suit :
 1. Obtenir une boucle qui collecte plusieurs images d’appareil photo
 2. Rechercher les points de fonctionnalités associés et leurs rayons mondiaux
 3. Lorsque vous disposez d’un dictionnaire de fonctionnalités, chacun avec plusieurs rayons de monde, vous pouvez utiliser le code suivant pour résoudre l’intersection de ces rayons :
@@ -145,7 +145,7 @@ public static Vector3 ClosestPointBetweenRays(
  }
 ```
 
-À partir de deux ou plusieurs emplacements d’étiquette suivis, vous pouvez positionner une scène modélisée pour l’adapter au scénario actuel des utilisateurs. Si vous ne pouvez pas supposer la gravité, vous aurez besoin de trois emplacements de balises. Dans de nombreux cas, nous utilisons un modèle de couleurs simple où les blancs représentent les emplacements de balises suivi en temps réel, et les sphères bleues représentent les emplacements de balise modélisés, ce qui permet à l’utilisateur de mesurer visuellement la qualité d’alignement. Nous supposons l’installation suivante dans toutes nos applications :
+À partir de deux ou plusieurs emplacements d’étiquette suivis, vous pouvez positionner une scène modélisée pour l’adapter au scénario actuel de l’utilisateur. Si vous ne pouvez pas supposer la gravité, vous aurez besoin de trois emplacements de balises. Dans de nombreux cas, nous utilisons un modèle de couleurs simple où les blancs représentent les emplacements de balises suivi en temps réel, et les sphères bleues représentent les emplacements de balise modélisés. Cela permet à l’utilisateur de mesurer visuellement la qualité d’alignement. Nous supposons l’installation suivante dans toutes nos applications :
 * Deux ou plusieurs emplacements de balise modélisés
 * Un « espace d’étalonnage » qui, dans la scène, est le parent des balises
 * Identificateur de la fonctionnalité de l’appareil photo

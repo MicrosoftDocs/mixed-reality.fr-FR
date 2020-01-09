@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 08/27/2019
 ms.topic: article
 keywords: HoloLens, MRTK, kit d’outils de réalité mixte, Windows Mixed Reality, conception, exemple d’application, contrôles
-ms.openlocfilehash: 95c81442cc390da8ac7c9a8de218341cb5e7c948
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: ad9d2755522c2610ae051fa61f96605e49404d2d
+ms.sourcegitcommit: 5054f5c23965ce56599cb29ac9d9c6e48812dabd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73439650"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75623496"
 ---
 # <a name="mrtk-101-how-to-use-mixed-reality-toolkit-unity-for-basic-interactions-hololens-2-hololens-windows-mixed-reality-openvr"></a>MRTK 101 : comment utiliser le kit de tâches de la réalité mixte pour les interactions de base (HoloLens 2, HoloLens, Windows Mixed Reality, Open VR)
 
@@ -55,7 +55,7 @@ ManipulationHandler.cs prend en charge la rotation/la mise à l’échelle à de
 <img alt="NearInteractionGrabbable and ManipulationHandler.cs assigned to an object" width="800" src="images/MRTK101/MRTK_ManipulationHandler.gif">
 
 ## <a name="how-to-move-or-rotate-an-object-with-precision"></a>Comment déplacer ou faire pivoter un objet avec une précision ?
-Assignez BoundingBox.cs à un objet pour utiliser le cadre englobant qui est l’interface pour la mise à l’échelle et la rotation d’un objet. Par défaut, il affiche les handles et les câbles bleus de style HoloLens 1. Pour utiliser des handles animés basés sur le style HoloLens 2, vous devez assigner des prefabs et des matériaux. Pour plus d’informations sur la configuration, reportez-vous à la documentation du cadre englobant et à la scène BoundingBoxExamples. Unity.
+Assignez BoundingBox.cs à un objet pour utiliser le cadre englobant qui est l’interface pour la mise à l’échelle et la rotation d’un objet. Par défaut, il affiche les handles et les câbles bleus de style HoloLens 1. Pour utiliser des handles animés basés sur le style HoloLens 2, vous devez assigner des prefabs et des matériaux. Pour plus d’informations sur la configuration, reportez-vous à la [documentation du cadre englobant](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_BoundingBox.html) et à la scène BoundingBoxExamples. Unity.
 
 <img alt="BoundingBox.cs assigned to an object" width="800" src="images/MRTK101/MRTK_BoundingBox.png">
 
@@ -132,7 +132,7 @@ Assignez le script Billboard.cs à un objet. Elle sera toujours face à vous, qu
 
 Vous êtes prêt à créer des expériences étonnantes pour la réalité mixte ? Visitez les pages ci-dessous et apprenez-en davantage sur MRTK et la réalité mixte.
 
-## <a name="about-the-author"></a>À propos de l’auteur
+## <a name="about-the-author"></a>À propos de l'auteur
 
 <table style="border-collapse:collapse" padding-left="0px">
 <tr>

@@ -6,12 +6,12 @@ ms.author: wguyman
 ms.date: 03/21/2018
 ms.topic: article
 keywords: contrôleurs 6DOF, contrôleurs de mouvement
-ms.openlocfilehash: 84ebc6c0d7c63e58346b6ee9e565811bc40571b5
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: e4b3946401bcc9abfcefeb3e33bb79f01526ba20
+ms.sourcegitcommit: d0da0214fdd2bbac5a91a5d895bf0e87413b29b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437853"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597672"
 ---
 # <a name="motion-controllers"></a>Contrôleurs de mouvement
 
@@ -30,7 +30,7 @@ ms.locfileid: "73437853"
 
 ---
 
-## <a name="device-support"></a>Prise en charge des appareils
+## <a name="device-support"></a>Périphériques pris en charge
 
 <table>
 <colgroup>
@@ -62,14 +62,14 @@ Les contrôleurs de mouvement Windows Mixed Reality permettent un suivi précis 
 ![connaître votre](images/controllerimage-750px.png) de contrôleur<br>
 *Découverte de votre contrôleur*
 
-**Éléments**
+**Fonctionnalités :**
 * Suivi optique
 * Déclencheur
 * Bouton de manipulation
 * Stick
 * Pavé tactile
 
-## <a name="setup"></a>Configurer
+## <a name="setup"></a>Installation
 
 ### <a name="before-you-begin"></a>Avant de commencer
 
@@ -87,7 +87,7 @@ Les contrôleurs de mouvement Windows Mixed Reality permettent un suivi précis 
 Les contrôleurs de mouvement peuvent être liés à un PC hôte à l’aide de paramètres Windows, comme tout autre appareil Bluetooth.
 
 1. Insérez 2 piles AA à l’arrière du contrôleur. Laissez la couverture de la batterie désactivée pour le moment.
-2. Si vous utilisez une carte Bluetooth USB externe au lieu d’une radio Bluetooth intégrée, passez en revue les [meilleures pratiques Bluetooth](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality#bluetooth-best-practices) avant de continuer. Pour la configuration du bureau avec la radio intégrée, vérifiez que l’antenne est connectée.
+2. Si vous utilisez une carte Bluetooth USB externe au lieu d’une radio Bluetooth intégrée, passez en revue les [meilleures pratiques relatives à Bluetooth](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality#bluetooth-best-practices) avant de continuer. Pour la configuration du bureau avec la radio intégrée, assurez-vous que l’antenne est connectée.
 3. Ouvrez **Paramètres Windows** -> **appareils** -> **Ajouter bluetooth ou un autre appareil** -> **Bluetooth** et supprimer toutes les instances antérieures de « pilote de mouvement – droite » et « contrôleur de mouvement – gauche ». Consultez également la catégorie autres périphériques au bas de la liste.
 4. Sélectionnez **Ajouter un périphérique Bluetooth ou un autre appareil** pour voir comment détecter des appareils Bluetooth.
 5. Appuyez sur le bouton Windows du contrôleur et maintenez-le enfoncé pour le mettre sous tension.
@@ -112,7 +112,7 @@ Les contrôleurs de mouvement peuvent être liés à un PC hôte à l’aide de 
 
 :::row:::
     :::column:::
-        Après avoir couplé avec succès les deux contrôleurs, vos paramètres doivent ressembler à ceci sous **la catégorie « souris, clavier, & stylet »** . <br>
+        Une fois que les deux contrôleurs ont été appariés, vos paramètres doivent ressembler à ce qui suit, sous la **catégorie « souris, clavier, & stylet »** . <br>
         <br>
         *Image : contrôleurs de mouvement connectés*
     :::column-end:::
@@ -121,7 +121,7 @@ Les contrôleurs de mouvement peuvent être liés à un PC hôte à l’aide de 
     :::column-end:::
 :::row-end:::
 
-Si les contrôleurs sont désactivés après l’appariement, leur état s’affiche comme jumelé. Si les contrôleurs restent définitivement sous « autres périphériques », la combinaison de catégories n’a peut-être été que partiellement terminée et doit être réexécutée pour obtenir la fonctionnalité du contrôleur.
+Si les contrôleurs sont désactivés après l’appariement, leur état s’affiche comme jumelé. Si les contrôleurs restent définitivement sous la catégorie « autres périphériques », le couplage n’a peut-être été effectué que partiellement et doit être réexécuté pour que le contrôleur fonctionne.
 
 ### <a name="updating-controller-firmware"></a>Mise à jour du microprogramme du contrôleur
 
@@ -146,7 +146,7 @@ Si les contrôleurs sont désactivés après l’appariement, leur état s’aff
 
 ## <a name="gazing-and-pointing"></a>Gazing et pointage
 
-Windows Mixed Reality prend en charge deux modèles clés pour l’interaction, le point de présence **et la validation** , ainsi que le **point et la validation**:
+Windows Mixed Reality prend en charge deux modèles clés pour l’interaction ; **pointage et pointer et valider**:
 * Avec le point de suspension **et la validation**, les utilisateurs ciblent un objet avec le [regard](gaze-and-commit.md) , puis sélectionnent les objets avec des robinets à main, un boîtier de soucoursment, un clic ou leur voix.
 * Avec **point et validation**, un utilisateur peut viser un contrôleur de mouvement de pointage sur l’objet cible, puis sélectionner des objets avec le déclencheur du contrôleur.
 
@@ -162,7 +162,7 @@ Pour gérer ce type de réenroulement qui peut se produire lorsque les utilisate
 
 Windows Mixed Reality prend en charge les contrôleurs de mouvement dans un large éventail de facteurs de forme, la conception de chaque contrôleur étant différente dans sa relation entre la position de l’utilisateur et la direction « avant » naturelle que les applications doivent utiliser pour pointer lors du rendu de la SideWinder.
 
-Pour mieux représenter ces contrôleurs, il existe deux genres de poses que vous pouvez examiner pour chaque source d’interaction, le pose de la **poignée** et le **pointeur se posent**.
+Pour mieux représenter ces contrôleurs, il existe deux types de poses que vous pouvez examiner pour chaque source d’interaction. la **poignée pose** et le **pointeur se posent**.
 
 ### <a name="grip-pose"></a>Poignée de pose
 
@@ -224,7 +224,7 @@ Ces États de suivi du contrôleur de mouvement sont définis comme suit :
 ## <a name="interactions-low-level-spatial-input"></a>Interactions : entrée spatiale de bas niveau
 
 Les interactions de base entre les contrôleurs mains et Motion sont **Select**, **menu**, rescelle, **Touchpad** **,** **stick analogique**et **familial**.
-* **Select** est l’interaction principale pour activer un hologramme, qui consiste en une pression suivie d’une mise en sortie. Pour les contrôleurs de mouvement, vous effectuez une pression Select à l’aide du déclencheur du contrôleur. D’autres façons d’effectuer une sélection sont en parlant la [commande vocale](voice-input.md) « Select ». La même interaction SELECT peut être utilisée dans n’importe quelle application. Pensez à sélectionner comme équivalent d’un clic de souris, une action universelle que vous découvrez une fois, puis appliquez-la à toutes vos applications.
+* **Select** est l’interaction principale pour activer un hologramme, qui consiste en une pression suivie d’une mise en sortie. Pour les contrôleurs de mouvement, vous effectuez une pression Select à l’aide du déclencheur du contrôleur. D’autres façons d’effectuer une sélection sont en parlant la [commande vocale](voice-input.md) « Select ». La même interaction SELECT peut être utilisée dans n’importe quelle application. Pensez à sélectionner comme équivalent d’un clic de souris ; une action universelle que vous découvrez une fois, puis appliquez-la à toutes vos applications.
 * **Menu** est l’interaction secondaire pour agir sur un objet, utilisée pour extraire un menu contextuel ou effectuer une autre action secondaire. Avec les contrôleurs de mouvement, vous pouvez effectuer une action de menu à l’aide du bouton de *menu* du contrôleur. (c’est-à-dire le bouton avec l’icône « menu » du hamburger)
 * **Saisissez** comment les utilisateurs peuvent directement agir sur les objets à leur disposition pour les manipuler. Avec les contrôleurs de mouvement, vous pouvez faire une action en appuyant sur votre avant-première. Un contrôleur de mouvement peut détecter une compréhension à l’aide d’un bouton de manipulation, d’un déclencheur Palm ou d’un autre capteur.
 * Le **pavé tactile** permet à l’utilisateur d’ajuster une action en deux dimensions le long de la surface du pavé tactile d’un contrôleur de mouvement, en validant l’action en cliquant sur le bouton du pavé tactile. Les pavés tactiles fournissent un état appuyé, un État touché et des coordonnées XY normalisées. Plage X et Y comprise entre-1 et 1 dans la plage du pavé tactile circulaire, avec un centre à (0,0). Pour X,-1 est sur la gauche et 1 est sur la droite. Pour Y,-1 est en bas et 1 est en haut.
@@ -251,7 +251,7 @@ Pour plus d’informations sur la façon de charger dynamiquement des modèles d
  
 [Image de ligne des contrôleurs de mouvement pleine résolution dans' ' 'noir' ' '](images/motioncontrollers-black.png)
 
-## <a name="faq"></a>Questions fréquentes (FAQ)
+## <a name="faq"></a>FAQ
 
 ### <a name="can-i-pair-motion-controllers-to-multiple-pcs"></a>Puis-je coupler des contrôleurs de mouvement à plusieurs PC ?
 
@@ -269,7 +269,7 @@ Dans la [page d’hébergement de la réalité mixte Windows](navigating-the-win
 
 Pas pour les applications Windows universelles.
 
-## <a name="troubleshooting"></a>Résolution des problèmes
+## <a name="troubleshooting"></a>Dépannage
 
 Consultez [résolution des problèmes du contrôleur de mouvement](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality#motion-controllers) dans le Guide du passionné.
 
@@ -277,7 +277,7 @@ Consultez [résolution des problèmes du contrôleur de mouvement](https://docs.
 
 [Faites-nous part](give-us-feedback.md) de vos commentaires dans le hub de commentaires à l’aide de la catégorie « > d’entrée de réalité mixte ».
 
-## <a name="see-also"></a>Voir également
+## <a name="see-also"></a>Articles associés
 * [Mouvements et contrôleurs de mouvement dans Unity](gestures-and-motion-controllers-in-unity.md)
 * [Mains et contrôleurs de mouvement dans DirectX](hands-and-motion-controllers-in-directx.md)
 * [Mouvements](gaze-and-commit.md#composite-gestures)

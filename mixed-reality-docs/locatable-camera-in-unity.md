@@ -6,32 +6,32 @@ ms.author: wguyman
 ms.date: 03/21/2018
 ms.topic: article
 keywords: photo, vidéo, hololens, appareil photo, Unity, localisable
-ms.openlocfilehash: f0183400f55b1c6663a9a20ab4992befe5ad0718
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: b4a1a7e11a7606dab76b954c8d58a335d6bae0ab
+ms.sourcegitcommit: d0da0214fdd2bbac5a91a5d895bf0e87413b29b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63515437"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597612"
 ---
 # <a name="locatable-camera-in-unity"></a>Appareil photo localisable dans Unity
 
 ## <a name="enabling-the-capability-for-photo-video-camera"></a>Activation de la fonctionnalité de Photo Video Camera
 
-La fonctionnalité «WebCam» doit être déclarée pour qu’une application utilise l' [appareil photo](locatable-camera.md).
-1. Dans l’éditeur Unity, accédez aux paramètres du lecteur en accédant à la page «modifier les paramètres du projet > > Player».
-2. Cliquer sur l’onglet «Windows Store»
-3. Dans la section «fonctionnalités de > des paramètres de publication», vérifiez les fonctionnalités de la **webcam** et du **microphone**
+La fonctionnalité « WebCam » doit être déclarée pour qu’une application utilise l' [appareil photo](locatable-camera.md).
+1. Dans l’éditeur Unity, accédez aux paramètres du lecteur en accédant à la page « modifier les paramètres du projet > > Player ».
+2. Cliquez sur l’onglet « Windows Store ».
+3. Dans la section « fonctionnalités de > des paramètres de publication », vérifiez les fonctionnalités de la **webcam** et du **microphone**
 
 Une seule opération peut être effectuée avec la caméra à la fois. Pour déterminer le mode (photo, vidéo ou aucun) dans lequel se trouve actuellement l’appareil photo, vous pouvez vérifier UnityEngine. XR. WSA. WebCam. mode.
 
 ## <a name="photo-capture"></a>Capture de photos
 
-**Espace de noms :** *UnityEngine. XR. WSA. WebCam*<br>
-**Type :** *PhotoCapture*
+**Espace de noms :** *UnityEngine. XR. WSA. Webcam*<br>
+**Type :** *PhotoCapture*
 
-Le  type PhotoCapture vous permet de prendre des photographies avec la caméra photo. Le modèle général d’utilisation  de PhotoCapture pour prendre une photo est le suivant:
-1. Créer un  objet PhotoCapture
-2. Créer un objet *CameraParameters* avec les paramètres de votre choix
+Le type *PhotoCapture* vous permet de prendre des photographies avec la caméra photo. Le modèle général d’utilisation de *PhotoCapture* pour prendre une photo est le suivant :
+1. Créer un objet *PhotoCapture*
+2. Créer un objet *CameraParameters* avec les paramètres souhaités
 3. Démarrer le mode photo via *StartPhotoModeAsync*
 4. Prenez la photo souhaitée
     * facultatif Interagir avec cette image
@@ -39,9 +39,9 @@ Le  type PhotoCapture vous permet de prendre des photographies avec la caméra p
 
 ### <a name="common-set-up-for-photocapture"></a>Configuration commune pour la PhotoCapture
 
-Pour les trois utilisations, nous commençons par les trois premières étapes ci-dessus.
+Pour les trois utilisations, commencez par les trois premières étapes ci-dessus.
 
-Nous commençons par créer  un objet PhotoCapture
+Commencez par créer un objet *PhotoCapture*
 
 ```cs
 PhotoCapture photoCaptureObject = null;
@@ -51,7 +51,7 @@ PhotoCapture photoCaptureObject = null;
    }
 ```
 
-Ensuite, nous stockons notre objet, définissons les paramètres et commençons le mode photo
+Stockez ensuite votre objet, définissez vos paramètres et démarrez le mode photo
 
 ```cs
 void OnPhotoCaptureCreated(PhotoCapture captureObject)
@@ -70,7 +70,7 @@ void OnPhotoCaptureCreated(PhotoCapture captureObject)
    }
 ```
 
-Au final, nous utiliserons également le même code de nettoyage présenté ici
+À la fin, vous utiliserez également le même code de nettoyage présenté ici
 
 ```cs
 void OnStoppedPhotoMode(PhotoCapture.PhotoCaptureResult result)
@@ -86,7 +86,7 @@ Après ces étapes, vous pouvez choisir le type de photo à capturer.
 
 L’opération la plus simple consiste à capturer directement une photo dans un fichier. La photo peut être enregistrée au format JPG ou PNG.
 
-Si nous avons correctement démarré le mode photo, nous allons maintenant prendre une photo et la stocker sur le disque
+Si vous avez correctement démarré le mode photo, prenez une photo et stockez-la sur le disque
 
 ```cs
 private void OnPhotoModeStarted(PhotoCapture.PhotoCaptureResult result)
@@ -105,7 +105,7 @@ private void OnPhotoModeStarted(PhotoCapture.PhotoCaptureResult result)
    }
 ```
 
-Une fois que vous avez capturé la photo sur le disque, nous allons quitter le mode photo, puis nettoyer nos objets
+Après avoir capturé la photo sur le disque, quittez le mode photo, puis nettoyez vos objets.
 
 ```cs
 void OnCapturedPhotoToDisk(PhotoCapture.PhotoCaptureResult result)
@@ -126,9 +126,9 @@ void OnCapturedPhotoToDisk(PhotoCapture.PhotoCaptureResult result)
 
 Lors de la capture de données dans un Texture2D, le processus est très similaire à la capture sur le disque.
 
-Nous suivrons le processus de configuration ci-dessus.
+Suivez le processus de configuration ci-dessus.
 
-Dans *OnPhotoModeStarted*, nous capturerons un frame en mémoire.
+Dans *OnPhotoModeStarted*, capturez un frame en mémoire.
 
 ```cs
 private void OnPhotoModeStarted(PhotoCapture.PhotoCaptureResult result)
@@ -144,7 +144,7 @@ private void OnPhotoModeStarted(PhotoCapture.PhotoCaptureResult result)
    }
 ```
 
-Nous allons ensuite appliquer notre résultat à une texture et utiliser le code de nettoyage commun ci-dessus.
+Vous allez ensuite appliquer votre résultat à une texture et utiliser le code de nettoyage commun ci-dessus.
 
 ```cs
 void OnCapturedPhotoToMemory(PhotoCapture.PhotoCaptureResult result, PhotoCaptureFrame photoCaptureFrame)
@@ -165,9 +165,9 @@ void OnCapturedPhotoToMemory(PhotoCapture.PhotoCaptureResult result, PhotoCaptur
 
 ### <a name="capture-a-photo-and-interact-with-the-raw-bytes"></a>Capturer une photo et interagir avec les octets bruts
 
-Pour interagir avec les octets bruts d’un en mémoire, nous suivons les mêmes étapes que ci-dessus et *OnPhotoModeStarted* comme pour la capture d’une photo à un Texture2D. La différence réside dans *OnCapturedPhotoToMemory* où nous pouvons récupérer les octets bruts et interagir avec eux.
+Pour interagir avec les octets bruts d’un dans une trame de mémoire, suivez les mêmes étapes que ci-dessus et *OnPhotoModeStarted* comme pour la capture d’une photo à un Texture2D. La différence réside dans *OnCapturedPhotoToMemory* où vous pouvez récupérer les octets bruts et interagir avec eux.
 
-Dans cet exemple, nous allons créer une *liste<Color>*  qui peut être traitée ultérieurement ou appliquée à une texture par le biais de *setPixels ()*
+Dans cet exemple, vous allez créer une *liste<Color>* qui peut être traitée ultérieurement ou appliquée à une texture par le biais de *setPixels ()*
 
 ```cs
 void OnCapturedPhotoToMemory(PhotoCapture.PhotoCaptureResult result, PhotoCaptureFrame photoCaptureFrame)
@@ -202,18 +202,18 @@ void OnCapturedPhotoToMemory(PhotoCapture.PhotoCaptureResult result, PhotoCaptur
 
 ## <a name="video-capture"></a>Capture vidéo
 
-**Espace de noms :** *UnityEngine. XR. WSA. WebCam*<br>
-**Type :** *VideoCapture*
+**Espace de noms :** *UnityEngine. XR. WSA. Webcam*<br>
+**Type :** *VideoCapture*
 
-*VideoCapture* fonctionne de façon très similaire à la PhotoCapture. Les deux seules différences sont que vous devez spécifier une valeur d’images par seconde (FPS) et vous ne pouvez enregistrer directement sur le disque qu’en tant que fichier. MP4. Les étapes d’utilisation de *VideoCapture* sont les suivantes:
+*VideoCapture* fonctionne de façon très similaire à la *PhotoCapture*. Les deux seules différences sont que vous devez spécifier une valeur d’images par seconde (FPS) et vous ne pouvez enregistrer directement sur le disque qu’en tant que fichier. MP4. Les étapes d’utilisation de *VideoCapture* sont les suivantes :
 1. Créer un objet *VideoCapture*
-2. Créer un objet *CameraParameters* avec les paramètres de votre choix
+2. Créer un objet *CameraParameters* avec les paramètres souhaités
 3. Démarrer le mode vidéo via *StartVideoModeAsync*
 4. Démarrer l’enregistrement vidéo
 5. Arrêter l’enregistrement de la vidéo
 6. Arrêter le mode vidéo et nettoyer les ressources
 
-Nous commençons par créer notre objet *VideoCapture* *VideoCapture m_VideoCapture = null;*
+Commencez par créer notre objet VideoCapture *VideoCapture m_VideoCapture = null ;*
 
 ```cs
 void Start ()
@@ -222,7 +222,7 @@ void Start ()
    }
 ```
 
-Nous allons ensuite configurer les paramètres à utiliser pour l’enregistrement et démarrer.
+Ensuite, configurez les paramètres que vous souhaitez utiliser pour l’enregistrement et démarrer.
 
 ```cs
 void OnVideoCaptureCreated (VideoCapture videoCapture)
@@ -252,7 +252,7 @@ void OnVideoCaptureCreated (VideoCapture videoCapture)
    }
 ```
 
-Une fois démarré, nous commençons l’enregistrement
+Une fois démarré, commencez l’enregistrement.
 
 ```cs
 void OnStartedVideoCaptureMode(VideoCapture.VideoCaptureResult result)
@@ -267,7 +267,7 @@ void OnStartedVideoCaptureMode(VideoCapture.VideoCaptureResult result)
    }
 ```
 
-Une fois l’enregistrement démarré, vous pouvez mettre à jour votre interface utilisateur ou les comportements pour activer l’arrêt. Ici, nous allons simplement nous connecter
+Une fois l’enregistrement démarré, vous pouvez mettre à jour votre interface utilisateur ou les comportements pour activer l’arrêt. Ici, vous venez de consigner.
 
 ```cs
 void OnStartedRecordingVideo(VideoCapture.VideoCaptureResult result)
@@ -277,7 +277,7 @@ void OnStartedRecordingVideo(VideoCapture.VideoCaptureResult result)
    }
 ```
 
-À un moment ultérieur, nous voulons arrêter l’enregistrement. Cela peut se produire à partir d’une entrée d’horloge ou d’utilisateur, par exemple.
+À un moment ultérieur, vous voudrez arrêter l’enregistrement. Cela peut se produire à partir d’une entrée d’horloge ou d’utilisateur, par exemple.
 
 ```cs
 // The user has indicated to stop recording
@@ -287,7 +287,7 @@ void OnStartedRecordingVideo(VideoCapture.VideoCaptureResult result)
    }
 ```
 
-Une fois que l’enregistrement s’est arrêté, nous allons arrêter le mode vidéo et nettoyer nos ressources.
+Une fois l’enregistrement arrêté, arrêtez le mode vidéo et nettoyez vos ressources.
 
 ```cs
 void OnStoppedRecordingVideo(VideoCapture.VideoCaptureResult result)
@@ -303,9 +303,9 @@ void OnStoppedRecordingVideo(VideoCapture.VideoCaptureResult result)
    }
 ```
 
-## <a name="troubleshooting"></a>Résolution des problèmes
+## <a name="troubleshooting"></a>Dépannage
 * Aucune résolution n’est disponible
     * Assurez-vous que la fonctionnalité **webcam** est spécifiée dans votre projet.
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a>Articles associés
 * [Appareil photo localisable](locatable-camera.md)

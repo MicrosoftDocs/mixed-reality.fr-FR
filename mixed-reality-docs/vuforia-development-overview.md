@@ -3,15 +3,15 @@ title: Utilisation de Vuforia avec Unity
 description: Tirez parti de Vuforia pour créer des applications Windows Mixed Reality dans Unity.
 author: thetuvix
 ms.author: alexturn
-ms.date: 01/28/2019
+ms.date: 12/20/2019
 ms.topic: article
 keywords: Vuforia, marqueurs, coordonnées, frame de référence, suivi
-ms.openlocfilehash: bae5d0eb04ab9434dd3e72674686743779a8f70c
-ms.sourcegitcommit: 9005b3fdfa87ac8fdc18a594a681e25c00ac5ce1
+ms.openlocfilehash: 2d7cc27cd9a5fe9bb6502edaa6df0b7a80755049
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2019
-ms.locfileid: "75003188"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334475"
 ---
 # <a name="using-vuforia-engine-with-unity"></a>Utilisation du moteur Vuforia avec Unity
 
@@ -80,7 +80,7 @@ Le moteur Vuforia fusionne automatiquement les poses du suivi de l’appareil ph
 Étant donné que le processus est géré automatiquement, il ne nécessite pas de programmation par le développeur.
 
 
-**Voici ce qui se produit...**
+**Vous trouverez ci-dessous une description détaillée du processus :**
 1. Le dispositif de suivi cible de Vuforia reconnaît la cible
 2. Le suivi cible est ensuite initialisé
 3. La position et la rotation de la cible sont analysées pour fournir une estimation de pose robuste pour HoloLens

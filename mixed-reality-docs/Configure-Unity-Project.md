@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 04/15/2018
 ms.topic: article
 keywords: Unity, réalité mixte, développement, prise en main, nouveau projet
-ms.openlocfilehash: af30cf91eda1b654bea6048c34f63c61238626c7
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 99c72f2d9d900c8a05fb7d8b9b8de10d657fdd13
+ms.sourcegitcommit: 7e8b9de561cbc8483e84511f3e9cbd779f3a999f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437115"
+ms.lasthandoff: 12/27/2019
+ms.locfileid: "75502650"
 ---
 # <a name="configure-a-new-unity-project-for-windows-mixed-reality"></a>Configurer un nouveau projet Unity pour Windows Mixed Reality 
 
@@ -29,7 +29,7 @@ Pour cibler Windows Mixed Reality, vous devez d’abord définir votre projet Un
 5. Définir le **type de build** sur **D3D**
 6. Définir le **SDK UWP** sur le **dernier installé**
 
-Nous devons ensuite permettre à Unity de savoir que l’application que nous essayons d’exporter doit créer un [affichage immersif](app-views.md) au lieu d’une vue 2D. Pour cela, vous devez activer la « réalité virtuelle prise en charge » :
+Vous devez ensuite informer Unity que l’application que vous essayez d’exporter doit créer un [affichage immersif](app-views.md) au lieu d’une vue 2D. Pour ce faire, activez la « réalité virtuelle prise en charge » :
 1. Dans la fenêtre **paramètres de Build...** , ouvrez paramètres du **lecteur...**
 2. Sélectionner les **paramètres de plateforme Windows universelle** onglet
 3. Développez le groupe de **paramètres XR**
@@ -39,9 +39,9 @@ Nous devons ensuite permettre à Unity de savoir que l’application que nous es
 paramètres de qualité ![Unity](images/getting-started-unity-quality-settings.jpg)<br>
 *Paramètres XR Unity*
 
-Votre application peut désormais effectuer un rendu holographique de base et une entrée spatiale. Pour aller plus loin et tirer parti de certaines fonctionnalités, votre application doit déclarer les fonctionnalités appropriées dans son manifeste. Les déclarations de manifeste peuvent être effectuées dans Unity afin qu’elles soient incluses dans chaque exportation de projet suivante. Le paramètre se trouve dans les paramètres du **lecteur > paramètres pour plateforme Windows universelle > paramètres de publication >** . Les fonctionnalités applicables à l’activation des API Unity couramment utilisées pour la réalité mixte sont les suivantes :
+Votre application peut désormais effectuer un rendu holographique de base et une entrée spatiale. Pour aller plus loin et tirer parti de certaines fonctionnalités, votre application doit déclarer les fonctionnalités appropriées dans son manifeste. Les déclarations de manifeste peuvent être effectuées dans Unity afin qu’elles soient incluses dans chaque exportation de projet suivante. Les paramètres se trouvent dans **paramètres du lecteur > paramètres pour plateforme Windows universelle > paramètres de publication >** . Les fonctionnalités applicables à l’activation des API Unity couramment utilisées pour la réalité mixte sont les suivantes :
 
-|  Fonctionnalité  |  API nécessitant des fonctionnalités | 
+|  Capability  |  API nécessitant des fonctionnalités | 
 |----------|----------|
 |  SpatialPerception  |  SurfaceObserver (accès aux maillages de [mappage spatial](spatial-mapping.md) sur HoloLens)&mdash;*aucune fonctionnalité nécessaire pour le suivi spatial général du casque* | 
 |  WebCam  |  PhotoCapture et VideoCapture | 
@@ -69,7 +69,7 @@ Une fois que vous activez la case à cocher « réalité virtuelle prise en cha
 
 Si votre application cible en particulier HoloLens, il y a quelques paramètres qui doivent être modifiés pour optimiser les affichages transparents de l’appareil, de sorte que votre application s’affichera dans le monde physique :
 1. Dans la **hiérarchie**, sélectionnez l' **appareil photo principal** .
-2. Dans le panneau **inspecteur** , définissez la **position** de la transformation sur **0, 0, 0** de sorte que l’emplacement de la tête des utilisateurs commence à l’origine Unity World.
+2. Dans le panneau **inspecteur** , définissez la **position** de la transformation sur **0, 0, 0** de sorte que l’emplacement de la tête de l’utilisateur commence à l’origine Unity World.
 3. Remplacez **effacer les indicateurs** par **couleur unie**.
 4. Remplacez la couleur d' **arrière-plan** par **RVBA 0, 0,** 0, 0. Le rendu noir est transparent dans HoloLens.
 5. Modifiez les **plans de découpage-près** de [HoloLens recommandé](camera-in-unity.md#clip-planes) 0,85 (mètres).
@@ -78,5 +78,5 @@ Si vous supprimez et créez un nouvel appareil photo, vérifiez que votre appare
 
 
 ## <a name="see-also"></a>Articles associés
-* [Boîte à outils de réalité mixte v2](mrtk-getting-started.md)
+* [Mixed Reality Toolkit v2](mrtk-getting-started.md)
 * [Vue d’ensemble du développement Unity](unity-development-overview.md)

@@ -6,12 +6,12 @@ ms.author: trferrel
 ms.date: 03/26/2019
 ms.topic: article
 keywords: Unity, paramètres, réalité mixte
-ms.openlocfilehash: 2f2f823fe7192bd92e038d58901cb7098d2f4d64
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 2ab7eb0f9a7e06506ef8c57103518d8ef0a775df
+ms.sourcegitcommit: d0da0214fdd2bbac5a91a5d895bf0e87413b29b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438105"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597632"
 ---
 # <a name="recommended-settings-for-unity"></a>Paramètres recommandés pour Unity
 
@@ -68,12 +68,12 @@ Pour activer cette fonctionnalité dans votre projet Unity
 
 En outre, il est recommandé de sélectionner **profondeur de 16 bits** sous le paramètre **format de profondeur** dans ce panneau, en particulier pour le développement HoloLens. La sélection de 16 bits comparée à 24 bits réduit considérablement les besoins en bande passante, car moins de données devront être déplacées/traitées.
 
-Pour que la plateforme Windows Mixed realisation optimise la stabilité des hologrammes, elle s’appuie sur la mémoire tampon de profondeur pour être exacte et correspond à n’importe quel hologramme rendu sur l’écran. Ainsi, avec le partage de mémoire tampon de profondeur sur, il est important d’effectuer un rendu des couleurs, également une profondeur de rendu. Dans Unity, la plupart des matériaux opaques ou TransparentCutout restituent la profondeur par défaut, mais les objets transparents et textuels n’affichent généralement pas de profondeur, bien qu’il s’agisse d’un nuanceur dépendant, etc.
+Pour que la plateforme Windows Mixed realisation optimise la stabilité des hologrammes, elle s’appuie sur la mémoire tampon de profondeur pour être exacte et correspond à n’importe quel hologramme rendu sur l’écran. Ainsi, avec le partage de mémoire tampon de profondeur sur, il est important de rendre la couleur de rendu, afin de rendre également la profondeur. Dans Unity, la plupart des matériaux opaques ou TransparentCutout restituent la profondeur par défaut, mais les objets transparents et textuels n’affichent généralement pas de profondeur, bien qu’il s’agisse d’un nuanceur dépendant, etc.
 
 Si vous utilisez le [nuanceur standard](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_MRTKStandardShader.md)de la boîte à outils de la réalité mixte, pour restituer la profondeur des objets transparents :
 
 1) Sélectionner la matière transparente qui utilise le nuanceur standard MRTK et ouvrir la fenêtre de l’éditeur de l’inspecteur
-2) Sélectionnez le bouton **corriger maintenant** dans l’avertissement de partage de la mémoire tampon de profondeur. Vous pouvez également effectuer cette opération manuellement en définissant le **mode de rendu** sur **personnalisé** , puis en définissant **mode** sur **transparent** et enfin définir l' **écriture de profondeur** **sur activé**
+2) Sélectionnez le bouton **corriger maintenant** dans l’avertissement de partage de la mémoire tampon de profondeur. Vous pouvez également effectuer cette opération manuellement en définissant le **mode de rendu** sur **personnalisé**. puis définissez **mode** sur **transparent** et enfin définir l' **écriture de profondeur** **sur activé**
 
 > [!IMPORTANT]
 > Les développeurs doivent être attentifs à la lutte Z lors de la modification de ces valeurs avec les paramètres du plan proche/Far de l’appareil photo. Z-combat se produit lorsque deux Gameobjects essaient de s’afficher sur le même pixel et en raison de limitations de fidélité du tampon de profondeur (par exemple, profondeur z), Unity ne peut pas déterminer quel objet est devant l’autre. Les développeurs notent un scintillement entre deux objets de jeu lorsqu’ils *luttent contre* la même valeur de profondeur z. Cela peut être résolu en basculant au format de profondeur 24 bits, car il y aura une plus grande plage de valeurs pour chaque objet à calculer pour la profondeur z de l’appareil photo.
@@ -85,14 +85,14 @@ Si vous utilisez le [nuanceur standard](https://github.com/microsoft/MixedRealit
 
 ### <a name="building-for-il2cpp"></a>Génération pour IL2CPP
 
-Unity a déconseillé la prise en charge du backend de script .NET et recommande donc aux développeurs d’utiliser **IL2CPP** pour leurs builds Visual Studio UWP. Bien que cela offre différents avantages, la génération de votre solution Visual Studio à partir d’Unity pour **Il2CPP** peut être considérablement plus lente que l’ancienne méthode .net. Par conséquent, il est fortement recommandé de suivre les meilleures pratiques en matière de création de **IL2CPP** pour économiser l’heure de l’itération de développement.
+Unity a déconseillé la prise en charge du backend de script .NET et recommande donc que les développeurs utilisent **IL2CPP** pour leurs builds Visual Studio UWP. Bien que cela offre différents avantages, la génération de votre solution Visual Studio à partir d’Unity pour **Il2CPP** peut être considérablement plus lente que l’ancienne méthode .net. Par conséquent, il est fortement recommandé de suivre les meilleures pratiques en matière de création de **IL2CPP** pour économiser l’heure de l’itération de développement.
 
 1) Tirez parti de la création incrémentielle en générant votre projet dans le même répertoire à chaque fois, en réutilisant les fichiers prédéfinis
 2) Désactiver les analyses logicielles anti-programme malveillant pour votre projet & les dossiers de build
    - Ouvrir la **protection contre les menaces contre les Virus &** sous votre application Paramètres Windows 10
    - Sélectionnez **gérer les paramètres** sous **virus & les paramètres de protection contre les menaces**
    - Sélectionnez **Ajouter ou supprimer des exclusions** sous la section **exclusions** .
-   - Cliquez sur **Ajouter une exclusion** , puis sélectionnez le dossier qui contient le code de votre projet Unity et les sorties de génération
+   - Cliquez sur **Ajouter une exclusion** , puis sélectionnez le dossier contenant le code de votre projet Unity et les sorties de génération
 3) Utiliser un SSD pour la génération
 
 Pour plus d’informations, consultez [optimisation des durées de génération pour IL2CPP](https://docs.unity3d.com/Manual/IL2CPP-OptimizingBuildTimes.html) .
@@ -117,9 +117,9 @@ Pour activer/désactiver l’écran de démarrage holographique :
 |  Afficher l’écran de démarrage Unity  |  Image de démarrage holographique  |  Comportement |
 |----------|----------|----------|
 |  Dans  |  Aucun(e)  |  Affiche l’écran de démarrage Unity par défaut pendant 5 secondes ou jusqu’à ce que l’application soit chargée, selon la valeur la plus longue. |
-|  Dans  |  Personnalisé  |  Affichez l’écran de démarrage personnalisé pendant 5 secondes ou jusqu’à ce que l’application soit chargée, selon la valeur la plus longue. |
+|  Dans  |  Personnalisée  |  Affichez l’écran de démarrage personnalisé pendant 5 secondes ou jusqu’à ce que l’application soit chargée, selon la valeur la plus longue. |
 |  Off)  |  Aucun(e)  |  Affichez le noir transparent (rien) jusqu’à ce que l’application soit chargée. |
-|  Off)  |  Personnalisé  |  Affichez l’écran de démarrage personnalisé pendant 5 secondes ou jusqu’à ce que l’application soit chargée, selon la valeur la plus longue. |
+|  Off)  |  Personnalisée  |  Affichez l’écran de démarrage personnalisé pendant 5 secondes ou jusqu’à ce que l’application soit chargée, selon la valeur la plus longue. |
 
 Pour plus d’informations, consultez la [documentation de l’écran de démarrage d’Unity](https://docs.unity3d.com/Manual/class-PlayerSettingsSplashScreen.html) .
 
@@ -141,7 +141,7 @@ Certaines applications peuvent ne pas nécessiter de suivi (par exemple, des [ap
 
 Pour refuser le comportement de pause automatique :
 
-1) Accédez à **modifier** > **paramètres du projet** > page du **lecteur**
+1) Accédez à la page **modifier** les **paramètres du projet** >  > **Player**
 2) Cliquez sur l’onglet **Windows Store** et ouvrez la section **image de démarrage** .
 3) Modifiez la case à cocher **Windows holographique > en cas de suspension de perte de suivi et d’affichage d’image** .
 
@@ -149,19 +149,19 @@ Pour refuser le comportement de pause automatique :
 
 Pour définir un comportement personnalisé lorsque le suivi est perdu, gérez les [événements de perte de suivi](tracking-loss-in-unity.md)global.
 
-### <a name="capabilities"></a>Fonctionnalités
+### <a name="capabilities"></a>Fonctions
 
 Pour qu’une application tire parti de certaines fonctionnalités, elle doit déclarer les fonctionnalités appropriées dans son manifeste. Les déclarations de manifeste peuvent être effectuées dans Unity afin qu’elles soient incluses dans chaque exportation de projet suivante.
 
 Les fonctionnalités peuvent être activées pour une application de réalité mixte en :
 
 1) Accédez à **modifier** > **paramètres du projet** > page du **lecteur**
-2) Cliquez sur l’onglet **Windows Store** et ouvrez la section **paramètres de publication** et recherchez la liste des **fonctionnalités** .
+2) Cliquez sur l’onglet **Windows Store** , ouvrez la section **paramètres de publication** et recherchez la liste des **fonctionnalités** .
 
 Les fonctionnalités applicables pour activer les API couramment utilisées pour les applications holographiques sont les suivantes :
 <br>
 
-|  Fonctionnalité  |  API nécessitant des fonctionnalités |
+|  Capability  |  API nécessitant des fonctionnalités |
 |----------|----------|
 |  SpatialPerception  |  SurfaceObserver |
 |  WebCam  |  PhotoCapture et VideoCapture |

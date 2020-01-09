@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: déployer, Unity, Visual Studio, HoloLens, HoloLens 2, casque immersif
-ms.openlocfilehash: 88eaa69f1349e3303a93d9d634479d8265eb417c
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: 4d145568190ea43cf2ec43442a1c3d5ca4d92251
+ms.sourcegitcommit: 7e8b9de561cbc8483e84511f3e9cbd779f3a999f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926552"
+ms.lasthandoff: 12/27/2019
+ms.locfileid: "75502630"
 ---
 # <a name="best-practices-for-working-with-unity-and-visual-studio"></a>Meilleures pratiques pour l’utilisation d’Unity et de Visual Studio
 
@@ -26,14 +26,14 @@ La prise en charge du serveur principal de script .NET dans Unity est dépréci�
    - Ouvrir la **protection contre les menaces contre les Virus &** sous votre application Paramètres Windows 10
    - Sélectionnez **gérer les paramètres** sous **virus & les paramètres de protection contre les menaces**
    - Sélectionnez **Ajouter ou supprimer des exclusions** sous la section **exclusions** .
-   - Cliquez sur **Ajouter une exclusion** , puis sélectionnez le dossier qui contient le code de votre projet Unity et les sorties de génération
+   - Cliquez sur **Ajouter une exclusion** , puis sélectionnez le dossier contenant le code de votre projet Unity et les sorties de génération
 3) Utiliser un SSD pour la génération
 
-Pour plus d’informations, consultez [optimisation des durées de génération pour IL2CPP](https://docs.unity3d.com/Manual/IL2CPP-OptimizingBuildTimes.html) . Consultez également [le débogage sur le serveur principal IL2CPP Scripting](https://docs.unity3d.com/Manual/windowsstore-debugging-il2cpp.html).
+Pour plus d’informations, consultez [optimisation des temps de génération pour IL2CPP](https://docs.unity3d.com/Manual/IL2CPP-OptimizingBuildTimes.html) . Examinez également [le débogage sur le serveur principal IL2CPP Scripting](https://docs.unity3d.com/Manual/windowsstore-debugging-il2cpp.html).
 
 En outre, envisagez d’installer l' [extension Visual Studio *UnityScriptAnalyzer* ](https://github.com/Microsoft/MixedRealityCompanionKit/tree/master/UnityScriptAnalyzer). Cet outil analyse vos scripts Unity C# pour le code qui peut être écrit de façon plus optimisée.
 
-## <a name="visual-studio-tools-for-unity"></a>Outils Visual Studio pour Unity
+## <a name="visual-studio-tools-for-unity"></a>Visual Studio Tools pour Unity
 
 Télécharger [outils Visual Studio pour Unity](https://docs.microsoft.com/visualstudio/cross-platform/getting-started-with-visual-studio-tools-for-unity?view=vs-2019)
 
@@ -45,7 +45,7 @@ Télécharger [outils Visual Studio pour Unity](https://docs.microsoft.com/visua
 
 ## <a name="expose-c-class-variables-for-easy-tuning"></a>Exposer C# des variables de classe pour faciliter le paramétrage
 
-Il existe deux façons d’exposer des variables de classe. Pour ce faire, la méthode recommandée consiste à ajouter l’attribut [SerializeField] à vos variables privées. Cela leur permet d’y accéder à partir de l’éditeur, mais pas de les exposer par programmation.  L’autre option consiste à rendre C# les variables de classe publiques pour les exposer dans l’interface utilisateur de l’éditeur. 
+Il existe deux façons d’exposer des variables de classe. La méthode recommandée consiste à ajouter l’attribut [SerializeField] à vos variables privées. Cela leur permet d’y accéder à partir de l’éditeur, mais pas de les exposer par programmation.  L’autre option consiste à rendre C# les variables de classe publiques pour les exposer dans l’interface utilisateur de l’éditeur. 
 
 Les deux approches permettent de modifier facilement les variables tout en lisant dans l’éditeur. Cela s’avère particulièrement utile pour le paramétrage des propriétés de mécanicien d’interaction.
 
@@ -58,6 +58,6 @@ Les solutions Visual Studio UWP archivées dans le contrôle de code source peuv
 Le stockage des ressources au format texte facilite l’examen des différences de modification de contenu dans Visual Studio. Vous pouvez l’activer dans « modifier les paramètres du projet > l’éditeur de > » en modifiant le mode de **sérialisation des ressources** pour **forcer le texte**. Toutefois, la fusion de modifications de fichiers de ressources texte est sujette aux erreurs et n’est pas recommandée. envisagez donc d’activer des extractions binaires exclusives dans votre système de contrôle de code source.
 
 ## <a name="see-also"></a>Articles associés
-- [Outils Visual Studio pour Unity](https://visualstudiogallery.msdn.microsoft.com/8d26236e-4a64-4d64-8486-7df95156aba9)
+- [Visual Studio Tools pour Unity](https://visualstudiogallery.msdn.microsoft.com/8d26236e-4a64-4d64-8486-7df95156aba9)
 - [Optimisation des temps de génération pour IL2CPP](https://docs.unity3d.com/Manual/IL2CPP-OptimizingBuildTimes.html)
 - [*UnityScriptAnalyzer* Extension Visual Studio](https://github.com/Microsoft/MixedRealityCompanionKit/tree/master/UnityScriptAnalyzer)

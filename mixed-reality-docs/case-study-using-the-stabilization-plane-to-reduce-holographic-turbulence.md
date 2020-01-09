@@ -6,12 +6,12 @@ ms.author: bestruku
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, hologrammes, stabilisation, étude de cas
-ms.openlocfilehash: d31f3128ba10d6fc7bd57f3068db3dd16b23f901
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 039b8f671f02a27393c30c7954cf0e2925635ad0
+ms.sourcegitcommit: d0da0214fdd2bbac5a91a5d895bf0e87413b29b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73436435"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597652"
 ---
 # <a name="case-study---using-the-stabilization-plane-to-reduce-holographic-turbulence"></a>Étude de cas : utilisation du plan de stabilisation pour réduire la turbulence holographique
 
@@ -65,7 +65,7 @@ Les fragments et les jeunes Conkers vous informent trop loin des hologrammes en 
 
 ## <a name="do-it-yourself"></a>Faites-le vous-même
 
-Si vous avez un HoloLens et que vous souhaitez vous lancer avec les concepts que j’ai abordés, vous pouvez télécharger une scène de test et essayer les exercices ci-dessous. Il utilise l’API Gizmo intégrée de Unity et il doit vous aider à visualiser l’emplacement où votre plan est défini. Ce code était également utilisé pour capturer les captures d’écran dans cette étude de cas.
+Si vous avez un HoloLens et que vous souhaitez vous lancer avec les concepts de cet article, vous pouvez télécharger une scène de test et essayer les exercices ci-dessous. Elle utilise l’API Gizmo intégrée de Unity et doit vous aider à visualiser l’emplacement où votre plan est défini. Ce code était également utilisé pour capturer les captures d’écran dans cette étude de cas.
 1. Synchronisez la dernière version de [MixedRealityToolkit-Unity](https://github.com/Microsoft/MixedRealityToolkit-Unity).
 2. Ouvrez la scène [HoloToolkit-examples/Utilities/scenes/StabilizationPlaneSetting. Unity](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit-Examples/Utilities/Scenes/StabilizationPlaneSetting.unity) .
 3. Générez et configurez le projet généré.
@@ -73,22 +73,22 @@ Si vous avez un HoloLens et que vous souhaitez vous lancer avec les concepts que
 
 ### <a name="exercise-1"></a>Exercice 1
 
-Vous verrez plusieurs points blancs à travers les différentes orientations. En face de vous, vous verrez trois points à des profondeurs différentes. Appuyez sur l’air pour changer le point sur lequel le plan est défini. Dans le cadre de cet exercice, et pour les deux autres, déplacez votre espace tout en Gazing les points. Tournez votre tête à gauche, à droite, en haut et en aval. Rapprochez-vous des points et des pères. Découvrez comment ils réagissent lorsque le plan de stabilisation est défini sur des cibles différentes.
+Vous verrez plusieurs points blancs à travers les différentes orientations. En face de vous, vous verrez trois points à des profondeurs différentes. Appuyez sur l’air pour changer le point sur lequel le plan est défini. Dans le cadre de cet exercice, et pour les deux autres, déplacez votre espace tout en Gazing les points. Tournez votre tête à gauche, à droite, en haut et en aval. Rapprochez-vous des points et éloignez-les. Découvrez comment ils réagissent lorsque le plan de stabilisation est défini sur des cibles différentes.
 
 ### <a name="exercise-2"></a>Exercice 2
 
-À présent, passez à votre droite jusqu’à ce que vous voyez deux points mobiles, l’un oscillant sur un chemin horizontal et l’autre sur un tracé vertical. Une fois encore, appuyez sur l’air pour changer le point sur lequel le plan est défini. Notez que la séparation des couleurs est atténuée apparaît sur le point qui est connecté au plan. Appuyez de nouveau pour utiliser la vélocité du point dans la fonction de paramétrage du plan. Ce paramètre donne une indication à HoloLens sur le mouvement prévu de l’objet. Il est important de savoir quand l’utiliser, comme vous pouvez le remarquer lorsque la vélocité est utilisée sur un point, l’autre point mobile affiche une plus grande séparation des couleurs. Gardez cela à l’esprit lors de la conception de vos applications. Si vous avez un flot de mouvements de vos objets, vous pouvez empêcher l’affichage des artefacts.
+À présent, passez à votre droite jusqu’à ce que vous voyez deux points mobiles, l’un oscillant sur un chemin horizontal et l’autre sur un tracé vertical. Une fois encore, appuyez sur l’air pour changer le point sur lequel le plan est défini. Notez la manière dont la séparation des couleurs est atténuée et apparaît sur le point qui est connecté au plan. Appuyez de nouveau pour utiliser la vélocité du point dans la fonction de paramétrage du plan. Ce paramètre donne une indication à HoloLens sur le mouvement prévu de l’objet. Il est important de savoir quand l’utiliser, comme vous pouvez le remarquer lorsque la vélocité est utilisée sur un point, l’autre point mobile affiche une plus grande séparation des couleurs. Gardez cela à l’esprit lors de la conception de vos applications. Si vous avez un flot de mouvements de vos objets, vous pouvez empêcher l’affichage des artefacts.
 
 ### <a name="exercise-3"></a>Exercice 3
 
 Retournez à votre droite jusqu’à ce qu’une nouvelle configuration de points s’affiche. Dans ce cas, il y a des points dans la distance et un point en spirale avant. Appuyez pour changer le point sur lequel le plan est défini, en alternant entre les points à l’arrière et le point dans le mouvement. Notez que la définition de la position du plan et de la vélocité à celle du point en spirale fait apparaître les artefacts partout.
 
-**Conseil**
+**Conseils**
 * N’oubliez pas que la logique de définition de votre plan est simple. Comme vous l’avez vu, vous n’avez pas besoin d’algorithmes de paramètre de plan complexes pour effectuer une expérience immersive. Le plan de stabilisation n’est qu’une partie du puzzle.
 * Dans la mesure du possible, déplacez toujours le plan entre les cibles en douceur. Le basculement instantané des cibles à distance peut perturber visuellement la scène.
 * Envisagez de définir une option dans votre plan pour le verrouillage sur une cible très spécifique. De cette façon, le plan peut être verrouillé sur un objet, tel qu’un logo ou un écran de titre, si nécessaire.
 
-## <a name="about-the-author"></a>À propos de l’auteur
+## <a name="about-the-author"></a>À propos de l'auteur
 
 <table style="border-collapse:collapse">
 <tr>

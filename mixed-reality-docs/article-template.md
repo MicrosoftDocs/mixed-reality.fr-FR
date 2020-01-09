@@ -6,12 +6,12 @@ ms.author: randyw
 ms.date: 10/22/2019
 ms.topic: article
 keywords: aucune
-ms.openlocfilehash: b443e48f96b6fb978fdf487c6eea7e6c804c9e70
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 314d07292a679eefb22583d522ff9bd4182a0832
+ms.sourcegitcommit: 270ca09ec61e1153a83cf44942d7ba3783ef1805
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73439550"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75694013"
 ---
 # <a name="title-be-as-specific-as-possible-use-human-terms"></a>Titre (Soyez le plus spécifique possible, utilisez les conditions humaines) 
 
@@ -38,7 +38,7 @@ ms.locfileid: "73439550"
 </tr>
 <tr>
      <td>Sujet ou titre de l’article</td>
-     <td>❌ non pris en charge</td>
+     <td>❌ Non pris en charge</td>
      <td>✔️ Recommandé</td>
      <td>✔️ Recommandé</td>
 </tr>
@@ -192,7 +192,7 @@ Le Nabis de l’action photoréaliste de peinture du champ de couleur de la pein
 
 Neo-géo-géoisme structuralr Die Brücke Existentialism plat, Neo-Data idéalisme Gründerzeit.
 
-| Distance | Angle d’affichage | Size |
+| Distance | Angle d’affichage | Taille |
 |---------|---------|---------|
 | 45cm  | non inférieur à 2 ° | 1,6 x 1,6 cm |
 
@@ -237,7 +237,4 @@ Affectez à iframe la valeur Width = « 940 » Height = « 530 ».
 
 * [Nom de l’article 1 associé](design.md)
 * [Nom de l’article 2 associé](design.md)
-* [Nom de l’article 3 associé](design.md)
-
-
-
+* [Nom de l’article 3 associé-lien vers une section spécifique](design.md#what-are-the-core-concepts-of-an-experience)

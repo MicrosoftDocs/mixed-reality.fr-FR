@@ -6,16 +6,16 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: mouvements, contrôleurs de mouvement, Unity, point de regard, entrée
-ms.openlocfilehash: b83c4904031338fd6f3e8457238bb76f1c7e7eff
-ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
+ms.openlocfilehash: fc56436cbe71f958b91fec56c5f0f7d93926b2ac
+ms.sourcegitcommit: 317653cd8500563c514464f0337c1f230a6f3653
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/17/2019
-ms.locfileid: "75181949"
+ms.lasthandoff: 12/28/2019
+ms.locfileid: "75503887"
 ---
 # <a name="articulated-hand-and-eye-tracking-in-unity"></a>Suivi des mains et des yeux dans Unity
 
-HoloLens 2 a introduit de nouvelles fonctionnalités passionnantes : le suivi des mains et des yeux articulés.
+HoloLens 2 a introduit des fonctionnalités nouvelles et passionnantes, telles que la main articulée et le suivi oculaire.
 
 Le moyen le plus simple de tirer parti de la nouvelle fonctionnalité dans Unity est d’utiliser MRTK v2. Il existe également des exemples de scènes pour vous aider à commencer.
 
@@ -32,7 +32,7 @@ MRTK v2 fournit un ensemble de contrôles d’interface utilisateur et de blocs 
 |  [![Ardoise](images/MRTK_Slate_Main.png)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Slate.html) [Ardoise](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Slate.html) | [clavier](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_SystemKeyboard.html) système [![clavier du système](images/MRTK_SystemKeyboard_Main.png)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_SystemKeyboard.html) | [![Interagissable](images/InteractableExamples.png)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Interactable.html) [Interagissable](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Interactable.html) |
 | plan de style 2D qui prend en charge le défilement avec une entrée articulée | Exemple de script d’utilisation du clavier système dans Unity  | Script permettant de rendre les objets interactifs avec les États visuels et la prise en charge des thèmes |
 |  [![Solveur](images/MRTK_Solver_Main.png)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Solver.html) [Solveur](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Solver.html) | [![Collecte d’objets](images/MRTK_ObjectCollection_Main.png)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ManipulationHandler.html) [Collecte d’objets](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ManipulationHandler.html) | [![Info-bulle](images/MRTK_Tooltip_Main.png)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Tooltip.html) [Info-bulle](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Tooltip.html) |
-| Différents comportements de positionnement des objets, tels que balise, verrouillage de corps, taille de vue constante et magnétisme de surface | Script pour disposer un tableau d’objets dans une forme en trois dimensions | Interface utilisateur d’annotation avec système d’ancrage/pivot flexible qui peut être utilisé pour étiqueter les contrôleurs de mouvement et l’objet. |
+| Différents comportements de positionnement des objets, tels que balise, verrouillage de corps, taille de vue constante et magnétisme de surface | Script pour disposer un tableau d’objets dans une forme en trois dimensions | Interface utilisateur d’annotation avec un système d’ancrage/pivot flexible, qui peut être utilisé pour étiqueter les contrôleurs de mouvement et l’objet. |
 |  [![](images/MRTK_AppBar_Main.png)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_AppBar.html) la [barre](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_AppBar.html) d’application de la barre d’application | [![Pointeurs](images/MRTK_Pointer_Main.png)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Pointers.html) [Pointeurs](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Pointers.html) | [![Visualisation des bouts des doigts](images/MRTK_FingertipVisualization_Main.png)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_FingertipVisualization.html) [Visualisation des bouts des doigts](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_FingertipVisualization.html) |
 | Interface utilisateur pour l’activation manuelle du cadre englobant | En savoir plus sur les différents types de pointeurs | Visuel à portée de main, ce qui améliore la confiance pour l’interaction directe |
 |  [suivi des yeux![: sélection cible](images/mrtk_et_targetselect.png)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_TargetSelection.html) [suivi oculaire : sélection](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_TargetSelection.html) de la cible | [suivi des yeux![:](images/mrtk_et_navigation.png)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Navigation.html) [suivi des yeux de navigation : navigation](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Navigation.html) | [suivi des yeux![: suivi de la carte thermique](images/mrtk_et_heatmaps.png)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Visualization.html) [: carte thermique](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Visualization.html) |
