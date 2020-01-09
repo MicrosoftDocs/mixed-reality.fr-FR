@@ -1,18 +1,15 @@
-# Quelles sont les nouveautés ? 
+# Nouveautés 
 ## [Dernières actualités](news.md)
 ## [Préparer votre application pour HL2](mrtk-porting-guide.md)
 ## [Découvrir les services Azure](azure-services.md)
+## [Se préparer au nouveau Microsoft Edge](new-microsoft-edge.md)
 ## Programmes et événements
-### [Mixed Reality Dev Days](mr-dev-days.md)
-#### [Sessions Mixed Reality Dev Days](mr-dev-days-sessions.md)
-#### [Questions fréquentes (FAQ) sur Mixed Reality Dev Days](mr-dev-days-faq.md)
 ### [Calendrier des événements de la San Francisco Reactor Academy](sf-academy-events.md)
-### [CVPR 2018 : Conférence sur le mode de recherche HoloLens](cvpr-2018.md)
-### [ECCV 2018 : HoloLens comme outil de recherche en vision par ordinateur](eccv-2018.md)
 ### [CVPR 2019 : Atelier de réalité mixte](cvpr-2019.md)
 ## [Notes de publication actuelles sur la réalité mixte](release-notes-may-2019.md)
+## [Ressources de la communauté](community.md)
 ## [Contribuer à cette documentation](CONTRIBUTING.md)
-# Discover
+# Découvrir
 ## [Bien démarrer avec la réalité mixte](index.md)
 ## [Développer votre processus de conception](case-study-expanding-the-design-process-for-mixed-reality.md)
 ## [Galerie d’études de cas](case-studies-overview.md)
@@ -24,7 +21,8 @@
 ### [Exploration de la page d’accueil Windows Mixed Reality](navigating-the-windows-mixed-reality-home.md)
 ### [Guide de découverte](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide)
 ### [Divertissement basé sur l’emplacement](location-based-experiences.md)
-# Concevoir
+## [Ressources de la communauté](community.md)
+# Conception
 ## [Commencer à concevoir et à créer des prototypes](design.md)
 ## [À propos de ce guide de conception](about-this-design-guidance.md)
 
@@ -65,7 +63,7 @@
 ### [Vue d’ensemble](app-patterns-landingpage.md)
 ### Style
 #### [Couleurs, éclairage et matériaux](color-light-and-materials.md)
-#### [Mettre à l’échelle](scale.md)
+#### [Mise à l’échelle](scale.md)
 #### [Typographie](typography.md)
 ### Son spatial
 #### [Conception du son spatial](spatial-sound-design.md)
@@ -93,8 +91,8 @@
 #### [Aimantation de surface](surface-magnetism.md)
 ## Ressources
 ### [Découvrir Unity](https://learn.unity.com/)
-### [Kit de ressources de réalité mixte](https://github.com/Microsoft/MixedRealityToolkit-Unity)
-### [Ateliers de conception de réalité mixte](https://github.com/Microsoft/MRDL_Unity_PeriodicTable)
+### [Mixed Reality Toolkit](https://github.com/Microsoft/MixedRealityToolkit-Unity)
+### [Mixed Reality Design Labs](https://github.com/Microsoft/MRDL_Unity_PeriodicTable)
 ### [Microsoft Maquette](https://www.maquette.ms)
 ### [Processus de création des ressources](asset-creation-process.md)
 ### [Concevoir vos propres environnements immersifs](add-custom-home-environments.md)
@@ -168,7 +166,7 @@
 ##### [Réalité mixte - Azure - Cours 313 : Service IoT Hub](mr-azure-313.md)
 ## Unity
 ### [Vue d’ensemble du développement Unity](unity-development-overview.md)
-### Prise en main
+### Mise en route
 #### [Bien démarrer avec Mixed Reality Toolkit v2](mrtk-getting-started.md)
 #### [Configurer un projet Unity pour Windows Mixed Reality](Configure-Unity-Project.md)
 #### [Paramètres recommandés pour Unity](recommended-settings-for-unity.md)
@@ -203,7 +201,7 @@
 ### [Utilisation de WebVR dans Edge avec Windows Mixed Reality](using-webvr-in-edge-with-windows-mixed-reality.md)
 ## Natif
 ### [Vue d’ensemble du développement natif](directx-development-overview.md)
-### Prise en main
+### Mise en route
 #### [Création d’un projet holographique natif](creating-a-holographic-directx-project.md)
 #### [Obtention d’un HolographicSpace](getting-a-holographicspace.md)
 #### [Rendu natif](rendering-in-directx.md)
@@ -270,5 +268,5 @@
 ## [Implémenter des lanceurs d’applications 3D (applications UWP)](implementing-3d-app-launchers.md)
 ## [Implémenter des lanceurs d’applications 3D (applications Win32)](implementing-3d-app-launchers-win32.md)
 ## [Permettre le placement des modèles 3D dans la page d’accueil](enable-placement-of-3d-models-in-the-home.md)
-## [Achats dans l'application](in-app-purchases.md)
+## [Achats in-app](in-app-purchases.md)
 ## [Envoi d’une application au Microsoft Store](submitting-an-app-to-the-microsoft-store.md)
