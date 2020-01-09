@@ -7,12 +7,12 @@ ms.date: 04/05/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Réalité mixte, interaction, conception, HoloLens, mains, éloigné, pointer et valider
-ms.openlocfilehash: 77c596f5250240d436529e879434a8f508b06732
-ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
+ms.openlocfilehash: c7952338c6937e42889a08ee37f6ce8bc1bb9ad3
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74105988"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334064"
 ---
 # <a name="point-and-commit-with-hands"></a>Pointer et valider avec les mains
 
@@ -211,7 +211,7 @@ Par défaut, MRTK fournit un préfabriqué de rayon émanant de la main ([Defaul
 
 ---
 
-## <a name="see-also"></a>Voir également
+## <a name="see-also"></a>Voir aussi
 * [Manipulation directe avec les mains](direct-manipulation.md)
 * [Pointer et valider](gaze-and-commit.md)
 * [Mains : Manipulation directe](direct-manipulation.md)

@@ -8,17 +8,17 @@ ms.date: 08/24/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: réalité mixte, découvrir, distribuer, index, page d’accueil, conception, développement, tutoriels, exemples d’applications, principes fondamentaux, études de cas, ressources, procédures HoloLens, projets open source, concepts principaux, interaction
-ms.openlocfilehash: 92af4ddba96f659f0af812672599d4a90bf00224
-ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
+ms.openlocfilehash: 9ef408e1551e9f6c52a6c5fcf7df3123cc099c8c
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74539598"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334144"
 ---
 # <a name="start-designing-and-prototyping"></a>Commencer à concevoir et à créer des prototypes
 
 
-![Image de maillage 3D](images/03_Design.png)
+![résumé de la conception en réalité mixte](images/03_Design.png)
 
 ## <a name="expand-your-design-processcase-study-expanding-the-design-process-for-mixed-realitymd"></a>[Développer votre processus de conception](case-study-expanding-the-design-process-for-mixed-reality.md)
 
@@ -111,22 +111,22 @@ Découvrez les principales composantes des interactions spatiales et de l’inte
 
 :::row:::   
     :::column:::    
-       [![Découvrir Unity](images/unity_logo.png)](https://learn.unity.com/)<br>
+       [![Découvrir Unity](images/Final_unity_logo.png)](https://learn.unity.com/)<br>
         **[Découvrir Unity](https://learn.unity.com/)**<br>
         Découvrez comment créer des expériences interactives avec Unity. Apprenez par la pratique, du début à la fin.
     :::column-end:::    
     :::column:::    
-        [![Mixed Reality Toolkit (MRTK)](images/MRTK-small_logo.png)](https://github.com/Microsoft/MixedRealityToolkit-Unity)<br>
+        [![Mixed Reality Toolkit (MRTK)](images/Final_mrtk-small_logo.png)](https://github.com/Microsoft/MixedRealityToolkit-Unity)<br>
         **[Mixed Reality Toolkit (MRTK)](https://github.com/Microsoft/MixedRealityToolkit-Unity)**<br>  
         Avec l’interaction spatiale et les composants d’interface utilisateur, démarrez la conception et le développement de votre réalité mixte avec Unity.   
     :::column-end:::
     :::column:::    
-        [![Mixed Reality Design Labs](images/MRDL_logo.png)](https://github.com/Microsoft/MRDL_Unity_PeriodicTable)<br>
+        [![Mixed Reality Design Labs](images/Final_mrdl_logo.png)](https://github.com/Microsoft/MRDL_Unity_PeriodicTable)<br>
         **[Mixed Reality Design Labs](https://github.com/Microsoft/MRDL_Unity_PeriodicTable)**<br>  
         Obtenez des exemples d’applications qui vous montrent comment utiliser les composants de MRTK pour créer de superbes expériences de réalité mixte.
     :::column-end:::        
     :::column:::    
-        [![Microsoft Maquette](images/Maquette_logo.png)](https://www.maquette.ms/)<br>
+        [![Microsoft Maquette](images/Final_maquette_logo.png)](https://www.maquette.ms/)<br>
         **[Microsoft Maquette](https://www.maquette.ms/)**<br>  
         Conception de réalité virtuelle. Microsoft maquette rend le prototypage spatial facile, rapide et immersif. 
     :::column-end:::    
@@ -142,7 +142,7 @@ Découvrez les principales composantes des interactions spatiales et de l’inte
 
 :::row:::
     :::column:::
-       [![Comprendre les principes de base](images/icon-lightbulb.jpg)](index.md#understand-the-basics)<br>
+       [![Comprendre les principes de base](images/icon-lightbulb.png)](index.md#understand-the-basics)<br>
         **[Comprendre les principes de base](index.md#understand-the-basics)**<br>
         Approfondissez votre compréhension de ce qui définit la réalité mixte et de la manière de l’utiliser.
     :::column-end:::
