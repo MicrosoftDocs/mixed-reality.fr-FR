@@ -1,17 +1,17 @@
 ---
 title: Didacticiels de mise en route-6. Exploration des options d’entrée avancées
-description: Suivez ce cours pour découvrir comment implémenter la reconnaissance faciale Azure au sein d’une application de réalité mixte.
+description: Suivez ce cours pour découvrir comment implémenter Reconnaissance faciale Azure au sein d’une application de réalité mixte.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: b740c463e3d73d5df9b996562e9ff0a1952703f0
-ms.sourcegitcommit: f2b7c6381006fab6d0472fcaa680ff7fb79954d6
+ms.openlocfilehash: 75a14697953026474d8ca00e6473145d7b12a482
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74064324"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334349"
 ---
 # <a name="6-exploring-advanced-input-options"></a>6. exploration des options d’entrée avancées
 
@@ -23,9 +23,7 @@ Dans ce didacticiel, plusieurs options d’entrée avancées pour HoloLens 2 son
 - Utilisez des mains suivies pour faire pivoter des textures et des objets 3D avec des mains suivies
 - Tirez parti des fonctionnalités de suivi oculaire HoloLens 2 pour sélectionner des objets
 
-## <a name="instructions"></a>Instructions
-
-### <a name="enabling-voice-commands"></a>Activation des commandes vocales
+## <a name="enabling-voice-commands"></a>Activation des commandes vocales
 
 Dans cette section, deux commandes vocales sont implémentées. Tout d’abord, la possibilité de basculer vers le panneau Diagnostics de la fréquence d’images est introduite en disant « activer/désactiver les Diagnostics ». Deuxièmement, la possibilité de lire un son avec une commande vocale est explorée. Les profils et paramètres MRTK responsables de la configuration des commandes vocales sont examinés en premier.
 
@@ -108,7 +106,7 @@ Dans cette section, deux commandes vocales sont implémentées. Tout d’abord, 
 
     ![Lesson5 fichier chapter1 Step16im](images/Lesson5_chapter1_step16im.PNG)
 
-### <a name="the-pan-gesture"></a>Le mouvement panoramique
+## <a name="the-pan-gesture"></a>Le mouvement panoramique
 
 Dans cette section, vous allez apprendre à utiliser le mouvement panoramique. Cela est utile pour faire défiler le contenu à l’aide de votre doigt ou main. Vous pouvez également utiliser le mouvement panoramique pour faire pivoter des objets, parcourir une collection d’objets 3D ou même faire défiler une interface utilisateur 2D.
 
@@ -194,7 +192,7 @@ Dans cette section, vous allez apprendre à utiliser le mouvement panoramique. C
 
     ![mrlearning-base-CH5-2-step10d. png](images/mrlearning-base-ch5-2-step10d.png)
 
-### <a name="eye-tracking"></a>Eye-tracking
+## <a name="eye-tracking"></a>Eye-tracking
 
 Dans cette section, nous allons découvrir comment activer le suivi visuel dans notre démonstration. Nous allons faire tourner lentement nos éléments de menu 3D lorsqu’ils sont en regard avec votre point de regard. Nous déclencherons également un effet attrayant quand l’élément regardé est sélectionné.
 

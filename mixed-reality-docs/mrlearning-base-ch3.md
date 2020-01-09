@@ -1,17 +1,17 @@
 ---
 title: Didacticiels de mise en route-4. Placement de contenu dynamique et utilisation de solveurs
-description: Suivez ce cours pour découvrir comment implémenter la reconnaissance faciale Azure au sein d’une application de réalité mixte.
+description: Suivez ce cours pour découvrir comment implémenter Reconnaissance faciale Azure au sein d’une application de réalité mixte.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: ade7a839e03a306332bf18f1db49805f59c71429
-ms.sourcegitcommit: f2b7c6381006fab6d0472fcaa680ff7fb79954d6
+ms.openlocfilehash: e08de0bc769ceda493eafe40158b6aeed87751c7
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74064256"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334361"
 ---
 # <a name="4-placing-dynamic-content-and-using-solvers"></a>4. placement de contenu dynamique et utilisation de solveurs
 
@@ -23,9 +23,7 @@ Les hologrammes arrivent à la vie dans HoloLens 2 lorsqu’ils suivent intuitiv
 * Utiliser des solveurs pour qu’une collection de boutons suive l’utilisateur
 * Utiliser des solveurs pour qu’un objet de jeu suive les mouvements captés des mains de l’utilisateur
 
-## <a name="instructions"></a>Instructions
-
-### <a name="location-of-solvers-in-the-mrtk"></a>Emplacement des solveurs dans le MRTK
+## <a name="location-of-solvers-in-the-mrtk"></a>Emplacement des solveurs dans le MRTK
 
  Pour trouver les solveurs disponibles dans votre projet, consultez le dossier MRTK SDK (dossier MixedRealityToolkit. SDK). Dans le dossier Utilitaires, vous verrez le dossier solveurs, comme illustré dans l’image ci-dessous.
 
@@ -34,7 +32,7 @@ Les hologrammes arrivent à la vie dans HoloLens 2 lorsqu’ils suivent intuitiv
 >[!NOTE]
 >Dans cette leçon, nous allons uniquement examiner l’implémentation du solveur orbital et du solveur RadialView. Pour en savoir plus sur l’ensemble des programmes de résolution disponibles dans le MRTK, visitez le site : [https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Solver.html](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Solver.html)
 
-### <a name="use-a-solver-to-follow-the-user"></a>Utiliser un solveur pour suivre l’utilisateur
+## <a name="use-a-solver-to-follow-the-user"></a>Utiliser un solveur pour suivre l’utilisateur
 
 L’objectif de ce chapitre est d’améliorer la collection de boutons précédemment créée afin qu’elle suive la direction du regard de l’utilisateur. Dans la version précédente de MRTK et HoloToolkit, il s’agissait d’une fonctionnalité accompagnent.
 
@@ -50,13 +48,14 @@ L’objectif de ce chapitre est d’améliorer la collection de boutons précéd
     >Lorsque vous ajoutez le composant orbital, vous remarquerez que le système ajoute également le composant SolverHandler, qui est un composant obligatoire.
 
 3. Pour configurer la collection de boutons de façon à ce qu’elle suive l’utilisateur, nous devons implémenter les ajustements suivants (reportez-vous à l’image ci-dessous) :
+
     * Dans le script orbital, définissez la liste déroulante type d’orientation sur lacet uniquement. De cette façon, l’objet tourne sur un seul axe à mesure qu’il suit l’utilisateur.
     * Affectez à « Local Offset » la valeur 0 sur tous les axes. Définissez le décalage universel sur x = 0, y =-0,1 et z = 0,6. Cela verrouille le déplacement de l’objet de sorte que lorsque l’utilisateur change de hauteur, l’objet reste à une hauteur fixe dans l’environnement physique, tout en lui permettant de suivre l’utilisateur lorsque l’utilisateur se déplace sur l’environnement. Ces valeurs peuvent être ajustées pour obtenir un large éventail de comportements.
     * Pour un comportement suivant dans lequel les boutons ne suivent que la vue de l’utilisateur une fois que l’utilisateur a mis son chef suffisamment loin, vous pouvez sélectionner la case à cocher utiliser l’angle pas à pas pour le décalage universel (Remarque : ce titre peut être tronqué sur certains écrans, comme c’est le cas dans l’image ci-dessous). Par exemple, pour que l’objet suive l’utilisateur uniquement tous les 90 degrés, définissez le nombre d’étapes égal à 4 (marqué d’une flèche verte dans l’exemple ci-dessous).
 
     ![Leçon 3, chapitre 2, étape 3, image](images/Lesson3_chapter2_step3im.PNG)
 
-### <a name="enabling-objects-to-follow-tracked-hands"></a>Activation d’objets pour suivre les mains suivies
+## <a name="enabling-objects-to-follow-tracked-hands"></a>Activation d’objets pour suivre les mains suivies
 
 Dans cette section, nous allons configurer l’objet de jeu de cube créé précédemment pour suivre les mains suivies par l’utilisateur à l’aide du solveur RadialView.
 

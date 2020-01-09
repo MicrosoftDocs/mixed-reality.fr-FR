@@ -6,18 +6,18 @@ ms.author: jlyons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Portail des appareils Windows, HoloLens
-ms.openlocfilehash: 9bb8116330d88c532b955ef497d29fe98c86fddb
-ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
+ms.openlocfilehash: 17ed27653c8e3ec19c8c42b625fbd12cde2c5d84
+ms.sourcegitcommit: 5054f5c23965ce56599cb29ac9d9c6e48812dabd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/17/2019
-ms.locfileid: "75182019"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75623320"
 ---
 # <a name="using-the-windows-device-portal"></a>Utilisation du portail d’appareils Windows
 
 <table>
 <tr>
-<th>Fonctionnalité</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (1ère génération)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"><a href="immersive-headset-hardware-details.md">Casques immersifs</a></th>
+<th>Fonctionnalité</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (1re génération)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"><a href="immersive-headset-hardware-details.md">Casques immersifs</a></th>
 </tr><tr>
 <td> Windows Device Portal</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"></td>
 </tr>
@@ -75,7 +75,7 @@ Si vous souhaitez modifier ce nom d’utilisateur ou mot de passe à tout moment
 
 ## <a name="security-certificate"></a>Certificat de sécurité
 
-Si une « erreur de certificat » s’affiche dans votre navigateur, vous pouvez la résoudre en créant une relation d’approbation avec l’appareil.
+Si vous voyez une « erreur de certificat » dans votre navigateur, vous pouvez la résoudre en créant une relation d’approbation avec l’appareil.
 
 Chaque HoloLens génère un certificat auto-signé unique pour sa connexion SSL. Par défaut, ce certificat n’est pas approuvé par le navigateur web de votre PC, c’est la raison pour laquelle vous obtiendrez peut-être une « erreur de certificat ». En téléchargeant ce certificat à partir de votre HoloLens (via une connexion USB ou Wi-Fi approuvée) et en l’approuvant sur votre PC, vous pouvez vous connecter en toute sécurité à votre appareil.
 1. **Assurez-vous que vous êtes sur un réseau sécurisé (USB ou un réseau Wi-Fi auquel vous faites confiance).**
@@ -84,7 +84,7 @@ Chaque HoloLens génère un certificat auto-signé unique pour sa connexion SSL.
 3. Installez le certificat dans le magasin « autorités de certification racines de confiance » sur votre PC.
    * Dans le menu Windows, tapez : gérer les certificats d’ordinateur et démarrer l’applet.
    * Développez le dossier **autorité de certification racine de confiance** .
-   * Cliquez sur le dossier **certificats** .
+   * Cliquez sur le dossier **Certificats**.
    * Dans le menu Action, sélectionnez : Toutes les tâches &gt; Importer...
    * Terminez l’Assistant Importation de certificat en utilisant le fichier de certificat que vous avez téléchargé à partir de Device Portal.
 4. Redémarrez le navigateur.
@@ -136,7 +136,7 @@ Utilisez la page Vue 3D pour voir comment HoloLens interprète votre environneme
   * **Afficher les ancres spatiales**: affiche les ancres spatiales pour l’application active. Vous devez cliquer sur le bouton mettre à jour pour récupérer et actualiser les ancres.
   * **Afficher les détails** : affiche la position des mains, les quaternions de rotation de la tête et le vecteur d’origine à mesure de leur changement en temps réel.
   * **Bouton plein écran** : affiche la vue 3D en mode plein écran. Appuyez sur la touche ÉCHAP pour quitter le mode plein écran.
-* **Reconstruction de surface**: cliquez ou appuyez sur **mettre à jour** pour afficher le maillage de mappage spatial le plus récent à partir de l’appareil. Un passage complet peut nécessiter un certain temps, pouvant aller jusqu’à quelques secondes. La maille ne se met pas à jour automatiquement dans la vue 3D et vous devez cliquer sur **mettre à jour** manuellement pour obtenir le maillage le plus récent de l’appareil. Cliquez sur **Enregistrer** pour enregistrer le maillage de mappage spatial actuel sous la forme d’un fichier OBJ sur votre PC.
+* **Reconstruction de surface**: cliquez ou appuyez sur **mettre à jour** pour afficher le maillage de mappage spatial le plus récent à partir de l’appareil. Une réussite complète peut prendre un certain temps (jusqu’à quelques secondes). La maille ne se met pas à jour automatiquement dans la vue 3D et vous devez cliquer sur **mettre à jour** manuellement pour obtenir le maillage le plus récent de l’appareil. Cliquez sur **Enregistrer** pour enregistrer le maillage de mappage spatial actuel sous la forme d’un fichier OBJ sur votre PC.
 * **Ancres spatiales**: cliquez sur mettre à jour pour afficher ou mettre à jour les ancres spatiales de l’application active.
 
 ### <a name="mixed-reality-capture"></a>MRC (Mixed Reality Capture)
@@ -256,10 +256,10 @@ Cliquez ou appuyez sur **Activer** pour démarrer le suivi. Le fournisseur est a
 * **Fournisseurs personnalisés** sélectionnez un fournisseur ETW personnalisé et le niveau de suivi. Identifiez le fournisseur par son GUID. N’insérez pas de crochets dans le GUID.
 * **Fournisseurs activés** : répertorie les fournisseurs activés. Sélectionnez un fournisseur dans la liste déroulante, puis cliquez sur ou appuyez sur **Désactiver** pour arrêter le suivi. Cliquez ou appuyez sur **Arrêter tout** pour suspendre tout le suivi.
 * **Historique des fournisseurs** : affiche les fournisseurs ETW activés pendant la session active. Cliquez ou appuyez sur **Activer** pour activer un fournisseur qui a été désactivé. Cliquez ou appuyez sur **Effacer** pour supprimer l’historique.
-* **Événements** : répertorie les événements ETW des fournisseurs sélectionnés sous forme de tableau. Le tableau suivant est mis à jour en temps réel. Sous le tableau, cliquez sur le bouton **Effacer** pour supprimer tous les événements ETW de la table. Cela ne désactive pas les fournisseurs. Vous pouvez cliquer sur **Enregistrer dans le fichier** pour exporter vers un fichier CSV en local les événements ETW actuellement collectés.
+* **Événements** : répertorie les événements ETW des fournisseurs sélectionnés sous forme de tableau. Le tableau suivant est mis à jour en temps réel. En dessous du tableau, cliquez sur le bouton **Effacer** pour supprimer tous les événements ETW du tableau. Cela ne désactive pas les fournisseurs. Vous pouvez cliquer sur **Enregistrer dans le fichier** pour exporter vers un fichier CSV en local les événements ETW actuellement collectés.
 * **Filtres**: vous permettent de filtrer les événements ETW collectés par l’ID, le mot clé, le niveau, le nom du fournisseur, le nom de la tâche ou le texte. Vous pouvez combiner plusieurs critères :
-   1. Pour les critères appliqués à la même propriété, les événements peuvent répondre à l’un de ces critères.
-   2. Pour les critères appliqués à des événements de propriété différents doivent satisfaire à tous les critères
+   1. Pour les critères appliqués à la même propriété, les événements qui peuvent satisfaire l’un de ces critères sont affichés.
+   2. Pour les critères appliqués à une propriété différente, les événements doivent satisfaire à tous les critères
 
 Par exemple, vous pouvez spécifier les critères *(le nom de la tâche contient « foo » ou « bar ») et (le texte contient « Error » ou « Warning »)*
 

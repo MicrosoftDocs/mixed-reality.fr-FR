@@ -1,17 +1,17 @@
 ---
 title: Didacticiels de mise en route-3. Création d’une interface utilisateur et configuration d’une réalité mixte Toolkit
-description: Suivez ce cours pour découvrir comment implémenter la reconnaissance faciale Azure au sein d’une application de réalité mixte.
+description: Suivez ce cours pour découvrir comment implémenter Reconnaissance faciale Azure au sein d’une application de réalité mixte.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: f0a54bb591479dbe8ffa719cb5e6a9d846f67f9e
-ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
+ms.openlocfilehash: e961238b8fc7f2ef15bea5f25eba8a8e9eb2ef3e
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74539742"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334395"
 ---
 # <a name="3-creating-user-interface-and-configure-mixed-reality-toolkit"></a>3. création d’une interface utilisateur et configuration d’une réalité mixte Toolkit
 
@@ -23,13 +23,11 @@ Dans la leçon précédente, vous avez appris certaines des possibilités offert
 * Interagir avec des hologrammes à l’aide d’éléments d’interface utilisateur et de boutons
 * Entrées et interactions de base pour le suivi de la main
 
-## <a name="instructions"></a>Instructions
-
-### <a name="how-to-configure-the-mixed-reality-toolkit-profiles-change-spatial-awareness-display-option"></a>Comment configurer les profils de la boîte à outils de la réalité mixte (modifier l’option d’affichage de sensibilisation spatiale)
+## <a name="how-to-configure-the-mixed-reality-toolkit-profiles-change-spatial-awareness-display-option"></a>Comment configurer les profils de la boîte à outils de la réalité mixte (modifier l’option d’affichage de sensibilisation spatiale)
 
 Dans cette section, vous allez apprendre à personnaliser et à configurer les profils MRTK par défaut en ajustant l’option d’affichage du maillage de la sensibilisation spatiale. Vous pouvez suivre ces mêmes principes pour ajuster des paramètres ou des valeurs dans les profils MRTK.
 
-1. Sélectionnez MRTK (Mixed-Reality Toolkit) dans la hiérarchie BaseScene. Dans le panneau Inspecteur, recherchez le script Mixed Reality Toolkit et sélectionnez le profil actif comme indiqué dans la figure ci-dessous. Double-cliquez pour l’ouvrir.
+1. Sélectionnez MRTK (Mixed-Reality Toolkit) dans la hiérarchie BaseScene. Dans le panneau Inspecteur, recherchez le script Mixed Reality Toolkit et sélectionnez le profil actif comme indiqué dans la figure ci-dessous. Double-cliquez sur ce fichier pour l'ouvrir.
 
     ![MR213_BuildSettings](images/mrlearning-base-ch2-1-step1.png)
 
@@ -73,7 +71,7 @@ Dans cette section, vous allez apprendre à personnaliser et à configurer les p
 
 Félicitations ! Vous venez de découvrir comment modifier un paramètre dans le profil MRTK. Comme vous pouvez le voir, pour pouvoir modifier les paramètres du MRTK, vous devez créer des copies des profils par défaut. Vous disposez toujours des profils par défaut, qui ne sont pas modifiables, pour revenir à si vous souhaitez créer un profil avec de nouveaux paramètres, ou vous pouvez vous référer aux profils par défaut. Vous pouvez ajuster de nombreux paramètres. Pour obtenir une référence complète aux paramètres de profil MRTK, reportez-vous à la documentation MRTK ici : [https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html)
 
-### <a name="hand-tracking-gestures-and-interactable-buttons"></a>Gestes de suivi de la main et boutons d’interaction
+## <a name="hand-tracking-gestures-and-interactable-buttons"></a>Gestes de suivi de la main et boutons d’interaction
 
 Dans cette section, vous allez apprendre à utiliser le suivi de la main pour appuyer sur un bouton enfoncé.
 
@@ -94,7 +92,7 @@ Dans cette section, vous allez apprendre à utiliser le suivi de la main pour ap
 
     ![MR213_BuildSettings](images/mrlearning-base-ch2-2-step6a.png)
 
-    Un cube doit maintenant se trouver dans votre affichage. Il apparaîtra très grand. Vous pouvez ajuster les coordonnées (tandis que le cube est toujours sélectionné dans la zone de hiérarchie) pour réduire la taille. Définissez les valeurs de l’échelle sur x = 0,02, y = 0,02 et z = 0,02. Veillez à positionner le cube dans votre scène près du bouton, mais sans le chevaucher. Dans l’image ci-dessous, la position du cube est x = 0, y = 0,4 et z = 0,2.
+    Un cube doit maintenant se trouver dans votre affichage. Il apparaîtra très grand. Vous pouvez ajuster les coordonnées (tandis que le cube est toujours sélectionné dans la zone de hiérarchie) pour réduire la taille. Définissez les valeurs de l’échelle sur x = 0,02, y = 0,02 et z = 0,02. Veillez à positionner le cube dans votre scène près du bouton, mais sans le chevaucher. Dans l’image ci-dessous, la position du cube est x = 0, y = 0,04 et z = 0,2.
 
     ![MR213_BuildSettings](images/mrlearning-base-ch2-2-step6b.png)
 
@@ -129,7 +127,7 @@ Dans cette section, vous allez apprendre à utiliser le suivi de la main pour ap
 
     Désormais, lorsque le bouton est enfoncé, il passe à une nouvelle couleur ; bleu. Lorsque le bouton est relâché, il revient à la couleur par défaut que vous avez spécifiée (par exemple, gris clair). Appuyez sur le bouton de lecture en haut de l’écran pour l’essayer dans l’éditeur ou sur déployer sur votre HoloLens 2 pour le tester. Pour en savoir plus sur la simulation dans l’éditeur, y compris la simulation manuelle, lisez la [page de documentation sur la simulation de MRTK](<https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/InputSimulation/InputSimulationService.html>).
 
-### <a name="creating-a-panel-of-buttons-using-mrtks-grid-object-collection"></a>Création d’un panneau de boutons avec la collection d’objets de grille du MRTK
+## <a name="creating-a-panel-of-buttons-using-mrtks-grid-object-collection"></a>Création d’un panneau de boutons avec la collection d’objets de grille du MRTK
 
 Dans cette section, vous allez apprendre à aligner automatiquement plusieurs boutons dans une interface utilisateur claire à l’aide de l’outil GridObjectCollection de MRTK.
 
@@ -162,7 +160,7 @@ Dans cette section, vous allez apprendre à aligner automatiquement plusieurs bo
     >[!NOTE]
     >Selon l’orientation des objets enfants ou de l’objet parent, vous devrez probablement ajuster différemment le paramètre d’orientation dans les projets futurs. Il peut également être nécessaire de définir différemment les champs Cell Width (Largeur de cellule) et Cell Height (Hauteur de cellule), en fonction de la taille des objets de votre collection.
 
-### <a name="adding-text-into-your-scene"></a>Ajout de texte dans votre scène
+## <a name="adding-text-into-your-scene"></a>Ajout de texte dans votre scène
 
 Dans cette section, vous allez découvrir comment ajouter et modifier du texte dans votre expérience de réalité mixte. Si vous ne l’avez pas déjà fait, vérifiez que TextMeshPro est activé dans Unity en suivant les instructions fournies [ici](https://docs.unity3d.com/Packages/com.unity.textmeshpro@2.0/manual/index.html#installation).
 

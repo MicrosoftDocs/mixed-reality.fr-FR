@@ -6,12 +6,12 @@ ms.author: shentan
 ms.date: 04/26/2019
 ms.topic: article
 keywords: La réalité mixte, les mains, les contrôleurs de mouvement, l’interaction et la conception
-ms.openlocfilehash: 395862fe987244e2af70bb6794caa91e243cd076
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 27d13316bbc4b3b40a1e617d73dd5487c05cb347
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73435161"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334447"
 ---
 # <a name="hands-and-motion-controllers"></a>Contrôleurs mains et motion
 ## <a name="scenarios"></a>Scénarios
@@ -22,7 +22,7 @@ Certains scénarios spécifiques peuvent être :
 * Mise à disposition des didacticiels et des guides des travailleurs de première ligne pour les lignes d’assemblage usine
 * Développement d’outils professionnels pour assister et former des professionnels de la santé  
 * Utilisation d’objets virtuels 3D pour décorer le monde réel ou créer un second monde 
-* Création de services et de jeux basés sur l’emplacement à l’aide du monde réel comme arrière-plan
+* Création de services et de jeux basés sur l’emplacement en utilisant le monde réel comme arrière-plan
 
 <br>
 
@@ -39,7 +39,7 @@ Certains scénarios spécifiques peuvent être :
     :::column:::
        [Point de ![et validation avec mains](images/hands-and-controllers-point-and-commit.jpg)](point-and-commit.md)<br>
         ### <a name="point-and-commit-with-handspoint-and-commitmdbr"></a>[Pointer et valider avec les mains](point-and-commit.md)<br>
-        Cette modalité permet aux utilisateurs d’interagir avec des hologrammes à distance. Il permet aux utilisateurs de tirer le meilleur parti de l’environnement. Les utilisateurs peuvent placer des hologrammes n’importe où et peuvent toujours y accéder à partir de n’importe quelle distance. Les modèles et les gestes mentals pour le contrôle et la manipulation des hologrammes 2D et 3D sont hautement synchronisés avec ceux de manipulation directe.
+        Cette modalité permet aux utilisateurs d’interagir avec des hologrammes à distance. Il permet aux utilisateurs de tirer le meilleur parti de l’environnement. Les utilisateurs peuvent placer des hologrammes n’importe où et toujours y accéder à partir de n’importe quelle distance. Les modèles et les gestes mentals pour le contrôle et la manipulation des hologrammes 2D et 3D sont hautement synchronisés avec ceux de manipulation directe.
     :::column-end:::
     :::column:::
        [contrôleurs de mouvement ![](images/hands-and-controllers-motion-controllers.jpg)](motion-controllers.md)<br>

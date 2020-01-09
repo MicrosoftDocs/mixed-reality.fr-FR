@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: b033e4f9a379fb1778da3d94da70262e073d141b
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: 3127ffceea08202fe9d978ad77f8fddb6fba60a3
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926518"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334373"
 ---
 # <a name="7-creating-a-lunar-module-sample-application"></a>7. création d’un exemple d’application de module lunaire
 
@@ -25,9 +25,7 @@ Dans ce didacticiel, plusieurs concepts sont combinés à partir de leçons pré
 - Utiliser la physique et les forces des corps rigides
 - Explorer l’utilisation d’info-bulles
 
-## <a name="instructions"></a>Instructions
-
-### <a name="configuring-the-lunar-module"></a>Configuration du module lunaire
+## <a name="configuring-the-lunar-module"></a>Configuration du module lunaire
 
 Dans cette section, nous présentons les différents composants nécessaires pour créer notre exemple d’expérience.
 
@@ -38,7 +36,7 @@ Dans cette section, nous présentons les différents composants nécessaires pou
 
     ![Lesson6 Chapter1 Step1im](images/Lesson6_Chapter1_step1im.PNG)
 
-    Si vous développez l’objet de jeu de fusée Launcher_Tutorial dans votre hiérarchie et que vous développez davantage l’objet de module lunaire, vous trouverez plusieurs objets enfants qui ont un matériau appelé « x-ray ». Le matériau « x-ray » autorise une couleur légèrement translucide qui sera utilisée comme indicateurs de placement pour l’utilisateur. 
+    Si vous développez l’objet de jeu de fusée Launcher_Tutorial dans votre hiérarchie et que vous développez davantage l’objet de module lunaire, vous trouverez plusieurs objets enfants qui ont un matériau appelé « x-ray ». Le matériau « x-ray » autorise une couleur légèrement translucide qui sera utilisée comme indicateurs de placement pour l’utilisateur.
 
     ![Lesson6 fichier chapter1 Noteaim](images/Lesson6_Chapter1_noteaim.PNG)
 
@@ -81,7 +79,7 @@ Dans cette section, nous présentons les différents composants nécessaires pou
 
     ![Lesson6 Chapter1 Step6im](images/Lesson6_Chapter1_step6im.PNG)
 
-### <a name="lunar-module-parts-overview"></a>Vue d’ensemble des parties du module lunaire
+## <a name="lunar-module-parts-overview"></a>Vue d’ensemble des parties du module lunaire
 
 L’objet parent des composants de module lunaire est la collection des objets avec lesquels l’utilisateur interagit. Les noms des objets de jeu avec des noms de scènes libellés entre parenthèses, sont fournis dans la liste ci-dessous :
 
@@ -106,7 +104,7 @@ L’info-bulle est l’étiquette de l’info-bulle dans la scène. Lorsque les 
 
 La source audio est automatiquement saisie.
 
-### <a name="configuring-the-placement-hints-button"></a>Configuration du bouton indicateurs de positionnement
+## <a name="configuring-the-placement-hints-button"></a>Configuration du bouton indicateurs de positionnement
 
 Dans la [leçon 2](mrlearning-base-ch2.md), vous avez appris à placer et configurer des boutons permettant d’effectuer des opérations telles que modifier la couleur d’un élément ou faire en sorte qu’il émette un signal sonore lorsqu’il est poussé. Nous allons continuer à utiliser ces principes pour configurer nos boutons permettant d’activer et de désactiver les indicateurs de placement.
 
@@ -120,7 +118,7 @@ L’objectif est de configurer notre bouton afin que chaque fois que l’utilisa
 
     ![Lesson6 Chapter3 Step2im](images/Lesson6_Chapter3_step2im.PNG)
 
-### <a name="configuring-the-reset-button"></a>Configuration du bouton de réinitialisation
+## <a name="configuring-the-reset-button"></a>Configuration du bouton de réinitialisation
 
 Il y aura des situations où l’utilisateur fait une erreur, lève accidentellement l’objet à l’écart ou souhaite simplement réinitialiser l’expérience. Le bouton Réinitialiser permet de relancer l’expérience.
 
@@ -137,7 +135,7 @@ Il y aura des situations où l’utilisateur fait une erreur, lève accidentelle
     >[!NOTE]
     >Notez que, par défaut, GameObject. BroadcastMessage est configuré sur ResetPlacement. Cela diffuse un message nommé ResetPlacement pour chaque objet enfant du RocketLauncher_Tutorial. Tout objet ayant une méthode pour ResetPlacement () répond à ce message en réinitialisant sa position.
 
-### <a name="configuring-the-launch-button"></a>Configuration du bouton de lancement
+## <a name="configuring-the-launch-button"></a>Configuration du bouton de lancement
 
 Cette section explique comment configurer le bouton de lancement, qui permet à l’utilisateur d’appuyer sur le bouton et de lancer le module lunaire dans l’espace.
 
@@ -161,6 +159,6 @@ Cette section explique comment configurer le bouton de lancement, qui permet à 
 
     ![Lesson6 Chapter5 Step6im](images/Lesson6_Chapter5_step6im.PNG)
 
-### <a name="congratulations"></a>Félicitations !
+## <a name="congratulations"></a>Félicitations !
 
 Vous avez entièrement configuré cette application. Maintenant, lorsque vous appuyez sur lire, vous pouvez assembler complètement le module lunaire, activer/désactiver les indicateurs, lancer le module lunaire et le réinitialiser pour redémarrer.

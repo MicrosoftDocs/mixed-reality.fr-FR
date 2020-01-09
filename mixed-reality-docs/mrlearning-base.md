@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: 19456a9cc33dc86b1e31323547aa2685949d8044
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: a311fbe377e4a2654c8905276417cf1104fc4754
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438399"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334346"
 ---
 # <a name="1-overview-and-objectives"></a>1. vue d’ensemble et objectifs
 
@@ -40,11 +40,14 @@ ms.locfileid: "73438399"
 
 ## <a name="before-you-start"></a>Avant de commencer
 
-### <a name="prerequisites"></a>Conditions préalables
+### <a name="prerequisites"></a>Prérequis
 
 * Un PC Windows 10 configuré avec les outils corrects [installés](install-the-tools.md)
 * Windows 10 SDK 10.0.18362.0 ou version ultérieure
 * Certaines fonctionnalités C# de programmation de base
 * Un appareil HoloLens 2 [configuré pour le développement](using-visual-studio.md#enabling-developer-mode)
+
+>[!IMPORTANT]
+>Cette série de didacticiels requiert <a href="https://unity3d.com/get-unity/download/archive" target="_blank">unity 2019,1</a> et la version recommandée est Unity 2019.1.14. Cela remplace toute exigence ou recommandation de version Unity énoncées dans les conditions préalables liées ci-dessus.
 
 [Leçon suivante : 2. initialisation de votre projet et de votre première application](mrlearning-base-ch1.md)

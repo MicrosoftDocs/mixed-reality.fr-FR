@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 05/02/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: 8c60d8291ede123817c93458fff003891169840c
-ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
+ms.openlocfilehash: fe068d0cfcea369f10e6fa636eb73fecb3002fa7
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74105974"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334383"
 ---
 # <a name="5-interacting-with-3d-objects"></a>5. interaction avec les objets 3D
 
@@ -30,9 +30,7 @@ Dans ce didacticiel, vous allez découvrir le contenu 3D de base et l’expérie
 * Explorer l’interaction de près et de loin
 * En savoir plus sur les gestes supplémentaires de suivi de la main, tels que la manipulation et la saisie tactile
 
-## <a name="instructions"></a>Instructions
-
-### <a name="organizing-3d-objects-in-a-collection"></a>Organisation des objets 3D dans une collection
+## <a name="organizing-3d-objects-in-a-collection"></a>Organisation des objets 3D dans une collection
 
 1. Cliquez avec le bouton droit sur votre hiérarchie et sélectionnez Créer vide pour créer un objet de jeu vide, renommez-le 3DObjectCollection et assurez-vous qu’il est positionné sur x = 0, y = 0 et z = 0.
 
@@ -70,7 +68,7 @@ Dans ce didacticiel, vous allez découvrir le contenu 3D de base et l’expérie
     >[!NOTE]
     >Vous remarquerez peut-être que certains objets sont décentrés, tels que les objets de l’image ci-dessus. La raison en est que des préfabriqués ou des objets peuvent avoir des objets enfants qui ne sont pas alignés. N’hésitez pas à effectuer les ajustements nécessaires des positions des objets ou des objets enfants pour obtenir une grille bien alignée.
 
-### <a name="manipulating-3d-objects"></a>Manipulation d’objets 3D
+## <a name="manipulating-3d-objects"></a>Manipulation d’objets 3D
 
 1. Ajoutez la possibilité de manipuler un cube. Pour ajouter la possibilité de manipuler des objets 3D, procédez comme suit :
     * Sélectionnez l’objet 3D que vous souhaitez manipuler dans votre hiérarchie (c’est-à-dire l’un de vos cubes).
@@ -132,7 +130,7 @@ Dans ce didacticiel, vous allez découvrir le contenu 3D de base et l’expérie
     >[!NOTE]
     >Ce paramètre est utile pour les scénarios, tels que la création d’une balle que vous pouvez lever. En conservant la vélocité appropriée et la vélocité angulaire pour garantir qu’une fois la balle relâché, elle continuera à évoluer à la vitesse à laquelle elle a été libérée. semblable à la façon dont une balle physique se comporterait.
 
-### <a name="adding-bounding-boxes"></a>Ajout de cadres englobants
+## <a name="adding-bounding-boxes"></a>Ajout de cadres englobants
 
 Les zones englobantes facilitent et rendent plus intuitive la manipulation d’objets avec une main pour la manipulation directe (Near interaction) et la manipulation basée sur les rayons (interaction lointaine). Les zones englobantes fournissent des poignées qui peuvent être saisies pour mettre à l’échelle et faire pivoter des objets le long d’un axe spécifique.
 
@@ -180,7 +178,7 @@ Les zones englobantes facilitent et rendent plus intuitive la manipulation d’o
     >[!NOTE]
     >Les visualisations de cadre englobant s’affichent uniquement en mode lecture.
 
-### <a name="adding-touch-effects"></a>Ajout d’effets tactiles
+## <a name="adding-touch-effects"></a>Ajout d’effets tactiles
 
 Dans cet exemple, nous allons émettre un son quand vous touchez un objet avec votre main.
 

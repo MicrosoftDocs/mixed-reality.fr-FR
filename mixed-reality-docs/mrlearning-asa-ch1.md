@@ -1,17 +1,17 @@
 ---
 title: Didacticiels sur les ancres spatiales Azure-1. Prise en main des ancres spatiales Azure
-description: Suivez ce cours pour découvrir comment implémenter la reconnaissance faciale Azure au sein d’une application de réalité mixte.
+description: Suivez ce cours pour découvrir comment implémenter Reconnaissance faciale Azure au sein d’une application de réalité mixte.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: 861c42f9449fcb3cf038258af91088fc927941e5
-ms.sourcegitcommit: f4812e1312c4751a22a2de56771c475b22a4ba24
+ms.openlocfilehash: e62d3626ec6f2dbf8b66378212afab7db2f56422
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/09/2019
-ms.locfileid: "74940977"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334458"
 ---
 # <a name="1-getting-started-with-azure-spatial-anchors"></a>1. prise en main des ancres spatiales Azure
 
@@ -30,11 +30,19 @@ Dans le troisième didacticiel, l’affichage de commentaires sur l' [ancrage sp
 * Découvrez les principes de base du développement avec les ancres spatiales Azure pour HoloLens 2
 * Créer, charger et télécharger des ancres spatiales
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Prérequis
 
-* Respectez la configuration requise indiquée dans la section [conditions préalables](https://docs.microsoft.com/azure/spatial-anchors/quickstarts/get-started-unity-hololens#prerequisites) du Guide de [démarrage rapide : créer une application de l’outil HoloLens Unity HoloLens qui utilise des ancres spatiales Azure](https://docs.microsoft.com/azure/spatial-anchors/quickstarts/get-started-unity-hololens) .
+>[!TIP]
+>Si vous n’avez pas encore terminé la série des [didacticiels de mise](mrlearning-base.md) en route, nous vous recommandons d’effectuer d’abord ces didacticiels.
+
+* Un PC Windows 10 configuré avec les outils corrects [installés](install-the-tools.md)
+* Windows 10 SDK 10.0.18362.0 ou version ultérieure
+* Certaines fonctionnalités C# de programmation de base
+* Un appareil HoloLens 2 [configuré pour le développement](using-visual-studio.md#enabling-developer-mode)
 * Complétez la section [créer une ressource d’ancrages spatiaux](https://docs.microsoft.com/azure/spatial-anchors/quickstarts/get-started-unity-hololens#create-a-spatial-anchors-resource) du Guide de [démarrage rapide : créer une application de l’unité HoloLens qui utilise des ancres spatiales Azure](https://docs.microsoft.com/azure/spatial-anchors/quickstarts/get-started-unity-hololens) .
-* Si vous n’avez pas encore terminé la série des [didacticiels de mise](mrlearning-base.md) en route, nous vous recommandons d’effectuer d’abord ces didacticiels.
+
+>[!IMPORTANT]
+>Cette série de didacticiels requiert <a href="https://unity3d.com/get-unity/download/archive" target="_blank">unity 2019,1</a> et la version recommandée est Unity 2019.1.14. Cela remplace toute exigence ou recommandation de version Unity énoncées dans les conditions préalables liées ci-dessus.
 
 ## <a name="creating-the-unity-project"></a>Création du projet Unity
 
