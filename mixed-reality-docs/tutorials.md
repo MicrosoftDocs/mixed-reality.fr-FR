@@ -8,22 +8,22 @@ ms.date: 10/22/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-unity, academy, tutoriel
-ms.openlocfilehash: 66246e33bfd1b63630c07005661a744f8939de47
-ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
+ms.openlocfilehash: ebb40c6ae877ac167c7c16a67e08ef2501f6290d
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74539644"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334468"
 ---
 # <a name="tutorials-and-sample-apps"></a>Tutoriels et exemples d’applications
 
 ![Utilisateur HoloLens 2](images/08_Tutorials.png)
 
-Tous nos tutoriels et exemples d’applications sont actuellement basés sur Unity.  À mesure que nous développerons du contenu pour d’autres moteurs et plateformes, nous ajouterons des titres à la table des matières.
+Tous nos tutoriels et exemples d’applications sont actuellement basés sur Unity. À mesure que nous développerons du contenu pour d’autres moteurs et plateformes, nous ajouterons des titres à la table des matières.
 
 ## <a name="hololens-2-tutorials"></a>Tutoriels sur HoloLens 2
 
-Les tutoriels HoloLens 2 sont conçus pour aider les développeurs à apprendre les techniques et les bonnes pratiques du développement d’applications de réalité mixte.  Les tutoriels sont basés sur [Mixed Reality Toolkit 2.0 (MRTK 2.0)](https://github.com/microsoft/MixedRealityToolkit-Unity).
+Les tutoriels HoloLens 2 sont conçus pour aider les développeurs à apprendre les techniques et les bonnes pratiques du développement d’applications de réalité mixte. Les tutoriels sont basés sur [Mixed Reality Toolkit 2.0 (MRTK 2.0)](https://github.com/microsoft/MixedRealityToolkit-Unity).
 
 * Tutoriels de démarrage - [Vue d’ensemble et objectifs (1 sur 7)](mrlearning-base.md)
 * Tutoriels sur les ancres spatiales Azure - [Bien démarrer avec les ancres spatiales Azure (1 sur 3)](mrlearning-asa-ch1.md)
@@ -48,7 +48,7 @@ Mixed Reality Academy propose un ensemble de tutoriels pas à pas en ligne avec 
 * Pour suivre chaque tutoriel, vous devez généralement disposer d’un PC Windows 10 équipé des [bons outils](install-the-tools.md).
 
 >[!NOTE]
->Les tutoriels Mixed Reality Academy ont été conçus pour les appareils HoloLens (1re génération) et les casques immersifs de réalité mixte.  Nous estimons qu’il est important de laisser ces tutoriels à la disposition des développeurs qui recherchent encore des conseils pour développer des applications sur ces appareils.  Notez que ces tutoriels **_ne sont pas_** mis à jour avec les derniers ensembles d’outils ou interactions utilisés pour HoloLens 2.  Ils sont fournis dans le but de fonctionner sur les appareils pris en charge. Une [nouvelle série de tutoriels](mrlearning-base.md) a été publiée pour HoloLens 2.
+>Les tutoriels Mixed Reality Academy ont été conçus pour les appareils HoloLens (1re génération) et les casques immersifs de réalité mixte. Nous estimons qu’il est important de laisser ces tutoriels à la disposition des développeurs qui recherchent encore des conseils pour développer des applications sur ces appareils. Notez que ces tutoriels **_ne sont pas_** mis à jour avec les derniers ensembles d’outils ou interactions utilisés pour HoloLens 2. Ils sont fournis dans le but de fonctionner sur les appareils pris en charge. Une [nouvelle série de tutoriels](mrlearning-base.md) a été publiée pour HoloLens 2.
 
 <br>
 <ul id="cardtypes-W" class="cardsW panelContent" style="display: flex; margin-top: 0px;">
@@ -265,7 +265,7 @@ Mixed Reality Academy propose un ensemble de tutoriels pas à pas en ligne avec 
 
 ## <a name="mixed-reality-and-azure-services-tutorials"></a>Tutoriels sur la réalité mixte et les services Azure
 
-Ces tutoriels autonomes sont très utiles pour apprendre à implémenter différents services Azure dans votre projet Unity.  Les tutoriels sont tous basés sur HoloLens (1re génération) ou nos casques immersifs, mais vous pouvez appliquer les leçons sur l’utilisation des services à la plupart des appareils.
+Ces tutoriels autonomes sont très utiles pour apprendre à implémenter différents services Azure dans votre projet Unity. Les tutoriels sont tous basés sur HoloLens (1re génération) ou nos casques immersifs, mais vous pouvez appliquer les leçons sur l’utilisation des services à la plupart des appareils.
 
 <ul id="cardtypes-W" class="cardsW panelContent" style="display: flex; margin-top: 0px;">
     <li>
@@ -279,7 +279,7 @@ Ces tutoriels autonomes sont très utiles pour apprendre à implémenter différ
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>Réalité mixte - Azure - Cours 301 : Traduction linguistique</h3>
+                                              <h3>Réalité mixte - Azure - Cours 301 : Traduction</h3>
                                               <p>L’API de traduction de texte Translator Text Azure permet à votre application de réalité mixte de convertir la parole en texte et de l’afficher dans une autre langue. Ce cours vous explique comment faire.</p>
                                           </div>
                                       </div>
@@ -413,7 +413,7 @@ Ces tutoriels autonomes sont très utiles pour apprendre à implémenter différ
                                           </div>
                                           <div class="cardText">
                                               <h3>Réalité mixte - Azure - Cours 307 : Machine Learning</h3>
-                                              <p>Tirez parti d’Azure Machine Learning Studio dans votre application de réalité mixte pour déployer un grand nombre d’algorithmes de Machine Learning (ML).</p>
+                                              <p>Tirez parti d’Azure Machine Learning Studio (classique) dans votre application de réalité mixte pour déployer un grand nombre d’algorithmes de Machine Learning (ML).</p>
                                           </div>
                                       </div>
                                   </div>

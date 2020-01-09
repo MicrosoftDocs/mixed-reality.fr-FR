@@ -7,16 +7,16 @@ ms.date: 04/02/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Réalité mixte, pointage du regard, ciblage par pointage du regard, interaction, conception, à portée de main, HoloLens
-ms.openlocfilehash: e0b0e6273917df071f49eb0108039ebe204bbc12
-ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
+ms.openlocfilehash: d263c84d306a2ece3783c2e7fb0e3f599dec49eb
+ms.sourcegitcommit: 270ca09ec61e1153a83cf44942d7ba3783ef1805
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74105945"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75694173"
 ---
 # <a name="direct-manipulation-with-hands"></a>Manipulation directe avec les mains
 
-![Button](images/UX/UX_Hero_Manipulation.jpg)
+![Bouton](images/UX/UX_Hero_Manipulation.jpg)
 
 La manipulation directe est un modèle d’entrée qui consiste à toucher les hologrammes directement avec les mains. L’idée derrière ce concept est de faire en sorte que les objets se comportent exactement comme dans le monde réel. Vous pouvez activer les boutons simplement en appuyant dessus, vous pouvez saisir les objets en les agrippant, et le contenu 2D se comporte comme un écran tactile virtuel. C’est pourquoi la manipulation directe est facile à apprendre pour les utilisateurs et amusante. Elle est considérée comme un modèle d’entrée « proche », car elle est utilisée de préférence pour interagir avec le contenu situé à portée de main.
 
@@ -178,7 +178,7 @@ Avec une pointe de doigt pourvue de la détection de collision, les utilisateurs
 
 ## <a name="2d-slate-interaction"></a>Interaction avec une tablette 2D
 
-Une tablette 2D est un conteneur holographique hébergeant le contenu d’applications 2D comme un navigateur web. L’interaction avec une tablette 2D par manipulation directe consiste à exploiter le modèle mental de l’interaction avec un écran tactile physique.
+Une [tablette](slate.md) 2D est un conteneur holographique utilisé pour héberger le contenu d’applications 2D comme un navigateur web. L’interaction avec une tablette 2D par manipulation directe consiste à exploiter le modèle mental de l’interaction avec un écran tactile physique.
 
 ### <a name="to-interact-with-the-slate-contact"></a>Pour interagir avec la tablette par contact
 
@@ -334,7 +334,7 @@ Avec **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** , vous p
 
 ---
 
-## <a name="see-also"></a>Voir également
+## <a name="see-also"></a>Voir aussi
 
 * [Suivre de la tête et valider](gaze-and-commit.md)
 * [Pointer et valider avec les mains](point-and-commit.md)
