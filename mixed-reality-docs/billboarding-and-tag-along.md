@@ -6,12 +6,12 @@ ms.author: adlinv
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, billboarding, balise
-ms.openlocfilehash: ff2b1ce20174b1b9aecbb90b1d1dc3e8896b3761
-ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
+ms.openlocfilehash: 24c4ca8bdc3c6ea1081311102204d4a7f5a95425
+ms.sourcegitcommit: 6844930427b658ae31f642c395cd8a3b3cdbf857
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2019
-ms.locfileid: "74143130"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75723178"
 ---
 # <a name="billboarding-and-tag-along"></a>Billboarding et tag-avec
 
@@ -46,8 +46,8 @@ Des paramètres supplémentaires peuvent faire en sorte que l’objet de la bali
 
 ---
 
-## <a name="billboarding-and-tag-along-in-mrtkmixed-reality-toolkit-for-unity"></a>Superpointage et balise dans MRTK (kit de temps de réalité mixte) pour Unity
-**[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** fournit des scripts pour le comportement de l’analyseur et de la balise. Affectez simplement le script Billboard.cs à n’importe quel objet pour ajouter un comportement d’emboutment et faire en sorte que l’objet soit toujours le même. Pour ajouter un comportement avec balise, utilisez le script RadialView.cs. Vous pouvez ajuster diverses options, telles que le temps de lerping, la distance et le degré.
+## <a name="billboarding-and-tag-along-in-mrtk-mixed-reality-toolkit-for-unity"></a>Superpointage et balise dans MRTK (kit de temps de réalité mixte) pour Unity
+**[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** fournit des scripts pour le comportement de l’analyseur et de la balise. Il vous suffit d’affecter le script Billboard.cs à n’importe quel objet pour ajouter le comportement de l’analyseur et de faire en sorte que l’objet soit toujours présent. Pour ajouter un comportement avec balise, utilisez le script RadialView.cs. Vous pouvez ajuster diverses options, telles que le temps de lerping, la distance et le degré.
 
 * [MRTK : solveur de vue radiale](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Solver.html#radialview)
 * [Script MRTK-Billboard](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Assets/MixedRealityToolkit.SDK/Features/UX/Scripts/Utilities/Billboard.cs)
@@ -60,20 +60,20 @@ Des paramètres supplémentaires peuvent faire en sorte que l’objet de la bali
 ## <a name="see-also"></a>Articles associés
 
 * [Curseurs](cursors.md)
-* [Rayon de la main](point-and-commit.md)
+* [Rayon émanant de la main](point-and-commit.md)
 * [Button](button.md)
 * [Objet avec interaction possible](interactable-object.md)
 * [Rectangle englobant et barre de l’application](app-bar-and-bounding-box.md)
-* [Manoeuvr](direct-manipulation.md)
+* [Manipulation](direct-manipulation.md)
 * [Menu de la main](hand-menu.md)
 * [Menu proche](near-menu.md)
 * [Collection d’objets](object-collection.md)
 * [Commande vocale](voice-input.md)
 * [Clavier](keyboard.md)
-* [Bulle](tooltip.md)
-* [Médias](slate.md)
+* [Info-bulle](tooltip.md)
+* [Tablette](slate.md)
 * [Curseur](slider.md)
-* [Nuance](shader.md)
+* [Nuanceur](shader.md)
 * [Billboarding et tag-along](billboarding-and-tag-along.md)
 * [Affichage de la progression](progress.md)
 * [Aimantation de surface](surface-magnetism.md)

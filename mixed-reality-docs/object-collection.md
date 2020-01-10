@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, contrôles, conception
-ms.openlocfilehash: 9a111fcbe4c49972cc5ef22fb647f89544188af5
-ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
+ms.openlocfilehash: ec41cfad77617a90d02e7b23a2334249aa430190
+ms.sourcegitcommit: 6844930427b658ae31f642c395cd8a3b3cdbf857
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2019
-ms.locfileid: "74143154"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75723218"
 ---
 # <a name="object-collection"></a>Collection d’objets
 
@@ -48,7 +48,7 @@ Vous pouvez également utiliser des images 2D avec la collection d’objets. Les
 
 ---
 
-## <a name="object-collection-in-mrtkmixed-reality-toolkit-for-unity"></a>Collection d’objets dans MRTK (Mixed Reality Toolkit) pour Unity
+## <a name="object-collection-in-mrtk-mixed-reality-toolkit-for-unity"></a>Collection d’objets dans MRTK (Mixed Reality Toolkit) pour Unity
 
 * [MRTK-collection d’objets](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ObjectCollection.html)
 
@@ -61,20 +61,20 @@ Vous pouvez également utiliser des images 2D avec la collection d’objets. Les
 ## <a name="see-also"></a>Articles associés
 
 * [Curseurs](cursors.md)
-* [Rayon de la main](point-and-commit.md)
+* [Rayon émanant de la main](point-and-commit.md)
 * [Button](button.md)
 * [Objet avec interaction possible](interactable-object.md)
 * [Rectangle englobant et barre de l’application](app-bar-and-bounding-box.md)
-* [Manoeuvr](direct-manipulation.md)
+* [Manipulation](direct-manipulation.md)
 * [Menu de la main](hand-menu.md)
 * [Menu proche](near-menu.md)
 * [Collection d’objets](object-collection.md)
 * [Commande vocale](voice-input.md)
 * [Clavier](keyboard.md)
-* [Bulle](tooltip.md)
-* [Médias](slate.md)
+* [Info-bulle](tooltip.md)
+* [Tablette](slate.md)
 * [Curseur](slider.md)
-* [Nuance](shader.md)
+* [Nuanceur](shader.md)
 * [Billboarding et tag-along](billboarding-and-tag-along.md)
 * [Affichage de la progression](progress.md)
 * [Aimantation de surface](surface-magnetism.md)

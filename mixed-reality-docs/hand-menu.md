@@ -6,12 +6,12 @@ ms.author: nobarr
 ms.date: 08/27/2019
 ms.topic: article
 keywords: main, menu, bouton, accès rapide, disposition
-ms.openlocfilehash: c53fdc4ea6f3243cf906ee1916a9c234d0fce6ca
-ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
+ms.openlocfilehash: c0e1800be69a15706e17f40b1601fc79d05e5d75
+ms.sourcegitcommit: 6844930427b658ae31f642c395cd8a3b3cdbf857
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2019
-ms.locfileid: "74143177"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75723258"
 ---
 # <a name="hand-menu"></a>Menu de la main
 
@@ -26,11 +26,11 @@ Voici les meilleures pratiques que nous avons trouvées pour les menus manuels. 
 ---
 
 ## <a name="behavior-best-practices"></a>Meilleures pratiques relatives au comportement
-**A. conserver le nombre de boutons petit :** en raison de la distance étroite entre un menu verrouillé et les yeux, ainsi que la tendance de l’utilisateur à se concentrer sur une zone visuelle relativement petite à tout moment (le cône de vision est à peu près 10 degrés), nous vous recommandons en réduisant le nombre de boutons. En fonction de notre exploration, une colonne avec trois boutons fonctionne bien en conservant tout le contenu dans le champ de vision (l’angle de vue) même lorsque les utilisateurs passent leur mains au centre de l’aide. 
+**A. conserver le nombre de boutons petit :** en raison de la distance étroite entre un menu verrouillé et les yeux, et également la tendance de l’utilisateur à se concentrer sur une zone visuelle relativement petite à tout moment (le cône d’acuité visuelle est approximativement de 10 degrés), nous vous recommandons de réduire le nombre de boutons. En fonction de notre exploration, une colonne avec trois boutons fonctionne bien en conservant tout le contenu dans le champ de vision (l’angle de vue) même lorsque les utilisateurs passent leur mains au centre de l’aide. 
 
 **B. utilisation du menu pour une action rapide :** l’élévation d’un bras et la maintenance de la position peuvent facilement entraîner une fatigue du bras. Utilisez une méthode verrouillée à la main pour le menu nécessitant une faible interaction. Si votre menu est complexe et nécessite des temps d’interaction étendus, envisagez d’utiliser à la place un verrou universel ou verrouillé. 
 
-**C. angle du bouton/du panneau :** les menus doivent s’afficher à l’épaule opposé et au milieu de la tête : cela permet à une main naturelle d’interagir avec le menu avec la main opposée et d’éviter les positions difficiles ou inconfortables lors de la touche. boutons. 
+**C. angle du bouton/du panneau :** les menus doivent s’afficher à l’épaule opposé et au milieu de la tête : cela permet à une main naturelle d’interagir avec le menu avec la main opposée et évite les positions difficiles ou inconfortables quand vous touchez des boutons. 
 
 **D. envisagez de prendre en charge une opération unidirectionnelle ou mains libres :** ne partez pas du principe que les deux mains de l’utilisateur sont toujours disponibles. Considérez un large éventail de contextes quand l’un ou l’autre des mains n’est pas disponible, et assurez-vous que votre conception compte pour ces situations. Pour prendre en charge un menu contextuel à un seul mains, vous pouvez essayer de passer le positionnement du menu de façon à ce qu’il passe à l’état verrouillé à l’extérieur lorsque la main est tournée (s’affiche à l’écran). Pour les scénarios mains libres, envisagez d’utiliser une commande vocale pour appeler les boutons de menu de la main.
 
@@ -127,7 +127,7 @@ Nous avons fait des recherches utilisateur avec différents emplacements et disp
 
 ---
 
-## <a name="hand-menu-in-mrtkmixed-reality-toolkit-for-unity"></a>Menu de la main dans MRTK (ensemble d’outils de réalité mixte) pour Unity
+## <a name="hand-menu-in-mrtk-mixed-reality-toolkit-for-unity"></a>Menu de la main dans MRTK (ensemble d’outils de réalité mixte) pour Unity
 **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** fournit des scripts et des exemples de scènes pour le menu de la main. Le script HandConstraintPalmUp Solver vous permet de joindre facilement des objets aux mains avec différentes options configurables.
 
 * [Menu MRTK avec HandConstraint et HandConstraintPalmUp](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_Solver.md#hand-menu-with-handconstraint-and-handconstraintpalmup)
@@ -141,20 +141,20 @@ Nous avons fait des recherches utilisateur avec différents emplacements et disp
 ## <a name="see-also"></a>Articles associés
 
 * [Curseurs](cursors.md)
-* [Rayon de la main](point-and-commit.md)
+* [Rayon émanant de la main](point-and-commit.md)
 * [Button](button.md)
 * [Objet avec interaction possible](interactable-object.md)
 * [Rectangle englobant et barre de l’application](app-bar-and-bounding-box.md)
-* [Manoeuvr](direct-manipulation.md)
+* [Manipulation](direct-manipulation.md)
 * [Menu de la main](hand-menu.md)
 * [Menu proche](near-menu.md)
 * [Collection d’objets](object-collection.md)
 * [Commande vocale](voice-input.md)
 * [Clavier](keyboard.md)
-* [Bulle](tooltip.md)
-* [Médias](slate.md)
+* [Info-bulle](tooltip.md)
+* [Tablette](slate.md)
 * [Curseur](slider.md)
-* [Nuance](shader.md)
+* [Nuanceur](shader.md)
 * [Billboarding et tag-along](billboarding-and-tag-along.md)
 * [Affichage de la progression](progress.md)
 * [Aimantation de surface](surface-magnetism.md)

@@ -6,12 +6,12 @@ ms.author: jennyk
 ms.date: 06/06/2019
 ms.topic: article
 keywords: Réalité mixte, contrôles, interaction, interface utilisateur, expérience utilisateur
-ms.openlocfilehash: 73c8a3ce9e01f580ecbae23f2178871642c4540e
-ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
+ms.openlocfilehash: 87979d2d7b7de4a384b42b5059239e9b830a92e8
+ms.sourcegitcommit: 6844930427b658ae31f642c395cd8a3b3cdbf857
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2019
-ms.locfileid: "74143260"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75723228"
 ---
 # <a name="interactable-object"></a>Objet interagi
 
@@ -140,8 +140,8 @@ Un [bouton sur HoloLens 2](https://microsoft.github.io/MixedRealityToolkit-Unity
 
 :::row:::
     :::column:::
-        ![la](images/640px-interactibleobject-pressablebutton-default.jpg) par défaut<br>
-        **Valeurs**<br>
+        ![Par défaut](images/640px-interactibleobject-pressablebutton-default.jpg)<br>
+        **Par défaut**<br>
     :::column-end:::
     :::column:::
         Pointage de ![](images/640px-interactibleobject-pressablebutton-hover.jpg)<br>
@@ -158,7 +158,7 @@ Un [bouton sur HoloLens 2](https://microsoft.github.io/MixedRealityToolkit-Unity
     :::column-end:::
     :::column:::
         ![Appuyez sur](images/640px-interactibleobject-pressablebutton-press.jpg)<br>
-        **Compression**<br>
+        **Appuyez sur**<br>
         Déplacez la plaque avant.
     :::column-end:::
 :::row-end:::
@@ -175,7 +175,7 @@ Un [bouton sur HoloLens 2](https://microsoft.github.io/MixedRealityToolkit-Unity
         *Boucle vidéo : exemple de retour visuel basé sur la proximité d’un cadre englobant*
     :::column-end:::
         :::column:::
-        espace de ![](images/spacer-20x582.png)<br>
+        ![space](images/spacer-20x582.png)<br>
        ![des commentaires visuels à proximité](images/HoloLens2_Proximity.gif)<br>
     :::column-end:::
 :::row-end:::
@@ -225,7 +225,7 @@ Vous trouverez ci-dessous les recommandations relatives aux tailles minimales de
 
 ### <a name="target-size-for-direct-hand-interaction"></a>Taille cible pour l’interaction directe
 
-| Distance | Angle d’affichage | Size |
+| Distance | Angle d’affichage | Taille |
 |---------|---------|---------|
 | 45cm  | non inférieur à 2 ° | 1,6 x 1,6 cm |
 
@@ -248,7 +248,7 @@ Lorsque vous créez des boutons pour une interaction directe, nous vous recomman
 <br>
 
 ### <a name="target-size-for-hand-ray-or-gaze-interaction"></a>Taille cible pour un rayon de la main ou une interaction du regard
-| Distance | Angle d’affichage | Size |
+| Distance | Angle d’affichage | Taille |
 |---------|---------|---------|
 | dollars  | inférieur à 1 ° | 3,5 x 3,5 cm |
 
@@ -261,7 +261,7 @@ Lorsque vous créez des boutons pour une interaction directe, nous vous recomman
 ---
 
 
-## <a name="interactable-object-in-mrtkmixed-reality-toolkit-for-unit"></a>Objet interactif dans MRTK (ensemble d’outils de réalité mixte) pour l’unité
+## <a name="interactable-object-in-mrtk-mixed-reality-toolkit-for-unity"></a>Objet interactif dans MRTK (ensemble d’outils de réalité mixte) pour Unity
 
 Dans **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** , vous pouvez utiliser le script en [**interaction**](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.SDK/Features/UX/Interactable/Scripts) pour faire en sorte que les objets répondent à différents types d’États d’interaction d’entrée. Il prend en charge différents types de thèmes qui vous permettent de définir des États visuels en contrôlant des propriétés d’objet telles que la couleur, la taille, le matériau et le nuanceur.
 
@@ -281,20 +281,20 @@ Le nuanceur standard de MixedRealityToolkit fournit diverses options telles que 
 ## <a name="see-also"></a>Articles associés
 
 * [Curseurs](cursors.md)
-* [Rayon de la main](point-and-commit.md)
+* [Rayon émanant de la main](point-and-commit.md)
 * [Button](button.md)
 * [Objet avec interaction possible](interactable-object.md)
 * [Rectangle englobant et barre de l’application](app-bar-and-bounding-box.md)
-* [Manoeuvr](direct-manipulation.md)
+* [Manipulation](direct-manipulation.md)
 * [Menu de la main](hand-menu.md)
 * [Menu proche](near-menu.md)
 * [Collection d’objets](object-collection.md)
 * [Commande vocale](voice-input.md)
 * [Clavier](keyboard.md)
-* [Bulle](tooltip.md)
-* [Médias](slate.md)
+* [Info-bulle](tooltip.md)
+* [Tablette](slate.md)
 * [Curseur](slider.md)
-* [Nuance](shader.md)
+* [Nuanceur](shader.md)
 * [Billboarding et tag-along](billboarding-and-tag-along.md)
 * [Affichage de la progression](progress.md)
 * [Aimantation de surface](surface-magnetism.md)

@@ -6,12 +6,12 @@ ms.author: adlinv
 ms.date: 06/07/2019
 ms.topic: article
 keywords: Windows Mixed Reality, barre d’application, cadre englobant
-ms.openlocfilehash: e4f519cba459efac25f6c1370b07fcda4def30a1
-ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
+ms.openlocfilehash: dab41207c2558fe8bb3fe07fca666cb2668f4e45
+ms.sourcegitcommit: 6844930427b658ae31f642c395cd8a3b3cdbf857
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2019
-ms.locfileid: "74143173"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75723198"
 ---
 # <a name="bounding-box-and-app-bar"></a>Cadre englobant et barre de l’application
 ![délimitation est l’interface standard pour la manipulation d’objets en réalité mixte.](images/UX/UX_Hero_BoundingBox.jpg)<br>
@@ -29,7 +29,7 @@ La délimitation est l’interface standard pour la manipulation d’objets en r
         *Boucle vidéo : mise à l’échelle d’un objet via un cadre englobant*
     :::column-end:::
         :::column:::
-        espace de ![](images/spacer-20x582.png)<br>
+        ![space](images/spacer-20x582.png)<br>
        ![point de vue HoloLens de la mise à l’échelle d’un objet via un cadre englobant](images/HoloLens2_BoundingBox.gif)<br>
     :::column-end:::
 :::row-end:::
@@ -44,7 +44,7 @@ La délimitation est l’interface standard pour la manipulation d’objets en r
         *Boucle vidéo : rotation d’un objet à l’aide du cadre englobant*
     :::column-end:::
         :::column:::
-        espace de ![](images/spacer-20x582.png)<br>
+        ![space](images/spacer-20x582.png)<br>
        ![point de vue HoloLens de la rotation d’un objet à l’aide d’un cadre englobant](images/HoloLens2_BoundingBox_Rotate.gif)<br>
     :::column-end:::
 :::row-end:::
@@ -59,7 +59,7 @@ La délimitation est l’interface standard pour la manipulation d’objets en r
         *Boucle vidéo : exemple de retour visuel basé sur la proximité d’un cadre englobant*
     :::column-end:::
         :::column:::
-        espace de ![](images/spacer-20x582.png)<br>
+        ![space](images/spacer-20x582.png)<br>
        ![des commentaires visuels à proximité](images/HoloLens2_Proximity.gif)<br>
     :::column-end:::
 :::row-end:::
@@ -84,7 +84,7 @@ La barre de l’application est un menu de niveau objet qui contient une série 
         *Boucle vidéo : à travers un hologramme, la barre de l’application suit*
     :::column-end:::
         :::column:::
-        espace de ![](images/spacer-20x582.png)<br>
+        ![space](images/spacer-20x582.png)<br>
        ![la marche autour d’un hologramme. La barre de l’application suit.](images/HoloLens2_AppBarFollowing.gif)<br>
     :::column-end:::
 :::row-end:::
@@ -92,7 +92,7 @@ La barre de l’application est un menu de niveau objet qui contient une série 
 <br>
 
 
-## <a name="bounding-box-in-mrtkmixed-reality-toolkit-for-unity"></a>Cadre englobant dans MRTK (ensemble d’outils de réalité mixte) pour Unity
+## <a name="bounding-box-in-mrtk-mixed-reality-toolkit-for-unity"></a>Cadre englobant dans MRTK (ensemble d’outils de réalité mixte) pour Unity
 **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** fournit des scripts et des prefabs pour le cadre englobant et la barre de l’application. Vous pouvez ajouter une zone englobante en affectant simplement le script BoundingBox.cs à n’importe quel objet.
 
 * [MRTK-zone englobante](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_BoundingBox.html)
@@ -106,20 +106,20 @@ La barre de l’application est un menu de niveau objet qui contient une série 
 ## <a name="see-also"></a>Articles associés
 
 * [Curseurs](cursors.md)
-* [Rayon de la main](point-and-commit.md)
+* [Rayon émanant de la main](point-and-commit.md)
 * [Button](button.md)
 * [Objet avec interaction possible](interactable-object.md)
 * [Rectangle englobant et barre de l’application](app-bar-and-bounding-box.md)
-* [Manoeuvr](direct-manipulation.md)
+* [Manipulation](direct-manipulation.md)
 * [Menu de la main](hand-menu.md)
 * [Menu proche](near-menu.md)
 * [Collection d’objets](object-collection.md)
 * [Commande vocale](voice-input.md)
 * [Clavier](keyboard.md)
-* [Bulle](tooltip.md)
-* [Médias](slate.md)
+* [Info-bulle](tooltip.md)
+* [Tablette](slate.md)
 * [Curseur](slider.md)
-* [Nuance](shader.md)
+* [Nuanceur](shader.md)
 * [Billboarding et tag-along](billboarding-and-tag-along.md)
 * [Affichage de la progression](progress.md)
 * [Aimantation de surface](surface-magnetism.md)
