@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: 57a23e34404e4bff653d74b7f6afc65adff8b19c
-ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
+ms.openlocfilehash: efa03c49a9a083d2b8e591e03bccbeb776bb57b2
+ms.sourcegitcommit: 2bfe9b1af4ee2cc0d668caeccb8ebc3137cbc20b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/24/2019
-ms.locfileid: "75334333"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901471"
 ---
 # <a name="1-setting-up-photon-unity-networking"></a>1. Configuration de la mise en réseau photonique Unity
 
@@ -28,7 +28,7 @@ Dans ce didacticiel, vous allez apprendre à préparer la création d’une exp�
 ## <a name="prerequisites"></a>Prérequis
 
 >[!TIP]
->Si vous n’avez pas encore terminé la série des [didacticiels de mise](mrlearning-base.md) en route, nous vous recommandons d’effectuer d’abord ces didacticiels.
+>Si vous n’avez pas encore terminé les didacticiels de [prise](mrlearning-base.md) en main et les didacticiels sur les [ancres spatiales Azure](mrlearning-asa-ch1.md) , nous vous recommandons d’effectuer d’abord ces didacticiels.
 
 * Un PC Windows 10 configuré avec les outils corrects [installés](install-the-tools.md)
 * Windows 10 SDK 10.0.18362.0 ou version ultérieure

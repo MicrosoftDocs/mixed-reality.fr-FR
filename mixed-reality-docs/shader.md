@@ -6,18 +6,18 @@ ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: Réalité mixte, contrôles, interaction, interface utilisateur, expérience utilisateur
-ms.openlocfilehash: 4d95e335b3f7020766beae916423d0588ee66572
-ms.sourcegitcommit: 270ca09ec61e1153a83cf44942d7ba3783ef1805
+ms.openlocfilehash: 8d0e01bb26347d95a80703884c4e9408653e03ed
+ms.sourcegitcommit: 2bfe9b1af4ee2cc0d668caeccb8ebc3137cbc20b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75694163"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901457"
 ---
 # <a name="shader"></a>Nuance
 
 ![Nuance](images/UX/UX_Hero_StandardShader.jpg)
 
-Étant donné que les objets holographiques sont mélangés avec les éléments physiques dans l’environnement, il est important de fournir des signaux visuels en réalité mixte. Le nuanceur standard MRTK fournit différents types d’effets visuels qui peuvent être utilisés avec des hologrammes. Le système d’ombrage standard MRTK utilise un nuanceur unique et flexible qui permet d’obtenir des éléments visuels similaires au nuanceur standard de Unity, d’implémenter des [principes de système de conception Fluent](https://www.microsoft.com/design/fluent/#/)et de rester performant sur des appareils de réalité mixte.
+Étant donné que les objets holographiques sont mélangés à des objets physiques dans l’environnement réel, il est important de fournir des signaux visuels à l’utilisateur. Le nuanceur standard MRTK fournit différents types d’effets visuels qui peuvent être utilisés avec des hologrammes. Le système d’ombrage standard MRTK utilise un nuanceur unique et flexible qui permet d’obtenir des éléments visuels similaires au nuanceur standard de Unity, d’implémenter des [principes de système de conception Fluent](https://www.microsoft.com/design/fluent/#/)et de rester performant sur des appareils de réalité mixte.
 <br>
 
 ## <a name="examples-of-visual-effects-using-mrtk-standard-shader"></a>Exemples d’effets visuels utilisant le nuanceur standard MRTK 
