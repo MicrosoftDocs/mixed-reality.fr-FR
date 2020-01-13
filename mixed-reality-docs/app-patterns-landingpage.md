@@ -7,12 +7,12 @@ ms.author: grbury
 ms.date: 11/15/2019
 ms.topic: overview
 keywords: Windows Mixed Reality, conception, modèles d’application, contrôles, style, HoloLens, interaction, éléments UX, comportements, blocs de construction
-ms.openlocfilehash: 8dd90a555faea62f69750847ddd6e6df4d9d0314
-ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
+ms.openlocfilehash: 16a6c08230dbe16ebb04c39751cce306bbc57c2d
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74539663"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334184"
 ---
 # <a name="ux-elements-overview"></a>Vue d’ensemble des éléments UX
 
@@ -22,23 +22,19 @@ ms.locfileid: "74539663"
 
 :::row:::
     :::column:::
-       couleur, lumière et matériaux de couleur [![, Light et](images/640px-fragments.jpg)](color,-light-and-materials.md) Materials  **[](color,-light-and-materials.md)**
+       couleur, lumière et matériaux de couleur [![, Light et](images/640px-fragments.png)](color,-light-and-materials.md) Materials  **[](color,-light-and-materials.md)**
     :::column-end:::
     :::column:::
-       échelle de mise à l’échelle [![](images/volvo-cars-microsoft-hololens-experience01-640px.jpg)](scale.md)  **[](scale.md)**
-    :::column-end:::
-    :::column:::
-       [![](images/SpatialAudio.gif)](spatial-sound.md)  **[son spatial](spatial-sound.md) de son spatial**
+       échelle de mise à l’échelle [![](images/volvo-cars-microsoft-hololens-experience01-640px.png)](scale.md)  **[](scale.md)**
     :::column-end:::
 :::row-end:::
 
 :::row:::
     :::column:::
-       [](images/text_in_unity_viewingangle.jpg)](typography.md)  **[typographie](typography.md)![typographie**
+       [](images/text_in_unity_viewingangle.png)](typography.md)  **[typographie](typography.md)![typographie**
     :::column-end:::
     :::column:::
-    :::column-end:::
-    :::column:::
+       [](images/spatialaudio.png)](spatial-sound.md)  **[son](spatial-sound.md)![son**
     :::column-end:::
 :::row-end:::
 
