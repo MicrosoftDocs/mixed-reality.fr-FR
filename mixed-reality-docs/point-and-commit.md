@@ -7,12 +7,12 @@ ms.date: 04/05/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Réalité mixte, interaction, conception, HoloLens, mains, éloigné, pointer et valider
-ms.openlocfilehash: c7952338c6937e42889a08ee37f6ce8bc1bb9ad3
-ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
+ms.openlocfilehash: d3f886fd8e892fe34116c3a1d601ae3a87d87a9b
+ms.sourcegitcommit: 2bfe9b1af4ee2cc0d668caeccb8ebc3137cbc20b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/24/2019
-ms.locfileid: "75334064"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901530"
 ---
 # <a name="point-and-commit-with-hands"></a>Pointer et valider avec les mains
 
@@ -201,8 +201,8 @@ Le concept Pointer et valider pour l’interaction éloignée a été initialeme
 
 ---
 
-## <a name="hand-ray-in-mrtkmixed-reality-toolkit-for-unity"></a>Rayon émanant de la main dans MRTK (Mixed Reality Toolkit) pour Unity
-Par défaut, MRTK fournit un préfabriqué de rayon émanant de la main ([DefaultControllerPointer.prefab](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.SDK/Features/UX/Prefabs/Pointers)) qui a le même état visuel que le rayon système du shell. Il est assigné dans le profil d’entrée de MRTK, sous Pointers. Dans le casque immersif Windows Mixed Reality, les mêmes rayons sont aussi utilisés pour les contrôleurs de mouvement.
+## <a name="hand-ray-in-mrtk-mixed-reality-toolkit-for-unity"></a>Rayon émanant de la main dans MRTK (Mixed Reality Toolkit) pour Unity
+Par défaut, MRTK fournit un préfabriqué de rayon émanant de la main ([DefaultControllerPointer.prefab](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.SDK/Features/UX/Prefabs/Pointers)) qui a le même état visuel que le rayon système du shell. Il est assigné dans le profil d’entrée de MRTK, sous Pointers. Dans le casque immersif, les mêmes rayons sont utilisés pour les contrôleurs de mouvement.
 
 * [MRTK - Profil de pointeur](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/MixedRealityConfigurationGuide.html#pointer-configuration)
 * [MRTK - Système d’entrée](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Overview.html)
