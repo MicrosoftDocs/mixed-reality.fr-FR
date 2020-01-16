@@ -1,25 +1,30 @@
 ---
 title: Windows Mixed Reality et le nouveau Microsoft Edge
-description: Comment contribuer à la documentation de Windows Mixed Reality.
+description: Préparez-vous au nouveau Microsoft Edge dans Windows Mixed Reality. Comprend les modifications à attendre, les mises à jour pour rechercher et les problèmes connus.
 author: mattzmsft
 ms.author: mazeller
-ms.date: 01/07/2020
+ms.date: 01/15/2020
 ms.topic: article
 keywords: Edge, nouveau, immersion sur le Web, Microsoft Edge, navigateur, VR
-ms.openlocfilehash: cb0f96069ffaa8f7d40b64bae55ab2749f5f02c6
-ms.sourcegitcommit: 6844930427b658ae31f642c395cd8a3b3cdbf857
+ms.openlocfilehash: e38cd83cef274281f0d36ae8714ea82aac5f0c65
+ms.sourcegitcommit: e9e4e722f4b607888ce69185f8bda9549ad526ad
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75727046"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76040997"
 ---
 # <a name="windows-mixed-reality-and-the-new-microsoft-edge"></a>Windows Mixed Reality et le nouveau Microsoft Edge
 
-Comme vous l’avez peut-être entendu, le [nouveau Microsoft Edge sera bientôt disponible](https://blogs.windows.com/windowsexperience/2019/11/04/introducing-the-new-microsoft-edge-and-bing/)! Avec la disponibilité générale ciblée pour le 15 janvier 2020, nous souhaitons permettre aux clients du casque Windows Mixed realer VR de savoir ce qu’il faut attendre du nouveau Microsoft Edge et vous informer des mises à jour en attente qui amélioreront votre expérience de navigation sur le Web dans Windows Mixed Donner.
+Le [nouveau Microsoft Edge est désormais disponible en téléchargement](https://blogs.windows.com/windowsexperience/?p=173496), mais les clients peuvent également [attendre leur installation dans une prochaine mise à jour de Windows 10, à](https://blogs.windows.com/msedgedev/2020/01/15/upgrading-new-microsoft-edge-79-chromium/)la suite d’une approche de déploiement mesurée au cours des prochains mois. 
+
+Grâce à cette actualité, **nous souhaitons permettre aux clients du casque Windows Mixed Reality VR de savoir ce qu’il faut attendre du nouveau Microsoft Edge et vous informer des mises à jour en attente qui amélioreront votre expérience de navigation sur le Web dans Windows Mixed Reality**.
 
 ## <a name="introducing-the-new-microsoft-edge"></a>Présentation du nouveau Microsoft Edge
 
 Le nouveau Microsoft Edge [adopte le projet open source de chrome](https://blogs.windows.com/windowsexperience/2018/12/06/microsoft-edge-making-the-web-better-through-more-open-source-collaboration/) sur le Bureau pour créer une meilleure compatibilité Web pour les clients et réduire la fragmentation du Web pour tous les développeurs Web. Il prend également en charge WebXR au lancement, la nouvelle norme pour créer des expériences Web immersifs pour les casques VR, à la place de WebVR.
+
+>[!IMPORTANT]
+>Lorsque vous installez Microsoft Edge sur un appareil Windows 10 à jour, il remplace la version précédente (héritée) sur votre PC.
 
 ## <a name="getting-ready-for-the-new-microsoft-edge"></a>Préparation au nouveau Microsoft Edge
 
@@ -45,7 +50,7 @@ Pour une expérience Microsoft Edge optimale dans la réalité mixte, nous vous 
 
 -   Les sites Web ouverts dans Windows Mixed Reality sont perdus lorsque le portail de réalité mixte se ferme, bien que les fenêtres Microsoft Edge restent là où elles ont été placées dans la page d’hébergement de la réalité mixte.
 -   L’audio des fenêtres Microsoft Edge n’est pas spatial.
--   L’ouverture d’une vidéo 360 à partir de YouTube dans Windows Mixed Reality peut entraîner la déformation de la vidéo dans le casque. L’actualisation de la page de la vidéo YouTube et le redémarrage de la vidéo 360 doivent résoudre le problème.
+-   L’ouverture d’une vidéo 360 à partir de YouTube dans Windows Mixed Reality peut entraîner la déformation de la vidéo dans le casque. L’actualisation de la page de la vidéo YouTube et le redémarrage de la vidéo 360 *peuvent* résoudre le problème, mais nous avons entendu des commentaires indiquant que le problème peut persister.
 -   Pendant les sessions Windows Mixed Reality, les moniteurs virtuels s’affichent sous la forme de moniteurs physiques génériques dans les paramètres > système > écran.
 
 

@@ -6,18 +6,18 @@ ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: Réalité mixte, contrôles, interaction, interface utilisateur, expérience utilisateur
-ms.openlocfilehash: bc9c8a36f110010270ca7dadbd8655f29af25f32
-ms.sourcegitcommit: 2bfe9b1af4ee2cc0d668caeccb8ebc3137cbc20b
+ms.openlocfilehash: 9de4cc1a7a015f85be54b4b9ff6188a7e9d02e85
+ms.sourcegitcommit: 542a481b00b36d92633c64a6189ea989551bab3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901434"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76036367"
 ---
 # <a name="surface-magnetism"></a>Aimantation de surface
 
 ![Aimantation de surface](images/UX/MRTK_SurfaceMagnetism.gif)
 
-À l’aide de la technique du magnétisme de la surface, vous pouvez placer un objet holographique sur une surface physique réelle. En alignant l’orientation de l’objet sur la surface réelle, vous pouvez créer une expérience plus immersive et naturelle.
+À l’aide de la technique du magnétisme de la surface, vous pouvez placer un objet holographique sur une surface physique réelle. En alignant l’orientation de l’objet sur la surface réelle, vous pouvez créer une expérience plus immersive et naturelle pour l’utilisateur.
 
 <br>
 
