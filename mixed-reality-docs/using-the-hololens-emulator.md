@@ -3,16 +3,16 @@ title: Utilisation de l’émulateur HoloLens
 description: Utilisation de l’émulateur HoloLens pour tester des applications de réalité mixte sur votre PC sans avoir besoin d’un appareil HoloLens physique.
 author: pbarnettms
 ms.author: pbarnett
-ms.date: 12/5/2019
+ms.date: 1/13/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: HoloLens, émulateur
-ms.openlocfilehash: 49b67530d46edda3c38efd74f03f730c2b2247bd
-ms.sourcegitcommit: f4812e1312c4751a22a2de56771c475b22a4ba24
+ms.openlocfilehash: 7cbddae7cc5088bc8be7187e8b2dff3249e9d265
+ms.sourcegitcommit: 542a481b00b36d92633c64a6189ea989551bab3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/09/2019
-ms.locfileid: "74940887"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76036456"
 ---
 # <a name="using-the-hololens-emulator"></a>Utilisation de l’émulateur HoloLens
 
@@ -25,7 +25,7 @@ Si vous devez développer des applications ou jeux avec casques immersifs de ré
 Téléchargez l’émulateur HoloLens.
 
 Versions : 
-* [Émulateur HoloLens 2 (mise à jour de décembre 2019)](https://go.microsoft.com/fwlink/?linkid=2112589).
+* [Émulateur HoloLens 2 (mise à jour de janvier 2020)](https://go.microsoft.com/fwlink/?linkid=2114824).
 * [Émulateur HoloLens (1ère génération) et modèles de projet holographiques](https://go.microsoft.com/fwlink/?linkid=2065980).
 
 Des notes de publication et des versions antérieures de l’émulateur HoloLens sont disponibles dans la page [Archive de l’émulateur HoloLens](hololens-emulator-archive.md).
@@ -243,7 +243,7 @@ Si votre liste de cible de débogage dans Visual Studio est vide (par exemple, D
 Si votre système plante au démarrage de l’émulateur, désactivez l’accélération matérielle pour les graphiques de l’émulateur.
 * Créez une valeur de Registre DWORD nommée « DisableGPU » dans HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\XDE\10.0 et définissez-la sur 1.
 
-## <a name="see-also"></a>Voir également
+## <a name="see-also"></a>Voir aussi
 * [Entrées avancées dans l’émulateur HoloLens et le simulateur de réalité mixte](advanced-hololens-emulator-and-mixed-reality-simulator-input.md)
 * [Archive des versions de l’émulateur HoloLens](hololens-emulator-archive.md)
 * [Mappage spatial dans Unity](spatial-mapping-in-unity.md)
