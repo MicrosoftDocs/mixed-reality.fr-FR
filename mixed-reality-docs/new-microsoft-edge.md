@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 01/15/2020
 ms.topic: article
 keywords: Edge, nouveau, immersion sur le Web, Microsoft Edge, navigateur, VR
-ms.openlocfilehash: e38cd83cef274281f0d36ae8714ea82aac5f0c65
-ms.sourcegitcommit: e9e4e722f4b607888ce69185f8bda9549ad526ad
+ms.openlocfilehash: 2576762786c9234377308f226036c830e01d9133
+ms.sourcegitcommit: d73d9012941fa1b13eb7d2f45ccc481d6365827a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76040997"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76885620"
 ---
 # <a name="windows-mixed-reality-and-the-new-microsoft-edge"></a>Windows Mixed Reality et le nouveau Microsoft Edge
 
@@ -50,7 +50,7 @@ Pour une expérience Microsoft Edge optimale dans la réalité mixte, nous vous 
 
 -   Les sites Web ouverts dans Windows Mixed Reality sont perdus lorsque le portail de réalité mixte se ferme, bien que les fenêtres Microsoft Edge restent là où elles ont été placées dans la page d’hébergement de la réalité mixte.
 -   L’audio des fenêtres Microsoft Edge n’est pas spatial.
--   L’ouverture d’une vidéo 360 à partir de YouTube dans Windows Mixed Reality peut entraîner la déformation de la vidéo dans le casque. L’actualisation de la page de la vidéo YouTube et le redémarrage de la vidéo 360 *peuvent* résoudre le problème, mais nous avons entendu des commentaires indiquant que le problème peut persister.
+-   **Correction de la version d’extension de visionneuse 360 2.3.8**: l’ouverture d’une vidéo 360 à partir de YouTube dans Windows Mixed Reality peut entraîner la déformation de la vidéo dans le casque. Le redémarrage de Edge doit mettre à jour l’extension de visionneuse 360 de façon invisible pour résoudre ce problème. Vous pouvez vérifier la version de l’extension que vous avez en entrant `edge://system/` dans la barre d’adresses et en sélectionnant le bouton de **développement** en regard de « extensions ».
 -   Pendant les sessions Windows Mixed Reality, les moniteurs virtuels s’affichent sous la forme de moniteurs physiques génériques dans les paramètres > système > écran.
 
 

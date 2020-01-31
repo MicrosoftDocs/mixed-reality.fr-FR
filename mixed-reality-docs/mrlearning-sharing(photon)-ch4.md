@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: f1bcbbd368635c25207127142f21ff50f26a7b58
-ms.sourcegitcommit: 2bfe9b1af4ee2cc0d668caeccb8ebc3137cbc20b
+ms.openlocfilehash: 56f7c767323285453cbeea9034f97a7c14e92359
+ms.sourcegitcommit: d73d9012941fa1b13eb7d2f45ccc481d6365827a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901488"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76885627"
 ---
 # <a name="4-sharing-object-movements-with-multiple-users"></a>4. partage des mouvements d’objets avec plusieurs utilisateurs
 
@@ -74,6 +74,12 @@ Dans ce didacticiel, vous allez apprendre à partager les mouvements d’objets 
 11. À partir du panneau projet dans le dossier Prefabs, faites glisser la table Prefab dans l’objet enfant « TableAnchor » que vous venez de créer.
 
     ![Module3Chapter4step8im](images/module3chapter4step8im.PNG)
+   
+12. Ouvrez la Prefab « fusée Launcher_Complete variante » à partir de ressources-> Ressources-> Prefabs.
+
+13. Sélectionnez le GameObject « LunarModule » et ajoutez les deux composants suivants : « vue Transform de photons » et « vue photons ».
+
+14. Avec la GameObject « LunarModule » toujours sélectionnée, faites glisser le composant « vue de transformation de photons » dans l’emplacement « composants observés » dans le composant « vue photons ».
 
 ## <a name="congratulations"></a>Félicitations !
 
