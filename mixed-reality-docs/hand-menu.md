@@ -6,12 +6,12 @@ ms.author: nobarr
 ms.date: 08/27/2019
 ms.topic: article
 keywords: main, menu, bouton, accès rapide, disposition
-ms.openlocfilehash: c0e1800be69a15706e17f40b1601fc79d05e5d75
-ms.sourcegitcommit: 6844930427b658ae31f642c395cd8a3b3cdbf857
+ms.openlocfilehash: 41a936d6041438c1cf1d8e4d4cc8cc30a5167491
+ms.sourcegitcommit: 40b37104b0aec4554502dcc7dc430e340a6fa46a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75723258"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77092053"
 ---
 # <a name="hand-menu"></a>Menu de la main
 
@@ -26,7 +26,7 @@ Voici les meilleures pratiques que nous avons trouvées pour les menus manuels. 
 ---
 
 ## <a name="behavior-best-practices"></a>Meilleures pratiques relatives au comportement
-**A. conserver le nombre de boutons petit :** en raison de la distance étroite entre un menu verrouillé et les yeux, et également la tendance de l’utilisateur à se concentrer sur une zone visuelle relativement petite à tout moment (le cône d’acuité visuelle est approximativement de 10 degrés), nous vous recommandons de réduire le nombre de boutons. En fonction de notre exploration, une colonne avec trois boutons fonctionne bien en conservant tout le contenu dans le champ de vision (l’angle de vue) même lorsque les utilisateurs passent leur mains au centre de l’aide. 
+**A. conserver le nombre de boutons petit :** en raison de la distance étroite entre un menu verrouillé et les yeux, et également la tendance de l’utilisateur à se concentrer sur une zone visuelle relativement petite à tout moment (le cône d’acuité visuelle est approximativement de 10 degrés), nous vous recommandons de réduire le nombre de boutons. Sur la base de notre exploration, une colonne avec trois boutons fonctionne bien en conservant tout le contenu dans le champ de vision (l’angle d’accès) même lorsqu’un utilisateur passe au centre de l’angle d’utilisation. 
 
 **B. utilisation du menu pour une action rapide :** l’élévation d’un bras et la maintenance de la position peuvent facilement entraîner une fatigue du bras. Utilisez une méthode verrouillée à la main pour le menu nécessitant une faible interaction. Si votre menu est complexe et nécessite des temps d’interaction étendus, envisagez d’utiliser à la place un verrou universel ou verrouillé. 
 
@@ -88,8 +88,8 @@ Nous avons fait des recherches utilisateur avec différents emplacements et disp
     :::column:::
         ![les doigts ci-dessus](images/AboveFingers.gif)<br>
         **Les doigts ci-dessus**<br>
-        fatigue de la main en raison de la main à long terme<br>
-        2 problèmes de suivi sur l’index et le doigt central
+        fatigue à 1 main en raison de la main pendant une longue période<br>
+        2 problèmes de suivi sur l’index et les doigts centraux
     :::column-end:::
 :::row-end:::
 
@@ -105,7 +105,7 @@ Nous avons fait des recherches utilisateur avec différents emplacements et disp
     :::column:::
         ![**le haut de la main](images/TopFingerTip.gif)**<br>
         1-problèmes de suivi de la main<br>
-        fatigue à deux mains, en tenant au-dessus de la position normale<br>
+        2-la fatigue de la main au-dessus de la position normale<br>
         3-problèmes de pression sur les boutons avec d’autres doigts par accident en raison d’un espace limité entre les doigts
     :::column-end:::
 :::row-end:::
@@ -117,7 +117,7 @@ Nous avons fait des recherches utilisateur avec différents emplacements et disp
         ![arrière du](images/BackOfTheArm.gif) ARM<br>
         **Arrière du bras**<br>
         1-peut déclencher le bouton d’origine par accident<br>
-        2-pas de position naturelle ou confortable pour les utilisateurs
+        2-n’est pas une position naturelle ou confortable
     :::column-end:::
     :::column:::
     :::column-end:::
@@ -138,7 +138,7 @@ Nous avons fait des recherches utilisateur avec différents emplacements et disp
 ---
 
 
-## <a name="see-also"></a>Articles associés
+## <a name="see-also"></a>Voir aussi
 
 * [Curseurs](cursors.md)
 * [Rayon émanant de la main](point-and-commit.md)
