@@ -7,12 +7,12 @@ ms.date: 2/11/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: mise à jour, outils, bien démarrer, principes de base, unity, visual studio, kit de ressources
-ms.openlocfilehash: beed8b79ec5f157b7dfa7d55a5965daae8a83f03
-ms.sourcegitcommit: 542a481b00b36d92633c64a6189ea989551bab3d
+ms.openlocfilehash: d2b9a3718845e755a5cd8d9866ec9716ee0c0609
+ms.sourcegitcommit: 40b37104b0aec4554502dcc7dc430e340a6fa46a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "76036383"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77092043"
 ---
 # <a name="install-the-tools"></a>Installer les outils
 
@@ -45,7 +45,8 @@ Nous vous recommandons d’installer le moteur de jeu Unity, qui est la méthode
     :::column:::
        [![Unity](images/unity_logo.png)](https://unity3d.com/unity/qa/lts-releases?version=2018.4)<br>
         **[Unity](https://unity3d.com/unity/qa/lts-releases?version=2018.4)**<br>
-        En général, nous recommandons d’utiliser le flux Unity LTS pour les nouveaux projets. Veillez à installer la dernière révision pour bénéficier des derniers correctifs de stabilité.<br> <br>Nous recommandons actuellement d’utiliser **Unity 2018.4.x**, qui est la version LTS nécessaire à MRTK v2.<br> <br>Certains développeurs voudront peut-être utiliser une version différente de Unity pour des raisons précises. Pour ces cas-là, Unity prend en charge les installations côte à côte de versions différentes.<br><br>[![MRTK](images/MRTKIcon.jpg)](https://github.com/Microsoft/MixedRealityToolkit-Unity/releases)<br>**[Mixed Reality Toolkit (MRTK)](https://github.com/Microsoft/MixedRealityToolkit-Unity/releases)**<br>Mixed Reality Toolkit (MRTK) v2 pour Unity est un kit de développement multiplateforme open source pour les applications de réalité mixte.<br><br> MRTK v2 vise à accélérer le développement des applications qui ciblent Microsoft HoloLens, les casques immersifs Windows Mixed Reality (VR) et la plateforme OpenVR. Le projet a pour but de réduire le nombre d’obstacles qui gênent la création d’applications de réalité mixte et d’apporter une contribution à la communauté à mesure que les choses évoluent.
+        En général, nous recommandons d’utiliser le flux Unity LTS pour les nouveaux projets. Veillez à installer la dernière révision pour bénéficier des derniers correctifs de stabilité.<br> <br>Nous recommandons actuellement d’utiliser **Unity 2018.4.x**, qui est la version LTS nécessaire à MRTK v2.<br> <br>Certains développeurs voudront peut-être utiliser une version différente de Unity pour des raisons précises. Pour ces cas-là, Unity prend en charge les installations côte à côte de versions différentes.<br><br>
+        [![MRTK](images/final_mrtk-small_logo.png)](https://github.com/Microsoft/MixedRealityToolkit-Unity/releases)<br>**[Mixed Reality Toolkit (MRTK)](https://github.com/Microsoft/MixedRealityToolkit-Unity/releases)**<br>Mixed Reality Toolkit (MRTK) v2 pour Unity est un kit de développement multiplateforme open source pour les applications de réalité mixte.<br><br> MRTK v2 vise à accélérer le développement des applications qui ciblent Microsoft HoloLens, les casques immersifs Windows Mixed Reality (VR) et la plateforme OpenVR. Le projet a pour but de réduire le nombre d’obstacles qui gênent la création d’applications de réalité mixte et d’apporter une contribution à la communauté à mesure que les choses évoluent.
     :::column-end:::
     :::column:::
         [![Unreal](images/Unreal_logo.png)](https://docs.unrealengine.com//GettingStarted/Installation/index.html)<br>
@@ -53,7 +54,7 @@ Nous vous recommandons d’installer le moteur de jeu Unity, qui est la méthode
         Unreal Engine 4 est un puissant moteur de création open source qui inclut une prise en charge complète de la réalité mixte en C++ et Blueprints.<br> <br>La prise en charge de HoloLens pour Unreal Engine 4.23 est actuellement en version bêta.
     :::column-end:::
     :::column:::
-        [![Modèles d’application DirectX](images/DirectX_logo.png)](https://marketplace.visualstudio.com/items?itemName=WindowsMixedRealityteam.WindowsMixedRealityAppTemplatesVSIX)<br>
+        [![Modèles d’application DirectX](images/visualstudio-small_logo.png)](https://marketplace.visualstudio.com/items?itemName=WindowsMixedRealityteam.WindowsMixedRealityAppTemplatesVSIX)<br>
         **[DirectX](https://marketplace.visualstudio.com/items?itemName=WindowsMixedRealityteam.WindowsMixedRealityAppTemplatesVSIX)**<br>
         Les modèles d’application Windows Mixed Reality fournissent tous les éléments essentiels dont vous avez besoin pour commencer à écrire une application de réalité mixte en utilisant DirectX avec des API natives. Comprend une boucle de rendu (ou « boucle de jeu »), une classe d’assistance DeviceResources pour gérer l’appareil et le contexte Direct3D, ainsi qu’un exemple de rendu d’hologramme simple. Disponible pour Direct3D11 et Direct3D 12.
     :::column-end:::
