@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 12/27/2019
 ms.topic: article
 keywords: Réalité mixte, communauté, MVP, Meetup
-ms.openlocfilehash: 1b140fffdda91fca0a73ae6d4309c518efd6660c
-ms.sourcegitcommit: 567bcb7019820ac933834087d77b01d684b5cc7b
-ms.translationtype: HT
+ms.openlocfilehash: 191c80c0429370f7864f5826c538296306e26e8d
+ms.sourcegitcommit: f5d6dd420aa347acf1de4798f4e3e0f6a11d19cc
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77125194"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77155506"
 ---
 # <a name="mixed-reality-community"></a>Communauté de réalité mixte
 
@@ -34,7 +34,7 @@ Si vous exécutez une communauté que vous aimeriez inclure dans cette page, veu
 |Nom de la communauté|Country|Ville|Lien|
 |---------|---------|---------|---------|
 |**Chicago AWE Nite**|USA|Chicago|[Lien](https://www.meetup.com/AWENiteChicago/)|
-|**VR Philippines**|Philoppines|N/A|[Lien](https://www.facebook.com/vrphilippines/)|
+|**VR Philippines**|Philippines|N/A|[Lien](https://www.facebook.com/vrphilippines/)|
 <!--
 |Row3     |         |         |         |
 |Row4     |         |         |         |
@@ -107,5 +107,5 @@ Les professionnels de Microsoft les plus précieux, ou MVP, sont des experts tec
 |![Takahiro Miyaura](images/BiographyImages/TakahiroMiyaura_270x270.jpg)</br>**Takahiro Miyaura**</br>*Nara, Japon*|Je travaille en tant qu’ingénieur logiciel et développeur dans le secteur de l’informatique. En particulier, j’ai fait des recherches XR (VR/AR/MR, etc.). ), ainsi que diverses technologies (IA, IoT, etc.) qui peuvent tirer parti de XR.|[Messagerie](mailto:cafe.kobe@gmail.com)|
 |![Tamás DEME](images/BiographyImages/tamasdeme_270.png)</br>**Tamás Deme**</br>*Budapest, Hongrie*|Tamás est ingénieur en réalité mixte et travaille à la solution VIM basée à Atlanta, où il développe des solutions pour les appareils allant des serveurs à un casque qui montre vos hologrammes. Il est 5 fois plus MVP Microsoft dans le développement Windows, qui s’intéresse aux projets open source, à l’enseignement et au parrainage. Vous pouvez le trouver en ligne sur [https://tomzorz.me](https://tomzorz.me) ou sur twitter à [https://twitter.com/tomzorz_](https://twitter.com/tomzorz_).|[Messagerie](mailto:mixedreality@tomzorz.me)|
 |![Tatsuro Ueda](images/BiographyImages/TatsuroUeda_270x270.png)</br>**Tatsuro Ueda**</br>*Mie, Japon*|Un enseignant de la physique dans 5 pays, y compris Afrika, Président de la physique de la sensation|[Messagerie](mailto:tatsuro.ueda@feel-physics.jp)|
-|![Vincent guigui](images/BiographyImages/VincentGuigui_270x270.jpg)</br>**Vincent guigui**</br>*Paris, France*|En contrepartie de la Division des interactions novatrices de la technologie OCTO, j’aide nos clients à développer de nouvelles interactions entre le monde humain et le monde numérique.</br></br>Je suis un professeur sur les sujets de l’innovation et des interfaces utilisateur naturelles, en parler des expériences immersifs (VR/AR/MR), des interfaces de conversation (bot) et des futures possibilités des interfaces utilisateur...</br></br>Depuis le 2013, j’ai été attribué par Microsoft comme l’un des experts européens sur Kinect, les interfaces utilisateur naturelles et le HoloLens (le plus précieux des professionnels).|[Messagerie](mailto:vincent@guigui.fr)|
+|![Vincent guigui](images/BiographyImages/VincentGuigui_270x270.jpg)</br>**Vincent guigui**</br>*Paris, France*|En contrepartie de la Division des interactions novatrices de la [technologie Octo](https://www.octo.com), j’aide nos clients à développer de nouvelles interactions entre le monde humain et le monde numérique.</br></br>Je suis un professeur sur les sujets de l’innovation et des interfaces utilisateur naturelles, en parler des expériences immersifs (VR/AR/MR), des interfaces de conversation (bot) et des futures possibilités des interfaces utilisateur...</br></br>Depuis le 2013, j’ai été attribué par Microsoft comme l’un des experts européens sur Kinect, les interfaces utilisateur naturelles et le HoloLens (le plus précieux des professionnels).|[Messagerie](mailto:vincent@guigui.fr)|
 
