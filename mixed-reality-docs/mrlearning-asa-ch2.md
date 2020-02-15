@@ -6,80 +6,86 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: 1cc3ef7b85eb52105f3d7cf9ccbdf1faf46458be
-ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
+ms.openlocfilehash: 7b19233a9634e2568200476c9483464bbf9dd3c8
+ms.sourcegitcommit: a580166a19294f835b8e09c780f663f228dd5de0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/24/2019
-ms.locfileid: "75334426"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77250733"
 ---
 # <a name="2-saving-retrieving-and-sharing-azure-spatial-anchors"></a>2. enregistrement, récupération et partage d’ancres spatiales Azure
 
-Dans ce didacticiel, vous allez apprendre à enregistrer nos ancres spatiales Azure sur plusieurs sessions d’application en enregistrant les informations d’ancrage dans le stockage de HoloLens 2. Vous allez également apprendre à partager ces informations d’ancrage avec d’autres appareils pour un alignement d’ancrage sur plusieurs appareils.
+Dans ce didacticiel, vous allez apprendre à enregistrer des ancres spatiales Azure sur plusieurs sessions d’application en enregistrant l’ID d’ancrage dans le stockage de HoloLens 2. Vous allez également apprendre à partager cet ID d’ancrage avec d’autres appareils pour un alignement d’ancrage sur plusieurs appareils.
 
 ## <a name="objectives"></a>Objectifs
 
-* Découvrez comment enregistrer et récupérer les informations d’ancre spatiale Azure à partir du disque local HoloLens 2, pour la persistance entre les sessions d’application
-* Découvrez comment partager des informations d’ancrage spatial Azure entre les utilisateurs dans un scénario multi-appareil
+* Découvrez comment enregistrer et récupérer des ID d’ancrage spatial Azure vers et à partir du disque local HoloLens 2, pour la persistance entre les sessions d’application
+* Découvrez comment partager des ID d’ancrage spatial Azure entre les utilisateurs dans un scénario multi-appareil
+
+## <a name="preparing-the-scene"></a>Préparation de la scène
+
+Dans la fenêtre projet, accédez à **ressources** > **MRTK. Tutoriels. AzureSpatialAnchors** > dossier **Prefabs** . Tout en maintenant enfoncé le bouton CTRL, cliquez sur **ButtonParent_SaveAnchorId** et **ButtonParent_ShareAnchorId** pour sélectionner les deux prefabs, puis faites-les glisser dans la fenêtre hiérarchie pour les ajouter à la scène :
+
+![mrlearning-ASA](images/mrlearning-asa/tutorial2-section1-step1-1.png)
 
 ## <a name="persist-azure-anchors-between-app-sessions---save-anchor-id-to-disk"></a>Conserver les ancres Azure entre les sessions d’application-enregistrer l’ID d’ancrage sur le disque
+<!-- TODO: Consider renaming to 'Persist Azure Anchors between app sessions' -->
 
-1. Recherchez et ajoutez le Prefab SaveAnchorToDisk à votre scène. Ces deux boutons sont les suivants : un bouton permettant d’enregistrer les ID d’ancrage Azure disponibles dans le stockage HoloLens 2, et un autre pour la récupération des ID du disque.
+Dans cette section, vous allez apprendre à enregistrer et à récupérer l’ID d’ancre Azure vers et à partir du disque local HoloLens 2. Cela vous permet d’interroger Azure pour obtenir le même ID d’ancrage entre différentes sessions d’application, ce qui permet aux hologrammes ancrés d’être positionnés au même emplacement que dans la session d’application précédente.
 
-    ![module2chapter2step1im](images/module2chapter2step1im.PNG)
+Dans la fenêtre hiérarchie, développez l’objet **ButtonParent_SaveAnchorId** qui contient deux boutons, un bouton permettant d’enregistrer l’ID d’ancrage Azure dans le stockage HoloLens 2 et un autre pour récupérer l’ID enregistré à partir du disque :
 
-2. Configurez chaque bouton en suivant les instructions ci-dessous.
+![mrlearning-ASA](images/mrlearning-asa/tutorial2-section2-step1-1.png)
 
-    Pour le bouton nommé SaveToDisk, créez un événement sous le déclencheur d’événements appuyé sur le bouton, ainsi que le déclencheur d’événements on Click. Faites glisser l’objet ParentAnchor dans le champ Empty, puis affectez la méthode SaveAzureAnchorIDToDisk () à partir du composant ASAmoduleScript de l’objet ParentAnchor.
+Suivez les mêmes étapes que dans les instructions de [Configuration des boutons pour exécuter les](mrlearning-asa-ch1.md#configuring-the-buttons-to-operate-the-scene) instructions de la scène du didacticiel précédent afin de configurer le composant **Holo Lens 2 (script) du bouton enfoncé** et le composant **(script)** pouvant être interagi sur chacun des deux boutons :
 
-    >[!NOTE]
-    >Certains boutons peuvent apparaître qui chevauchent les autres boutons de la scène. N’hésitez pas à ajuster le positionnement du bouton.
+* Pour l’objet **SaveAzureAnchorIdToDisk** , assignez la fonction AnchorModuleScript > **SaveAzureAnchorIdToDisk ()** .
+* Pour l’objet **GetAzureAnchorIdFromDisk** , assignez la fonction AnchorModuleScript > **GetAzureAnchorIdFromDisk ()** .
 
-    ![module2chapter2step2aim](images/module2chapter2step2aim.PNG)
+Si vous générez l’application mise à jour dans votre HoloLens, vous pouvez désormais conserver les ancres spatiales Azure entre les sessions d’application en enregistrant l’ID d’ancrage Azure. Pour le tester, procédez comme suit :
 
-    ![module2chapter2step2aim](images/module2chapter2step2bim.PNG)
-
-    ![module2chapter2step2aim](images/module2chapter2step2cim.PNG)
-
-    Pour le bouton nommé GetFromDisk, créez un événement sous le déclencheur d’événements appuyé sur le bouton, ainsi que le déclencheur d’événements on Click. Faites glisser l’objet ParentAnchor dans le champ Empty, puis affectez la méthode LoadAzureAnchorIDsFromDisk () à partir du composant ASAmoduleScript de l’objet ParentAnchor.
-
-3. Suivez les instructions du didacticiel 1 pour créer l’application mise à jour sur votre appareil. Après avoir appuyé sur le bouton créer une ancre Azure, comme vous l’avez fait dans la leçon précédente, vous pouvez maintenant enregistrer l’ID d’ancrage Azure sur le disque en appuyant sur le bouton enregistrer sur le disque.
-
-4. Redémarrez l’application, démarrez la session Azure, appuyez sur charger l’ID d’ancrage, puis appuyez sur localiser Azure Anchor pour localiser l’ancre associée à l’ID que nous avons enregistré sur le disque. L’ensemble de la scène doit maintenant s’aligner sur la position, à l’emplacement où vous avez précédemment enregistré l’ancre !
+1. Déplacez l’expérience du lanceur Rocket vers l’emplacement souhaité.
+2. Démarrez la session Azure.
+3. Créer un point d’ancrage Azure (crée des ancres à l’emplacement de l’expérience du lanceur Rocket).
+4. Enregistrez l’ID d’ancrage Azure sur le disque.
+5. Redémarrez l’application.
+6. Procurez-vous Azure Anchor à partir du disque (charge l’ID d’ancrage que vous venez d’enregistrer).
+7. Démarrez la session Azure.
+8. Recherchez Azure Anchor (positionne l’expérience du lanceur Rocket à l’emplacement de l’étape 3).
 
 ## <a name="share-azure-anchors-between-multiple-devices"></a>Partager des ancres Azure entre plusieurs appareils
 
-Dans cette section, nous allons apprendre à partager l’ID d’ancre Azure entre plusieurs appareils. Cela permet à plusieurs appareils d’interroger Azure pour obtenir le même ID d’ancrage, ce qui permet l’alignement spatial de nos hologrammes et scènes ancrés. L’alignement spatial (voir les mêmes hologrammes dans le même emplacement physique entre plusieurs appareils) est essentiel pour les expériences partagées locales dans le HoloLens 2. Il existe de nombreuses façons de transférer des informations concernant les identifiants Azure entre les appareils, notamment les méthodes décrites dans les [didacticiels](mrlearning-sharing(photon)-ch1.md)sur les expériences partagées d’ancrage spatial Azure. Cet exemple utilise un service Web simple pour charger et télécharger des ID d’ancrage entre les appareils.
+Dans cette section, vous allez apprendre à partager l’ID d’ancre Azure entre plusieurs appareils. Cela permet à plusieurs appareils d’interroger Azure pour obtenir le même ID d’ancrage, ce qui permet l’alignement spatial des hologrammes ancrés. L’alignement spatial, c’est-à-dire le fait de voir les mêmes hologrammes dans le même emplacement physique entre plusieurs appareils, est essentiel pour les expériences partagées locales dans le HoloLens 2.
 
-1. Ajoutez le Prefab ShareAnchor à votre hiérarchie. Ce Prefab ajoute deux nouveaux boutons à votre scène. une pour le chargement des informations d’ID d’ancrage et une autre pour le téléchargement des informations d’ID d’ancrage.
+Il existe de nombreuses façons de transférer des ID d’ancrage Azure entre les appareils, notamment les méthodes décrites dans la série de [didacticiels sur les fonctionnalités multi-utilisateur](mrlearning-sharing(photon)-ch1.md) . Dans cet exemple, vous allez utiliser un service Web simple pour charger et télécharger des ID d’ancrage entre les appareils.
 
-    ![module2chapter2step5im](images/module2chapter2step5im.PNG)
+Dans la fenêtre hiérarchie, développez l’objet **ButtonParent_ShareAnchorId** qui contient deux boutons. un bouton pour télécharger l’ID d’ancre Azure sur le serveur Web et un autre pour télécharger l’ID à partir du serveur Web :
 
-2. Configurez chaque bouton en suivant les instructions ci-dessous.
+![mrlearning-ASA](images/mrlearning-asa/tutorial2-section3-step1-1.png)
 
-    Pour le bouton nommé SendSharedAnchor, créez un événement sous le déclencheur d’événements appuyé sur le bouton, ainsi que le déclencheur d’événements on Click. Faites glisser l’objet ParentAnchor dans le champ Empty, puis affectez la méthode ShareAnchor () à partir du composant ASAmoduleScript de l’objet ParentAnchor.
+Suivez les mêmes étapes que dans les instructions de [Configuration des boutons pour exécuter les](mrlearning-asa-ch1.md#configuring-the-buttons-to-operate-the-scene) instructions de la scène du didacticiel précédent afin de configurer le composant **Holo Lens 2 (script) du bouton enfoncé** et le composant **(script)** pouvant être interagi sur chacun des deux boutons :
 
-    ![module2chapter2step6aim](images/module2chapter2step6aim.PNG)
+* Pour l’objet **ShareAzureAnchorIdToNetwork** , assignez la fonction AnchorModuleScript > **ShareAzureAnchorIdToNetwork ()** .
+* Pour l’objet **GetAzureAnchorIdFromNetwork** , assignez la fonction AnchorModuleScript > **GetAzureAnchorIdFromNetwork ()** .
 
-    ![module2chapter2step6bim](images/module2chapter2step6bim.PNG)
+Si vous générez l’application mise à jour sur deux appareils HoloLens, vous pouvez désormais obtenir un alignement spatial entre eux en partageant l’ID d’ancrage Azure. Pour le tester, procédez comme suit :
 
-    Pour le bouton nommé GetSharedAnchor, créez un événement sous le déclencheur d’événements appuyé sur le bouton, ainsi que le déclencheur d’événements on Click. Faites glisser l’objet ParentAnchor dans le champ Empty, puis affectez la méthode GetSharedAzureAnchor () à partir du composant ASAmoduleScript de l’objet ParentAnchor.
+1. Sur l’appareil HoloLens 1 : déplacez l’expérience du lanceur Rocket vers l’emplacement souhaité.
+2. Sur l’appareil HoloLens 1 : démarrez la session Azure.
+3. Sur HoloLens Device 1 : Create Azure Anchor (crée des ancres à l’emplacement de l’expérience du lanceur Rocket).
+4. Sur l’appareil HoloLens 1 : partager l’ID d’ancrage Azure sur le réseau.
+5. Sur l’appareil HoloLens 2 : redémarrez l’application.
+6. Sur l’appareil HoloLens 2 : obtenir l’ID d’ancrage partagé à partir du réseau (récupère l’ID d’ancrage qui vient d’être partagé à partir de l’appareil HoloLens 1).
+7. Sur l’appareil HoloLens 2 : démarrez la session Azure.
+8. Sur l’appareil HoloLens 2 : recherchez Azure Anchor (positionne l’expérience du lanceur Rocket à l’emplacement de l’étape 3).
 
-3. Suivez les instructions du [didacticiel 1](mrlearning-base-ch1.md) pour créer l’application mise à jour sur votre appareil. Après avoir appuyé sur le bouton créer une ancre Azure, comme vous l’avez fait dans la leçon précédente, vous pouvez désormais partager l’ID d’ancrage Azure avec d’autres appareils en appuyant sur le bouton partager sur un autre appareil.
-
-    >[!NOTE]
-    >Sélectionnez l’ancre parente et faites défiler jusqu’au script d’ancrage parent. Assurez-vous que votre code confidentiel de partage public est unique (vous pouvez le remplacer par un autre nombre). ainsi, lorsque vous le partagez, vous savez que vous partagez. Il peut y avoir des milliers d’utilisateurs qui partagent leurs points d’ancrage Azure, ce qui vous permet de vous assurer que vous partagez les ancres Azure appropriées.
-
-    ![module2chapter2step7bim](images/module2chapter2step7bim.PNG)
-
-4. Si vous avez un autre périphérique HoloLens 2, démarrez l’application, puis démarrez la session Azure. Appuyez sur le bouton obtenir l’ID d’ancrage partagé, puis sur le bouton localiser Azure Anchor pour localiser l’ancre associée à l’ID que nous avons partagé à l’aide du service Web. L’intégralité de la scène doit maintenant s’aligner sur la position, à l’emplacement où elle a été placée sur l’autre appareil HoloLens 2 ! Si vous disposez d’un seul HoloLens 2, vous pouvez toujours tester la fonctionnalité en redémarrant l’application, en démarrant la session Azure, puis en appuyant sur le bouton « obtenir un ID d’ancrage partagé », suivi du bouton « localiser le point d’ancrage Azure » pour localiser l’ancre associée à l’ID que nous avons enregistré sur le disque. L’ensemble de la scène doit maintenant s’aligner sur la position, à l’emplacement où vous avez précédemment enregistré l’ancre !
+> [!TIP]
+> Si vous ne disposez que d’un HoloLens, vous pouvez toujours tester la fonctionnalité en redémarrant l’application au lieu d’utiliser un deuxième appareil HoloLens.
 
 ## <a name="congratulations"></a>Félicitations !
 
-Dans cette leçon, vous avez appris à conserver les ancres spatiales Azure entre les sessions d’application et les redémarrages d’application en enregistrant l’ID d’ancrage spatial Azure sur le disque local sur HoloLens 2. Vous avez également appris comment partager des ancres spatiales Azure entre plusieurs appareils pour une expérience de base multi-utilisateur et une expérience partagée d’hologramme statique.
+Dans ce didacticiel, vous avez appris à conserver les ancres spatiales Azure entre les sessions d’application et les redémarrages d’application en enregistrant l’ID d’ancrage spatial Azure sur le disque local sur HoloLens. Vous avez également appris comment partager des ancres spatiales Azure entre plusieurs appareils pour une expérience de base multi-utilisateur et une expérience partagée d’hologramme statique.
 
-Nous apprenons à implémenter des ancres spatiales Azure dans le cadre d’une expérience partagée locale entièrement interactive au cours de la dernière leçon du module de partage. Une expérience de partage local peut inclure des fonctionnalités telles que la position, la rotation et l’échelle des objets 3D synchronisés, les identificateurs pour chaque utilisateur et les États des applications partagées. Les ancres spatiales Azure améliorent ces scénarios partagés en fournissant à chaque participant un point d’ancrage commun qui permet à tous les utilisateurs de voir les objets virtuels dans le même emplacement physique. Cela s’applique à toute une gamme de plateformes d’appareils, y compris les appareils HoloLens, Android et iOS. Pour apprendre à développer une expérience partagée, effectuez toutes les leçons du module de partage.
-
-Dans la leçon suivante, vous allez apprendre à fournir aux utilisateurs des commentaires en temps réel. Ces commentaires incluent des informations sur la création d’ancres, la qualité de la compréhension de l’environnement et l’état de la session Azure. Sans commentaires, les utilisateurs peuvent ne pas savoir si un point d’ancrage a été chargé avec succès sur Azure, que la qualité de l’environnement soit suffisante pour la création de l’ancre ou pour l’état actuel.
+Dans le didacticiel suivant, vous allez apprendre à fournir aux utilisateurs des commentaires en temps réel. Ces commentaires incluent des informations sur la création d’ancres, la qualité de la compréhension de l’environnement et l’état de la session Azure. Sans commentaires, les utilisateurs peuvent ne pas savoir si un point d’ancrage a été chargé avec succès sur Azure, que la qualité de l’environnement soit suffisante pour la création de l’ancre ou pour l’état actuel.
 
 [Leçon suivante : 3. affichage des commentaires sur l’ancrage spatial Azure](mrlearning-asa-ch3.md)
