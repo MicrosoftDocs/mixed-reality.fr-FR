@@ -7,157 +7,253 @@ ms.date: 11/01/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: d0c166f760884efab9719ecba1ff83285872e2ef
-ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
+ms.openlocfilehash: d3392df9bfad5938d71d3a01999be51834a98a5d
+ms.sourcegitcommit: 87aca9c2b73b0e83cb70a46443dcdb08c3621005
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/24/2019
-ms.locfileid: "75334413"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77373448"
 ---
-# <a name="2-initializing-your-project-and-first-application"></a><span data-ttu-id="cd5aa-105">2. Initialisation de votre projet et de votre première application</span><span class="sxs-lookup"><span data-stu-id="cd5aa-105">2. Initializing your project and first application</span></span>
+# <a name="2-initializing-your-project-and-first-application"></a><span data-ttu-id="c50ab-105">2. Initialisation de votre projet et de votre première application</span><span class="sxs-lookup"><span data-stu-id="c50ab-105">2. Initializing your project and first application</span></span>
 
-## <a name="overview"></a><span data-ttu-id="cd5aa-106">Vue d’ensemble</span><span class="sxs-lookup"><span data-stu-id="cd5aa-106">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="c50ab-106">Vue d’ensemble</span><span class="sxs-lookup"><span data-stu-id="c50ab-106">Overview</span></span>
 
-<span data-ttu-id="cd5aa-107">Dans cette première leçon, vous allez découvrir certaines fonctionnalités du <a href="https://github.com/microsoft/MixedRealityToolkit-Unity" target="_blank">Mixed Reality Toolkit (MRTK)</a>. Vous verrez également comment démarrer votre première application pour HoloLens 2 et la déployer sur l’appareil.</span><span class="sxs-lookup"><span data-stu-id="cd5aa-107">In this first lesson, you'll learn about some of the capabilities the <a href="https://github.com/microsoft/MixedRealityToolkit-Unity" target="_blank">Mixed Reality Toolkit (MRTK)</a> has to offer, start your first application for the HoloLens 2, and deploy it to the device.</span></span>
+<!-- TODO: Consider expanding to include summary of each tutorial in this tutorial series -->
+<span data-ttu-id="c50ab-107">Dans ce premier tutoriel, vous allez découvrir certaines fonctionnalités du <a href="https://github.com/microsoft/MixedRealityToolkit-Unity" target="_blank">Mixed Reality Toolkit (MRTK)</a>. Vous verrez également comment démarrer votre première application pour HoloLens 2 et la déployer sur l’appareil.</span><span class="sxs-lookup"><span data-stu-id="c50ab-107">In this first tutorial, you will learn about some of the capabilities the <a href="https://github.com/microsoft/MixedRealityToolkit-Unity" target="_blank">Mixed Reality Toolkit (MRTK)</a> has to offer, start your first application for the HoloLens 2, and deploy it to the device.</span></span>
 
-## <a name="objectives"></a><span data-ttu-id="cd5aa-108">Objectifs</span><span class="sxs-lookup"><span data-stu-id="cd5aa-108">Objectives</span></span>
+## <a name="objectives"></a><span data-ttu-id="c50ab-108">Objectifs</span><span class="sxs-lookup"><span data-stu-id="c50ab-108">Objectives</span></span>
 
-* <span data-ttu-id="cd5aa-109">Configurer Unity pour le développement HoloLens.</span><span class="sxs-lookup"><span data-stu-id="cd5aa-109">Configure Unity for HoloLens development.</span></span>
-* <span data-ttu-id="cd5aa-110">Importer les ressources et configurer la scène.</span><span class="sxs-lookup"><span data-stu-id="cd5aa-110">Import assets and set up the scene.</span></span>
-* <span data-ttu-id="cd5aa-111">Visualiser le maillage spatial, les maillages de la main et le compteur de fréquence d’images.</span><span class="sxs-lookup"><span data-stu-id="cd5aa-111">Visualization of the spatial mapping mesh, hand meshes, and the framerate counter.</span></span>
+* <span data-ttu-id="c50ab-109">Configurer Unity pour le développement HoloLens</span><span class="sxs-lookup"><span data-stu-id="c50ab-109">Configure Unity for HoloLens development</span></span>
+* <span data-ttu-id="c50ab-110">Importer les ressources et configurer la scène</span><span class="sxs-lookup"><span data-stu-id="c50ab-110">Import assets and set up the scene</span></span>
+* <span data-ttu-id="c50ab-111">Visualiser le maillage du mappage spatial, les maillages de la main et le compteur de fréquence d’images</span><span class="sxs-lookup"><span data-stu-id="c50ab-111">Visualization of the spatial mapping mesh, hand meshes, and the framerate counter</span></span>
 
-## <a name="create-new-unity-project"></a><span data-ttu-id="cd5aa-112">Créer un projet Unity</span><span class="sxs-lookup"><span data-stu-id="cd5aa-112">Create new Unity project</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="c50ab-112">Prérequis</span><span class="sxs-lookup"><span data-stu-id="c50ab-112">Prerequisites</span></span>
 
-1. <span data-ttu-id="cd5aa-113">Démarrez Unity.</span><span class="sxs-lookup"><span data-stu-id="cd5aa-113">Start Unity.</span></span>
+* <span data-ttu-id="c50ab-113">PC Windows 10 configuré avec les [outils appropriés installés](install-the-tools.md)</span><span class="sxs-lookup"><span data-stu-id="c50ab-113">A Windows 10 PC configured with the correct [tools installed](install-the-tools.md)</span></span>
+* <span data-ttu-id="c50ab-114">SDK Windows 10 (10.0.18362.0 ou version ultérieure)</span><span class="sxs-lookup"><span data-stu-id="c50ab-114">Windows 10 SDK 10.0.18362.0 or later</span></span>
+* <span data-ttu-id="c50ab-115">Capacité de programmation C# de base</span><span class="sxs-lookup"><span data-stu-id="c50ab-115">Some basic C# programming ability</span></span>
+* <span data-ttu-id="c50ab-116">Appareil HoloLens 2 [configuré pour le développement](using-visual-studio.md#enabling-developer-mode)</span><span class="sxs-lookup"><span data-stu-id="c50ab-116">A HoloLens 2 device [configured for development](using-visual-studio.md#enabling-developer-mode)</span></span>
+* <span data-ttu-id="c50ab-117"><a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Unity Hub</a> avec Unity 2019.2.X installé et le module de prise en charge de la build d’applications de plateforme Windows universelle ajouté</span><span class="sxs-lookup"><span data-stu-id="c50ab-117"><a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Unity Hub</a> with Unity 2019.2.X installed and the Universal Windows Platform Build Support module added</span></span>
 
-2. <span data-ttu-id="cd5aa-114">Sélectionnez **New**.</span><span class="sxs-lookup"><span data-stu-id="cd5aa-114">Select **New**.</span></span>
+> [!IMPORTANT]
+> <span data-ttu-id="c50ab-118">La version Unity recommandée pour cette série de tutoriels est Unity 2019.2.X.</span><span class="sxs-lookup"><span data-stu-id="c50ab-118">The recommended Unity version for this tutorial series is Unity 2019.2.X.</span></span> <span data-ttu-id="c50ab-119">Cela remplace toute exigence ou recommandation de version Unity énoncée dans les prérequis indiqués ci-dessus.</span><span class="sxs-lookup"><span data-stu-id="c50ab-119">This supersedes any Unity version requirements or recommendations stated in the prerequisites linked above.</span></span>
 
-    ![Leçon 1, section 1, étape 2](images/mrlearning-base-ch1-1-step2.JPG)
+## <a name="create-new-unity-project"></a><span data-ttu-id="c50ab-120">Créer un projet Unity</span><span class="sxs-lookup"><span data-stu-id="c50ab-120">Create new Unity project</span></span>
 
-3. <span data-ttu-id="cd5aa-116">Entrez un nom de projet (par exemple, « MixedRealityBase »).</span><span class="sxs-lookup"><span data-stu-id="cd5aa-116">Enter a project name (e.g. "MixedRealityBase").</span></span>
+<span data-ttu-id="c50ab-121">Lancez **Unity Hub**, sélectionnez l’onglet **Projets**, puis cliquez sur la **flèche bas** en regard du bouton **Nouveau** :</span><span class="sxs-lookup"><span data-stu-id="c50ab-121">Launch **Unity Hub**, select the **Projects** tab, and click the **down arrow** next to the **New** button:</span></span>
 
-    ![Leçon 1, section 1, étape 3](images/mrlearning-base-ch1-1-step3.JPG)
+![mrlearning-base](images/mrlearning-base/tutorial1-section1-step1-1.png)
 
-4. <span data-ttu-id="cd5aa-118">Entrez un emplacement auquel enregistrer votre projet.</span><span class="sxs-lookup"><span data-stu-id="cd5aa-118">Enter a location to save your project.</span></span>
+<span data-ttu-id="c50ab-123">Sélectionnez la version Unity spécifiée dans la section [Prérequis](#prerequisites) ci-dessus :</span><span class="sxs-lookup"><span data-stu-id="c50ab-123">Select the Unity version specified in the [Prerequisites](#prerequisites) section above:</span></span>
 
-    ![Leçon 1, section 1, étape 4](images/mrlearning-base-ch1-1-step4.JPG)
+![mrlearning-base](images/mrlearning-base/tutorial1-section1-step1-2.png)
 
-5. <span data-ttu-id="cd5aa-120">Vérifiez que le projet est défini sur **3D**.</span><span class="sxs-lookup"><span data-stu-id="cd5aa-120">Make sure the project is set to **3D**.</span></span>
+<span data-ttu-id="c50ab-125">Dans la fenêtre Créer un projet :</span><span class="sxs-lookup"><span data-stu-id="c50ab-125">In the Create a new project window:</span></span>
 
-    ![Leçon 1, section 1, étape 5](images/mrlearning-base-ch1-1-step5.JPG)
+* <span data-ttu-id="c50ab-126">Vérifiez que **Modèles** est défini sur **3D**</span><span class="sxs-lookup"><span data-stu-id="c50ab-126">Ensure **Templates** is set to **3D**</span></span>
+* <span data-ttu-id="c50ab-127">Entrez un **Nom du projet** approprié, par exemple _Tutoriels MRTK_</span><span class="sxs-lookup"><span data-stu-id="c50ab-127">Enter a suitable **Project Name**, for example, _MRTK Tutorials_</span></span>
+* <span data-ttu-id="c50ab-128">Choisissez un **Emplacement** approprié pour stocker votre projet, par exemple _D:\MixedRealityLearning_</span><span class="sxs-lookup"><span data-stu-id="c50ab-128">Choose a suitable **Location** to store your project, for example, _D:\MixedRealityLearning_</span></span>
+* <span data-ttu-id="c50ab-129">Cliquez sur le bouton **Créer** pour créer et lancer votre nouveau projet Unity</span><span class="sxs-lookup"><span data-stu-id="c50ab-129">Click the **Create** button to create and launch your new Unity project</span></span>
 
-6. <span data-ttu-id="cd5aa-122">Cliquez sur **Create Project**.</span><span class="sxs-lookup"><span data-stu-id="cd5aa-122">Click **Create Project**.</span></span>
+![mrlearning-base](images/mrlearning-base/tutorial1-section1-step1-3.png)
 
-    ![Leçon 1, section 1, étape 6](images/mrlearning-base-ch1-1-step6.JPG)
+> [!CAUTION]
+> <span data-ttu-id="c50ab-131">Quand vous utilisez Windows, il existe une limite de 255 caractères pour MAX_PATH.</span><span class="sxs-lookup"><span data-stu-id="c50ab-131">When working on Windows, there is a MAX_PATH limit of 255 characters.</span></span> <span data-ttu-id="c50ab-132">Unity est concerné par ces limites et la compilation risque d’échouer si un chemin de fichier dépasse 255 caractères.</span><span class="sxs-lookup"><span data-stu-id="c50ab-132">Unity is affected by these limits and may fail to compile if any file path is longer than 255 characters.</span></span> <span data-ttu-id="c50ab-133">Par conséquent, il est vivement recommandé de stocker votre projet Unity aussi près que possible de la racine du lecteur.</span><span class="sxs-lookup"><span data-stu-id="c50ab-133">Consequently, it is strongly recommended to store your Unity project as close to the root of the drive as possible.</span></span>
 
-## <a name="configure-the-unity-project-for-windows-mixed-reality"></a><span data-ttu-id="cd5aa-124">Configurer le projet Unity pour Windows Mixed Reality</span><span class="sxs-lookup"><span data-stu-id="cd5aa-124">Configure the Unity project for Windows Mixed Reality</span></span>
+<span data-ttu-id="c50ab-134">Attendez qu’Unity crée le projet :</span><span class="sxs-lookup"><span data-stu-id="c50ab-134">Wait for Unity to create the project:</span></span>
 
-1. <span data-ttu-id="cd5aa-125">Ouvrez la fenêtre *Build Settings* (Paramètres de génération) en choisissant **File** > **Build Settings**.</span><span class="sxs-lookup"><span data-stu-id="cd5aa-125">Open the *Build Settings* window by going to **File** > **Build Settings**.</span></span>
+![mrlearning-base](images/mrlearning-base/tutorial1-section1-step1-4.png)
 
-    ![Leçon 1, section 2, étape 1](images/mrlearning-base-ch1-2-step1.JPG)
+## <a name="configure-the-unity-project-for-windows-mixed-reality"></a><span data-ttu-id="c50ab-136">Configurer le projet Unity pour Windows Mixed Reality</span><span class="sxs-lookup"><span data-stu-id="c50ab-136">Configure the Unity project for Windows Mixed Reality</span></span>
 
-2. <span data-ttu-id="cd5aa-127">Sélectionnez *Universal Windows Platform* (Plateforme Windows universelle), puis cliquez sur le bouton **Switch Platform** (Changer de plateforme).</span><span class="sxs-lookup"><span data-stu-id="cd5aa-127">Select the *Universal Windows Platform* and click the **Switch Platform** button to switch platforms.</span></span> <span data-ttu-id="cd5aa-128">Les applications qui s’exécutent sur HoloLens 2 doivent être compatibles avec la plateforme Windows universelle (UWP).</span><span class="sxs-lookup"><span data-stu-id="cd5aa-128">Applications running on HoloLens 2 are required to be Universal Windows Platform (UWP) compatible.</span></span>
+<!-- TODO: Consider adding info about configuring Unity for WMR vs MRTK, or removing WMR section -->
 
-    ![Leçon 1, section 2, étape 2](images/mrlearning-base-ch1-2-step2.JPG)
+<span data-ttu-id="c50ab-137">Dans cette section, vous allez changer de plateforme de génération, activer la réalité virtuelle et activer la perception spatiale.</span><span class="sxs-lookup"><span data-stu-id="c50ab-137">In this section, you will switch build platform, enable virtual reality, and enable spatial perception.</span></span>
 
-3. <span data-ttu-id="cd5aa-130">Activez la réalité virtuelle en cliquant sur **Player Settings** (Paramètres du lecteur) dans la fenêtre Build (Générer), puis cochez la case *Virtual Reality Supported* (Prise en charge de la réalité virtuelle), sous XR Settings (Paramètres XR) dans le panneau Inspector (Inspecteur), comme le montre l’image ci-dessous.</span><span class="sxs-lookup"><span data-stu-id="cd5aa-130">Enable virtual reality by clicking the **Player Settings** button in the Build Window, and enable the *Virtual Reality Supported* checkbox under XR Settings from the inspector panel, as shown in the image below.</span></span> <span data-ttu-id="cd5aa-131">Notez que vous devrez peut-être faire glisser la fenêtre *Build Settings* pour voir le panneau Inspector.</span><span class="sxs-lookup"><span data-stu-id="cd5aa-131">Note that you might need to drag the *Build Settings* window out of the way in order to see the inspector panel.</span></span> <span data-ttu-id="cd5aa-132">La case à cocher *Virtual Reality Supported* s’applique également aux casques de réalité mixte et de réalité augmentée, car elle fait référence à l’activation de la vision stéréoscopique (rendu d’images différentes pour chaque œil).</span><span class="sxs-lookup"><span data-stu-id="cd5aa-132">The *Virtual Reality Supported* checkbox also applies to Mixed Reality and Augmented Reality headsets because it refers to the enabling of stereoscopic vision (rendering different images for each eye.)</span></span>
+### <a name="1-switch-build-platform"></a><span data-ttu-id="c50ab-138">1. Changer de plateforme de génération</span><span class="sxs-lookup"><span data-stu-id="c50ab-138">1. Switch build platform</span></span>
 
-    ![Leçon 1, section 2, étape 3](images/mrlearning-base-ch1-2-step3.JPG)
+<span data-ttu-id="c50ab-139">Dans le menu Unity, sélectionnez **Fichier** > **Paramètres de build...** pour ouvrir la fenêtre Paramètres de build :</span><span class="sxs-lookup"><span data-stu-id="c50ab-139">In the Unity menu, select **File** > **Build Settings...** to open the Build Settings window:</span></span>
 
-4. <span data-ttu-id="cd5aa-134">Sous XR Settings, choisissez *Single Pass Instanced* (Instanciation en un seul passage) comme *Stereo Rendering Mode* (Mode de rendu stéréo).</span><span class="sxs-lookup"><span data-stu-id="cd5aa-134">Also under XR Settings, change the *Stereo Rendering Mode* to *Single Pass Instanced*.</span></span> <span data-ttu-id="cd5aa-135">Ce [style de pipeline de rendu](https://docs.unity3d.com/Manual/SinglePassStereoRenderingHoloLens.html) donne généralement de meilleurs résultats avec HoloLens 2.</span><span class="sxs-lookup"><span data-stu-id="cd5aa-135">This [rendering pipeline style](https://docs.unity3d.com/Manual/SinglePassStereoRenderingHoloLens.html) is generally most performant for HoloLens 2.</span></span> <span data-ttu-id="cd5aa-136">Si vous souhaitez obtenir d’autres configurations performantes pour votre environnement Unity, suivez [ces instructions](recommended-settings-for-unity.md).</span><span class="sxs-lookup"><span data-stu-id="cd5aa-136">If interested in other performant configurations for your Unity environment, follow [these instructions](recommended-settings-for-unity.md).</span></span>
+![mrlearning-base](images/mrlearning-base/tutorial1-section2-step1-1.png)
 
-    ![Leçon 1, section 2, étape 4](images/mrlearning-base-ch1-2-step4.jpg)
+<span data-ttu-id="c50ab-141">Dans la fenêtre Paramètres de build, sélectionnez **Plateforme Windows universelle** , puis cliquez sur le bouton **Switch Platform** (Changer de plateforme) :</span><span class="sxs-lookup"><span data-stu-id="c50ab-141">In the Build Settings window, select **Universal Windows Platform** and click the **Switch Platform** button:</span></span>
 
-5. <span data-ttu-id="cd5aa-138">Dans le même panneau Inspector, sous *Publishing Settings* (Paramètres de publication), dans la section des fonctionnalités, vérifiez que la case *Spatial Perception* (Perception spatiale) est cochée.</span><span class="sxs-lookup"><span data-stu-id="cd5aa-138">From the same inspector panel, ensure that the *Spatial Perception* checkbox in the capabilities section is enabled under *Publishing Settings*.</span></span> <span data-ttu-id="cd5aa-139">La perception spatiale nous permet de visualiser le maillage du mappage spatial sur un appareil de réalité mixte comme HoloLens 2.</span><span class="sxs-lookup"><span data-stu-id="cd5aa-139">Spatial Perception allows us to visualize the spatial mapping mesh on a mixed reality device, such as HoloLens 2.</span></span> <span data-ttu-id="cd5aa-140">Les paramètres de publication se trouvent dans le panneau Inspector, au-dessus de XR Settings et sous Other Settings (Autres paramètres).</span><span class="sxs-lookup"><span data-stu-id="cd5aa-140">Publishing Settings are found in the inspector panel, above XR Settings and under Other Settings.</span></span>
+![mrlearning-base](images/mrlearning-base/tutorial1-section2-step1-2.png)
 
-    ![Leçon 1, section 2, étape 5](images/mrlearning-base-ch1-2-step5.JPG)
+<span data-ttu-id="c50ab-143">Attendez qu’Unity termine le changement de plateforme :</span><span class="sxs-lookup"><span data-stu-id="c50ab-143">Wait for Unity to finish switching the platform:</span></span>
 
-    >[!NOTE]
-    ><span data-ttu-id="cd5aa-142">Vous pouvez également activer d’autres fonctionnalités courantes comme *Microphone* (pour les commandes vocales) et *InternetClient* (pour la connexion à des services nécessitant une connexion réseau), même si elles ne sont pas utilisées dans cette section.</span><span class="sxs-lookup"><span data-stu-id="cd5aa-142">While not used in this section, some other common capabilities you might want to enable include the *Microphone* for voice commands, and *InternetClient* for connecting to services requiring a network connection.</span></span>
+![mrlearning-base](images/mrlearning-base/tutorial1-section2-step1-3.png)
 
-## <a name="import-the-mixed-reality-toolkit"></a><span data-ttu-id="cd5aa-143">Importer le Kit de ressources de réalité mixte</span><span class="sxs-lookup"><span data-stu-id="cd5aa-143">Import the Mixed Reality Toolkit</span></span>
+<span data-ttu-id="c50ab-145">Quand Unity a terminé le changement de plateforme, cliquez sur l’icône **x** rouge pour fermer la fenêtre Paramètres de build :</span><span class="sxs-lookup"><span data-stu-id="c50ab-145">When Unity has finished switching the platform, click the red **x** icon to close the Build Settings window:</span></span>
 
-1. <span data-ttu-id="cd5aa-144">Téléchargez le [package de base version 2.1.0](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/download/v2.1.0/Microsoft.MixedReality.Toolkit.Unity.Foundation.2.1.0.unitypackage) de [Mixed Reality Toolkit](https://github.com/microsoft/MixedRealityToolkit-Unity/releases) pour Unity et enregistrez-le dans un dossier sur votre PC.</span><span class="sxs-lookup"><span data-stu-id="cd5aa-144">Download the [Mixed Reality Toolkit](https://github.com/microsoft/MixedRealityToolkit-Unity/releases) Unity [foundation package version 2.1.0](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/download/v2.1.0/Microsoft.MixedReality.Toolkit.Unity.Foundation.2.1.0.unitypackage) and save it to a folder on your PC.</span></span>
+![mrlearning-base](images/mrlearning-base/tutorial1-section2-step1-4.png)
 
-2. <span data-ttu-id="cd5aa-145">Importez le package *Mixed Reality Toolkit* que vous avez téléchargé à l’étape précédente.</span><span class="sxs-lookup"><span data-stu-id="cd5aa-145">Import the *Mixed Reality Toolkit* package that you downloaded in the previous step.</span></span> <span data-ttu-id="cd5aa-146">Commencez par cliquer sur **Assets** (Ressources) > **Import** (Importer) > **Custom Package** (Package personnalisé). Ensuite, sélectionnez *Microsoft.MixedReality.Toolkit.Unity.Foundation.2.1.0.unitypackage* et ouvrez-le pour lancer le processus d’importation.</span><span class="sxs-lookup"><span data-stu-id="cd5aa-146">Start by clicking on **Assets** > **Import** > **Custom Package**, select *Microsoft.MixedReality.Toolkit.Unity.Foundation.2.1.0.unitypackage* and open it to begin the importing process.</span></span> <span data-ttu-id="cd5aa-147">Patientez quelques minutes, le temps que le processus d’importation se termine.</span><span class="sxs-lookup"><span data-stu-id="cd5aa-147">Allow a few minutes for the importing process to complete.</span></span>
-
-    ![Leçon 1, section 3, étape 2a](images/mrlearning-base-ch1-3-step2a.JPG)
-
-    ![Leçon 1, section 3, étape 2b](images/mrlearning-base-ch1-3-step2b.JPG)
-
-3. <span data-ttu-id="cd5aa-150">Dans la fenêtre contextuelle suivante, cliquez sur **Import** pour commencer l’importation du package sélectionné dans le projet Unity.</span><span class="sxs-lookup"><span data-stu-id="cd5aa-150">In the next pop-up window, click **Import** to begin importing the selected package into the Unity project.</span></span> <span data-ttu-id="cd5aa-151">Vérifiez que tous les éléments sont cochés, comme illustré dans l’image.</span><span class="sxs-lookup"><span data-stu-id="cd5aa-151">Ensure all items are checked as shown in the image.</span></span>
-
-    ![Leçon 1, section 3, étape 3](images/mrlearning-base-ch1-3-step3.JPG)
-
-    > [!NOTE]
-    > <span data-ttu-id="cd5aa-153">Si une boîte de dialogue contextuelle s’affiche pour vous inviter à appliquer les paramètres par défaut de Mixed Reality Toolkit, cliquez sur **Apply** (Appliquer).</span><span class="sxs-lookup"><span data-stu-id="cd5aa-153">If you see a pop-up dialog box asking to apply the Mixed Reality Toolkit default settings, click **Apply**.</span></span> <span data-ttu-id="cd5aa-154">MRTK analyse votre projet à la recherche de paramètres recommandés manquants si vous l’importez pour une installation automatisée.</span><span class="sxs-lookup"><span data-stu-id="cd5aa-154">MRTK analyzes your project for any missing recommended settings when imported for automated setup.</span></span> <span data-ttu-id="cd5aa-155">Selon vos paramètres, la fenêtre contextuelle peut être différente de l’image ci-dessous.</span><span class="sxs-lookup"><span data-stu-id="cd5aa-155">Depending on your settings, the pop-up might look different than the image below.</span></span>
-
-    ![Leçon 1, section 3, étape 4, remarque 1](images/mrlearning-base-ch1-3-step4-note1.JPG)
-
-## <a name="configure-the-mixed-reality-toolkit"></a><span data-ttu-id="cd5aa-157">Configurer le Kit de ressources de réalité mixte</span><span class="sxs-lookup"><span data-stu-id="cd5aa-157">Configure the Mixed Reality Toolkit</span></span>
-
-1. <span data-ttu-id="cd5aa-158">Ajoutez le *Mixed Reality Toolkit* à votre scène actuelle. Pour cela, sélectionnez **Mixed Reality Toolkit** > **Add to Scene and Configure** (Ajouter à la scène et configurer)</span><span class="sxs-lookup"><span data-stu-id="cd5aa-158">Add the *Mixed Reality Toolkit* to your current scene by selecting **Mixed Reality Toolkit** > **Add to Scene and Configure..**</span></span> <span data-ttu-id="cd5aa-159">à partir de la barre de menus.</span><span class="sxs-lookup"><span data-stu-id="cd5aa-159">from the menu bar.</span></span> <span data-ttu-id="cd5aa-160">Si vous ne voyez pas cet élément de menu après avoir importé le Kit de ressources de réalité mixte, redémarrez Unity.</span><span class="sxs-lookup"><span data-stu-id="cd5aa-160">If you don't see this menu item after importing the mixed reality toolkit, restart Unity.</span></span>
-
-    ![Leçon 1, section 4, étape 1](images/mrlearning-base-ch1-4-step1.JPG)
-
-    > [!NOTE]
-    > <span data-ttu-id="cd5aa-162">Une boîte de dialogue contextuelle peut s’afficher pour vous demander de sélectionner un [profil Mixed Reality Toolkit](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Profiles/Profiles.html).</span><span class="sxs-lookup"><span data-stu-id="cd5aa-162">You may see a pop-up dialog box for selecting a [profile for the Mixed Reality Toolkit](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Profiles/Profiles.html).</span></span> <span data-ttu-id="cd5aa-163">Double-cliquez sur le profil nommé *DefaultHoloLens2ConfigurationProfile* pour le choisir.</span><span class="sxs-lookup"><span data-stu-id="cd5aa-163">Choose the profile named *DefaultHoloLens2ConfigurationProfile* by double-clicking it.</span></span>
-
-2. <span data-ttu-id="cd5aa-164">Votre scène comprend de nouveaux éléments et des modifications.</span><span class="sxs-lookup"><span data-stu-id="cd5aa-164">Your scene will have several new items and modifications.</span></span> <span data-ttu-id="cd5aa-165">Enregistrez votre scène sous un autre nom. Pour cela, cliquez sur **File** (Fichier) > **Save As...** (Enregistrer sous) et donnez un nom à votre scène, par exemple *BaseScene*.</span><span class="sxs-lookup"><span data-stu-id="cd5aa-165">Save your scene under a different name by clicking **File** > **Save As...**, and give your scene a name, such as *BaseScene*.</span></span> <span data-ttu-id="cd5aa-166">Dans un souci d’organisation, enregistrez la scène dans le dossier *Scenes* du dossier *Assets* de votre projet.</span><span class="sxs-lookup"><span data-stu-id="cd5aa-166">Keep your scene organized by saving it to the *Scenes* folder in your project’s *Assets* folder.</span></span>
-
-    ![Leçon 1, section 4, étape 2a](images/mrlearning-base-ch1-4-step2a.JPG)
-
-    ![Leçon 1, section 4, étape 2b](images/mrlearning-base-ch1-4-step2b.JPG)
-
-## <a name="build-your-application-to-your-device"></a><span data-ttu-id="cd5aa-169">Générer votre application sur votre appareil</span><span class="sxs-lookup"><span data-stu-id="cd5aa-169">Build your application to your device</span></span>
-
-1. <span data-ttu-id="cd5aa-170">Si vous avez fermé la fenêtre *Build Settings* dans les sections précédentes, rouvrez-la en choisissant **File** > **Build Settings**.</span><span class="sxs-lookup"><span data-stu-id="cd5aa-170">If you closed the *Build Settings* window from the previous sections, open the *Build Settings* window again by going to **File** > **Build Settings**.</span></span>
-
-    ![Leçon 1, section 5, étape 1](images/mrlearning-base-ch1-5-step1.JPG)
-
-2. <span data-ttu-id="cd5aa-172">Vérifiez que la scène que vous venez de créer figure dans la liste *Scenes in Build* (Scènes dans la génération). Pour cela, cliquez sur le bouton **Add Open Scenes** (Ajouter des scènes ouvertes) quand votre scène est ouverte dans Unity.</span><span class="sxs-lookup"><span data-stu-id="cd5aa-172">Ensure the scene you just created is in the *Scenes in Build* list by clicking on the **Add Open Scenes** button while your scene is open in Unity.</span></span>
-
-3. <span data-ttu-id="cd5aa-173">Appuyez sur le bouton **Build** (Générer) pour commencer le processus de génération.</span><span class="sxs-lookup"><span data-stu-id="cd5aa-173">Press the **Build** button to begin the build process.</span></span>
-
-    ![Leçon 1, section 5, étape 3](images/mrlearning-base-ch1-5-step3.JPG)
-
-4. <span data-ttu-id="cd5aa-175">Créez un dossier pour votre application et nommez-le.</span><span class="sxs-lookup"><span data-stu-id="cd5aa-175">Create and name a new folder for your application.</span></span> <span data-ttu-id="cd5aa-176">Dans l’image ci-dessous, un dossier portant le nom App a été créé pour contenir l’application.</span><span class="sxs-lookup"><span data-stu-id="cd5aa-176">In the image below, a folder with the name App was created to contain the application.</span></span> <span data-ttu-id="cd5aa-177">Cliquez sur **Select Folder** (Sélectionner le dossier) pour commencer la génération dans le dossier que vous venez de créer.</span><span class="sxs-lookup"><span data-stu-id="cd5aa-177">Click **Select Folder** to begin building to the newly created folder.</span></span> <span data-ttu-id="cd5aa-178">Une fois la génération terminée, vous pouvez fermer la fenêtre *Build Settings* dans Unity.</span><span class="sxs-lookup"><span data-stu-id="cd5aa-178">After the build has completed, you can close the *Build Settings* window in Unity.</span></span>
-
-    ![Leçon 1, section 5, étape 4](images/mrlearning-base-ch1-5-step4.JPG)
-
-    >[!IMPORTANT]
-    ><span data-ttu-id="cd5aa-180">Si la génération échoue, essayez de renouveler l’opération, éventuellement après avoir redémarré Unity.</span><span class="sxs-lookup"><span data-stu-id="cd5aa-180">If the build fails, try building again or restarting Unity and building again.</span></span> <span data-ttu-id="cd5aa-181">Si vous voyez une erreur du type « Error: CS0246 = The type or namespace name “XX” could not be found (are you missing a using directive or an assembly reference?) » (Erreur : CS0246 = Le type ou le nom de l’espace de noms XX est introuvable [une directive using ou une référence d’assembly est-elle manquante ?]),</span><span class="sxs-lookup"><span data-stu-id="cd5aa-181">If you see an error, such as "Error: CS0246 = The type or namespace name “XX” could not be found (are you missing a using directive or an assembly reference?).</span></span> <span data-ttu-id="cd5aa-182">vous devrez peut-être installer le [SDK Windows 10 (10.0.18362.0)](https://developer.microsoft.com//windows/downloads/windows-10-sdk).</span><span class="sxs-lookup"><span data-stu-id="cd5aa-182">If so, you might need to install [Windows 10 SDK (10.0.18362.0)](https://developer.microsoft.com//windows/downloads/windows-10-sdk)</span></span>
-
-5. <span data-ttu-id="cd5aa-183">Une fois la génération terminée, ouvrez le dossier créé qui contient vos fichiers d’application nouvellement générés.</span><span class="sxs-lookup"><span data-stu-id="cd5aa-183">After the build is completed, open the newly created folder containing your newly built application files.</span></span> <span data-ttu-id="cd5aa-184">Double-cliquez sur la solution *MixedRealityBase.sln* (ou le nom correspondant si vous avez utilisé un autre nom pour votre projet) pour ouvrir le fichier solution dans Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="cd5aa-184">Double-click on the *MixedRealityBase.sln* solution, or the corresponding name, if you used an alternative name for your project, to open the solution file in Visual Studio.</span></span>
-
-    >[!NOTE]
-    ><span data-ttu-id="cd5aa-185">Veillez à ouvrir le dossier créé (par exemple, le dossier *App* si vous avez suivi les conventions de nommage indiquées aux étapes précédentes), car il existe un fichier .sln portant le même nom en dehors de ce dossier, qui ne doit pas être confondu avec le fichier .sln situé dans le dossier de génération.</span><span class="sxs-lookup"><span data-stu-id="cd5aa-185">Be sure to open the newly created folder (i.e. the *App* folder, if following the naming conventions from the previous steps), as there will be a similarly named .sln file outside of that folder, that is not to be confused with the .sln file inside the build folder.</span></span> <span data-ttu-id="cd5aa-186">La structure de dossiers doit ressembler à celle de l’image ci-dessous.</span><span class="sxs-lookup"><span data-stu-id="cd5aa-186">The folder structure should look similar to the image below.</span></span>
-    >
-    ><span data-ttu-id="cd5aa-187">Si Visual Studio vous invite à installer de nouveaux composants, prenez un moment pour vous assurer que tous les composants requis sont installés comme spécifié dans la [page « Installer les outils »](install-the-tools.md).</span><span class="sxs-lookup"><span data-stu-id="cd5aa-187">If Visual Studio asks you to install new components, take a moment to ensure that all prerequisite components are installed as specified in [the "Install the Tools" page](install-the-tools.md)</span></span>
-
-    ![Leçon 1, section 5, étape 5](images/mrlearning-base-ch1-5-step5.JPG)
-
-6. <span data-ttu-id="cd5aa-189">Connectez votre HoloLens 2 à votre PC.</span><span class="sxs-lookup"><span data-stu-id="cd5aa-189">Connect your HoloLens 2 into your PC.</span></span> <span data-ttu-id="cd5aa-190">Bien que ces instructions supposent que vous déployez sur un appareil HoloLens 2, vous pouvez choisir de déployer sur l’[émulateur HoloLens 2](using-the-hololens-emulator.md) ou de créer un [package d’application pour effectuer un chargement indépendant](<https://docs.microsoft.com//windows/uwp/packaging/packaging-uwp-apps>).</span><span class="sxs-lookup"><span data-stu-id="cd5aa-190">While these instructions assume you will be deploying to a HoloLens 2 device, you might also choose to deploy to the [HoloLens 2 emulator](using-the-hololens-emulator.md) or choose to create an [app package for sideloading](<https://docs.microsoft.com//windows/uwp/packaging/packaging-uwp-apps>)</span></span>
-
-    >[!IMPORTANT]
-    ><span data-ttu-id="cd5aa-191">Avant d’effectuer la génération sur votre appareil, celui-ci doit être en *Mode développeur* et associé à votre ordinateur de développement.</span><span class="sxs-lookup"><span data-stu-id="cd5aa-191">Before building to your device, the device must be in *Developer Mode* and paired with your development machine.</span></span> <span data-ttu-id="cd5aa-192">Vous pouvez effectuer ces deux étapes en suivant [ces instructions](using-visual-studio.md).</span><span class="sxs-lookup"><span data-stu-id="cd5aa-192">Both of these steps can be completed by following [these instructions](using-visual-studio.md)</span></span>
-
-7. <span data-ttu-id="cd5aa-193">Configurez Visual Studio pour effectuer la génération sur votre HoloLens 2. Pour cela, sélectionnez la configuration *Release* ou *Master*, l’architecture *ARM* et *Device* comme cible.</span><span class="sxs-lookup"><span data-stu-id="cd5aa-193">Configure Visual Studio for building to your HoloLens 2 by selecting the *Release* or *Master* configuration, the *ARM* architecture, and *Device* as target.</span></span>
-
-    ![Leçon 1, section 5, étape 8](images/mrlearning-base-ch1-5-step7.JPG)
-
-8. <span data-ttu-id="cd5aa-195">L’étape finale consiste à effectuer la génération et le déploiement sur votre appareil. Pour cela, sélectionnez **Déboguer** > **Démarrer sans débogage**.</span><span class="sxs-lookup"><span data-stu-id="cd5aa-195">The final step is to build and deploy to your device by selecting **Debug** > **Start without debugging**.</span></span> <span data-ttu-id="cd5aa-196">Quand vous sélectionnez *Démarrer sans débogage*, l’application démarre immédiatement sur votre appareil si la génération réussit, mais le débogueur attaché et les informations de débogage n’apparaissent pas dans Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="cd5aa-196">Selecting *Start without Debugging* causes the application to immediately start on your device upon a successful build, but without the debugger attached and information appearing in Visual Studio.</span></span> <span data-ttu-id="cd5aa-197">Cela signifie également que vous pouvez déconnecter le câble USB pendant que votre application s’exécute sur votre appareil HoloLens 2 sans arrêter celle-ci.</span><span class="sxs-lookup"><span data-stu-id="cd5aa-197">This also means that you can disconnect your USB cable while your application is running on your HoloLens 2 without stopping the application.</span></span>
-
-    > [!NOTE]
-    > <span data-ttu-id="cd5aa-198">Vous pouvez également sélectionner **Générer** > **Déployer la solution** pour effectuer le déploiement sur votre appareil sans que l’application démarre automatiquement.</span><span class="sxs-lookup"><span data-stu-id="cd5aa-198">You might also select **Build** > **Deploy Solution** to deploy to your device without having the application automatically start.</span></span>
-
-    ![Leçon 1, section 5, étape 9](images/mrlearning-base-ch1-5-step8.JPG)
-
-## <a name="congratulations"></a><span data-ttu-id="cd5aa-200">Félicitations</span><span class="sxs-lookup"><span data-stu-id="cd5aa-200">Congratulations</span></span>
-
-<span data-ttu-id="cd5aa-201">Vous venez de déployer votre première application HoloLens 2.</span><span class="sxs-lookup"><span data-stu-id="cd5aa-201">You have now deployed your first HoloLens 2 application.</span></span> <span data-ttu-id="cd5aa-202">À mesure que vous vous déplacez, vous devez voir un maillage de mappage spatial couvrant toutes les surfaces qui ont été perçues par HoloLens 2.</span><span class="sxs-lookup"><span data-stu-id="cd5aa-202">As you walk around, you should see a spatial mapping mesh covering all the surfaces that have been perceived by the HoloLens 2.</span></span> <span data-ttu-id="cd5aa-203">En outre, vous devez voir des indicateurs sur vos mains et doigts pour le suivi de la main et un compteur de fréquence d’images pour vous tenir informé des performances de l’application.</span><span class="sxs-lookup"><span data-stu-id="cd5aa-203">Additionally, you should see indicators on your hands and fingers for hand tracking and a frame rate counter for keeping an eye on application performance.</span></span> <span data-ttu-id="cd5aa-204">Ce ne sont là que quelques-uns des éléments fondamentaux immédiatement disponibles dans le Kit de ressources de réalité mixte.</span><span class="sxs-lookup"><span data-stu-id="cd5aa-204">These are just a few of the foundational pieces, included out of the box, with the Mixed Reality Toolkit.</span></span> <span data-ttu-id="cd5aa-205">Au cours des leçons à venir, vous commencerez à ajouter du contenu et une interactivité à votre scène afin de pouvoir explorer pleinement les fonctionnalités d’HoloLens 2 et de Mixed Reality Toolkit.</span><span class="sxs-lookup"><span data-stu-id="cd5aa-205">In the lessons to come, you will start adding more content and interactivity to your scene so that you can fully explore the capabilities of HoloLens 2 and the Mixed Reality Toolkit.</span></span>
+### <a name="2-enable-virtual-reality"></a><span data-ttu-id="c50ab-147">2. Activer la réalité virtuelle</span><span class="sxs-lookup"><span data-stu-id="c50ab-147">2. Enable virtual reality</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="cd5aa-206">Dans l’application, vous remarquerez peut-être le profileur visuel.</span><span class="sxs-lookup"><span data-stu-id="cd5aa-206">In the app, you may notice the visual profiler.</span></span> <span data-ttu-id="cd5aa-207">Vous découvrirez comment afficher/masquer le compteur de fréquence d’images à l’aide d’une commande vocale dans la [leçon 5](mrlearning-base-ch5.md).</span><span class="sxs-lookup"><span data-stu-id="cd5aa-207">You will cover how to toggle the frame rate counter using a voice command in [Lesson 5](mrlearning-base-ch5.md).</span></span> <span data-ttu-id="cd5aa-208">Il est généralement recommandé d’afficher le profileur visuel pendant toute la durée du développement pour que vous puissiez voir si des modifications apportées au code impactent les performances.</span><span class="sxs-lookup"><span data-stu-id="cd5aa-208">It is generally recommended to keep the visual profiler visible at all times during development to understand when code changes may have impacted perf.</span></span> <span data-ttu-id="cd5aa-209">L’application HoloLens 2 doit [s’exécuter en continu à 60 images par seconde](understanding-performance-for-mixed-reality.md).</span><span class="sxs-lookup"><span data-stu-id="cd5aa-209">HoloLens 2 application should [continuously run at 60 FPS](understanding-performance-for-mixed-reality.md).</span></span>
+> <span data-ttu-id="c50ab-148">L’activation de la réalité virtuelle s’applique également aux casques de réalité mixte et de réalité augmentée, car elle fait référence à l’activation de la vision stéréoscopique (rendu d’images différentes pour chaque œil).</span><span class="sxs-lookup"><span data-stu-id="c50ab-148">Enabling virtual reality also applies to mixed reality and augmented reality headsets because it refers to enabling stereoscopic vision, i.e. rendering different images for each eye.</span></span>
 
-[<span data-ttu-id="cd5aa-210">Leçon suivante : 3. Création de l’interface utilisateur et configuration du kit d’outils de réalité mixte</span><span class="sxs-lookup"><span data-stu-id="cd5aa-210">Next Lesson: 3. Creating user interface and configure Mixed Reality Toolkit</span></span>](mrlearning-base-ch2.md)
+<span data-ttu-id="c50ab-149">Dans le menu Unity, sélectionnez **Modifier** > **Paramètres du projet...** pour ouvrir la fenêtre Paramètres du projet :</span><span class="sxs-lookup"><span data-stu-id="c50ab-149">In the Unity menu, select **Edit** > **Project Settings...** to open the Project Settings window:</span></span>
+
+![mrlearning-base](images/mrlearning-base/tutorial1-section2-step2-1.png)
+
+<span data-ttu-id="c50ab-151">Dans la fenêtre Paramètres du projet, sélectionnez **Lecteur** > **Paramètres XR** pour développer les paramètres XR :</span><span class="sxs-lookup"><span data-stu-id="c50ab-151">In the Project Settings window, select **Player** > **XR Settings** to expand the XR Settings:</span></span>
+
+![mrlearning-base](images/mrlearning-base/tutorial1-section2-step2-2.png)
+
+<span data-ttu-id="c50ab-153">Dans les paramètres XR, cochez la case **Virtual Reality Supported** (Prise en charge de la réalité virtuelle) pour activer la réalité virtuelle, puis cliquez sur l’icône **+** et sélectionnez **Windows Mixed Reality** pour ajouter le SDK Windows Mixed Reality :</span><span class="sxs-lookup"><span data-stu-id="c50ab-153">In the XR Settings, check the **Virtual Reality Supported** checkbox to enable virtual reality, then click the **+** icon and select **Windows Mixed Reality** to add the Windows Mixed Reality SDK:</span></span>
+
+![mrlearning-base](images/mrlearning-base/tutorial1-section2-step2-3.png)
+
+<span data-ttu-id="c50ab-155">Attendez qu’Unity termine l’ajout du SDK :</span><span class="sxs-lookup"><span data-stu-id="c50ab-155">Wait for Unity to finish adding the SDK:</span></span>
+
+![mrlearning-base](images/mrlearning-base/tutorial1-section2-step2-4.png)
+
+<span data-ttu-id="c50ab-157">Quand Unity a terminé l’ajout du SDK, optimisez les paramètres XR comme suit :</span><span class="sxs-lookup"><span data-stu-id="c50ab-157">When Unity has finished adding the SDK, optimize the XR Settings as follows:</span></span>
+
+* <span data-ttu-id="c50ab-158">Définissez le **format d’intensité**  de Windows Mixed Reality sur une **profondeur de 16 bits**</span><span class="sxs-lookup"><span data-stu-id="c50ab-158">Set Windows Mixed Reality **Depth Format** to **16-bit depth**</span></span>
+* <span data-ttu-id="c50ab-159">Cochez la case **Enable Depth Sharing** (Activer le partage de profondeur) de Windows Mixed Reality</span><span class="sxs-lookup"><span data-stu-id="c50ab-159">Check the Windows Mixed Reality **Enable Depth Sharing** checkbox</span></span>
+* <span data-ttu-id="c50ab-160">Définissez le **mode de rendu \*** stéréo sur **Single Pass Instanced** (Instanciation en un seul passage)</span><span class="sxs-lookup"><span data-stu-id="c50ab-160">Set Stereo **Rendering Mode\*** to **Single Pass Instanced**</span></span>
+
+![mrlearning-base](images/mrlearning-base/tutorial1-section2-step2-5.png)
+
+> [!TIP]
+> <span data-ttu-id="c50ab-162">Pour en savoir plus sur l’optimisation d’Unity pour Windows Mixed Reality, vous pouvez consulter la documentation [Paramètres recommandés pour Unity](recommended-settings-for-unity.md).</span><span class="sxs-lookup"><span data-stu-id="c50ab-162">To learn more about optimizing Unity for Windows Mixed Reality, you can refer to the [Recommended settings for Unity](recommended-settings-for-unity.md) documentation.</span></span>
+
+### <a name="3-enable-spatial-perception"></a><span data-ttu-id="c50ab-163">3. Activer la perception spatiale</span><span class="sxs-lookup"><span data-stu-id="c50ab-163">3. Enable spatial perception</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="c50ab-164">La perception spatiale permet de visualiser le maillage du mappage spatial sur des appareils Windows Mixed Reality.</span><span class="sxs-lookup"><span data-stu-id="c50ab-164">Spatial perception allows visualization of the spatial mapping mesh on Windows Mixed Reality devices.</span></span>
+
+<span data-ttu-id="c50ab-165">Dans la fenêtre Paramètres du projet, sélectionnez **Lecteur** > **Paramètres de publication** pour développer les paramètres de publication :</span><span class="sxs-lookup"><span data-stu-id="c50ab-165">In the Project Settings window, select **Player** > **Publishing Settings** to expand the Publishing Settings:</span></span>
+
+![mrlearning-base](images/mrlearning-base/tutorial1-section2-step3-1.png)
+
+<span data-ttu-id="c50ab-167">Dans les paramètres de publication, faites défiler vers le bas jusqu’à la section **Fonctionnalités**, puis cochez la case **SpatialPerception** :</span><span class="sxs-lookup"><span data-stu-id="c50ab-167">In the Publishing Settings, scroll down to the **Capabilities** section and check the **SpatialPerception** checkbox:</span></span>
+
+![mrlearning-base](images/mrlearning-base/tutorial1-section2-step3-2.png)
+
+<!-- TODO: Consider adding info about audio spatializer plugin setting -->
+
+<span data-ttu-id="c50ab-169">Fermez la fenêtre Paramètres du projet.</span><span class="sxs-lookup"><span data-stu-id="c50ab-169">Close the Project Settings window.</span></span>
+
+## <a name="import-textmesh-pro-essential-resources"></a><span data-ttu-id="c50ab-170">Importer les ressources essentielles TextMeshPro</span><span class="sxs-lookup"><span data-stu-id="c50ab-170">Import TextMesh Pro Essential Resources</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="c50ab-171">Nous importons ce package, car il est requis par les éléments d’interface utilisateur de Mixed Reality Toolkit.</span><span class="sxs-lookup"><span data-stu-id="c50ab-171">We are importing this package because it is required by Mixed Reality Toolkit's UI elements.</span></span>
+
+<span data-ttu-id="c50ab-172">Dans le menu Unity, sélectionnez **Fenêtre** > **TextMeshPro** > **Import TMP Essential Resources** (Importer les ressources essentielles TMP) :</span><span class="sxs-lookup"><span data-stu-id="c50ab-172">In the Unity menu, select **Window** > **TextMeshPro** > **Import TMP Essential Resources**:</span></span>
+
+![mrlearning-base](images/mrlearning-base/tutorial1-section3-step1-1.png)
+
+<span data-ttu-id="c50ab-174">Dans la fenêtre Import Unity Package (Importer un package Unity), cliquez sur le bouton **Tous** pour vous assurer que toutes les ressources sont sélectionnées, puis sur le bouton **Importer** pour importer les ressources :</span><span class="sxs-lookup"><span data-stu-id="c50ab-174">In the Import Unity Package window, click the **All** button to ensure all the assets are selected, then click the **Import** button to import the assets:</span></span>
+
+![mrlearning-base](images/mrlearning-base/tutorial1-section3-step1-2.png)
+
+## <a name="import-the-mixed-reality-toolkit"></a><span data-ttu-id="c50ab-176">Importer le Kit de ressources de réalité mixte</span><span class="sxs-lookup"><span data-stu-id="c50ab-176">Import the Mixed Reality Toolkit</span></span>
+
+<span data-ttu-id="c50ab-177">Téléchargez le package personnalisé Unity :</span><span class="sxs-lookup"><span data-stu-id="c50ab-177">Download the Unity custom package:</span></span>
+
+* [<span data-ttu-id="c50ab-178">Microsoft.MixedReality.Toolkit.Unity.Foundation.2.2.0.unitypackage</span><span class="sxs-lookup"><span data-stu-id="c50ab-178">Microsoft.MixedReality.Toolkit.Unity.Foundation.2.2.0.unitypackage</span></span>](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/download/v2.2.0/Microsoft.MixedReality.Toolkit.Unity.Foundation.2.2.0.unitypackage)
+
+<span data-ttu-id="c50ab-179">Dans le menu Unity, sélectionnez **Ressources** > **Importer un package** > **Custom Package...** (Package personnalisé) pour ouvrir la fenêtre Importer un package... :</span><span class="sxs-lookup"><span data-stu-id="c50ab-179">In the Unity menu, select **Assets** > **Import Package** > **Custom Package...** to open the Import package... window:</span></span>
+
+![mrlearning-base](images/mrlearning-base/tutorial1-section4-step1-1.png)
+
+<span data-ttu-id="c50ab-181">Dans la fenêtre Importer un package..., sélectionnez le package **Microsoft.MixedReality.Toolkit.Unity.Foundation.2.2.0.unitypackage** que vous avez téléchargé, puis cliquez sur le bouton **Ouvrir** :</span><span class="sxs-lookup"><span data-stu-id="c50ab-181">In the Import package... window, select the **Microsoft.MixedReality.Toolkit.Unity.Foundation.2.2.0.unitypackage** you downloaded and click the **Open** button:</span></span>
+
+![mrlearning-base](images/mrlearning-base/tutorial1-section4-step1-2.png)
+
+<span data-ttu-id="c50ab-183">Dans la fenêtre Import Unity Package (Importer un package Unity), cliquez sur le bouton **Tous** pour vous assurer que toutes les ressources sont sélectionnées, puis sur le bouton **Importer** pour importer les ressources :</span><span class="sxs-lookup"><span data-stu-id="c50ab-183">In the Import Unity Package window, click the **All** button to ensure all the assets are selected, then click the **Import** button to import the assets:</span></span>
+
+![mrlearning-base](images/mrlearning-base/tutorial1-section4-step1-3.png)
+
+## <a name="configure-the-unity-project-for-the-mixed-reality-toolkit"></a><span data-ttu-id="c50ab-185">Configurer le projet Unity pour Mixed Reality Toolkit</span><span class="sxs-lookup"><span data-stu-id="c50ab-185">Configure the Unity project for the Mixed Reality Toolkit</span></span>
+
+<!-- TODO: Consider adding info about configuring Unity for WMR vs MRTK, or removing WMR section -->
+
+<span data-ttu-id="c50ab-186">Une fois le package importé, la fenêtre du configurateur de projet MRTK doit s’afficher.</span><span class="sxs-lookup"><span data-stu-id="c50ab-186">After the package has been imported, the MRTK Project Configurator window should appear.</span></span> <span data-ttu-id="c50ab-187">Si ce n’est pas le cas, ouvrez-la en sélectionnant **Mixed Reality Toolkit** > **Outils** > **Configure Unity Project** (Configurer un projet Unity) dans le menu Unity.</span><span class="sxs-lookup"><span data-stu-id="c50ab-187">If it does not, open it by selecting **Mixed Reality Toolkit** > **Utilities** > **Configure Unity Project** in the Unity menu.</span></span>
+
+![mrlearning-base](images/mrlearning-base/tutorial1-section5-step1-1.png)
+
+<span data-ttu-id="c50ab-189">Dans la fenêtre du configurateur de projet MRTK, développez la section **Modify Configurations** (Modifier les configurations), <u>décochez</u> la case **Enable MSBuild for Unity** (Activer MSBuild for Unity), vérifiez que toutes les autres options sont cochées et cliquez sur le bouton **Appliquer** pour appliquer les paramètres :</span><span class="sxs-lookup"><span data-stu-id="c50ab-189">In the MRTK Project Configurator window, expand the **Modify Configurations** section, <u>uncheck</u> the **Enable MSBuild for Unity** checkbox, ensure all other options are checked, and click the **Apply** button to apply the settings:</span></span>
+
+![mrlearning-base](images/mrlearning-base/tutorial1-section5-step1-2.png)
+
+> [!CAUTION]
+> <span data-ttu-id="c50ab-191">MSBuild for Unity ne prend peut-être pas en charge tous les SDK que vous utiliserez et peut être difficile à désactiver une fois qu’il a été activé.</span><span class="sxs-lookup"><span data-stu-id="c50ab-191">MSBuild for Unity may not support all SDKs you will be using and can be challenging to disable after it has been enabled.</span></span> <span data-ttu-id="c50ab-192">Par conséquent, il est vivement recommandé de ne pas activer MSBuild for Unity.</span><span class="sxs-lookup"><span data-stu-id="c50ab-192">Consequently, it is strongly recommended to not enable MSBuild for Unity.</span></span>
+
+## <a name="configure-the-mixed-reality-toolkit"></a><span data-ttu-id="c50ab-193">Configurer le Kit de ressources de réalité mixte</span><span class="sxs-lookup"><span data-stu-id="c50ab-193">Configure the Mixed Reality Toolkit</span></span>
+<!-- TODO: Consider renaming to 'Add the Mixed Reality Toolkit to the Unity scene' -->
+
+<span data-ttu-id="c50ab-194">Dans le menu Unity, sélectionnez **Mixed Reality Toolkit** > **Add to Scene and Configure...** (Ajouter à la scène et configurer) pour ajouter Mixed Reality Toolkit à votre scène actuelle :</span><span class="sxs-lookup"><span data-stu-id="c50ab-194">In the Unity menu, select **Mixed Reality Toolkit** > **Add to Scene and Configure...** to add the Mixed Reality Toolkit to your current scene:</span></span>
+
+![mrlearning-base](images/mrlearning-base/tutorial1-section6-step1-1.png)
+
+<span data-ttu-id="c50ab-196">Une fois l’objet MixedRealityToolkit sélectionné dans la fenêtre Hiérarchie, dans la fenêtre de l’inspecteur, remplacez le profil de configuration Mixed Reality Toolkit par **DefaultHoloLens2ConfigurationProfile** :</span><span class="sxs-lookup"><span data-stu-id="c50ab-196">With the MixedRealityToolkit object selected in the Hierarchy window, in the Inspector window, change the Mixed Reality Toolkit configuration profile to **DefaultHoloLens2ConfigurationProfile**:</span></span>
+
+![mrlearning-base](images/mrlearning-base/tutorial1-section6-step1-2.png)
+
+<span data-ttu-id="c50ab-198">Dans le menu Unity, sélectionnez **Fichier** > **Enregistrer sous...** pour ouvrir la fenêtre Save Scene (Enregistrer la scène) :</span><span class="sxs-lookup"><span data-stu-id="c50ab-198">In the Unity menu, select **File** > **Save As...** to open the Save Scene window:</span></span>
+
+![mrlearning-base](images/mrlearning-base/tutorial1-section6-step1-3.png)
+
+<span data-ttu-id="c50ab-200">Dans la fenêtre Enregistrer la scène, accédez au dossier **Scènes** de votre projet, donnez à votre scène un nom approprié, par exemple _Prise en main_, puis cliquez sur le bouton **Enregistrer** pour enregistrer la scène :</span><span class="sxs-lookup"><span data-stu-id="c50ab-200">In the Save Scene window, navigate to your project's **Scenes** folder, give your scene a suitable name, for example, _Getting Started_, and click the **Save** button to save the scene:</span></span>
+
+![mrlearning-base](images/mrlearning-base/tutorial1-section6-step1-4.png)
+
+## <a name="build-your-application-to-your-device"></a><span data-ttu-id="c50ab-202">Générer votre application sur votre appareil</span><span class="sxs-lookup"><span data-stu-id="c50ab-202">Build your application to your device</span></span>
+
+### <a name="1-build-the-unity-project"></a><span data-ttu-id="c50ab-203">1. Générer le projet Unity</span><span class="sxs-lookup"><span data-stu-id="c50ab-203">1. Build the Unity project</span></span>
+
+<span data-ttu-id="c50ab-204">Dans le menu Unity, sélectionnez **Fichier** > **Paramètres de build...** pour ouvrir la fenêtre Paramètres de build.</span><span class="sxs-lookup"><span data-stu-id="c50ab-204">In the Unity menu, select **File** > **Build Settings...** to open the Build Settings window.</span></span>
+
+<span data-ttu-id="c50ab-205">Dans la fenêtre Paramètres de build, cliquez sur le bouton **Add Open Scenes** (Ajouter des scènes ouvertes) pour ajouter votre scène actuelle à la liste **Scenes In Build** (Scènes dans la génération), puis cliquez sur le bouton **Générer** pour ouvrir la fenêtre de génération d’applications de plateforme Windows universelle :</span><span class="sxs-lookup"><span data-stu-id="c50ab-205">In the Build Settings window, click the **Add Open Scenes** button to add your current scene to the **Scenes In Build** list, then click the **Build** button to open the Build Universal Windows Platform window:</span></span>
+
+![mrlearning-base](images/mrlearning-base/tutorial1-section7-step1-1.png)
+
+<span data-ttu-id="c50ab-207">Dans la fenêtre de génération d’applications de plateforme Windows universelle, choisissez un emplacement approprié pour stocker votre build, par exemple _D:\MixedRealityLearning\Builds_, créez un dossier et attribuez-lui un nom pertinent, par exemple _GettingStarted_, puis cliquez sur le bouton **Sélectionner un dossier** pour démarrer le processus de génération :</span><span class="sxs-lookup"><span data-stu-id="c50ab-207">In the Build Universal Windows Platform window, choose a suitable location to store your build, for example, _D:\MixedRealityLearning\Builds_, create a new folder and give it a suitable name, for example, _GettingStarted_, and then click the **Select Folder** button to start the build process:</span></span>
+
+![mrlearning-base](images/mrlearning-base/tutorial1-section7-step1-2.png)
+
+<span data-ttu-id="c50ab-209">Attendez qu’Unity termine le processus de génération :</span><span class="sxs-lookup"><span data-stu-id="c50ab-209">Wait for Unity to finish the build process:</span></span>
+
+![mrlearning-base](images/mrlearning-base/tutorial1-section7-step1-3.png)
+
+### <a name="2-build-and-deploy-the-application"></a><span data-ttu-id="c50ab-211">2. Générer et déployer l’application</span><span class="sxs-lookup"><span data-stu-id="c50ab-211">2. Build and deploy the application</span></span>
+
+<span data-ttu-id="c50ab-212">Une fois le processus de génération terminé, Unity invite l’Explorateur de fichiers Windows à ouvrir l’emplacement où vous avez stocké la build.</span><span class="sxs-lookup"><span data-stu-id="c50ab-212">When the build process is completed, Unity will prompt Windows File Explorer to open the location you stored the build.</span></span> <span data-ttu-id="c50ab-213">Naviguez dans le dossier, puis double-cliquez sur le fichier solution pour l’ouvrir dans Visual Studio :</span><span class="sxs-lookup"><span data-stu-id="c50ab-213">Navigate inside the folder, and double-click the solution file to open it in Visual Studio:</span></span>
+
+![mrlearning-base](images/mrlearning-base/tutorial1-section7-step2-1.png)
+
+> [!NOTE]
+> <span data-ttu-id="c50ab-215">Si Visual Studio vous invite à installer de nouveaux composants, prenez un moment pour vous assurer que tous les composants prérequis sont installés comme spécifié dans la documentation [Installer les outils](install-the-tools.md).</span><span class="sxs-lookup"><span data-stu-id="c50ab-215">If Visual Studio asks you to install new components, take a moment to ensure that all prerequisite components are installed as specified in the [Install the Tools](install-the-tools.md) documentation.</span></span>
+
+<span data-ttu-id="c50ab-216">Configurez Visual Studio pour HoloLens 2 en sélectionnant la configuration **Master** ou **Release**, l’architecture **ARM** et **Appareil** comme cible :</span><span class="sxs-lookup"><span data-stu-id="c50ab-216">Configure Visual Studio for HoloLens 2 by selecting the **Master** or **Release** configuration, the **ARM** architecture, and **Device** as target:</span></span>
+
+![mrlearning-base](images/mrlearning-base/tutorial1-section7-step2-2.png)
+
+<span data-ttu-id="c50ab-218">Connectez votre HoloLens 2 à votre ordinateur.</span><span class="sxs-lookup"><span data-stu-id="c50ab-218">Connect your HoloLens 2 to your computer.</span></span>
+
+> [!IMPORTANT]
+> <span data-ttu-id="c50ab-219">Avant d’effectuer la génération sur votre appareil, celui-ci doit être en mode développeur et associé à votre ordinateur de développement.</span><span class="sxs-lookup"><span data-stu-id="c50ab-219">Before building to your device, the device must be in Developer Mode and paired with your development computer.</span></span> <span data-ttu-id="c50ab-220">Vous pouvez effectuer ces deux étapes en suivant [ces instructions](using-visual-studio.md).</span><span class="sxs-lookup"><span data-stu-id="c50ab-220">Both of these steps can be completed by following [these instructions](using-visual-studio.md).</span></span>
+
+<span data-ttu-id="c50ab-221">L’étape finale consiste à effectuer la génération et le déploiement sur votre appareil. Pour cela, sélectionnez **Déboguer** > **Démarrer sans débogage** :</span><span class="sxs-lookup"><span data-stu-id="c50ab-221">The final step is to build and deploy to your device by selecting **Debug** > **Start Without Debugging**:</span></span>
+
+![mrlearning-base](images/mrlearning-base/tutorial1-section7-step2-3.png)
+
+<span data-ttu-id="c50ab-223">Bien que ces instructions supposent que vous déployez sur un appareil HoloLens 2, vous pouvez aussi déployer sur l’[émulateur HoloLens 2](using-the-hololens-emulator.md) ou créer un [package d’application pour effectuer un chargement indépendant](<https://docs.microsoft.com//windows/uwp/packaging/packaging-uwp-apps>).</span><span class="sxs-lookup"><span data-stu-id="c50ab-223">While these instructions assume you will be deploying to a HoloLens 2 device, you can also deploy to the [HoloLens 2 emulator](using-the-hololens-emulator.md) or create an [app package for sideloading](<https://docs.microsoft.com//windows/uwp/packaging/packaging-uwp-apps>).</span></span>
+
+<span data-ttu-id="c50ab-224">Quand vous sélectionnez Démarrer sans débogage, l’application démarre immédiatement sur votre appareil si la génération réussit, mais le débogueur n’est pas attaché et les informations n’apparaissent pas dans Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="c50ab-224">Selecting Start without Debugging causes the application to immediately start on your device upon a successful build, but without the debugger attached and information appearing in Visual Studio.</span></span> <span data-ttu-id="c50ab-225">Cela signifie également que vous pouvez déconnecter le câble USB pendant que votre application s’exécute sur votre appareil HoloLens 2 sans arrêter celle-ci.</span><span class="sxs-lookup"><span data-stu-id="c50ab-225">This also means that you can disconnect your USB cable while your application is running on your HoloLens 2 without stopping the application.</span></span>
+
+<span data-ttu-id="c50ab-226">Pour effectuer le déploiement sur votre appareil sans que l’application ne démarre automatiquement, vous pouvez sélectionner Générer > Déployer la solution.</span><span class="sxs-lookup"><span data-stu-id="c50ab-226">To deploy to your device without having the application start automatically, you can select Build > Deploy Solution.</span></span>
+
+## <a name="congratulations"></a><span data-ttu-id="c50ab-227">Félicitations</span><span class="sxs-lookup"><span data-stu-id="c50ab-227">Congratulations</span></span>
+
+<!-- TODO: Consider cleanup and adding in app screenshots -->
+<span data-ttu-id="c50ab-228">Vous venez de déployer votre première application HoloLens 2.</span><span class="sxs-lookup"><span data-stu-id="c50ab-228">You have now deployed your first HoloLens 2 application.</span></span> <span data-ttu-id="c50ab-229">À mesure que vous vous déplacez, vous devez voir un maillage de mappage spatial couvrant toutes les surfaces qui ont été perçues par HoloLens 2.</span><span class="sxs-lookup"><span data-stu-id="c50ab-229">As you walk around, you should see a spatial mapping mesh covering all the surfaces that have been perceived by the HoloLens 2.</span></span> <span data-ttu-id="c50ab-230">En outre, vous devez voir des indicateurs sur vos mains et doigts pour le suivi de la main et un compteur de fréquence d’images pour vous tenir informé des performances de l’application.</span><span class="sxs-lookup"><span data-stu-id="c50ab-230">Additionally, you should see indicators on your hands and fingers for hand tracking and a frame rate counter for keeping an eye on application performance.</span></span> <span data-ttu-id="c50ab-231">Ce ne sont là que quelques-uns des éléments fondamentaux immédiatement disponibles dans le Kit de ressources de réalité mixte.</span><span class="sxs-lookup"><span data-stu-id="c50ab-231">These are just a few of the foundational pieces, included out of the box, with the Mixed Reality Toolkit.</span></span> <span data-ttu-id="c50ab-232">Au cours des tutoriels à venir, vous commencerez à ajouter du contenu et une interactivité à votre scène afin de pouvoir explorer pleinement les fonctionnalités d’HoloLens 2 et de Mixed Reality Toolkit.</span><span class="sxs-lookup"><span data-stu-id="c50ab-232">In the tutorials to come, you will start adding more content and interactivity to your scene so that you can fully explore the capabilities of HoloLens 2 and the Mixed Reality Toolkit.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="c50ab-233">Dans l’application, vous remarquerez peut-être le profileur de diagnostics, dont vous pouvez activer ou désactiver l’affichage à l’aide de la commande de reconnaissance vocale **Toogle Diagnostics** (Activer/désactiver les diagnostics).</span><span class="sxs-lookup"><span data-stu-id="c50ab-233">In the app, you may notice the Diagnostics profiler, you can toggle it's visibility using the speech command **Toogle Diagnostics**.</span></span> <span data-ttu-id="c50ab-234">Toutefois, il est généralement recommandé de laisser le profileur visible à tout moment pendant le développement afin de comprendre quand les modifications apportées à l’application peuvent avoir un impact sur les performances, par exemple l’application HoloLens 2 doit [s’exécuter en continu à 60 images par seconde](understanding-performance-for-mixed-reality.md).</span><span class="sxs-lookup"><span data-stu-id="c50ab-234">However, it is generally recommended to keep the profiler visible at all times during development to understand when changes to the app may have impacted performance, for example, HoloLens 2 application should [continuously run at 60 FPS](understanding-performance-for-mixed-reality.md).</span></span>
+
+[<span data-ttu-id="c50ab-235">Tutoriel suivant : 3. Création de l’interface utilisateur et configuration du kit d’outils de réalité mixte</span><span class="sxs-lookup"><span data-stu-id="c50ab-235">Next Tutorial: 3. Creating user interface and configure Mixed Reality Toolkit</span></span>](mrlearning-base-ch2.md)
