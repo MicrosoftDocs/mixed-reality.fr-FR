@@ -1,17 +1,17 @@
 ---
 title: Didacticiels sur les ancres spatiales Azure-3. Affichage des commentaires sur l’ancrage spatial Azure
-description: Suivez ce cours pour découvrir comment implémenter Reconnaissance faciale Azure au sein d’une application de réalité mixte.
+description: Suivez ce cours pour découvrir comment implémenter la reconnaissance faciale Azure au sein d’une application de réalité mixte.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: f4f609a71b05a52e8761e282763a540b42e9f7f5
-ms.sourcegitcommit: a580166a19294f835b8e09c780f663f228dd5de0
+ms.openlocfilehash: 3d762950ea8e211fd5a8e4cf8af717674d3fe7e1
+ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77250686"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77553929"
 ---
 # <a name="3-displaying-azure-spatial-anchor-feedback"></a>3. affichage des commentaires sur l’ancrage spatial Azure
 
@@ -49,10 +49,10 @@ Lorsque l’objet de **Commentaires** est toujours sélectionné, dans la fenêt
 
 ![mrlearning-base](images/mrlearning-asa/tutorial3-section1-step1-3.png)
 
-Assignez l’objet de **Commentaires** au champ de **texte de commentaire** du composant de script d' **ancrage de commentaires (script)** :
+Assignez l’objet de **Commentaires** lui-même au champ de texte de **Commentaire** du composant de **script d’ancrage de commentaires (script)** :
 
 ![mrlearning-base](images/mrlearning-asa/tutorial3-section1-step1-4.png)
 
-## <a name="congratulations"></a>Félicitations !
+## <a name="congratulations"></a>Félicitations
 
 Dans ce didacticiel, vous avez appris à créer un panneau d’interface utilisateur pour afficher l’état actuel de l’expérience d’ancrage spatial Azure pour fournir aux utilisateurs des commentaires en temps réel.

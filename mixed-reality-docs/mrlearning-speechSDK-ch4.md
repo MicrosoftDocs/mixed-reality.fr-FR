@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: e712fc2fd66b1add5b16b7dd8e6c37551aefe43a
-ms.sourcegitcommit: 9005b3fdfa87ac8fdc18a594a681e25c00ac5ce1
+ms.openlocfilehash: 8805fa6410e882bce2f0fe8da780dfd5f794cc74
+ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2019
-ms.locfileid: "75003208"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77553993"
 ---
 # <a name="4-setting-up-intent-and-natural-language-understanding"></a>4. Configuration de l’intention et de la compréhension du langage naturel
 
@@ -147,20 +147,28 @@ Dans cette leçon, vous allez explorer la fonctionnalité d’intention du servi
 
     ![Module4Chapter4step23im](images/module4chapter4step23im.PNG)
 
-23. Dans le champ de point de terminaison Luis de la « LunarcomIntentRecognizer » dans le panneau Inspecteur, entrez l’URL de point de terminaison que vous avez enregistrée à l’étape 22.
+23. Dans le champ de point de terminaison Luis de la « LunarcomIntentRecognizer » dans le panneau Inspecteur, entrez l’URL de point de terminaison que vous avez enregistrée à l’étape 21.
 
     ![Module4Chapter4step24im](images/module4chapter4step24im.PNG)
 
     >[!NOTE]
     >Dans le composant « LunarcomOfflineRecognizer » du volet de l’inspecteur, assurez-vous que l’option « désactiver » est sélectionnée pour « SimulateOfflineMode ». dans le cas contraire, le test du programme ne fonctionnera pas.
 
-24. Appuyez sur le bouton lecture dans l’éditeur Unity et cliquez sur le bouton Rocket pour démarrer la reconnaissance intentionnelle. À l’expression « sélectionnez le bouton lancer Rocket ».
+24. Dans la fenêtre projet, accédez aux ressources > MRTK. Tutoriels. GettingStarted > Prefabs > dossier RocketLauncher, faites glisser le Prefab RocketLauncher_Complete dans la fenêtre de votre hiérarchie et placez-le devant l’objet Lunarcom_Base.
+
+    ![Module4Chapter4step24im](images/module4chapter4step24im-missing01.png)
+
+25. Dans la fenêtre hiérarchie, sélectionnez l’objet Lunarcom_Base et localisez le composant Lunarcom intentionnel (script), puis développez l’objet RocketLauncher_Complete > bouton et affectez chacun des objets bouton aux boutons du lanceur lunaire correspondant case.
+
+    ![Module4Chapter4step24im](images/module4chapter4step24im-missing02.png)
+
+26. Appuyez sur le bouton lecture dans l’éditeur Unity et cliquez sur le bouton Rocket pour démarrer la reconnaissance intentionnelle. À l’expression « sélectionnez le bouton lancer Rocket ».
 
     >[!NOTE]
     >L’application a reconnu la fonction souhaitée et activé le bouton Rocket.
     >
     >![Module4Chapter4step24im](images/module4chapter4note2im.PNG)
 
-## <a name="congratulations"></a>Félicitations !
+## <a name="congratulations"></a>Félicitations
 
 Dans cette leçon, vous avez appris à ajouter des commandes vocales dotées de l’intelligence artificielle. À présent, votre programme peut reconnaître l’intention des utilisateurs, même s’ils ne sont pas en train de dicter des commandes vocales précises !

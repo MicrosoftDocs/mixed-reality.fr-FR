@@ -6,16 +6,16 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: efa03c49a9a083d2b8e591e03bccbeb776bb57b2
-ms.sourcegitcommit: 2bfe9b1af4ee2cc0d668caeccb8ebc3137cbc20b
+ms.openlocfilehash: d879144c7097d8b3873618f986b9f169e8553fa8
+ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901471"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77553817"
 ---
 # <a name="1-setting-up-photon-unity-networking"></a>1. Configuration de la mise en réseau photonique Unity
 
-## <a name="overview"></a>Vue d'ensemble
+## <a name="overview"></a>Overview
 
 Dans ce didacticiel, vous allez apprendre à préparer la création d’une expérience partagée en important la mise en réseau de photons Unity (retentissante) dans votre projet Unity. Photons est l’une des nombreuses options de mise en réseau disponibles pour les développeurs de réalité mixte pour créer des expériences partagées. Vous allez apprendre à créer un compte de photons, à importer un photons et à créer un serveur local facultatif
 
@@ -25,18 +25,18 @@ Dans ce didacticiel, vous allez apprendre à préparer la création d’une exp�
 * Découvrez comment rechercher et importer une mise en réseau photonique Unity
 * Configurer un serveur de photons local
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Composants requis
 
 >[!TIP]
 >Si vous n’avez pas encore terminé les didacticiels de [prise](mrlearning-base.md) en main et les didacticiels sur les [ancres spatiales Azure](mrlearning-asa-ch1.md) , nous vous recommandons d’effectuer d’abord ces didacticiels.
 
-* Un PC Windows 10 configuré avec les outils corrects [installés](install-the-tools.md)
-* Windows 10 SDK 10.0.18362.0 ou version ultérieure
-* Certaines fonctionnalités C# de programmation de base
-* Un appareil HoloLens 2 [configuré pour le développement](using-visual-studio.md#enabling-developer-mode)
+* PC Windows 10 configuré avec les [outils appropriés installés](install-the-tools.md)
+* SDK Windows 10 (10.0.18362.0 ou version ultérieure)
+* Capacité de programmation C# de base
+* Appareil HoloLens 2 [configuré pour le développement](using-visual-studio.md#enabling-developer-mode)
 
 >[!IMPORTANT]
->Cette série de didacticiels requiert <a href="https://unity3d.com/get-unity/download/archive" target="_blank">unity 2019,1</a> et la version recommandée est Unity 2019.1.14. Cela remplace toute exigence ou recommandation de version Unity énoncées dans les conditions préalables liées ci-dessus.
+> La version Unity recommandée pour cette série de tutoriels est Unity 2019.2.X. Cela remplace toute exigence ou recommandation de version Unity énoncée dans les prérequis indiqués ci-dessus.
 
 ## <a name="setting-up-photon"></a>Configuration de photons
 
@@ -76,7 +76,7 @@ Dans ce didacticiel, vous allez apprendre à préparer la création d’une exp�
 
     ![module3chapter1step13im](images/module3chapter1step13im.PNG)
 
-## <a name="congratulations"></a>Félicitations !
+## <a name="congratulations"></a>Félicitations
 
 Vous venez de créer un compte de photons, de configurer un serveur de photons local et d’importer des retentissante dans Unity. L’étape suivante consiste à configurer le projet et à autoriser les connexions avec d’autres utilisateurs afin que plusieurs utilisateurs puissent voir votre travail.
 

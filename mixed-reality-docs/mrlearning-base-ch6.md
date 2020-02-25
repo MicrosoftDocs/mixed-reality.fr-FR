@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: b5b1bd0115822449bd6098f78cfc94d909169737
-ms.sourcegitcommit: cc61f7ac08f9ac2f2f04e8525c3260ea073e04a7
+ms.openlocfilehash: 3a557be91bee9b98e750ae1546ea1c4b3103298e
+ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77129420"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77555257"
 ---
 # <a name="7-creating-a-lunar-module-sample-application"></a>7. création d’un exemple d’application de module lunaire
 <!-- TODO: Rename to 'Creating a Rocket Launcher sample application' -->
@@ -55,8 +55,8 @@ Dans la fenêtre projet, accédez aux **ressources** > **MRTK. Tutoriels. Gettin
 
 Dans la fenêtre hiérarchie, localisez l’objet RocketLauncher > **LunarModuleParts** et sélectionnez tous les **objets enfants**, ajoutez le composant de **Gestionnaire de manipulation (script)** et le composant de script (script) à **proximité d’interaction** , puis configurez le gestionnaire de manipulation (script) comme suit :
 
-* Modifier **deux types de manipulations de droitier** pour déplacer la rotation afin que la mise à l’échelle soit désactivée
 * Désactivez la case à cocher **autoriser la manipulation Far** pour autoriser uniquement l’interaction proche.
+* Modifier **deux types de manipulations de droitier** pour **déplacer la rotation** afin que la mise à l’échelle soit désactivée
 
 ![mrlearning-base](images/mrlearning-base/tutorial6-section1-step1-2.png)
 
@@ -79,10 +79,10 @@ Après avoir sélectionné tous les objets enfants LunarModuleParts, ajoutez le 
 
 Dans la fenêtre hiérarchie, sélectionnez l’objet **RoverEnclosure** et configurez son composant de **démonstration d’assembly (script)** comme suit :
 
-* Pour le champ **objet à placer** , assignez l’objet lui-même, dans ce cas, l’objet **RoverEnclosure**
-* Dans le champ **emplacement à placer** , assignez l’objet PlacementHints correspondant, dans ce cas, l’objet **RoverEnclosure_PlacementHints**
-* Dans le champ **objet d’info-bulle** , assignez le ToolTipObject correspondant, dans ce cas, l’objet **RoverEnclosure_ToolTip**
-* Dans le champ **source audio** , assignez l’objet lui-même, dans ce cas, l’objet **RoverEnclosure**
+* Pour le champ **objet à placer** , assignez l’objet **lui-même**, dans ce cas, l’objet RoverEnclosure
+* Dans le champ **emplacement à placer** , assignez l’objet **PlacementHints** correspondant, dans ce cas, l’objet RoverEnclosure_PlacementHint
+* Dans le champ **objet d’info-bulle** , assignez l' **info-bulle**correspondante, dans ce cas, l’objet RoverEnclosure_ToolTip
+* Dans le champ **source audio** , assignez l’objet **lui-même**, dans ce cas, l’objet RoverEnclosure
 
 ![mrlearning-base](images/mrlearning-base/tutorial6-section1-step2-3.png)
 
@@ -105,7 +105,7 @@ Dans cette section, vous allez ajouter des fonctionnalités supplémentaires à 
 
 * Interagir avec le module lunaire
 * Lancer le module lunaire dans l’espace et émettre un signal sonore lorsqu’il est lancé
-* Réinitialisation de l’application pour que le module lunaire et tout le composant soient remis à leur position d’origine
+* Réinitialisation de l’application pour que le module lunaire et toutes les parties soient remis à leur position d’origine
 * Masquez les indicateurs de placement pour compliquer le défi de l’assembly du composant.
 
 Voici les principales étapes à suivre pour y parvenir :
@@ -123,14 +123,14 @@ Voici les principales étapes à suivre pour y parvenir :
 
 Dans la fenêtre hiérarchie, sélectionnez l’objet RocketLauncher > **LunarModule** , ajoutez le composant de **Gestionnaire de manipulation (script)** et le composant de script (script) à proximité de l' **interaction** , puis configurez le gestionnaire de manipulation (script) comme suit :
 
-* Modifier **deux types de manipulations de droitier** pour déplacer la rotation afin que la mise à l’échelle soit désactivée
 * Désactivez la case à cocher **autoriser la manipulation Far** pour autoriser uniquement l’interaction proche.
+* Modifier **deux types de manipulations de droitier** pour déplacer la rotation afin que la mise à l’échelle soit désactivée
 
 ![mrlearning-base](images/mrlearning-base/tutorial6-section2-step1-1.png)
 
 ### <a name="2-enable-physics"></a>2. activer la physique
 
-Avec l’objet RocketLauncher > **LunarModule** toujours sélectionné, ajoutez un composant RigidBody, puis configurez-le comme suit :
+Avec l’objet RocketLauncher > **LunarModule** toujours sélectionné, ajoutez un composant **RigidBody** , puis configurez-le comme suit :
 
 * Désactivez la case à cocher **utiliser la gravité** pour que le module lunaire ne soit pas affecté par la gravité
 * Cochez la case **est cinématique** pour que le module lunaire ne soit pas affecté initialement par les forces physico-
@@ -158,7 +158,7 @@ Avec l’objet RocketLauncher > **LunarModule** toujours sélectionné, ajoutez 
 Avec l’objet RocketLauncher > **LunarModule** toujours sélectionné, ajoutez le composant **activer/désactiver les indicateurs de positionnement (script)** , puis configurez-le comme suit :
 
 * Affectez à la propriété **taille** du tableau d’objets de jeu la valeur 5
-* Affectez chacun des **objets enfants** de l’objet **PlacementHints** à un champ d' **élément** dans le tableau d’objets de jeu :
+* Affectez chacun des **objets enfants** RocketLauncher > LunarModule > **PlacementHints** à un champ d' **élément** dans le tableau d’objets de jeu :
 
 ![mrlearning-base](images/mrlearning-base/tutorial6-section2-step5-1.png)
 
@@ -175,7 +175,7 @@ Dans la fenêtre hiérarchie, sélectionnez les boutons de > RocketLauncher > ob
 
 ![mrlearning-base](images/mrlearning-base/tutorial6-section3-step1-2.png)
 
-À l’aide des boutons de > RocketLauncher > objet **LaunchButton** toujours sélectionné, sur le composant bouton de l' **option (script)** , créez un événement de **fin tactile ()** , configurez l’objet **LunarModule** pour recevoir l’événement et définissez **LaunchLunarModule. StopThruster** comme action à déclencher :
+À l’aide des boutons de > RocketLauncher > objet **LaunchButton** toujours sélectionné, sur le composant **bouton (script) pouvant être appuyé** , créez un événement **Touch end ()** , configurez l’objet **LunarModule** pour recevoir l’événement et définissez **LaunchLunarModule. StopThruster** comme action à déclencher :
 
 ![mrlearning-base](images/mrlearning-base/tutorial6-section3-step1-3.png)
 
@@ -196,14 +196,14 @@ Dans la fenêtre hiérarchie, sélectionnez les boutons de > RocketLauncher > ob
 > [!TIP]
 > L’action GameObject. BroadcastMessage envoie le message ResetPlacement de l’objet RocketLauncher à tous ses objets enfants. Tout objet enfant qui a la fonction ResetPlacement, qui est définie dans le composant de démonstration d’assembly d’élément (script) que vous avez ajouté à tous les objets enfants LunarModuleParts, appellera la fonction ResetPlacement qui réinitialise le placement de cet objet enfant.
 
-Si vous entrez maintenant le mode jeu et que vous appuyez sur le bouton de réinitialisation, vous entendez le clip audio en cours de lecture et vous voyez le module lunaire en cours de lancement dans l’espace :
+Si vous passez maintenant en mode jeu, déplacez certaines parties et/ou lancez le module lunaire, puis appuyez sur le bouton Réinitialiser pour voir les parties et/ou le module lunaire être réinitialisés à leur position d’origine :
 
 ![mrlearning-base](images/mrlearning-base/tutorial6-section4-step1-3.png)
 
 ## <a name="configuring-the-placement-hints-button"></a>Configuration du bouton indicateurs de positionnement
 <!-- TODO: Rename to 'Configuring the Hints button'-->
 
-Dans la fenêtre hiérarchie, sélectionnez les boutons de > RocketLauncher > objet **HintsButton** , puis sur le composant **bouton enfoncé (script)** , créez un événement **bouton appuyé ()** , configurez l’objet **LunarModule** pour recevoir l’événement et définissez **TogglePlacementHints. ToggleGameObjects** l’action à déclencher :
+Dans la fenêtre hiérarchie, sélectionnez les boutons de > RocketLauncher > objet **HintsButton** , puis sur le composant **bouton enfoncé (script)** , créez un événement **bouton appuyé ()** , configurez l’objet **LunarModule** pour recevoir l’événement et définissez **TogglePlacementHints. ToggleGameObjects** comme action à déclencher :
 
 ![mrlearning-base](images/mrlearning-base/tutorial6-section5-step1-1.png)
 

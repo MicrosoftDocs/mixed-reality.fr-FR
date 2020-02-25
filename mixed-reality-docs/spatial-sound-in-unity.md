@@ -6,12 +6,12 @@ ms.author: kegodin
 ms.date: 11/07/2019
 ms.topic: article
 keywords: Unity, son spatial, HRTF, taille de la salle
-ms.openlocfilehash: 3e7d0ea231545d5112d182dffbc02f217ca4a4a7
-ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
+ms.openlocfilehash: 6720eac30c69ebfcd0f003cf131f60295818d676
+ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/17/2019
-ms.locfileid: "75181989"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77553697"
 ---
 # <a name="spatial-sound-in-unity"></a>Son spatial dans Unity
 
@@ -30,10 +30,11 @@ Pour les nouvelles applications, nous vous recommandons *Microsoft Spatializer*.
 
 ## <a name="enable-spatialization"></a>Activer Spatialization
 
-Utilisez [NuGet pour Unity](https://github.com/GlitchEnzo/NuGetForUnity/releases/latest) pour installer _Microsoft. SpatialAudio. Spatializer. Unity_ et choisissez **Microsoft Spatializer** dans les paramètres audio de votre projet. Alors :
+Utilisez [NuGet pour Unity](https://github.com/GlitchEnzo/NuGetForUnity/releases/latest) pour installer _Microsoft. SpatialAudio. Spatializer. Unity_ et choisissez **Microsoft Spatializer** dans les paramètres audio de votre projet. Puis :
 * Attacher une **source audio** à un objet dans la hiérarchie
 * Cochez la case **Enable Spatialization**
 * Déplacez le curseur de **lissage spatial** sur « 1 »
+* Assurez-vous que l’audio spatial est activé sur votre station de travail de développeur. Activez-le en cliquant avec le bouton droit sur l’icône de volume dans la barre des tâches et en vous assurant que le son spatial est défini sur une valeur autre que « désactivé ». Pour obtenir la meilleure représentation de ce que vous entendez sur HoloLens 2, choisissez **Windows Sonic pour casque**.
 
 Pour plus de détails, voir:
 * [Dépôt GitHub Microsoft Spatializer](https://github.com/microsoft/spatialaudio-unity)
@@ -58,7 +59,7 @@ Pour obtenir des exemples de son spatial dans Unity, consultez :
 * [Démonstrations MRTK](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.Examples/Demos/Audio)
 * [Exemple de projet Microsoft Spatializer](https://github.com/microsoft/spatialaudio-unity/tree/master/Samples/MicrosoftSpatializerSample)
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes :
 * [Conception audio en réalité mixte](spatial-sound-design.md)
 * [Didacticiel Spatializer de Microsoft](unity-spatial-audio-ch1.md)
 

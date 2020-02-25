@@ -1,17 +1,17 @@
 ---
 title: Didacticiels sur les ancres spatiales Azure-1. Prise en main des ancres spatiales Azure
-description: Suivez ce cours pour découvrir comment implémenter Reconnaissance faciale Azure au sein d’une application de réalité mixte.
+description: Suivez ce cours pour découvrir comment implémenter la reconnaissance faciale Azure au sein d’une application de réalité mixte.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: 21883e95e92f8808bcf270e6d8091f31933ab6fa
-ms.sourcegitcommit: a580166a19294f835b8e09c780f663f228dd5de0
+ms.openlocfilehash: 0163b61bfbf8bd583532092581d94f63e1c2a624
+ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77250831"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77554654"
 ---
 # <a name="1-getting-started-with-azure-spatial-anchors"></a>1. prise en main des ancres spatiales Azure
 
@@ -35,20 +35,22 @@ Dans le troisième didacticiel, l’affichage de commentaires sur l' [ancrage sp
 >[!TIP]
 >Si vous n’avez pas encore terminé la série des [didacticiels de mise](mrlearning-base.md) en route, nous vous recommandons d’effectuer d’abord ces didacticiels.
 
-* Un PC Windows 10 configuré avec les outils corrects [installés](install-the-tools.md)
-* Windows 10 SDK 10.0.18362.0 ou version ultérieure
-* Certaines fonctionnalités C# de programmation de base
-* Un appareil HoloLens 2 [configuré pour le développement](using-visual-studio.md#enabling-developer-mode)
-* <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Hub Unity</a> avec Unity 2019.2. X installé et le module de prise en charge de la build plateforme Windows universelle ajoutée
+* PC Windows 10 configuré avec les [outils appropriés installés](install-the-tools.md)
+* SDK Windows 10 (10.0.18362.0 ou version ultérieure)
+* Capacité de programmation C# de base
+* Appareil HoloLens 2 [configuré pour le développement](using-visual-studio.md#enabling-developer-mode)
+* <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Unity Hub</a> avec Unity 2019.2.X installé et le module de prise en charge de la build d’applications de plateforme Windows universelle ajouté
 * Complétez la section [créer une ressource d’ancrages spatiaux](https://docs.microsoft.com/azure/spatial-anchors/quickstarts/get-started-unity-hololens#create-a-spatial-anchors-resource) du Guide de [démarrage rapide : créer une application de l’unité HoloLens qui utilise des ancres spatiales Azure](https://docs.microsoft.com/azure/spatial-anchors/quickstarts/get-started-unity-hololens) .
 
 > [!IMPORTANT]
-> La version Unity recommandée pour cette série de didacticiels est Unity 2019.2. X. Cela remplace toute exigence ou recommandation de version Unity énoncées dans les conditions préalables liées ci-dessus.
+> La version Unity recommandée pour cette série de tutoriels est Unity 2019.2.X. Cela remplace toute exigence ou recommandation de version Unity énoncée dans les prérequis indiqués ci-dessus.
 
 ## <a name="creating-the-unity-project"></a>Création du projet Unity
 <!-- TODO: Consider renaming to 'Creating and preparing the Unity scene and project'-->
 
-Dans cette section, vous allez créer un nouveau projet Unity et le préparer au développement MRTK. Pour ce faire, suivez les instructions relatives à l’initialisation de votre [projet et de votre première application](mrlearning-base-ch1.md), à l’exclusion de la [création de votre application dans les instructions de votre appareil](mrlearning-base-ch1.md#build-your-application-to-your-device) , qui comprend les étapes suivantes :
+Dans cette section, vous allez créer un nouveau projet Unity et le préparer au développement MRTK.
+
+Pour ce faire, commencez par suivre le processus [d’initialisation de votre projet et de votre première application](mrlearning-base-ch1.md), à l’exclusion de la [création de votre application dans](mrlearning-base-ch1.md#build-your-application-to-your-device) les instructions de votre appareil, notamment les étapes suivantes :
 
 1. [Créez un nouveau projet Unity](mrlearning-base-ch1.md#create-new-unity-project) et donnez-lui un nom approprié, par exemple, des *didacticiels MRTK*.
 
@@ -62,8 +64,10 @@ Dans cette section, vous allez créer un nouveau projet Unity et le préparer au
 
 6. [Ajoutez la boîte à outils de réalité mixte à la scène Unity](mrlearning-base-ch1.md#configure-the-mixed-reality-toolkit) et donnez un nom approprié à la scène, par exemple *AzureSpatialAnchors*
 
+Suivez ensuite les instructions [Comment configurer les profils de la boîte à outils de la réalité mixte (modifier l’option d’affichage de détection spatiale)](mrlearning-base-ch2.md#how-to-configure-the-mixed-reality-toolkit-profiles-change-spatial-awareness-display-option) pour modifier le profil de configuration MRTK pour votre scène sur le **DefaultHoloLens2ConfigurationProfile** et modifier les options d’affichage du maillage de la sensibilisation spatiale à **occlusion**.
+
 > [!CAUTION]
-> Comme mentionné dans les instructions [configure the Unity for the Mixed Reality Toolkit](mrlearning-base-ch1.md#configure-the-unity-project-for-the-mixed-reality-toolkit) ci-dessus, MSBuild for Unity ne prend peut-être pas en charge tous les kits de développement logiciel (SDK) que vous utiliserez et peut être difficile à désactiver une fois qu’il a été activé. Par conséquent, il est fortement recommandé de ne pas activer MSBuild pour Unity.
+> Comme mentionné dans les instructions [configure the Unity for the Mixed Reality Toolkit](mrlearning-base-ch1.md#configure-the-unity-project-for-the-mixed-reality-toolkit) ci-dessus, il est fortement recommandé de ne pas activer MSBuild pour Unity.
 
 ## <a name="adding-inbuilt-unity-packages"></a>Ajout de packages Unity incorporés
 <!-- TODO: Consider renaming to 'Installing AR Foundation' -->
@@ -86,8 +90,8 @@ Dans la fenêtre du gestionnaire de package, sélectionnez **AR Foundation** et 
 Téléchargez et **importez** les packages personnalisés Unity suivants **dans l’ordre dans lequel ils sont répertoriés**:
 
 * [AzureSpatialAnchors. pour Unity](https://github.com/Azure/azure-spatial-anchors-samples/releases/download/v2.1.1/AzureSpatialAnchors.unitypackage) (version 2.1.1)
-* [MRTK. HoloLens2. Unity. Tutorials. Assets. GettingStarted. 2.2.0.1. pour Unity](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.2.0.1/MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.2.0.1.unitypackage)
-* [MRTK. HoloLens2. Unity. Tutorials. Assets. AzureSpatialAnchors. 2.2.0.0. pour Unity](https://github.com/microsoft/MixedRealityLearning/releases/download/azure-spatial-anchors-v2.2.0.0/MRTK.HoloLens2.Unity.Tutorials.Assets.AzureSpatialAnchors.2.2.0.0.unitypackage)
+* [MRTK. HoloLens2. Unity. Tutorials. Assets. GettingStarted. 2.3.0.2. pour Unity](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.3.0.2/MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.3.0.2.unitypackage)
+* [MRTK. HoloLens2. Unity. Tutorials. Assets. AzureSpatialAnchors. 2.3.0.0. pour Unity](https://github.com/microsoft/MixedRealityLearning/releases/download/azure-spatial-anchors-v2.3.0.0/MRTK.HoloLens2.Unity.Tutorials.Assets.AzureSpatialAnchors.2.3.0.0.unitypackage)
 
 > [!TIP]
 > Pour obtenir un rappel sur l’importation d’un package personnalisé Unity, vous pouvez vous reporter aux instructions [importez les instructions de la réalité mixte](mrlearning-base-ch1.md#import-the-mixed-reality-toolkit) .
@@ -178,7 +182,7 @@ Dans la fenêtre Paramètres du lecteur, sélectionnez **lecteur** , puis **para
 
 ![mrlearning-ASA](images/mrlearning-asa/tutorial1-section6-step1-2.png)
 
-Dans les **paramètres de publication**, faites défiler jusqu’à la section **fonctionnalités** et vérifiez que les fonctionnalités **internetclient**, **microphone**et **SpatialPerception** , que vous avez activées lors de la création du projet au début du didacticiel, sont activées. Ensuite, activez les fonctionnalités **InternetClientServer**, **PrivateNetworkClientServer**, **RemovableStorage**et **webcam** :
+Dans les **paramètres de publication**, faites défiler jusqu’à la section **fonctionnalités** et vérifiez que les fonctionnalités **internetclient**, **microphone**et **SpatialPerception** , que vous avez activées lors de la création du projet au début du didacticiel, sont activées. Activez ensuite les fonctionnalités **InternetClientServer**, **PrivateNetworkClientServer**, **RemovableStorage**et **webcam** :
 
 ![mrlearning-ASA](images/mrlearning-asa/tutorial1-section6-step1-3.png)
 
@@ -216,7 +220,7 @@ Avec la RocketLauncher_Complete Prefab toujours sélectionnée, faites-la glisse
 
 Positionner, faire pivoter et mettre à l’échelle l’objet **RocketLauncher_Complete** avec une mise à l’échelle et une orientation appropriées, tout en veillant à ce que l’objet **ParentAnchor** soit toujours exposé, par exemple :
 
-* Transformer la **position** X = 1, Y = 0, Z = 3,75
+* Transformer la **position** X = 0, Y = 0, Z = 3,75
 * Transformation de **rotation** X = 0, Y = 90, Z = 0
 * Transformation **Scale** X = 10, Y = 10, Z = 10
 
@@ -227,7 +231,7 @@ Dans l’application, les utilisateurs peuvent maintenant repositionner l’int�
 > [!TIP]
 > Il existe un grand nombre d’expériences utilisateur pour repositionner les expériences, y compris l’utilisation d’un objet de repositionnement (tel que le cube utilisé dans ce didacticiel), l’utilisation d’un bouton pour basculer un cadre englobant qui entoure l’expérience, l’utilisation de la position et de la rotation. gizmos, et bien plus encore.
 
-## <a name="congratulations"></a>Félicitations !
+## <a name="congratulations"></a>Félicitations
 
 Dans ce didacticiel, vous avez appris les principes de base des ancres spatiales Azure. Ce didacticiel vous a fourni plusieurs boutons qui vous permettent d’explorer les différentes étapes requises pour démarrer et arrêter une session d’ancre spatiale Azure et créer, charger et télécharger des ancres spatiales Azure sur un seul appareil.
 

@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: 8275d5a97d7827d34ed3926cabe4032cc7f4cfac
-ms.sourcegitcommit: cc61f7ac08f9ac2f2f04e8525c3260ea073e04a7
+ms.openlocfilehash: 5463f363291790fd5e5d76ffa322a61ca7bf8e31
+ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77129315"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77553872"
 ---
 # <a name="4-placing-dynamic-content-and-using-solvers"></a>4. placement de contenu dynamique et utilisation de solveurs
 <!-- Consider renaming to 'Placing dynamic content using Solvers' -->
@@ -58,7 +58,7 @@ Configurez le composant du **Gestionnaire de solveur (script)** :
 
 Configurez le composant **orbital (script)** :
 
-* Modifier le **type d’orientation** pour suivre l' **objet suivi**
+* Vérifier que le **type d’orientation** est défini sur suivre l' **objet suivi**
 * Réinitialiser le **décalage local** à X = 0, Y = 0, Z = 0
 * Remplacez le **décalage universel** par X = 0, Y =-0,4, Z = 0,3
 

@@ -6,16 +6,16 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: 05728cf090b2e998e92980816943a2c3bef18dfb
-ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
+ms.openlocfilehash: 25e5aa05839845620a23c3dba6698ac7b5854d6d
+ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/24/2019
-ms.locfileid: "75334294"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77553970"
 ---
 # <a name="1-integrating-and-using-speech-recognition-and-transcription"></a>1. intégration et utilisation de la reconnaissance vocale et de la transcription
 
-## <a name="overview"></a>Vue d'ensemble
+## <a name="overview"></a>Overview
 
 Ce didacticiel crée une application de réalité mixte qui explore l’utilisation du kit de développement logiciel (SDK) Azure Cognitive Services Speech avec le HoloLens 2. À la fin de cette série de didacticiels, vous serez en mesure d’utiliser le microphone de votre appareil pour transcrire la parole en temps réel, traduire votre discours en d’autres langues et tirer parti de la fonctionnalité d’intention du kit de développement logiciel (SDK) Speech pour comprendre les commandes vocales à l’aide de artificiel audience.
 
@@ -25,20 +25,20 @@ Ce didacticiel crée une application de réalité mixte qui explore l’utilisat
 * En savoir plus sur l’utilisation des commandes vocales
 * En savoir plus sur l’utilisation des fonctionnalités vocales en texte
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Composants requis
 
 >[!TIP]
 >Si vous n’avez pas encore terminé la série des [didacticiels de mise](mrlearning-base.md) en route, nous vous recommandons d’effectuer d’abord ces didacticiels.
 
-* Un PC Windows 10 configuré avec les outils corrects [installés](install-the-tools.md)
-* Windows 10 SDK 10.0.18362.0 ou version ultérieure
-* Certaines fonctionnalités C# de programmation de base
-* Un appareil HoloLens 2 [configuré pour le développement](using-visual-studio.md#enabling-developer-mode)
+* PC Windows 10 configuré avec les [outils appropriés installés](install-the-tools.md)
+* SDK Windows 10 (10.0.18362.0 ou version ultérieure)
+* Capacité de programmation C# de base
+* Appareil HoloLens 2 [configuré pour le développement](using-visual-studio.md#enabling-developer-mode)
 
 >[!IMPORTANT]
->Cette série de didacticiels requiert <a href="https://unity3d.com/get-unity/download/archive" target="_blank">unity 2019,1</a> et la version recommandée est Unity 2019.1.14. Cela remplace toute exigence ou recommandation de version Unity énoncées dans les conditions préalables liées ci-dessus.
+> La version Unity recommandée pour cette série de tutoriels est Unity 2019.2.X. Cela remplace toute exigence ou recommandation de version Unity énoncée dans les prérequis indiqués ci-dessus.
 
-## <a name="getting-started"></a>Prise en main
+## <a name="getting-started"></a>Mise en route
 
 1. Démarrez Unity et créez un nouveau projet. Entrez le module d’apprentissage du kit de développement logiciel (SDK) Speech Name. Choisissez un emplacement pour l’emplacement où enregistrer votre projet. Cliquez sur créer un projet.
 
@@ -47,7 +47,7 @@ Ce didacticiel crée une application de réalité mixte qui explore l’utilisat
     >[!NOTE]
     >Assurez-vous que le modèle est défini sur 3D, comme indiqué dans l’image ci-dessus.
 
-2. Téléchargez le [package de base version 2.1.0](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/download/v2.1.0/Microsoft.MixedReality.Toolkit.Unity.Foundation.2.1.0.unitypackage) de [Mixed Reality Toolkit](https://github.com/microsoft/MixedRealityToolkit-Unity/releases) pour Unity et enregistrez-le dans un dossier sur votre PC. Importez le package dans votre projet Unity. Pour obtenir des instructions détaillées sur la procédure à suivre, consultez les [didacticiels de mise en route-leçon 2. Initialisation de votre projet et de votre première application](mrlearning-base-ch1.md).
+2. Téléchargez la [version du package 2.3.0](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/download/v2.3.0/Microsoft.MixedReality.Toolkit.Unity.Foundation.2.3.0.unitypackage) Unity de la [réalité mixte](https://github.com/microsoft/MixedRealityToolkit-Unity/releases) et enregistrez-la dans un dossier sur votre ordinateur. Importez le package dans votre projet Unity. Pour obtenir des instructions détaillées sur la procédure à suivre, consultez les [didacticiels de mise en route-leçon 2. Initialisation de votre projet et de votre première application](mrlearning-base-ch1.md).
 
 3. Téléchargez et importez le [Kit de développement logiciel (SDK) Azure Speech](https://aka.ms/csspeech/unitypackage) pour le package d’actifs Unity. Importez le package du kit de développement logiciel (SDK) Speech en cliquant sur actifs, en sélectionnant importer un package, puis en sélectionnant package personnalisé. Recherchez le package du kit de développement logiciel (SDK) Speech téléchargé précédemment et ouvrez-le pour commencer le processus d’importation.
 
@@ -59,9 +59,13 @@ Ce didacticiel crée une application de réalité mixte qui explore l’utilisat
 
     ![mrlearning-Speech-CH1-1-step4. png](images/mrlearning-speech-ch1-1-step4.png)
 
-5. Pour télécharger le Pack de composants du kit de développement logiciel (SDK) Speech module, également appelé package Lunarcom, cliquez sur [ce lien](https://github.com/microsoft/MixedRealityLearning/releases/tag/Speech_2). Le package de ressources Lunarcom est un ensemble de ressources et de scripts développés pour cette série de leçons afin de présenter une utilisation pratique du kit de développement logiciel (SDK) Speech d’Azure. Il s’agit d’un terminal de commande vocale qui, au final, interviendra avec l’expérience d’assembly de module lunaire développée dans les [didacticiels de prise en main-leçon 7. Création d’un exemple d’application de module lunaire](mrlearning-base-ch6.md).
+5. Téléchargez les ressources du didacticiel :
+    * [MRTK. HoloLens2. Unity. Tutorials. Assets. GettingStarted. 2.3.0.2. pour Unity](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.3.0.2/MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.3.0.2.unitypackage)
+    * [SpeechSDKAssets. pour Unity](https://github.com/microsoft/MixedRealityLearning/releases/download/Speech_2/SpeechSDKAssets.unitypackage) (version 1,2)
 
-6. Importez le package de ressources Lunarcom dans votre projet Unity en suivant les étapes similaires que vous avez suivies pour importer le kit de ressources de réalité mixte et le SDK Speech.
+    Le package de ressources SpeechSDKAssets est un ensemble de ressources et de scripts développés pour cette série de didacticiels afin d’illustrer l’utilisation pratique du kit de développement logiciel (SDK) Speech d’Azure. Il s’agit d’un terminal de commande vocale qui, au final, interviendra avec l’expérience d’assembly du lanceur Rocket développée dans les [didacticiels de prise en main-leçon 7. Création d’un exemple d’application de module lunaire](mrlearning-base-ch6.md).
+
+6. Importez les deux packages de ressources du didacticiel dans votre projet Unity en suivant les étapes similaires que vous avez suivies pour importer le kit de ressources de réalité mixte et le SDK Speech.
 
 7. Configurez la boîte à outils de réalité mixte (MRTK).
 
@@ -69,7 +73,7 @@ Ce didacticiel crée une application de réalité mixte qui explore l’utilisat
 
     ![mrlearning-Speech-CH1-1-step7a. png](images/mrlearning-speech-ch1-1-step7a.png)
 
-    Dans le menu contextuel qui s’affiche, sélectionnez DefaultHoloLens2ConfigurationProfile pour en faire le profil actif de la boîte à outils de la réalité mixte.
+    Une fois l’objet MixedRealityToolkit sélectionné dans votre hiérarchie de scènes, dans la fenêtre de l’inspecteur, sélectionnez DefaultHoloLens2ConfigurationProfile pour en faire le profil actif de la boîte à outils de la réalité mixte.
 
     ![mrlearning-Speech-CH1-1-step7b. png](images/mrlearning-speech-ch1-1-step7b.png)
 
@@ -187,8 +191,8 @@ Ce didacticiel crée une application de réalité mixte qui explore l’utilisat
 
     ![mrlearning-Speech-CH1-2-step11. SITUÉE](images/mrlearning-speach-ch1-2-step11.jpg)
 
-## <a name="congratulations"></a>Félicitations !
+## <a name="congratulations"></a>Félicitations
 
-Vous avez configuré la reconnaissance vocale dans votre application, optimisée par Azure. Exécutez l’application pour vous assurer que toutes les fonctions et fonctionnalités fonctionnent correctement. Commencez par dire le mot de mise en éveil que vous avez tapé à l’étape 22, activer terminal. Sélectionnez le bouton microphone pour démarrer la reconnaissance vocale. Commencez à parler. Vous verrez vos mots transcrits dans le terminal à mesure que vous parlez. Appuyez une deuxième fois sur le bouton microphone pour arrêter la reconnaissance vocale. Dites rejeter le terminal pour masquer le terminal Lunarcom. Dans la leçon suivante, vous apprendrez à basculer dynamiquement vers à l’aide de la reconnaissance vocale de l’appareil pour les situations où le kit de développement logiciel (SDK) Speech d’Azure n’est pas disponible en raison de la déconnexion de HoloLens 2.
+Vous avez configuré la reconnaissance vocale dans votre application, optimisée par Azure. Exécutez l’application pour vous assurer que toutes les fonctions et fonctionnalités fonctionnent correctement. Commencez par dire le mot de mise en éveil que vous avez tapé à l’étape 25, activer terminal. Sélectionnez le bouton microphone pour démarrer la reconnaissance vocale. Commencez à parler. Vous verrez vos mots transcrits dans le terminal à mesure que vous parlez. Appuyez une deuxième fois sur le bouton microphone pour arrêter la reconnaissance vocale. Dites rejeter le terminal pour masquer le terminal Lunarcom. Dans la leçon suivante, vous apprendrez à basculer dynamiquement vers à l’aide de la reconnaissance vocale de l’appareil pour les situations où le kit de développement logiciel (SDK) Speech d’Azure n’est pas disponible en raison de la déconnexion de HoloLens 2.
 
 [Didacticiel suivant : 2. Ajout d’un mode hors connexion pour la traduction vocale locale en texte](mrlearning-speechSDK-ch2.md)

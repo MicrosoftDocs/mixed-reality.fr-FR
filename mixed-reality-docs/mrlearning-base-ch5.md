@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: 18bcbc95746a2e66b88d83f279603aa7f171bbcb
-ms.sourcegitcommit: cc61f7ac08f9ac2f2f04e8525c3260ea073e04a7
+ms.openlocfilehash: aaa02ce118fd051d94311e837b143affc96ff72b
+ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77129654"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77554259"
 ---
 # <a name="6-exploring-advanced-input-options"></a>6. exploration des options d’entrée avancées
 
@@ -68,16 +68,20 @@ Dans la fenêtre hiérarchie, sélectionnez l’objet **octa** et ajoutez le com
 
 ### <a name="5-implement-the-response-event-for-the-speech-command"></a>5. implémentez l’événement Response pour la commande Speech
 
-Sur le composant Gestionnaire d’entrée vocal (script), cliquez sur le petit bouton de **+** pour ajouter un mot clé, puis, dans la liste déroulante **mot clé** , choisissez le mot clé **Play Music** que vous avez créé précédemment :
+Sur le composant Gestionnaire d’entrée vocale (script), cliquez sur le petit bouton de **+** pour ajouter un élément de mot clé à la liste des mots clés :
 
 ![mrlearning-base](images/mrlearning-base/tutorial5-section1-step5-1.png)
+
+Cliquez sur l’élément qui vient d’être créé **0** pour le développer, puis, dans la liste déroulante **mot clé** , choisissez le mot clé **Play Music** que vous avez créé précédemment :
+
+![mrlearning-base](images/mrlearning-base/tutorial5-section1-step5-2.png)
 
 > [!NOTE]
 > Les mots clés dans la liste déroulante de mots clés sont renseignés en fonction des mots clés définis dans la liste commandes vocales du profil commandes vocales.
 
 Créez un événement de **réponse ()** , configurez l’objet **octa** pour recevoir l’événement, définissez **audiosource. PlayOneShot** comme action à déclencher et affectez un clip audio approprié au champ **clip** audio, par exemple, le clip audio MRTK_Gem :
 
-![mrlearning-base](images/mrlearning-base/tutorial5-section1-step5-2.png)
+![mrlearning-base](images/mrlearning-base/tutorial5-section1-step5-3.png)
 
 > [!TIP]
 > Pour obtenir un rappel sur la façon d’implémenter des événements et d’assigner un clip audio, vous pouvez consulter les instructions relatives à l' [implémentation de l’événement at Touch Started](mrlearning-base-ch4.md#4-implement-the-on-touch-started-event) .
@@ -145,11 +149,11 @@ Si vous passez maintenant en mode jeu, vous pouvez tester le contenu 2D à l’a
 
 ### <a name="5-add-3d-content-to-be-scrolled"></a>5. ajouter du contenu 3D à faire défiler
 
-Dans la fenêtre hiérarchie, **créez quatre cubes** en tant qu’objets enfants du **PanContent** et définissez leur **échelle** de transformation sur X = 0,15, Y = 0,15, Z = 0,15 :
+Dans la fenêtre hiérarchie, **créez quatre cubes** en tant qu’objets enfants de l’objet **PanGesture** et définissez leur **échelle** de transformation sur X = 0,15, Y = 0,15, Z = 0,15 :
 
 ![mrlearning-base](images/mrlearning-base/tutorial5-section2-step5-1.png)
 
-Pour espacer uniformément les cubes et gagner du temps, ajoutez le composant de collection d’objets Grid (script) à l’objet parent des cubes, c’est-à-dire l’objet PanGesture, puis configurez la collection d’objets Grid (script) comme suit :
+Pour espacer uniformément les cubes et gagner du temps, ajoutez le composant de **collection d’objets Grid (script)** à l’objet parent des cubes, c’est-à-dire l’objet **PanGesture** , puis configurez la collection d’objets Grid (script) comme suit :
 
 * Remplacez le **nombre de lignes** par 1 pour que tous les cubes soient alignés sur une seule ligne
 * Modifier la **largeur de cellule** à 0,25 pour espacer les cubes dans la ligne
@@ -230,7 +234,7 @@ Dans la fenêtre hiérarchie, sélectionnez l’objet **fromage** , puis créez 
 
 ### <a name="4-implement-the-on-selected-event"></a>4. implémentez l’événement sur sélectionné
 
-Dans la fenêtre hiérarchie, sélectionnez l’objet **fromage** , puis créer un événement **sur sélectionné ()** , configurez l’objet **fromage** pour recevoir l’événement et définissez **EyeTrackingTutorialDemo. RotateTarget** comme action à déclencher :
+Dans la fenêtre hiérarchie, sélectionnez l’objet **fromage** , puis créer un événement **sur sélectionné ()** , configurez l’objet **fromage** pour recevoir l’événement et définissez **EyeTrackingTutorialDemo. BlipTarget** comme action à déclencher :
 
 ![mrlearning-base](images/mrlearning-base/tutorial5-section3-step4-1.png)
 
