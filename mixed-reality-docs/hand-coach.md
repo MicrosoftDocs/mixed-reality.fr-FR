@@ -1,19 +1,19 @@
 ---
-title: Guide de conception de MRTK main
+title: Autocar à main
 description: mains en 3D qui sont déclenchées lorsque le système ne détecte pas les mains de l’utilisateur pour aider à les assister.
 author: grayclee
 ms.author: glee
 ms.date: 09/25/2019
 ms.topic: article
 keywords: Windows Mixed Reality, conception, coach, casque immersif, MRTK, mains, main
-ms.openlocfilehash: dc04f8f77548b226a822576befd60be107f4d3fb
-ms.sourcegitcommit: 87aca9c2b73b0e83cb70a46443dcdb08c3621005
+ms.openlocfilehash: c5f0a0c241ff71dc93f370a5a8caa627128bfb1a
+ms.sourcegitcommit: 1ec628a9107194c0a9d4073b5ca09ee816030e85
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77373520"
+ms.lasthandoff: 03/01/2020
+ms.locfileid: "78202733"
 ---
-# <a name="hand-coach-design-guidance"></a>Conseils de conception pour les autocars manuels
+# <a name="hand-coach"></a>Autocar à main
 
 La main est un modèle de mains en 3D qui est déclenché lorsque le système ne détecte pas les mains de l’utilisateur. Elle est implémentée en tant que composant « d’apprentissage » qui aide à guider l’utilisateur lorsque le mouvement n’a pas été enseigné. Si les utilisateurs n’ont pas effectué le mouvement spécifié pour un point, les mains sont en boucle avec un délai. L’entraîneur peut être utilisé pour représenter un bouton ou un hologramme.  
 
@@ -148,7 +148,7 @@ Exemple de ![: paramètres Unity](images/HandCoach/HandHintScale.png)<br>
 
 ## <a name="implementing-hands-into-your-unity-project"></a>Implémentation des mains dans votre projet Unity
 
-### <a name="best-practices"></a>Bonnes pratiques
+### <a name="best-practices"></a>Meilleures pratiques
 *    Il est suggéré de réduire les mains d’Unity à 0,6
 *   Les mains doivent être jouées deux fois et si elles ne sont pas terminées, puis en boucle jusqu’à ce que le geste soit terminé. Les mains doivent être bouclées deux fois pour garantir que l’utilisateur avait le temps de s’inscrire et de voir le mouvement. Les mains doivent apparaître et disparaître entre les boucles. 
  *  Si les mains de l’utilisateur sont visibles par les appareils photo HL2, mais que les utilisateurs n’effectuent pas l’interaction dont ils ont besoin, les mains s’affichent au bout de 10 secondes.

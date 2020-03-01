@@ -6,20 +6,20 @@ ms.author: jlyons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Portail des appareils Windows, HoloLens
-ms.openlocfilehash: b22c70305076e3b2c18f880878b48c3142efdbfe
-ms.sourcegitcommit: cf3b662cfcf3fb05a554c302e595eb018f01abf2
+ms.openlocfilehash: 43ecfead7d2882d3624809bc05184f74131b8594
+ms.sourcegitcommit: 1ec628a9107194c0a9d4073b5ca09ee816030e85
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76521690"
+ms.lasthandoff: 03/01/2020
+ms.locfileid: "78202719"
 ---
 # <a name="using-the-windows-device-portal"></a>Utilisation du portail d’appareils Windows
 
 <table>
 <tr>
-<th>Fonctionnalité</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (1re génération)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"><a href="immersive-headset-hardware-details.md">Casques immersifs</a></th>
+<th>Composant</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (1re génération)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"><a href="immersive-headset-hardware-details.md">Casques immersifs</a></th>
 </tr><tr>
-<td> Portail d’appareil Windows</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"></td>
+<td> Windows Device Portal</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"></td>
 </tr>
 </table>
 
@@ -81,6 +81,8 @@ Chaque HoloLens génère un certificat auto-signé unique pour sa connexion SSL.
 1. **Assurez-vous que vous êtes sur un réseau sécurisé (USB ou un réseau Wi-Fi auquel vous faites confiance).**
 2. Téléchargez le certificat de cet appareil à partir de la page « sécurité » sur le portail de l’appareil.
    * Accédez à : https://< YOUR_HOLOLENS_IP_ADDRESS >/devicepair.htm
+   * Ouvrez le nœud des préférences système >. 
+   * Faites défiler jusqu’à sécurité des appareils, puis cliquez sur le bouton « Télécharger le certificat de cet appareil ».
 3. Installez le certificat dans le magasin « autorités de certification racines de confiance » sur votre PC.
    * Dans le menu Windows, tapez : gérer les certificats d’ordinateur et démarrer l’applet.
    * Développez le dossier **autorité de certification racine de confiance** .
@@ -88,6 +90,10 @@ Chaque HoloLens génère un certificat auto-signé unique pour sa connexion SSL.
    * Dans le menu Action, sélectionnez : Toutes les tâches &gt; Importer...
    * Terminez l’Assistant Importation de certificat en utilisant le fichier de certificat que vous avez téléchargé à partir de Device Portal.
 4. Redémarrez le navigateur.
+
+>[!NOTE]
+> Ce certificat sera uniquement approuvé pour l’appareil et l’utilisateur devra repasser le processus si l’appareil est flashé.
+
 
 ## <a name="device-portal-pages"></a>Pages de Device Portal
 
