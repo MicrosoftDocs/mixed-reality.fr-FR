@@ -86,6 +86,7 @@
 #### [Tablette](slate.md)
 #### [Curseur](slider.md)
 #### [Nuanceur](shader.md)
+#### [Coach de main](hand-coach.md)
 #### [Billboarding et tag-along](billboarding-and-tag-along.md)
 #### [Affichage de la progression](progress.md)
 #### [Aimantation de surface](surface-magnetism.md)
