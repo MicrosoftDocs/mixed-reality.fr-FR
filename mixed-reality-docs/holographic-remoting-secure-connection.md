@@ -1,17 +1,17 @@
 ---
 title: Établissement d’une connexion sécurisée à l’aide de la communication à distance holographique
 description: Cette page explique comment établir une connexion chiffrée sécurisée lors de l’utilisation de la communication à distance holographique.
-author: bethau
-ms.author: bethau
-ms.date: 10/21/2019
+author: FlorianBagarMicrosoft
+ms.author: flbagar
+ms.date: 03/11/2020
 ms.topic: article
 keywords: HoloLens, communication à distance, communication à distance holographique
-ms.openlocfilehash: 1142ba3bd8b0d05202ccd04885de5d70165872d1
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: ac1170cb3e6d681fc164c3f4cee14da6ab6eb90b
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73434193"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79092474"
 ---
 # <a name="establishing-a-secure-connection-with-holographic-remoting"></a>Établissement d’une connexion sécurisée à l’aide de la communication à distance holographique
 
@@ -25,7 +25,7 @@ Lors de la diffusion en continu de contenu vers HoloLens 2 sur un réseau non s�
 >[!IMPORTANT]
 >Même en cas d’utilisation d’un WiFi local approuvé à l’aide d’une connexion chiffrée, vous devez prendre en compte.
 
-Pour pouvoir utiliser une connexion chiffrée, vous devez implémenter à la fois un [lecteur personnalisé](holographic-remoting-create-player.md) et une [application hôte personnalisée](holographic-remoting-create-host.md).
+Pour pouvoir utiliser une connexion chiffrée, vous devez implémenter à la fois un [lecteur personnalisé](holographic-remoting-create-player.md) et une [application distante personnalisée](holographic-remoting-create-host.md).
 
 Le chiffrement est effectué à l’aide de l’implémentation TLS des plateformes sous-jacentes.
 
@@ -60,8 +60,8 @@ En outre, pour permettre l’échange d’un jeton sécurisé, les objets suivan
 
 Une fois ces objets implémentés ```ListenSecure``` doit être appelé au lieu de ```Listen``` et ```ConnectSecure``` au lieu de ```Connect``` respectivement dans le contexte distant et le contexte du joueur. ```ListenSecure``` requiert un fournisseur de certificats et un récepteur d’authentification supplémentaires sur ```Listen```. ```ConnectSecure``` requiert un fournisseur d’authentification supplémentaire et un validateur de certificat sur ```Connect```.
 
-## <a name="see-also"></a>Articles associés
-* [Écriture d’une application hôte de communication à distance holographique](holographic-remoting-create-host.md)
+## <a name="see-also"></a>Voir aussi
+* [Écriture d’une application distante de communication à distance holographique](holographic-remoting-create-host.md)
 * [Écriture d’une application de lecteur de communication à distance holographique personnalisée](holographic-remoting-create-player.md)
 * [Résolution des problèmes et limitations de la communication à distance holographique](holographic-remoting-troubleshooting.md)
 * [Termes du contrat de licence de la communication à distance holographique](https://docs.microsoft.com//legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)

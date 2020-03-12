@@ -3,22 +3,23 @@ title: Archive de l’émulateur HoloLens
 description: Liste des builds publiées de l’émulateur Microsoft HoloLens.
 author: hamalawi
 ms.author: moelhama
-ms.date: 2/12/2020
+ms.date: 3/10/2020
 ms.topic: article
 keywords: HoloLens, émulateur, builds, versions
-ms.openlocfilehash: 4696330e62d2b7b5d58c73e13713e0731f5ec3bc
-ms.sourcegitcommit: a580166a19294f835b8e09c780f663f228dd5de0
+ms.openlocfilehash: 7aed01ecc155e4ea93bbbf9c347f117b319d2bc7
+ms.sourcegitcommit: 5b2ba01aa2e4a80a3333bfdc850ab213a1b523b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77250664"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79031776"
 ---
 # <a name="hololens-2-emulator-archive"></a>Archive de l’émulateur HoloLens 2
 
 L’émulateur HoloLens (1er génération) et l’émulateur HoloLens 2 s’installent côte à côte. Nous vous recommandons généralement d’utiliser la dernière build disponible, mais il peut arriver que vous souhaitiez ou deviez tester une application sur un ancien émulateur. Cette page contient des liens vers les versions publiées.
 
-|  Générer |  Date de sortie |  Remarques | 
+|  Générer |  Date de publication |  Remarques | 
 |----------|----------|----------|
+|  [10.0.18362.1056 de build de l’émulateur HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2121323) | 10 mars, 2020 | Build de mars 2020 HoloLens 2.  Pour les notes de publication générales de HoloLens 2, consultez https://docs.microsoft.com/hololens/hololens-release-notes |
 |  [10.0.18362.1053 de build de l’émulateur HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2118321) | 11 février 2020 | Build HoloLens 2 de février 2020.  Pour les notes de publication générales de HoloLens 2, consultez https://docs.microsoft.com/hololens/hololens-release-notes |
 |  [10.0.18362.1044 de build de l’émulateur HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2114824) | Le 13 janvier 2020 | Build HoloLens 2 de janvier 2020.  Pour les notes de publication générales de HoloLens 2, consultez https://docs.microsoft.com/hololens/hololens-release-notes |
 |  [10.0.18362.1042 de build de l’émulateur HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2112589) | 6 décembre 2019 | Build HoloLens 2 de décembre 2019.  Résout un problème où une application holographique s’exécutant dans l’émulateur sera suspendue de manière inattendue lors de l’affichage du panneau des broches.  Active la connectivité à un émulateur distant lors de l’utilisation de l’API de simulation de perception ou de l’application de contrôle de simulation de perception.  Pour les notes de publication générales de HoloLens 2, consultez https://docs.microsoft.com/hololens/hololens-release-notes |
@@ -31,7 +32,7 @@ L’émulateur HoloLens (1er génération) et l’émulateur HoloLens 2 s’inst
 
 ## <a name="hololens-emulator-1st-gen-archive"></a>L’émulateur HoloLens (1ère génération) Archive
 
-|  Générer |  Date de sortie |  Remarques | 
+|  Générer |  Date de publication |  Remarques | 
 |----------|----------|----------|
 |  [10.0.17763.134 de build de l’émulateur HoloLens](https://go.microsoft.com/fwlink/?linkid=2065980) | 19 novembre 2018 | Dernière build HoloLens (1re génération). Mise à jour 2018 de Windows 10 octobre. |
 |  [10.0.17134.80 de build de l’émulateur HoloLens](https://go.microsoft.com/fwlink/?linkid=874531) | 21 mai, 2018 | 

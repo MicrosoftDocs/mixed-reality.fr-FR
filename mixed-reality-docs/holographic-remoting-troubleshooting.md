@@ -3,15 +3,15 @@ title: Résolution des problèmes et limitations de la communication à distance
 description: Étapes de dépannage pour la communication à distance holographique sur HoloLens 2.
 author: FlorianBagarMicrosoft
 ms.author: flbagar
-ms.date: 12/17/2019
+ms.date: 03/11/2020
 ms.topic: article
 keywords: Windows Mixed Reality, hologrammes, accès distant holographique, rendu à distance, rendu réseau, HoloLens, hologrammes distants, dépannage, aide
-ms.openlocfilehash: 05333c8911010945a543cf603b9925eb30c841db
-ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
+ms.openlocfilehash: 79258832d29741c56a1e7e89baeb7d728c806dd1
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/17/2019
-ms.locfileid: "75181969"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79092358"
 ---
 # <a name="holographic-remoting-troubleshooting"></a>Résolution des problèmes de communication à distance holographique
 
@@ -40,6 +40,7 @@ Les API suivantes ne sont actuellement **pas** prises en charge lors de l’util
 * [HolographicCameraPose.OverrideViewTransform](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerapose.overrideviewtransform)
 * [HolographicCameraRenderingParameters.CommitDirect3D11DepthBuffer](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.commitdirect3d11depthbuffer#Windows_Graphics_Holographic_HolographicCameraRenderingParameters_CommitDirect3D11DepthBuffer_Windows_Graphics_DirectX_Direct3D11_IDirect3DSurface_)
   - N’échoue pas, mais la mémoire tampon de profondeur ne sera pas distante.
+  - Pris en charge à partir de la version [2.1.0](holographic-remoting-version-history.md#v2.1.0)
 * [HolographicDisplay.TryGetViewConfiguration](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicdisplay.trygetviewconfiguration)
   - L’interrogation de HolographicViewConfigurationKind. PhotoVideoCamera renverra toujours un ```nullptr```.
   - Pris en charge à partir de la version [2.0.18](holographic-remoting-version-history.md#v2.0.18)
@@ -88,9 +89,9 @@ Les API suivantes ne sont actuellement **pas** prises en charge lors de l’util
 * [SpatialGraphInteropPreview.TryCreateFrameOfReference](https://docs.microsoft.com/uwp/api/windows.perception.spatial.preview.spatialgraphinteroppreview.trycreateframeofreference)
 * [SpatialInteractionSource. Controller](https://docs.microsoft.com/uwp/api/windows.ui.input.spatial.spatialinteractionsource.controller#Windows_UI_Input_Spatial_SpatialInteractionSource_Controller)
 
-## <a name="see-also"></a>Articles associés
+## <a name="see-also"></a>Voir aussi
 * [Historique des versions de la communication à distance holographique](holographic-remoting-version-history.md)
-* [Écriture d’une application hôte de communication à distance holographique](holographic-remoting-create-host.md)
+* [Écriture d’une application distante de communication à distance holographique](holographic-remoting-create-host.md)
 * [Écriture d’une application de lecteur de communication à distance holographique personnalisée](holographic-remoting-create-player.md)
 * [Termes du contrat de licence de la communication à distance holographique](https://docs.microsoft.com/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
-* [Déclaration de confidentialité de Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839)
+* [Déclaration de confidentialité Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839)
