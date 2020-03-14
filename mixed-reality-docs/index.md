@@ -9,11 +9,11 @@ ms.topic: overview
 ms.localizationpriority: high
 keywords: réalité mixte, découvrir, distribuer, index, page d’accueil, conception, développement, tutoriels, exemples d’applications, principes fondamentaux, études de cas, ressources, procédures HoloLens, projets open source
 ms.openlocfilehash: f6f72df63628bba590ac7af098d0b405e6721cc2
-ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74539633"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375566"
 ---
 # <a name="get-started-with-mixed-reality"></a>Bien démarrer avec la réalité mixte
 
@@ -60,13 +60,13 @@ Si vous êtes novice en réalité mixte, découvrez en quoi cette technologie co
 ## <a name="what-is-mixed-reality"></a>Qu’est-ce que la réalité mixte ?
 
 
-### <a name="mixed-reality-is-a-spectrummixed-realitymd"></a>[La réalité mixte est un spectre](mixed-reality.md)
+### <a name="mixed-reality-is-a-spectrum"></a>[La réalité mixte est un spectre](mixed-reality.md)
 La réalité mixte est le résultat de la fusion du monde physique avec le monde numérique. Elle constitue la prochaine évolution de l’interaction entre l’utilisateur, l’ordinateur et l’environnement, et ouvre de nouvelles perspectives qui vont bien au-delà de ce que nous pouvions imaginer jusqu’à présent.
 
 <br>
 
 
-### <a name="what-is-a-hologramhologrammd"></a>[Qu’est-ce qu’un hologramme ?](hologram.md)
+### <a name="what-is-a-hologram"></a>[Qu’est-ce qu’un hologramme ?](hologram.md)
 HoloLens vous permet de créer des hologrammes, qui sont des objets composés de lumière et de son qui s’affichent dans votre environnement, comme s’il s’agissait d’objets réels. Les hologrammes répondent à votre pointage du regard et à vos commandes vocales et peuvent interagir avec des surfaces réelles autour de vous. Avec les hologrammes, vous pouvez créer des objets numériques qui font partie de votre monde.
 
 <br>
@@ -80,12 +80,12 @@ HoloLens vous permet de créer des hologrammes, qui sont des objets composés de
 
 ## <a name="what-can-you-do-with-mixed-reality"></a>Que pouvez-vous faire avec la réalité mixte ?
 
-### <a name="a-new-vision-for-workhttpsdynamicsmicrosoftcommixed-realityoverview"></a>[Une nouvelle vision du travail](https://dynamics.microsoft.com//mixed-reality/overview/)
+### <a name="a-new-vision-for-work"></a>[Une nouvelle vision du travail](https://dynamics.microsoft.com//mixed-reality/overview/)
 Au sein de Microsoft, nous créons des applications de réalité mixte pour donner plus de moyens aux employés et optimiser les opérations. L’équipe Dynamics 365 a travaillé sur une gamme de projets qui illustrent les possibilités : Remote Assist, Layout et Guides.
 
 <br>
 
-### <a name="the-pursuit-of-more-personal-computingcase-study-the-pursuit-of-more-personal-computingmd"></a>[À la recherche d’une informatique plus personnelle](case-study-the-pursuit-of-more-personal-computing.md)
+### <a name="the-pursuit-of-more-personal-computing"></a>[À la recherche d’une informatique plus personnelle](case-study-the-pursuit-of-more-personal-computing.md)
 La création des produits aujourd’hui met en lumière les opportunités de demain. Les solutions fournies par ces produits révèlent ce qui est nécessaire pour progresser. Avec la réalité mixte, ceci est particulièrement vrai : l’expérience du travail réel (appareils réels, clients réels et problèmes réels) apporte une connaissance significative.
 
 
@@ -101,7 +101,7 @@ La création des produits aujourd’hui met en lumière les opportunités de dem
        [![Bentley](images/Bentley-Synchro1.jpg)](https://binged.it/31AR3kP)
     :::column-end:::
     :::column span="2":::
-        ### <a name="view-complex-construction-projects-with-bentleys-digital-construction-softwarehttpsbingedit31ar3kp"></a>[Visualisez des projets de construction complexes à l’aide du logiciel de construction numérique de Bentley](https://binged.it/31AR3kP)
+        ### <a name="view-complex-construction-projects-with-bentleys-digital-construction-software"></a>[Visualisez des projets de construction complexes à l’aide du logiciel de construction numérique de Bentley](https://binged.it/31AR3kP)
         Synchro est un logiciel de construction numérique qui permet de voir des projets de construction complexes dans la réalité mixte. Leur plateforme de construction numérique 4D associe la planification CPM avec diagramme de Gantt traditionnelle aux fonctionnalités de visualisation 4D intégrées en temps réel.
     :::column-end:::
 :::row-end:::
@@ -113,7 +113,7 @@ La création des produits aujourd’hui met en lumière les opportunités de dem
        [![Vuforia Studio de PTC](images/PTC-Vuforia-Studio1.jpg)](https://binged.it/31ARrjh)
     :::column-end:::
     :::column span="2":::
-        ### <a name="ptcs-vuforia-studio-authoring-solution-promotes-workforce-productivity-and-safetyhttpsbingedit31arrjh"></a>[La solution de création Vuforia Studio de PTC favorise la productivité et la sécurité du personnel](https://binged.it/31ARrjh)
+        ### <a name="ptcs-vuforia-studio-authoring-solution-promotes-workforce-productivity-and-safety"></a>[La solution de création Vuforia Studio de PTC favorise la productivité et la sécurité du personnel](https://binged.it/31ARrjh)
         La solution de création de réalité mixte efficace de Vuforia Studio favorise la productivité et la sécurité du personnel en distribuant les informations quand et où les travailleurs en ont le plus besoin : dans le contexte réel de leur environnement de travail quotidien.
     :::column-end:::
 :::row-end:::
@@ -125,7 +125,7 @@ La création des produits aujourd’hui met en lumière les opportunités de dem
        [![Philips-Azurion](images/Philips-Azurion1.jpg)](https://binged.it/31B1RiR)
     :::column-end:::
     :::column span="2":::
-        ### <a name="philips-is-piloting-hololens-in-the-domain-of-image-guided-minimally-invasive-procedureshttpsbingedit31b1rir"></a>[Philips pilote HoloLens dans le domaine des interventions à effraction minimale guidées par imagerie](https://binged.it/31B1RiR)
+        ### <a name="philips-is-piloting-hololens-in-the-domain-of-image-guided-minimally-invasive-procedures"></a>[Philips pilote HoloLens dans le domaine des interventions à effraction minimale guidées par imagerie](https://binged.it/31B1RiR)
         Philips pilote HoloLens dans le domaine des interventions à effraction minimale guidées par imagerie, au cours desquelles les médecins s’appuient sur des sources d’informations en direct telles que des radiographies ou des ultrasons pour « voir » à l’intérieur du patient et guider leurs actions.
     :::column-end:::
 :::row-end:::
@@ -142,7 +142,7 @@ La création des produits aujourd’hui met en lumière les opportunités de dem
 
 ## <a name="what-are-the-capabilities-of-hololens"></a>Quelles sont les fonctionnalités de l’appareil HoloLens ?
 
-### <a name="immersive-ergonomic-instinctual-and-untetheredhttpswwwmicrosoftcomhololenshardware"></a>[Immersif, ergonomique, instinctif et autonome](https://www.microsoft.com//hololens/hardware)
+### <a name="immersive-ergonomic-instinctual-and-untethered"></a>[Immersif, ergonomique, instinctif et autonome](https://www.microsoft.com//hololens/hardware)
 
 HoloLens 2 offre l’expérience de réalité mixte la plus confortable et la plus immersive actuellement disponible, avec des solutions de pointe qui font la différence en quelques minutes, le tout amélioré par la fiabilité, la sécurité et la scalabilité des services cloud et des services d’IA Microsoft.
 
@@ -156,22 +156,22 @@ HoloLens 2 offre l’expérience de réalité mixte la plus confortable et la p
 
 ## <a name="what-are-the-core-concepts-of-an-experience"></a>Quels sont les principaux concepts d’une expérience ?
 
-### <a name="keep-the-user-comfortable---comfortcomfortmd"></a>[Faire en sorte que l’utilisateur soit toujours à l’aise : confort](comfort.md)
+### <a name="keep-the-user-comfortable---comfort"></a>[Faire en sorte que l’utilisateur soit toujours à l’aise : confort](comfort.md)
 Pour garantir un confort maximal sur les afficheurs placés sur la tête, il est important que les concepteurs et les développeurs créent du contenu et le présentent d’une manière qui imite le fonctionnement de ces indicateurs dans le monde naturel.
 
 <br>
 
-### <a name="how-the-user-sees-the-world---holographic-frameholographic-framemd"></a>[Comment l’utilisateur voit le monde : image holographique](holographic-frame.md)
+### <a name="how-the-user-sees-the-world---holographic-frame"></a>[Comment l’utilisateur voit le monde : image holographique](holographic-frame.md)
 Les utilisateurs voient le monde de la réalité mixte par le biais d’une fenêtre d’affichage rectangulaire, avec leur casque. Sur l’appareil HoloLens, cette zone rectangulaire est appelée « image holographique » et permet aux utilisateurs de voir le contenu numérique superposé au monde réel qui les entoure.
 
 <br>
 
-### <a name="making-holographic-objects-feel-real---spatial-mappingspatial-mappingmd"></a>[Faire en sorte que les objets holographiques semblent réels : mappage spatial](spatial-mapping.md)
+### <a name="making-holographic-objects-feel-real---spatial-mapping"></a>[Faire en sorte que les objets holographiques semblent réels : mappage spatial](spatial-mapping.md)
 Le mappage spatial permet de placer des objets sur des surfaces réelles. Cela permet d’ancrer les objets dans le monde de l’utilisateur et de tirer parti des indicateurs de profondeur dans le monde réel.
 
 <br>
 
-### <a name="suggesting-the-scale-of-an-object---scalescalemd"></a>[Suggérer l’échelle d’un objet : échelle](scale.md)
+### <a name="suggesting-the-scale-of-an-object---scale"></a>[Suggérer l’échelle d’un objet : échelle](scale.md)
 L’une des clés pour afficher du contenu qui semble réaliste sous forme holographique est de simuler les statistiques visuelles du monde réel aussi fidèlement que possible. Cela consiste à incorporer autant d’indicateurs visuels que possible susceptibles de nous aider (dans le monde réel) à comprendre la position des objets, leur taille et leur composition.
 
 
