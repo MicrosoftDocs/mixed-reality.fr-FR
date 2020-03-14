@@ -7,11 +7,11 @@ ms.date: 03/21/2018
 ms.topic: article
 keywords: mouvements, contrôleurs de mouvement, Unity, point de regard, entrée
 ms.openlocfilehash: a85797bfb443f33147c116e90a02c88abda63c67
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926571"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375646"
 ---
 # <a name="gestures-and-motion-controllers-in-unity"></a>Mouvements et contrôleurs de mouvement dans Unity
 
@@ -118,9 +118,9 @@ Les applications qui souhaitent traiter différemment les positions en fonction 
 <tr>
 <th> État du suivi </th><th> SourceLossRisk </th><th> PositionAccuracy </th><th> TryGetPosition</th>
 </tr><tr>
-<td>   de <b>haute précision</b></td><td style="background-color: green; color: white"> &lt; 1,0 </td><td style="background-color: green; color: white"> Élevé </td><td style="background-color: green; color: white"> true</td>
+<td>   de <b>haute précision</b></td><td style="background-color: green; color: white"> &lt; 1,0 </td><td style="background-color: green; color: white"> Élevée </td><td style="background-color: green; color: white"> true</td>
 </tr><tr>
-<td> <b>Haute précision (risque de perte)</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: green; color: white"> Élevé </td><td style="background-color: green; color: white"> true</td>
+<td> <b>Haute précision (risque de perte)</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: green; color: white"> Élevée </td><td style="background-color: green; color: white"> true</td>
 </tr><tr>
 <td> <b>Précision approximative</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: orange"> Approximate </td><td style="background-color: green; color: white"> true</td>
 </tr><tr>
@@ -525,9 +525,9 @@ Des didacticiels pas à pas, avec des exemples de personnalisation plus détaill
 [![MR entrée 213-contrôleur de mouvement](images/mr213-main-600px.jpg)](https://docs.microsoft.com/windows/mixed-reality/mixed-reality-213)<br>
 *Entrée MR 213-contrôleur de mouvement*
 
-## <a name="see-also"></a>Voir également
+## <a name="see-also"></a>Voir aussi
 
-* [Pointer du regard vers l’avant et valider](gaze-and-commit.md)
+* [Suivre de la tête et valider](gaze-and-commit.md)
 * [Contrôleurs de mouvement](motion-controllers.md)
 
 

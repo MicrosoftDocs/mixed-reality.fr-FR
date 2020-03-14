@@ -7,11 +7,11 @@ ms.date: 02/24/2019
 ms.topic: article
 keywords: Portail des appareils Windows, HoloLens
 ms.openlocfilehash: 43ecfead7d2882d3624809bc05184f74131b8594
-ms.sourcegitcommit: 1ec628a9107194c0a9d4073b5ca09ee816030e85
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2020
-ms.locfileid: "78202719"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375786"
 ---
 # <a name="using-the-windows-device-portal"></a>Utilisation du portail d’appareils Windows
 

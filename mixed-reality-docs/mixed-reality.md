@@ -7,11 +7,11 @@ ms.date: 03/21/2018
 ms.topic: article
 keywords: réalité mixte, holographique, AR, VR, Mr, XR, réalité augmentée, réalité virtuelle, explication
 ms.openlocfilehash: e3205590ce46e0fc9113421e0dbaeb87fe6bc0c2
-ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/24/2019
-ms.locfileid: "75334016"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79376036"
 ---
 # <a name="what-is-mixed-reality"></a>Qu’est-ce que la réalité mixte ?
 
@@ -89,7 +89,7 @@ Il existe deux types principaux d’appareils qui proposent des expériences Win
 </tr><tr>
 <td><strong>Exemple d’appareil</strong></td><td> Microsoft HoloLens<br><br> <img alt="Microsoft HoloLens 2 image" width="300" height="169" src="images/HoloLens2.jpg" /></td><td> Samsung HMD Odyssey +<br><br> <img alt="Samsung HMD Odyssey+ image" width="300" height="169" src="images/Samsung-HMD-Odyssey.jpg" /></td>
 </tr><tr>
-<td><strong>Affichage</strong></td><td> Voir affichage. Permet à l’utilisateur de voir l’environnement physique tout en portant le casque.</td><td> Affichage opaque. Bloque l’environnement physique tout en portant le casque.</td>
+<td><strong>Vidéo</strong></td><td> Voir affichage. Permet à l’utilisateur de voir l’environnement physique tout en portant le casque.</td><td> Affichage opaque. Bloque l’environnement physique tout en portant le casque.</td>
 </tr><tr>
 <td><strong>Trésorerie</strong></td><td> Déplacement complet à six degrés de liberté, à la fois pour la rotation et la translation.</td><td> Déplacement complet à six degrés de liberté, à la fois pour la rotation et la translation.</td>
 </tr>
@@ -113,7 +113,7 @@ Souvent, il est préférable de réfléchir au type d’expérience qu’une app
 * **Vers la droite (presque Digital Reality).** Les utilisateurs bénéficient d’un environnement entièrement numérique et ignorent ce qui se passe dans l’environnement physique qui les entoure.
 
 
-## <a name="see-also"></a>Articles associés
+## <a name="see-also"></a>Voir aussi
 
 * [Qu’est-ce qu’un hologramme ?](hologram.md)
 * [Comprendre les principes de base de la réalité mixte](index.md#understand-the-basics)

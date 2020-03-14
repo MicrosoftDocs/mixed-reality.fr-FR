@@ -7,11 +7,11 @@ ms.date: 03/21/2018
 ms.topic: article
 keywords: application, UWP, envoyer, envoi, filtres, métadonnées, configuration système requise, Mots clés, wack, certification, package, AppX, merchandising
 ms.openlocfilehash: f2eb4093a2bea51d8c39b94d23777e426810981e
-ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74539611"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375806"
 ---
 # <a name="submitting-an-app-to-the-microsoft-store"></a>Envoi d’une application au Microsoft Store
 
@@ -25,12 +25,12 @@ Si vous n’avez pas encore de compte de développeur d’espace partenaires, vo
 
 Les outils de génération AppX requièrent plusieurs ressources d’image pour générer votre application dans un package AppX à envoyer au magasin. Vous pouvez en savoir plus sur [les instructions relatives aux ressources de vignettes et d’icônes](https://msdn.microsoft.com/library/windows/apps/mt412102.aspx) sur MSDN.
 
-| Élément multimédia requis | Mise à l’échelle recommandée | Format d’image | Où cela s’affiche-t-il ? | 
+| Élément multimédia requis | Mise à l’échelle recommandée | Format d'image | Où cela s’affiche-t-il ? | 
 |----------|----------|----------|------------------|
-| Logo carré 71 x 71 | Indéfini |  PNG | N/A | 
+| Logo carré 71 x 71 | Tous |  PNG | N/A | 
 | Logo carré 150 x 150 | 150 x 150 (échelle de 100%) ou 225x225 (échelle de 150%) | PNG | Démarrer les codes confidentiels et toutes les applications (si 310 x 310 n’est pas fourni), stocker les suggestions de recherche, la page de liste des boutiques, Store Browse, Store Search | 
-|  Logo 310 étendu |  Indéfini  |  PNG  |  N/A | 
-|  Logo de la boutique |  75x75 (échelle de 150%)  |  PNG  |  Espace partenaires, application de rapport, rédiger un avis, ma bibliothèque | 
+|  Logo 310 étendu |  Tous  |  PNG  |  N/A | 
+|  Logo du Windows Store |  75x75 (échelle de 150%)  |  PNG  |  Espace partenaires, application de rapport, rédiger un avis, ma bibliothèque | 
 |  Écran de démarrage |  930x450 (échelle de 150%)  |  PNG  |  lanceur d’applications 2D (ardoise) | 
 
 HoloLens peut également tirer parti des ressources recommandées.
@@ -58,7 +58,7 @@ Définir les versions de plateforme minimale et cible dans Visual Studio
 
 ### <a name="specifying-target-device-families"></a>Spécification des familles d’appareils cibles
 
-Les applications Windows Mixed Reality (à la fois pour [HoloLens](hololens-hardware-details.md) et les [casques immersifs](immersive-headset-hardware-details.md)) font partie du plateforme Windows universelle. par conséquent, tout package d’application avec une [famille d’appareils cibles](https://msdn.microsoft.com/library/windows/apps/dn986903.aspx) « Windows. Universal » est en mesure de s’exécuter sur HoloLens ou PC Windows 10 avec des casques immersifs. Cela dit, si vous ne spécifiez pas de famille d’appareils cibles dans votre manifeste d’application, vous pouvez ouvrir par inadvertance votre application sur des appareils Windows 10 inattendus. Suivez les étapes ci-dessous pour spécifier la famille d’appareils Windows 10 prévue, puis [double-Vérifiez que les familles d’appareils appropriées sont sélectionnées lorsque vous téléchargez votre package d’application dans l’espace partenaires pour le soumettre au Store.](submitting-an-app-to-the-microsoft-store.md#submitting-your-mixed-reality-app-to-the-store)
+Les applications Windows Mixed Reality (à la fois pour [HoloLens](hololens-hardware-details.md) et les [casques immersifs](immersive-headset-hardware-details.md)) font partie du plateforme Windows universelle. par conséquent, tout package d’application avec une [famille d’appareils cibles](https://msdn.microsoft.com/library/windows/apps/dn986903.aspx) « Windows. Universal » est en mesure de s’exécuter sur des PC HoloLens ou Windows 10 avec des casques immersifs. Cela dit, si vous ne spécifiez pas de famille d’appareils cibles dans votre manifeste d’application, vous pouvez ouvrir par inadvertance votre application sur des appareils Windows 10 inattendus. Suivez les étapes ci-dessous pour spécifier la famille d’appareils Windows 10 prévue, puis [double-Vérifiez que les familles d’appareils appropriées sont sélectionnées lorsque vous téléchargez votre package d’application dans l’espace partenaires pour le soumettre au Store.](submitting-an-app-to-the-microsoft-store.md#submitting-your-mixed-reality-app-to-the-store)
 
 Pour définir ce champ dans Visual Studio, cliquez avec le bouton droit sur package. appxmanifest, sélectionnez Afficher le code, puis recherchez le champ nom du TargetDeviceFamily. Par défaut, il peut se présenter comme suit :
 
@@ -84,7 +84,7 @@ Si votre application requiert spécifiquement les fonctionnalités de **HoloLens
 </Dependencies>
 ```
 
-Si votre application est créée pour des **casques immersif Windows Mixed Reality**, vous pouvez vous assurer qu’elle est installée uniquement sur les PC Windows 10 avec la mise à jour Windows 10 automne Creators (nécessaire pour Windows Mixed Reality) en spécifiant une famille d’appareils cibles « Windows. Desktop» et MinVersion de « 10.0.16299.0 ».
+Si votre application est créée pour des **casques immersif Windows Mixed Reality**, vous pouvez vous assurer qu’elle est installée uniquement sur les PC Windows 10 avec la mise à jour Windows 10 automne Creators (nécessaire pour Windows Mixed Reality) en spécifiant une famille d’appareils cibles « Windows. Desktop » et MinVersion de « 10.0.16299.0 ».
 
 ```
 <Dependencies>
@@ -92,7 +92,7 @@ Si votre application est créée pour des **casques immersif Windows Mixed Reali
 </Dependencies>
 ```
 
-Enfin, si votre application est destinée à s’exécuter à la fois sur les **casques Windows HoloLens et Windows Mixed realing**, vous pouvez vous assurer que l’application est uniquement disponible pour ces deux familles d’appareils et garantir que chaque cible correspond à la version minimale correcte de Windows. y compris une ligne pour chaque famille d’appareils cibles avec son MinVersion respectif.
+Enfin, si votre application est destinée à être exécutée à la fois sur **HoloLens et sur des casques immersifs en réalité Windows Mixed Reality**, vous pouvez vous assurer que l’application est mise à la disposition de ces deux familles d’appareils uniquement et que chaque famille de l’appareil cible a la version minimale appropriée, en incluant une ligne pour chaque famille d’appareils cibles avec son MinVersion respectif.
 
 ```
 <Dependencies>
@@ -105,14 +105,14 @@ Vous pouvez en savoir plus sur le ciblage des familles d’appareils en lisant l
 
 ### <a name="associate-app-with-the-store"></a>Associer l’application au Windows Store
 
-Dans le menu projet de votre solution Visual Studio, choisissez « Store > associer l’application au Store ». Si vous procédez ainsi, vous pouvez tester les scénarios d’achat et de notification dans votre application. Lorsque vous associez votre application au Windows Store, ces valeurs sont téléchargées dans le fichier manifeste de l’application du projet en cours sur votre ordinateur local :
+Dans le menu projet de votre solution Visual Studio, choisissez « Store > associer l’application au Store ». Si vous procédez ainsi, vous pouvez tester les scénarios d'achat et de notification dans votre application. Lorsque vous associez votre application au Windows Store, ces valeurs sont téléchargées dans le fichier manifeste de l’application du projet en cours sur votre ordinateur local :
 * Nom complet du package
 * Nom du package
-* ID de l’éditeur
-* Nom complet de l’éditeur
-* Version
+* ID de l'éditeur
+* Nom complet de l'éditeur
+* cible
 
-Si vous remplacez le fichier Package. appxmanifest par défaut en créant un fichier. xml personnalisé pour le manifeste, vous ne pouvez pas associer votre application au Windows Store. Si vous essayez d’associer un fichier manifeste personnalisé à la Banque, un message d’erreur s’affiche.
+Si vous remplacez le fichier package.appxmanifest par défaut en créant un fichier .xml personnalisé pour le manifeste, vous ne pouvez pas associer votre application au Windows Store. Si vous essayez d’associer un fichier manifeste personnalisé au Windows Store, un message d’erreur s’affiche.
 
 ### <a name="creating-an-upload-package"></a>Création d’un package de téléchargement
 
@@ -120,7 +120,7 @@ Suivez les instructions dans [empaquetage d’applications Windows universelles 
 
 La dernière étape de la création d’un package de téléchargement consiste à valider le package à l’aide du [Kit de certification des applications Windows](#windows-app-certification-kit).
 
-Si vous souhaitez ajouter un package spécifiquement pour HoloLens à un produit existant disponible sur d’autres familles d’appareils Windows 10, vous devez également savoir [Comment les numéros de version peuvent avoir un impact sur les packages livrés à des clients spécifiques](https://msdn.microsoft.com/library/windows/apps/mt188602.aspx), et [mode de distribution des packages sur différents systèmes d’exploitation](https://msdn.microsoft.com/library/windows/apps/mt188601.aspx).
+Si vous souhaitez ajouter un package spécifiquement pour HoloLens à un produit existant disponible sur d’autres familles d’appareils Windows 10, vous devez également savoir [Comment les numéros de version peuvent avoir un impact sur les packages livrés à des clients spécifiques](https://msdn.microsoft.com/library/windows/apps/mt188602.aspx)et sur [la manière dont les packages sont distribués à différents systèmes d’exploitation](https://msdn.microsoft.com/library/windows/apps/mt188601.aspx).
 
 L’aide générale est que le package du numéro de version le plus élevé applicable à un appareil est celui distribué par le magasin.
 
@@ -195,9 +195,9 @@ Utilisez les cases à cocher pour indiquer aux clients potentiels si votre appli
 
 Veillez à sélectionner des cases à cocher pour « matériel minimum » ou « matériel recommandé » pour les types d’entrée. 
 
-Exemple : 
+Par exemple : 
 * Si votre jeu nécessite des contrôleurs de mouvement, mais accepte les entrées vocales via le microphone, activez la case à cocher « matériel minimal » en regard de « contrôleurs de mouvement Windows Mixed Reality », mais la case à cocher « matériel recommandé » en regard de « microphone ». 
-* Si votre jeu peut être lu avec un contrôleur/boîtier de commande Xbox, vous pouvez activer la case à cocher « matériel minimal » en regard de « contrôleur Xbox ou boîtier d’emballage », puis activer la case à cocher « matériel recommandé » en regard de « mouvement de réalité mixte Windows ». comme les contrôleurs de mouvement, les contrôleurs de mouvement offriront probablement un pas à pas détaillé dans l’expérience du boîtier.
+* Si votre jeu peut être lu avec un contrôleur/boîtier de commande Xbox, vous pouvez activer la case à cocher « matériel minimal » en regard de « contrôleur Xbox ou boîtier de commande » et activer la case à cocher « matériel recommandé » en regard de « contrôleurs de mouvement de réalité mixte Windows », car les contrôleurs de mouvement offriront probablement un pas à pas détaillé dans le boîtier
 
 **Casque immersif Windows Mixed Reality :**
 
@@ -211,7 +211,7 @@ Si votre application s’exécute sur le bureau comme une application PC traditi
 
 Si vous souhaitez que votre application atteigne autant que possible les utilisateurs du casque immersif Windows Mixed Reality, vous souhaiterez [cibler](understanding-performance-for-mixed-reality.md) les spécifications du PC pour les PC [Windows Mixed Reality avec des graphiques intégrés](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines).
 
-Que votre application de réalité mixte cible la configuration minimale requise pour le PC Windows Mixed Reality ou qu’elle nécessite une configuration de PC spécifique (comme le GPU dédié d’un [ultra PC Windows Mixed Reality](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)), vous devez l’indiquer avec les spécifications de PC appropriées dans colonne « matériel minimal ».
+Que votre application de réalité mixte cible la configuration minimale requise pour le PC Windows Mixed Reality, ou qu’elle nécessite une configuration de PC spécifique (comme le GPU dédié d’un [ultra PC Windows Mixed Reality](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)), vous devez indiquer qu’avec les spécifications de PC appropriées dans la colonne « matériel minimal ».
 
 Si votre application de réalité mixte est conçue pour offrir de meilleures performances ou si vous avez des graphiques de résolution supérieure, sur une configuration de PC ou une carte graphique particulière, vous devez indiquer cela avec les spécifications de PC appropriées dans la colonne « matériel recommandé ».
 
@@ -237,7 +237,7 @@ Associer votre application à l’Microsoft Store dans Visual Studio
 Sur la page [Store Listing](https://docs.microsoft.com/windows/uwp/publish/create-app-store-listings) du processus d’envoi d’applications, vous pouvez ajouter des informations utiles sur votre application de réalité mixte à plusieurs endroits.
 
 >[!IMPORTANT]
->Pour vous assurer que votre application est correctement catégorisée par le Store et rendue détectable par les clients Windows Mixed Reality, vous devez ajouter **« Windows Mixed Reality »** comme l’un de vos « termes de recherche » pour l’application (vous pouvez rechercher des termes de recherche en développant les « champs partagés » section).
+>Pour vous assurer que votre application est correctement catégorisée par le Store et rendue détectable par les clients Windows Mixed Reality, vous devez ajouter **« Windows Mixed Reality »** comme l’un de vos « termes de recherche » pour l’application (vous pouvez rechercher des termes de recherche en développant la section « champs partagés »).
 
 ![ajouter Windows Mixed Reality pour rechercher des termes](images/search-terms-800px.png)<br>
 Ajouter « Windows Mixed Reality » aux termes de la recherche
@@ -246,7 +246,7 @@ Ajouter « Windows Mixed Reality » aux termes de la recherche
 
 De nombreux consommateurs n’auront aucune expérience de la réalité virtuelle avant d’acheter un casque immersif Windows Mixed Reality. Ils peuvent ne pas savoir ce qui se passe des jeux intenses et peuvent ne pas être familiarisés avec leur propre seuil de confort dans les expériences immersifs. De nombreux clients peuvent également essayer un casque immersif Windows Mixed Reality sur des PC qui ne sont pas dotés de badges [Windows Mixed Reality PC](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines). En raison de ces considérations, nous vous recommandons vivement de proposer une [version d’évaluation gratuite](https://docs.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#free-trial) pour votre application ou votre jeu de réalité mixte payant.
 
-## <a name="see-also"></a>Articles associés
+## <a name="see-also"></a>Voir aussi
 * [Réalité mixte](mixed-reality.md)
 * [Vue d’ensemble du développement](development.md)
 * [Vues d’applications](app-views.md)

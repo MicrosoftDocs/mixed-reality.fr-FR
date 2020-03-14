@@ -7,11 +7,11 @@ ms.date: 06/03/2019
 ms.topic: article
 keywords: Windows Mixed Reality, conception, style, police, typographie, UI, UX
 ms.openlocfilehash: 9664d355e941d800ac1ac862860fc5889b6b7686
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437402"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375796"
 ---
 # <a name="typography"></a>Typographie
 
@@ -45,7 +45,7 @@ exemples de rampe de type ![](images/typography-ramp-1000px.jpg)<br>
 
 Évitez d’utiliser des épaisseurs de police Light ou semilight pour les tailles de type sous est, car les traits verticaux fins vibreront et dégradent la lisibilité. Les polices modernes avec suffisamment d’épaisseur de trait fonctionnent bien. Par exemple, Helvetica et Arial sont très lisibles dans HoloLens en utilisant des pondérations standard ou en gras.
 
-### <a name="color"></a>Color
+### <a name="color"></a>Couleur
 
 Dans HoloLens, étant donné que les hologrammes sont construits avec un système d’éclairage additif, le texte blanc est très lisible. Vous trouverez des exemples de texte blanc dans le menu Démarrer et la barre des applications. Même si le texte blanc fonctionne bien sans une plaque arrière sur HoloLens, un arrière-plan physique complexe peut rendre le type difficile à lire. Pour améliorer le focus de l’utilisateur et réduire la distraction d’un arrière-plan physique, nous vous recommandons d’utiliser du texte blanc sur une plaque d’arrière-plan sombre ou colorée.
 
@@ -111,9 +111,9 @@ Segoe UI (police par défaut pour Windows) fonctionne bien dans la plupart des c
 
 :::row:::
     :::column:::
-    ### <a name="segoe-fontshttpsdownloadmicrosoftcomdownload1bc1bcf071a-78ee-4968-acbe-15461c274b61segoe20fonts20v1705zipbr"></a>[Polices Segoe](https://download.microsoft.com/download/1/B/C/1BCF071A-78EE-4968-ACBE-15461C274B61/Segoe%20fonts%20v1705.zip)<br>
+    ### <a name="segoe-fontsbr"></a>[Polices Segoe](https://download.microsoft.com/download/1/B/C/1BCF071A-78EE-4968-ACBE-15461C274B61/Segoe%20fonts%20v1705.zip)<br>
     (Fichier zip)<br>
-    ### <a name="hololens-fonthttpsdownloadmicrosoftcomdownload38d38d659e2-4b9c-413a-b2e7-1956181dc427hololens20fontzipbr"></a>[Police HoloLens](https://download.microsoft.com/download/3/8/D/38D659E2-4B9C-413A-B2E7-1956181DC427/Hololens%20font.zip)<br>
+    ### <a name="hololens-fontbr"></a>[Police HoloLens](https://download.microsoft.com/download/3/8/D/38D659E2-4B9C-413A-B2E7-1956181DC427/Hololens%20font.zip)<br>
     (Fichier zip)<br>
     <br>
     *Image : la police HoloLens vous donne les glyphes de symboles utilisés dans Windows Mixed Reality.*
@@ -129,6 +129,6 @@ Segoe UI (police par défaut pour Windows) fonctionne bien dans la plupart des c
 ---
 
 
-## <a name="see-also"></a>Articles associés
+## <a name="see-also"></a>Voir aussi
 * [Texte dans Unity](text-in-unity.md)
 * [Couleurs, éclairage et matériaux](color,-light-and-materials.md)

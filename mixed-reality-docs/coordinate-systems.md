@@ -7,21 +7,21 @@ ms.date: 02/24/2019
 ms.topic: article
 keywords: système de coordonnées, système de coordonnées spatiales, orientation uniquement, à l’échelle assise, à l’échelle debout, à l’échelle de la pièce, à l’échelle mondiale, 360 de degrés, assis, debout, salle, monde, échelle, position, orientation, stationnaire, attaché, étage, Ancre, ancrage spatial, verrouillage universel, verrouillage universel, verrouillage du corps, verrouillage du corps, limites, persistance, partage, perte de suivi, ancrage spatial Cloud
 ms.openlocfilehash: 228f46f1962c39012571234da47ccec07aa67118
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73436144"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375636"
 ---
 # <a name="coordinate-systems"></a>Systèmes de coordonnées
 
-À leur cœur, les applications de réalité mixte placent des [hologrammes](hologram.md) dans votre monde qui ressemblent à des objets réels. Cela implique de positionner et d’orienter précisément ces hologrammes à des endroits du monde qui sont significatifs pour l’utilisateur, qu’il s’agisse de son espace physique ou d’un domaine virtuel que vous avez créé. En cas de raisonnement quant à la position et [à l’orientation](gaze-and-commit.md) de vos hologrammes, ou à toute autre géométrie telle que les positions de rayons ou de [main](hands-and-tools.md), Windows fournit divers systèmes de coordonnées réalistes dans lesquels cette géométrie peut être exprimée, appelée  **systèmes de coordonnées spatiales**.
+À leur cœur, les applications de réalité mixte placent des [hologrammes](hologram.md) dans votre monde qui ressemblent à des objets réels. Cela implique de positionner et d’orienter précisément ces hologrammes à des endroits du monde qui sont significatifs pour l’utilisateur, qu’il s’agisse de son espace physique ou d’un domaine virtuel que vous avez créé. Lorsque vous pensez à la position et à l’orientation de vos hologrammes, ou à toute autre géométrie telle que les positions [de rayons ou](gaze-and-commit.md) de [main](hands-and-tools.md), Windows fournit divers systèmes de coordonnées réalistes dans lesquels cette géométrie peut être exprimée, appelée **systèmes de coordonnées spatiales**.
 
 <br>
 
 <iframe width="940" height="530" src="https://www.youtube.com/embed/TneGSeqVAXQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## <a name="device-support"></a>Périphériques pris en charge
+## <a name="device-support"></a>Prise en charge des appareils
 
 <table>
     <colgroup>
@@ -79,7 +79,7 @@ ms.locfileid: "73436144"
 Les applications de réalité mixte peuvent concevoir une large gamme d’expériences utilisateur, à partir de visionneuses vidéo de 360 degrés qui ont juste besoin de l’orientation du casque, à des applications et des jeux à l’échelle mondiale, qui nécessitent un mappage spatial et des ancres spatiales :
 <br>
 
-| Mise à l’échelle | Conditions préalables | Exemple d’expérience | 
+| Mise à l’échelle | Configuration requise | Exemple d’expérience | 
 |----------|----------|----------|
 |  **Orientation uniquement** |  **Orientation du casque** (alignée en gravité) |  visionneuse vidéo 360 ° | 
 |  **À l’échelle assise** |  Ci-dessus, plus la **position du casque** par rapport à la position zéro |  Jeu de course ou simulateur d’espace | 
@@ -92,11 +92,11 @@ Ces possibilités de mise à l’échelle suivent un modèle d’imbrication de 
 
 | suivi 6DOF | Défini par l’étage | suivi de 360 ° | Limites définies | Ancres spatiales | Expérience max. | 
 |----------|----------|----------|----------|----------|----------|
-|  non |  - |  - |  - |  - |  **Orientation uniquement** | 
-|  **Oui** |  non |  - |  - |  - |  **Positionné** | 
-|  **Oui** |  **Oui** |  non |  - |  - |  **En aval** | 
-|  **Oui** |  **Oui** |  **Oui** |  non |  - |  **Debout-360 °** | 
-|  **Oui** |  **Oui** |  **Oui** |  **Oui** |  non |  **Divertissement** | 
+|  Non |  - |  - |  - |  - |  **Orientation uniquement** | 
+|  **Oui** |  Non |  - |  - |  - |  **Positionné** | 
+|  **Oui** |  **Oui** |  Non |  - |  - |  **En aval** | 
+|  **Oui** |  **Oui** |  **Oui** |  Non |  - |  **Debout-360 °** | 
+|  **Oui** |  **Oui** |  **Oui** |  **Oui** |  Non |  **Divertissement** | 
 |  **Oui** |  **Oui** |  **Oui** |  **Oui** |  **Oui** |  **Réelles** | 
 
 Notez que le cadre de la phase de référence n’est pas encore pris en charge sur HoloLens. Une application de mise à l’échelle de la place sur HoloLens doit actuellement utiliser le [mappage spatial](spatial-mapping.md) ou la [compréhension des scènes](scene-understanding.md) pour rechercher le plancher et les murs de l’utilisateur.
@@ -227,7 +227,7 @@ Parfois, lorsque vous commencez à utiliser un casque dans un environnement qui 
 
 Parfois, un logement ou un autre espace peut avoir deux zones identiques. Par exemple, deux salles de conférence identiques, deux zones d’angle identiques, deux affiches identiques identiques qui couvrent le champ de vision de l’appareil. Dans de tels scénarios, l’appareil peut parfois être confondu entre les parties identiques et les marquer comme étant identiques dans sa représentation interne. Cela peut entraîner l’affichage des hologrammes de certaines zones dans d’autres emplacements. L’appareil peut commencer à perdre souvent le suivi, car sa représentation interne de l’environnement a été endommagée. Dans ce cas, il est recommandé de réinitialiser la compréhension de l’environnement du système. Notez que la réinitialisation de la carte provoque la perte de tous les placements d’ancrage spatial. Cela permet au casque de suivre correctement les zones uniques de l’environnement. Toutefois, le problème peut se produire si l’appareil est à nouveau confondu entre les zones identiques.
 
-## <a name="see-also"></a>Articles associés
+## <a name="see-also"></a>Voir aussi
 * [Présentation GDC 2017 sur les systèmes de coordonnées spatiales et le rendu holographique](https://channel9.msdn.com/events/GDC/GDC-2017/GDC2017-008)
 * [Systèmes de coordonnées dans Unity](coordinate-systems-in-unity.md)
 * [Systèmes de coordonnées dans DirectX](coordinate-systems-in-directx.md)

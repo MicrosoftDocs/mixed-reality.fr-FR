@@ -7,11 +7,11 @@ ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, mappage spatial, environnement, interaction, DirectX, WinRT, API, exemple de code, UWP, SDK, procédure pas à pas
 ms.openlocfilehash: 456fcf1c00e23a287a741673e94b3f8d2d2d346c
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437444"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375816"
 ---
 # <a name="spatial-mapping-in-directx"></a>Mappage spatial dans DirectX
 
@@ -22,7 +22,7 @@ Cette rubrique utilise le code de l’exemple de code UWP [HolographicSpatialMap
 >[!NOTE]
 >Les extraits de code de cet article illustrent actuellement l' C++utilisation de/CX plutôt que de C++/WinRT conforme C + +17, comme utilisé dans le [ C++ modèle de projet holographique](creating-a-holographic-directx-project.md).  Les concepts sont équivalents pour C++un projet/WinRT, bien que vous deviez traduire le code.
 
-## <a name="device-support"></a>Périphériques pris en charge
+## <a name="device-support"></a>Prise en charge des appareils
 
 <table>
     <colgroup>
@@ -74,7 +74,7 @@ Lors du développement d’une application à l’aide de ces API, le dérouleme
   - À partir de là, votre application peut éventuellement effectuer l’analyse ou le [traitement](spatial-mapping.md#mesh-processing) des données de maillage, et les utiliser pour le [rendu](spatial-mapping.md#rendering) et la [Raycasting physique et les collisions](spatial-mapping.md#raycasting-and-collision).
   - Un détail important à noter est que vous devez appliquer une mise à l’échelle aux positions de vertex de maillage (par exemple, dans le nuanceur de sommets utilisé pour le rendu des maillages), pour les convertir des unités entières optimisées dans lesquelles elles sont stockées dans la mémoire tampon, en mètres. Vous pouvez récupérer cette échelle en appelant [VertexPositionScale](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.surfaces.spatialsurfacemesh.vertexpositionscale.aspx).
 
-### <a name="troubleshooting"></a>Dépannage
+### <a name="troubleshooting"></a>Résolution des problèmes
 * N’oubliez pas de mettre à l’échelle les positions de vertex de maillage dans votre nuanceur de sommets, à l’aide de l’échelle retournée par [SpatialSurfaceMesh. VertexPositionScale](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.surfaces.spatialsurfacemesh.vertexpositionscale.aspx)
 
 ## <a name="spatial-mapping-code-sample-walkthrough"></a>Exemple de code de mappage spatial
@@ -216,7 +216,7 @@ m_surfaceObserver->SetBoundingVolume(
             );
 ```
 
-Si votre application doit effectuer une opération différente quand les données de mappage des surfaces ne sont pas disponibles, vous pouvez écrire du code pour répondre au cas où le [SpatialPerceptionAccessStatus](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialperceptionaccessstatus.aspx) n’est pas **autorisé** , par exemple, il ne sera pas autorisé sur les PC avec immersion périphériques attachés car ces appareils n’ont pas de matériel pour le mappage spatial. Pour ces appareils, vous devez plutôt compter sur la phase spatiale pour obtenir des informations sur l’environnement et la configuration de l’appareil de l’utilisateur.
+Si votre application doit effectuer une opération différente quand les données de mappage des surfaces ne sont pas disponibles, vous pouvez écrire du code pour répondre au cas où le [SpatialPerceptionAccessStatus](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialperceptionaccessstatus.aspx) n’est pas **autorisé** . par exemple, il ne sera pas autorisé sur les PC avec des appareils immersifs connectés, car ces appareils n’ont pas de matériel pour le mappage spatial. Pour ces appareils, vous devez plutôt compter sur la phase spatiale pour obtenir des informations sur l’environnement et la configuration de l’appareil de l’utilisateur.
 
 ### <a name="initialize-and-update-the-surface-mesh-collection"></a>Initialiser et mettre à jour la collection de maillages d’aire
 
@@ -673,6 +673,6 @@ context->OMSetRenderTargets(1, targets, pCameraResources->GetSurfaceDepthStencil
 m_meshCollection->Render(pCameraResources->IsRenderingStereoscopic(), false);
 ```
 
-## <a name="see-also"></a>Articles associés
+## <a name="see-also"></a>Voir aussi
 * [Création d’un projet DirectX holographique](creating-a-holographic-directx-project.md)
 * [API Windows. perception. spatial](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.aspx)

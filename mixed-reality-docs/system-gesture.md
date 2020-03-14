@@ -7,17 +7,17 @@ ms.date: 10/22/2019
 ms.topic: article
 keywords: Réalité mixte, gestes, interaction, conception
 ms.openlocfilehash: 9cfee1104cb9b8135dae51bea73850062fadd25c
-ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/17/2019
-ms.locfileid: "75181999"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375906"
 ---
 # <a name="system-gesture"></a>Mouvement système
 
 Le mouvement système est un mouvement manuel utilisé pour appeler le menu Démarrer. Cela revient à appuyer sur la touche Windows du clavier, le bouton Xbox sur un contrôleur Xbox ou le bouton Windows sur le contrôleur de mouvement du casque immersif. Il est important de comprendre quels mouvements sont réservés pour le système sur chaque appareil de réalité mixte afin d’éviter les conflits lors de la conception de vos interactions.
 
-## <a name="device-support"></a>Périphériques pris en charge
+## <a name="device-support"></a>Prise en charge des appareils
 
 <table>
     <colgroup>
@@ -33,7 +33,7 @@ Le mouvement système est un mouvement manuel utilisé pour appeler le menu Dém
         <td><a href="immersive-headset-hardware-details.md"><strong>Casques immersifs</strong></a></td>
     </tr>
      <tr>
-        <td>Bourgeon</td>
+        <td>Fleuri</td>
         <td>✔️</td>
         <td>❌</td>
         <td>❌</td>
@@ -52,7 +52,7 @@ Le mouvement système est un mouvement manuel utilisé pour appeler le menu Dém
     </tr>
 </table>
 
-## <a name="bloom"></a>Bourgeon
+## <a name="bloom"></a>Fleuri
 Pour afficher le menu Démarrer dans HoloLens (1ère génération), nous avons conçu « fleuri », qui est un geste symbolique imitant la fleur florale. Il est propre à l’interaction surefooted, facile à effectuer et rapide à rappeler. Pour effectuer le mouvement de floraison sur HoloLens (1ère génération), tenez votre main avec votre paume, puis ouvrez votre main en répartissant vos doigts.
 
 :::row:::
@@ -113,7 +113,7 @@ Vous pouvez également effectuer le mouvement de démarrage avec une seule main.
 
 ---
 
-## <a name="see-also"></a>Articles associés
+## <a name="see-also"></a>Voir aussi
 
 * [Interactions instinctuelles](interaction-fundamentals.md)
 * [Suivre du regard](eye-tracking.md)

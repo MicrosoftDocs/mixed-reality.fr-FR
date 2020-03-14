@@ -7,14 +7,14 @@ ms.date: 10/22/2019
 ms.topic: article
 keywords: la réalité mixte, Windows Mixed Reality, HoloLens, immersif, VR, Mr, prise en main, hologramme, Academy, didacticiel
 ms.openlocfilehash: 0600383b3cca3f580f014597217afc6ae78836dd
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926642"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375596"
 ---
 >[!NOTE]
->Les didacticiels d’Académie de la réalité mixte ont été conçus avec les casques immersif (1er génération) et de réalité mixte à l’esprit.  Par conséquent, nous pensons qu’il est important de ne pas mettre en place ces didacticiels pour les développeurs qui cherchent toujours des conseils en matière de développement pour ces appareils.  Ces didacticiels ne seront **_pas_** mis à jour avec les derniers ensembles d’outils ou interactions utilisés pour HoloLens 2.  Ils seront conservés pour continuer à travailler sur les appareils pris en charge. [Une nouvelle série de didacticiels](mrlearning-base.md) a été publiée pour HoloLens 2.
+>Les tutoriels Mixed Reality Academy ont été conçus pour les appareils HoloLens (1re génération) et les casques immersifs de réalité mixte.  Nous estimons qu’il est important de laisser ces tutoriels à la disposition des développeurs qui recherchent encore des conseils pour développer des applications sur ces appareils.  Notez que ces tutoriels **_ne sont pas_** mis à jour avec les derniers ensembles d’outils ou interactions utilisés pour HoloLens 2.  Ils sont fournis dans le but de fonctionner sur les appareils pris en charge. Une [nouvelle série de tutoriels](mrlearning-base.md) a été publiée pour HoloLens 2.
 
 <br>
 
@@ -22,17 +22,17 @@ ms.locfileid: "73926642"
 
 Ce didacticiel vous guide dans la création d’une application de réalité mixte de base créée avec Unity.
 
-## <a name="device-support"></a>Périphériques pris en charge
+## <a name="device-support"></a>Prise en charge des appareils
 
 <table>
 <tr>
-<th>Course</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Casques immersifs</a></th>
+<th>Cours</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Casques immersifs</a></th>
 </tr><tr>
 <td>Notions de base de m. 100 : prise en main d’Unity</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
 </table>
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Composants requis
 
 * Un PC Windows 10 configuré avec les [outils appropriés installés](install-the-tools.md).
 
@@ -81,7 +81,7 @@ Troisièmement, examinons le plan near clip dans Unity et empêchez les objets d
 
 **Pour les applications HoloLens**, le plan near clip peut être défini sur les 0,85 compteurs [recommandés pour hololens](camera-in-unity.md#clip-planes) .
 
-1. Avec la **caméra principale** toujours sélectionnée dans le volet de **hiérarchie** , recherchez le composant **Camera** dans le panneau de l' **inspecteur** , puis modifiez le champ du **plan near clip** de la valeur par défaut **0,3** sur HoloLens Recommended **0,85** .
+1. Avec la **caméra principale** toujours sélectionnée dans le volet de **hiérarchie** , recherchez le composant **Camera** dans le panneau **inspecteur** , puis modifiez le champ **near clip plan** de la valeur par défaut **0,3** en HoloLens Recommended **0,85**.
 
 **Pour les applications de réalité mixte ciblant des casques immersifs**, nous pouvons utiliser le paramètre par défaut fourni par Unity.
 
@@ -194,7 +194,7 @@ Nous sommes maintenant prêts à compiler notre projet dans Visual Studio et à 
 6.  Le **type de build UWP** doit être **D3D**.
 7.  Le **Kit de développement logiciel (SDK) UWP** peut être laissé sur le **dernier installé**.
 8.  Vérifiez **les C# projets Unity** en cours de débogage.
-9.  Cliquez sur **Build**.
+9.  Cliquez sur **Générer**.
 10. Dans l’Explorateur de fichiers, cliquez sur **nouveau dossier** et nommez le dossier **« app »** .
 11. Après avoir sélectionné le dossier de l' **application** , cliquez sur le bouton **Sélectionner un dossier** .
 12. Une fois la création d’Unity terminée, une fenêtre de l’Explorateur de fichiers Windows s’affiche.
@@ -234,7 +234,7 @@ Assurez-vous que l’appareil est branché via le câble USB.
 
 Maintenant que votre application est déployée, essayez de déplacer tout autour du cube et observez qu’il reste dans le monde.
 
-## <a name="see-also"></a>Articles associés
+## <a name="see-also"></a>Voir aussi
 
 * [Vue d’ensemble du développement Unity](unity-development-overview.md)
 * [Bonnes pratiques sur l’utilisation d’Unity et de Visual Studio](best-practices-for-working-with-unity-and-visual-studio.md)

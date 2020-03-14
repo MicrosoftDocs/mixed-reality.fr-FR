@@ -7,11 +7,11 @@ ms.date: 03/21/2018
 ms.topic: article
 keywords: Shell, système d’exploitation, plateforme, maison, maison, accueil, environnement, démarrer, menu Démarrer, menu Accueil, pin, application, lancer des applications, placer des applications, téléporter, déplacer, naviguer
 ms.openlocfilehash: 9de4cb44505d6cf4d0d3e4bd0fd9c5ee681063a5
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438160"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375896"
 ---
 # <a name="navigating-the-windows-mixed-reality-home"></a>Navigation dans la page d’hébergement Windows Mixed Reality
 
@@ -134,7 +134,7 @@ Windows Mixed Reality possède un certain nombre d’applications intégrées, t
 * **Bureau** (casques immersifs) pour afficher votre moniteur de bureau dans un casque immersif
 * **Explorateur de fichiers** Accéder aux fichiers et aux dossiers situés sur votre appareil
 
-## <a name="see-also"></a>Articles associés
+## <a name="see-also"></a>Voir aussi
 * [Vues d’applications](app-views.md)
 * [Contrôleurs de mouvement](motion-controllers.md)
 * [Accessoires matériels](hardware-accessories.md)

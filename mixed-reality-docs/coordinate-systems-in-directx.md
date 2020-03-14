@@ -7,11 +7,11 @@ ms.date: 02/24/2019
 ms.topic: article
 keywords: Réalité mixte, localisateur spatial, frame de référence spatiale, système de coordonnées spatiales, étape spatiale, exemple de code, stabilisation d’image, point d’ancrage spatial, magasin d’ancrage spatial, perte de suivi, procédure pas à pas
 ms.openlocfilehash: a0bce897c1982715af24f0bf7c398cdee10f017f
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73436224"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375616"
 ---
 # <a name="coordinate-systems-in-directx"></a>Systèmes de coordonnées dans DirectX
 
@@ -574,7 +574,7 @@ Pour le rendu, vous pouvez souvent obtenir de meilleurs résultats en regroupant
 
 ## <a name="create-holograms-using-a-device-attached-frame-of-reference"></a>Créer des hologrammes à l’aide d’une image de référence associée à un appareil
 
-Il peut arriver que vous souhaitiez afficher un hologramme qui [reste attaché](coordinate-systems.md#attached-frame-of-reference) à l’emplacement de l’appareil, par exemple un panneau avec des informations de débogage ou un message d’information lorsque l’appareil est uniquement en mesure de déterminer son orientation et non sa position dans espace. Pour ce faire, nous utilisons un cadre de référence attaché.
+Il peut arriver que vous souhaitiez afficher un hologramme qui [reste attaché](coordinate-systems.md#attached-frame-of-reference) à l’emplacement de l’appareil, par exemple un panneau avec des informations de débogage ou un message d’information lorsque l’appareil est uniquement en mesure de déterminer son orientation et non sa position dans l’espace. Pour ce faire, nous utilisons un cadre de référence attaché.
 
 La classe SpatialLocatorAttachedFrameOfReference définit des systèmes de coordonnées relatifs à l’appareil plutôt qu’au monde réel. Ce cadre a un titre fixe par rapport à l’environnement de l’utilisateur qui pointe dans la direction vers laquelle l’utilisateur était confronté lorsque le frame de référence a été créé. À partir de là, toutes les orientations dans ce frame de référence sont relatives à cet en-tête fixe, même lorsque l’utilisateur fait pivoter l’appareil.
 
@@ -794,7 +794,7 @@ Le modèle d’application holographique Windows est fourni avec un gestionnaire
 
 Les API de [mappage spatial](spatial-mapping-in-directx.md) utilisent des systèmes de coordonnées pour obtenir des transformations de modèle pour les maillages de surface.
 
-## <a name="see-also"></a>Articles associés
+## <a name="see-also"></a>Voir aussi
 * [Systèmes de coordonnées](coordinate-systems.md)
 * [Ancres spatiales](spatial-anchors.md)
 * <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure Spatial Anchors</a>

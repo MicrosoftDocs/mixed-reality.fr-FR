@@ -7,11 +7,11 @@ ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, hologrammes, rendu, 3D Graphics, HolographicFrame, boucle de rendu, boucle de mise à jour, procédure pas à pas, exemple de code, Direct3D
 ms.openlocfilehash: 6b2e2dca9115d7093e94019d5ed91201f6ee3424
-ms.sourcegitcommit: f4812e1312c4751a22a2de56771c475b22a4ba24
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/09/2019
-ms.locfileid: "74940867"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375976"
 ---
 # <a name="rendering-in-directx"></a>Rendu dans DirectX
 
@@ -91,7 +91,7 @@ auto viewTransformContainer = cameraPose.TryGetViewTransform(coordinateSystem);
 
 ### <a name="process-gaze-and-gesture-input"></a>Traiter le point de regard et l’entrée de mouvement
 
-Les entrées de [regard](gaze-in-directx.md) et de [pointage](hands-and-motion-controllers-in-directx.md) ne sont pas basées sur le temps et ne doivent donc pas être mises à jour dans la fonction **StepTimer** . Toutefois, cette entrée est une information dont l’application a besoin pour examiner chaque frame.
+[Gaze](gaze-in-directx.md) Les entrées [de regard et de](hands-and-motion-controllers-in-directx.md) pointage ne sont pas basées sur le temps et ne doivent donc pas être mises à jour dans la fonction **StepTimer** . Toutefois, cette entrée est une information dont l’application a besoin pour examiner chaque frame.
 
 ### <a name="process-time-based-updates"></a>Mettre à jour le processus basé sur le temps
 
@@ -743,6 +743,6 @@ if (FAILED(hr))
     return hr;
 ```
 
-## <a name="see-also"></a>Articles associés
+## <a name="see-also"></a>Voir aussi
 * [Systèmes de coordonnées dans DirectX](coordinate-systems-in-directx.md)
 * [Utilisation de l’émulateur HoloLens](using-the-hololens-emulator.md)

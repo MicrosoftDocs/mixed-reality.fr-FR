@@ -7,11 +7,11 @@ ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, synchroniser, ancrage spatial, transfert, multijoueur, vue, scénario, procédure pas à pas, exemple de code, transfert, transfert d’ancrage local, exportation d’ancrage, importation d’ancrage
 ms.openlocfilehash: f961862c3c49872484683e264fb9c62b5d0b60ee
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437956"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79376026"
 ---
 # <a name="local-anchor-transfers-in-directx"></a>Transferts d’ancrage locaux dans DirectX
 
@@ -284,7 +284,7 @@ L’objet BLOB contient une représentation de l’environnement à proximité d
 
 ### <a name="export-of-multiple-spatialanchors"></a>Exportation de plusieurs SpatialAnchors
 
-À l’instar de l’exportation d’un seul SpatialAnchor, l’objet BLOB contient une représentation de l’environnement à proximité de tous les SpatialAnchors spécifiés. En outre, l’objet BLOB contient des informations sur les connexions entre les SpatialAnchors inclus, s’ils se trouvent dans le même espace physique. Cela signifie que si deux SpatialAnchors à proximité sont importés, un hologramme attaché au *second* SpatialAnchor serait localisable même si l’appareil reconnaît uniquement l’environnement autour du *premier* SpatialAnchor, car il y a suffisamment de données pour la transformation de calcul entre les deux SpatialAnchors a été incluse dans l’objet BLOB. Si les deux SpatialAnchors ont été exportés individuellement (deux appels distincts à TryExportSpatialAnchors), il se peut que le nombre de données incluses dans l’objet BLOB soit insuffisant pour les hologrammes attachés au deuxième SpatialAnchor à localiser lorsque le premier est localisé.
+À l’instar de l’exportation d’un seul SpatialAnchor, l’objet BLOB contient une représentation de l’environnement à proximité de tous les SpatialAnchors spécifiés. En outre, l’objet BLOB contient des informations sur les connexions entre les SpatialAnchors inclus, s’ils se trouvent dans le même espace physique. Cela signifie que si deux SpatialAnchors proches sont importés, un hologramme attaché au *second* SpatialAnchor serait localisable même si l’appareil reconnaît uniquement l’environnement autour du *premier* SpatialAnchor, car suffisamment de données pour calculer la transformation entre les deux SpatialAnchors ont été incluses dans l’objet BLOB. Si les deux SpatialAnchors ont été exportés individuellement (deux appels distincts à TryExportSpatialAnchors), il se peut que le nombre de données incluses dans l’objet BLOB soit insuffisant pour les hologrammes attachés au deuxième SpatialAnchor à localiser lorsque le premier est localisé.
 
 ![Plusieurs ancres exportées à l’aide d’un seul appel TryExportAnchorsAsync](images/multipleanchors.png) ![Plusieurs ancres exportées à l’aide d’un appel TryExportAnchorsAsync distinct pour chaque ancre](images/separateanchors.png)
 
@@ -674,7 +674,7 @@ void SampleAnchorTcpClient::HandleException(Exception^ exception)
 
 C’est tout ! Maintenant, vous devez disposer de suffisamment d’informations pour essayer de localiser les ancres reçues sur le réseau. Là encore, Notez que le client doit disposer d’un nombre suffisant de données de suivi visuel pour l’espace pour la localisation de l’ancre. Si cela ne fonctionne pas immédiatement, essayez de vous lancer pendant un certain temps. Si cela ne fonctionne toujours pas, faites en sorte que le serveur envoie davantage d’ancres et qu’il utilise des communications réseau pour s’en contenter. Vous pouvez essayer cela en téléchargeant le HolographicSpatialAnchorTransferSample, en configurant les adresses IP du client et du serveur, et en le déployant sur des appareils HoloLens client et serveur.
 
-## <a name="see-also"></a>Articles associés
+## <a name="see-also"></a>Voir aussi
 * [Bibliothèque de modèles parallèles (PPL)](https://msdn.microsoft.com/library/dd492418.aspx)
 * [Windows. Networking. StreamSocket](https://msdn.microsoft.com/library/windows/apps/windows.networking.sockets.streamsocket.aspx)
 * [Windows. Networking. StreamSocketListener](https://msdn.microsoft.com/library/windows/apps/windows.networking.sockets.streamsocketlistener.aspx)

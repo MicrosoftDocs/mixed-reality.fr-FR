@@ -7,11 +7,11 @@ ms.date: 03/21/2018
 ms.topic: article
 keywords: mappage spatial, HoloLens, réalité mixte, reconstruction de surface, maille
 ms.openlocfilehash: c4e2f9e49cfe4df9cf875d18b19d62e25c200d76
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926739"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375826"
 ---
 # <a name="spatial-mapping"></a>Mappage spatial
 
@@ -21,7 +21,7 @@ Le mappage spatial fournit une représentation détaillée des surfaces réelles
 
 >[!VIDEO https://www.youtube.com/embed/zff2aQ1RaVo]
 
-## <a name="device-support"></a>Périphériques pris en charge
+## <a name="device-support"></a>Prise en charge des appareils
 
 <table>
     <colgroup>
@@ -83,7 +83,7 @@ Plusieurs facteurs, détaillés [ici](environment-considerations-for-hololens.md
 
 ![Illustrations de scénarios courants d’utilisation de mappages spatiaux : placement, occlusion, physique et navigation](images/sm-concepts-1000px.png)
 
-### <a name="placement"></a>Sélection élective
+### <a name="placement"></a>Placement
 
 Le mappage spatial offre aux applications la possibilité de présenter des formes d’interaction naturelles et familières à l’utilisateur. qu’est-ce qui pourrait être plus naturel que de placer votre téléphone sur le Bureau ?
 
@@ -129,7 +129,7 @@ Les principaux défis techniques liés à la mise en œuvre de la fonctionnalit�
 
 Notez que la fonctionnalité intégrée NavMesh dans Unity ne peut pas être utilisée avec des surfaces de mappage spatiale. En effet, les surfaces de mappage spatiale ne sont pas connues jusqu’au démarrage de l’application, tandis que les fichiers de données NavMesh doivent être générés à partir des ressources sources à l’avance. Notez également que le système de mappage spatial ne fournit pas d' [informations sur les surfaces très loin](spatial-mapping.md#the-environment-scanning-experience) de l’emplacement actuel de l’utilisateur. Par conséquent, l’application doit se déconnecter de lui-même s’il s’agit de créer une carte d’une très grande zone.
 
-### <a name="visualization"></a>Sessions
+### <a name="visualization"></a>Visualisation
 
 La plupart du temps, il convient que les surfaces spatiales soient invisibles ; pour réduire l’encombrement visuel et laisser le monde réel parler de lui-même. Toutefois, il est parfois utile de visualiser les surfaces de mappage spatiales directement, malgré le fait que leurs équivalents réels sont déjà visibles.
 
@@ -245,7 +245,7 @@ Pour qu’une API physique (telle que [Havok](https://www.havok.com/)) fournisse
 
 Lorsque vous effectuez des raycasts sur des surfaces spatiales, gardez à l’esprit que ces surfaces sont souvent complexes, des formes encombrées de petits détails, tout comme votre bureau ! Cela signifie qu’un seul raycast est souvent insuffisant pour vous fournir suffisamment d’informations sur la forme de la surface et la forme de l’espace vide près de celui-ci. Il est donc généralement judicieux d’effectuer de nombreux raycasts dans une petite zone et d’utiliser les résultats d’agrégation pour obtenir une compréhension plus fiable de la surface. Par exemple, l’utilisation de la moyenne de 10 raycasts pour guider le placement de l’hologramme sur une surface produit un résultat beaucoup plus lisse et moins instable qui utilise simplement un raycast unique.
 
-Toutefois, gardez à l’esprit que chaque raycast peut avoir un coût de calcul élevé. Par conséquent, en fonction de votre scénario d’utilisation, vous devez compenser le coût de calcul des raycasts supplémentaires (effectuées à chaque trame) par rapport au coût de calcul du [traitement des maillages](spatial-mapping.md#mesh-processing) pour lisser et supprimer des trous dans les surfaces spatiales (effectuée quand spatial les mailles sont mises à jour).
+Toutefois, gardez à l’esprit que chaque raycast peut avoir un coût de calcul élevé. Par conséquent, en fonction de votre scénario d’utilisation, vous devez compenser le coût de calcul des raycasts supplémentaires (effectuées à chaque trame) par rapport au coût de calcul du [traitement des maillages](spatial-mapping.md#mesh-processing) pour lisser et supprimer des trous dans les surfaces spatiales (effectuée quand des maillages spatiaux sont mis à jour).
 
 ## <a name="the-environment-scanning-experience"></a>Expérience d’analyse de l’environnement
 
@@ -365,11 +365,11 @@ Voici quelques exemples de différents types de traitement de maillage qui peuve
 * De même, si les données synthétiques ou enregistrées peuvent être utiles pour le débogage, ne vous inquiétez pas trop sur les mêmes cas de test. Cela peut retarder la recherche de problèmes importants que des tests plus variés auraient été détectés précédemment.
 * Il est judicieux d’effectuer des tests avec des utilisateurs réels (et idéalement non-surveillés), car ils ne peuvent pas utiliser le HoloLens ou votre application exactement de la même façon que vous le faites. En fait, il peut être surpris de savoir comment le comportement, les connaissances et les hypothèses de personnes divergentes peuvent être !
 
-## <a name="troubleshooting"></a>Dépannage
+## <a name="troubleshooting"></a>Résolution des problèmes
 * Pour que les maillages de surface soient correctement orientés, chaque GameObject doit être actif avant d’être envoyé à SurfaceObserver pour que sa maille soit construite. Dans le cas contraire, les mailles s’affichent dans votre espace mais subissent une rotation à des angles inhabituels.
 * Le GameObject qui exécute le script qui communique avec le SurfaceObserver doit être défini sur l’origine. Dans le cas contraire, tous les GameObjects que vous créez et envoyez au SurfaceObserver pour que leurs maillages soient construits auront un décalage égal au décalage de l’objet de jeu parent. Cela peut faire apparaître plusieurs mètres dans vos mails, ce qui rend très difficile le débogage de ce qui se passe.
 
-## <a name="see-also"></a>Articles associés
+## <a name="see-also"></a>Voir aussi
 * [Systèmes de coordonnées](coordinate-systems.md)
 * [Mappage spatial dans DirectX](spatial-mapping-in-directx.md)
 * [Mappage spatial dans Unity](spatial-mapping-in-unity.md)

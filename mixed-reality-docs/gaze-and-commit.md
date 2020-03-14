@@ -7,11 +7,11 @@ ms.date: 10/31/2019
 ms.topic: article
 keywords: La réalité mixte, le point de présence, le regard, l’interaction, la conception, le suivi des yeux, le suivi des têtes
 ms.openlocfilehash: df152f6a3a6e4ae2d6c32a0c56fbb615bcfa7aa8
-ms.sourcegitcommit: a5dc182da237f63f0487d40a2e11894027208b6c
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73441124"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375846"
 ---
 # <a name="gaze-and-commit"></a>Point de regard et validation
 
@@ -22,7 +22,7 @@ Cela signifie qu’il est préférable d’utiliser le contenu holographique qui
 
 Les casques de réalité mixte peuvent utiliser la position et l’orientation de la tête de l’utilisateur pour déterminer le vecteur de direction de l’en-tête. Vous pouvez l’assimiler à un rayon laser qui prend son origine entre les yeux de l’utilisateur et pointe droit devant. C’est une approximation assez grossière de la zone vers laquelle se porte le regard de l’utilisateur. Votre application peut croiser ce rayon avec des objets virtuels ou réels, et dessiner un curseur à cet emplacement pour permettre à l’utilisateur de savoir ce qu’il cible actuellement.
 
-En plus de la tête de regard, certains casques de réalité mixte, tels que HoloLens 2, incluent des systèmes de suivi oculaire qui produisent un vecteur point-Asie. Ces dispositifs fournissent une mesure précise de la zone vers laquelle se porte le regard de l’utilisateur. Dans les deux cas, le point de regard représente un signal important pour l’intention de l’utilisateur. Mieux le système peut interpréter et prédire les actions prévues de l’utilisateur, l’augmentation de la satisfaction des utilisateurs et l’amélioration des performances.
+En plus de la tête de regard, certains casques de réalité mixte, tels que HoloLens 2, incluent des systèmes de suivi oculaire qui produisent un vecteur point-Orient. Ces dispositifs fournissent une mesure précise de la zone vers laquelle se porte le regard de l’utilisateur. Dans les deux cas, le point de regard représente un signal important pour l’intention de l’utilisateur. Mieux le système peut interpréter et prédire les actions prévues de l’utilisateur, l’augmentation de la satisfaction des utilisateurs et l’amélioration des performances.
 
 Voici quelques exemples de la façon dont vous êtes un développeur de réalité mixte qui peut tirer parti de la tête ou du regard :
 * Votre application peut faire une intersection avec le regard des hologrammes dans votre scène pour déterminer où l’attention de l’utilisateur est (plus précise avec le regard de l’oeil).
@@ -33,7 +33,7 @@ Voici quelques exemples de la façon dont vous êtes un développeur de réalit�
 <br>
 
 
-## <a name="device-support"></a>Périphériques pris en charge
+## <a name="device-support"></a>Prise en charge des appareils
 
 <table>
     <colgroup>
@@ -290,13 +290,13 @@ Voici trois choses que vous devez envisager :
 
 
 
-## <a name="see-also"></a>Articles associés
-* [Interaction basée sur les yeux](eye-gaze-interaction.md)
-* [Suivi des yeux sur HoloLens 2](eye-tracking.md)
+## <a name="see-also"></a>Voir aussi
+* [Interaction basée sur le regard](eye-gaze-interaction.md)
+* [Suivi oculaire sur HoloLens 2](eye-tracking.md)
 * [Pointer du regard et fixer](gaze-and-dwell.md)
-* [Manipulation directe](direct-manipulation.md)
-* [Mouvements pratiques](gaze-and-commit.md#composite-gestures)
-* [Mains et validation](point-and-commit.md)
+* [Mains : Manipulation directe](direct-manipulation.md)
+* [Mains : Mouvements](gaze-and-commit.md#composite-gestures)
+* [Mains : Pointer et valider](point-and-commit.md)
 * [Interactions instinctuelles](interaction-fundamentals.md)
 * [Entrée vocale](voice-input.md)
 

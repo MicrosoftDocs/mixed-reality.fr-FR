@@ -7,11 +7,11 @@ ms.date: 02/24/2019
 ms.topic: article
 keywords: MRC, photo, vidéo, capture, appareil photo
 ms.openlocfilehash: 72600f889997c96a629faebc35aba4b4841d4d8b
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926799"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375966"
 ---
 # <a name="mixed-reality-capture-for-developers"></a>Capture de réalité mixte pour les développeurs
 
@@ -197,25 +197,25 @@ Les applications ont deux options pour ajouter l’effet :
 
 Effet vidéo MRC (**Windows. Media. MixedRealityCapture. MixedRealityCaptureVideoEffect**)
 
-|  Nom de la propriété  |  Tapez  |  Valeur par défaut  |  Description | 
+|  Nom de propriété  |  Type  |  Valeur par défaut  |  Description | 
 |----------|----------|----------|----------|
 |  StreamType  |  UINT32 ([MediaStreamType](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaStreamType))  |  1 (VideoRecord)  |  Décrivez le flux de capture pour lequel cet effet est utilisé. L’audio n’est pas disponible. | 
 |  HologramCompositionEnabled  |  booléen  |  TRUE  |  Indicateur permettant d’activer ou de désactiver les hologrammes dans la capture vidéo. | 
 |  RecordingIndicatorEnabled  |  booléen  |  TRUE  |  Indicateur permettant d’activer ou de désactiver l’indicateur d’enregistrement à l’écran pendant la capture d’hologramme. | 
 |  VideoStabilizationEnabled  |  booléen  |  FALSE  |  Indicateur d’activation ou de désactivation de la stabilisation vidéo optimisée par le dispositif de suivi HoloLens. | 
 |  VideoStabilizationBufferLength  |  UINT32  |  0  |  Définissez le nombre de frames d’historique utilisés pour la stabilisation vidéo. 0 est une latence de 0 et presque « gratuit » du point de vue de l’alimentation et des performances. 15 est recommandé pour une qualité optimale (au prix de 15 trames de latence et de mémoire). | 
-|  GlobalOpacityCoefficient  |  flottant  |  0,9 (HoloLens) 1,0 (casque immersif)  |  Définissez le coefficient d’opacité globale de l’hologramme dans une plage allant de 0,0 (entièrement transparent) à 1,0 (entièrement opaque). | 
+|  GlobalOpacityCoefficient  |  float  |  0,9 (HoloLens) 1,0 (casque immersif)  |  Définissez le coefficient d’opacité globale de l’hologramme dans une plage allant de 0,0 (entièrement transparent) à 1,0 (entièrement opaque). | 
 |  BlankOnProtectedContent  |  booléen  |  FALSE  |  Indicateur d’activation ou de désactivation du retour d’un frame vide si une application UWP 2d présente un contenu protégé. Si cet indicateur a la valeur false et qu’une application UWP 2D affiche du contenu protégé, l’application UWP 2D est remplacée par une texture de contenu protégé dans le casque et dans la capture de la réalité mixte. |
 |  ShowHiddenMesh  |  booléen  |  FALSE  |  Indicateur permettant d’activer ou de désactiver l’indication du maillage de zone masqué et du contenu voisin de l’appareil photo holographique. |
-| En-dessous | Size | 0,0 | Définissez la taille de sortie souhaitée après rognage pour la stabilisation vidéo. Une taille de rognage par défaut est choisie si 0 ou si une taille de sortie non valide est spécifiée. |
+| En-dessous | Taille | 0, 0 | Définissez la taille de sortie souhaitée après rognage pour la stabilisation vidéo. Une taille de rognage par défaut est choisie si 0 ou si une taille de sortie non valide est spécifiée. |
 | PreferredHologramPerspective | UINT32 | 1 (PhotoVideoCamera) | Énumération utilisée pour indiquer la configuration de la vue d’appareil photo holographique à capturer. Le paramètre 0 (affichage) signifie que l’application n’est pas invitée à effectuer le rendu à partir de la caméra photo/vidéo |
 
 Effet audio MRC (**Windows. Media. MixedRealityCapture. MixedRealityCaptureAudioEffect**)
 
 <table>
 <tr>
-<th>Nom de la propriété</th>
-<th>Tapez</th>
+<th>Nom de propriété</th>
+<th>Type</th>
 <th>Valeur par défaut</th>
 <th>Description</th>
 </tr>
@@ -267,6 +267,6 @@ Avec la mise à jour 2018 d’avril de Windows 10, il n’existe plus de limitat
 
 Avant la mise à jour 2018 de Windows 10 avril, l’enregistreur MRC personnalisé d’une application était mutuellement exclusif avec la MRC du système (capture de photos, capture de vidéos ou diffusion en continu à partir du portail de périphériques Windows).
 
-## <a name="see-also"></a>Articles associés
+## <a name="see-also"></a>Voir aussi
 * [Capture de Réalité Mixte](mixed-reality-capture.md)
 * [Vue Spectateur](spectator-view.md)

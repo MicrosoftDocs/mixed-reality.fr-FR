@@ -7,15 +7,15 @@ ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, rendu holographique, holographique, immersif, point de focus, mémoire tampon de profondeur, orientation uniquement, positionnelle, opaque, transparent, clip
 ms.openlocfilehash: 1a2e66d5c028109a58ea8682668521f50158add9
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73436961"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375586"
 ---
 # <a name="camera-in-unity"></a>Appareil photo dans Unity
 
-Quand vous portez un casque de réalité mixte, il devient le centre de votre monde holographique. Le composant [appareil photo](https://docs.unity3d.com/Manual/class-Camera.html) Unity gère automatiquement le rendu stéréoscopique et suit le mouvement et la rotation de votre tête quand la « réalité virtuelle prise en charge » de votre projet est sélectionnée avec « Windows Mixed Reality » comme appareil (dans les autres paramètres Section des paramètres du lecteur Windows Store). Cela peut être indiqué sous la forme « Windows holographique » dans les versions antérieures d’Unity.
+Quand vous portez un casque de réalité mixte, il devient le centre de votre monde holographique. Le composant [appareil photo](https://docs.unity3d.com/Manual/class-Camera.html) Unity gère automatiquement le rendu stéréoscopique et suit le mouvement et la rotation de votre tête lorsque l’appareil est sélectionné avec la « réalité virtuelle prise en charge » dans la section autres paramètres des paramètres du lecteur Windows Store. Cela peut être indiqué sous la forme « Windows holographique » dans les versions antérieures d’Unity.
 
 Toutefois, pour optimiser complètement la qualité visuelle et la [stabilité des hologrammes](hologram-stability.md), vous devez définir les paramètres de l’appareil photo décrits ci-dessous.
 
@@ -76,7 +76,7 @@ Par défaut :
 * Les **casques immersifs** effectuent une reprojection de position, en ajustant vos hologrammes pour la prédiction à la fois à la position et à l’orientation, si l’application fournit un tampon de profondeur pour un frame donné.  Si aucune mémoire tampon de profondeur n’est fournie, le système corrigera uniquement les prédictions incorrectes dans l’orientation.
 * Les **casques holographiques** comme HoloLens effectuent une reprojection de position, que l’application fournisse ou non sa mémoire tampon de profondeur.  La reprojection positionnel est possible sans tampons de profondeur sur HoloLens, car le rendu est souvent épars avec un arrière-plan stable fourni par le monde réel.
 
-Si vous savez que vous créez une [expérience d’orientation uniquement](coordinate-systems-in-unity.md#building-an-orientation-only-or-seated-scale-experience) avec du contenu verrouillé de manière rigide (par exemple, du contenu vidéo de 360 degrés), vous pouvez définir explicitement le mode de reprojection sur l’orientation uniquement en définissant [ HolographicSettings. ReprojectionMode](https://docs.unity3d.com/ScriptReference/XR.WSA.HolographicSettings.ReprojectionMode.html) à [HolographicReprojectionMode. OrientationOnly](https://docs.unity3d.com/ScriptReference/XR.WSA.HolographicSettings.HolographicReprojectionMode.html).
+Si vous savez que vous créez une [expérience d’orientation uniquement](coordinate-systems-in-unity.md#building-an-orientation-only-or-seated-scale-experience) avec du contenu verrouillé de manière rigide (par exemple, du contenu vidéo de 360 degrés), vous pouvez définir explicitement le mode de reprojection sur la valeur orientation uniquement en définissant [HolographicSettings. ReprojectionMode](https://docs.unity3d.com/ScriptReference/XR.WSA.HolographicSettings.ReprojectionMode.html) sur [HolographicReprojectionMode. OrientationOnly](https://docs.unity3d.com/ScriptReference/XR.WSA.HolographicSettings.HolographicReprojectionMode.html).
 
 ## <a name="sharing-your-depth-buffers-with-windows"></a>Partage de vos mémoires tampons de profondeur avec Windows
 
@@ -93,7 +93,7 @@ Pour définir si votre application Unity fournira un tampon de profondeur à Win
 
 En fournissant une mémoire tampon de profondeur à Windows, vous pouvez améliorer la qualité visuelle tant que Windows peut mapper avec précision les valeurs de profondeur par pixel normalisées dans votre tampon de profondeur à des distances exprimées en mètres, à l’aide des plans proches et Far que vous avez définis dans Unity sur la caméra principale.  Si votre rendu passe les valeurs de profondeur des poignées de manière classique, vous devez généralement être précis ici, bien que le rendu translucide passe l’écriture dans le tampon de profondeur pendant que l’affichage aux pixels de couleur existants peut confondre la reprojection.  Si vous savez que vos passes de rendu conservent un grand nombre de pixels de profondeur finale avec des valeurs de profondeur inexactes, vous obtiendrez probablement une meilleure qualité visuelle en désactivant l’option « Activer le partage de mémoire tampon de profondeur ».
 
-## <a name="see-also"></a>Articles associés
+## <a name="see-also"></a>Voir aussi
 
 * [Stabilité des hologrammes](hologram-stability.md)
 * [MixedRealityToolkit main Camera. Prefab](https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit/Input/Prefabs)

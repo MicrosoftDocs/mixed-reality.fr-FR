@@ -7,11 +7,11 @@ ms.date: 03/21/2018
 ms.topic: article
 keywords: Guide pratique, accessoires, Bluetooth, BT, contrôleur, boîtier de commande, cliquez sur Xbox
 ms.openlocfilehash: 566d4217fb674057e1dc3d9791b247185bf61d32
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73435147"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375696"
 ---
 # <a name="hardware-accessories"></a>Accessoires matériels
 

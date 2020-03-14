@@ -7,11 +7,11 @@ ms.date: 03/21/2018
 ms.topic: article
 keywords: 3D, modélisation, Guide de modélisation, besoins en ressources, instructions de création, lanceur, lanceur 3D, texture, matériaux, complexité, triangles, maillage, polygones, polynombre, limites
 ms.openlocfilehash: 536fd9bc2002d679ee3bf73d5c906b84c51e5d46
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926580"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375626"
 ---
 # <a name="create-3d-models-for-use-in-the-home"></a>Créer des modèles 3D à utiliser dans la page d’hébergement
 
@@ -53,16 +53,16 @@ La page d’hébergement Windows Mixed Reality ne prend pas en charge les modèl
 
 |  Niveau LOD  |  Nombre de triangles recommandé  |  Nombre maximal de triangles | 
 |------|------|------|
-|  LOD 0 |  10 000 |  10 000 | 
-|  LOD 1 |  5 000  |  10 000 | 
-|  LOD 2 |  2 500  |  10 000 | 
+|  LOD 0 |  10 000 |  10 000 | 
+|  LOD 1 |  5 000  |  10 000 | 
+|  LOD 2 |  2 500  |  10 000 | 
 
 ### <a name="node-counts-and-submesh-limits"></a>Nombres de nœuds et limites de sous-maillage
 La page d’hébergement de la réalité mixte Windows ne prend pas en charge les modèles avec plus de 64 nœuds ou de sous-maillages 32 par LOD. Les nœuds sont un concept de la [spécification glTF](https://github.com/KhronosGroup/glTF/tree/master/specification/2.0#nodes-and-hierarchy) qui définit les objets de la scène. Les sous-maillages sont définis dans le tableau de [primitives](https://github.com/KhronosGroup/glTF/tree/master/specification/2.0#meshes) sur le maillage de l’objet. 
 
-|  Fonctionnalité |  Description  |  Max pris en charge | Documentation |
+|  Composant |  Description  |  Max pris en charge | Documentation |
 |------|------|------|------|
-|  Nœuds |  Objets dans la scène glTF |  64 par LOD | [Cette](https://github.com/KhronosGroup/glTF/tree/master/specification/2.0#nodes-and-hierarchy)|
+|  Nodes |  Objets dans la scène glTF |  64 par LOD | [Cette](https://github.com/KhronosGroup/glTF/tree/master/specification/2.0#nodes-and-hierarchy)|
 |  Sous-maillages |  Somme des primitives sur tous les maillages |  32 par LOD | [Cette](https://github.com/KhronosGroup/glTF/tree/master/specification/2.0#meshes)|
 
 ## <a name="material-guidelines"></a>Instructions relatives aux matériaux
@@ -166,9 +166,9 @@ Windows MR utilise un nœud Geometry LODs pour restituer des modèles 3D à diff
 
 |  Niveau LOD  |  Nombre de triangles recommandé  |  Nombre maximal de triangles | 
 |-------|-------|-------|
-|  LOD 0 |  10 000 |  10 000 | 
-|  LOD 1 |  5 000  |  10 000 | 
-|  LOD 2 |  2 500  |  10 000 | 
+|  LOD 0 |  10 000 |  10 000 | 
+|  LOD 1 |  5 000  |  10 000 | 
+|  LOD 2 |  2 500  |  10 000 | 
 
 Lorsque vous utilisez LODs, spécifiez toujours 3 niveaux de LOD. Un LODs manquant entraîne le non-rendu du modèle de manière inattendue, car le système LOD passe au niveau de LOD manquant. glTF 2,0 ne prend pas actuellement en charge LODs dans le cadre de la spécification de base. LODs doit donc être défini à l’aide de l' [extension MSFT_LOD](https://github.com/sbtron/glTF/tree/MSFT_lod/extensions/Vendor/MSFT_lod).
 
@@ -235,10 +235,10 @@ Une fois que vous avez apporté les modifications à votre modèle glTF, vous po
 ### <a name="restrictions"></a>Restrictions
 Les animations ne peuvent pas dépasser 20 minutes et ne peuvent pas contenir plus de 36 000 images clés (20 minutes à 30 i/s). En outre, lorsque vous utilisez des animations basées sur des cibles morphes, vous ne dépassez pas 8192 sommets de cible morphe ou moins. Si vous dépassez ce nombre, la ressource animée sera non prise en charge dans la page d’hébergement de la réalité mixte Windows. 
 
-|Fonctionnalité|Durée maximum|
+|Composant|Maximum|
 |-----|-----|
-|Duration|20 minutes|
-|Images clés|36 000| 
+|Durée|20 minutes|
+|Images clés|36,000| 
 |Vertex cible Morph|8 192|
 
 ## <a name="gltf-implementation-notes"></a>Remarques sur l’implémentation de glTF
@@ -277,7 +277,7 @@ Un seul attribut de vertex UV est pris en charge.
 * [Spécification des extensions de compression de texture de réalité mixte HoloLens](https://github.com/KhronosGroup/glTF/blob/master/extensions/2.0/Vendor/MSFT_packing_normalRoughnessMetallic/README.md)
 * [Spécification des extensions glTF textures Microsoft DDS](https://github.com/KhronosGroup/glTF/tree/master/extensions/2.0/Vendor/MSFT_texture_dds)
 
-## <a name="see-also"></a>Articles associés
+## <a name="see-also"></a>Voir aussi
 
 * [Implémenter des lanceurs d’applications 3D (applications UWP)](implementing-3d-app-launchers.md)
 * [Implémenter des lanceurs d’applications 3D (applications Win32)](implementing-3d-app-launchers-win32.md)

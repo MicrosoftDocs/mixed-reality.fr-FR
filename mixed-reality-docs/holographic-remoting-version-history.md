@@ -10,8 +10,8 @@ ms.openlocfilehash: 62f54dbcf5327cdd5f13622704684a2cb0606d7d
 ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79092306"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375656"
 ---
 # <a name="holographic-remoting-version-history"></a>Historique des versions de la communication à distance holographique
 

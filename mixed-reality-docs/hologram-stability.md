@@ -7,11 +7,11 @@ ms.date: 03/21/2018
 ms.topic: article
 keywords: hologrammes, stabilité, hololens
 ms.openlocfilehash: ad48d057ee55d4d0d9ae3080d8030a481aef130f
-ms.sourcegitcommit: 5054f5c23965ce56599cb29ac9d9c6e48812dabd
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75623308"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375776"
 ---
 # <a name="hologram-stability"></a>Stabilité de l’hologramme
 
@@ -91,8 +91,8 @@ Les applications doivent prendre des mesures spécifiques pour activer les diff�
 
 Type de stabilisation |    Casques immersifs |    Génération HoloLens 1 | HoloLens 2
 --- | --- | --- | ---
-Reprojection de profondeur |    Nos recommandations |   NON APPLICABLE |   Nos recommandations<br/><br/>Les applications Unity doivent utiliser Unity 2018.4.12 ou version ultérieure ou Unity 2019,3 ou une version ultérieure. Sinon, utilisez la reprojection automatique planaire.
-Reprojection plan automatique | NON APPLICABLE |   Valeur par défaut recommandée |   Recommandé si la reprojection de profondeur ne donne pas les meilleurs résultats<br/><br/>Les applications Unity sont recommandées pour utiliser Unity 2018.4.12 ou version ultérieure ou Unity 2019,3 ou une version ultérieure.  Les versions d’Unity précédentes fonctionnent avec des résultats de reprojection légèrement dégradés.
+Reprojection de profondeur |    Recommandé |   N/A |   Recommandé<br/><br/>Les applications Unity doivent utiliser Unity 2018.4.12 ou version ultérieure ou Unity 2019,3 ou une version ultérieure. Sinon, utilisez la reprojection automatique planaire.
+Reprojection plan automatique | N/A |   Valeur par défaut recommandée |   Recommandé si la reprojection de profondeur ne donne pas les meilleurs résultats<br/><br/>Les applications Unity sont recommandées pour utiliser Unity 2018.4.12 ou version ultérieure ou Unity 2019,3 ou une version ultérieure.  Les versions d’Unity précédentes fonctionnent avec des résultats de reprojection légèrement dégradés.
 Reprojection planaire |   Non recommandé |   Recommandé si le plan automatique ne donne pas les meilleurs résultats |    Utilisez si aucune des options de profondeur ne donne les résultats souhaités    
 
 ### <a name="verifying-depth-is-set-correctly"></a>La précision de la vérification est définie correctement
@@ -137,7 +137,7 @@ La seule chose la plus importante qu’un développeur puisse faire pour stabili
 
 **Meilleures pratiques** Il n’existe pas de méthode universelle pour configurer le plan de stabilisation et il est spécifique à l’application. par conséquent, la recommandation principale consiste à expérimenter et à voir ce qui convient le mieux à vos scénarios. Toutefois, essayez d’aligner le plan de stabilisation avec autant de contenu que possible, car tout le contenu de ce plan est parfaitement stabilisé.
 
-Par exemple :
+Par exemple :
 * Si vous disposez uniquement d’un contenu planaire (lecture de l’application de lecture vidéo), alignez le plan de stabilisation avec le plan qui contient votre contenu.
 * Si 3 petites sphères sont verrouillées au niveau mondial, faites en sorte que le plan de stabilisation soit « coupé » bien que les centres de tous les sphères soient actuellement dans la vue de l’utilisateur.
 * Si votre scène a du contenu à des profondeurs sensiblement différentes, privilégiez les autres objets.
@@ -174,7 +174,7 @@ Bien qu’il soit difficile d’éviter complètement la séparation des couleur
 
 Comme précédemment, le rendu à 60 FPS et la définition du plan de stabilisation sont les techniques les plus importantes pour la stabilité des hologrammes. En cas de séparation sensible des couleurs, vérifiez d’abord que la fréquence d’images répond aux attentes.
 
-## <a name="see-also"></a>Articles associés
+## <a name="see-also"></a>Voir aussi
 * [Comprendre les performances de la réalité mixte](understanding-performance-for-mixed-reality.md)
 * [Couleurs, éclairage et matériaux](color,-light-and-materials.md)
 * [Interactions instinctuelles](interaction-fundamentals.md)

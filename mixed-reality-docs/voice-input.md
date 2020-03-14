@@ -7,11 +7,11 @@ ms.date: 10/03/2019
 ms.topic: article
 keywords: GGv, voix, Cortana, discours, entrée
 ms.openlocfilehash: f2ae18d4063c7c4a63346a1202cacaa7fbbdf959
-ms.sourcegitcommit: 6844930427b658ae31f642c395cd8a3b3cdbf857
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75723188"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375986"
 ---
 # <a name="voice-input"></a>Entrée vocale
 
@@ -32,7 +32,7 @@ Lorsque vous utilisez des commandes vocales (tête ou œil), le point de regard 
 <iframe width="940" height="530" src="https://www.youtube.com/embed/eHMkOpNUtR8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-## <a name="device-support"></a>Périphériques pris en charge
+## <a name="device-support"></a>Prise en charge des appareils
 
 <table>
     <colgroup>
@@ -57,7 +57,7 @@ Lorsque vous utilisez des commandes vocales (tête ou œil), le point de regard 
 
 ## <a name="the-select-command"></a>Commande « sélectionner »
 
-**HoloLens (1re génération)**
+**HoloLens (1re génération)**
 
 Même sans ajouter spécifiquement la prise en charge vocale à votre application, vos utilisateurs peuvent activer des hologrammes simplement en disant à la commande System Voice « Select ». Cela se comporte de la même façon qu’un [TAP Air](gaze-and-commit.md#composite-gestures) sur HoloLens, en appuyant sur le bouton de sélection sur l’interactiveur [hololens](hardware-accessories.md#hololens-clicker)ou en appuyant sur le déclencheur sur un [contrôleur de mouvement Windows Mixed Reality](motion-controllers.md). Vous entendez un son et vous voyez une info-bulle avec « sélectionner » qui s’affiche comme confirmation. « SELECT » est activé par un algorithme de détection de mot-clé à faible consommation d’énergie. il est donc toujours disponible pour vous, à tout moment, avec un impact minimal sur la durée de vie de la batterie, même avec vos mains.
 
@@ -121,7 +121,7 @@ Vous pouvez également indiquer « Hey Cortana » pour afficher Cortana à tou
         *Image : un utilisateur peut prononcer la commande « Adjust » qui s’affiche dans la barre de l’application pour ajuster la position de l’application*
     :::column-end:::
         :::column:::
-        ![space](images/spacer-20x582.png)<br>
+        espace de ![](images/spacer-20x582.png)<br>
         ![lors de la consultation d’une fenêtre d’application ou d’un hologramme, un utilisateur peut prononcer la commande « Adjust » qui s’affiche dans la barre de l’application pour ajuster la position de l’application dans le monde](images/microphone-600px.png)<br>
     :::column-end:::
 :::row-end:::
@@ -171,7 +171,7 @@ Si vous souhaitez obtenir la liste complète, dites « afficher toutes les comm
 
 ## <a name="dictation"></a>Dictée
 
-Plutôt que de taper avec des [pressions en l’air](gaze-and-commit.md#composite-gestures), la dictée vocale peut être plus efficace pour entrer du texte dans une application. Cela peut accélérer l’entrée avec moins d’efforts pour l’utilisateur.
+Plutôt que de taper avec des [robinets](gaze-and-commit.md#composite-gestures), la dictée vocale peut être plus efficace pour entrer du texte dans une application. Cela peut accélérer l’entrée avec moins d’efforts pour l’utilisateur.
 
 ![la dictée vocale commence en sélectionnant le bouton microphone](images/micbuttonfordictation.png)<br>
 *La dictée vocale commence en sélectionnant le bouton microphone sur le clavier.*
@@ -183,7 +183,7 @@ Plutôt que de taper avec des [pressions en l’air](gaze-and-commit.md#composit
 
 Il est recommandé d’ajouter des commandes vocales à toutes les expériences que vous créez. La voix est un moyen puissant et pratique de contrôler le système et les applications. Étant donné le nombre de dialectes et d’accents qui peuvent être utilisés, il est important de bien choisir les mots clés de reconnaissance vocale, afin de garantir que les commandes de vos utilisateurs seront correctement interprétées.
 
-### <a name="best-practices"></a>Bonnes pratiques
+### <a name="best-practices"></a>Meilleures pratiques
 
 Voici quelques bonnes pratiques qui faciliteront la reconnaissance vocale.
 * **Utilisez des commandes concises** : dans la mesure du possible, choisissez des mots clés de deux syllabes minimum. Les mots d’une syllabe comprennent souvent des voyelles qui peuvent être prononcées différemment selon l’accent de la personne. Exemple : « lire la vidéo » est préférable à « lire la vidéo actuellement sélectionnée »
@@ -282,11 +282,11 @@ Pour les applications qui souhaitent tirer parti des options de traitement d’e
 
 Tout ce traitement audio est l’accélération matérielle, ce qui signifie que les fonctionnalités se déchargent beaucoup moins d’énergie que si le même traitement a été effectué sur l’UC HoloLens. Évitez d’exécuter un autre traitement d’entrée audio sur le processeur pour maximiser la durée de vie de la batterie du système et tirer parti du traitement des entrées audio déchargées et intégrées.
 
-## <a name="languages"></a>Langues
+## <a name="languages"></a>Langages
 
 HoloLens 2 prend également en charge des langues supplémentaires. N’oubliez pas que les commandes vocales s’exécutent toujours dans la langue d’affichage du système même si plusieurs claviers sont installés ou si les applications essaient de créer un module de reconnaissance vocale dans une autre langue.
 
-## <a name="troubleshooting"></a>Dépannage
+## <a name="troubleshooting"></a>Résolution des problèmes
 
 Si vous rencontrez des problèmes à l’aide de « SELECT » et de « Hey Cortana », essayez de passer à un espace plus silencieux, à l’extérieur de la source de bruit, ou en parlant plus fort. À ce stade, toute la reconnaissance vocale sur HoloLens est réglée et optimisée spécifiquement pour les intervenants natifs de États-Unis anglais.
 
@@ -304,7 +304,7 @@ Avec **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** , vous p
 
 ---
 
-## <a name="see-also"></a>Articles associés
+## <a name="see-also"></a>Voir aussi
 * [Pointer et valider](gaze-and-commit.md)
 * [Interactions instinctuelles](interaction-fundamentals.md)
 * [Entrée MR 212 : voix](holograms-212.md)
