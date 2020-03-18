@@ -8,11 +8,11 @@ ms.topic: article
 ms.localizationpriority: high
 keywords: Visual Studio, HoloLens, Mixed Reality, déboguer, déployer
 ms.openlocfilehash: b7e6a8d538670a53de20a2f3a2850639e756da1a
-ms.sourcegitcommit: 05fa75193059a2dac4b580a9eef7b6c4bb64d8d7
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74830839"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79376106"
 ---
 # <a name="using-visual-studio-to-deploy-and-debug"></a>Utilisation de Visual Studio pour le déploiement et le débogage
 
@@ -21,7 +21,7 @@ Que vous choisissiez de développer votre application de réalité mixte dans Di
 * Utiliser l’émulateur HoloLens intégré à Visual Studio.
 * Déboguer des applications de réalité mixte.
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Prérequis
 1. Consultez [Installer les outils](install-the-tools.md) pour obtenir des instructions d’installation.
 2. Créez un projet d’application Windows universelle dans Visual Studio.  Pour HoloLens (1re génération), utilisez Visual Studio 2017 ou une version plus récente.  Pour HoloLens 2, utilisez Visual Studio 2019 version 16.2 ou ultérieure. Les langages C# et C++ sont pris en charge. (Ou suivez les instructions pour [créer une application dans Unity](holograms-100.md).)
 
@@ -136,7 +136,7 @@ Vous pouvez utiliser Visual Studio pour déboguer une application Windows univer
 6. Choisissez le type de code à déboguer (managé, natif, mixte)
 7. Cliquez sur **Attacher** ou sur **Démarrer**
 
-## <a name="see-also"></a>Voir également
+## <a name="see-also"></a>Voir aussi
 * [Installer les outils](install-the-tools.md)
 * [Utilisation de l’émulateur HoloLens](using-the-hololens-emulator.md)
 * [Déploiement et débogage d’applications de plateforme Windows universelle (UWP)](https://msdn.microsoft.com/library/windows/apps/xaml/mt613243.aspx)
