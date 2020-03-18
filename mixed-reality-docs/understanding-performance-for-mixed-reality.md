@@ -6,12 +6,12 @@ ms.author: trferrel
 ms.date: 3/26/2019
 ms.topic: article
 keywords: Windows Mixed Reality, la réalité mixte, la réalité virtuelle, VR, MR, performances, optimisation, UC, GPU
-ms.openlocfilehash: 7d8a0c95d59ec7e42e11bc1e1b6b40c702e01529
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 287b95363acff00ab7a0407475e0a419fc076611
+ms.sourcegitcommit: 184227dc591ca2791f523d520555730ba1e95b5c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438237"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79479572"
 ---
 # <a name="understanding-performance-for-mixed-reality"></a>Comprendre les performances de la réalité mixte
 
@@ -21,9 +21,9 @@ Les valeurs de fréquence d’images performante pour chaque plateforme cible so
 
 | Plateforme | Fréquence d’images cible |
 |----------|-------------------|
-| [HoloLens](hololens-hardware-details.md) | 60 FPS |
+| [HoloLens](hololens-hardware-details.md) | 60 i/s |
 | [Windows Mixed Reality ultra PC](immersive-headset-hardware-details.md) | 90 FPS |
-| [PC Windows Mixed Reality](immersive-headset-hardware-details.md) | 60 FPS |
+| [PC Windows Mixed Reality](immersive-headset-hardware-details.md) | 60 i/s |
 
 Le cadre ci-dessous décrit les meilleures pratiques pour atteindre les fréquences d’images cibles. Si vous développez dans Unity, lisez les [recommandations relatives aux performances de l’article Unity](performance-recommendations-for-unity.md) pour obtenir des conseils sur la mesure et l’amélioration de la fréquence d’images dans l’environnement Unity.
 
@@ -98,7 +98,8 @@ Le taux de remplissage est axé sur la réduction du nombre d’opérations qui 
 4) Nombre de pixels à afficher (résolution d’affichage)
 
 #### <a name="reduce-polygon-count"></a>Réduire le nombre de polygones
-Des nombres de polygones plus élevés entraînent davantage d’opérations pour le GPU. la réduction du nombre de polygones dans votre scène réduira le temps de rendu. D’autres facteurs sont impliqués dans l’ombrage de la géométrie qui peut être coûteuse, mais le nombre de polygones est la mesure la plus simple pour déterminer le coût de l’affichage d’une scène.
+
+Des nombres de polygones plus élevés entraînent davantage d’opérations pour le GPU. la [réduction du nombre de polygones](https://docs.microsoft.com/dynamics365/mixed-reality/import-tool/optimize-models#performance-targets) dans votre scène réduira le temps de rendu. D’autres facteurs sont impliqués dans l’ombrage de la géométrie qui peut être coûteuse, mais le nombre de polygones est la mesure la plus simple pour déterminer le coût de l’affichage d’une scène.
 
 #### <a name="limit-overdraw"></a>Limiter le surdessin
 
@@ -123,15 +124,20 @@ En règle générale, les nuanceurs effectuent de nombreuses transformations et 
     - En règle générale, le nombre de vertex est bien plus petit que le nombre de pixels (720p est de 921 600 pixels, 1080p est 2 073 600 pixels, etc.)
 
 #### <a name="remove-gpu-stages"></a>Supprimer les étapes du GPU
+
 Les effets postérieurs au traitement peuvent être très onéreux et augmenter le taux de remplissage de votre application. Cela comprend les techniques d’anticrénelage telles que MSAA. Sur HoloLens, il est recommandé d’éviter ces techniques entièrement, ainsi que des étapes de nuanceur supplémentaires telles que Geometry, la coque et les nuanceurs de calcul.
 
 ## <a name="memory-recommendations"></a>Recommandations de mémoire
+
 Les opérations d’allocation et de désallocation de mémoire excessives peuvent entraîner des performances incohérentes, des frames figés et d’autres comportements nuisibles. Il est particulièrement important de comprendre les considérations relatives à la mémoire lors du développement dans Unity, car la gestion de la mémoire est contrôlée par le garbage collector.
 
 #### <a name="object-pooling"></a>Mise en pool d’objets
 
 Le mise en pool d’objets est une technique populaire pour réduire le coût des allocations et des désallocations continues d’objets. Pour ce faire, vous devez allouer un grand pool d’objets identiques et réutiliser les instances inactives de ce pool au lieu de générer et de détruire constamment des objets dans le temps. Les pools d’objets sont idéaux pour les composants réutilisables qui ont une durée de vie variable pendant une application.
 
-## <a name="see-also"></a>Articles associés
+## <a name="see-also"></a>Voir aussi
 - [Recommandations de performances pour Unity](performance-recommendations-for-unity.md)
 - [Paramètres recommandés pour Unity](recommended-settings-for-unity.md)
+- [Optimiser les modèles 3D](https://docs.microsoft.com/dynamics365/mixed-reality/import-tool/optimize-models#performance-targets)
+- [Meilleures pratiques pour la conversion et l’optimisation des modèles 3D en temps réel](https://docs.microsoft.com/dynamics365/mixed-reality/import-tool/best-practices)
+
