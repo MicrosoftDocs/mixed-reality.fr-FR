@@ -6,12 +6,12 @@ ms.author: kegodin
 ms.date: 11/07/2019
 ms.topic: article
 keywords: Unity, son spatial, HRTF, taille de la salle
-ms.openlocfilehash: 6720eac30c69ebfcd0f003cf131f60295818d676
-ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
+ms.openlocfilehash: af3f1486c3e931ad93d7b8960d822653ec740c12
+ms.sourcegitcommit: ee8c7e821cb337cbccd8af64b13ee5f50109a776
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77553697"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80082040"
 ---
 # <a name="spatial-sound-in-unity"></a>Son spatial dans Unity
 
@@ -35,6 +35,9 @@ Utilisez [NuGet pour Unity](https://github.com/GlitchEnzo/NuGetForUnity/releases
 * Cochez la case **Enable Spatialization**
 * Déplacez le curseur de **lissage spatial** sur « 1 »
 * Assurez-vous que l’audio spatial est activé sur votre station de travail de développeur. Activez-le en cliquant avec le bouton droit sur l’icône de volume dans la barre des tâches et en vous assurant que le son spatial est défini sur une valeur autre que « désactivé ». Pour obtenir la meilleure représentation de ce que vous entendez sur HoloLens 2, choisissez **Windows Sonic pour casque**.
+
+>[!NOTE]
+>Si vous recevez une erreur dans Unity sur le fait de ne pas pouvoir charger le plug-in Microsoft. SpatialAudio. Spatializer. Unity, car l’une de ses dépendances est manquante, vérifiez que la dernière version de [Microsoft Visual C++ Redistributable](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads) est installée sur votre PC.
 
 Pour plus de détails, voir:
 * [Dépôt GitHub Microsoft Spatializer](https://github.com/microsoft/spatialaudio-unity)
