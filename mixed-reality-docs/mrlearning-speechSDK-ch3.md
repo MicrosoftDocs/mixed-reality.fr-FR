@@ -1,47 +1,47 @@
 ---
-title: Didacticiels Azure Speech Services-3. Ajout du composant Azure Cognitive Services Speech translation
-description: Dans ce cours, vous allez apprendre à implémenter le kit de développement logiciel (SDK) Azure Speech dans une application de réalité mixte.
+title: Tutoriels sur les services Azure Speech - 3. Ajout du composant de traduction vocale Azure Cognitive Services
+description: Dans ce cours, vous allez apprendre à implémenter le SDK Azure Speech au sein d’une application de réalité mixte.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: dc5300b51ccb151a2e38f9d15b84a4a9031e2bb4
-ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
-ms.translationtype: MT
+ms.localizationpriority: high
+ms.openlocfilehash: d8e73e24f0522ff71b95ea1886d59893216b0597
+ms.sourcegitcommit: 5b2ba01aa2e4a80a3333bfdc850ab213a1b523b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2019
-ms.locfileid: "74143228"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79028346"
 ---
-# <a name="3-adding-the-azure-cognitive-services-speech-translation-component"></a><span data-ttu-id="89669-105">3. Ajout du composant Azure Cognitive Services Speech translation</span><span class="sxs-lookup"><span data-stu-id="89669-105">3. Adding the Azure Cognitive Services speech translation component</span></span>
+# <a name="3-adding-the-azure-cognitive-services-speech-translation-component"></a><span data-ttu-id="7a7d5-105">3. Ajout du composant de traduction vocale Azure Cognitive Services</span><span class="sxs-lookup"><span data-stu-id="7a7d5-105">3. Adding the Azure Cognitive Services speech translation component</span></span>
 
-<span data-ttu-id="89669-106">Dans ce didacticiel, vous allez découvrir le composant Azure Cognitive Services Speech translation de votre projet, ainsi que la façon de traduire en trois langues différentes.</span><span class="sxs-lookup"><span data-stu-id="89669-106">In this tutorial, you'll learn about the Azure Cognitive Services Speech Translation component of your project, as well as how to translate into three different languages.</span></span>
+<span data-ttu-id="7a7d5-106">Dans ce tutoriel, vous allez ajouter la traduction vocale à votre projet, ce qui va vous permettre de traduire et transcrire votre parole en trois langues différentes.</span><span class="sxs-lookup"><span data-stu-id="7a7d5-106">In this tutorial, you will add speech translation to your project which will allow you to translate and transcribed your speech into three different languages.</span></span>
 
-## <a name="instructions"></a><span data-ttu-id="89669-107">Instructions</span><span class="sxs-lookup"><span data-stu-id="89669-107">Instructions</span></span>
+## <a name="objectives"></a><span data-ttu-id="7a7d5-107">Objectifs</span><span class="sxs-lookup"><span data-stu-id="7a7d5-107">Objectives</span></span>
 
-1. <span data-ttu-id="89669-108">Sélectionnez l’objet Lunarcom_Base dans la hiérarchie, puis cliquez sur Ajouter un composant dans le panneau Inspecteur.</span><span class="sxs-lookup"><span data-stu-id="89669-108">Select the Lunarcom_Base object in the hierarchy, and click Add Component in the inspector panel.</span></span> <span data-ttu-id="89669-109">Recherchez et sélectionnez Lunarcom translation Recognizer.</span><span class="sxs-lookup"><span data-stu-id="89669-109">Search for and select Lunarcom Translation Recognizer.</span></span>
+* <span data-ttu-id="7a7d5-108">Apprendre à intégrer la traduction vocale Azure</span><span class="sxs-lookup"><span data-stu-id="7a7d5-108">Learn how to integrate Azure speech translation</span></span>
 
-    ![Module4Chapter3step1im](images/module4chapter3step1im.PNG)
+## <a name="instructions"></a><span data-ttu-id="7a7d5-109">Instructions</span><span class="sxs-lookup"><span data-stu-id="7a7d5-109">Instructions</span></span>
 
-    <span data-ttu-id="89669-111">Désactivez le simulateur en mode hors connexion.</span><span class="sxs-lookup"><span data-stu-id="89669-111">Disable the offline mode simulator.</span></span>
+<span data-ttu-id="7a7d5-110">Dans la fenêtre Hierachy, sélectionnez l’objet **Lunarcom** puis, dans la fenêtre Inspector, utilisez le bouton **Add Component** pour ajouter le composant **Lunarcom Translation Recognizer (Script)** à l’objet Lunarcom et configurez-le de la manière suivante :</span><span class="sxs-lookup"><span data-stu-id="7a7d5-110">In the Hierarchy window, select the **Lunarcom** object, then in the Inspector window, use the **Add Component** button to add the **Lunarcom Translation Recognizer (Script)** component to the Lunarcom object and configure it as follows:</span></span>
 
-    ![Module4Chapter3noteim](images/module4chapter3noteim.PNG)
+* <span data-ttu-id="7a7d5-111">Remplacez la valeur de **Target Language** par la langue de votre choix, par exemple, _German_.</span><span class="sxs-lookup"><span data-stu-id="7a7d5-111">Change the **Target Language** to a language of your choosing, for example, _German_</span></span>
 
-    >[!IMPORTANT]
-    ><span data-ttu-id="89669-113">Avant de poursuivre, assurez-vous que le simulateur en mode hors connexion est désactivé (comme indiqué dans l’image ci-dessus) avant de tester le traducteur du kit de développement logiciel (SDK) Speech.</span><span class="sxs-lookup"><span data-stu-id="89669-113">Before moving on, ensure that the offline mode simulator is disabled (as shown in the image above) before testing the Speech-SDK translator.</span></span> <span data-ttu-id="89669-114">Pour pouvoir effectuer la conversion, vous devez être connecté à Internet.</span><span class="sxs-lookup"><span data-stu-id="89669-114">In order to translate, you must be connected to the internet.</span></span>
+![mrlearning-speech](images/mrlearning-speech/tutorial3-section1-step1-1.png)
 
-2. <span data-ttu-id="89669-115">Cliquez sur la liste déroulante dans le module de reconnaissance des traductions Lunarcom, puis sélectionnez la langue vers laquelle vous souhaitez effectuer la conversion.</span><span class="sxs-lookup"><span data-stu-id="89669-115">Click the drop-down in the Lunarcom Translation Recognizer, and select the language you would like to translate to.</span></span>
+> [!NOTE]
+> <span data-ttu-id="7a7d5-113">Le composant Lunarcom Translation Recognizer (Script) ne fait pas partie de MRTK.</span><span class="sxs-lookup"><span data-stu-id="7a7d5-113">The Lunarcom Translation Recognizer (Script) component is not part of MRTK.</span></span> <span data-ttu-id="7a7d5-114">Il a été fourni avec les ressources de ce tutoriel.</span><span class="sxs-lookup"><span data-stu-id="7a7d5-114">It was provided with this tutorial's assets.</span></span>
 
-    ![Module4Chapter3step2im](images/module4chapter3step2im.PNG)
+<span data-ttu-id="7a7d5-115">Si vous entrez maintenant en mode Game, vous pouvez tester la traduction vocale en commençant par appuyer sur le bouton du satellite.</span><span class="sxs-lookup"><span data-stu-id="7a7d5-115">If you now enter Game mode, you can test the speech translation by first pressing the satellite button.</span></span> <span data-ttu-id="7a7d5-116">Ensuite, en supposant que votre ordinateur est doté d’un microphone, quand vous dites quelque chose, votre parole est traduite dans la langue choisie et transcrite sur le panneau du terminal :</span><span class="sxs-lookup"><span data-stu-id="7a7d5-116">Then, assuming your computer has a microphone, when you say something, your speech will be translated into the chosen language and transcribed on the terminal panel:</span></span>
 
-3. <span data-ttu-id="89669-117">Exécutez l’application et testez le convertisseur en cliquant sur le bouton satellite, puis commencez à parler.</span><span class="sxs-lookup"><span data-stu-id="89669-117">Run the application and test the translator by clicking the Satellite button, and begin speaking.</span></span> <span data-ttu-id="89669-118">Appuyez de nouveau sur le bouton satellite pour arrêter la reconnaissance.</span><span class="sxs-lookup"><span data-stu-id="89669-118">Press the Satellite button again to stop the recognition.</span></span> <span data-ttu-id="89669-119">Vous trouverez ci-dessous un exemple de ce à quoi doit ressembler votre scène.</span><span class="sxs-lookup"><span data-stu-id="89669-119">Below is an example of what your scene should look like.</span></span> <span data-ttu-id="89669-120">N’hésitez pas à modifier la langue sous la liste déroulante « langue cible » (Voir l’image ci-dessus) pour explorer la traduction dans d’autres langues.</span><span class="sxs-lookup"><span data-stu-id="89669-120">Feel free to change the language under the "Target Language" dropdown (see image above) to explore translation into other languages.</span></span>
+![mrlearning-speech](images/mrlearning-speech/tutorial3-section1-step1-2.png)
 
-    <span data-ttu-id="89669-121">Vous trouverez ci-dessous un exemple de ce à quoi votre scène devrait ressembler :</span><span class="sxs-lookup"><span data-stu-id="89669-121">Below is an example of what your scene should look like:</span></span>
+> [!CAUTION]
+> <span data-ttu-id="7a7d5-118">L’application a besoin de se connecter à Azure, donc vérifiez que votre ordinateur/appareil est connecté à Internet.</span><span class="sxs-lookup"><span data-stu-id="7a7d5-118">The application needs to connect to Azure, so make sure your computer/device is connected to the internet.</span></span>
 
-    ![Module4Chapter3exampleim](images/module4chapter3exampleim.PNG)
+## <a name="congratulations"></a><span data-ttu-id="7a7d5-119">Félicitations</span><span class="sxs-lookup"><span data-stu-id="7a7d5-119">Congratulations</span></span>
 
-## <a name="congratulations"></a><span data-ttu-id="89669-123">Félicitations !</span><span class="sxs-lookup"><span data-stu-id="89669-123">Congratulations</span></span>
+<span data-ttu-id="7a7d5-120">Votre projet peut maintenant traduire correctement les mots que vous dites dans plusieurs langues différentes.</span><span class="sxs-lookup"><span data-stu-id="7a7d5-120">Your project can now successfully translate the words you speak into several different languages.</span></span> <span data-ttu-id="7a7d5-121">Exécutez l’application sur votre appareil pour vérifier que tout fonctionne bien.</span><span class="sxs-lookup"><span data-stu-id="7a7d5-121">Run the application on your device to ensure the feature is working properly.</span></span>
 
-<span data-ttu-id="89669-124">Votre projet peut désormais traduire correctement les mots que vous parlez dans plusieurs langues différentes.</span><span class="sxs-lookup"><span data-stu-id="89669-124">Your project can now successfully translate the words you speak into several different languages.</span></span> <span data-ttu-id="89669-125">N’hésitez pas à vous amuser avec les langages et à tester l’exactitude de la traduction.</span><span class="sxs-lookup"><span data-stu-id="89669-125">Feel free to play around with the languages, and test the accuracy of the translation.</span></span>
-
-[<span data-ttu-id="89669-126">Didacticiel suivant : 4. Configuration de l’intention et compréhension du langage naturel</span><span class="sxs-lookup"><span data-stu-id="89669-126">Next tutorial: 4. Setting up intent and natural language understanding</span></span>](mrlearning-speechSDK-ch4.md)
+[<span data-ttu-id="7a7d5-122">Tutoriel suivant : 4. Configuration des intentions et compréhension du langage naturel</span><span class="sxs-lookup"><span data-stu-id="7a7d5-122">Next tutorial: 4. Setting up intent and natural language understanding</span></span>](mrlearning-speechSDK-ch4.md)
