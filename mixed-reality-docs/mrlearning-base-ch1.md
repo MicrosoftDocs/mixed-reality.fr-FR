@@ -7,12 +7,12 @@ ms.date: 11/01/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: 9c219313ad6e73cde78efd8e5e718a466ebd6137
-ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
+ms.openlocfilehash: 56adb4bfc66768684c8269c0f0cafd70c486ea8a
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77554398"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79376206"
 ---
 # <a name="2-initializing-your-project-and-first-application"></a>2. Initialisation de votre projet et de votre première application
 
@@ -236,6 +236,9 @@ Configurez Visual Studio pour HoloLens 2 en sélectionnant la configuration **M
 
 ![mrlearning-base](images/mrlearning-base/tutorial1-section7-step2-2.png)
 
+> [!NOTE]
+> Si vous ne voyez pas Appareil comme option, vous devrez peut-être changer le projet de démarrage par défaut, c’est-à-dire le projet IC2Lpp, en le remplaçant par votre projet UWP. Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur **nom_de_votre_projet (Windows universel)** , puis sélectionnez **Définir comme projet de démarrage**. 
+
 Connectez votre HoloLens 2 à votre ordinateur.
 
 > [!IMPORTANT]
@@ -257,6 +260,6 @@ Pour effectuer le déploiement sur votre appareil sans que l’application ne d�
 Vous venez de déployer votre première application HoloLens 2. À mesure que vous vous déplacez, vous devez voir un maillage de mappage spatial couvrant toutes les surfaces qui ont été perçues par HoloLens 2. En outre, vous devez voir des indicateurs sur vos mains et doigts pour le suivi de la main et un compteur de fréquence d’images pour vous tenir informé des performances de l’application. Ce ne sont là que quelques-uns des éléments fondamentaux immédiatement disponibles dans le Kit de ressources de réalité mixte. Au cours des tutoriels à venir, vous commencerez à ajouter du contenu et une interactivité à votre scène afin de pouvoir explorer pleinement les fonctionnalités d’HoloLens 2 et de Mixed Reality Toolkit.
 
 > [!NOTE]
-> Dans l’application, vous remarquerez peut-être le profileur de diagnostics, dont vous pouvez activer ou désactiver l’affichage à l’aide de la commande de reconnaissance vocale **Toogle Diagnostics** (Activer/désactiver les diagnostics). Toutefois, il est généralement recommandé de laisser le profileur visible à tout moment pendant le développement afin de comprendre quand les modifications apportées à l’application peuvent avoir un impact sur les performances, par exemple l’application HoloLens 2 doit [s’exécuter en continu à 60 images par seconde](understanding-performance-for-mixed-reality.md).
+> Dans l’application, vous remarquerez peut-être le profileur de diagnostics, dont vous pouvez activer ou désactiver l’affichage à l’aide de la commande vocale **Toggle Diagnostics**. Toutefois, il est généralement recommandé de laisser le profileur visible à tout moment pendant le développement afin de comprendre quand les modifications apportées à l’application peuvent avoir un impact sur les performances, par exemple l’application HoloLens 2 doit [s’exécuter en continu à 60 images par seconde](understanding-performance-for-mixed-reality.md).
 
 [Tutoriel suivant : 3. Création de l’interface utilisateur et configuration du kit d’outils de réalité mixte](mrlearning-base-ch2.md)

@@ -1,45 +1,57 @@
 ---
-title: Didacticiels Azure Speech services-2. Ajout d’un mode hors connexion pour la traduction vocale locale en texte
-description: Suivez ce cours pour apprendre à implémenter le kit de développement logiciel (SDK) Azure Speech dans une application de réalité mixte.
+title: Tutoriels sur les services Azure Speech - 2. Ajout d’un mode hors connexion pour la traduction locale de la reconnaissance vocale
+description: Suivez ce cours pour apprendre à implémenter le SDK Azure Speech au sein d’une application de réalité mixte.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 06/27/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: 962d7d4750cf59fe56de4af9088c90e8ecd0aa16
-ms.sourcegitcommit: b6b76275fad90df6d9645dd2bc074b7b2168c7c8
-ms.translationtype: MT
+ms.localizationpriority: high
+ms.openlocfilehash: 75ddce9063bb9d33f5fe2343fe30178222a5f8ac
+ms.sourcegitcommit: 5b2ba01aa2e4a80a3333bfdc850ab213a1b523b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2019
-ms.locfileid: "73913208"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79031631"
 ---
-# <a name="2-adding-an-offline-mode-for-local-speech-to-text-translation"></a>2. Ajout d’un mode hors connexion pour la traduction vocale locale en texte
+# <a name="2-using-speech-recognition-to-execute-commands"></a>2. Utilisation de la reconnaissance vocale pour exécuter des commandes
 
-Dans ce didacticiel, nous allons ajouter un mode hors connexion qui vous permet d’effectuer des traductions vocales en texte local quand nous ne pouvons pas nous connecter au service Azure. Nous *simulerons* également un état déconnecté.
+Dans ce tutoriel, vous allez ajouter la capacité d’exécuter des commandes en utilisant la reconnaissance vocale Azure, ce qui va vous permettre de déclencher une action en fonction du mot ou de l’expression que vous définissez.
+
+## <a name="objectives"></a>Objectifs
+
+* Découvrir comment la reconnaissance vocale Azure peut être utilisée pour exécuter des commandes
 
 ## <a name="instructions"></a>Instructions
 
-1. Sélectionnez l’objet Lunarcom_Base dans la hiérarchie.
+Dans la fenêtre Hierachy, sélectionnez l’objet **Lunarcom** puis, dans la fenêtre Inspector, utilisez le bouton **Add Component** pour ajouter le composant **Lunarcom Wake Word Recognizer (Script)** à l’objet Lunarcom et configurez-le de la manière suivante :
 
-2. Cliquez sur Ajouter un composant dans le panneau Inspecteur. Recherchez et sélectionnez la reconnaissance hors connexion Lunarcom.
+* Dans le champ **Wake Word**, entrez une expression appropriée, par exemple, _Activer le terminal_.
+* Dans le champ **Dismiss Word**, entrez une expression appropriée, par exemple, _Désactiver le terminal_.
 
-    ![Module4Chapter2step1im](images/module4chapter2step1im.PNG)
+![mrlearning-speech](images/mrlearning-speech/tutorial2-section1-step1-1.png)
 
-3. Cliquez sur la liste déroulante dans le LunarcomOfflineRecognizer et sélectionnez activé. Cela programme le projet pour qu’il agisse comme l’utilisateur n’a pas de connexion.
+> [!NOTE]
+> Le composant Lunarcom Wake Word Recognizer (Script) ne fait pas partie de MRTK. Il a été fourni avec les ressources de ce tutoriel.
 
-    ![Module4Chapter2step1im](images/module4chapter2step2im.PNG)
+Si vous entrez maintenant en mode Game, comme dans le tutoriel précédent, le panneau du terminal est activé par défaut, mais vous pouvez maintenant le désactiver en prononçant la valeur de Dismiss Word, **Désactiver le terminal** :
 
-4. Appuyez sur la touche lecture dans l’éditeur Unity et testez-la. Appuyez sur le microphone dans le coin inférieur gauche de la scène et commencez à parler.
+![mrlearning-speech](images/mrlearning-speech/tutorial2-section1-step1-2.png)
 
-    >[!NOTE]
-    >Étant donné que nous sommes hors connexion, la fonctionnalité de mise en éveil par mot a été désactivée. Vous devez cliquer sur le microphone chaque fois que vous souhaitez que votre voix soit reconnue en mode hors connexion.
+Et réactivez-le en prononçant la valeur de Wake Word, à savoir **Activer le terminal** :
 
-    Vous trouverez ci-dessous un exemple de ce à quoi peut ressembler votre scène.
+![mrlearning-speech](images/mrlearning-speech/tutorial2-section1-step1-3.png)
 
-    ![Module4Chapter2exampleim](images/module4chapter2exampleim.PNG)
+> [!CAUTION]
+> L’application a besoin de se connecter à Azure, donc vérifiez que votre ordinateur/appareil est connecté à Internet.
 
-## <a name="congratulations"></a>Félicitations !
+> [!TIP]
+> Si vous prévoyez d’être souvent dans l’impossibilité de vous connecter à Azure, vous pouvez également implémenter des commandes vocales à l’aide de MRTK en suivant les instructions données dans [Activation des commandes vocales](mrlearning-base-ch5.md#enabling-voice-commands).
 
-Le mode hors connexion a été activé. Désormais, lorsque vous êtes hors connexion, vous pouvez continuer à travailler sur votre projet avec le kit de développement logiciel (SDK) Speech !
+## <a name="congratulations"></a>Félicitations
 
-[Didacticiel suivant : 3. Ajout du composant Azure Cognitive Services Speech translation](mrlearning-speechSDK-ch3.md)
+Vous avez implémenté des commandes vocales Azure. Exécutez l’application sur votre appareil pour vérifier que tout fonctionne bien.
+
+Dans le tutoriel suivant, vous allez apprendre à traduire la parole en utilisant la traduction vocale Azure.
+
+[Tutoriel suivant : 3. Ajout du composant de traduction vocale Azure Cognitive Services](mrlearning-speechSDK-ch3.md)

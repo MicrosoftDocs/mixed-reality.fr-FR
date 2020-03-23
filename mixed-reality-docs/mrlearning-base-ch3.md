@@ -1,119 +1,120 @@
 ---
-title: Didacticiels de mise en route-4. Placement de contenu dynamique et utilisation de solveurs
+title: Tutoriels de démarrage - 4. Placement de contenu dynamique et utilisation de solveurs
 description: Suivez ce cours pour découvrir comment implémenter la reconnaissance faciale Azure au sein d’une application de réalité mixte.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: 5463f363291790fd5e5d76ffa322a61ca7bf8e31
-ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
-ms.translationtype: MT
+ms.localizationpriority: high
+ms.openlocfilehash: 2825f99f49eca6fd7277d02828bfe1bc3c23291a
+ms.sourcegitcommit: 5b2ba01aa2e4a80a3333bfdc850ab213a1b523b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77553872"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79031222"
 ---
-# <a name="4-placing-dynamic-content-and-using-solvers"></a>4. placement de contenu dynamique et utilisation de solveurs
+# <a name="4-placing-dynamic-content-and-using-solvers"></a>4. Placement de contenu dynamique et utilisation de solveurs
 <!-- Consider renaming to 'Placing dynamic content using Solvers' -->
 
-Les hologrammes arrivent à la vie dans HoloLens 2 lorsqu’ils suivent intuitivement l’utilisateur et sont placés dans l’environnement physique d’une manière qui rend l’interaction transparente et élégante. Dans ce didacticiel, nous explorons les façons de placer dynamiquement des hologrammes à l’aide des outils de positionnement disponibles de MRTK, appelés résolveurs, pour résoudre des scénarios de placement spatial complexes. Dans le MRTK, les solveurs sont un système de scripts et de comportements utilisés pour permettre aux éléments de l’interface utilisateur de suivre, de l’utilisateur ou d’autres objets de jeu dans la scène. Ils servent également à accélérer l’alignement sur certaines positions, rendant votre application plus intuitive.
+Les hologrammes prennent vie dans HoloLens 2 quand ils suivent intuitivement l’utilisateur et sont placés dans l’environnement physique de manière à rendre l’interaction fluide et élégante. Dans ce tutoriel, nous allons étudier différentes manières de placer dynamiquement des hologrammes à l’aide des outils de placement fournis dans le MRTK, appelés « solveurs », pour résoudre des scénarios de placement spatial complexes. Dans le MRTK, les solveurs sont un système de scripts et de comportements utilisés pour permettre aux éléments de l’interface utilisateur de suivre l’utilisateur (vous) ou d’autres objets de jeu dans la scène. Ils servent également à accélérer l’alignement sur certaines positions, rendant votre application plus intuitive.
 
 ## <a name="objectives"></a>Objectifs
 
-* Introduire les solveurs de MRTK
-* Utiliser des solveurs pour avoir une collection de boutons à la suite de l’utilisateur
-* Utilisez les solveurs pour avoir un objet de jeu à la suite des mains suivies par l’utilisateur
+* Introduire les solveurs du MRTK
+* Utiliser des solveurs pour qu’une collection de boutons suive l’utilisateur
+* Utiliser des solveurs pour qu’un objet de jeu suive les mouvements captés des mains de l’utilisateur
 
 ## <a name="location-of-solvers-in-the-mrtk"></a>Emplacement des solveurs dans le MRTK
 
- Les solveurs de MRTK se trouvent dans le dossier du kit de développement logiciel (SDK) MRTK. Pour afficher les solveurs disponibles dans votre projet, dans la fenêtre projet, accédez à **ressources** > **MixedRealityToolkit. SDK** > **fonctionnalités** > **utilitaires** > **solveurs**:
+ Les solveurs du MRTK se trouvent dans le dossier du SDK MRTK. Pour voir les solveurs disponibles dans votre projet, dans la fenêtre Project, accédez à **Assets** > **MixedRealityToolkit.SDK** > **Features** > **Utilities** > **Solvers** :
 
 ![mrlearning-base](images/mrlearning-base/tutorial3-section1-step1-1.png)
 
-Dans ce didacticiel, nous allons examiner l’implémentation du solveur orbital et du solveur de la vue radiale. Pour en savoir plus sur l’ensemble des programmes de résolution disponibles dans le MRTK, vous pouvez consulter le guide des [solveurs](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Solver.html) dans le [portail de documentation MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html).
+Dans ce tutoriel, nous allons passer en revue l’implémentation des solveurs Orbital et Radial View. Pour en savoir plus sur l’ensemble des solveurs disponibles dans le MRTK, consultez le [guide des solveurs](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Solver.html) dans le [portail de la documentation MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html).
 
 ## <a name="use-a-solver-to-follow-the-user"></a>Utiliser un solveur pour suivre l’utilisateur
 <!-- Consider renaming to 'Use a Solver to have an object follow the user' -->
 
-Dans cette section, vous allez améliorer la collection de boutons que vous avez créée dans le didacticiel précédent afin qu’elle suive la direction du regard de l’utilisateur. En outre, vous allez également configurer le solveur pour que la collection de boutons soit toujours :
+Dans cette section, vous allez améliorer la collection de boutons que vous avez créée dans le didacticiel précédent afin qu’elle suive le regard de l’utilisateur. Vous allez également configurer le solveur pour que la collection de boutons :
 
-* Pivoté parallèlement au sens de lecture de l’utilisateur, pour une lecture naturelle de gauche à droite
-* Positionné légèrement sous la direction du point d’interposition horizontal de l’utilisateur, il n’obstrue pas les autres objets que vous ajouterez plus loin dans ce didacticiel.
-* Positionnée approximativement sur la longueur d’un demi-bras de l’utilisateur, les boutons peuvent être facilement enfoncés
+* pivote parallèlement au sens de lecture de l’utilisateur, pour une lecture naturelle de gauche à droite ;
+* soit positionnée légèrement sous la ligne horizontale du regard de l’utilisateur, de manière à ce qu’elle n’obstrue pas les autres objets que vous ajouterez par la suite dans ce tutoriel ;
+* soit positionnée à environ un demi-bras de l’utilisateur, de manière à ce qu’il puisse appuyer facilement sur les boutons.
 
-Pour ce faire, vous allez utiliser le **Solveur orbital** qui verrouille l’objet à une position et à un décalage spécifiés à partir de l’objet référencé.
+Pour ce faire, vous allez utiliser le solveur **Orbital** qui verrouille l’objet à une position et à un décalage spécifiés par rapport à l’objet référencé.
 
-### <a name="1-add-the-orbital-solver"></a>1. ajouter le solveur orbital
+### <a name="1-add-the-orbital-solver"></a>1. Ajouter le solveur Orbital
 
-Dans la fenêtre hiérarchie, sélectionnez l’objet **ButtonCollection** , puis dans la fenêtre de l’inspecteur, utilisez le bouton **Ajouter un composant** pour ajouter le composant **orbital (script)** à l’objet ButtonCollection.
+Dans la fenêtre Hierarchy, sélectionnez l’objet **ButtonCollection** puis, dans la fenêtre Inspector, utilisez le bouton **Add Component** pour ajouter le composant **Orbital (Script)** à l’objet ButtonCollection :
 
 > [!NOTE]
-> Lorsque vous ajoutez un solveur, dans ce cas le composant orbital (script), le composant du gestionnaire de solveur (script) est automatiquement ajouté, car il est requis par le solveur.
+> Quand vous ajoutez un solveur, dans ce cas le composant Orbital (Script), le composant Solver Handler (Script) est automatiquement ajouté car le solveur en a besoin.
 
-### <a name="2-configure-the-orbital-solver"></a>2. configurer le solveur orbital
+### <a name="2-configure-the-orbital-solver"></a>2. Configurer le solveur Orbital
 
-Configurez le composant du **Gestionnaire de solveur (script)** :
+Configurez le composant **Solver Handler (Script)**  :
 
-* Vérifier que **le type de cible suivi** est défini sur **Head**
+* Vérifiez que **Tracked Target Type** indique **Head**.
 
-Configurez le composant **orbital (script)** :
+Configurez le composant **Orbital (Script)**  :
 
-* Vérifier que le **type d’orientation** est défini sur suivre l' **objet suivi**
-* Réinitialiser le **décalage local** à X = 0, Y = 0, Z = 0
-* Remplacez le **décalage universel** par X = 0, Y =-0,4, Z = 0,3
+* Vérifiez que **Orientation Type** indique **Follow Tracked Object**.
+* Réinitialisez **Local Offset** avec les valeurs X = 0, Y = 0, Z = 0.
+* Définissez **World Offset** avec les valeurs X = 0, Y = -0,4 et Z = 0,3.
 
 ![mrlearning-base](images/mrlearning-base/tutorial3-section2-step2-1.png)
 
-### <a name="3-test-the-orbital-solver-using-the-in-editor-simulation"></a>3. tester le solveur orbital à l’aide de la simulation dans l’éditeur
+### <a name="3-test-the-orbital-solver-using-the-in-editor-simulation"></a>3. Tester le solveur Orbital à l’aide de la simulation dans l’éditeur
 
-Appuyez sur le bouton lecture pour passer en mode jeu, puis appuyez et maintenez enfoncé le bouton droit de la souris pour faire pivoter la direction du regard et notez les points suivants :
+Appuyez sur le bouton de lecture pour passer en mode Game, puis appuyez sur le bouton droit de la souris et maintenez-le enfoncé pour faire pivoter la direction de votre regard. Notez les points suivants :
 
-* La position de la transformation de ButtonCollection est maintenant pilotée par les paramètres du solveur
-* Le cube, qui n’est pas affecté par le solveur, reste à la même position
+* Les valeurs Position du paramètre Transform de ButtonCollection sont maintenant pilotées par les paramètres du solveur.
+* La position de l’objet Cube, qui n’est pas affecté par le solveur, est inchangée.
 
 ![mrlearning-base](images/mrlearning-base/tutorial3-section2-step3-1.png)
 
 > [!TIP]
-> Si vous ne voyez pas le rayon de l’appareil photo dans la fenêtre de votre scène, vérifiez que votre menu gizmos est activé. Pour en savoir plus sur le menu gizmos et sur la façon dont vous pouvez l’utiliser pour optimiser votre vue scène, vous pouvez consulter la documentation du <a href="https://docs.unity3d.com/Manual/GizmosMenu.html" target="_blank">menu gizmos</a> d’Unity.
+> Si vous ne voyez pas le rayon de l’appareil photo dans votre fenêtre Scene, vérifiez que votre menu Gizmos est activé. Pour en savoir plus sur le menu Gizmos et sur la façon dont vous pouvez l’utiliser pour optimiser votre vue Scene, consultez la page consacrée au <a href="https://docs.unity3d.com/Manual/GizmosMenu.html" target="_blank">menu Gizmos</a> dans la documentation Unity.
 >
-> Pour afficher côte à côte votre scène et votre fenêtre de jeu, comme indiqué dans l’image ci-dessus, faites simplement glisser la fenêtre du jeu vers le côté droit de la fenêtre de la scène. Pour en savoir plus sur la personnalisation de votre espace de travail, vous pouvez consulter la documentation sur la personnalisation de l' <a href="https://docs.unity3d.com/Manual/CustomizingYourWorkspace.html" target="_blank">espace de travail</a> .
+> Pour afficher côte à côte les fenêtres Scene et Game comme dans l’image ci-dessus, faites simplement glisser la fenêtre Game à droite de la fenêtre Scene. Pour en savoir plus, consultez la page consacrée à la <a href="https://docs.unity3d.com/Manual/CustomizingYourWorkspace.html" target="_blank">personnalisation de votre espace de travail</a> dans la documentation Unity.
 
-## <a name="enabling-objects-to-follow-tracked-hands"></a>Activation d’objets pour suivre les mains suivies
+## <a name="enabling-objects-to-follow-tracked-hands"></a>Faire en sorte que les objets suivent les mouvements captés des mains
 
-Dans cette section, vous allez configurer l’objet de cube que vous avez créé dans le didacticiel précédent afin qu’il suive les mains suivies par l’utilisateur, en particulier le poignet de la main droite. En outre, vous allez également configurer le solveur pour que le cube :
+Dans cette section, vous allez configurer l’objet Cube que vous avez créé dans le tutoriel précédent afin qu’il suive les mouvements captés des mains de l’utilisateur, en particulier le poignet droit. Vous allez également configurer le solveur pour que l’objet Cube :
 
-* Change son orientation avec la rotation manuelle de l’utilisateur
-* Positionné sur le poignet de l’utilisateur
+* change son orientation en fonction de la rotation de la main de l’utilisateur ;
+* soit positionné sur le poignet de l’utilisateur.
 
-Pour ce faire, vous allez utiliser le **Solveur vue radiale** qui conserve l’objet dans un cône de vue converti par l’objet référencé.
+Pour cela, vous allez utiliser le solveur **Radial View** qui maintient l’objet dans un cône de vue projeté par l’objet référencé.
 
-### <a name="1-add-the-radial-view-solver"></a>1. ajouter le solveur vue radiale
+### <a name="1-add-the-radial-view-solver"></a>1. Ajouter le solveur Radial View
 
-Dans la fenêtre hiérarchie, sélectionnez l’objet **cube** , puis dans la fenêtre de l’inspecteur, utilisez le bouton **Ajouter un composant** pour ajouter l’objet de cube du composant **vue transversale (script)** .
+Dans la fenêtre Hierarchy, sélectionnez l’objet **Cube** puis, dans la fenêtre Inspector, utilisez le bouton **Add Component** pour ajouter l’objet Cube du composant **Radial View (Script)** .
 
-### <a name="2-configure-the-radial-view-solver"></a>2. configurer le solveur vue radiale
+### <a name="2-configure-the-radial-view-solver"></a>2. Ajouter le solveur Radial View
 
-Configurez le composant du **Gestionnaire de solveur (script)** :
+Configurez le composant **Solver Handler (Script)**  :
 
-* Modifier **le type de cible suivi** pour la **jointure manuelle**
-* Modifier la **main suivie** vers la **droite**
-* Modifier l' **articulation du suivi sur le** **poignet**
+* En regard de **Tracked Target Type**, sélectionnez **Hand Joint**.
+* En regard de **Tracked Handness**, sélectionnez **Right**.
+* En regard de **Tracked Hand Joint**, sélectionnez **Wrist**.
 
-Configurez le composant **vue transversale (script)** :
+Configurez le composant **Radial View (Script)**  :
 
-* Changez le **sens de référence** en **orienté objet**, puis activez la case à cocher **orienter vers la direction de référence**
-* Modifier la **distance minimale** et la **distance maximale** à 0
+* En regard de **Reference Direction**, sélectionnez **Object Oriented**, puis cochez la case **Orient To Reference Direction**.
+* Définissez **Min Distance** et **Max Distance** avec la valeur 0.
 
 ![mrlearning-base](images/mrlearning-base/tutorial3-section3-step2-1.png)
 
-### <a name="3-test-the-radial-view-solver-using-the-in-editor-simulation"></a>3. tester le solveur de la vue radiale à l’aide de la simulation dans l’éditeur
+### <a name="3-test-the-radial-view-solver-using-the-in-editor-simulation"></a>3. Tester le solveur Radial View à l’aide de la simulation dans l’éditeur
 
-Appuyez sur le bouton lecture pour entrer en mode jeu, puis appuyez sur la barre d’espace et maintenez-la enfoncée pour afficher la main. Déplacez le curseur de la souris pour déplacer la main, puis cliquez et maintenez enfoncé le bouton gauche de la souris pour faire pivoter la main :
+Appuyez sur le bouton de lecture pour passer en mode Game, puis appuyez sur la barre d’espace et maintenez-la enfoncée pour faire apparaître la main. Déplacez le curseur de la souris pour déplacer la main, puis cliquez sur le bouton gauche de la souris et maintenez-le enfoncé pour faire pivoter la main :
 
 ![mrlearning-base](images/mrlearning-base/tutorial3-section3-step3-1.png)
 
 ## <a name="congratulations"></a>Félicitations
 
-Dans ce didacticiel, vous avez appris à utiliser les solveurs de MRTK pour qu’une interface utilisateur suive intuitivement l’utilisateur. Vous avez également appris à attacher un solveur à un objet (par exemple, cube) pour suivre les mains suivies par l’utilisateur. Pour en savoir plus sur ces autres programmes de résolution inclus dans le MRTK, vous pouvez consulter le guide des [solveurs](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Solver.html) dans le [portail de documentation MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html).
+Dans ce tutoriel, vous avez appris à utiliser les solveurs du MRTK pour que l’interface utilisateur suive intuitivement l’utilisateur. Vous avez également vu comment attacher un solveur à un objet (par exemple, un cube) pour suivre les mouvements captés des mains de l’utilisateur. Pour en savoir plus sur ces solveurs et d’autres fournis avec le MRTK, consultez le [guide des solveurs](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Solver.html) dans le [portail de la documentation MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html).
 
-[Didacticiel suivant : 5. interaction avec les objets 3D](mrlearning-base-ch4.md)
+[Tutoriel suivant : 5. Interaction avec les objets 3D](mrlearning-base-ch4.md)

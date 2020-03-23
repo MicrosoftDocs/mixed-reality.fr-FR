@@ -1,92 +1,87 @@
 ---
-title: Didacticiels sur les fonctionnalités multi-utilisateur-4. Partage des mouvements d’objets avec plusieurs utilisateurs
-description: Suivez ce cours pour apprendre à implémenter des expériences partagées multi-utilisateur dans une application HoloLens 2.
+title: Tutoriels sur les fonctionnalités multi-utilisateurs - 4. Partage de mouvements d’objet avec plusieurs utilisateurs
+description: Suivez ce cours pour apprendre à implémenter des expériences partagées multi-utilisateurs dans une application HoloLens 2.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: 56f7c767323285453cbeea9034f97a7c14e92359
-ms.sourcegitcommit: d73d9012941fa1b13eb7d2f45ccc481d6365827a
-ms.translationtype: MT
+ms.localizationpriority: high
+ms.openlocfilehash: b0ddf0799fd94c29ce8f1221c55073cd77b63703
+ms.sourcegitcommit: 5b2ba01aa2e4a80a3333bfdc850ab213a1b523b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76885627"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79031249"
 ---
-# <a name="4-sharing-object-movements-with-multiple-users"></a>4. partage des mouvements d’objets avec plusieurs utilisateurs
+# <a name="4-sharing-object-movements-with-multiple-users"></a>4. Partage de mouvements d’objet avec plusieurs utilisateurs
 
-Dans ce didacticiel, vous allez apprendre à partager les mouvements d’objets afin que tous les participants d’une session partagée puissent collaborer et afficher les interactions entre eux. Cette leçon s’appuie sur le lanceur lunaire créé dans le cadre des [didacticiels du module de base](mrlearning-base.md).
+Dans ce tutoriel, vous allez apprendre à partager les mouvements d’objet afin que tous les participants d’une session partagée puissent collaborer et voir les interactions des autres. Cette leçon s’appuie sur le lanceur lunaire créé dans le cadre des [tutoriels du module de base](mrlearning-base.md).
 
 ## <a name="objectives"></a>Objectifs
 
-- Amener le lanceur lunaire en tant que modèle 3D à partager
+- Faire apparaître le lanceur lunaire en tant que modèle 3D à partager
 - Configurer votre projet pour partager les mouvements du modèle 3D
-- Découvrez comment créer une application collaborative multi-utilisateur de base
+- Apprendre à créer une application collaborative multi-utilisateur de base
 
 ## <a name="instructions"></a>Instructions
 
-1. Enregistrez la scène de la leçon précédente (contrôle + S). Vous pouvez le nommer HLSharedProjectMainPart4. Unity pour qu’il soit plus facile à trouver lorsque vous en avez besoin.
+1. Enregistrez la scène de la leçon précédente (Ctrl+S). Vous pouvez la nommer HLSharedProjectMainPart4.unity pour la retrouver plus facilement quand vous en avez besoin.
 
-2. Dans la fenêtre projet, dans le dossier Ressources-> scripts, double-cliquez sur GenericNetSync pour l’ouvrir dans Visual Studio ou dans l’éditeur de code que vous utilisez.  
+2. Dans la fenêtre Project, dans le dossier Assets->Scripts, double-cliquez sur GenericNetSync pour l’ouvrir dans Visual Studio ou dans l’éditeur de code que vous utilisez, quel qu’il soit.  
 
     ![module3chapter4updatestep2](images/module3chapter4updatestep2.png)
 
-3. Sur les lignes 34 et 38, supprimez « // » pour activer le code de la table que vous allez utiliser dans cette leçon. Ensuite, enregistrez le fichier.
+3. Lignes 34 et 38, supprimez « // » pour activer le code pour la table que vous allez utiliser dans cette leçon. Enregistrez ensuite le fichier.
 
     ![module3chapter4updatestep3](images/module3chapter4updatestep3.png)
 
-4. Dans la fenêtre projet, double-cliquez sur le fichier PhotonRoom.cs dans le dossier Ressources-> scripts pour l’ouvrir dans Visual Studio.
+4. Dans la fenêtre Project, double-cliquez sur le fichier PhotonRoom.cs dans le dossier Assets->Scripts pour l’ouvrir dans Visual Studio.
 
     ![module3chapter4updatestep4](images/module3chapter4updatestep4.png)
 
-5. Comme à l’étape 3, vous devez supprimer « // » pour activer le code aux lignes 25, 26 et 106.
+5. Comme à l’étape 3, nous avons besoin de supprimer « // » pour activer le code aux lignes 25, 26 et 106.
 
     ![module3chapter4updatestep5a](images/module3chapter4updatestep5a.png)
 
     ![module3chapter4updatestep5b](images/module3chapter4updatestep5b.png)
 
-6. Dans l’affichage des hiérarchies, sélectionnez l’objet NetworkRoom.
+6. Dans la vue Hierarchy, sélectionnez l’objet NetworkRoom.
 
     ![module3chapter4updatestep6](images/module3chapter4updatestep6.png)
 
-7. Dans la vue de projet, accédez à ressources-> Ressources-> Prefabs. Tout d’abord, glissez-déplacez la table Prefab vers l’emplacement Tableprefab sur la classe PhotonRoom. Ensuite, faites glisser et déposez RocketLauncherCompleteVariantprefab sur l’emplacement Prefab du module sur la classe PhotonRoom.
+7. Dans la vue Project, accédez à Assets->Resources->Prefabs. Tout d’abord, glissez-déposez le préfabriqué Table vers l’emplacement Tableprefab sur la classe PhotonRoom. Ensuite, glissez-déplacez RocketLauncherCompleteVariantprefab vers l’emplacement Module Prefab sur la classe PhotonRoom.
 
     ![module3chapter4updatestep7](images/module3chapter4updatestep7.png)
 
     >[!NOTE]
-    >Si vous cliquez sur l’un des objets Prefab et que vous la libérez, l’inspecteur bascule sur cet objet. Cliquez sur, faites glisser, déposez et relâchez chaque objet à l’emplacement approprié.
+    >Si vous cliquez sur l’un des objets d’élément préfabriqué avant de relâcher le bouton de la souris, l’inspecteur bascule vers cet objet. Cliquez sur chaque objet, faites-les glisser, déposez-les et relâchez-les à l’emplacement approprié.
 
-8. Cliquez sur la flèche à gauche de MixedRealityPlayspace et déplacez l’objet de jeu enfant MainCamera vers le bas dans le Prefab SharedPlayground. Ensuite, supprimez le Prefab, MixedRealityPlayspace en sélectionnant le Prefab et appuyez sur « supprimer » sur votre clavier).
+8. Cliquez sur la flèche située à gauche de MixedRealityPlayspace pour déplacer l’objet jeu enfant MainCamera jusqu’au préfabriqué SharedPlayground. Ensuite, supprimez le préfabriqué MixedRealityPlayspace en le sélectionnant et en appuyant sur « suppr » sur votre clavier.
 
     ![Module3hapter4step5im](images/module3chapter4step5im.PNG)
 
     >[!NOTE]
-    >Assurez-vous que les positions caméra principale et SharedPlayground sont définies sur 0, 0, 0.
+    >Assurez-vous que les positions de Main Camera et SharedPlayground sont définies sur 0, 0, 0.
 
-9. Sélectionnez l’objet « SharedPlayground » et cliquez avec le bouton droit sur la souris pour choisir l’option « créer vide » afin de créer un objet de jeu vide en tant qu’enfant de l’objet de jeu « SharedPlayground ».
+9. Sélectionnez l’objet « SharedPlayground » et cliquez avec le bouton droit de la souris pour choisir l’option « create empty » afin de créer un objet jeu vide en tant qu’enfant de l’objet jeu « SharedPlayground ».
 
    ![Module3chapter4step6im](images/module3chapter4step6im.PNG)
 
-10. Après avoir sélectionné le nouvel objet dans votre hiérarchie, remplacez le nom de l’objet par TableAnchor dans le panneau Inspecteur. En outre, cliquez sur Ajouter un composant et recherchez le composant TableAnchor. Sélectionnez-le et ajoutez-le à l’objet.
+10. Après avoir sélectionné le nouvel objet dans votre hiérarchie, remplacez son nom par TableAnchor dans le panneau Inspector. De plus, cliquez sur Ajouter un composant et recherchez le composant TableAnchor. Sélectionnez-le et ajoutez-le à l’objet.
 
     ![Module3Chapter4step7im](images/module3chapter4step7im.PNG)
 
-11. À partir du panneau projet dans le dossier Prefabs, faites glisser la table Prefab dans l’objet enfant « TableAnchor » que vous venez de créer.
+11. À partir du panneau Project dans le dossier Prefabs, faites glisser le préfabriqué Table dans l’objet enfant « TableAnchor » que vous venez de créer.
 
     ![Module3Chapter4step8im](images/module3chapter4step8im.PNG)
-   
-12. Ouvrez la Prefab « fusée Launcher_Complete variante » à partir de ressources-> Ressources-> Prefabs.
 
-13. Sélectionnez le GameObject « LunarModule » et ajoutez les deux composants suivants : « vue Transform de photons » et « vue photons ».
+## <a name="congratulations"></a>Félicitations
 
-14. Avec la GameObject « LunarModule » toujours sélectionnée, faites glisser le composant « vue de transformation de photons » dans l’emplacement « composants observés » dans le composant « vue photons ».
+Une fois cette opération terminée, recherchez le module lunaire. À présent, tous les utilisateurs qui rejoignent votre projet Unity peuvent déplacer le lanceur lunaire.  Tous les mouvements sont synchronisés afin que chaque utilisateur puisse voir les interactions des autres. Ces concepts servent de composants fondamentaux aux expériences de collaboration complètes et partagées.
 
-## <a name="congratulations"></a>Félicitations !
+Bien que tous les utilisateurs soient connectés dans le cadre d’une expérience partagée et puissent voir les mouvements relatifs des objets, l’application n’est toujours pas en mesure d’aligner correctement les avatars et les objets, de sorte que les utilisateurs locaux ne peuvent pas se voir les uns les autres ni voir les objets situés au même endroit dans le monde physique. Pour ancrer des expériences partagées locales, chaque appareil nécessite une compréhension commune de l’environnement physique. Dans ce module, nous allons nous atteler à ce problème en utilisant [Azure Spatial Anchors](<https://azure.microsoft.com//services/spatial-anchors/>) (ASA) que nous allons implémenter dans la prochaine leçon.
 
-Une fois cette opération terminée, recherchez le module lunaire. Après cela, tous les utilisateurs qui rejoignent votre projet Unity peuvent déplacer le lanceur lunaire.  Tous les mouvements sont synchronisés afin que chaque utilisateur puisse voir les interactions entre eux. Ces concepts constituent les blocs de construction fondamentaux pour les expériences de collaboration complètes et partagées.
+Avant de passer à la leçon suivante, nous allons devoir suivre le module d’apprentissage ASA qui traite des principes fondamentaux d’ASA, de la création de comptes et de ressources Azure, ainsi que d’autres composants fondamentaux nécessaires avant de pouvoir intégrer ASA à notre expérience partagée.
 
-Bien que tous les utilisateurs soient connectés dans le cadre d’une expérience partagée et puissent voir les mouvements relatifs des objets, l’application n’est toujours pas en mesure d’aligner correctement les avatars et les objets, de sorte que les utilisateurs locaux n’ont pas pu voir les autres et les objets dans le même emplacement dans le monde physique. Pour pouvoir ancrer des expériences partagées locales, chaque appareil doit avoir une compréhension commune de l’environnement physique. Dans ce module, nous allons y parvenir en utilisant les [ancres spatiales Azure](<https://azure.microsoft.com//services/spatial-anchors/>) (ASA) qui seront implémentées dans la prochaine leçon.
-
-Avant de passer à la leçon suivante, nous devrons suivre le module ASA Learning qui traite des principes fondamentaux de ASA, de la création de comptes et de ressources Azure, ainsi que d’autres blocs de construction fondamentaux nécessaires avant de pouvoir intégrer cela dans notre expérience partagée.
-
-[Leçon suivante : 5. intégration des ancres spatiales Azure dans une expérience partagée](mrlearning-sharing(photon)-ch5.md)
+[Leçon suivante : 5. Intégration d’ancres spatiales Azure dans une expérience partagée](mrlearning-sharing(photon)-ch5.md)

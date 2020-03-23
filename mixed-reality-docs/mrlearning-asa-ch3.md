@@ -1,58 +1,59 @@
 ---
-title: Didacticiels sur les ancres spatiales Azure-3. Affichage des commentaires sur l’ancrage spatial Azure
+title: Tutoriels Azure Spatial Anchors - 3. Affichage du feedback sur les ancres spatiales Azure
 description: Suivez ce cours pour découvrir comment implémenter la reconnaissance faciale Azure au sein d’une application de réalité mixte.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: 3d762950ea8e211fd5a8e4cf8af717674d3fe7e1
-ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
-ms.translationtype: MT
+ms.localizationpriority: high
+ms.openlocfilehash: 11342bada65e963db6393d35c99e2c2fbffe8ff1
+ms.sourcegitcommit: 5b2ba01aa2e4a80a3333bfdc850ab213a1b523b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77553929"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79031256"
 ---
-# <a name="3-displaying-azure-spatial-anchor-feedback"></a>3. affichage des commentaires sur l’ancrage spatial Azure
+# <a name="3-displaying-azure-spatial-anchor-feedback"></a>3. Affichage du feedback sur les ancres spatiales Azure
 
-Dans ce didacticiel, vous allez apprendre à fournir aux utilisateurs des commentaires sur la découverte d’ancrage, les événements et l’état lors de l’utilisation d’ancres spatiales Azure (ASA).
+Dans ce tutoriel, vous allez apprendre à fournir aux utilisateurs un feedback sur la découverte des ancres, leurs événements et leur état quand vous utilisez Azure Spatial Anchors (ASA).
 
 ## <a name="objectives"></a>Objectifs
 
-* Découvrez comment configurer un panneau d’interface utilisateur qui affiche des informations importantes sur la session ASA actuelle.
-* Comprendre et explorer les éléments de commentaires que le kit de développement logiciel (SDK) ASA met à la disposition des utilisateurs
+* Apprendre à configurer un panneau d’interface utilisateur qui affiche des informations importantes sur la session ASA en cours
+* Comprendre et explorer les éléments de feedback que le SDK ASA met à la disposition des utilisateurs
 
-## <a name="set-up-asa-feedback-ui-panel"></a>Panneau de l’interface utilisateur de configuration des commentaires ASA
+## <a name="set-up-asa-feedback-ui-panel"></a>Configurer un panneau d’interface utilisateur pour le feedback ASA
 
-Dans la fenêtre hiérarchie, cliquez avec le bouton droit sur les **instructions** > objet **TextContent** et sélectionnez **objet 3D** > **texte-TextMeshPro** pour créer un objet de texte TextMeshPro en tant qu’enfant des instructions > objet TextContent et donnez-lui un nom approprié, par exemple, **Commentaires**:
+Dans la fenêtre Hierarchy, cliquez avec le bouton droit sur l’objet **Instructions** > **TextContent** et sélectionnez **3D Object** > **Text - TextMeshPro** pour créer un objet texte TextMeshPro en tant qu’enfant de l’objet Instructions > TextContent et donnez-lui un nom approprié, par exemple **Feedback** :
 
 ![mrlearning-base](images/mrlearning-asa/tutorial3-section1-step1-1.png)
 
 > [!TIP]
-> Pour faciliter l’utilisation de votre scène, définissez l’option visibilité de la <a href="https://docs.unity3d.com/Manual/SceneVisibility.html" target="_blank">scène</a> de l’objet ParentAnchor sur désactivé en cliquant sur l’icône représentant un œil à gauche de l’objet. Cela masque l’objet dans la fenêtre de scène sans modifier sa visibilité dans le jeu.
+> Pour faciliter l’utilisation de votre scène, désactivez <a href="https://docs.unity3d.com/Manual/SceneVisibility.html" target="_blank">Scene Visibility</a> pour l’objet ParentAnchor en cliquant sur l’icône œil à gauche de l’objet. Ceci masque l’objet dans la fenêtre Scene sans changer sa visibilité dans le jeu.
 
-Lorsque l’objet de **Commentaires** est toujours sélectionné, dans la fenêtre de l’inspecteur, modifiez sa position et sa taille de manière à ce qu’il soit placé soigneusement sous le texte d’instruction, par exemple :
+L’objet **Feedback** étant toujours sélectionné, dans la fenêtre Inspector, modifiez sa position et sa taille de manière à ce qu’il soit placé bien en dessous du texte d’instruction, par exemple :
 
-* Remplacez le POS transformation Rect **Y** par-0,24
-* Modifiez la **largeur** de la transformation Rect en 0,555
-* Modifier la **hauteur** de la transformation Rect en 0,1
+* Remplacez la valeur **Pos Y** de Rect Transform par -0,24.
+* Remplacez la valeur **Width** de Rect Transform par 0,555.
+* Remplacez la valeur **Height** de Rect Transform par 0,1.
 
-Choisissez ensuite propriétés de police pour que le texte s’ajuste correctement dans la zone de texte, par exemple :
+Choisissez ensuite les propriétés de police de sorte que le texte s’ajuste correctement dans la zone de texte, par exemple :
 
-* Modifier le **style de police** du texte de maillage Pro (script) en gras
-* Modifier la **taille de police** du texte de maille Pro (script) à 0,17
-* Modifiez l' **alignement** du texte de maille Pro (script) en centre et au milieu
+* Remplacez la valeur **Font Style** de Text Mesh Pro (Script) par Bold.
+* Remplacez la valeur **Font Size** de Text Mesh Pro (Script) par 0,17.
+* Remplacez la valeur **Alignment** de Text Mesh Pro (Script) par Center and Middle.
 
 ![mrlearning-base](images/mrlearning-asa/tutorial3-section1-step1-2.png)
 
-Lorsque l’objet de **Commentaires** est toujours sélectionné, dans la fenêtre de l’inspecteur, utilisez le bouton **Ajouter un composant** pour ajouter le composant script d' **ancrage de commentaires (script)** à l’objet de commentaires :
+L’objet **Feedback** étant toujours sélectionné, dans la fenêtre Inspector, utilisez le bouton **Add Component** pour ajouter le composant **Anchor Feedback Script (Script)** à l’objet Feedback :
 
 ![mrlearning-base](images/mrlearning-asa/tutorial3-section1-step1-3.png)
 
-Assignez l’objet de **Commentaires** lui-même au champ de texte de **Commentaire** du composant de **script d’ancrage de commentaires (script)** :
+Affectez l’objet **Feedback** lui-même au champ **Feedback Text** du composant **Anchor Feedback Script (Script)**  :
 
 ![mrlearning-base](images/mrlearning-asa/tutorial3-section1-step1-4.png)
 
 ## <a name="congratulations"></a>Félicitations
 
-Dans ce didacticiel, vous avez appris à créer un panneau d’interface utilisateur pour afficher l’état actuel de l’expérience d’ancrage spatial Azure pour fournir aux utilisateurs des commentaires en temps réel.
+Dans ce tutoriel, vous avez appris à créer un panneau d’interface utilisateur pour afficher l’état actuel de l’expérience Azure Spatial Anchors visant à fournir aux utilisateurs un feedback en temps réel.

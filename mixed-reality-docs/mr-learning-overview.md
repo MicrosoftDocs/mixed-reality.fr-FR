@@ -1,26 +1,27 @@
 ---
-title: Présentation du module de base de l’apprentissage de MR
+title: Vue d’ensemble du module d’apprentissage de base sur la réalité mixte
 description: Suivez ce cours pour découvrir comment implémenter la reconnaissance faciale Azure au sein d’une application de réalité mixte.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 04/28/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
-ms.openlocfilehash: 63948e9eb67a177bde22573730014ae3a13a5f7e
-ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
-ms.translationtype: MT
+ms.localizationpriority: high
+ms.openlocfilehash: 01429d3952eb97d4f8aaab2d2ce442eb1e1fcdac
+ms.sourcegitcommit: 5b2ba01aa2e4a80a3333bfdc850ab213a1b523b9
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64874021"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79031714"
 ---
 # <a name="mr-learning-modules"></a>Modules d’apprentissage sur la réalité mixte
 
-## <a name="overview"></a>Vue d'ensemble
+## <a name="overview"></a>Vue d’ensemble
 
-Les modules de formation MR sont une approche mise à jour pour enseigner aux développeurs comment créer des applications pour la plate-forme et les appareils de la réalité mixte, en se basant sur les connaissances de la série de didacticiels d’origine Academy. Voici quelques exemples de commentaires que nous souhaitons faire face à cette nouvelle série:
+Les modules d’apprentissage sur la réalité mixte sont une approche réactualisée qui repose sur les formations de la série de tutoriels Academy d’origine et qui permet aux développeurs d’apprendre à créer des applications pour la plateforme et les appareils de réalité mixte. Voici quelques exemples de feedback que nous voulions prendre en compte avec cette nouvelle série :
 
-* Les didacticiels n’implémentent pas ou n’indiquent pas comment utiliser le kit de procédure de réalité mixte
-* Les didacticiels sont très utiles pour apprendre à implémenter une chose, mais pas pour créer une application
-* Aucune aide n’est disponible pour les interfaces utilisateur
+* Les tutoriels n’implémentent pas ou ne montrent pas comment utiliser Mixed Reality Toolkit.
+* Les tutoriels sont parfaits pour apprendre à implémenter quelque chose, mais pas pour créer une application.
+* Aucune procédure dans l’interface utilisateur n’est vraiment donnée.
 
-Avec ces commentaires, nous nous sommes fixés pour concevoir un ensemble de didacticiels qui ne traiteraient pas uniquement les éléments ci-dessus, mais ils donneront également à tous les développeurs un modèle de code de base utile pour commencer.
+Grâce à ce retour d’expérience, nous avons conçu un ensemble de tutoriels qui non seulement tiennent compte des remarques ci-dessus, mais donnent aussi à tous les développeurs un modèle de code de référence utile pour bien démarrer.
