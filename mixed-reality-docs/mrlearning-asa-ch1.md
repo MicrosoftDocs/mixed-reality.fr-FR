@@ -7,12 +7,12 @@ ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: fa0ebc409fa38f664bdd0966906c6fd77f7a6081
-ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
+ms.openlocfilehash: 47063fbf9a1b9f3a43497a0742deba2c16b53d99
+ms.sourcegitcommit: 536fd45b48a70bbeca1454cef517ae007225e533
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79376146"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80362057"
 ---
 # <a name="1-getting-started-with-azure-spatial-anchors"></a>1. Bien démarrer avec Azure Spatial Anchors
 
@@ -31,7 +31,7 @@ Dans le troisième tutoriel, [Affichage des commentaires sur les ancres spatiale
 * Découvrir les principes de base du développement avec Azure Spatial Anchors pour HoloLens 2
 * Créer, charger et télécharger des ancres spatiales
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables
 
 >[!TIP]
 >Si vous n’avez pas encore terminé la série de [tutoriels de démarrage](mrlearning-base.md), nous vous conseillons de le faire avant d’aller plus loin.
@@ -47,19 +47,19 @@ Dans le troisième tutoriel, [Affichage des commentaires sur les ancres spatiale
 > La version Unity recommandée pour cette série de tutoriels est Unity 2019.2.X. Cela remplace toute exigence ou recommandation de version Unity énoncée dans les prérequis indiqués ci-dessus.
 
 ## <a name="creating-the-unity-project"></a>Création du projet Unity
-<!-- TODO: Consider renaming to 'Creating and preparing the Unity scene and project'-->
+<!-- TODO: Consider renaming to 'Creating and preparing the Unity project'-->
 
 Dans cette section, vous allez créer un projet Unity et le préparer pour le développement avec MRTK.
 
-Pour cela , suivez d’abord [Initialisation de votre projet et de votre première application](mrlearning-base-ch1.md), en excluant les instructions de [Générer votre application sur votre appareil](mrlearning-base-ch1.md#build-your-application-to-your-device), qui inclut les étapes suivantes :
+Pour cela, suivez d’abord [Initialisation de votre projet et de votre première application](mrlearning-base-ch1.md), en excluant les instructions données dans [Générer votre application sur votre appareil](mrlearning-base-ch1.md#build-your-application-to-your-device), ce qui inclut les étapes suivantes :
 
-1. [Créez un projet Unity](mrlearning-base-ch1.md#create-new-unity-project) et donnez-lui un nom approprié, par exemple *MRTK Tutorials*.
+1. [Créer un projet Unity](mrlearning-base-ch1.md#create-new-unity-project) et lui donner un nom approprié, par exemple *MRTK Tutorials*
 
 2. [Configurer le projet Unity pour Windows Mixed Reality](mrlearning-base-ch1.md#configure-the-unity-project-for-windows-mixed-reality)
 
-3. [Importer les ressources essentielles TextMesh Pro](mrlearning-base-ch1.md#import-textmesh-pro-essential-resources)
+3. [Importer les ressources essentielles TextMeshPro](mrlearning-base-ch1.md#import-textmesh-pro-essential-resources)
 
-4. [Importer le Kit de ressources de réalité mixte](mrlearning-base-ch1.md#import-the-mixed-reality-toolkit)
+4. [Importer Mixed Reality Toolkit](mrlearning-base-ch1.md#import-the-mixed-reality-toolkit)
 
 5. [Configurer le projet Unity pour le Kit de ressources de réalité mixte](mrlearning-base-ch1.md#configure-the-unity-project-for-the-mixed-reality-toolkit)
 
