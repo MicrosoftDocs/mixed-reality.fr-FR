@@ -7,12 +7,12 @@ ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: 2825f99f49eca6fd7277d02828bfe1bc3c23291a
-ms.sourcegitcommit: 5b2ba01aa2e4a80a3333bfdc850ab213a1b523b9
+ms.openlocfilehash: 8a85ab560d0e6b36b589970b4d5b8a441ed2bbe2
+ms.sourcegitcommit: 536fd45b48a70bbeca1454cef517ae007225e533
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79031222"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80362040"
 ---
 # <a name="4-placing-dynamic-content-and-using-solvers"></a>4. Placement de contenu dynamique et utilisation de solveurs
 <!-- Consider renaming to 'Placing dynamic content using Solvers' -->
@@ -39,7 +39,7 @@ Dans ce tutoriel, nous allons passer en revue l’implémentation des solveurs O
 Dans cette section, vous allez améliorer la collection de boutons que vous avez créée dans le didacticiel précédent afin qu’elle suive le regard de l’utilisateur. Vous allez également configurer le solveur pour que la collection de boutons :
 
 * pivote parallèlement au sens de lecture de l’utilisateur, pour une lecture naturelle de gauche à droite ;
-* soit positionnée légèrement sous la ligne horizontale du regard de l’utilisateur, de manière à ce qu’elle n’obstrue pas les autres objets que vous ajouterez par la suite dans ce tutoriel ;
+* soit positionnée sous la ligne horizontale du regard de l’utilisateur, de manière à ce qu’elle n’obstrue pas les autres objets que vous ajouterez par la suite dans ce tutoriel ;
 * soit positionnée à environ un demi-bras de l’utilisateur, de manière à ce qu’il puisse appuyer facilement sur les boutons.
 
 Pour ce faire, vous allez utiliser le solveur **Orbital** qui verrouille l’objet à une position et à un décalage spécifiés par rapport à l’objet référencé.

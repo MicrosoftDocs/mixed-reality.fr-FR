@@ -7,12 +7,12 @@ ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: 4de40bb0b66ed299fa4a571490b33a0454f25817
-ms.sourcegitcommit: 5b2ba01aa2e4a80a3333bfdc850ab213a1b523b9
+ms.openlocfilehash: 36f25229469e848a3f0612a5971cc8e9381262f5
+ms.sourcegitcommit: 536fd45b48a70bbeca1454cef517ae007225e533
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79031705"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80362010"
 ---
 # <a name="2-saving-retrieving-and-sharing-azure-spatial-anchors"></a>2. Enregistrement, récupération et partage d’ancres spatiales Azure
 
@@ -54,6 +54,9 @@ Si vous générez l’application mise à jour dans votre HoloLens, vous pouvez 
 7. Démarrez la session Azure.
 8. Recherchez l’ancre Azure (cela positionne l’expérience Rocket Launcher à l’emplacement de l’étape 3).
 
+> [!NOTE]
+> Pour redémarrer complètement l’application après avoir quitté la vue d’application immersive, fermez la fenêtre de l’application dans l’accueil réalité mixte avant de relancer l’application à partir du menu Démarrer. Pour plus d’informations, consultez la documentation [Utilisation d’applications sur HoloLens](https://docs.microsoft.com/hololens/holographic-home#using-apps-on-hololens).
+
 ## <a name="share-azure-anchors-between-multiple-devices"></a>Partager des ancres Azure entre plusieurs appareils
 
 Dans cette section, vous allez apprendre à partager l’ID d’ancre Azure entre plusieurs appareils. Ainsi, plusieurs appareils peuvent demander à Azure le même ID d’ancre, ce qui permet d’aligner dans l’espace des hologrammes ancrés. L’alignement spatial, c’est-à-dire le fait de voir les mêmes hologrammes au même emplacement physique entre plusieurs appareils, est primordial pour les expériences partagées locales dans le HoloLens 2.
@@ -75,7 +78,7 @@ Si vous générez l’application mise à jour sur deux appareils HoloLens, vous
 2. Sur l’appareil HoloLens 1 : Démarrez la session Azure.
 3. Sur l’appareil HoloLens 1 : Créez une ancre Azure (cela crée des ancres à l’emplacement de l’expérience Rocket Launcher).
 4. Sur l’appareil HoloLens 1 : Partagez l’ID d’ancre Azure sur le réseau.
-5. Sur l’appareil HoloLens 2 : Redémarrez l’application.
+5. Sur l’appareil HoloLens 2 : Démarrez l’application.
 6. Sur l’appareil HoloLens 2 : Obtenez l’ID d’ancre partagé à partir du réseau (cela extrait l’ID d’ancre qui vient d’être partagé de l’appareil HoloLens 1).
 7. Sur l’appareil HoloLens 2 : Démarrez la session Azure.
 8. Sur l’appareil HoloLens 2 : Recherchez l’ancre Azure (cela positionne l’expérience Rocket Launcher à l’emplacement de l’étape 3).

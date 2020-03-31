@@ -7,18 +7,20 @@ ms.date: 03/26/2019
 ms.topic: article
 keywords: graphiques, UC, GPU, rendu, garbage collection, Hololens
 ms.localizationpriority: high
-ms.openlocfilehash: f889d899ba55f4b3040080f6632cd27db86d6fc3
-ms.sourcegitcommit: ee8c7e821cb337cbccd8af64b13ee5f50109a776
+ms.openlocfilehash: 18691ab7993b2802268d3c4ce05532dfa5bd1723
+ms.sourcegitcommit: 9de2cb11321e6517db69e8c93459a205900a2174
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80082068"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160015"
 ---
 # <a name="performance-recommendations-for-unity"></a>Recommandations sur les performances pour Unity
 
 Cet article s’appuie sur les [recommandations sur les performances pour la réalité mixte](understanding-performance-for-mixed-reality.md) mais il se concentre sur des informations propres à l’environnement du moteur Unity.
 
-Il est également vivement conseillé aux développeurs de passer en revue l’article sur les [paramètres d’environnement recommandés pour Unity](Recommended-settings-for-unity.md). Le contenu de cet article s’intéresse à certaines des configurations de scène les plus importantes pour créer des applications de réalité mixte performantes. Certains de ces paramètres recommandés sont également soulignés ci-après.
+## <a name="use-recommended-unity-project-settings"></a>Utiliser les paramètres de projet Unity recommandés
+
+Pour optimiser les performances des applications de réalité mixte dans Unity, la première étape, et la plus importante, consiste à utiliser les [paramètres d’environnement recommandés pour Unity](recommended-settings-for-unity.md). Le contenu de cet article s’intéresse à certaines des configurations de scène les plus importantes pour créer des applications Mixed Reality performantes. Certains de ces paramètres recommandés sont également soulignés ci-après.
 
 ## <a name="how-to-profile-with-unity"></a>Comment profiler avec Unity
 
@@ -356,7 +358,7 @@ Vous devez envisager de démarrer votre application avec une scène plus petite,
 
 N’oubliez pas que pendant le chargement de la scène de démarrage, l’écran de démarrage holographique est présenté à l’utilisateur.
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a>Voir également
 - [Optimisation du rendu graphique dans les jeux Unity](https://unity3d.com/learn/tutorials/temas/performance-optimization/optimizing-graphics-rendering-unity-games?playlist=44069)
 - [Optimisation de garbage collection dans les jeux Unity](https://unity3d.com/learn/tutorials/topics/performance-optimization/optimizing-garbage-collection-unity-games?playlist=44069)
 - [Bonnes pratiques pour la physique [Unity]](https://unity3d.com/learn/tutorials/topics/physics/physics-best-practices)
