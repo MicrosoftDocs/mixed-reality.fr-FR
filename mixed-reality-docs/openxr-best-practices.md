@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 2/28/2020
 ms.topic: article
 keywords: OpenXR, Khronos, BasicXRApp, DirectX, native, application native, moteur personnalisé, intergiciel, meilleures pratiques, performances, qualité, stabilité
-ms.openlocfilehash: c0ddbd0604760ccae34d347e93b918be4aead269
-ms.sourcegitcommit: 536fd45b48a70bbeca1454cef517ae007225e533
+ms.openlocfilehash: 0a0bbd37521be52ec328b4f32e53969c0ec7fef4
+ms.sourcegitcommit: 46bd1a56d272a5880f410751fa8429d65d816431
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80362015"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80549371"
 ---
 # <a name="openxr-app-best-practices"></a>Meilleures pratiques pour les applications OpenXR
 
@@ -25,8 +25,8 @@ Pour obtenir d’autres recommandations relatives aux performances propres à Ho
 
 ### <a name="gamma-correct-rendering"></a>Gamma-rendu correct
 
-Vous devez veiller à ce que le pipeline de rendu soit correct pour la valeur gamma. Lors du rendu sur un utilise permutation, le format de la vue de cible de rendu doit correspondre au format utilise permutation (par exemple, DXGI_FORMAT_B8G8R8A8_UNORM_SRGB pour le format utilise permutation et la vue Render-cible).
-L’exception est si le pipeline de rendu de l’application effectue une conversion sRVB manuelle dans le code du nuanceur. dans ce cas, l’application doit demander un format utilise permutation sRVB, mais utiliser le format linéaire pour la vue de la cible de rendu (par exemple, DXGI_FORMAT_B8G8R8A8_UNORM_SRGB de demande comme format utilise permutation mais utilisez DXGI_FORMAT_B8G8R8A8_UNORM comme affichage de la cible de rendu) pour empêcher le contenu d’être corrigé par double gamma.
+Vous devez veiller à ce que le pipeline de rendu soit correct pour la valeur gamma. Lors du rendu sur un utilise permutation, le format de la vue de cible de rendu doit correspondre au format utilise permutation (par exemple, `DXGI_FORMAT_B8G8R8A8_UNORM_SRGB` pour le format utilise permutation et la vue Render-cible).
+L’exception est si le pipeline de rendu de l’application effectue une conversion sRVB manuelle dans le code du nuanceur. dans ce cas, l’application doit demander un format utilise permutation sRVB, mais utiliser le format linéaire pour la vue de la cible de rendu (par exemple, request `DXGI_FORMAT_B8G8R8A8_UNORM_SRGB` comme format utilise permutation, mais utiliser `DXGI_FORMAT_B8G8R8A8_UNORM` comme affichage de la cible de rendu) pour empêcher le contenu d’être corrigé.
 
 ### <a name="submit-depth-buffer-for-projection-layers"></a>Envoyer le tampon de profondeur pour les couches de projection
 
