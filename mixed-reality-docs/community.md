@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 12/27/2019
 ms.topic: article
 keywords: Réalité mixte, communauté, MVP, Meetup
-ms.openlocfilehash: 7814db195e105c2fdf9ba894dc1877e2cbdc4675
-ms.sourcegitcommit: fcd4ca74d59bd4cf469b71f07169defd0887ac21
+ms.openlocfilehash: 47c903a4a9f5615d96c77d8118665a9c55602c53
+ms.sourcegitcommit: b1ca4194eff452804ce5852208cce9815c6a4500
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79084589"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80678000"
 ---
 # <a name="mixed-reality-community"></a>Communauté de réalité mixte
 
@@ -33,15 +33,12 @@ Si vous exécutez une communauté que vous aimeriez inclure dans cette page, veu
 
 |Nom de la communauté|Country|Ville|Lien|
 |---------|---------|---------|---------|
+|**Réalité augmentée Melbourne**|Australie|Melbourne|[Lien](https://www.meetup.com/armelbourne/)|
 |**Chicago AWE Nite**|USA|Chicago|[Lien](https://www.meetup.com/AWENiteChicago/)|
+|**HoloMagicians**|Japan|Toronto|[Lien](https://hololens.connpass.com/)|
 |**Groupe d’utilisateurs de réalité mixte-Pays-Bas**|Pays-Bas|Rijswijk|[Lien](https://www.mixug.com)|
 |**VR Philippines**|Philippines|N/A|[Lien](https://www.facebook.com/vrphilippines/)|
 |**XRLA**|USA|Los Angeles|[Lien](https://www.meetup.com/XRLA_Meetup/)|
-<!--
-|Row4     |         |         |         |
-|Row5     |         |         |         |
-|Row6     |         |         |         |
--->
 
 <br>
 
@@ -98,8 +95,8 @@ Les professionnels de Microsoft les plus précieux, ou MVP, sont des experts tec
 |![Dave Smits](images/BiographyImages/DaveSmits_270x270.jpg)</br>**Dave Smits**</br>*Amersfoort, Pays-Bas*|Dave Smits est MVP Microsoft depuis 2014 et travaille avec le HoloLens depuis la première version lancée. Plusieurs projets pour les clients commencent avec des modèles simples pour les applications qui incluaient des capteurs de suivi de mouvement à utiliser sur des hologrammes.|[Messagerie](mailto:dave@familie-smits.com)|
 |![Eric Provencher](images/BiographyImages/EricProvencher_270x270.jpg)</br>**Eric Provencher**</br>*Montréal, QC, Canada*|Eric est une infrastructure de réalité mixte senior et un développeur d’expérience utilisateur chez IAO, l’un des premiers partenaires de la réalité mixte Microsoft et l’adoption de Wave 1 HoloLens. Ses principaux rôles sont l’architecture et le développement d’une infrastructure de développement multiplateforme interne très similaire à MRTK, ainsi que le développement et la gestion d’applications de formation et de simulation de santé nouvelles et existantes. Il crée principalement des applications dans Unity, en VR (Oculus Quest), AR (HoloLens 1 & 2), ainsi que sur l’écran (WebGL + iOS/Android).|[Messagerie](mailto:erproven@gmail.com)|
 |![fabrice javelot](images/BiographyImages/FabriceBarbin_270x270.jpg)</br>**Fabrice la javelot**</br>*France*|Pionnier, innovation et passionnés de technologies depuis des années, Fabrice est PDG chez [SYNERGIZ](http://www.synergiz.com), Microsoft Mixed Reality Partner, pionnier des cas d’utilisation de HoloLens en France. Promotion active des technologies Microsoft en tant que conférencier, MVP pour 12 ans, Fabrice est intéressé par un grand ensemble de produits : HoloLens, Kinect4Azure, IoT, Surface Hub, Ink, Touch, IA, Machine Learning, Cognitive Services, Azure|[Messagerie](mailto:fbarbin@synergiz.com)|
-|![Francesco clasadonte](images/BiographyImages/FrancescoClasadonte_270x270.jpg)</br>**Francesco clasadonte**</br>*Milan, Italie*|Fanciful et créatif, je m’intéresse tout ce dont je suis la passion. Pendant trois ans, j’ai travaillé en tant que chercheur chez Politecnico di Milano, nous avons mis l’accent sur mes recherches sur les technologies interactives pour les enfants avec disabilites, à gagner des expériences dans le développement de systèmes IOT, d’objets intelligents, d’interaction de robot, de conception d’éclairage, environnement multicapteur et interfaces utilisateur naturelles dans les projets nationaux et internationaux.</br></br>À l’heure actuelle, je travaille chez [FifthIngenium](https://fifthingenium.com) , en tant que développeur créatif senior, dans les domaines de l’IOT, des solutions Web, de l’intégration du système, en se concentrant sur des technologies émergentes et novatrices, telles que la réalité mixte et l’intelligence artificielle.|[Messagerie](mailto:klasaf@outlook.com)|
-|![Gianni Rosa Gallina](images/BiographyImages/GianniRosaGallina_270x270.png)</br>**Gianni Rosa Gallina**</br>*Italie*|Gianni est MVP Microsoft depuis 2011, en se concentrant sur les technologies émergentes, l’intelligence artificielle et la réalité virtuelle/enrichie/mixte depuis 2013. Actuellement, il est R & D ingénieur logiciel senior dans le laboratoire d’innovation de Deltatre, conception et prototypage de solutions de nouvelle génération pour les expériences et les services liés à Sports, des applications VR/MR aux architectures Azure de bout en bout et aux flux de travail vidéo, en passant par Cognitive Services, AI et bien plus encore. En outre, il est membre actif de la communauté locale « Torino Technologies Group » (TTG), organisateur et formateur pour coder sport Torino Monthly rassemblements, Pluralsight Online courses Author, publier des articles sur son blog et son orateur dans le national et Conférences et événements techniques internationaux.|[Messagerie](mailto:giannishub@hotmail.com)|
+|![Francesco clasadonte](images/BiographyImages/FrancescoClasadonte_270x270.jpg)</br>**Francesco clasadonte**</br>*Milan, Italie*|Fanciful et créatif, je m’intéresse tout ce dont je suis la passion. Pendant trois ans, j’ai travaillé en tant que chercheur chez Politecnico di Milano, nous avons mis l’accent sur mes recherches sur les technologies interactives pour les enfants avec disabilites, à gagner des expériences dans le développement de systèmes IOT, d’objets intelligents, d’interaction de robot, de conception d’éclairage, d’environnement multicapteur et d’interfaces utilisateur naturelles dans les projets nationaux et internationaux.</br></br>À l’heure actuelle, je travaille chez [FifthIngenium](https://fifthingenium.com) , en tant que développeur créatif senior, dans les domaines de l’IOT, des solutions Web, de l’intégration du système, en se concentrant sur des technologies émergentes et novatrices, telles que la réalité mixte et l’intelligence artificielle.|[Messagerie](mailto:klasaf@outlook.com)|
+|![Gianni Rosa Gallina](images/BiographyImages/GianniRosaGallina_270x270.png)</br>**Gianni Rosa Gallina**</br>*Italie*|Gianni est MVP Microsoft depuis 2011, en se concentrant sur les technologies émergentes, l’intelligence artificielle et la réalité virtuelle/enrichie/mixte depuis 2013. Actuellement, il est R & D ingénieur logiciel senior dans le laboratoire d’innovation de Deltatre, conception et prototypage de solutions de nouvelle génération pour les expériences et les services liés à Sports, des applications VR/MR aux architectures Azure de bout en bout et aux flux de travail vidéo, en passant par Cognitive Services, AI et bien plus encore. En outre, il est membre actif de la communauté locale « Torino Technologies Group » (TTG), organisateur et formateur pour coder sport Torino Monthly rassemblements, Pluralsight Online courses Author, publier des articles sur son blog et son orateur dans des conférences et événements nationaux et internationaux.|[Messagerie](mailto:giannishub@hotmail.com)|
 |![Engstrom](images/BiographyImages/JessicaEngstrom_270x270.jpg)</br>**Engstrom de l’anglais**</br>*Stockholm, Suède*|MVP Microsoft-développement de la plate-forme Windows, orateur public, expérience utilisateur, robots et réalité mixte. Codage après Cohébergement de podcasts de travail. Groupe d’utilisateurs et organisateur de conférence|[Messagerie](mailto:jessica@catoholic.se)|
 |![Jimmy Engstrom](images/BiographyImages/JimmyEngstrom_270x270.jpg)</br>**Jimmy Engstrom**</br>*Stockholm, Suède*|MVP Microsoft-développement de plate-forme Windows, orateur, éblouissant, réalité mixte, HoloLens et développeur Windows. Codage après Cohébergement de podcasts de travail. Groupe d’utilisateurs et organisateur de conférence|[Messagerie](mailto:jimmy@engstromjimmy.se)|
 |![Joost van Schaik](images/BiographyImages/JoostVanSchaik_270x270.jpg)</br>**Joost van Schaik**</br>*Amersfoort, Pays-Bas*|Je ne suis pas le seul à pouvoir peindre des grands récits et des Vista larges dans l’espace de MR. je m’appelle un développeur + + et je fais des choses. Mes principales réclamations à la notoriété sont mon blog et mes applications. l’une des premières applications indie pour HoloLens 1 et 2 disponibles dans le Store est la mienne. Recherchez « LocalJoost » dans le serveur de publication et voyez par vous-même. Au cours des trois dernières années, j’ai participé à certains projets commerciaux. Je considère moi-même une personne de la communauté. J’adore partager mes connaissances sur mon blog et en personne.|[Messagerie](mailto:joostvanschaik@outlook.com)|

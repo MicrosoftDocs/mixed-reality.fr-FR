@@ -6,12 +6,12 @@ ms.author: kegodin
 ms.date: 11/02/2019
 ms.topic: article
 keywords: Windows Mixed Reality, son spatial, design, style
-ms.openlocfilehash: 34923e1ebfc8e46ea8e67a4444fe3c2691efd4db
-ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
+ms.openlocfilehash: 08844f6d837407d52ad2ab84b78440ce856151fc
+ms.sourcegitcommit: b1ca4194eff452804ce5852208cce9815c6a4500
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/17/2019
-ms.locfileid: "75182009"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80677981"
 ---
 # <a name="how-to-use-sound-in-mixed-reality-applications"></a>Comment utiliser le son dans des applications en réalité mixte
 
@@ -46,20 +46,20 @@ Les types d’interaction en réalité mixte incluent le mouvement, la manipulat
 
 ### <a name="gesture-interactions"></a>Interactions de mouvement
 En réalité mixte, les utilisateurs peuvent interagir avec des boutons à l’aide d’une souris. Les actions de bouton se produisent généralement lorsque l’utilisateur relâche au lieu d’appuyer sur le bouton pour permettre à l’utilisateur d’annuler l’interaction. Utilisez des sons pour renforcer ces étapes. Pour aider les utilisateurs à cibler des boutons distants, envisagez également d’utiliser un son de pointage pointeur.
-* Le bouton de pression sur les sons doit être un petit « clic » tactile.<br/>Exemple : [MRTK_ButtonPress. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_ButtonPress.wav)
-* Les sons du bouton « dépresse » doivent avoir une apparence tactile similaire. Une tonalité plus élevée que le son de presse renforce le sens de l’achèvement.<br/>Exemple : [MRTK_ButtonUnpress. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_ButtonUnpress.wav)
+* Le bouton de pression sur les sons doit être un petit « clic » tactile.<br/>Exemple : [MRTK_ButtonPress. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MRTK/SDK/StandardAssets/Audio/MRTK_ButtonPress.wav)
+* Les sons du bouton « dépresse » doivent avoir une apparence tactile similaire. Une tonalité plus élevée que le son de presse renforce le sens de l’achèvement.<br/>Exemple : [MRTK_ButtonUnpress. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MRTK/SDK/StandardAssets/Audio/MRTK_ButtonUnpress.wav)
 * Pour les sons sensitifs, envisagez d’utiliser un son discret et non menaçant, tel qu’un Thud ou un bossage à basse fréquence.
 
 ### <a name="direct-manipulation"></a>Manipulation directe
 Sur HoloLens 2, le suivi articulé prend en charge la manipulation directe des éléments de l’interface utilisateur. Les sons sont importants lorsqu’il n’y a pas d’autres commentaires physiques.
 
 Une *pression sur un bouton* est importante dans la manipulation directe, car l’utilisateur n’obtient aucune autre indication lorsqu’il atteint le bas du trait de touche. Les indicateurs sonores de la course de la clé peuvent être de petite taille, subtile et bloqués. Comme avec les interactions de mouvement, les enfoncements de bouton doivent obtenir un son bref et tactile comme un clic. Les dépressions doivent avoir un son de clic similaire, mais avec un pas de tonalité élevé.
-* Exemple : [MRTK_ButtonPress. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_ButtonPress.wav)
-* Exemple : [MRTK_ButtonUnpress. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_ButtonUnpress)
+* Exemple : [MRTK_ButtonPress. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MRTK/SDK/StandardAssets/Audio/MRTK_ButtonPress.wav)
+* Exemple : [MRTK_ButtonUnpress. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MRTK/SDK/StandardAssets/Audio/MRTK_ButtonUnpress.wav)
 
 Il est difficile de confirmer visuellement une action de manipulation ou de libération. La main de l’utilisateur se trouve souvent dans le sens d’un effet visuel, et les objets qui ne sont pas bien réalisés en dur n’ont pas d’équivalent visuel réel de « saisie ». Les sons peuvent communiquer efficacement avec succès les interactions de capture et de libération.
-* Les actions de manipulation doivent avoir un son tactile rapide et légèrement atténué qui évoque l’idée des doigts qui se ferment autour d’un objet. Parfois, il y a également un son « bizarres » qui amène le son de saisie pour communiquer le mouvement de la main.<br/>Exemple : [MRTK_Move_Start. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_Move_Start.wav)
-* Les actions de mise en version doivent obtenir un son très bref et tactile. En règle générale, il est plus petit que le son et dans l’ordre inverse, avec un impact, puis un « bizarres » pour indiquer que l’objet est en cours de mise en place.<br/>Exemple : [MRTK_Move_End. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_Move_End.wav)
+* Les actions de manipulation doivent avoir un son tactile rapide et légèrement atténué qui évoque l’idée des doigts qui se ferment autour d’un objet. Parfois, il y a également un son « bizarres » qui amène le son de saisie pour communiquer le mouvement de la main.<br/>Exemple : [MRTK_Move_Start. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MRTK/SDK/StandardAssets/Audio/MRTK_Move_Start.wav)
+* Les actions de mise en version doivent obtenir un son très bref et tactile. En règle générale, il est plus petit que le son et dans l’ordre inverse, avec un impact, puis un « bizarres » pour indiquer que l’objet est en cours de mise en place.<br/>Exemple : [MRTK_Move_End. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MRTK/SDK/StandardAssets/Audio/MRTK_Move_End.wav)
 
 Une interaction de *dessin* doit obtenir un son de bouclage persistant dont le volume est déterminé par le mouvement de la main de l’utilisateur. Elle doit être silencieuse lorsque la main de l’utilisateur est toujours et la plus forte quand la main est rapidement déplacée.
 
@@ -108,7 +108,7 @@ Les sons qui renforcent les *étapes progressives des actions de bouton et d'* a
 ### <a name="which-spatialization-technology-to-use"></a>La technologie Spatialization à utiliser
 Avec les haut-parleurs casque ou HoloLens, utilisez les technologies Spatialization basées sur la fonction de transfert HRTF. Ces technologies modélisent la propagation du son autour de la tête dans le monde physique. Même lorsqu’une source audio se trouve à l’extrémité de l’une des têtes, le son se propage à l’oreille lointaine avec une atténuation et un retard. Le panoramique des orateurs, en revanche, s’appuie uniquement sur l’atténuation et applique une atténuation totale dans l’oreille gauche lorsque les sons se trouvent sur le côté droit (et vice-versa). Cette technique peut ne pas être confortable pour les écouteurs « audition normale » et inaccessible pour les écouteurs qui ont un handicap auditif dans une oreille.
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes :
 * [Utiliser un son spatial dans Unity](spatial-sound-in-unity.md)
 * [Étude de cas de Roboraid](case-study-using-spatial-sound-in-roboraid.md)
 * [Étude de cas de HoloTour](case-study-spatial-sound-design-for-holotour.md)
