@@ -6,12 +6,12 @@ ms.author: szymons
 ms.date: 07/08/2019
 ms.topic: article
 keywords: Compréhension des scènes, mappage spatial, Windows Mixed Reality, Unity
-ms.openlocfilehash: 4b959b7b7ec58fc30ed0fe93b568d123cbe70bb1
-ms.sourcegitcommit: 7e8b9de561cbc8483e84511f3e9cbd779f3a999f
+ms.openlocfilehash: 3d56f375c38b1dee6ab9eb97219a5e37fe698c63
+ms.sourcegitcommit: 37816514b8fe20669c487774b86e80ec08edcadf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/27/2019
-ms.locfileid: "75502670"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "81003335"
 ---
 # <a name="scene-understanding"></a>Compréhension des scènes
 
@@ -43,7 +43,7 @@ Si vous recherchez des informations spécifiques sur le développement pour la c
 ### <a name="sample"></a>Exemple
 
 
-## <a name="device-support"></a>Périphériques pris en charge
+## <a name="device-support"></a>Prise en charge des appareils
 
 <table>
     <colgroup>
@@ -73,11 +73,11 @@ Si vous recherchez des informations spécifiques sur le développement pour la c
 
 <br>
 
-La plupart des scénarios de base pour les applications prenant en charge l’environnement (placement, occlusion, physique, etc.) sont adressables à la fois par le mappage spatial et la compréhension des scènes, et cette section met en évidence ces différences. L’une des principales différences entre la compréhension des scènes et le mappage spatial est un compromis entre la précision et la latence maximales de la structure et de la simplicité. Si votre application requiert la latence la plus faible possible et les triangles de maillage qui vous permettent uniquement d’accéder directement au mappage spatial, mais que vous effectuez un traitement de niveau supérieur, vous pouvez envisager de basculer vers le modèle de compréhension de scène tel qu’il doit être fourni. vous disposez d’un sur-ensemble de fonctionnalités. Notez également que, étant donné que la compréhension de la scène fournit le maillage de mappage spatial dans le cadre de sa représentation, vous aurez toujours accès aux données de mappage spatiale les plus complètes et précises possibles.
+La plupart des scénarios de base pour les applications prenant en charge l’environnement (placement, occlusion, physique, etc.) sont adressables à la fois par le mappage spatial et la compréhension des scènes, et cette section met en évidence ces différences. L’une des principales différences entre la compréhension des scènes et le mappage spatial est un compromis entre la précision et la latence maximales de la structure et de la simplicité. Si votre application nécessite la latence la plus faible possible et les triangles de maillage auxquels vous seul souhaitez accéder, utilisez le mappage spatial directement. Si vous effectuez un traitement de niveau supérieur, vous pouvez envisager de basculer vers le modèle de compréhension de scène, car il doit vous fournir un sur-ensemble de fonctionnalités. Notez également que, étant donné que la compréhension de la scène fournit un instantané du maillage de mappage spatial dans le cadre de sa représentation, vous aurez toujours accès aux données de mappage spatiale les plus complètes et précises possibles.
 
 Les sections suivantes réexaminent les scénarios de mappage spatial de base dans le contexte du nouveau kit de développement logiciel (SDK).
 
-### <a name="placement"></a>Sélection élective
+### <a name="placement"></a>Placement
 
 La compréhension des scènes fournit de nouvelles constructions spécifiquement conçues pour simplifier les scénarios de placement. Une scène peut calculer des primitives appelées SceneQuads qui décrivent des surfaces plates sur lesquelles des hologrammes peuvent être placés. Les SceneQuads ont été spécifiquement conçus autour du placement et décrivent une surface 2D et fournissent une API pour l’emplacement de cette surface. Auparavant, lors de l’utilisation du maillage de triangles pour effectuer un placement, vous deviez analyser toutes les zones du quadruple et effectuer le remplissage/le traitement des trous pour identifier les emplacements corrects pour le placement des objets. Cela n’est pas toujours nécessaire avec les Quad, car l’exécution de la compréhension de la scène est capable de déduire les zones du quadruple qui n’ont pas été analysées et d’invalider les zones du quadruple qui ne font pas partie de la surface.
 
@@ -121,7 +121,7 @@ Bien qu’il soit possible d’utiliser la [visualisation de mappage spatial](sp
 
 En outre, le nombre total de surfaces retournées par le mappage spatial est limité par le cache spatial interne, tandis que la version de la vue de la représentation spatiale du maillage de mappage spatial peut accéder aux données de mappage spatiale qui ne sont pas mises en cache. Pour cette raison, la compréhension de la scène est plus adaptée à la capture des représentations de maillage pour les espaces plus larges (par exemple, plus grande qu’une seule pièce) pour la visualisation ou le traitement du maillage. La maille mondiale retournée avec EnableWorldMesh aura un niveau de détail cohérent tout au long de, ce qui peut générer une visualisation plus agréable si elle est rendue sous forme filaire.
 
-### <a name="see-also"></a>Articles associés
+### <a name="see-also"></a>Voir aussi
 
 * [Scène Understanding SDK](scene-understanding-SDK.md)
 * [Mappage spatial](spatial-mapping.md)

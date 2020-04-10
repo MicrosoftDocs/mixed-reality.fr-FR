@@ -6,12 +6,12 @@ ms.author: pbarnett
 ms.date: 04/25/2019
 ms.topic: article
 keywords: Windows Mixed Reality, simulateur, test
-ms.openlocfilehash: a7cbd5b5ca1c0ed0e4f81715d337d5eec68117f0
-ms.sourcegitcommit: f5c1dedb3b9e29f27f627025b9e7613931a7ce18
+ms.openlocfilehash: 686cac4e9ab4b3354767e22cd87d37ffbb508dea
+ms.sourcegitcommit: 37816514b8fe20669c487774b86e80ec08edcadf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64580700"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "81003295"
 ---
 # <a name="using-the-windows-mixed-reality-simulator"></a>Utilisation du simulateur Windows Mixed Reality
 
@@ -30,7 +30,9 @@ Le simulateur Windows Mixed Reality vous permet de tester des applications de r�
 5. Activer le basculement de la simulation **sur activé**
    * L’activation de la simulation installe et active le contrôleur 6-DDL simulé à gauche par défaut.  Avant la mise à jour de Windows 10 mai 2019, l’installation d’un contrôleur 6-DDL simulé nécessite des autorisations d’administrateur.  Vous devez accepter la boîte de dialogue contrôle de compte d’utilisateur si elle s’affiche.
 
-Vous devez maintenant être en cours d’exécution avec la simulation!
+Vous devez maintenant être en cours d’exécution avec la simulation !
+
+Si vous souhaitez désactiver le mode développeur dans paramètres, vous devez d’abord activer le basculement de la simulation sur **désactivé** dans la section **pour les développeurs** du portail de la réalité mixte.
 
 ## <a name="deploying-apps-to-the-mixed-reality-simulator"></a>Déploiement d’applications dans le simulateur de réalité mixte
 
@@ -49,7 +51,7 @@ Vous contrôlez le simulateur en dirigeant les actions d’un utilisateur simul�
 
 ## <a name="tracked-controllers"></a>Contrôleurs suivis
 
-Le simulateur de réalité mixte peut simuler jusqu’à deux contrôleurs de mouvement suivis. Activez-les à l’aide des commutateurs bascule dans le portail de la réalité mixte. Chaque contrôleur simulé a:
+Le simulateur de réalité mixte peut simuler jusqu’à deux contrôleurs de mouvement suivis. Activez-les à l’aide des commutateurs bascule dans le portail de la réalité mixte. Chaque contrôleur simulé a :
 * Position et orientation dans l’espace
 * Bouton Accueil
 * Bouton Menu
