@@ -7,12 +7,12 @@ ms.author: grbury
 ms.date: 08/21/2019
 ms.topic: overview
 keywords: Réalité mixte, développement, développement, HoloLens, services Azure, ancres spatiales, reconnaissance vocale, vision, rendu distant
-ms.openlocfilehash: 692c99bfa21fab8e01d38bebb34f656114d9fee3
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: a79495fd9bc82622d0ded14b7b4048584aed1da3
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73439500"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277747"
 ---
 # <a name="azure-mixed-reality-services"></a>Services Azure Mixed Reality
 Déverrouillez ce que chaque humain est un expert chez, le monde physique tridimensionnel qui nous est associé, avec les services Azure de réalité mixte. Aidez les gens à créer, à apprendre et à collaborer plus efficacement en capturant et en contournant les informations numériques dans le contexte de leur travail et de leur monde. Mettez en 3D des appareils mobiles, des casques et d’autres appareils qui ne sont pas attachés. À l’aide d’Azure, assurez-vous que vos informations les plus sensibles sont protégées.
@@ -46,7 +46,7 @@ Ajoutez des modèles 3D interactifs et de haute qualité à des appareils non at
        [![Voix](images/speech.jpg)](https://docs.microsoft.com/azure/cognitive-services/speech-service/)
     :::column-end:::
     :::column span="2":::
-        ### <a name="speechhttpsdocsmicrosoftcomazurecognitive-servicesspeech-service"></a>[Voix](https://docs.microsoft.com/azure/cognitive-services/speech-service/)
+        ### <a name="speech"></a>[Fonctions vocales](https://docs.microsoft.com/azure/cognitive-services/speech-service/)
         Découvrez comment la reconnaissance vocale active l’intégration des fonctionnalités de traitement vocal dans n’importe quelle application ou n’importe quel service. Convertit la langue parlée en texte ou produit une parole naturelle du texte à l’aide de polices vocales standard (ou personnalisables). Essayez gratuitement tout service et Créez rapidement des applications et des services compatibles avec la reconnaissance vocale avec les fonctionnalités suivantes.
     :::column-end:::
 :::row-end:::
@@ -58,15 +58,13 @@ Ajoutez des modèles 3D interactifs et de haute qualité à des appareils non at
        [Vision ![](images/vision.jpg)](https://docs.microsoft.com/azure/cognitive-services/computer-vision/)
     :::column-end:::
     :::column span="2":::
-        ### <a name="visionhttpsdocsmicrosoftcomazurecognitive-servicescomputer-vision"></a>[Acuité](https://docs.microsoft.com/azure/cognitive-services/computer-vision/)
+        ### <a name="vision"></a>[Acuité](https://docs.microsoft.com/azure/cognitive-services/computer-vision/)
         Reconnaissance, identification, légende, indexation et modération de vos images, vidéos et contenus d’encre numérique. Découvrez comment la vision permet aux applications et aux services d’identifier et d’analyser avec précision le contenu dans des images, des vidéos et de l’encre numérique.
     :::column-end:::
 :::row-end:::
 
 
-
-
-## <a name="see-also"></a>Articles associés
+## <a name="see-also"></a>Voir aussi
 
 * Didacticiels d’ancrage spatial Azure pour HoloLens 2- [1 sur 3 prise en main des ancres spatiales Azure](mrlearning-asa-ch1.md)
 * Didacticiels Azure Speech services pour HoloLens 2- [1 sur 4 intégration et utilisation de la reconnaissance vocale et de la transcription](mrlearning-speechSDK-ch1.md)
