@@ -1,18 +1,18 @@
 ---
 title: Utilisation de l’émulateur HoloLens
 description: Utilisation de l’émulateur HoloLens pour tester des applications de réalité mixte sur votre PC sans avoir besoin d’un appareil HoloLens physique.
-author: hamalawi
-ms.author: moelhama
-ms.date: 3/10/2020
+author: pbarnettms
+ms.author: pbarnett
+ms.date: 4/13/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: HoloLens, émulateur
-ms.openlocfilehash: 57a20b476ba0b1cc02a7e9bf41b33367b64d539c
-ms.sourcegitcommit: 5b2ba01aa2e4a80a3333bfdc850ab213a1b523b9
+ms.openlocfilehash: bbdf389a1b7bf42e3dfb1fffb09cf6d3b1a65b6a
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79028263"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278017"
 ---
 # <a name="using-the-hololens-emulator"></a>Utilisation de l’émulateur HoloLens
 
@@ -20,12 +20,15 @@ L’émulateur HoloLens vous permet de tester des applications holographiques su
 
 Si vous devez développer des applications ou jeux avec casques immersifs de réalité mixte Windows (VR) pour les ordinateurs de bureau, essayez le [simulateur de réalité mixte Windows](using-the-windows-mixed-reality-simulator.md), qui vous permet de simuler des casques de bureau.
 
+## <a name="hololens-2-emulator-overview"></a>Vue d’ensemble de l’émulateur HoloLens 2
+
+>[!VIDEO https://channel9.msdn.com/Shows/Docs-Mixed-Reality/HoloLens-2-Emulator-Overview/player?format=ny]
 
 ## <a name="installing-the-hololens-emulator"></a>Installation de l’émulateur HoloLens
 Téléchargez l’émulateur HoloLens.
 
 Versions : 
-* [Émulateur HoloLens 2 (mise à jour de mars 2020)](https://go.microsoft.com/fwlink/?linkid=2121323).
+* [Émulateur HoloLens 2 (mise à jour d’avril 2020)](https://go.microsoft.com/fwlink/?linkid=2126826).
 * [Émulateur HoloLens (1ère génération) et modèles de projet holographiques](https://go.microsoft.com/fwlink/?linkid=2065980).
 
 Des notes de publication et des versions antérieures de l’émulateur HoloLens sont disponibles dans la page [Archive de l’émulateur HoloLens](hololens-emulator-archive.md).
