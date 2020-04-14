@@ -1,17 +1,17 @@
 ---
 title: Mappage spatial dans DirectX
 description: Explique comment implémenter le mappage spatial dans votre application DirectX. Cela inclut une explication détaillée de l’exemple d’application de mappage spatial qui est inclus avec le kit de développement logiciel (SDK) plateforme Windows universelle.
-author: MikeRiches
+author: mikeriches
 ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, mappage spatial, environnement, interaction, DirectX, WinRT, API, exemple de code, UWP, SDK, procédure pas à pas
-ms.openlocfilehash: 456fcf1c00e23a287a741673e94b3f8d2d2d346c
-ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
+ms.openlocfilehash: b3ef74a7e11e0e73fce47e4c7193ace42ffe7c20
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79375816"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277497"
 ---
 # <a name="spatial-mapping-in-directx"></a>Mappage spatial dans DirectX
 

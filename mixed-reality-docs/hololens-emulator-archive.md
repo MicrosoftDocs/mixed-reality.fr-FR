@@ -1,17 +1,17 @@
 ---
 title: Archive de l’émulateur HoloLens
 description: Liste des builds publiées de l’émulateur Microsoft HoloLens.
-author: hamalawi
-ms.author: moelhama
-ms.date: 3/10/2020
+author: pbarnettms
+ms.author: pbarnett
+ms.date: 4/13/2020
 ms.topic: article
 keywords: HoloLens, émulateur, builds, versions
-ms.openlocfilehash: 7aed01ecc155e4ea93bbbf9c347f117b319d2bc7
-ms.sourcegitcommit: 5b2ba01aa2e4a80a3333bfdc850ab213a1b523b9
+ms.openlocfilehash: a50be8c83607882996e5981c4be502a0a617a797
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79031776"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278157"
 ---
 # <a name="hololens-2-emulator-archive"></a>Archive de l’émulateur HoloLens 2
 
@@ -19,6 +19,7 @@ L’émulateur HoloLens (1er génération) et l’émulateur HoloLens 2 s’inst
 
 |  Générer |  Date de publication |  Remarques | 
 |----------|----------|----------|
+|  [10.0.18362.1059 de build de l’émulateur HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2126826) | 13 avril 2020 | Version d’avril 2020 HoloLens 2.  Pour les notes de publication générales de HoloLens 2, consultez https://docs.microsoft.com/hololens/hololens-release-notes |
 |  [10.0.18362.1056 de build de l’émulateur HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2121323) | 10 mars, 2020 | Build de mars 2020 HoloLens 2.  Pour les notes de publication générales de HoloLens 2, consultez https://docs.microsoft.com/hololens/hololens-release-notes |
 |  [10.0.18362.1053 de build de l’émulateur HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2118321) | 11 février 2020 | Build HoloLens 2 de février 2020.  Pour les notes de publication générales de HoloLens 2, consultez https://docs.microsoft.com/hololens/hololens-release-notes |
 |  [10.0.18362.1044 de build de l’émulateur HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2114824) | Le 13 janvier 2020 | Build HoloLens 2 de janvier 2020.  Pour les notes de publication générales de HoloLens 2, consultez https://docs.microsoft.com/hololens/hololens-release-notes |

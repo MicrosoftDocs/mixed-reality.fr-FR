@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 07/11/2019
 ms.topic: article
 keywords: Notes de publication, version, Windows 10, Build, 19h1, OS, mai 2019
-ms.openlocfilehash: f5163e128c3f1e1b68d827b09078b565a58c5a4d
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 97bf4c3b5c24fc6f0c763b8dd9f146bbaa01187a
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438320"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277627"
 ---
 # <a name="release-notes---may-2019"></a>Notes de publication-mai 2019
 
@@ -44,6 +44,10 @@ Nous cherchons continuellement à améliorer la compatibilité.  Si vous constat
 
 HoloLens (1re génération) passe à l’état de maintenance à long terme (LTS). Les futures mises à jour seront axées sur le problème et les correctifs de sécurité, tout en conservant la parité des fonctionnalités avec la [version 2018 de Windows 10 octobre](release-notes-october-2018.md) pour HoloLens (également appelée RS5). 
 
+## <a name="known-issues"></a>Problèmes connus
+
+Nous effectuons le suivi d’un problème nécessitant la connexion d’une analyse au PC afin que le casque immersif fonctionne correctement. Les utilisateurs de PC de sac à dos peuvent souhaiter utiliser une carte d’affichage active (ou un émulateur EDID) pour s’assurer que leur casque immersif continue à être rendu quand aucun moniteur de PC n’est en cours d’utilisation. 
+
 ## <a name="provide-feedback-and-report-issues"></a>Fournir des commentaires et signaler des problèmes
 
 Utilisez l' [application Hub de commentaires sur votre PC Windows 10](give-us-feedback.md) ou votre appareil HoloLens pour fournir des commentaires et signaler des problèmes. L’utilisation de feedback Hub garantit que toutes les informations de diagnostic nécessaires sont incluses pour aider nos ingénieurs à déboguer et résoudre rapidement le problème.
@@ -61,7 +65,7 @@ Utilisez l' [application Hub de commentaires sur votre PC Windows 10](give-us-fe
 * [Notes de publication - Mai 2016](release-notes-may-2016.md)
 * [Notes de publication - Mars 2016](release-notes-march-2016.md)
 
-## <a name="see-also"></a>Articles associés
+## <a name="see-also"></a>Voir aussi
 * [Prise en charge des casques immersifs (lien externe)](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality)
 * [Prise en charge de HoloLens (lien externe)](https://support.microsoft.com/products/hololens)
 * [Installer les outils](install-the-tools.md)

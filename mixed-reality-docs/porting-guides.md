@@ -1,17 +1,17 @@
 ---
 title: Guides en matière de portage
 description: Un Walthrough étape par étape explique comment porter une application immersive existante vers Windows Mixed Reality.
-author: ChimeraScorn
+author: chimerascorn
 ms.author: alexturn
 ms.date: 10/02/2018
 ms.topic: article
 keywords: port, Portage, Unity, intergiciel, moteur, UWP
-ms.openlocfilehash: 5d3debc9a810873f21a9f55a32061565d4ce75ae
-ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
+ms.openlocfilehash: 06501742d4b5c30036982deef2ec2a88171912bf
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74539507"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278037"
 ---
 # <a name="porting-guides"></a>Guides en matière de portage
 
@@ -152,7 +152,7 @@ Windows Mixed Reality sera disponible sur une vaste gamme d’appareils, allant 
 
 [Unity](https://docs.unity3d.com/Manual/Profiler.html) et [Visual Studio](https://docs.microsoft.com/visualstudio/profiling/index) incluent des profileurs de performances, et [Microsoft](understanding-performance-for-mixed-reality.md) et [Intel](https://software.intel.com/articles/vr-content-developer-guide) publient des instructions sur le profilage et l’optimisation des performances. Une discussion complète sur les performances est disponible [pour comprendre les performances de la réalité mixte](understanding-performance-for-mixed-reality.md). En outre, il existe des détails spécifiques pour Unity sous [recommandations de performances pour Unity](performance-recommendations-for-unity.md).
 
-## <a name="see-also"></a>Articles associés
+## <a name="see-also"></a>Voir aussi
 * [Guide de portage des entrées pour Unity](input-porting-guide-for-unity.md)
 * [Instructions de compatibilité matérielle PC minimale pour Windows Mixed Reality](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)
 * [Comprendre les performances de la réalité mixte](understanding-performance-for-mixed-reality.md)

@@ -1,17 +1,17 @@
 ---
 title: Utilisation de XAML avec des applications DirectX holographiques
 description: Explique l’impact du basculement entre les vues XAML 2D et les vues immersives dans votre application DirectX, et comment utiliser efficacement un mode XAML et un affichage immersif.
-author: MikeRiches
+author: mikeriches
 ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, UWP, gestion des affichages des applications, XAML, clavier, procédure pas à pas, DirectX
-ms.openlocfilehash: 32b2feea0cb6b8aba972c1772451ca7b5b9946d5
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 4136e674cfc1737dba9dcc1f70bd68edd4e95a41
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63548703"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277957"
 ---
 # <a name="using-xaml-with-holographic-directx-apps"></a>Utilisation de XAML avec des applications DirectX holographiques
 
@@ -25,9 +25,9 @@ Notez que le compte d’utilisation de la mémoire pour le processeur et le GPU.
 
 ## <a name="xaml-view-switching-workflow"></a>Flux de travail de basculement de vue XAML
 
-Le flux de travail d’une application qui va directement du XAML au mode immersif est le suivant:
+Le flux de travail d’une application qui va directement du XAML au mode immersif est le suivant :
 * L’application démarre en mode XAML 2D.
-* La séquence de démarrage XAML de l’application détecte si le système actuel prend en charge le rendu holographique:
+* La séquence de démarrage XAML de l’application détecte si le système actuel prend en charge le rendu holographique :
 * Si c’est le cas, l’application crée l’affichage immersif et le met immédiatement au premier plan. Le chargement XAML est ignoré pour tout élément qui n’est pas nécessaire sur les appareils Windows Mixed Reality, y compris les classes de rendu et le chargement des ressources dans la vue XAML. Si l’application utilise du code XAML pour l’entrée au clavier, cette page d’entrée doit encore être créée.
 * Si ce n’est pas le cas, la vue XAML peut poursuivre l’entreprise comme d’habitude.
 

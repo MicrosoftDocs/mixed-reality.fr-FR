@@ -1,21 +1,21 @@
 ---
 title: Rendu du volume
 description: Les images volumétriques contiennent des informations riches avec opacité et couleur dans tout le volume qui ne peuvent pas être facilement exprimées en tant que surfaces. Découvrez comment restituer efficacement des images volumétriques dans Windows Mixed Reality.
-author: KevinKennedy
+author: kevinkennedy
 ms.author: kkennedy
 ms.date: 03/21/2018
 ms.topic: article
 keywords: image volumétrique, rendu volume, performances, réalité mixte
-ms.openlocfilehash: 04931df5e4225225e4c11c3f6d72801e2d58f646
-ms.sourcegitcommit: 317653cd8500563c514464f0337c1f230a6f3653
+ms.openlocfilehash: 6dbb49c31761d4b7b9da5060d15763c3925be754
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/28/2019
-ms.locfileid: "75503828"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277947"
 ---
 # <a name="volume-rendering"></a>Rendu du volume
 
-Pour les volumes d’ingénierie ou d’IRM médicaux, consultez [rendu en volume sur Wikipédia](https://en.wikipedia.org/wiki/Volume_rendering). Ces « images volumétriques » contiennent des informations riches avec de l’opacité et des couleurs dans tout le volume qui ne peuvent pas être facilement exprimées comme surfaces telles que les [maillages polygonaux](https://en.wikipedia.org/wiki/Polygon_mesh).
+Pour les volumes d’ingénierie ou d’IRM médicaux, consultez [rendu en volume sur Wikipédia](https://en.wikipedia.org/wiki/Volume_rendering). Ces « images volumétriques » contiennent des informations enrichies avec opacité et couleur dans tout le volume qui ne peuvent pas être facilement exprimées comme des surfaces telles que des [maillages polygones](https://en.wikipedia.org/wiki/Polygon_mesh).
 
 Solutions clés pour améliorer les performances
 1. MAUVAISE : approche naïve : afficher tout le volume, s’exécute généralement trop lentement

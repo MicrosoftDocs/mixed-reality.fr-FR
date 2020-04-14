@@ -1,17 +1,17 @@
 ---
 title: Transferts d’ancrage locaux dans DirectX
 description: Explique comment synchroniser deux appareils HoloLens en transférant des ancres spatiales.
-author: MikeRiches
+author: mikeriches
 ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, synchroniser, ancrage spatial, transfert, multijoueur, vue, scénario, procédure pas à pas, exemple de code, transfert, transfert d’ancrage local, exportation d’ancrage, importation d’ancrage
-ms.openlocfilehash: f961862c3c49872484683e264fb9c62b5d0b60ee
-ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
+ms.openlocfilehash: e709f107e280f9c88a4f1af590cb62de301633fe
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79376026"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278067"
 ---
 # <a name="local-anchor-transfers-in-directx"></a>Transferts d’ancrage locaux dans DirectX
 

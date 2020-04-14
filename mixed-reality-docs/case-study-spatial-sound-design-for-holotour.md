@@ -1,17 +1,17 @@
 ---
 title: Étude de cas-conception de son spatial pour HoloTour
 description: Pour créer une visite virtuelle 3D véritablement immersif pour Microsoft HoloLens, les vidéos panoramiques et les scènes holographiques ne font qu’une partie de la formule.
-author: JSyltebo
+author: jsyltebo
 ms.author: jsylte
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, HoloLens, HoloTour, son spatial, étude de cas
-ms.openlocfilehash: f2dd704089d9c76b7ba175a4a1ad5cebf9ec6c68
-ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
+ms.openlocfilehash: 5c6331bd93447f53c1dd4c9941bfa13a5eadc1bd
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/17/2019
-ms.locfileid: "75181924"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278137"
 ---
 # <a name="case-study-spatial-sound-design-for-holotour"></a>Étude de cas : conception de son spatial pour HoloTour
 
@@ -56,7 +56,7 @@ Lorsque nous avons indexé l’audio de capture d’appareil photo, nous avons p
 
 Dans une approche différente, nous affichons parfois l’ambiance stéréo en boucle conjointement avec les émetteurs de sons spatiaux placés autour de la scène. Ces émetteurs émettent des sons uniques d’une fréquence de déclenchement et de volume aléatoires. Cette technique crée une ambiance qui a un sens amélioré de la direction. Dans Aguas alienates, par exemple, vous pouvez savoir comment chaque quadrant du panorama a des émetteurs spécifiques qui mettent en évidence des zones spécifiques de la géographie, mais qui travaillent ensemble pour créer une ambiance immersive globale.
 
-## <a name="tips-and-tricks"></a>Conseils et astuces
+## <a name="tips-and-tricks"></a>Trucs et astuces
 
 Il existe d’autres façons de mettre en évidence la direction et d’améliorer l’immersion pour tirer pleinement parti des fonctionnalités de son spatial de HoloLens. Nous avons fourni une liste ici. Écoutez ces effets la prochaine fois que vous essaierez HoloTour.
 * **Rechercher les cibles :** Ces sons sont déclenchés lorsque vous examinez un objet ou une zone spécifique du cadre holographique. Par exemple, regardez sur le café de Rome dans Piazza Navona pour déclencher discrètement des sons occupés-restaurants.
@@ -65,7 +65,7 @@ Il existe d’autres façons de mettre en évidence la direction et d’amélior
 * **Émetteur de spline :** Ces émetteurs se déplacent dans l’espace 3D par rapport à la position visuelle de l’objet auquel ils sont attachés. Un exemple est le train dans Machu Picchu, où nous avons utilisé un émetteur de spline pour donner un sens distinct de la direction et du mouvement.
 * **Musique et SFX :** Certains aspects des HoloTour qui représentent une approche plus stylisée ou cinématographique utilisent des effets sonores et musicaux pour renforcer l’impact émotionnelle. Dans la bataille Gladiator à la fin de la visite de Rome, par exemple, des effets spéciaux comme les whooshes et les batteurs aident à renforcer l’effet des étiquettes qui s’affichent en arrière-plan.
 
-## <a name="see-also"></a>Articles associés
+## <a name="see-also"></a>Voir aussi
 * [Son spatial](spatial-sound.md)
 * [Conception du son spatial](spatial-sound-design.md)
 * [Son spatial dans Unity](spatial-sound-in-unity.md)

@@ -1,17 +1,17 @@
 ---
 title: À propos de ce guide de conception
 description: Cette aide a été écrite par des concepteurs, des développeurs, des responsables de programme et les chercheurs de Microsoft, dont les travaux couvrent les appareils holographiques (par exemple HoloLens) et les appareils immersifs (par exemple les casques Windows Mixed Reality Acer et HP).
-author: MRWied
+author: mrwied
 ms.author: jonwie
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, conception, introduction, conseils
-ms.openlocfilehash: fd2b8d704c9053d9eeb63ab2cceca1e4257d86ed
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 114a3808d57b2bd78044ce743d568bd5effe25bb
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437098"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277517"
 ---
 # <a name="about-this-design-guidance"></a>À propos de ce guide de conception
 
@@ -25,9 +25,9 @@ Avec vous, nous avons introduit une nouvelle ère remarquablement passionnante d
 
 Dans la mesure du possible, nous proposerons des conseils de conception actionnables avec le code associé sur GitHub. Cela dit, étant donné que nous nous familiarisons avec vous, nous ne serons pas toujours en mesure de proposer des conseils pratiques spécifiques. Une partie de ce que nous partagerons sera à l’esprit des « leçons que nous avons apprises » et « évitez de faire tourner ce chemin d’accès ».
 
-Et nous savons que de nombreuses innovations seront générées par la communauté de conception plus grande. Nous sommes donc impatients de vous faire part de vos commentaires, de vous apprendre et de travailler en étroite collaboration avec vous. Pour notre part, nous ferons de notre mieux pour partager nos Insights, même s’ils sont exploratoires et tôt avec l’intention de donner aux développeurs et aux concepteurs des conseils de conception, des pratiques recommandées et les contrôles, modèles et exemples d’applications open source associés que vous pouvez utiliser. directement dans votre propre travail.
+Et nous savons que de nombreuses innovations seront générées par la communauté de conception plus grande. Nous sommes donc impatients de vous faire part de vos commentaires, de vous apprendre et de travailler en étroite collaboration avec vous. Pour notre part, nous ferons de notre mieux pour partager nos Insights, même s’ils sont exploratoires et précoces dans le but de permettre aux développeurs et aux concepteurs de réfléchir à la conception, aux meilleures pratiques et aux contrôles, modèles et exemples d’applications open source associés que vous pouvez utiliser directement dans votre propre travail.
 
-## <a name="overview"></a>Vue d'ensemble
+## <a name="overview"></a>Overview
 
 Voici une vue d’ensemble rapide de l’organisation de ce guide de conception. 
 * **[Vue d’ensemble](design.md)** : en savoir plus sur le processus de conception, les concepts de base et les facteurs d’interaction à prendre en compte.
@@ -58,7 +58,7 @@ Bien qu’il soit important de se concentrer sur des problèmes spécifiques aux
 
 ![Rencontrez les créateurs où ils sont](images/500px-creators.jpg) <br>
 
-Nous espérons que de nombreux publics trouvent ces conseils pour être utiles. Vous avez différentes compétences (début, intermédiaire, avancé), utilisez différents outils (Unity, DirectX, C++, C#, etc.), vous êtes familiarisé avec les différentes plateformes (Windows, iOS, Android), issues de différents horizons (mobiles, entreprise, jeux ) et travaillent sur différentes équipes de taille (solo, petite, moyenne, grande). Ce guide peut donc être consulté avec différentes perspectives et besoins. Dans la mesure du possible, nous essaierons de garder cette diversité à l’esprit et de faire en sorte que nos conseils soient les plus pertinents possible pour autant de personnes que possible. En outre, nous savons que beaucoup d’entre vous sont déjà sur GitHub. Nous allons donc nous lier directement à des GitHubs et à des forums pour vous répondre là où vous êtes déjà. 
+Nous espérons que de nombreux publics trouvent ces conseils pour être utiles. Vous avez différentes compétences (début, intermédiaire, avancé), utilisez différents outils (Unity, DirectX, C++, C#etc.), vous connaissez les différentes plateformes (Windows, iOS, Android), qui proviennent de différents arrière-plans (mobile, entreprise, jeux) et qui travaillent sur différentes équipes de taille (solo, petite, moyenne, grande). Ce guide peut donc être consulté avec différentes perspectives et besoins. Dans la mesure du possible, nous essaierons de garder cette diversité à l’esprit et de faire en sorte que nos conseils soient les plus pertinents possible pour autant de personnes que possible. En outre, nous savons que beaucoup d’entre vous sont déjà sur GitHub. Nous allons donc nous lier directement à des GitHubs et à des forums pour vous répondre là où vous êtes déjà. 
 
 ### <a name="share-as-much-as-possible-from-experimental-to-explicit"></a>Partager le plus possible, de l’expérimentation à la valeur explicite
 

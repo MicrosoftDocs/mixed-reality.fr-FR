@@ -1,18 +1,18 @@
 ---
 title: Qu’est-ce que la réalité mixte ?
 description: Cet article définit la réalité mixte et montre où se situent, le long du spectre de réalité mixte, les appareils simples de réalité augmentée (AR) et de réalité virtuelle (VR) ainsi que les appareils Windows Mixed Reality comme les casques immersifs Microsoft HoloLens et Windows Mixed Reality.
-author: BrandonBray
+author: brandonbray
 ms.author: branbray
 ms.date: 03/21/2018
 ms.topic: article
 keywords: réalité mixte, holographique, ar, vr, mr, xr, réalité augmentée, réalité virtuelle, explication
 ms.localizationpriority: high
-ms.openlocfilehash: f170fe7a3353ac0cce1bd7532802eaff7a357494
-ms.sourcegitcommit: ee8c7e821cb337cbccd8af64b13ee5f50109a776
+ms.openlocfilehash: 7b0dcbdb88f880d4c1632fae874ba6a610f023fb
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80082081"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278047"
 ---
 # <a name="what-is-mixed-reality"></a>Qu’est-ce que la réalité mixte ?
 

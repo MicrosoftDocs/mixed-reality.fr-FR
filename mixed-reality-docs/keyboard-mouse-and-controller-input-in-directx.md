@@ -1,17 +1,17 @@
 ---
 title: Entrée de clavier, de souris et de contrôleur dans DirectX
 description: Explique comment créer une application pour Windows Mixed Reality qui utilise le clavier, la souris et les contrôleurs de jeu.
-author: MikeRiches
+author: mikeriches
 ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, clavier, souris, contrôleur de jeu, contrôleur Xbox, HoloLens, Desktop, procédure pas à pas, exemple de code
-ms.openlocfilehash: 1e61cb50a561492fdc6849b5b231e97fab1bb6cf
-ms.sourcegitcommit: 05fa75193059a2dac4b580a9eef7b6c4bb64d8d7
+ms.openlocfilehash: 27f1bf72435ce6889ba3f7b83664367a4440b162
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74835095"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278087"
 ---
 # <a name="keyboard-mouse-and-controller-input-in-directx"></a>Entrée de clavier, de souris et de contrôleur dans DirectX
 
@@ -265,5 +265,5 @@ Il existe quelques différences clés dans la façon dont ce code peut être uti
 * L’entrée au clavier peut être un excellent moyen de contrôler les aspects de débogage de votre application ou moteur de jeu, en particulier dans la mesure où l’utilisateur ne sera pas obligé d’utiliser le clavier. Son câblage est identique à celui que vous utilisez avec les API d’événement CoreWindow. Dans ce scénario, vous pouvez choisir d’implémenter un moyen de configurer votre application pour acheminer les événements de clavier vers un mode « en entrée de débogage uniquement » pendant vos sessions de débogage.
 * Les contrôleurs Bluetooth fonctionnent également.
 
-## <a name="see-also"></a>Articles associés
+## <a name="see-also"></a>Voir aussi
 * [Accessoires matériels](hardware-accessories.md)

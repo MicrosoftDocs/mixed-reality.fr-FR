@@ -1,17 +1,17 @@
 ---
 title: Établissement d’une connexion sécurisée à l’aide de la communication à distance holographique
 description: Cette page explique comment établir une connexion chiffrée sécurisée lors de l’utilisation de la communication à distance holographique.
-author: FlorianBagarMicrosoft
+author: florianbagarmicrosoft
 ms.author: flbagar
 ms.date: 03/11/2020
 ms.topic: article
 keywords: HoloLens, communication à distance, communication à distance holographique
-ms.openlocfilehash: ac1170cb3e6d681fc164c3f4cee14da6ab6eb90b
-ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
+ms.openlocfilehash: 4006a317ed2ecfd7a1e67336a80a4e536d45e554
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79092474"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278227"
 ---
 # <a name="establishing-a-secure-connection-with-holographic-remoting"></a>Établissement d’une connexion sécurisée à l’aide de la communication à distance holographique
 

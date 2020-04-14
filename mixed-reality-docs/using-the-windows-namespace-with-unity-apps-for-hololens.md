@@ -1,17 +1,17 @@
 ---
 title: API WinRT avec Unity pour HoloLens
 description: Explique comment utiliser les API WinRT (l’espace de noms Windows) dans votre projet Unity pour HoloLens.
-author: MikeRiches
+author: mikeriches
 ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Unity, WinRT, Windows Mixed Reality, API, procédure pas à pas
-ms.openlocfilehash: 73764d191813f6dcae750e74ce3181af987c9e0e
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 80f950d7571a936e93eb08490ad83dbb34a50b3a
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437233"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277987"
 ---
 # <a name="winrt-apis-with-unity-for-hololens"></a>API WinRT avec Unity pour HoloLens
 
@@ -62,8 +62,8 @@ public class WinRTAPI : MonoBehaviour {
 
 ## <a name="edit-your-scripts-in-a-unity-c-project"></a>Modifier vos scripts dans un projet C# Unity
 
-Lorsque vous double-cliquez sur un script dans l’éditeur Unity, le script est lancé par défaut dans un projet de l’éditeur. Les API WinRT semblent être inconnues, car le projet Visual Studio ne fait pas référence à l’Windows Runtime. En outre, la directive **ENABLE_WINMD_SUPPORT** sera non définie et tout *#if* code encapsulé sera ignoré jusqu’à ce que vous génériez votre projet dans une solution Visual Studio UWP.
+Lorsque vous double-cliquez sur un script dans l’éditeur Unity, le script est lancé par défaut dans un projet de l’éditeur. Les API WinRT semblent être inconnues, car le projet Visual Studio ne fait pas référence à l’Windows Runtime. En outre, la directive **ENABLE_WINMD_SUPPORT** sera non définie et tout code encapsulé *#if* sera ignoré jusqu’à ce que vous génériez votre projet dans une solution Visual Studio UWP.
 
-## <a name="see-also"></a>Articles associés
+## <a name="see-also"></a>Voir aussi
 * [Exportation et création de solutions Unity Visual Studio](exporting-and-building-a-unity-visual-studio-solution.md)
 * [Unity support Windows Runtime](https://docs.unity3d.com/Manual/IL2CPP-WindowsRuntimeSupport.html)

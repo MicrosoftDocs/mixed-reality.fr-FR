@@ -1,17 +1,17 @@
 ---
 title: Paramètres recommandés pour Unity
 description: Unity offre des comportements spécifiques à la réalité mixte qui peuvent être activés via les paramètres du projet.
-author: Troy-Ferrell
+author: troy-ferrell
 ms.author: trferrel
 ms.date: 03/26/2019
 ms.topic: article
 keywords: Unity, paramètres, réalité mixte
-ms.openlocfilehash: 2ab7eb0f9a7e06506ef8c57103518d8ef0a775df
-ms.sourcegitcommit: d0da0214fdd2bbac5a91a5d895bf0e87413b29b2
+ms.openlocfilehash: 9b4e04e10e95f6c4f12a25a6f34236d9d2bf99a2
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75597632"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278007"
 ---
 # <a name="recommended-settings-for-unity"></a>Paramètres recommandés pour Unity
 
@@ -44,18 +44,18 @@ Dans les applications de réalité mixte, la scène est restituée deux fois, un
 
 Pour activer cette fonctionnalité dans votre projet Unity
 
-1)  Ouvrez **les paramètres du XR Player** (accédez à **modifier** > **paramètres du projet** > **lecteur** > **paramètres XR**)
-2) Sélectionnez **une instance de passe unique** dans le menu déroulant **méthode de rendu stéréo** (la case à cocher de**la réalité virtuelle** doit être activée)
+1)  Ouvrez **Player XR Settings** (accédez à **Edit** > **Project Settings** > **Player** > **XR Settings**).
+2) Sélectionnez **Single Pass Instanced** dans le menu déroulant **Stereo Rendering Method** (la case **Virtual Reality Supported** doit être cochée).
 
 Lisez les articles suivants sur Unity pour plus d’informations sur cette approche de rendu.
 
-- [Optimisation des performances de l’AR et du VR avec un rendu stéréo avancé](https://blogs.unity3d.com/2017/11/21/how-to-maximize-ar-and-vr-performance-with-advanced-stereo-rendering/)
-- [Instanciation à passage unique](https://docs.unity3d.com/Manual/SinglePassInstancing.html)
+- [How to maximize AR and VR performance with advanced stereo rendering](https://blogs.unity3d.com/2017/11/21/how-to-maximize-ar-and-vr-performance-with-advanced-stereo-rendering/)
+- [Single Pass Instancing](https://docs.unity3d.com/Manual/SinglePassInstancing.html)
 
 >[!NOTE]
-> Un problème courant avec un rendu d’instance à passage unique se produit si les développeurs possèdent déjà des nuanceurs personnalisés existants non écrits pour l’instanciation. Une fois cette fonctionnalité activée, les développeurs peuvent remarquer que certains GameObjects ne s’affichent qu’en un seul œil. Cela est dû au fait que les nuanceurs personnalisés associés n’ont pas les propriétés appropriées pour l’instanciation.
+> Un problème courant avec le rendu d’instance à passage unique se produit si les développeurs ont déjà des nuanceurs personnalisés existants non écrits pour l’instanciation. Une fois cette fonctionnalité activée, les développeurs peuvent remarquer que certains GameObjects ne sont rendus que dans un seul œil. Cela est dû au fait que les nuanceurs personnalisés associés n’ont pas les propriétés appropriées pour l’instanciation.
 >
-> Consultez [rendu stéréo à passage unique pour HoloLens](https://docs.unity3d.com/Manual/SinglePassStereoRenderingHoloLens.html) à partir d’Unity pour savoir comment résoudre ce problème
+> Consultez [Single Pass Stereo Rendering for HoloLens](https://docs.unity3d.com/Manual/SinglePassStereoRenderingHoloLens.html) sur Unity pour savoir comment résoudre ce problème.
 
 ### <a name="enable-depth-buffer-sharing"></a>Activer le partage de mémoire tampon de profondeur
 
@@ -63,7 +63,7 @@ Pour obtenir une meilleure stabilité de l’hologramme à partir de la percepti
 
 Pour activer cette fonctionnalité dans votre projet Unity
 
-1) Ouvrez **les paramètres du XR Player** (accédez à **modifier** > **paramètres du projet** > **lecteur** > **paramètres XR**)
+1) Ouvrez **Player XR Settings** (accédez à **Edit** > **Project Settings** > **Player** > **XR Settings**).
 2) Activez la case à cocher **activer le partage de tampons de profondeur** dans les kits de développement logiciel (SDK) de **réalité virtuelle** > la case à cocher expansion de la **réalité mixte** (**Really Supported** )
 
 En outre, il est recommandé de sélectionner **profondeur de 16 bits** sous le paramètre **format de profondeur** dans ce panneau, en particulier pour le développement HoloLens. La sélection de 16 bits comparée à 24 bits réduit considérablement les besoins en bande passante, car moins de données devront être déplacées/traitées.
@@ -116,10 +116,10 @@ Pour activer/désactiver l’écran de démarrage holographique :
 
 |  Afficher l’écran de démarrage Unity  |  Image de démarrage holographique  |  Comportement |
 |----------|----------|----------|
-|  Dans  |  Aucun(e)  |  Affiche l’écran de démarrage Unity par défaut pendant 5 secondes ou jusqu’à ce que l’application soit chargée, selon la valeur la plus longue. |
-|  Dans  |  Personnalisée  |  Affichez l’écran de démarrage personnalisé pendant 5 secondes ou jusqu’à ce que l’application soit chargée, selon la valeur la plus longue. |
-|  Off)  |  Aucun(e)  |  Affichez le noir transparent (rien) jusqu’à ce que l’application soit chargée. |
-|  Off)  |  Personnalisée  |  Affichez l’écran de démarrage personnalisé pendant 5 secondes ou jusqu’à ce que l’application soit chargée, selon la valeur la plus longue. |
+|  Activé  |  Aucune  |  Affiche l’écran de démarrage Unity par défaut pendant 5 secondes ou jusqu’à ce que l’application soit chargée, selon la valeur la plus longue. |
+|  Activé  |  Personnalisé  |  Affichez l’écran de démarrage personnalisé pendant 5 secondes ou jusqu’à ce que l’application soit chargée, selon la valeur la plus longue. |
+|  Désactivé  |  Aucune  |  Affichez le noir transparent (rien) jusqu’à ce que l’application soit chargée. |
+|  Désactivé  |  Personnalisé  |  Affichez l’écran de démarrage personnalisé pendant 5 secondes ou jusqu’à ce que l’application soit chargée, selon la valeur la plus longue. |
 
 Pour plus d’informations, consultez la [documentation de l’écran de démarrage d’Unity](https://docs.unity3d.com/Manual/class-PlayerSettingsSplashScreen.html) .
 
@@ -149,7 +149,7 @@ Pour refuser le comportement de pause automatique :
 
 Pour définir un comportement personnalisé lorsque le suivi est perdu, gérez les [événements de perte de suivi](tracking-loss-in-unity.md)global.
 
-### <a name="capabilities"></a>Fonctions
+### <a name="capabilities"></a>Capacités
 
 Pour qu’une application tire parti de certaines fonctionnalités, elle doit déclarer les fonctionnalités appropriées dans son manifeste. Les déclarations de manifeste peuvent être effectuées dans Unity afin qu’elles soient incluses dans chaque exportation de projet suivante.
 
@@ -169,7 +169,7 @@ Les fonctionnalités applicables pour activer les API couramment utilisées pour
 |  Microphone  |  VideoCapture (lors de la capture de l’audio), DictationRecognizer, GrammarRecognizer et KeywordRecognizer |
 |  InternetClient  |  DictationRecognizer (et pour utiliser le profileur Unity) |
 
-## <a name="see-also"></a>Articles associés
+## <a name="see-also"></a>Voir aussi
 
 * [Vue d’ensemble du développement Unity](unity-development-overview.md)
 * [Comprendre les performances pour la réalité mixte](understanding-performance-for-mixed-reality.md)

@@ -1,17 +1,17 @@
 ---
 title: Étude de cas-HoloTour
 description: HoloTour pour Microsoft HoloLens fournit des présentations personnelles en 3D immersifs d’emplacements sous forme à travers le monde. Cette étude de cas vous guidera tout au long du processus de capture et de création du contenu utilisé pour HoloTour.
-author: DannyAskew
+author: dannyaskew
 ms.author: daaske
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloTour, HoloLens, Windows Mixed Reality
-ms.openlocfilehash: 035bec9b0d46a31978bc91f23bfb3a5ee47d6247
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 59c3dffd48009aa792643ea27b59f8f6f85b64d7
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73436926"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278187"
 ---
 # <a name="case-study---holotour"></a>Étude de cas-HoloTour
 
@@ -83,7 +83,7 @@ Pour combiner les vidéos, nous avons utilisé un outil appelé [PTGui](https://
 Capture d’écran de PTGui montrant le métrage Pantheon. 
 
 
-### <a name="video-playback"></a>Lecture vidéo
+### <a name="video-playback"></a>Lecture de la vidéo
 
 Une fois le métrage terminé, nous disposons d’une vidéo transparente, mais elle est très importante, avec une résolution de 8 Ko environ. Le décodage de la vidéo est onéreux et il y a très peu d’ordinateurs capables de gérer une vidéo de 8 Ko. par conséquent, le prochain défi consistait à trouver un moyen de relire cette vidéo sur HoloLens. Nous avons développé un certain nombre de stratégies pour éviter le coût du décodage tout en faisant en sorte que l’utilisateur ait l’impression d’afficher l’intégralité de la vidéo.
 
@@ -152,5 +152,5 @@ Nous espérons que les solutions de partage à certains des plus grands défis q
 
 
 
-## <a name="see-also"></a>Articles associés
+## <a name="see-also"></a>Voir aussi
 * [Vidéo : Microsoft HoloLens : HoloTour](https://www.youtube.com/watch?v=pLd9WPlaMpY)

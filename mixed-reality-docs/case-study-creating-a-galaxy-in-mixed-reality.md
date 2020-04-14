@@ -1,17 +1,17 @@
 ---
 title: 'Étude de cas : création d’un Galaxy en réalité mixte'
 description: Avant la sortie de Microsoft HoloLens, nous avons demandé à notre communauté de développeurs quel type d’application il souhaite voir une build d’équipe interne expérimentée pour le nouvel appareil. Plus de 5000 idées ont été partagées et, après une interrogation Twitter de 24 heures, le gagnant était une idée appelée « Galaxy Explorer ».
-author: KarimLUCCIN
+author: karimluccin
 ms.author: kaluccin
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Explorateur Galaxy, HoloLens, Windows Mixed Reality, partager votre idée, étude de cas
-ms.openlocfilehash: 696662eb92371708389f8a128dcee6a61acf1816
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: f13395250c8a73718408c051ab95d2ec4bf62014
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73436873"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278177"
 ---
 # <a name="case-study---creating-a-galaxy-in-mixed-reality"></a>Étude de cas : création d’un Galaxy en réalité mixte
 
@@ -23,7 +23,7 @@ Andy Zibits, responsable artistique sur le projet et karim Luccin, l’ingénieu
 
 [Notre équipe](galaxy-explorer.md#meet-the-team) , composée de deux concepteurs, de trois développeurs, de quatre artistes, d’un producteur et d’un testeur, avait six semaines pour créer une application entièrement fonctionnelle qui permettrait aux utilisateurs d’en savoir plus sur l’immense et la beauté de notre méthode lactée Galaxy.
 
-Nous souhaitons tirer pleinement parti de la capacité de HoloLens à restituer les objets 3D directement dans votre espace de vie. nous avons donc décidé de créer un Galaxy réaliste où les gens seraient en mesure d’effectuer un zoom avant et de voir les étoiles individuelles, chacune sur leurs propres trajectoires .
+Nous souhaitons tirer pleinement parti de la capacité de HoloLens à restituer les objets 3D directement dans votre espace de vie. nous avons donc décidé de créer un Galaxy réaliste où les gens seraient en mesure d’effectuer un zoom avant et de voir les étoiles individuelles, chacune sur leurs propres trajectoires.
 
 Au cours de la première semaine de développement, nous avons vu quelques objectifs pour notre représentation de la méthode lactée Galaxy : elle devait avoir une profondeur, un mouvement et une sensation volumétrique, ce qui permet de créer la forme du Galaxy.
 
@@ -41,7 +41,7 @@ Nous avons commencé des tests de stress avec des milliers de particules de poin
 
 ### <a name="creating-the-position-of-the-stars"></a>Création de la position des étoiles
 
-L’un de nos membres de l’équipe a C# déjà écrit le code qui générerait des étoiles à leur position initiale. Les étoiles se trouvent sur une ellipse et leur position peut être décrite par (**curveOffset**, **ellipseSize**, **Elevation**) où **curveOffset** est l’angle de l’étoile le long de l’ellipse, **ellipseSize** est la dimension de l’ellipse le long de X et de Z, et élever l’altitude appropriée de l’étoile au sein de Galaxy. Par conséquent, nous pouvons créer une mémoire tampon ([ComputeBuffer d’Unity](https://docs.unity3d.com/ScriptReference/ComputeBuffer.html)) qui serait initialisée avec chaque attribut d’étoile et l’envoyer sur le GPU là où il résiderait pour le reste de l’expérience. Pour dessiner ce tampon, nous utilisons [l’DrawProcedural d’Unity](https://docs.unity3d.com/ScriptReference/Graphics.DrawProcedural.html) qui permet d’exécuter un nuanceur (code sur un GPU) sur un ensemble arbitraire de points sans avoir de maillage réel représentant le Galaxy :
+L’un de nos membres de l’équipe a C# déjà écrit le code qui générerait des étoiles à leur position initiale. Les étoiles se trouvent sur une ellipse et leur position peut être décrite par (**curveOffset**, **ellipseSize**, **Elevation**) où **curveOffset** est l’angle de l’étoile le long de l’ellipse, **ellipseSize** est la dimension de l’ellipse le long de X et de Z, et élévation l’altitude appropriée de l’étoile au sein de Galaxy. Par conséquent, nous pouvons créer une mémoire tampon ([ComputeBuffer d’Unity](https://docs.unity3d.com/ScriptReference/ComputeBuffer.html)) qui serait initialisée avec chaque attribut d’étoile et l’envoyer sur le GPU là où il résiderait pour le reste de l’expérience. Pour dessiner ce tampon, nous utilisons [l’DrawProcedural d’Unity](https://docs.unity3d.com/ScriptReference/Graphics.DrawProcedural.html) qui permet d’exécuter un nuanceur (code sur un GPU) sur un ensemble arbitraire de points sans avoir de maillage réel représentant le Galaxy :
 
 **POURCENTAGE**
 
@@ -74,7 +74,7 @@ Nous avons commencé avec des modèles circulaires bruts avec des milliers de pa
 
 Nous avons essayé différents modèles et systèmes de particules qui ont pivoté, comme ceux-ci.
 
-Notre équipe a fait des recherches sur la façon dont galaxies fonctionne et nous avons créé un système de particule personnalisé spécifiquement pour la galaxie afin que nous puissions déplacer les particules sur les ellipses en fonction de la «[théorie des vagues de densité](https://en.wikipedia.org/wiki/Density_wave_theory)», qui theorizes que les bras d’un Galaxy sont des zones de densité plus élevée, mais en flux constant, comme un bourrage de trafic. Il semble stable et solide, mais les étoiles sont en fait en déplacement et en provenance des bras lorsqu’ils se déplacent sur leurs ellipses respectives. Dans notre système, les particules n’existent jamais sur le processeur : nous générons les cartes et les orientons toutes sur le GPU, de sorte que le système entier est simplement un état initial + Time. Elle a progressé comme suit :
+Notre équipe a fait des recherches sur la façon dont galaxies fonctionne et nous avons créé un système de particule personnalisé spécifiquement pour la galaxie afin que nous puissions déplacer les particules sur les ellipses en fonction de la «[théorie des vagues de densité](https://en.wikipedia.org/wiki/Density_wave_theory)», qui theorizes que les bras d’un Galaxy sont des zones de densité plus élevée mais en flux constant, comme un bourrage de trafic. Il semble stable et solide, mais les étoiles sont en fait en déplacement et en provenance des bras lorsqu’ils se déplacent sur leurs ellipses respectives. Dans notre système, les particules n’existent jamais sur le processeur : nous générons les cartes et les orientons toutes sur le GPU, de sorte que le système entier est simplement un état initial + Time. Elle a progressé comme suit :
 
 ![Progression du système de particules avec rendu GPU](images/spiral-galaxy-arms-500px.jpg)
 
@@ -203,6 +203,6 @@ Vous souhaitez en savoir plus sur le processus de développement de l’Explorat
 </table>
 
 
-## <a name="see-also"></a>Articles associés
+## <a name="see-also"></a>Voir aussi
 * [Explorateur Galaxy sur GitHub](https://github.com/Microsoft/GalaxyExplorer)
 * [Mises à jour des projets de l’Explorateur Galaxy sur YouTube](https://www.youtube.com/playlist?list=PLZCHH_4VqpRj0Nl46J0LNRkMyBNU4knbL)

@@ -1,17 +1,17 @@
 ---
 title: Test de votre application sur HoloLens
 description: Conseils et suggestions pour tester votre application HoloLens
-author: JonMLyons
+author: jonmlyons
 ms.author: jlyons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: HoloLens, test
-ms.openlocfilehash: 9a189bf139c97fc13034d94f05aa8f5974cc19b9
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 3ab5eeec4046b81dc41db51ae138eb9d1069d1ff
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437386"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277587"
 ---
 # <a name="testing-your-app-on-hololens"></a>Test de votre application sur HoloLens
 
@@ -36,7 +36,7 @@ Les applications holographiques doivent s’exécuter sans heurts dans un ensemb
 
 ![Matrice de test de l’environnement pour le développement d’applications HoloLens](images/environment-matrix-600px.png)
 
-## <a name="comfort"></a>Optimal
+## <a name="comfort"></a>Confort
 1. **Plans de clip.** Soyez précis à l’endroit où [les hologrammes sont rendus](hologram-stability.md#hologram-render-distances).
 2. **Évitez les mouvements virtuels incohérents avec le mouvement de la tête réelle.** Évitez de déplacer l’appareil photo d’une façon qui n’est pas représentative du mouvement réel de l’utilisateur. Si votre application nécessite de déplacer l’utilisateur via une scène, rendez le mouvement prévisible, réduisez l’accélération et laissez l’utilisateur contrôler le mouvement.
 3. **Suivez les instructions de qualité de l’hologramme.** Les applications performantes qui implémentent les recommandations en matière de [qualité des hologrammes](hologram-stability.md) sont moins susceptibles d’entraîner une gêne pour l’utilisateur.
@@ -112,5 +112,5 @@ Certains développeurs d’applications peuvent souhaiter automatiser les tests 
 
 Pour permettre à votre application d’être [publiée dans le Windows Store](submitting-an-app-to-the-microsoft-store.md), validez-la et testez-la localement avant de la soumettre à la certification. Si votre application cible la famille d’appareils Windows. holographique, le [Kit de certification des applications Windows](https://msdn.microsoft.com/library/windows/apps/xaml/mt186449.aspx) exécutera uniquement les tests d’analyse statique locaux sur votre PC. Aucun test ne sera exécuté sur votre HoloLens.
 
-## <a name="see-also"></a>Articles associés
+## <a name="see-also"></a>Voir aussi
 * [Envoi d’une application au Windows Store](submitting-an-app-to-the-microsoft-store.md)

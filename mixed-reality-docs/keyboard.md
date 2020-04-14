@@ -1,17 +1,16 @@
 ---
 title: Clavier
-description: ''
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: Réalité mixte, contrôles, interaction, interface utilisateur, expérience utilisateur
-ms.openlocfilehash: a16d0a2a8dddf1d9a338cdaff3247e8955c47029
-ms.sourcegitcommit: 6844930427b658ae31f642c395cd8a3b3cdbf857
+ms.openlocfilehash: 90f20d96fca9bebfcbce8283bedd3cb8422d9ea8
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75723168"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278077"
 ---
 # <a name="keyboard"></a>Clavier
 
@@ -32,7 +31,7 @@ Votre application de réalité mixte peut appeler le clavier du système à tout
 
 ---
 
-## <a name="see-also"></a>Articles associés
+## <a name="see-also"></a>Voir aussi
 
 * [Curseurs](cursors.md)
 * [Rayon émanant de la main](point-and-commit.md)

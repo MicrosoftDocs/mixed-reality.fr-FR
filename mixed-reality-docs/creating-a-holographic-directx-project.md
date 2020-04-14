@@ -1,17 +1,17 @@
 ---
 title: Création d’un projet DirectX holographique
 description: Explique comment créer une application holographique basée sur le modèle application Windows Mixed Reality.
-author: MikeRiches
+author: mikeriches
 ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, application holographique, nouvelle application, application UWP, modèle App, hologrammes, nouveau projet, procédure pas à pas, téléchargement, exemple de code
-ms.openlocfilehash: d99478a0d98d0593b7b82f25080d20913789cb6c
-ms.sourcegitcommit: f4812e1312c4751a22a2de56771c475b22a4ba24
+ms.openlocfilehash: 30f2c630b2919fbc304dc96d13cab74e22ed4adc
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/09/2019
-ms.locfileid: "74940843"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277917"
 ---
 # <a name="creating-a-holographic-directx-project"></a>Création d’un projet DirectX holographique
 
@@ -25,7 +25,7 @@ Toutefois, l’application de réalité mixte possède des fonctionnalités supp
 * Gérer les entrées de [regard](gaze-and-commit.md) et reconnaître un [mouvement](gaze-and-commit.md#composite-gestures)simple.
 * Passez en mode de rendu stéréo plein écran.
 
-## <a name="how-do-i-get-started"></a>Comment démarrer ?
+## <a name="how-do-i-get-started"></a>Comment faire commencer ?
 
 Installez d’abord [les outils](install-the-tools.md)en suivant les instructions de téléchargement de Visual Studio 2019 et des modèles d’application Windows Mixed Reality. Les modèles d’application de réalité mixte sont disponibles sur la place de marché Visual Studio en tant que [téléchargement Web](https://marketplace.visualstudio.com/items?itemName=WindowsMixedRealityteam.WindowsMixedRealityAppTemplatesVSIX), ou en les installant en tant qu’extension par le biais de l’interface utilisateur de Visual Studio.
 
@@ -54,7 +54,7 @@ Pour créer un nouveau projet dans Visual Studio 2019 :
 
 Pour créer un nouveau projet dans Visual Studio 2017 :
 1. Démarrez **Visual Studio**.
-2. Dans le menu **fichier** , pointez sur **nouveau** , puis sélectionnez **projet** dans le menu contextuel. La boîte **de dialogue Nouveau projet** s’ouvre.
+2. Dans le menu **fichier** , pointez sur **nouveau** , puis sélectionnez **projet** dans le menu contextuel. La boîte de dialogue **Nouveau projet** s’affiche.
 3. Développez **installé** sur la gauche, puis développez le nœud de langage **visuel C++**  .
 4. Accédez au nœud **Windows Universal > holographique** et sélectionnez **application holographique DirectX 11 (Windows universel) (C++/WinRT)** .
    Capture d’écran ![du modèle de C++projet d’application UWP DirectX 11/WinRT dans Visual Studio 2017](images/holographic-directx-app-cpp-new-project.png)<br>
@@ -174,11 +174,11 @@ Votre application de réalité mixte est mise à jour dans une boucle de jeu, qu
 
 La méthode **Render** dans `AppMain.cpp` prend le <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicframe" target="_blank">HolographicFrame</a> et restitue le frame actuel sur chaque caméra holographique, en fonction de l’état actuel de l’application et du positionnement spatial.
 
-## <a name="notes"></a>Notes
+## <a name="notes"></a>Remarques
 
 Le modèle d’application Windows Mixed Reality prend désormais en charge la compilation avec l’indicateur d’atténuation spectre activé (/Qspectre). Veillez à installer la version spectre-atténuée des bibliothèques Runtime Microsoft C++ Visual (MSVC) avant de compiler une configuration avec l’atténuation spectre activée. Pour installer les C++ bibliothèques atténuées par spectre, lancez le Visual Studio installer et sélectionnez **modifier**. Accédez à **composants individuels** et recherchez « spectre ». Sélectionnez les zones correspondant aux plateformes cibles et à la version MSVC dont vous avez besoin pour compiler le code atténué spectre pour, puis cliquez sur **modifier** pour commencer l’installation.
 
-## <a name="see-also"></a>Articles associés
+## <a name="see-also"></a>Voir aussi
 * [Obtention d’un HolographicSpace](getting-a-holographicspace.md)
 * <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspaceh" target="_blank">HolographicSpace</a>
 * [Rendu dans DirectX](rendering-in-directx.md)

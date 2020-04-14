@@ -1,18 +1,18 @@
 ---
 title: Recommandations sur les performances pour Unity
 description: Conseils propres à Unity pour améliorer les performances avec les applications de réalité mixte.
-author: Troy-Ferrell
+author: troy-ferrell
 ms.author: trferrel
 ms.date: 03/26/2019
 ms.topic: article
 keywords: graphiques, UC, GPU, rendu, garbage collection, Hololens
 ms.localizationpriority: high
-ms.openlocfilehash: 18691ab7993b2802268d3c4ce05532dfa5bd1723
-ms.sourcegitcommit: 9de2cb11321e6517db69e8c93459a205900a2174
+ms.openlocfilehash: 28f09986cdb8c562aedfc9deae7b0369214ebc05
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160015"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277567"
 ---
 # <a name="performance-recommendations-for-unity"></a>Recommandations sur les performances pour Unity
 
@@ -358,7 +358,7 @@ Vous devez envisager de démarrer votre application avec une scène plus petite,
 
 N’oubliez pas que pendant le chargement de la scène de démarrage, l’écran de démarrage holographique est présenté à l’utilisateur.
 
-## <a name="see-also"></a>Voir également
+## <a name="see-also"></a>Voir aussi
 - [Optimisation du rendu graphique dans les jeux Unity](https://unity3d.com/learn/tutorials/temas/performance-optimization/optimizing-graphics-rendering-unity-games?playlist=44069)
 - [Optimisation de garbage collection dans les jeux Unity](https://unity3d.com/learn/tutorials/topics/performance-optimization/optimizing-garbage-collection-unity-games?playlist=44069)
 - [Bonnes pratiques pour la physique [Unity]](https://unity3d.com/learn/tutorials/topics/physics/physics-best-practices)

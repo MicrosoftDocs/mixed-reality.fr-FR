@@ -1,17 +1,17 @@
 ---
 title: Étude de cas-examen des failles dans votre réalité
 description: Cette étude de cas explique comment implémenter l’effet « fenêtre magique » sur HoloLens, ce qui permet à l’utilisateur de voir derrière les murs, le plancher et les ouvertures virtuelles au sein de leur environnement réel.
-author: EricRehmeyer
+author: ericrehmeyer
 ms.author: bestruku
 ms.date: 10/18/2019
 ms.topic: article
 keywords: Windows Mixed Reality, HoloLens, Magic Window, parallaxe
-ms.openlocfilehash: a1b9f0b2e576379846a867f3d3bffef7d8ec277e
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: c829656c98b7c87f8b969dbbd16115f6a0bbaf27
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73436669"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278147"
 ---
 # <a name="case-study---looking-through-holes-in-your-reality"></a>Étude de cas-examen des failles dans votre réalité
 
@@ -108,7 +108,7 @@ Voici quelques idées pour vous permettre de suivre cette idée suivante :
 </tr>
 </table>
 
-## <a name="see-also"></a>Articles associés
+## <a name="see-also"></a>Voir aussi
 * [MR Basics 101 : finaliser le projet avec l’appareil](holograms-101.md)
 * [Systèmes de coordonnées](coordinate-systems.md)
 * [Ancres spatiales](spatial-anchors.md)

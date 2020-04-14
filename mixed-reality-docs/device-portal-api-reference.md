@@ -1,17 +1,17 @@
 ---
 title: Informations de référence sur l’API du portail d’appareils
 description: Informations de référence sur l’API pour le portail de périphériques Windows sur HoloLens
-author: JonMLyons
-ms.author: JLyons
+author: jonmlyons
+ms.author: jlyons
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, portail des appareils Windows, API
-ms.openlocfilehash: 4b5b48c13b1b7ec8bfdf447f42097a8448b6a0e6
-ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
+ms.openlocfilehash: 236de35c2c736fc5a0289b7be1f1548f0a08fa26
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67694432"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278237"
 ---
 # <a name="device-portal-api-reference"></a>Informations de référence sur l’API du portail d’appareils
 
@@ -24,16 +24,16 @@ Tout ce qui se trouve dans le [portail de périphériques Windows](using-the-win
 Désinstalle une application
 
 Paramètres
-* Packages Nom de fichier du package à désinstaller.
+* Package : nom de fichier du package à désinstaller.
 
 **/API/App/packagemanager/package (publication)**
 
 Installe une application
 
 Paramètres
-* Packages Nom de fichier du package à installer.
+* Package : nom de fichier du package à installer.
 
-Transport
+Charge utile
 * corps http en plusieurs parties, conforme
 
 **/API/App/packagemanager/packages (récupération)**
@@ -54,37 +54,37 @@ Obtient l’état de l’installation de l’application en cours
 Désactive la collecte de vidages sur incident pour une application faisant
 
 Paramètres
-* packageFullname: nom du package
+* packageFullname : nom du package
 
 **/API/Debug/dump/usermode/CrashControl (récupération)**
 
 Obtient les paramètres de la collection de vidages sur incident des applications faisant
 
 Paramètres
-* packageFullname: nom du package
+* packageFullname : nom du package
 
 **/API/Debug/dump/usermode/CrashControl (publication)**
 
 Active et définit les paramètres de contrôle de vidage pour une application faisant
 
 Paramètres
-* packageFullname: nom du package
+* packageFullname : nom du package
 
 **/API/Debug/dump/usermode/crashdump (supprimer)**
 
 Supprime un vidage sur incident pour une application faisant
 
 Paramètres
-* packageFullname: nom du package
-* fileName: nom du fichier dump
+* packageFullname : nom du package
+* fileName : nom du fichier dump
 
 **/API/Debug/dump/usermode/crashdump (récupération)**
 
 Récupère un vidage sur incident pour une application faisant
 
 Paramètres
-* packageFullname: nom du package
-* fileName: nom du fichier dump
+* packageFullname : nom du package
+* fileName : nom du fichier dump
 
 Retourner les données
 * Fichier dump. Inspecter avec WinDbg ou Visual Studio
@@ -107,7 +107,7 @@ Retourner les données
 
 **/API/ETW/session/Realtime (obtient/WebSocket)**
 
-Crée une session ETW en temps réel; géré sur un WebSocket.
+Crée une session ETW en temps réel ; géré sur un WebSocket.
 
 Retourner les données
 * Événements ETW des fournisseurs activés
@@ -131,7 +131,7 @@ Obtient la IPD stockée (distance interpupillary) en millimètres.
 Définit l’IPD
 
 Paramètres
-* IPD Nouvelle valeur IPD à définir en millimètres
+* IPD : nouvelle valeur IPD à définir en millimètres
 
 **/API/Holographic/OS/webmanagement/Settings/HTTPS (récupération)**
 
@@ -142,7 +142,7 @@ Obtenir la spécification HTTPS pour Device Portal
 Définit les exigences HTTPs pour le portail de l’appareil
 
 Paramètres
-* obligatoire: Oui, non ou par défaut
+* obligatoire : Oui, non ou par défaut
 
 ## <a name="holographic-perception"></a>Perception holographique
 
@@ -151,7 +151,7 @@ Paramètres
 Accepte les mises à niveau de WebSocket et exécute un client de perception qui envoie des mises à jour à 30 i/s.
 
 Paramètres
-* Clientmode: "active" force le mode de suivi visuel lorsqu’il ne peut pas être établi passivement
+* Clientmode : "active" force le mode de suivi visuel lorsqu’il ne peut pas être établi passivement
 
 ## <a name="holographic-thermal"></a>Thermique holographique
 
@@ -163,14 +163,14 @@ Récupération de l’étape thermique de l’appareil (0 normal, 1 chaud, 2 cri
 
 **/API/Holographic/simulation/Control/mode (récupération)**
 
-Obtient le mode de simulation
+Obtenir le mode de simulation
 
 **/API/Holographic/simulation/Control/mode (publication)**
 
 Définir le mode de simulation
 
 Paramètres
-* mode: mode de simulation: par défaut, simulation, distant, hérité
+* mode : mode de simulation : par défaut, simulation, distant, hérité
 
 **/API/Holographic/simulation/Control/Stream (supprimer)**
 
@@ -182,7 +182,7 @@ Ouvrez une connexion de socket Web pour un flux de contrôle.
 
 **/API/Holographic/simulation/Control/Stream (publication)**
 
-Créez un flux de contrôle (priorité obligatoire) ou publiez des données dans un flux créé (streamId requis). Les données publiées sont supposées être de type «application/octet-stream».
+Créez un flux de contrôle (priorité obligatoire) ou publiez des données dans un flux créé (streamId requis). Les données publiées sont supposées être de type « application/octet-stream ».
 
 ## <a name="perception-simulation-playback"></a>Lecture de simulation de perception
 
@@ -191,7 +191,7 @@ Créez un flux de contrôle (priorité obligatoire) ou publiez des données dans
 Supprimer un enregistrement.
 
 Paramètres
-* d' Nom de l’enregistrement à supprimer.
+* enregistrement : nom de l’enregistrement à supprimer.
 
 **/API/Holographic/simulation/playback/file (publication)**
 
@@ -206,21 +206,21 @@ Récupération de tous les enregistrements.
 Obtient l’état de lecture actuel d’un enregistrement.
 
 Paramètres
-* d' Nom de l’enregistrement.
+* enregistrement : nom de l’enregistrement.
 
 **/API/Holographic/simulation/playback/session/file (supprimer)**
 
 Décharger un enregistrement.
 
 Paramètres
-* d' Nom de l’enregistrement à décharger.
+* enregistrement : nom de l’enregistrement à décharger.
 
 **/API/Holographic/simulation/playback/session/file (publication)**
 
 Charger un enregistrement.
 
 Paramètres
-* d' Nom de l’enregistrement à charger.
+* enregistrement : nom de l’enregistrement à charger.
 
 **/API/Holographic/simulation/playback/session/Files (récupération)**
 
@@ -231,28 +231,28 @@ Récupération de tous les enregistrements chargés.
 Suspendre un enregistrement.
 
 Paramètres
-* d' Nom de l’enregistrement.
+* enregistrement : nom de l’enregistrement.
 
 **/API/Holographic/simulation/playback/session/Play (publication)**
 
 Lire un enregistrement.
 
 Paramètres
-* d' Nom de l’enregistrement.
+* enregistrement : nom de l’enregistrement.
 
 **/API/Holographic/simulation/playback/session/Stop (publication)**
 
 Arrêter un enregistrement.
 
 Paramètres
-* d' Nom de l’enregistrement.
+* enregistrement : nom de l’enregistrement.
 
 **/API/Holographic/simulation/playback/session/types (récupération)**
 
 Obtenir les types de données dans un enregistrement chargé.
 
 Paramètres
-* d' Nom de l’enregistrement.
+* enregistrement : nom de l’enregistrement.
 
 ## <a name="perception-simulation-recording"></a>Enregistrement de simulation de perception
 
@@ -261,12 +261,12 @@ Paramètres
 Démarrez un enregistrement. Un seul enregistrement peut être actif à la fois. Vous devez définir l’un des principaux, mains, spatialMapping ou environnement.
 
 Paramètres
-* siège Affectez la valeur 1 pour enregistrer les données de tête.
-* leçon Définissez la valeur 1 pour enregistrer les données de la main.
-* spatialMapping : Affectez la valeur 1 pour enregistrer le mappage spatial.
-* environnement Affectez la valeur 1 pour enregistrer les données d’environnement.
-* nomme Nom de l’enregistrement.
-* singleSpatialMappingFrame : Affectez la valeur 1 pour enregistrer uniquement un seul frame de mappage spatial.
+* Head : définissez sur 1 pour enregistrer les données de tête.
+* mains : définissez sur 1 pour enregistrer les données de la main.
+* spatialMapping : affectez la valeur 1 pour enregistrer le mappage spatial.
+* environnement : définissez sur 1 pour enregistrer les données d’environnement.
+* nom : nom de l’enregistrement.
+* singleSpatialMappingFrame : affectez la valeur 1 pour enregistrer uniquement un seul frame de mappage spatial.
 
 **/API/Holographic/simulation/Recording/Status (récupération)**
 
@@ -283,15 +283,15 @@ Arrêter l’enregistrement en cours. L’enregistrement est retourné sous la f
 Télécharge un fichier de réalité mixte à partir de l’appareil. Utilisez le paramètre de requête op = Stream pour la diffusion en continu.
 
 Paramètres
-* extension Nom, hex64 encodé, du fichier vidéo à récupérer
-* OP: flux
+* nom de fichier : nom, hex64 encodé, du fichier vidéo à récupérer
+* OP : flux
 
 **/API/Holographic/MRC/file (supprimer)**
 
 Supprime un enregistrement de la réalité mixte de l’appareil.
 
 Paramètres
-* extension Nom, hex64 encodé, du fichier à supprimer
+* nom de fichier : nom, hex64 encodé, du fichier à supprimer
 
 **/API/Holographic/MRC/Files (récupération)**
 
@@ -302,9 +302,9 @@ Retourne la liste des fichiers de réalité mixte stockés sur l’appareil
 Prend une photo de réalité mixte et crée un fichier sur l’appareil
 
 Paramètres
-* Holo: capturer les hologrammes: true ou false (false par défaut)
-* PV: capturer l’appareil photo PV: true ou false (false par défaut)
-* RenderFromCamera : (HoloLens 2 uniquement) rendu du point de vue de la caméra photo/vidéo: true ou false (true par défaut)
+* Holo : capturer les hologrammes : true ou false (false par défaut)
+* PV : capturer l’appareil photo PV : true ou false (false par défaut)
+* RenderFromCamera : (HoloLens 2 uniquement) rendu du point de vue de la caméra photo/vidéo : true ou false (true par défaut)
 
 **/API/Holographic/MRC/Settings (récupération)**
 
@@ -323,20 +323,20 @@ Obtient l’état de la réalité mixte enregistrée (en cours d’exécution, a
 Obtient l’image miniature pour le fichier spécifié.
 
 Paramètres
-* extension Nom, hex64 encodé, du fichier pour lequel la miniature est demandée
+* nom de fichier : nom, hex64 encodé, du fichier pour lequel la miniature est demandée.
 
 **/API/Holographic/MRC/Video/Control/Start (publication)**
 
 Démarre un enregistrement de la réalité mixte
 
 Paramètres
-* Holo: capturer les hologrammes: true ou false (false par défaut)
-* PV: capturer l’appareil photo PV: true ou false (false par défaut)
-* MIC: capturer le microphone: true ou false (false par défaut)
-* loopback: capturer l’audio de l’application: true ou false (false par défaut)
-* RenderFromCamera : (HoloLens 2 uniquement) rendu du point de vue de la caméra photo/vidéo: true ou false (true par défaut)
-* vstab : (HoloLens 2 uniquement) activer la stabilisation vidéo: true ou false (true par défaut)
-* vstabbuffer: (HoloLens 2 uniquement) latence de la mémoire tampon de stabilisation vidéo: 0 à 30 frames (15 images par défaut)
+* Holo : capturer les hologrammes : true ou false (false par défaut)
+* PV : capturer l’appareil photo PV : true ou false (false par défaut)
+* MIC : capturer le microphone : true ou false (false par défaut)
+* loopback : capturer l’audio de l’application : true ou false (false par défaut)
+* RenderFromCamera : (HoloLens 2 uniquement) rendu du point de vue de la caméra photo/vidéo : true ou false (true par défaut)
+* Vstab : (HoloLens 2 uniquement) activer la stabilisation vidéo : true ou false (true par défaut)
+* vstabbuffer : (HoloLens 2 uniquement) latence de la mémoire tampon de stabilisation vidéo : de 0 à 30 frames (15 images par défaut)
 
 **/API/Holographic/MRC/Video/Control/Stop (publication)**
 
@@ -346,33 +346,33 @@ Arrête l’enregistrement de la réalité mixte actuelle
 
 HoloLens prend en charge l’aperçu instantané de la réalité mixte via le téléchargement segmenté d’un MP4 fragmenté.
 
-Les flux de réalité mixte partagent le même ensemble de paramètres pour contrôler ce qui est capturé:
-* Holo: capturer les hologrammes: true ou false
-* PV: capturer l’appareil photo PV: true ou false
-* MIC: capturer le microphone: true ou false
-* loopback: capturer l’audio de l’application: true ou false
+Les flux de réalité mixte partagent le même ensemble de paramètres pour contrôler ce qui est capturé :
+* Holo : capturer les hologrammes : true ou false
+* PV : capturer l’appareil photo PV : true ou false
+* MIC : capturer le microphone : true ou false
+* loopback : capturer l’audio de l’application : true ou false
 
-Si aucun de ces éléments n’est spécifié: les hologrammes, la caméra photo/vidéo et l’audio de l’application sont capturés<br>
-Si des paramètres sont spécifiés: les paramètres non spécifiés ont par défaut la valeur false
+Si aucun de ces éléments n’est spécifié : les hologrammes, la caméra photo/vidéo et l’audio de l’application sont capturés<br>
+Si des paramètres sont spécifiés : les paramètres non spécifiés ont par défaut la valeur false
 
 Paramètres facultatifs (HoloLens 2 uniquement)
-* RenderFromCamera: rendu du point de vue de la caméra photo/vidéo: true ou false (true par défaut)
-* Vstab: activer la stabilisation vidéo: true ou false (false par défaut)
-* vstabbuffer: latence de la mémoire tampon de stabilisation vidéo: 0 à 30 frames (15 images par défaut)
+* RenderFromCamera : rendu du point de vue de la caméra photo/vidéo : true ou false (true par défaut)
+* Vstab : activer la stabilisation vidéo : true ou false (false par défaut)
+* vstabbuffer : latence de la mémoire tampon de stabilisation vidéo : de 0 à 30 frames (15 images par défaut)
 
 **/API/Holographic/Stream/Live.MP4 (récupération)**
 
 Un flux 1280x720p 30fps 5Mbit.
 
-**/API/Holographic/Stream/live_high.MP4 (récupération)**
+**/API/Holographic/Stream/live_high. MP4 (récupérer)**
 
 Un flux 1280x720p 30fps 5Mbit.
 
-**/API/Holographic/Stream/live_med.MP4 (récupération)**
+**/API/Holographic/Stream/live_med. MP4 (récupérer)**
 
 Flux 854x480p 30fps 2,5 Mbits.
 
-**/API/Holographic/Stream/live_low.MP4 (récupération)**
+**/API/Holographic/Stream/live_low. MP4 (récupérer)**
 
 Flux 428x240p 15fps 0,6 Mbit.
 
@@ -397,7 +397,7 @@ Obtient le nom de l’ordinateur
 Définit le nom de l’ordinateur
 
 Paramètres
-* nomme Nouveau nom de l’ordinateur, hex64 encodé, à définir sur
+* nom : nouveau nom de l’ordinateur, hex64 encodé, à affecter à
 
 ## <a name="performance-data"></a>Données relatives aux performances
 
@@ -413,9 +413,9 @@ Retourner les données
 Retourne les statistiques de performances système (lecture/écriture d’e/s, statistiques de mémoire, etc.).
 
 Retourner les données
-* JSON avec informations système: PROCESSEUR, GPU, mémoire, réseau, e/s
+* JSON avec informations système : processeur, GPU, mémoire, réseau, e/s
 
-## <a name="power"></a>Alimentation
+## <a name="power"></a>Alimentation électrique
 
 **/API/Power/Battery (récupération)**
 
@@ -435,23 +435,23 @@ Redémarre l’appareil cible
 
 Arrête l’appareil cible
 
-## <a name="task-manager"></a>Gestionnaire des tâches
+## <a name="task-manager"></a>Task Manager
 
 **/API/taskmanager/App (supprimer)**
 
 Arrête une application moderne
 
 Paramètres
-* Packages Nom complet du package d’application, hex64 encodé
-* forcestop : Forcer l’arrêt de tous les processus (= oui)
+* Package : nom complet du package d’application, hex64 encodé
+* forceStop : force l’arrêt de tous les processus (= oui)
 
 **/API/taskmanager/App (publication)**
 
 Démarre une application moderne
 
 Paramètres
-* AppID PRAID de l’application à démarrer, encodée hex64
-* Packages Nom complet du package d’application, hex64 encodé
+* AppID : PRAID de l’application à démarrer, hex64 encodé
+* Package : nom complet du package d’application, hex64 encodé
 
 ## <a name="wifi-management"></a>Gestion WiFi
 
@@ -467,15 +467,15 @@ Retourner les données
 Supprime un profil associé à un réseau sur une interface spécifiée
 
 Paramètres
-* Interface: GUID de l’interface réseau
-* Profil: nom du profil
+* Interface : GUID de l’interface réseau
+* Profil : nom du profil
 
 **/API/WiFi/Networks (récupération)**
 
 Énumère les réseaux sans fil sur l’interface réseau spécifiée.
 
 Paramètres
-* Interface: GUID de l’interface réseau
+* Interface : GUID de l’interface réseau
 
 Retourner les données
 * Liste des réseaux sans fil détectés sur l’interface réseau avec les détails
@@ -485,11 +485,11 @@ Retourner les données
 Se connecte ou se déconnecte à un réseau sur l’interface spécifiée
 
 Paramètres
-* Interface: GUID de l’interface réseau
-* SSID: SSID, hex64 encodé, pour se connecter à
-* opération: se connecter ou se déconnecter
-* CreateProfile: oui ou non
-* clé: clé partagée, encodée en hex64
+* Interface : GUID de l’interface réseau
+* SSID : SSID, hex64 encodé, pour se connecter à
+* opération : se connecter ou se déconnecter
+* CreateProfile : oui ou non
+* clé : clé partagée, encodée en hex64
 
 ## <a name="windows-performance-recorder"></a>Enregistreur de performances Windows
 
@@ -497,7 +497,7 @@ Paramètres
 
 Charge un profil WPR et démarre le suivi à l’aide du profil chargé.
 
-Transport
+Charge utile
 * corps http en plusieurs parties, conforme
 
 Retourner les données
@@ -522,7 +522,7 @@ Retourner les données
 Démarre une session de suivi WPR (performance)
 
 Paramètres
-* Profil Nom du profil. Les profils disponibles sont stockés dans perfprofiles/profiles. JSON
+* Profil : nom du profil. Les profils disponibles sont stockés dans perfprofiles/profiles. JSON
 
 Retourner les données
 * Dans Démarrer, retourne l’état de la session WPR.

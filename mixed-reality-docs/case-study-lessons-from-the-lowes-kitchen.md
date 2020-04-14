@@ -1,17 +1,17 @@
 ---
 title: Étude de cas-leçons de la cuisine de Lowe
 description: L’équipe HoloLens souhaite partager certaines des meilleures pratiques qui ont été dérivées du projet HoloLens de Lowe.
-author: BrandonBray
+author: brandonbray
 ms.author: kevincol
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, Lowe, HoloLens, cuisine, étude de cas
-ms.openlocfilehash: 24759f90b8b84ec19e644fb8dff44f64c3ab81d2
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: a6bd7a09f77fb71dc23dc640525ff250abac8f12
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63522345"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278127"
 ---
 # <a name="case-study---lessons-from-the-lowes-kitchen"></a>Étude de cas-leçons de la cuisine de Lowe
 
@@ -21,7 +21,7 @@ L’équipe HoloLens souhaite partager certaines des meilleures pratiques qui on
 
 ## <a name="lowes-hololens-best-practices"></a>Meilleures pratiques de Lowe HoloLens
 
-Les deux vidéos couvrent les meilleures pratiques qui ont été dérivées du pilote HoloLens de Lowe, qui se trouvait dans deux magasins Lowe depuis avril 2016. Les principales rubriques sont les suivantes:
+Les deux vidéos couvrent les meilleures pratiques qui ont été dérivées du pilote HoloLens de Lowe, qui se trouvait dans deux magasins Lowe depuis avril 2016. Les principales rubriques sont les suivantes :
 * Optimiser les performances d’un appareil mobile
 * Créer des méthodes d’expérience utilisateur avec une image holographique complète (2e contact)
 * Alignement de précision (2e contact)
@@ -42,7 +42,7 @@ Voici quelques-uns des éléments les plus importants à examiner lorsque le dé
 
 **Alignement de précision** Pour le scénario de Lowe, il était primordial d’avoir un alignement précis des hologrammes sur la cuisine physique. Nous nous penchons sur les techniques pour garantir une expérience qui convainc les utilisateurs que leur environnement physique a changé.
 
-**Expériences holographiques partagées** Les couples sont le principal moyen de consommer l’expérience du Lowe. Une personne peut modifier le plan de plan et l’autre personne verra les modifications. Nous avons appelé «expériences partagées».
+**Expériences holographiques partagées** Les couples sont le principal moyen de consommer l’expérience du Lowe. Une personne peut modifier le plan de plan et l’autre personne verra les modifications. Nous avons appelé « expériences partagées ».
 
 **Interaction avec les clients** Les concepteurs de Lowe n’utilisent pas un HoloLens, mais ils ont besoin de voir ce que les clients voient. Nous montrons comment capturer ce que le client voit sur une application UWP.
 <br>
