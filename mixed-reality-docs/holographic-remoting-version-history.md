@@ -6,17 +6,25 @@ ms.author: flbagar
 ms.date: 03/11/2020
 ms.topic: article
 keywords: HoloLens, communication à distance, communication à distance holographique
-ms.openlocfilehash: 5ba3aaa8874dea4418114b331d3d99fc977e982c
-ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
+ms.openlocfilehash: cd6d076c00fd21ca6fa60cafb94eb9d89796825a
+ms.sourcegitcommit: 48456c607a2d0dcf035a77e8ba67615396b0a211
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81278197"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81484299"
 ---
 # <a name="holographic-remoting-version-history"></a>Historique des versions de la communication à distance holographique
 
 > [!IMPORTANT]
 > Ce guide est spécifique à la communication à distance holographique sur HoloLens 2.
+
+## <a name="version-212-april-5-2020"></a>Version 2.1.2 (5 avril 2020)<a name="v2.1.2"></a>
+* Résolution d’un problème de compatibilité descendante audio entre le dernier lecteur de communication à distance holographique et les applications distantes utilisant une version inférieure à 2.1.0.
+* Problème fixe d’ancrage spatial qui a fermé de manière inattendue le lecteur de communication à distance holographique. Ce problème affecte également les lecteurs personnalisés.
+
+## <a name="version-211-march-20-2020"></a>Version 2.1.1 (20 mars, 2020)<a name="v2.1.1"></a>
+* Résolution d’un problème de codage vidéo avec les applications distantes lors de l’utilisation des GPU AMD.
+* Améliorations des performances du lecteur de communication à distance holographique.
 
 ## <a name="version-210-march-11-2020"></a>Version 2.1.0 (11 mars, 2020)<a name="v2.1.0"></a>
 * Transport réseau commuté pour utiliser [RTP](https://en.wikipedia.org/wiki/Real-time_Transport_Protocol) via UDP. Les connexions sécurisées utilisent [SRTP](https://en.wikipedia.org/wiki/Secure_Real-time_Transport_Protocol) Now. Notez que le [lecteur de communication à distance holographique](holographic-remoting-player.md) est toujours compatible avec toutes les versions de Remoting holographiques antérieures. Pour tirer parti du nouveau transport réseau, le lecteur de communication à distance holographique et l’application distante en question doivent utiliser la version 2.1.0.
@@ -28,7 +36,7 @@ ms.locfileid: "81278197"
 ## <a name="version-2018-december-17-2019"></a>Version 2.0.18 (17 décembre 2019)<a name="v2.0.18"></a>
 * Ajout de la prise en charge de [HolographicViewConfiguration](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicviewconfiguration)
 * Correction de divers bogues qui mènent à des incidents.
-* Correction d’un bogue où un rappel HolographicSpace. CameraAdded était nécessaire pour qu’un HolographicCamera soit accepté et apparaissait comme caméra ajoutée dans le HoloraphicFrame.
+* Correction d’un bogue où un rappel HolographicSpace. CameraAdded était nécessaire pour qu’un HolographicCamera soit accepté et apparaissait comme caméra ajoutée dans le HolographicFrame.
 
 ## <a name="version-2016-november-11-2019"></a>Version 2.0.16 (11 novembre 2019)<a name="2.0.16"></a>
 * Correction du blocage dans le suivi du code QR.
