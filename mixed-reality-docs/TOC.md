@@ -235,7 +235,7 @@
 #### [Fonctionnement des studios de capture de Réalité Mixte](how-it-works-mixed-reality-capture-studios.md)
 ### Communication à distance holographique
 #### [Holographic Remoting Player](holographic-remoting-player.md)
-#### [Écriture d’une application hôte de communication à distance holographique](holographic-remoting-create-host.md)
+#### [Écriture d’une application de communication à distance holographique](holographic-remoting-create-host.md)
 #### [Écriture d’un lecteur de communication à distance holographique](holographic-remoting-create-player.md)
 #### [Canaux de données de communication à distance holographique personnalisés](holographic-remoting-custom-data-channels.md)
 #### [Connexion sécurisée avec la communication à distance holographique](holographic-remoting-secure-connection.md)
