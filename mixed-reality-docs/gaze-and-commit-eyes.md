@@ -8,10 +8,10 @@ ms.topic: article
 ms.localizationpriority: high
 keywords: Suivi du regard, réalité mixte, entrée, suivre du regard, suivi rétinien, suivi du mouvement des yeux, HoloLens 2, sélection basée sur le regard
 ms.openlocfilehash: 89f5031635f2b67ba4c9afdf605559c2b9da4ac2
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "73437825"
 ---
 # <a name="eye-gaze-and-commit"></a>Suivre du regard et valider
@@ -39,7 +39,7 @@ La disparition en fondu n’a pas besoin d’être aussi lente que l’intégrat
 
 **Veiller à synchroniser les signaux de pointage du regard et de validation** : la synchronisation des signaux d’entrée peut présenter un moindre défi pour les clics dans l’air et les appuis sur des boutons. Tenez-en compte au cas où vous souhaiteriez utiliser des actions de validation plus compliquées pouvant impliquer des commandes vocales longues ou des mouvements manuels complexes. Imaginons que vous regardiez une cible et que vous prononciez une commande vocale longue. Si nous tenons compte du temps qu’il faut pour parler et du temps nécessaire au système pour détecter ce que vous avez dit, votre regard est sans doute fixé depuis longtemps sur une nouvelle cible de la scène. Vous pouvez donc soit indiquer à vos utilisateurs de continuer à regarder la cible jusqu’à ce que la commande soit reconnue, soit gérer l’entrée de manière à déterminer le début de la commande et l’objet ciblé par le regard de l’utilisateur au moment de l’émission de la commande.
 
-## <a name="see-also"></a>Voir également
+## <a name="see-also"></a>Voir aussi
 * [Interaction basée sur le regard] (eye-gaze-interaction.md)
 * [Suivi oculaire sur HoloLens 2] (eye-tracking.md)
 * [Pointer et valider](gaze-and-commit.md)
