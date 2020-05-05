@@ -8,15 +8,15 @@ ms.topic: article
 ms.localizationpriority: high
 keywords: Spectator View, iPhone, iOS, iPad, OpenCV, caméra, ARKit, HoloLens, réalité mixte, MixedRealityToolkit, démonstration, enregistrement
 ms.openlocfilehash: 9bc1c2809c7d780d439d9efb58f464b41de3dccd
-ms.sourcegitcommit: 4d43a8f40e3132605cee9ece9229e67d985db645
+ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "74491162"
 ---
 # <a name="spectator-view-for-hololens-and-hololens-2"></a>Spectator View pour HoloLens et HoloLens 2
 
-![Marker](images/SpecViewPhoneHero.jpg)
+![Marqueur](images/SpecViewPhoneHero.jpg)
 
 ## <a name="overview"></a>Vue d’ensemble
 
@@ -42,8 +42,8 @@ Plusieurs invités iOS.
 Enregistrement de vidéos + hologrammes + son ambiant + son des hologrammes.
 Feuille de partage permettant d’enregistrer une vidéo, de l’envoyer par e-mail ou de la partager avec d’autres applications compatibles.
 
-![Marqueur](images/SpecViewPhoneDemo.jpg)
-![Marqueur](images/hololensspectatorview-500px.jpg) ![Marqueur](images/spectatorview-300px.png)
+![Marker](images/SpecViewPhoneDemo.jpg)
+![Marker](images/hololensspectatorview-500px.jpg) ![Marker](images/spectatorview-300px.png)
 
 Le tableau suivant liste différentes fonctionnalités de Spectator View. Choisissez l’option qui correspond le mieux à vos besoins en matière d’enregistrement vidéo :
 
@@ -56,11 +56,11 @@ Le tableau suivant liste différentes fonctionnalités de Spectator View. Choisi
 | Portable                             |            ✔            |                                             |
 | Sans fil                             |            ✔            |                                             |
 | Matériel supplémentaire requis         |     Téléphone Android, iPhone    | HoloLens + plateforme + trépied + caméra vidéo + PC + Unity |
-| Investissement matériel                  |           Faible            |                     Élevée                    |
+| Investissement matériel                  |           Faible            |                     Élevé                    |
 | Système multiplateforme                       |           Android, iOS   |                                             |
 | Contenu synchronisé                 |            ✔            |                      ✔                      |
 | Durée d’installation du runtime               |         Immédiate          |                     Lente                    |
-## <a name="see-also"></a>Voir également
+## <a name="see-also"></a>Voir aussi
 
 * [Capture de Réalité Mixte](mixed-reality-capture.md) 
 * [Capture de Réalité Mixte pour les développeurs](mixed-reality-capture-for-developers.md)

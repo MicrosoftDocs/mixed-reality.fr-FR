@@ -7,12 +7,12 @@ ms.date: 04/13/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Visual Studio, HoloLens, Mixed Reality, déboguer, déployer
-ms.openlocfilehash: 718635922196b9c044c6904ebab994e9e2a2ff1a
-ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
+ms.openlocfilehash: 8708ca39460fbd381bd41f5887e1276291f48b07
+ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81277997"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "81484319"
 ---
 # <a name="using-visual-studio-to-deploy-and-debug"></a>Utilisation de Visual Studio pour le déploiement et le débogage
 
@@ -31,8 +31,8 @@ Commencez par activer le **mode développeur** sur votre appareil afin que Visua
 
 ### <a name="hololens"></a>HoloLens
 1. Mettez HoloLens sous tension et allumez l’appareil.
-2. Effectuer le geste qui consiste à [maintenir sa paume de main vers le haut en serrant ses doigts et à les ouvrir](system-gesture.md#bloom) pour lancer le menu principal.
-3. Pointez du regard la vignette **Paramètres** et effectuez un [clic aérien](gaze-and-commit.md#composite-gestures). Appuyez de nouveau pour placer l’application dans votre environnement. L’application Paramètres démarre une fois placée.
+2. Effectuez le [mouvement de démarrage](system-gesture.md) pour lancer le menu principal.
+3. Sélectionnez la vignette **Settings** pour lancer l’application dans votre environnement.
 4. Sélectionnez l’élément de menu **Mettre à jour**.
 5. Sélectionnez l’élément de menu **Pour les développeurs**.
 6. Activez **Mode développeur**. Ce mode vous permet de [déployer des applications à partir de Visual Studio](using-visual-studio.md) sur votre HoloLens.
@@ -84,6 +84,9 @@ Si l’adresse IP de votre HoloLens change, vous pouvez changer l’adresse IP d
 4. La première fois que vous déployez une application sur votre HoloLens à partir de votre PC, vous êtes invité à entrer un code PIN. Suivez les instructions de la section **Appairer votre appareil**, plus loin dans cet article.
 
 ## <a name="deploying-an-app-over-usb---hololens-2"></a>Déploiement d’une application via une connexion USB - HoloLens 2
+
+>[!VIDEO https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Deploying-your-HoloLens-2-application/player?format=ny]
+
 1. Sélectionnez une configuration de build **ARM** ou **ARM64** pour votre application</br>
 ![Configuration de build ARM64 dans Visual Studio](images/arm64setting.png)</br>
 2. Sélectionnez **Appareil** dans le menu déroulant de la cible de déploiement</br>
