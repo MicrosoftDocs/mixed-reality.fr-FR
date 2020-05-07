@@ -163,6 +163,13 @@
 ##### [Réalité mixte - Azure - Cours 311 : Microsoft Graph](mr-azure-311.md)
 ##### [Réalité mixte - Azure - Cours 312 : Intégration de bots](mr-azure-312.md)
 ##### [Réalité mixte - Azure - Cours 313 : Service IoT Hub](mr-azure-313.md)
+### Unreal
+#### [1. Bien démarrer](unreal-uxt-ch1.md)
+#### [2. Initialisation de votre projet et première application](unreal-uxt-ch2.md)
+#### [3. Configuration de votre projet pour la réalité mixte](unreal-uxt-ch3.md)
+#### [4. Rendre votre scène interactive](unreal-uxt-ch4.md)
+#### [5. Ajout d’un bouton et réinitialisation des emplacements de pièces](unreal-uxt-ch5.md)
+#### [6. Empaquetage et déploiement sur un appareil ou un émulateur](unreal-uxt-ch6.md)
 ## Unity
 ### [Vue d’ensemble du développement Unity](unity-development-overview.md)
 ### Mise en route
@@ -196,6 +203,14 @@
 #### [Utilisation de Vuforia avec Unity](vuforia-development-overview.md)
 ## Unreal
 ### [Vue d’ensemble du développement Unreal](unreal-development-overview.md)
+### [Suivi de la main dans Unreal](unreal-hand-tracking.md)
+### [Entrée visuelle dans Unreal](unreal-gaze-input.md)
+### [Mappage spatial dans Unreal](unreal-spatial-mapping.md)
+### [Ancres spatiales dans Unreal](unreal-spatial-anchors.md)
+### [Entrée vocale dans Unreal](unreal-voice-input.md)
+### [Appareil photo HoloLens dans Unreal](unreal-hololens-camera.md)
+### [Codes QR dans Unreal](unreal-qr-codes.md)
+### [Recommandations sur les performances pour Unreal](performance-recommendations-for-unreal.md)
 ## JavaScript
 ### [Vue d’ensemble du développement JavaScript](javascript-development-overview.md)
 ### [WebXR](webxr-overview.md)
