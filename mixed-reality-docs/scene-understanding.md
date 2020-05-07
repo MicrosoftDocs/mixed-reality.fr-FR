@@ -6,12 +6,12 @@ ms.author: szymons
 ms.date: 07/08/2019
 ms.topic: article
 keywords: Compréhension des scènes, mappage spatial, Windows Mixed Reality, Unity
-ms.openlocfilehash: 3d56f375c38b1dee6ab9eb97219a5e37fe698c63
-ms.sourcegitcommit: 37816514b8fe20669c487774b86e80ec08edcadf
+ms.openlocfilehash: 615da20df95f4a435216457e8b9f16bb7d7d069b
+ms.sourcegitcommit: 92ff5478a5c55b4e2c5cc2f44f1588702f4ec5d1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "81003335"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82604960"
 ---
 # <a name="scene-understanding"></a>Compréhension des scènes
 
@@ -29,13 +29,13 @@ Cet article sert uniquement à présenter la scène présentation du runtime et 
 
 Vous pouvez télécharger l’exemple d’application Scene Understanding à partir de l’exemple de site GitHub :
 
-[Exemple de compréhension de scène](https://github.com/sceneunderstanding-microsoft/unitysample)
+[Exemple de compréhension de scène](https://github.com/microsoft/MixedReality-SceneUnderstanding-Samples)
 
 Si vous n’avez pas de périphérique et que vous souhaitez accéder à des exemples de scènes pour essayer de comprendre les scènes, il existe des scènes dans l’exemple de dossier de ressources :
 
 [Exemples de scènes de vision](https://github.com/sceneunderstanding-microsoft/unitysample/tree/master/Assets/Resources/SerializedScenesForPCPath)
 
-### <a name="sdk"></a>Kit de développement logiciel
+### <a name="sdk"></a>Kit SDK
 
 Si vous recherchez des informations spécifiques sur le développement pour la compréhension de scènes ou des détails sur le fonctionnement de scenes et sur son développement, consultez la documentation de [Présentation de Scene Understanding SDK](scene-understanding-SDK.md) .
 
@@ -55,7 +55,7 @@ Si vous recherchez des informations spécifiques sur le développement pour la c
     <tr>
         <td><strong>Fonctionnalité</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens (1ère génération)</strong></a></td>
-        <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
+        <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>Casques immersifs</strong></a></td>
     </tr>
      <tr>
@@ -68,7 +68,7 @@ Si vous recherchez des informations spécifiques sur le développement pour la c
 
 ## <a name="common-usage-scenarios"></a>Scénarios d’utilisation courants
 
-![des illustrations de scénarios courants d’utilisation de mappages spatiaux : placement, occlusion, physique et navigation](images/sm-concepts-1000px.png)<br>
+![Illustrations de scénarios courants d’utilisation de mappages spatiaux : placement, occlusion, physique et navigation](images/sm-concepts-1000px.png)<br>
 *Scénarios courants d’utilisation du mappage spatial : placement, occlusion, physique et navigation.*
 
 <br>
@@ -87,7 +87,7 @@ La compréhension des scènes fournit de nouvelles constructions spécifiquement
        **Image #1** -SceneQuads avec l’inférence désactivée, capturant les zones de positionnement pour les régions numérisées.
     :::column-end:::
         :::column:::
-       ![quatre cœurs avec l’inférence activée, le placement n’est plus limité aux zones numérisées.](images/SUWatertight.png)<br>
+       ![Quadruples avec l’inférence activée, le placement n’est plus limité aux zones numérisées.](images/SUWatertight.png)<br>
         **Image #2** -quads avec l’inférence activée, le placement n’est plus limité aux zones numérisées.
     :::column-end:::
 :::row-end:::
@@ -121,7 +121,7 @@ Bien qu’il soit possible d’utiliser la [visualisation de mappage spatial](sp
 
 En outre, le nombre total de surfaces retournées par le mappage spatial est limité par le cache spatial interne, tandis que la version de la vue de la représentation spatiale du maillage de mappage spatial peut accéder aux données de mappage spatiale qui ne sont pas mises en cache. Pour cette raison, la compréhension de la scène est plus adaptée à la capture des représentations de maillage pour les espaces plus larges (par exemple, plus grande qu’une seule pièce) pour la visualisation ou le traitement du maillage. La maille mondiale retournée avec EnableWorldMesh aura un niveau de détail cohérent tout au long de, ce qui peut générer une visualisation plus agréable si elle est rendue sous forme filaire.
 
-### <a name="see-also"></a>Voir aussi
+### <a name="see-also"></a> Voir aussi
 
 * [Scène Understanding SDK](scene-understanding-SDK.md)
 * [Mappage spatial](spatial-mapping.md)

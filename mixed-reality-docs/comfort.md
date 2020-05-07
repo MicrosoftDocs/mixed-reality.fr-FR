@@ -8,10 +8,10 @@ ms.topic: article
 ms.localizationpriority: high
 keywords: Réalité mixte, conception, confort, HoloLens 2, HoloLens (1ère génération)
 ms.openlocfilehash: 178044ce8c76de75b7cce5e10664ce65d108f0f8
-ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
+ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "79376066"
 ---
 # <a name="comfort"></a>Confort
@@ -173,7 +173,7 @@ L’angle de regard optimal (de repos) est situé entre 10 et 20 degrés en d
 
 Une fatigue musculaire peut s’installer si les utilisateurs sont censés garder une main levée pendant toute la durée de l’expérience. Les clics aériens répétés peuvent également se révéler fatigants s’ils doivent être effectués sur une longue période. Nous vous recommandons donc d’éviter les expériences qui exigent des gestes répétés ou maintenus. Pour cela, vous pouvez intégrer de courtes pauses ou proposer une combinaison de saisies gestuelles et vocales pour interagir avec l’application.
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a>Voir également
 * [Pointage du regard](gaze-and-commit.md)
 * [Stabilité des hologrammes](hologram-stability.md)
 * [Interactions instinctuelles](interaction-fundamentals.md)

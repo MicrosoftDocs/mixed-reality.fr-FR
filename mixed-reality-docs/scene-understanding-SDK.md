@@ -6,12 +6,12 @@ ms.author: szymons
 ms.date: 07/08/2019
 ms.topic: article
 keywords: Compréhension des scènes, mappage spatial, Windows Mixed Reality, Unity
-ms.openlocfilehash: f293e779b041cdf4aa636cf317b7eaca70e16410
-ms.sourcegitcommit: 37816514b8fe20669c487774b86e80ec08edcadf
+ms.openlocfilehash: 3eb54f84e30b2354907204895e62accdb9ad54f9
+ms.sourcegitcommit: 92ff5478a5c55b4e2c5cc2f44f1588702f4ec5d1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "81003325"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82604950"
 ---
 # <a name="scene-understanding-sdk-overview"></a>Présentation du SDK présentation de Scene
 
@@ -25,13 +25,13 @@ Le kit de développement logiciel (SDK) SceneUnderstanding peut être téléchar
 
 **Remarque :** la version la plus récente dépend des packages de préversion et vous devrez activer les packages de préversions pour les afficher.
 
-Depuis la version 0.5.2022-RC, Scene Understanding prend en charge les C# projections de langage pour et C++ permettant aux applications de développer des applications pour les plateformes Win32 ou UWP. À compter de cette version, SceneUnderstanding prend en charge Unity dans le cadre de la prise en charge de l’éditeur, avec la SceneObserver qui est utilisée uniquement pour communiquer avec HoloLens2. 
+Depuis la version 0.5.2022-RC, Scenes prend en charge les projections de langage pour C# et C++ permettant aux applications de développer des applications pour les plateformes Win32 ou UWP. À compter de cette version, SceneUnderstanding prend en charge Unity dans le cadre de la prise en charge de l’éditeur, avec la SceneObserver qui est utilisée uniquement pour communiquer avec HoloLens2. 
 
 SceneUnderstanding requiert SDK Windows version 18362 ou ultérieure. 
 
 Si vous utilisez le kit de développement logiciel (SDK) dans un projet Unity, utilisez [NuGet pour Unity](https://github.com/GlitchEnzo/NuGetForUnity) pour installer le package dans votre projet.
 
-## <a name="conceptual-overview"></a>Vue d'ensemble conceptuelle
+## <a name="conceptual-overview"></a>Vue d’ensemble conceptuelle
 
 ### <a name="the-scene"></a>La scène
 
@@ -97,11 +97,11 @@ Ci-dessous, nous présentons un exemple de structure dans sa forme plate et logi
 
 Cette illustration met en évidence la différence entre la disposition physique et logique de la scène. À gauche, nous voyons la disposition hiérarchique des données que votre application voit lors de l’énumération de la scène. À droite, nous voyons que la scène est en fait composée de 12 composants distincts qui sont accessibles individuellement si nécessaire. Lors du traitement d’une nouvelle scène, nous pensons que les applications parcourent cette hiérarchie logiquement, toutefois, lors du suivi entre les mises à jour de la scène, certaines applications peuvent uniquement être intéressées à cibler des composants spécifiques qui sont partagés entre deux scènes.
 
-## <a name="api-overview"></a>Vue d’ensemble des API
+## <a name="api-overview"></a>Présentation de l’API
 
 La section suivante fournit une vue d’ensemble des constructions de la présentation des scènes. La lecture de cette section vous donne une idée de la façon dont les scènes sont représentées, ainsi que de l’utilisation des différents composants. La section suivante fournit des exemples de code concrets et des détails supplémentaires qui sont brillants dans cette vue d’ensemble.
 
-Tous les types décrits ci-dessous résident dans l’espace de noms `Microsoft.MixedReality.SceneUnderstanding`.
+Tous les types décrits ci-dessous résident dans l' `Microsoft.MixedReality.SceneUnderstanding` espace de noms.
 
 ### <a name="scenecomponents"></a>SceneComponents
 
@@ -124,8 +124,8 @@ SceneObjects peut avoir l’un des éléments suivants :
 <tr><td>Floor</td><td>Les étages sont des surfaces sur lesquelles il est possible de parcourir. Remarque : les escaliers ne sont pas des étages. Notez également que les étages supposent une surface pouvant être guidée et qu’il n’y a donc pas d’hypothèse explicite d’un étage singulier. Structures à plusieurs niveaux, rampes, etc... doit tous être classifiés en tant que plancher.</td></tr>
 <tr><td>Ceiling</td><td>Surface supérieure d’une salle.</td></tr>
 <tr><td>Plateforme</td><td>Grande surface plate sur laquelle vous pouvez placer des hologrammes. Elles ont tendance à représenter des tables, des plans de plan et d’autres grandes surfaces horizontales.</td></tr>
-<tr><td>World</td><td>Étiquette réservée pour les données géométriques indépendantes de l’étiquetage. La maille générée par la définition de l’indicateur de mise à jour EnableWorldMesh est classée comme monde.</td></tr>
-<tr><td>Inconnu.</td><td>Cet objet de scène n’a pas encore été classé et affecté un genre. Cela ne doit pas être confondu avec l’arrière-plan, car cet objet peut être n’importe quoi, le système n’a pas encore pu trouver une classification suffisamment importante pour l’informatique.</td></tr>
+<tr><td>World (Monde)</td><td>Étiquette réservée pour les données géométriques indépendantes de l’étiquetage. La maille générée par la définition de l’indicateur de mise à jour EnableWorldMesh est classée comme monde.</td></tr>
+<tr><td>Unknown</td><td>Cet objet de scène n’a pas encore été classé et affecté un genre. Cela ne doit pas être confondu avec l’arrière-plan, car cet objet peut être n’importe quoi, le système n’a pas encore pu trouver une classification suffisamment importante pour l’informatique.</td></tr>
 </tr>
 </table>
 
@@ -265,7 +265,7 @@ Notez qu’il s’agit du SceneObject qui a la transformation par rapport à l�
 
 La compréhension des scènes a fait une tentative délibérée d’alignement avec les représentations de scène 3D traditionnelles lors du traitement des transformations. Chaque scène est donc confinée à un système de coordonnées unique, à l’instar des représentations environnementales 3D les plus courantes. Les SceneObjects fournissent chacun leur emplacement sous la forme d’une position et d’une orientation au sein de ce système de coordonnées. Si votre application traite des scènes qui étendent la limite de ce qu’une origine unique fournit peut ancrer SceneObjects à SpatialAnchors, ou générer plusieurs scènes et les fusionner, mais pour des raisons de simplicité, nous supposons que des scènes étanches existent dans leur propre origine et sont localisées par un NodeId défini par Scene. OriginSpatialGraphNodeId.
 
-Le code Unity suivant, par exemple, montre comment utiliser la perception de Windows et les API Unity pour aligner les systèmes de coordonnées ensemble. Pour plus d’informations sur les API de perception de Windows et sur les [objets natifs de réalité mixte en Unity](https://docs.microsoft.com//windows/mixed-reality/unity-xrdevice-advanced) , consultez [SpatialCoordinateSystem](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialcoordinatesystem) et [SpatialGraphInteropPreview](https://docs.microsoft.com//uwp/api/windows.perception.spatial.preview.spatialgraphinteroppreview) pour plus d’informations sur l’obtention d’un SpatialCoordinateSystem qui correspond à l’origine universelle de Unity, ainsi que sur la méthode d’extension `.ToUnity()` pour la conversion entre `System.Numerics.Matrix4x4` et `UnityEngine.Matrix4x4`.
+Le code Unity suivant, par exemple, montre comment utiliser la perception de Windows et les API Unity pour aligner les systèmes de coordonnées ensemble. Pour plus d’informations sur les API de perception Windows et sur les [objets natifs de réalité mixte dans Unity](https://docs.microsoft.com//windows/mixed-reality/unity-xrdevice-advanced) , consultez [SpatialCoordinateSystem](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialcoordinatesystem) et [SpatialGraphInteropPreview](https://docs.microsoft.com//uwp/api/windows.perception.spatial.preview.spatialgraphinteroppreview) pour obtenir des informations sur l’obtention d’un SpatialCoordinateSystem `.ToUnity()` qui correspond à l’origine `System.Numerics.Matrix4x4` universelle de Unity, ainsi que la méthode d’extension pour la conversion entre et `UnityEngine.Matrix4x4`.
 
 ```cs
 public class SceneRootComponent : MonoBehavior
@@ -295,7 +295,7 @@ public class SceneRootComponent : MonoBehavior
 }
 ```
 
-Chaque `SceneObject` a une propriété `Position` et `Orientation` qui peut être utilisée pour positionner le contenu correspondant par rapport à l’origine du `Scene`contenant. Par exemple, l’exemple suivant suppose que le jeu est un enfant de la racine de la scène et affecte sa position et sa rotation locales pour qu’il s’aligne sur un `SceneObject`donné :
+Chaque `SceneObject` possède une `Position` propriété `Orientation` et qui peut être utilisée pour positionner le contenu correspondant par rapport à l’origine du `Scene`conteneur. Par exemple, l’exemple suivant suppose que le jeu est un enfant de la racine de la scène et affecte sa position locale et sa rotation pour l’aligner sur un `SceneObject`donné :
 
 ```cs
 void SetLocalTransformFromSceneObject(GameObject gameObject, SceneObject sceneObject)
@@ -343,9 +343,9 @@ foreach (var sceneObject in myScene.SceneObjects)
 
 Les étapes 1-4 sont fortement dépendantes de votre infrastructure/implémentation particulière, mais les thèmes doivent être similaires. Il est important de noter que le quad représente simplement un plan 2D limité qui est localisé dans l’espace. En faisant savoir à votre moteur/infrastructure où se trouve le quad et la racine de vos objets par rapport au Quad, vos hologrammes se trouveront correctement en ce qui concerne le monde réel. Pour obtenir des informations plus détaillées, consultez nos exemples sur les quatre cœurs qui présentent des implémentations spécifiques.
 
-### <a name="mesh"></a>Déjà
+### <a name="mesh"></a>Maillage
 
-Les maillages représentent les représentations géométriques des objets ou des environnements. À l’instar du [mappage spatial](spatial-mapping.md), les données de vertex et d’index de maillage fournies avec chaque maillage de surface spatiale utilisent la même disposition familière que les mémoires tampons de vertex et d’index utilisées pour le rendu des maillages de triangle dans toutes les API de rendu modernes. Les positions de vertex sont fournies dans le système de coordonnées du `Scene`. Les API spécifiques utilisées pour référencer ces données sont les suivantes :
+Les maillages représentent les représentations géométriques des objets ou des environnements. À l’instar du [mappage spatial](spatial-mapping.md), les données de vertex et d’index de maillage fournies avec chaque maillage de surface spatiale utilisent la même disposition familière que les mémoires tampons de vertex et d’index utilisées pour le rendu des maillages de triangle dans toutes les API de rendu modernes. Les positions de vertex sont fournies dans le système de `Scene`coordonnées de. Les API spécifiques utilisées pour référencer ces données sont les suivantes :
 
 ```cs
 void GetTriangleIndices(int[] indices);
@@ -362,7 +362,7 @@ mesh.GetTriangleIndices(indices);
 mesh.GetVertexPositions(positions);
 ```
 
-Les mémoires tampons d’index/vertex doivent être > = nombre d’index/vertex, mais peuvent être de taille arbitraire, ce qui permet une réutilisation efficace de la mémoire.
+Les mémoires tampons d’index/vertex doivent être >= nombre d’index/vertex, mais peuvent être de taille arbitraire, ce qui permet une réutilisation efficace de la mémoire.
 
 ## <a name="developing-with-scene-understandings"></a>Développement avec présentation des scènes
 
@@ -378,10 +378,10 @@ Si vous avez un HoloLens2, vous pouvez enregistrer toute scène que vous avez ca
 
 Si vous ne disposez pas d’un appareil HoloLens2, mais que vous souhaitez vous amuser avec la compréhension de la scène, vous devez télécharger une scène précapturée. L’exemple Scene Understanding est actuellement fourni avec des scènes sérialisées qui peuvent être téléchargées et utilisées à votre convenance. Vous pouvez les trouver ici :
 
-[Exemples de scènes de vision](https://github.com/sceneunderstanding-microsoft/unitysample/tree/master/Assets/Resources/SerializedScenesForPCPath)
+[Exemples de scènes de vision](https://github.com/microsoft/MixedReality-SceneUnderstanding-Samples/tree/master/Assets/Resources/SerializedScenesForPCPath)
 
 ## <a name="see-also"></a>Voir aussi
 
 * [Mappage spatial](spatial-mapping.md)
 * [Compréhension des scènes](scene-understanding.md)
-* [Exemple Unity](https://github.com/sceneunderstanding-microsoft/unitysample)
+* [Exemple Unity](https://github.com/microsoft/MixedReality-SceneUnderstanding-Samples)

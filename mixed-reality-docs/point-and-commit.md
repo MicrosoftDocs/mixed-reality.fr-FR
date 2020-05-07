@@ -8,10 +8,10 @@ ms.topic: article
 ms.localizationpriority: high
 keywords: Réalité mixte, interaction, conception, HoloLens, mains, éloigné, pointer et valider
 ms.openlocfilehash: d3f886fd8e892fe34116c3a1d601ae3a87d87a9b
-ms.sourcegitcommit: 2bfe9b1af4ee2cc0d668caeccb8ebc3137cbc20b
+ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "75901530"
 ---
 # <a name="point-and-commit-with-hands"></a>Pointer et valider avec les mains
@@ -95,7 +95,7 @@ Au lieu d’utiliser des mouvements spécifiques comme « pointer avec l’inde
 
 ---
 
-## <a name="2d-slate-interaction"></a>Interaction avec une tablette 2D
+## <a name="2d-slate-interaction"></a>Interaction avec une ardoise 2D
 
 Une tablette 2D est un conteneur holographique hébergeant le contenu d’applications 2D comme un navigateur web. Le concept de l’interaction éloignée avec une ardoise 2D est le suivant : les utilisateurs se servent du rayon émanant de la main pour cibler un objet et effectuent un clic dans l’air pour le sélectionner. Après avoir ciblé un élément à l’aide du rayon, ils peuvent cliquer dans l’air pour déclencher un lien hypertexte ou un bouton. D’une main, ils peuvent « cliquer dans l’air et faire glisser » pour faire défiler le contenu de la tablette vers le haut et vers le bas. Le mouvement relatif des deux mains pour cliquer dans l’air et faire glisser permet de faire un zoom avant ou arrière sur le contenu de l’ardoise.
 
@@ -129,7 +129,7 @@ Le fait de cibler le rayon émanant de la main au niveau des coins et des bords 
 
 ---
 
-## <a name="3d-object-manipulation"></a>Manipulation d’objet 3D
+## <a name="3d-object-manipulation"></a>Manipulation d’objets 3D
 
 En manipulation directe, les utilisateurs ont le choix entre deux méthodes pour manipuler des objets 3D : la manipulation basée sur l’affordance et la manipulation non basée sur l’affordance. Dans le modèle Pointer et valider, les utilisateurs peuvent accomplir exactement les mêmes tâches à l’aide du rayon émanant de la main. Aucun apprentissage supplémentaire n’est nécessaire.<br>
 
@@ -211,7 +211,7 @@ Par défaut, MRTK fournit un préfabriqué de rayon émanant de la main ([Defaul
 
 ---
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a>Voir également
 * [Manipulation directe avec les mains](direct-manipulation.md)
 * [Pointer et valider](gaze-and-commit.md)
 * [Mains : Manipulation directe](direct-manipulation.md)

@@ -6,18 +6,18 @@ ms.author: ayyonet
 ms.date: 04/10/2020
 ms.topic: article
 keywords: WebXR, WinMR, WebAR, WebVR, WindowsMixedReality, HoloLens, Windows Mixed Reality, Web VR, Web XR, Web Mr, Web AR, 360, 360 Video, 360 vidéos, 360 photo, 360 photos, 360 content, immersion Web, immersion-Web, IW, immersiveweb
-ms.openlocfilehash: 5756af9f48f4bb25477e75fb1f7c09e7239bdab9
-ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
+ms.openlocfilehash: a1288e8f477f42b0937e797623fb83fe8f63685c
+ms.sourcegitcommit: ba4c8c2a19bd6a9a181b2cec3cb8e0402f8cac62
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81278480"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82835608"
 ---
 # <a name="mixed-reality-development-with-javascript-overview"></a>Vue d’ensemble du développement de réalité mixte avec JavaScript
 
 ## <a name="mixed-reality-applications-on-the-web"></a>Applications de réalité mixte sur le Web
 
-Les fonctionnalités de réalité mixte sont disponibles sur le Web à l’aide des [API d’appareil WebXR](https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API) et des [API WebVR déconseillées] ([WebXR Overview](webxr-overview.md). Pour les navigateurs qui ne prennent pas en charge les fonctionnalités WebXR complètes, vous pouvez ajouter des [polyremplissages WebXR](https://github.com/immersive-web/webxr-polyfill) à votre site Web.
+Les fonctionnalités de réalité mixte sont disponibles sur le Web à l’aide des [API d’appareil WebXR](https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API) et des [API WebVR déconseillées](webxr-overview.md). Pour les navigateurs qui ne prennent pas en charge les fonctionnalités WebXR complètes, vous pouvez ajouter des [polyremplissages WebXR](https://github.com/immersive-web/webxr-polyfill) à votre site Web.
 
 ## <a name="what-is-webxr-polyfill"></a>Qu’est-ce que le Polyfill WebXR
 
@@ -55,7 +55,7 @@ Avec l’aide de quelques bibliothèques JavaScript, vous pouvez écrire vos exp
 
 [REACT Native](https://reactnative.dev/) est une autre bibliothèque open source qui permet aux développeurs de créer à l’aide de JavaScript et de les déployer sur plusieurs plateformes. Vous pouvez télécharger [REACT native sur GitHub](https://github.com/facebook/react-native) et en savoir plus à ce sujet dans le [blog de REACT Native](https://reactnative.dev/blog/).
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a> Voir aussi
 
 * [Présentation de WebXR](webxr-overview.md)
 * [Spécification de l’API d’appareil WebXR](https://immersive-web.github.io/webxr/)
