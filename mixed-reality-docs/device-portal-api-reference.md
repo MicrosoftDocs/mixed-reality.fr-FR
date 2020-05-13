@@ -1,19 +1,19 @@
 ---
-title: Informations de référence sur l’API du portail d’appareils
+title: Informations de référence sur les API du portail d’appareil
 description: Informations de référence sur l’API pour le portail de périphériques Windows sur HoloLens
 author: jonmlyons
 ms.author: jlyons
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, portail des appareils Windows, API
-ms.openlocfilehash: 236de35c2c736fc5a0289b7be1f1548f0a08fa26
-ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
+ms.openlocfilehash: 8c9d60f458cddd3ba258aed0ee82f7aa16c10ba6
+ms.sourcegitcommit: 6d9d01d53137435c787f247f095d5255581695fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81278237"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83227955"
 ---
-# <a name="device-portal-api-reference"></a>Informations de référence sur l’API du portail d’appareils
+# <a name="device-portal-api-reference"></a>Informations de référence sur les API du portail d’appareil
 
 Tout ce qui se trouve dans le [portail de périphériques Windows](using-the-windows-device-portal.md) repose sur des API REST que vous pouvez utiliser pour accéder aux données et contrôler votre appareil par programme.
 
@@ -33,7 +33,7 @@ Installe une application
 Paramètres
 * Package : nom de fichier du package à installer.
 
-Charge utile
+Payload
 * corps http en plusieurs parties, conforme
 
 **/API/App/packagemanager/packages (récupération)**
@@ -163,7 +163,7 @@ Récupération de l’étape thermique de l’appareil (0 normal, 1 chaud, 2 cri
 
 **/API/Holographic/simulation/Control/mode (récupération)**
 
-Obtenir le mode de simulation
+Obtient le mode de simulation
 
 **/API/Holographic/simulation/Control/mode (publication)**
 
@@ -183,6 +183,10 @@ Ouvrez une connexion de socket Web pour un flux de contrôle.
 **/API/Holographic/simulation/Control/Stream (publication)**
 
 Créez un flux de contrôle (priorité obligatoire) ou publiez des données dans un flux créé (streamId requis). Les données publiées sont supposées être de type « application/octet-stream ».
+
+**/API/Holographic/Simulation/Display/Stream (obtient/WebSocket)**
+
+Demandez un flux vidéo de simulation contenant le contenu affiché sur le système lorsqu’il est en mode « simulation ».  Un en-tête de descripteur de format simple sera envoyé initialement, suivi des textures encodées H. 264, chacune précédée d’un en-tête indiquant l’index oculaire et la taille de la texture.
 
 ## <a name="perception-simulation-playback"></a>Lecture de simulation de perception
 
@@ -399,7 +403,7 @@ Définit le nom de l’ordinateur
 Paramètres
 * nom : nouveau nom de l’ordinateur, hex64 encodé, à affecter à
 
-## <a name="performance-data"></a>Données relatives aux performances
+## <a name="performance-data"></a>Données de performances
 
 **/API/ResourceManager/Processes (récupération)**
 
@@ -415,7 +419,7 @@ Retourne les statistiques de performances système (lecture/écriture d’e/s, s
 Retourner les données
 * JSON avec informations système : processeur, GPU, mémoire, réseau, e/s
 
-## <a name="power"></a>Alimentation électrique
+## <a name="power"></a>Puissance
 
 **/API/Power/Battery (récupération)**
 
@@ -435,7 +439,7 @@ Redémarre l’appareil cible
 
 Arrête l’appareil cible
 
-## <a name="task-manager"></a>Task Manager
+## <a name="task-manager"></a>Gestionnaire des tâches
 
 **/API/taskmanager/App (supprimer)**
 
@@ -497,7 +501,7 @@ Paramètres
 
 Charge un profil WPR et démarre le suivi à l’aide du profil chargé.
 
-Charge utile
+Payload
 * corps http en plusieurs parties, conforme
 
 Retourner les données

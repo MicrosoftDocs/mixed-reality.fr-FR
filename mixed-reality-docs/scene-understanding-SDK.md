@@ -6,12 +6,12 @@ ms.author: szymons
 ms.date: 07/08/2019
 ms.topic: article
 keywords: Compréhension des scènes, mappage spatial, Windows Mixed Reality, Unity
-ms.openlocfilehash: 3eb54f84e30b2354907204895e62accdb9ad54f9
-ms.sourcegitcommit: 92ff5478a5c55b4e2c5cc2f44f1588702f4ec5d1
+ms.openlocfilehash: 2f958d45f72d6c39d4222840615c5b177db7c76f
+ms.sourcegitcommit: 6d9d01d53137435c787f247f095d5255581695fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82604950"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83228014"
 ---
 # <a name="scene-understanding-sdk-overview"></a>Présentation du SDK présentation de Scene
 
@@ -47,7 +47,7 @@ La partie gauche est un diagramme du runtime de réalité mixte qui est toujours
 
 Étant donné que chaque scène stocke ses données dans l’espace mémoire de votre application, vous pouvez supposer que toutes les fonctions de l’objet de la scène ou de ses données internes sont toujours exécutées dans le processus de votre application.
 
-### <a name="layout"></a>Disposition
+### <a name="layout"></a>Mise en page
 
 Pour travailler avec la compréhension des scènes, il peut être utile de savoir et de comprendre comment le runtime représente des composants logiquement et physiquement. La scène représente des données avec une disposition spécifique qui a été choisie comme simple tout en conservant une structure sous-jacente qui est pliable pour répondre aux exigences futures sans avoir besoin de révisions majeures. Pour ce faire, la scène stocke tous les composants (blocs de construction pour tous les objets de scène) dans une liste plate et définit la hiérarchie et la composition par le biais de références où des composants spécifiques référencent d’autres.
 
@@ -158,7 +158,7 @@ La première étape de l’utilisation de SceneUnderstanding est de permettre à
 Les scènes sont calculées à l’aide d’un SceneObserver. Avant de créer une scène, votre application doit interroger votre appareil pour s’assurer qu’il prend en charge SceneUnderstanding, ainsi que pour demander l’accès utilisateur aux informations dont SceneUnderstanding a besoin.
 
 ```cs
-if (SceneObserver.IsSupported())
+if (!SceneObserver.IsSupported())
 {
     // Handle the error
 }
@@ -265,7 +265,7 @@ Notez qu’il s’agit du SceneObject qui a la transformation par rapport à l�
 
 La compréhension des scènes a fait une tentative délibérée d’alignement avec les représentations de scène 3D traditionnelles lors du traitement des transformations. Chaque scène est donc confinée à un système de coordonnées unique, à l’instar des représentations environnementales 3D les plus courantes. Les SceneObjects fournissent chacun leur emplacement sous la forme d’une position et d’une orientation au sein de ce système de coordonnées. Si votre application traite des scènes qui étendent la limite de ce qu’une origine unique fournit peut ancrer SceneObjects à SpatialAnchors, ou générer plusieurs scènes et les fusionner, mais pour des raisons de simplicité, nous supposons que des scènes étanches existent dans leur propre origine et sont localisées par un NodeId défini par Scene. OriginSpatialGraphNodeId.
 
-Le code Unity suivant, par exemple, montre comment utiliser la perception de Windows et les API Unity pour aligner les systèmes de coordonnées ensemble. Pour plus d’informations sur les API de perception Windows et sur les [objets natifs de réalité mixte dans Unity](https://docs.microsoft.com//windows/mixed-reality/unity-xrdevice-advanced) , consultez [SpatialCoordinateSystem](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialcoordinatesystem) et [SpatialGraphInteropPreview](https://docs.microsoft.com//uwp/api/windows.perception.spatial.preview.spatialgraphinteroppreview) pour obtenir des informations sur l’obtention d’un SpatialCoordinateSystem `.ToUnity()` qui correspond à l’origine `System.Numerics.Matrix4x4` universelle de Unity, ainsi que la méthode d’extension pour la conversion entre et `UnityEngine.Matrix4x4`.
+Le code Unity suivant, par exemple, montre comment utiliser la perception de Windows et les API Unity pour aligner les systèmes de coordonnées ensemble. Pour plus d’informations sur les API de perception Windows et sur les [objets natifs de réalité mixte dans Unity](https://docs.microsoft.com//windows/mixed-reality/unity-xrdevice-advanced) , consultez [SpatialCoordinateSystem](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialcoordinatesystem) et [SpatialGraphInteropPreview](https://docs.microsoft.com//uwp/api/windows.perception.spatial.preview.spatialgraphinteroppreview) pour obtenir des informations sur l’obtention d’un SpatialCoordinateSystem qui correspond à l’origine universelle de Unity, ainsi que la `.ToUnity()` méthode d’extension pour la conversion entre `System.Numerics.Matrix4x4` et `UnityEngine.Matrix4x4` .
 
 ```cs
 public class SceneRootComponent : MonoBehavior
@@ -295,7 +295,7 @@ public class SceneRootComponent : MonoBehavior
 }
 ```
 
-Chaque `SceneObject` possède une `Position` propriété `Orientation` et qui peut être utilisée pour positionner le contenu correspondant par rapport à l’origine du `Scene`conteneur. Par exemple, l’exemple suivant suppose que le jeu est un enfant de la racine de la scène et affecte sa position locale et sa rotation pour l’aligner sur un `SceneObject`donné :
+Chaque `SceneObject` possède une `Position` `Orientation` propriété et qui peut être utilisée pour positionner le contenu correspondant par rapport à l’origine du conteneur `Scene` . Par exemple, l’exemple suivant suppose que le jeu est un enfant de la racine de la scène et affecte sa position locale et sa rotation pour l’aligner sur un donné `SceneObject` :
 
 ```cs
 void SetLocalTransformFromSceneObject(GameObject gameObject, SceneObject sceneObject)
@@ -345,7 +345,7 @@ Les étapes 1-4 sont fortement dépendantes de votre infrastructure/implémentat
 
 ### <a name="mesh"></a>Maillage
 
-Les maillages représentent les représentations géométriques des objets ou des environnements. À l’instar du [mappage spatial](spatial-mapping.md), les données de vertex et d’index de maillage fournies avec chaque maillage de surface spatiale utilisent la même disposition familière que les mémoires tampons de vertex et d’index utilisées pour le rendu des maillages de triangle dans toutes les API de rendu modernes. Les positions de vertex sont fournies dans le système de `Scene`coordonnées de. Les API spécifiques utilisées pour référencer ces données sont les suivantes :
+Les maillages représentent les représentations géométriques des objets ou des environnements. À l’instar du [mappage spatial](spatial-mapping.md), les données de vertex et d’index de maillage fournies avec chaque maillage de surface spatiale utilisent la même disposition familière que les mémoires tampons de vertex et d’index utilisées pour le rendu des maillages de triangle dans toutes les API de rendu modernes. Les positions de vertex sont fournies dans le système de coordonnées de `Scene` . Les API spécifiques utilisées pour référencer ces données sont les suivantes :
 
 ```cs
 void GetTriangleIndices(int[] indices);
