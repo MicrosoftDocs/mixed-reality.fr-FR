@@ -8,24 +8,26 @@ ms.date: 10/22/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-unity, academy, tutoriel
-ms.openlocfilehash: ebb40c6ae877ac167c7c16a67e08ef2501f6290d
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+ms.openlocfilehash: db60ff35156ea20aadd1ba04f9304aa27a2488cb
+ms.sourcegitcommit: ba4c8c2a19bd6a9a181b2cec3cb8e0402f8cac62
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75334468"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82835648"
 ---
 # <a name="tutorials-and-sample-apps"></a>Tutoriels et exemples d’applications
 
 ![Utilisateur HoloLens 2](images/08_Tutorials.png)
 
-Tous nos tutoriels et exemples d’applications sont actuellement basés sur Unity. À mesure que nous développerons du contenu pour d’autres moteurs et plateformes, nous ajouterons des titres à la table des matières.
+Tous nos tutoriels et exemples d’applications sont actuellement basés sur Unity ou sur Unreal. À mesure que nous développerons du contenu pour d’autres moteurs et plateformes, nous ajouterons des titres à la table des matières.
 
 ## <a name="hololens-2-tutorials"></a>Tutoriels sur HoloLens 2
 
-Les tutoriels HoloLens 2 sont conçus pour aider les développeurs à apprendre les techniques et les bonnes pratiques du développement d’applications de réalité mixte. Les tutoriels sont basés sur [Mixed Reality Toolkit 2.0 (MRTK 2.0)](https://github.com/microsoft/MixedRealityToolkit-Unity).
+Les tutoriels HoloLens 2 sont conçus pour aider les développeurs à apprendre les techniques et les bonnes pratiques du développement d’applications de réalité mixte. Les tutoriels Unity sont basés sur [Mixed Reality Toolkit 2.0 (MRTK 2.0)](https://github.com/microsoft/MixedRealityToolkit-Unity) et le tutoriel Unreal est basé sur [UX Tools for Unreal Engine 0.8](https://github.com/microsoft/MixedReality-UXTools-Unreal).
 
-* Tutoriels de démarrage - [Vue d’ensemble et objectifs (1 sur 7)](mrlearning-base.md)
+* Tutoriels de démarrage
+    * Unity - [Vue d’ensemble et objectifs - 1 sur 7](mrlearning-base.md)
+    * Unreal - [Bien démarrer - 1 sur 6](unreal-uxt-ch1.md)
 * Tutoriels sur les ancres spatiales Azure - [Bien démarrer avec les ancres spatiales Azure (1 sur 3)](mrlearning-asa-ch1.md)
 * Tutoriels sur les services de reconnaissance vocale Azure - [Intégration et utilisation de la reconnaissance vocale et de la transcription (1 sur 4)](mrlearning-speechSDK-ch1.md)
 * Tutoriels sur les fonctionnalités multiutilisateurs - [Configuration du réseau Photon Unity (1 sur 5)](mrlearning-sharing(photon)-ch1.md)

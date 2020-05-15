@@ -1,0 +1,138 @@
+---
+title: 2. Initialisation de votre projet et de votre première application
+description: Partie 2 d’un tutoriel pour créer une application de jeu d’échecs simple avec Unreal Engine 4 et le plug-in UX Tools du Mixed Reality Toolkit
+author: sw5813
+ms.author: suwu
+ms.date: 5/5/2020
+ms.topic: article
+ms.localizationpriority: high
+keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, réalité mixte, tutoriel, bien démarrer, mrtk, uxt, UX Tools, documentation
+ms.openlocfilehash: fc85f011ff3b186f3b4b5449b4f8ec49f0b6418f
+ms.sourcegitcommit: 189a47b8712dd5b620e19815f5cf6d1ac0f29880
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82851573"
+---
+# <a name="2-initializing-your-project-and-first-application"></a><span data-ttu-id="847e3-104">2. Initialisation de votre projet et de votre première application</span><span class="sxs-lookup"><span data-stu-id="847e3-104">2. Initializing your project and first application</span></span>
+
+<span data-ttu-id="847e3-105">Cette section vous aide à créer une application Unreal pour HoloLens 2.</span><span class="sxs-lookup"><span data-stu-id="847e3-105">This section gets you started with creating a new Unreal application for HoloLens 2.</span></span> 
+
+## <a name="objectives"></a><span data-ttu-id="847e3-106">Objectifs</span><span class="sxs-lookup"><span data-stu-id="847e3-106">Objectives</span></span>
+
+* <span data-ttu-id="847e3-107">Configurer Unreal pour le développement HoloLens</span><span class="sxs-lookup"><span data-stu-id="847e3-107">Configure Unreal for HoloLens development</span></span>
+* <span data-ttu-id="847e3-108">Importer les ressources et configurer la scène</span><span class="sxs-lookup"><span data-stu-id="847e3-108">Import assets and set up the scene</span></span>
+
+## <a name="create-a-new-unreal-project"></a><span data-ttu-id="847e3-109">Créer un projet Unreal</span><span class="sxs-lookup"><span data-stu-id="847e3-109">Create a new Unreal project</span></span>
+
+1. <span data-ttu-id="847e3-110">Lancer Unreal Engine</span><span class="sxs-lookup"><span data-stu-id="847e3-110">Launch Unreal Engine</span></span>
+
+2. <span data-ttu-id="847e3-111">Sous **New Project Categories**, sélectionnez **Games**, puis cliquez sur Next.</span><span class="sxs-lookup"><span data-stu-id="847e3-111">Under **New Project Categories**, select **Games** and click Next.</span></span> <span data-ttu-id="847e3-112">Sélectionnez un modèle **Blank**, puis cliquez sur Next.</span><span class="sxs-lookup"><span data-stu-id="847e3-112">Select a **Blank** Template and click Next.</span></span> 
+
+![Sélectionner le modèle Blank](images/unreal-uxt/2-template.PNG)
+
+3. <span data-ttu-id="847e3-114">Dans Project Settings, choisissez **C++, Scalable 3D or 2D, Mobile / Tablet**, et **No Starter Content**.</span><span class="sxs-lookup"><span data-stu-id="847e3-114">In Project Settings, choose **C++, Scalable 3D or 2D, Mobile / Tablet**, and **No Starter Content**.</span></span> <span data-ttu-id="847e3-115">Sélectionnez un emplacement où enregistrer votre projet, puis cliquez sur **Create Project**.</span><span class="sxs-lookup"><span data-stu-id="847e3-115">Select a location for your project to be saved and click **Create Project**.</span></span> <span data-ttu-id="847e3-116">Ceci ouvre vos fichiers C++ dans un projet Visual Studio et dans l’éditeur Unreal.</span><span class="sxs-lookup"><span data-stu-id="847e3-116">This will open up your C++ files in a Visual Studio project and the Unreal editor.</span></span> 
+
+![Paramètres du projet initial](images/unreal-uxt/2-project-settings.PNG)
+
+4. <span data-ttu-id="847e3-118">Dans le coin supérieur gauche, accédez à **Edit > Plugins**.</span><span class="sxs-lookup"><span data-stu-id="847e3-118">In the top left-hand corner, go to **Edit > Plugins**.</span></span> <span data-ttu-id="847e3-119">Sous Augmented Reality, cochez la case pour activer le plug-in **HoloLens**.</span><span class="sxs-lookup"><span data-stu-id="847e3-119">Under Augmented Reality, check the box to enable the **HoloLens** plugin.</span></span> <span data-ttu-id="847e3-120">Faites défiler jusqu’à la section Virtual Reality, puis cochez la case pour activer le plug-in **Microsoft Windows Mixed Reality**.</span><span class="sxs-lookup"><span data-stu-id="847e3-120">Scroll down to the Virtual Reality section and check the box to enable the **Microsoft Windows Mixed Reality** plugin.</span></span> <span data-ttu-id="847e3-121">Les deux plug-ins sont nécessaires pour le développement HoloLens 2.</span><span class="sxs-lookup"><span data-stu-id="847e3-121">Both plugins are required for HoloLens 2 development.</span></span> <span data-ttu-id="847e3-122">Redémarrez votre éditeur.</span><span class="sxs-lookup"><span data-stu-id="847e3-122">Restart your editor.</span></span> 
+
+![Plug-ins](images/unreal-uxt/2-plugins.PNG)
+
+5. <span data-ttu-id="847e3-124">Dans le coin supérieur gauche, accédez à **File > New Level**.</span><span class="sxs-lookup"><span data-stu-id="847e3-124">In the top left-hand corner, go to **File > New Level**.</span></span> <span data-ttu-id="847e3-125">Sélectionnez **Empty Level**.</span><span class="sxs-lookup"><span data-stu-id="847e3-125">Select **Empty Level**.</span></span> <span data-ttu-id="847e3-126">La scène par défaut dans la fenêtre d’affichage doit maintenant être vide.</span><span class="sxs-lookup"><span data-stu-id="847e3-126">The default scene in the viewport should now be empty.</span></span>
+
+6. <span data-ttu-id="847e3-127">Faites glisser PlayerStart et déposez PlayerStart à partir du panneau Modes sur la gauche, situé sous l’onglet Basic. Dans le volet d’informations sur la droite, définissez l’emplacement sur X = 0, Y = 0, Z = 0 pour que l’utilisateur commence à l’origine quand l’application démarre.</span><span class="sxs-lookup"><span data-stu-id="847e3-127">Drag PlayerStart and drop PlayerStart from the Modes panel on the left, located in the Basic tab. In the Details panel on the right, set the location to X = 0, Y = 0, Z = 0 in order to have the user start at the origin when the app stars.</span></span>
+
+![Fenêtre d’affichage avec PlayerStart](images/unreal-uxt/2-playerstart.PNG)
+
+7. <span data-ttu-id="847e3-129">Faites glisser **Cube** à partir de l’onglet Basic du panneau Modes vers la fenêtre d’affichage.</span><span class="sxs-lookup"><span data-stu-id="847e3-129">Drag a **Cube** from the Basic tab of the Modes panel into the viewport.</span></span> <span data-ttu-id="847e3-130">Dans le volet d’informations, définissez l’emplacement sur X = 50, Y = 0, Z = 0 pour placer le cube à 50 cm de distance du lecteur au moment du démarrage.</span><span class="sxs-lookup"><span data-stu-id="847e3-130">In the Details panel, set the location to X = 50, Y = 0, Z = 0 to set the cube to 50 cm away from the player at start time.</span></span> <span data-ttu-id="847e3-131">Étant donné que le cube par défaut est assez grand, remplacez l’échelle du cube par (0,2 ; 0,2 ; 0,2).</span><span class="sxs-lookup"><span data-stu-id="847e3-131">Since the default cube is quite large, change the Scale of the cube to (0.2, 0.2, 0.2).</span></span> 
+
+8. <span data-ttu-id="847e3-132">Vous ne pourrez pas voir le cube sauf si vous ajoutez une lumière à votre scène.</span><span class="sxs-lookup"><span data-stu-id="847e3-132">You won’t be able to see the cube unless you add a light to your scene.</span></span> <span data-ttu-id="847e3-133">Passez à l’onglet **Lights** dans le panneau Modes, puis faites glisser une **Directional Light** dans la scène, au-dessus du PlayerStart.</span><span class="sxs-lookup"><span data-stu-id="847e3-133">Switch to the **Lights** tab on the Modes panel and drag a **Directional Light** into the scene, above the PlayerStart.</span></span>
+
+![Fenêtre d’affichage avec une lumière ajoutée](images/unreal-uxt/2-light.PNG)
+
+9.  <span data-ttu-id="847e3-135">Appuyez sur le bouton **Play** dans la barre d’outils pour voir votre cube dans la fenêtre d’affichage !</span><span class="sxs-lookup"><span data-stu-id="847e3-135">Press the **Play** button on the toolbar to see your cube in the viewport!</span></span> <span data-ttu-id="847e3-136">Appuyez sur **Échap** pour arrêter le niveau.</span><span class="sxs-lookup"><span data-stu-id="847e3-136">Press **Esc** to stop the level.</span></span> 
+
+![Un cube dans la fenêtre d’affichage](images/unreal-uxt/2-cube.PNG)
+
+10. <span data-ttu-id="847e3-138">Enregistrons votre niveau.</span><span class="sxs-lookup"><span data-stu-id="847e3-138">Let’s save your level.</span></span> <span data-ttu-id="847e3-139">Dans le coin supérieur gauche, cliquez sur **File > Save Current**.</span><span class="sxs-lookup"><span data-stu-id="847e3-139">In the top left corner, click on **File > Save Current**.</span></span> <span data-ttu-id="847e3-140">Nommez votre niveau « Main », puis cliquez sur **Save**.</span><span class="sxs-lookup"><span data-stu-id="847e3-140">Name your level "Main" and click **Save**.</span></span> 
+
+## <a name="set-up-a-chess-scene"></a><span data-ttu-id="847e3-141">Configurer une scène de jeu d’échecs</span><span class="sxs-lookup"><span data-stu-id="847e3-141">Set up a chess scene</span></span>
+
+1. <span data-ttu-id="847e3-142">Dans votre navigateur de contenu, cliquez sur l’icône sous Add New pour afficher le panneau des sources.</span><span class="sxs-lookup"><span data-stu-id="847e3-142">In your Content Browser, click icon under Add New to show the sources panel.</span></span> <span data-ttu-id="847e3-143">Cliquez ensuite sur **Add New > New Folder** et nommez le dossier « ChessAssets ».</span><span class="sxs-lookup"><span data-stu-id="847e3-143">Then click on **Add New > New Folder** and name the folder “ChessAssets”.</span></span> <span data-ttu-id="847e3-144">Double-cliquez sur ce dossier pour y accéder.</span><span class="sxs-lookup"><span data-stu-id="847e3-144">Double-click this folder to navigate in.</span></span> <span data-ttu-id="847e3-145">C’est là que nous allons importer les ressources 3D pour notre jeu d’échecs.</span><span class="sxs-lookup"><span data-stu-id="847e3-145">This is where we’ll import the 3D assets for our chess set.</span></span>
+
+![Afficher ou masquer le panneau des sources](images/unreal-uxt/2-showhidesources.PNG)
+
+2. <span data-ttu-id="847e3-147">Téléchargez le fichier zip des ressources depuis [GitHub](https://github.com/microsoft/MixedReality-Unreal-Samples/blob/master/ChessApp/ChessAssets.7z).</span><span class="sxs-lookup"><span data-stu-id="847e3-147">Download the zip file of assets from [GitHub](https://github.com/microsoft/MixedReality-Unreal-Samples/blob/master/ChessApp/ChessAssets.7z).</span></span> <span data-ttu-id="847e3-148">Ce fichier contient les modèles 3D pour un échiquier et pour les pièces du jeu d’échecs.</span><span class="sxs-lookup"><span data-stu-id="847e3-148">This file contains the 3D models for a chess board and chess set.</span></span> <span data-ttu-id="847e3-149">Décompressez ce fichier.</span><span class="sxs-lookup"><span data-stu-id="847e3-149">Unzip this file.</span></span>
+
+3. <span data-ttu-id="847e3-150">En haut du navigateur de contenu, cliquez sur **Import**.</span><span class="sxs-lookup"><span data-stu-id="847e3-150">At the top of the Content Browser, click on **Import**.</span></span> <span data-ttu-id="847e3-151">Accédez au dossier que vous venez de décompresser et sélectionnez tous les éléments qui s’y trouvent.</span><span class="sxs-lookup"><span data-stu-id="847e3-151">Navigate to the folder that you just unzipped and select all the items within.</span></span> <span data-ttu-id="847e3-152">Ce dossier contient des fichiers FBX qui sont les maillages des objets 3D pour notre échiquier et nos pièces, ainsi que des fichiers TGA qui sont les cartes de texture que nous allons utiliser pour créer des matériaux pour notre échiquier et nos pièces.</span><span class="sxs-lookup"><span data-stu-id="847e3-152">This folder contains FBX files which are the 3D object meshes for our chess board and pieces, as well as TGA files which are the texture maps we’ll use to create materials for our board and pieces.</span></span> <span data-ttu-id="847e3-153">Cliquez sur **Ouvrir**.</span><span class="sxs-lookup"><span data-stu-id="847e3-153">Click **Open**.</span></span> 
+
+4. <span data-ttu-id="847e3-154">Une fenêtre FBX Import Options s’ouvre.</span><span class="sxs-lookup"><span data-stu-id="847e3-154">An FBX Import Options window will pop up.</span></span> <span data-ttu-id="847e3-155">Dans la section **Material**, changez **Material Import Method** en **Do Not Create Material**.</span><span class="sxs-lookup"><span data-stu-id="847e3-155">In the **Material** section, change the **Material Import Method** to **Do Not Create Material**.</span></span> <span data-ttu-id="847e3-156">Ensuite, cliquez sur **Import All**.</span><span class="sxs-lookup"><span data-stu-id="847e3-156">Then, click **Import All**.</span></span>
+
+![Options d’importation FBX](images/unreal-uxt/2-nocreatemat.PNG)
+
+5. <span data-ttu-id="847e3-158">De retour dans votre dossier de contenu, créez un dossier nommé **Blueprints**.</span><span class="sxs-lookup"><span data-stu-id="847e3-158">Back in your Content folder, create a new folder called **Blueprints**.</span></span> <span data-ttu-id="847e3-159">C’est là que nous allons stocker tous nos blueprints, qui sont des ressources spéciales qui fournissent une interface basée sur des nœuds pour créer des types d’acteurs et d’événements au niveau des scripts.</span><span class="sxs-lookup"><span data-stu-id="847e3-159">This is where we will store all our blueprints, which are special assets that provide a node-based interface to create new types of Actors and script level events.</span></span> 
+
+6. <span data-ttu-id="847e3-160">Double-cliquez sur le dossier **Blueprints** pour y accéder, puis cliquez avec le bouton droit dans votre navigateur de contenu et sélectionnez **Blueprint Class**.</span><span class="sxs-lookup"><span data-stu-id="847e3-160">Double click the **Blueprints** folder to navigate inside, then right click in your Content Browser and select **Blueprint Class**.</span></span> <span data-ttu-id="847e3-161">Cliquez sur **Actor** et nommez le nouveau blueprint « Board ».</span><span class="sxs-lookup"><span data-stu-id="847e3-161">Click on **Actor** and name the new blueprint “Board”.</span></span> <span data-ttu-id="847e3-162">Double-cliquez sur Board pour l’ouvrir.</span><span class="sxs-lookup"><span data-stu-id="847e3-162">Double click Board to open it.</span></span> 
+
+![Sélectionner une classe parente pour votre blueprint](images/unreal-uxt/2-bpparent.PNG)
+
+![Le nouveau blueprint Board](images/unreal-uxt/2-bpboard.PNG)
+
+7. <span data-ttu-id="847e3-165">Dans l’éditeur de blueprint, accédez au panneau Components, puis cliquez sur **Add Component > Scene**.</span><span class="sxs-lookup"><span data-stu-id="847e3-165">In the Blueprint editor, navigate to the Components panel and click **Add Component > Scene**.</span></span> <span data-ttu-id="847e3-166">Nommez la scène nouvellement créée « Root », puis cliquez et faites glisser Root sur DefaultSceneRoot.</span><span class="sxs-lookup"><span data-stu-id="847e3-166">Name the newly created scene “Root”, and then click and drag Root over the DefaultSceneRoot.</span></span> <span data-ttu-id="847e3-167">Cela va remplacer la racine de la scène par défaut et éliminer de la sphère dans la fenêtre d’affichage.</span><span class="sxs-lookup"><span data-stu-id="847e3-167">This will replace the default scene root and get rid of the sphere in the viewport.</span></span> 
+
+![Remplacement de la racine](images/unreal-uxt/2-root.PNG)
+
+8. <span data-ttu-id="847e3-169">Cliquez à nouveau sur **Add Component** et choisissez cette fois **Static Mesh**.</span><span class="sxs-lookup"><span data-stu-id="847e3-169">Click **Add Component** again, and this time choose **Static Mesh**.</span></span> <span data-ttu-id="847e3-170">Nommez le nouveau maillage statique « SM_Board ».</span><span class="sxs-lookup"><span data-stu-id="847e3-170">Name the new static mesh “SM_Board”.</span></span> 
+
+![Ajout d’un maillage statique](images/unreal-uxt/2-sm-board.PNG)
+
+9. <span data-ttu-id="847e3-172">Dans le panneau **Details**, recherchez la section **Static Mesh** et cliquez sur la liste déroulante.</span><span class="sxs-lookup"><span data-stu-id="847e3-172">In the **Details** panel, locate the **Static Mesh** section and click the dropdown.</span></span> <span data-ttu-id="847e3-173">Sélectionnez **ChessBoard**.</span><span class="sxs-lookup"><span data-stu-id="847e3-173">Select **ChessBoard**.</span></span> 
+
+![Le maillage de l’échiquier dans la fenêtre d’affichage](images/unreal-uxt/2-sm-board-view.PNG)
+
+10. <span data-ttu-id="847e3-175">Toujours dans le panneau **Details**, recherchez la section **Materials** et cliquez sur la liste déroulante.</span><span class="sxs-lookup"><span data-stu-id="847e3-175">Still in the **Details** panel, locate the **Materials** section and click the dropdown.</span></span> <span data-ttu-id="847e3-176">Sous **Create New Asset**, sélectionnez **Material**.</span><span class="sxs-lookup"><span data-stu-id="847e3-176">Under **Create New Asset**, select **Material**.</span></span> <span data-ttu-id="847e3-177">Nommez cette ressource **M_ChessBoard** et enregistrez-la dans le dossier **ChessAssets**.</span><span class="sxs-lookup"><span data-stu-id="847e3-177">Name this asset **M_ChessBoard** and save it in the **ChessAssets** folder.</span></span> 
+
+![Créer un matériau](images/unreal-uxt/2-newmat.PNG)
+
+11. <span data-ttu-id="847e3-179">Double-cliquez sur le carré en regard de la liste déroulante de M_ChessBoard pour ouvrir votre matériau M_ChessBoard nouvellement créé.</span><span class="sxs-lookup"><span data-stu-id="847e3-179">Double click the square next to M_ChessBoard dropdown to open your newly created M_ChessBoard material.</span></span> <span data-ttu-id="847e3-180">Dans l’éditeur de matériau, cliquez avec le bouton droit et recherchez le nœud **Texture Sample**.</span><span class="sxs-lookup"><span data-stu-id="847e3-180">In the Material Editor, right click and search for the **Texture Sample** node.</span></span> <span data-ttu-id="847e3-181">Dans le panneau **Details** sous la section **Material Expression Texture Base**, cliquez sur la liste déroulante et sélectionnez **ChessBoard_Albedo**.</span><span class="sxs-lookup"><span data-stu-id="847e3-181">In the **Details** panel under the **Material Expression Texture Base** section, click the dropdown and select **ChessBoard_Albedo**.</span></span> <span data-ttu-id="847e3-182">Enfin, faites glisser la broche de sortie **RGB** vers la broche Base Color de **M_ChessBoard**.</span><span class="sxs-lookup"><span data-stu-id="847e3-182">Finally, drag the **RGB** output pin to the Base Color pin of **M_ChessBoard**.</span></span> 
+
+![Définir la couleur de base](images/unreal-uxt/2-boardalbedomat.PNG)
+
+12. <span data-ttu-id="847e3-184">Procédez de même quatre fois de plus, en liant l’exemple de texture **ChessBoard_AO** à la broche**Ambient Occlusion**, l’exemple de texture **ChessBoard_Metal** à la broche **Metallic**, l’exemple de texture **ChessBoard_Normal** à la broche **Normal** et l’exemple de texture **ChessBoard_Rough** à la broche **Roughness**.</span><span class="sxs-lookup"><span data-stu-id="847e3-184">Do the same four more times, linking the **ChessBoard_AO** Texture Sample to the **Ambient Occlusion** pin, the **ChessBoard_Metal** Texture Sample to the **Metallic** pin, the **ChessBoard_Normal** Texture Sample to the **Normal** pin, and the **ChessBoard_Rough** Texture Sample to the **Roughness** pin.</span></span> <span data-ttu-id="847e3-185">Cliquez sur **Enregistrer**.</span><span class="sxs-lookup"><span data-stu-id="847e3-185">Click **Save**.</span></span> 
+
+![Raccorder les textures restantes](images/unreal-uxt/2-boardmat.PNG)
+
+13. <span data-ttu-id="847e3-187">Ouvrez à votre blueprint **Board**.</span><span class="sxs-lookup"><span data-stu-id="847e3-187">Return to your **Board** Blueprint.</span></span> <span data-ttu-id="847e3-188">Vous voyez normalement que le matériau que vous venez de créer a été appliqué à votre blueprint.</span><span class="sxs-lookup"><span data-stu-id="847e3-188">You should see that the material you just created has been applied to your Blueprint.</span></span> <span data-ttu-id="847e3-189">Pour que l’échiquier ait une taille et un emplacement raisonnables une fois que nous le plaçons dans notre scène, changez l’échelle **Scale** de l’échiquier en (0,05 ; 0,05 ; 0,05) et la **Rotation**  en Z = 90.</span><span class="sxs-lookup"><span data-stu-id="847e3-189">To ensure the board is at a reasonable size and position once we place it in our scene, change the **Scale** of the board to (0.05, 0.05, 0.05) and the **Rotation** to Z = 90.</span></span> <span data-ttu-id="847e3-190">Dans la barre d’outils du haut, cliquez sur **Compile**, puis sur **Save**.</span><span class="sxs-lookup"><span data-stu-id="847e3-190">In the toolbar at the top, click **Compile**, then **Save**.</span></span> <span data-ttu-id="847e3-191">Revenez dans votre fenêtre principale.</span><span class="sxs-lookup"><span data-stu-id="847e3-191">Return to your Main window.</span></span> 
+
+![Échiquier avec un matériau appliqué](images/unreal-uxt/2-chessboard.PNG)
+
+14. <span data-ttu-id="847e3-193">Nous allons maintenant supprimer le cube et le remplacer par l’acteur Board que vous venez de créer.</span><span class="sxs-lookup"><span data-stu-id="847e3-193">Let’s now delete the cube and replace it with your newly created Board actor.</span></span> <span data-ttu-id="847e3-194">Dans le **World Outliner**, cliquez avec le bouton droit sur **Cube > Edit > Delete**.</span><span class="sxs-lookup"><span data-stu-id="847e3-194">In the **World Outliner**, right click your **Cube > Edit > Delete**.</span></span> <span data-ttu-id="847e3-195">Faites l’échiquier de votre navigateur de contenu vers la fenêtre d’affichage.</span><span class="sxs-lookup"><span data-stu-id="847e3-195">Drag Board from your Content Browser into the viewport.</span></span> <span data-ttu-id="847e3-196">Définissez l’emplacement de l’échiquier sur X = 80, Y = 0, Z = -20.</span><span class="sxs-lookup"><span data-stu-id="847e3-196">Set the location of the board to X = 80, Y = 0, Z = -20.</span></span> 
+
+15. <span data-ttu-id="847e3-197">Cliquez sur le bouton **Play** pour afficher votre nouvel échiquier dans votre niveau.</span><span class="sxs-lookup"><span data-stu-id="847e3-197">Click the **Play** button to view your new board in your level.</span></span> <span data-ttu-id="847e3-198">Appuyez sur **Échap** pour revenir à l’éditeur.</span><span class="sxs-lookup"><span data-stu-id="847e3-198">Press **Esc** to return to the editor.</span></span> 
+
+16. <span data-ttu-id="847e3-199">Nous allons maintenant suivre les mêmes étapes pour créer une pièce du jeu d’échecs comme nous l’avons fait avec l’échiquier, en sélectionnant cette fois le maillage et le matériau pour la pièce :</span><span class="sxs-lookup"><span data-stu-id="847e3-199">Now we’ll follow the same steps to create a chess piece as we did with the board, this time selecting the mesh and material for the chess piece:</span></span>
+
+    <span data-ttu-id="847e3-200">a) Accédez au dossier Blueprints dans le navigateur de contenu et créez une nouvelle classe Blueprint de type Actor.</span><span class="sxs-lookup"><span data-stu-id="847e3-200">a) Navigate to the Blueprints folder in the Content Browser and create a new Blueprint class of type Actor.</span></span> <span data-ttu-id="847e3-201">Nommez cet acteur « WhiteKing ».</span><span class="sxs-lookup"><span data-stu-id="847e3-201">Name this actor “WhiteKing”.</span></span>
+
+    <span data-ttu-id="847e3-202">b) Double-cliquez sur WhiteKing pour l’ouvrir.</span><span class="sxs-lookup"><span data-stu-id="847e3-202">b) Double click WhiteKing to open it.</span></span> <span data-ttu-id="847e3-203">Ajoutez un nouveau composant de scène nommé « Root » et utilisez-le pour remplacer DefaultSceneRoot.</span><span class="sxs-lookup"><span data-stu-id="847e3-203">Add a new Scene component named “Root” and use it to replace DefaultSceneRoot.</span></span> 
+
+    <span data-ttu-id="847e3-204">c) Ajoutez un nouveau composant Static Mesh nommé « SM_King ».</span><span class="sxs-lookup"><span data-stu-id="847e3-204">c) Add a new Static Mesh component named “SM_King”.</span></span> <span data-ttu-id="847e3-205">Dans le volet d’informations, définissez le **Static Mesh** sur **Chess_King** et **Material** sur un nouveau matériau appelé **M_ChessWhite**.</span><span class="sxs-lookup"><span data-stu-id="847e3-205">In the Details panel, set the **Static Mesh** to **Chess_King** and the **Material** to a new Material called **M_ChessWhite**.</span></span> 
+
+    <span data-ttu-id="847e3-206">d) Ouvrez le nouveau matériau **M_ChessWhite** et raccordez les textures appropriées à leurs entrées de matériau correspondantes.</span><span class="sxs-lookup"><span data-stu-id="847e3-206">d) Open the new **M_ChessWhite** Material and hook up the relevant textures to their corresponding material inputs.</span></span> 
+
+    ![Créer le matériau pour le roi](images/unreal-uxt/2-chesskingmat.PNG)
+
+    <span data-ttu-id="847e3-208">e) De retour dans votre blueprint **WhiteKing**, changez **Scale** en (0,05 ; 0,05 ; 0,05) et **Rotation** en Z = 90.</span><span class="sxs-lookup"><span data-stu-id="847e3-208">e) Back in your **WhiteKing** Blueprint, change the **Scale** to (0.05, 0.05, 0.05) and **Rotation** to Z = 90.</span></span>
+
+    <span data-ttu-id="847e3-209">f) Compilez et enregistrez votre blueprint, puis revenez à votre fenêtre principale.</span><span class="sxs-lookup"><span data-stu-id="847e3-209">f) Compile and save your blueprint, then navigate back to your main window.</span></span> 
+
+17. <span data-ttu-id="847e3-210">Faites glisser WhiteKing dans votre fenêtre d’affichage.</span><span class="sxs-lookup"><span data-stu-id="847e3-210">Drag WhiteKing into your viewport.</span></span> <span data-ttu-id="847e3-211">Dans **World Outliner**, faites glisser WhiteKing sur Board, pour que WhiteKing soit désormais un enfant de Board.</span><span class="sxs-lookup"><span data-stu-id="847e3-211">In the **World Outliner**, drag WhiteKing onto Board so that WhiteKing is now a child of Board.</span></span> 
+
+![World Outliner](images/unreal-uxt/2-child.PNG)
+
+18. <span data-ttu-id="847e3-213">Dans le panneau **Details** sous **Transform**, définissez **Location** pour WhiteKing sur X =-26, Y = 4, Z = 0</span><span class="sxs-lookup"><span data-stu-id="847e3-213">In the **Details** panel under **Transform**, set the **Location** of WhiteKing to X = -26, Y = 4, Z = 0</span></span>
+
+19. <span data-ttu-id="847e3-214">Cliquez sur **Play** pour voir votre niveau.</span><span class="sxs-lookup"><span data-stu-id="847e3-214">Click **Play** to see your level.</span></span> <span data-ttu-id="847e3-215">Appuyez sur **Échap** pour quitter.</span><span class="sxs-lookup"><span data-stu-id="847e3-215">Press **Esc** to exit.</span></span> 
+
+[<span data-ttu-id="847e3-216">Section suivante : 3. Configurer votre projet pour la réalité mixte</span><span class="sxs-lookup"><span data-stu-id="847e3-216">Next Section: 3. Set up your project for mixed reality</span></span>](unreal-uxt-ch3.md)
