@@ -7,12 +7,12 @@ ms.date: 04/02/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Réalité mixte, pointage du regard, ciblage par pointage du regard, interaction, conception, à portée de main, HoloLens
-ms.openlocfilehash: 6811fe0b09ecff1ddc76d9df9ddc440f9c934ce3
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+ms.openlocfilehash: 40a8441177582a55b58acbfbd15c7b506853e4da
+ms.sourcegitcommit: 6d9d01d53137435c787f247f095d5255581695fc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75723248"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83227994"
 ---
 # <a name="direct-manipulation-with-hands"></a>Manipulation directe avec les mains
 
@@ -41,7 +41,7 @@ La manipulation directe est basée sur l’affordance, ce qui la rend conviviale
      <td>Manipulation directe avec les mains</td>
      <td>❌ Non pris en charge</td>
      <td>✔️ Recommandé</td>
-     <td>➕ Une solution, telle que <a href="point-and-commit.md">pointer et valider avec les mains</a>, est recommandée.</td>
+     <td>➕ Pris en charge.  Pour l’IU, nous vous recommandons <a href="point-and-commit.md">de pointer et de valider avec les mains</a> à la place.</td>
     
 </tr>
 </table>
