@@ -20,6 +20,7 @@
 ### [Exploration de la page d’accueil Windows Mixed Reality](navigating-the-windows-mixed-reality-home.md)
 ### [Guide de découverte](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide)
 ### [Divertissement basé sur l’emplacement](location-based-experiences.md)
+## [Accessoires matériels](hardware-accessories.md)
 ## [Ressources de la communauté](community.md)
 # Conception
 ## [Commencer à concevoir et à créer des prototypes](design.md)
@@ -117,6 +118,7 @@
 ###### [1. Bien démarrer avec les ancres spatiales Azure](mrlearning-asa-ch1.md)
 ###### [2. Enregistrement, récupération et partage d’ancres spatiales Azure](mrlearning-asa-ch2.md)
 ###### [3. Affichage des commentaires sur les ancres spatiales Azure](mrlearning-asa-ch3.md)
+###### [4. Azure Spatial Anchors pour Android et iOS](mrlearning-asa-ch4.md)
 ##### Tutoriels sur les services de reconnaissance vocale Azure
 ###### [1. Intégration et utilisation de la reconnaissance vocale et de la transcription](mrlearning-speechSDK-ch1.md)
 ###### [2. Ajout d’un mode hors connexion pour la traduction de parole en texte locale](mrlearning-speechSDK-ch2.md)
