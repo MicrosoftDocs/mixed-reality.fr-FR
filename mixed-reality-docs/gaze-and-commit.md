@@ -1,19 +1,19 @@
 ---
-title: Point de regard et validation
+title: Pointer et valider
 description: Vue d’ensemble générale du modèle d’entrée « point d’entrée et de validation », à l’aide d’une entrée d’œil ou de tête.
 author: sostel
 ms.author: sostel
 ms.date: 10/31/2019
 ms.topic: article
 keywords: La réalité mixte, le point de présence, le regard, l’interaction, la conception, le suivi des yeux, le suivi des têtes
-ms.openlocfilehash: df152f6a3a6e4ae2d6c32a0c56fbb615bcfa7aa8
-ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
+ms.openlocfilehash: c44c1a75e831869a3ed4d12bb6c9e87c478daf56
+ms.sourcegitcommit: e65f1463aec3c040a1cd042e61fc2bd156a42ff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79375846"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83866889"
 ---
-# <a name="gaze-and-commit"></a>Point de regard et validation
+# <a name="gaze-and-commit"></a>Pointer et valider
 
 Le point de _regard et la validation_ est un modèle d’entrée fondamental étroitement lié à la façon dont nous interagissons avec nos ordinateurs à l’aide de la souris : _point & cliquez_.
 Sur cette page, nous présentons deux types d’entrées de regard (pointer et Eye-regard) et différents types d’actions de validation. 
@@ -56,9 +56,9 @@ Voici quelques exemples de la façon dont vous êtes un développeur de réalit�
     </tr>
          <tr>
         <td>Suivre du regard et valider</td>
-        <td>❌ non disponible</td>
+        <td>❌Non disponible</td>
         <td>✔️ Recommandé (troisième choix ; <a href="interaction-fundamentals.md">voir les autres options</a>)</td>
-        <td>❌ non disponible</td>
+        <td>❌Non disponible</td>
     </tr>
 </table>
 
@@ -80,7 +80,7 @@ Nous avons compilé un grand nombre de professionnels et de conversions dans le 
     </colgroup>
    <tr>
         <td><strong>Regard sur les yeux</strong></td>
-        <td><strong>Cible du regard</strong></td>
+        <td><strong>Ciblage avec la tête</strong></td>
     </tr>
     <tr>
         <td>Expédition!</td>
@@ -123,7 +123,7 @@ Que vous utilisiez le point de regard ou le regard de votre modèle d’entrée 
         Pour les yeux oculaires, nous vous recommandons généralement de *ne pas* afficher de curseur, car cela peut rapidement devenir gênant et ennuyeux pour l’utilisateur. À la place, mettez en surbrillance les cibles visuelles ou utilisez un curseur très pâle pour faire confiance à ce que l’utilisateur est sur le point d’interagir. Pour plus d’informations, consultez notre [Guide de conception pour une entrée basée](eye-tracking.md) sur l’œil sur HoloLens 2.
     :::column-end:::
         :::column:::
-       ![un exemple de curseur visuel pour afficher le regard](images/cursor.jpg)<br>
+       ![Exemple de curseur visuel pour afficher le regard](images/cursor.jpg)<br>
        *Image : un exemple de curseur visuel pour afficher le regard*
     :::column-end:::
 :::row-end:::
@@ -132,14 +132,14 @@ Que vous utilisiez le point de regard ou le regard de votre modèle d’entrée 
 
 ---
 
-## <a name="commit"></a>Validation
+## <a name="commit"></a>Commit
 Après avoir parlé des différentes façons de pointer vers une cible, nous _allons en parler_ plus sur la partie _validation_ dans le point de vue _et la validation_.
 Après avoir ciblé un objet ou un élément d’interface utilisateur, l’utilisateur peut interagir ou cliquer dessus à l’aide d’une entrée secondaire. C’est ce que l’on appelle l’étape de validation du modèle d’entrée. 
 
 Les méthodes de validation suivantes sont prises en charge :
 - Mouvement d’appui sur la main (par exemple, augmentez votre main en avant et regroupez le doigt et le curseur de votre index)
 - Dites _« Sélectionner »_ ou l’une des commandes vocales ciblées
-- Appuyer sur un bouton unique sur un [Clicker HoloLens](hardware-accessories.md#hololens-clicker)
+- Appuyer sur un bouton unique sur un [Clicker HoloLens](https://docs.microsoft.com/hololens/hololens1-clicker)
 - Appuyez sur le bouton « A » sur un boîtier de manette Xbox
 - Appuyez sur le bouton « A » sur un contrôleur d’adaptateur Xbox
 
@@ -149,7 +149,7 @@ Le clic aérien est une action d’appui avec la main levée. Pour effectuer un 
 
 :::row:::
     :::column:::
-       ![doigt en position prête](images/readyandpress-ready.jpg)<br>
+       ![Doigt en position prête](images/readyandpress-ready.jpg)<br>
        **Doigt en position prête**<br>
     :::column-end:::
     :::column:::
@@ -192,7 +192,7 @@ Pour obtenir plus de détails, ainsi qu’une liste complète des commandes voca
         *Image : Clicker de HoloLens*
     :::column-end:::
         :::column:::
-       ![Clicker de HoloLens](images/hololens-clicker-500px.jpg)<br>
+       ![Dispositif de clic HoloLens](images/hololens-clicker-500px.jpg)<br>
     :::column-end:::
 :::row-end:::
 
@@ -212,7 +212,7 @@ Pour obtenir plus de détails, ainsi qu’une liste complète des commandes voca
         *Image : contrôleur sans fil Xbox*
     :::column-end:::
         :::column:::
-       ![Contrôleur Xbox Wireless](images/xboxcontroller.jpg)<br>
+       ![Manette Xbox Wireless Controller](images/xboxcontroller.jpg)<br>
     :::column-end:::
 :::row-end:::
 
@@ -263,7 +263,7 @@ La navigation peut servir à générer des mouvements de zoom ou de défilement 
 
 La navigation avec rails fait référence à la possibilité de reconnaître des mouvements dans certains axes jusqu’à ce qu’un certain seuil soit atteint sur cet axe. Cela est utile uniquement lorsque le déplacement dans plus d’un axe est activé dans une application par le développeur, par exemple si une application est configurée pour reconnaître les gestes de navigation sur l’axe des X, Y, mais également dans l’axe des X avec rails. Dans ce cas, le système reconnaît les mouvements de main sur l’axe des X tant qu’ils restent dans des rails imaginaires (repère) sur l’axe des X, si le mouvement des mains se produit également sur l’axe des Y.
 
-Dans les applications 2D, l’utilisateur peut se servir de mouvements de navigation verticaux pour faire défiler l’écran, effectuer un zoom ou faire glisser un élément à l’intérieur de l’application. Des interactions tactiles virtuelles sont ainsi injectées dans l’application pour simuler des mouvements tactiles du même type. Les utilisateurs peuvent sélectionner les actions à effectuer en basculant entre les outils de la barre au-dessus de l’application, soit en sélectionnant le bouton, soit en disant « < défilement/glissement/Zoom > outil ».
+Dans les applications 2D, l’utilisateur peut se servir de mouvements de navigation verticaux pour faire défiler l’écran, effectuer un zoom ou faire glisser un élément à l’intérieur de l’application. Des interactions tactiles virtuelles sont ainsi injectées dans l’application pour simuler des mouvements tactiles du même type. Les utilisateurs peuvent sélectionner les actions à effectuer en basculant entre les outils de la barre au-dessus de l’application, soit en sélectionnant le bouton, soit en disant « <défilement/glissement/zoom> outil ».
 
 [Plus d’informations sur les mouvements composites](gaze-and-commit.md#composite-gestures)
 

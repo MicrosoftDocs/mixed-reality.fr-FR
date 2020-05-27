@@ -1,19 +1,19 @@
 ---
-title: Écriture d’une application distante de communication à distance holographique
+title: Écriture d’une application de communication à distance holographique
 description: En créant un contenu distant holographique de l’application distante, qui est affiché sur un ordinateur distant, peut être diffusé en continu vers HoloLens 2. Cet article explique comment procéder.
 author: florianbagarmicrosoft
 ms.author: flbagar
 ms.date: 03/11/2020
 ms.topic: article
 keywords: HoloLens, communication à distance, communication à distance holographique
-ms.openlocfilehash: 6c6da16d83f593d9987bf7e534f9f663f11abd01
-ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
+ms.openlocfilehash: 53f370dc32b4fe56eb610b6e5687022e0908f7a8
+ms.sourcegitcommit: e65f1463aec3c040a1cd042e61fc2bd156a42ff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81278117"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83866859"
 ---
-# <a name="writing-a-holographic-remoting-remote-app"></a>Écriture d’une application distante de communication à distance holographique
+# <a name="writing-a-holographic-remoting-remote-app"></a>Écriture d’une application de communication à distance holographique
 
 >[!IMPORTANT]
 >Ce document décrit la création d’une application distante pour HoloLens 2. Les applications distantes pour **HoloLens (1re génération)** doivent utiliser le package NuGet version **1. x. x**. Cela implique que les applications distantes écrites pour HoloLens 2 ne sont pas compatibles avec HoloLens 1 et vice versa. La documentation de HoloLens 1 est disponible [ici](add-holographic-remoting.md).
@@ -24,19 +24,19 @@ La communication à distance holographique permet à une application de cibler H
 
 Une connexion à distance classique aura une latence aussi faible que 50 ms de latence. L’application de lecteur peut signaler la latence en temps réel.
 
-## <a name="prerequisites"></a>Composants requis
+## <a name="prerequisites"></a>Prérequis
 
-Un bon point de départ est un bureau DirectX opérationnel ou une application UWP qui cible l’API Windows Mixed Reality. Pour plus d’informations, consultez [vue d’ensemble du développement DirectX](directx-development-overview.md). Le [ C++ modèle de projet holographique](creating-a-holographic-directx-project.md) est un bon point de départ.
+Un bon point de départ est un bureau DirectX opérationnel ou une application UWP qui cible l’API Windows Mixed Reality. Pour plus d’informations, consultez [vue d’ensemble du développement DirectX](directx-development-overview.md). Le [modèle de projet holographique C++](creating-a-holographic-directx-project.md) est un bon point de départ.
 
 >[!IMPORTANT]
->Toute application utilisant la communication à distance holographique doit être créée pour utiliser un [cloisonnement](https://docs.microsoft.com//windows/win32/com/multithreaded-apartments)multithread. L’utilisation d’un [cloisonnement à thread unique](https://docs.microsoft.com//windows/win32/com/single-threaded-apartments) est prise en charge, mais entraîne des performances non optimales et éventuellement des interruptions pendant la lecture. Lors de C++l’utilisation de/WinRT [WinRT :: init_apartment](https://docs.microsoft.com//windows/uwp/cpp-and-winrt-apis/get-started) un cloisonnement multithread est la valeur par défaut.
+>Toute application utilisant la communication à distance holographique doit être créée pour utiliser un [cloisonnement](https://docs.microsoft.com//windows/win32/com/multithreaded-apartments)multithread. L’utilisation d’un [cloisonnement à thread unique](https://docs.microsoft.com//windows/win32/com/single-threaded-apartments) est prise en charge, mais entraîne des performances non optimales et éventuellement des interruptions pendant la lecture. Lors de l’utilisation de C++/WinRT [WinRT :: init_apartment](https://docs.microsoft.com//windows/uwp/cpp-and-winrt-apis/get-started) un cloisonnement multithread est la valeur par défaut.
 
 
 
 ## <a name="get-the-holographic-remoting-nuget-package"></a>Procurez-vous le package NuGet de communication à distance holographique
 
 Les étapes suivantes sont requises pour ajouter le package NuGet à un projet dans Visual Studio.
-1. Ouvrez le projet dans Visual Studio.
+1. Ouvrez le projet dans Visual Studio.
 2. Cliquez avec le bouton droit sur le nœud du projet et sélectionnez **gérer les packages NuGet...**
 3. Dans le volet qui s’affiche, cliquez sur **Parcourir** , puis recherchez « accès distant holographique ».
 4. Sélectionnez **Microsoft. holographique. Remoting**, assurez-vous de choisir la version la plus récente de **2. x. x** , puis cliquez sur **installer**.
@@ -75,7 +75,7 @@ CreateRemoteContext(m_remoteContext, 20000, false, PreferredVideoCodec::Default)
 >[!WARNING]
 >La communication à distance holographique fonctionne en remplaçant le runtime Windows Mixed Reality qui fait partie de Windows par un Runtime spécifique à distance. Cette opération est effectuée lors de la création du contexte distant. Pour cette raison, tout appel sur une API de réalité mixte Windows avant de créer le contexte distant peut entraîner un comportement inattendu. L’approche recommandée consiste à créer le contexte distant le plus tôt possible avant d’interagir avec une API de réalité mixte. Ne combinez jamais des objets créés ou récupérés par le biais d’une API Windows Mixed Reality avant l’appel à CreateRemoteContext avec des objets créés ou récupérés par la suite.
 
-L’espace holographique doit ensuite être créé. La spécification d’un CoreWindow n’est pas obligatoire. Les applications de bureau qui n’ont pas de CoreWindow peuvent simplement passer un ```nullptr```.
+L’espace holographique doit ensuite être créé. La spécification d’un CoreWindow n’est pas obligatoire. Les applications de bureau qui n’ont pas de CoreWindow peuvent simplement passer un ```nullptr``` .
 
 ```cpp
 m_holographicSpace = winrt::Windows::Graphics::Holographic::HolographicSpace::CreateForCoreWindow(nullptr);
@@ -89,7 +89,7 @@ La connexion peut être effectuée de deux manières.
 1) L’application distante se connecte au lecteur qui s’exécute sur l’appareil.
 2) Le lecteur s’exécutant sur l’appareil se connecte à l’application distante.
 
-Pour établir une connexion de l’application distante à HoloLens 2, appelez la méthode ```Connect``` sur le contexte distant en spécifiant le nom d’hôte et le port. Le port utilisé par le lecteur de communication à distance holographique est **8265**.
+Pour établir une connexion de l’application distante à HoloLens 2 ```Connect``` , appelez la méthode sur le contexte distant en spécifiant le nom d’hôte et le port. Le port utilisé par le lecteur de communication à distance holographique est **8265**.
 
 ```cpp
 try
@@ -103,12 +103,12 @@ catch(winrt::hresult_error& e)
 ```
 
 >[!IMPORTANT]
->Comme pour toute C++API/WinRT ```Connect``` peut lever une exception WinRT :: hresult_error qui doit être gérée.
+>Comme pour toute API/WinRT C++ ```Connect``` peut lever une exception WinRT :: hresult_error qui doit être gérée.
 
 >[!TIP]
->Pour éviter d' [ C++](https://docs.microsoft.com//windows/uwp/cpp-and-winrt-apis/) utiliser la projection du langage/WinRT, le fichier ```build\native\include\<windows sdk version>\abi\Microsoft.Holographic.AppRemoting.h``` situé dans le package NuGet de communication à distance holographique peut être inclus. Il contient les déclarations des interfaces COM sous-jacentes. L’utilisation de C++/WinRT est toutefois recommandée.
+>Pour éviter d’utiliser la projection du langage [C++/WinRT](https://docs.microsoft.com//windows/uwp/cpp-and-winrt-apis/) ```build\native\include\<windows sdk version>\abi\Microsoft.Holographic.AppRemoting.h``` , vous pouvez inclure le fichier situé dans le package NuGet de communication à distance holographique. Il contient les déclarations des interfaces COM sous-jacentes. L’utilisation de C++/WinRT est toutefois recommandée.
 
-L’écoute des connexions entrantes sur l’application distante peut être effectuée en appelant la méthode ```Listen```. Le port de liaison et le port de transport peuvent être spécifiés au cours de cet appel. Le port de négociation est utilisé pour le protocole de transfert initial. Les données sont ensuite envoyées sur le port de transport. Par défaut, **8265** et **8266** sont utilisés.
+L’écoute des connexions entrantes sur l’application distante peut être effectuée en appelant la ```Listen``` méthode. Le port de liaison et le port de transport peuvent être spécifiés au cours de cet appel. Le port de négociation est utilisé pour le protocole de transfert initial. Les données sont ensuite envoyées sur le port de transport. Par défaut, **8265** et **8266** sont utilisés.
 
 ```cpp
 try
@@ -122,7 +122,7 @@ catch(winrt::hresult_error& e)
 ```
 
 >[!IMPORTANT]
->Le ```build\native\include\HolographicAppRemoting\Microsoft.Holographic.AppRemoting.idl``` à l’intérieur du package NuGet contient une documentation détaillée sur l’API exposée par la communication à distance holographique.
+>L' ```build\native\include\HolographicAppRemoting\Microsoft.Holographic.AppRemoting.idl``` intérieur du package NuGet contient une documentation détaillée sur l’API exposée par la communication à distance holographique.
 
 ## <a name="handling-remoting-specific-events"></a>Gestion des événements de communication à distance spécifiques
 
@@ -174,7 +174,7 @@ m_onListeningEventRevoker = m_remoteContext.OnListening(winrt::auto_revoke, [thi
 });
 ```
 
-En outre, l’état de la connexion peut être interrogé à l’aide de la propriété ```ConnectionState``` du contexte distant.
+En outre, l’état de la connexion peut être interrogé à l’aide de la ```ConnectionState``` propriété sur le contexte distant.
 ```cpp
 auto connectionState = m_remoteContext.ConnectionState();
 ```
@@ -199,7 +199,7 @@ if (auto remoteSpeech = m_remoteContext.GetRemoteSpeech())
 }
 ```
 
-À l’aide d’une méthode d’assistance asynchrone, vous pouvez initialiser la reconnaissance vocale à distance. Cette opération doit être effectuée de façon asynchrone, car l’initialisation peut prendre beaucoup de temps. [Opérations d’accès concurrentiel C++et asynchrones avec/WinRT](https://docs.microsoft.com//windows/uwp/cpp-and-winrt-apis/concurrency) explique comment créer des fonctions asynchrones avec/WinRT. C++
+À l’aide d’une méthode d’assistance asynchrone, vous pouvez initialiser la reconnaissance vocale à distance. Cette opération doit être effectuée de façon asynchrone, car l’initialisation peut prendre beaucoup de temps. [Opérations d’accès concurrentiel et asynchrones avec c++/WinRT](https://docs.microsoft.com//windows/uwp/cpp-and-winrt-apis/concurrency) explique comment créer des fonctions asynchrones avec c++/WinRT.
 
 ```cpp
 winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::StorageFile> LoadGrammarFileAsync()
@@ -237,7 +237,7 @@ winrt::fire_and_forget InitializeSpeechAsync(
 
 Il existe deux façons de spécifier des expressions à reconnaître.
 1) Spécification à l’intérieur d’un fichier XML de grammaire vocale. Pour plus d’informations, consultez [comment créer une grammaire XML de base](https://docs.microsoft.com//previous-versions/office/developer/speech-technologies/hh361658(v=office.14)) .
-2) Spécifiez en les passant dans le vecteur du dictionnaire à ```ApplyParameters```.
+2) Spécifiez en les passant dans le vecteur du dictionnaire à ```ApplyParameters``` .
 
 Dans le rappel OnRecognizedSpeech, les événements vocaux peuvent ensuite être traités :
 
@@ -268,7 +268,7 @@ void SampleRemoteMain::OnRecognizedSpeech(const winrt::hstring& recognizedText)
 
 ## <a name="preview-streamed-content-locally"></a>Afficher un aperçu du contenu diffusé en continu localement
 
-Pour afficher le même contenu dans l’application distante qui est envoyé à l’appareil, l’événement ```OnSendFrame``` du contexte distant peut être utilisé. L’événement ```OnSendFrame``` est déclenché chaque fois que la bibliothèque de communication à distance holographique envoie le frame actuel au périphérique distant. C’est le moment idéal pour prendre le contenu et le configurer dans la fenêtre du bureau ou UWP.
+Pour afficher le même contenu dans l’application distante qui est envoyé à l’appareil, l' ```OnSendFrame``` événement du contexte distant peut être utilisé. L' ```OnSendFrame``` événement est déclenché chaque fois que la bibliothèque de communication à distance holographique envoie le frame actuel au périphérique distant. C’est le moment idéal pour prendre le contenu et le configurer dans la fenêtre du bureau ou UWP.
 
 ```cpp
 #include <windows.graphics.directx.direct3d11.interop.h>
@@ -293,7 +293,7 @@ m_onSendFrameEventRevoker = m_remoteContext.OnSendFrame(
 
 ## <a name="depth-reprojection"></a>Reprojection de profondeur
 
-À partir de la version [2.1.0](holographic-remoting-version-history.md#v2.1.0), la communication à distance holographique prend en charge la [reprojection de profondeur](hologram-stability.md#reprojection). Cela requiert, en plus de la mémoire tampon de couleur, de diffuser également la mémoire tampon de profondeur de l’application distante vers HoloLens 2. Par défaut, le tampon de profondeur est diffusé à la moitié de la résolution de la mémoire tampon de couleur. Vous pouvez modifier cette valeur comme suit :
+À partir de la version [2.1.0](holographic-remoting-version-history.md#v2.1.0), la communication à distance holographique prend en charge la [reprojection de profondeur](hologram-stability.md#reprojection). Cela requiert, en plus de la mémoire tampon de couleur, de diffuser également la mémoire tampon de profondeur de l’application distante vers HoloLens 2. Par défaut, la diffusion en continu de la mémoire tampon est activée et configurée pour utiliser la moitié de la résolution de la mémoire tampon de couleur. Vous pouvez modifier cette valeur comme suit :
 
 ```cpp
 // class implementation
@@ -308,7 +308,14 @@ m_remoteContext.ConfigureDepthVideoStream(DepthBufferStreamResolution::Half_Reso
 
 ```
 
-Notez que ```ConfigureDepthVideoStream``` doit être appelé avant d’établir une connexion à HoloLens 2. Le meilleur emplacement est juste après avoir créé le contexte distant. Les valeurs possibles sont Full, Half et Quarter Resolution. La valeur par défaut est demi-résolution. Gardez à l’esprit que l’utilisation d’une mémoire tampon de profondeur de résolution complète affecte également les besoins en bande passante et doit être comptabilisée dans la valeur de bande passante maximale que vous fournissez à ```CreateRemoteContext```.
+Notez que, si les valeurs par défaut ne doivent pas être utilisées, ```ConfigureDepthVideoStream``` doivent être appelées avant d’établir une connexion à HoloLens 2. Le meilleur emplacement est juste après avoir créé le contexte distant. Les valeurs possibles pour DepthBufferStreamResolution sont les suivantes :
+
+* Full_Resolution
+* Half_Resolution
+* Quarter_Resolution
+* Désactivé (ajouté avec la version [2.1.3](holographic-remoting-version-history.md#v2.1.3) et, s’il n’est utilisé, aucun flux vidéo de profondeur supplémentaire n’est créé)
+
+Gardez à l’esprit que l’utilisation d’une mémoire tampon de profondeur de résolution complète affecte également les besoins en bande passante et doit être comptabilisée dans la valeur de bande passante maximale que vous fournissez à ```CreateRemoteContext``` .
 
 À côté de la configuration de la résolution, vous devez également valider un tampon de profondeur à l’aide de [HolographicCameraRenderingParameters. CommitDirect3D11DepthBuffer](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.commitdirect3d11depthbuffer#Windows_Graphics_Holographic_HolographicCameraRenderingParameters_CommitDirect3D11DepthBuffer_Windows_Graphics_DirectX_Direct3D11_IDirect3DSurface_).
 

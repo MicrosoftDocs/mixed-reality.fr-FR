@@ -6,12 +6,12 @@ ms.author: hakons
 ms.date: 10/03/2019
 ms.topic: article
 keywords: GGv, voix, Cortana, discours, entrée
-ms.openlocfilehash: 6cf94e6bc828c6f07ee81cb121cb64601df41c4e
-ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
+ms.openlocfilehash: a5411c338a854660652cfc89aa2d48d85ee89778
+ms.sourcegitcommit: e65f1463aec3c040a1cd042e61fc2bd156a42ff8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81277977"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83866919"
 ---
 # <a name="voice-input"></a>Entrée vocale
 
@@ -25,7 +25,7 @@ L’entrée vocale est alimentée par le [moteur](https://msdn.microsoft.com/lib
 
 ## <a name="voice-and-gaze"></a>Voix et regard
 
-Lorsque vous utilisez des commandes vocales (tête ou œil), le point de regard est généralement utilisé comme mécanisme de ciblage, que ce soit avec un curseur (« Select ») ou pour canaliser implicitement votre commande vers une application que vous examinez. Pour ce faire, il n’est même pas nécessaire de faire apparaître un curseur pointant vers le regard _(« Regardez-le, dites-le »)_ . Bien entendu, certaines commandes vocales ne nécessitent pas de cible, telles que « aller à démarrer » ou « Hey Cortana ».
+Lorsque vous utilisez des commandes vocales (tête ou œil), le point de regard est généralement utilisé comme mécanisme de ciblage, que ce soit avec un curseur (« Select ») ou pour canaliser implicitement votre commande vers une application que vous examinez. Pour ce faire, il n’est même pas nécessaire de faire apparaître un curseur pointant vers le regard _(« Regardez-le, dites-le »)_. Bien entendu, certaines commandes vocales ne nécessitent pas de cible, telles que « aller à démarrer » ou « Hey Cortana ».
 
 <br>
 
@@ -57,9 +57,9 @@ Lorsque vous utilisez des commandes vocales (tête ou œil), le point de regard 
 
 ## <a name="the-select-command"></a>Commande « sélectionner »
 
-**HoloLens (1re génération)**
+**HoloLens (1ère génération)**
 
-Même sans ajouter spécifiquement la prise en charge vocale à votre application, vos utilisateurs peuvent activer des hologrammes simplement en disant à la commande System Voice « Select ». Cela se comporte de la même façon qu’un [TAP Air](gaze-and-commit.md#composite-gestures) sur HoloLens, en appuyant sur le bouton de sélection sur l’interactiveur [hololens](hardware-accessories.md#hololens-clicker)ou en appuyant sur le déclencheur sur un [contrôleur de mouvement Windows Mixed Reality](motion-controllers.md). Vous entendez un son et vous voyez une info-bulle avec « sélectionner » qui s’affiche comme confirmation. « SELECT » est activé par un algorithme de détection de mot-clé à faible consommation d’énergie. il est donc toujours disponible pour vous, à tout moment, avec un impact minimal sur la durée de vie de la batterie, même avec vos mains.
+Même sans ajouter spécifiquement la prise en charge vocale à votre application, vos utilisateurs peuvent activer des hologrammes simplement en disant à la commande System Voice « Select ». Cela se comporte de la même façon qu’un [TAP Air](gaze-and-commit.md#composite-gestures) sur HoloLens, en appuyant sur le bouton de sélection sur l’interactiveur [hololens](https://docs.microsoft.com/hololens/hololens1-clicker)ou en appuyant sur le déclencheur sur un [contrôleur de mouvement Windows Mixed Reality](motion-controllers.md). Vous entendez un son et vous voyez une info-bulle avec « sélectionner » qui s’affiche comme confirmation. « SELECT » est activé par un algorithme de détection de mot-clé à faible consommation d’énergie. il est donc toujours disponible pour vous, à tout moment, avec un impact minimal sur la durée de vie de la batterie, même avec vos mains.
 
 <br>
 
@@ -67,7 +67,7 @@ Même sans ajouter spécifiquement la prise en charge vocale à votre applicatio
 
 :::row:::
     :::column:::
-        **HoloLens 2**<br><br>
+        **HoloLens 2**<br><br>
         Pour utiliser la commande vocale « SELECT » dans HoloLens 2, vous devez d’abord afficher le curseur en regard à utiliser comme pointeur. La commande pour l’afficher est facile à mémoriser, par exemple « Select ».<br><br>
         Pour quitter le mode, il vous suffit de réutiliser vos mains, soit par air, en appuyant sur un bouton avec vos doigts, soit en utilisant le mouvement du système.<br>
         <br>
@@ -84,14 +84,14 @@ Même sans ajouter spécifiquement la prise en charge vocale à votre applicatio
 ---
 
 
-## <a name="hey-cortana"></a>Hey Cortana
+## <a name="hey-cortana"></a>Bonjour Cortana
 
 Vous pouvez également indiquer « Hey Cortana » pour afficher Cortana à tout moment. Vous n’avez pas besoin d’attendre qu’il apparaisse pour continuer à poser votre question ou de lui donner une instruction. par exemple, essayez de dire « Bonjour Cortana, qu’est-ce que la météo ? » comme une seule phrase. Pour plus d’informations sur Cortana et ce que vous pouvez faire, demandez-lui simplement ! Dites « Hey Cortana, que puis-je faire ? » et elle extrait une liste de commandes de travail et suggérées. Si vous êtes déjà dans l’application Cortana, vous pouvez également cliquer sur le **?** sur la barre latérale pour extraire le même menu.
 
 **Commandes spécifiques à HoloLens**
 * Qu’est-ce que je dis ?
 * « Aller au début »-au lieu de [fleuri](system-gesture.md#bloom) pour accéder au [menu Démarrer](navigating-the-windows-mixed-reality-home.md#start-menu)
-* « Launch <app>»
+* « Lancer <app> »
 * « Déplacer <app> ici »
 * « Prendre une photo »
 * « Démarrer l’enregistrement »
@@ -121,8 +121,8 @@ Vous pouvez également indiquer « Hey Cortana » pour afficher Cortana à tou
         *Image : un utilisateur peut prononcer la commande « Adjust » qui s’affiche dans la barre de l’application pour ajuster la position de l’application*
     :::column-end:::
         :::column:::
-        espace de ![](images/spacer-20x582.png)<br>
-        ![lors de la consultation d’une fenêtre d’application ou d’un hologramme, un utilisateur peut prononcer la commande « Adjust » qui s’affiche dans la barre de l’application pour ajuster la position de l’application dans le monde](images/microphone-600px.png)<br>
+        ![space](images/spacer-20x582.png)<br>
+        ![Quand vous examinez une fenêtre d’application ou un hologramme, un utilisateur peut prononcer la commande « Adjust » qui s’affiche dans la barre de l’application pour ajuster la position de l’application dans le monde.](images/microphone-600px.png)<br>
     :::column-end:::
 :::row-end:::
 
@@ -169,11 +169,11 @@ Certaines commandes, telles que les commandes de manipulation rapide ci-dessus, 
 Si vous souhaitez obtenir la liste complète, dites « afficher toutes les commandes » à tout moment. 
 
 
-## <a name="dictation"></a>Dictée
+## <a name="dictation"></a>Dictation
 
 Plutôt que de taper avec des [robinets](gaze-and-commit.md#composite-gestures), la dictée vocale peut être plus efficace pour entrer du texte dans une application. Cela peut accélérer l’entrée avec moins d’efforts pour l’utilisateur.
 
-![la dictée vocale commence en sélectionnant le bouton microphone](images/micbuttonfordictation.png)<br>
+![La dictée vocale commence en sélectionnant le bouton microphone](images/micbuttonfordictation.png)<br>
 *La dictée vocale commence en sélectionnant le bouton microphone sur le clavier.*
 
 À chaque fois que le clavier holographique est actif, vous pouvez basculer en mode dictée au lieu de taper. Sélectionnez le microphone sur le côté de la zone d’entrée de texte pour commencer.
@@ -240,15 +240,15 @@ Lorsque la voix est utilisée correctement, l’utilisateur **comprend ce qu’i
 
 :::row:::
     :::column:::
-       ![1. État normal du curseur](images/voicefeedbackstates-regular.jpg)<br>
+       ![1. état normal du curseur](images/voicefeedbackstates-regular.jpg)<br>
        **1. état normal du curseur**<br>
     :::column-end:::
     :::column:::
-       ![2. Communique les commentaires vocaux, puis disparaît](images/voicefeedbackstates-voice.jpg)<br>
+       ![2. communique les commentaires vocaux, puis disparaît](images/voicefeedbackstates-voice.jpg)<br>
         **2. communique les commentaires vocaux, puis disparaît**<br>
     :::column-end:::
     :::column:::
-       ![* 3. État normal du curseur](images/voicefeedbackstates-regular.jpg)<br>
+       ![1,3. État de curseur normal](images/voicefeedbackstates-regular.jpg)<br>
        **3. retourne à l’état de curseur normal**<br>
     :::column-end:::
 :::row-end:::
@@ -262,7 +262,7 @@ Lorsque la voix est utilisée correctement, l’utilisateur **comprend ce qu’i
 ## <a name="top-things-users-should-know-about-speech-in-mixed-reality"></a>Points importants concernant la reconnaissance vocale dans la réalité mixte
 * Vous devez dire **« Sélectionner »** lorsque vous ciblez un bouton (vous pouvez l’utiliser n’importe où pour cliquer sur un bouton).
 * Dans certaines applications, vous pouvez prononcer le **nom de l’étiquette d’un bouton de la barre d’application** pour exécuter une action. Par exemple, lorsqu’il regarde une application, l’utilisateur peut prononcer la commande « Supprimer » pour supprimer cette application (cela vous évite d’avoir à la supprimer manuellement).
-* Vous pouvez activer Cortana à l’aide de la commande **« Hey Cortana »** . Vous pouvez lui poser des questions (« Hey Cortana, combien mesure la tour Eiffel ? »), lui demander d’ouvrir une application (« Hey Cortana, ouvre Netflix ») ou lui demander d’afficher le menu Démarrer (« Hey Cortana, ouvre le menu Démarrer »), et bien plus encore.
+* Vous pouvez activer Cortana à l’aide de la commande **« Hey Cortana »**. Vous pouvez lui poser des questions (« Hey Cortana, combien mesure la tour Eiffel ? »), lui demander d’ouvrir une application (« Hey Cortana, ouvre Netflix ») ou lui demander d’afficher le menu Démarrer (« Hey Cortana, ouvre le menu Démarrer »), et bien plus encore.
 
 ## <a name="common-questions-and-concerns-users-have-about-voice"></a>Questions et inquiétudes fréquentes concernant la reconnaissance vocale
 * Que dois-je dire ?
@@ -282,11 +282,11 @@ Pour les applications qui souhaitent tirer parti des options de traitement d’e
 
 Tout ce traitement audio est l’accélération matérielle, ce qui signifie que les fonctionnalités se déchargent beaucoup moins d’énergie que si le même traitement a été effectué sur l’UC HoloLens. Évitez d’exécuter un autre traitement d’entrée audio sur le processeur pour maximiser la durée de vie de la batterie du système et tirer parti du traitement des entrées audio déchargées et intégrées.
 
-## <a name="languages"></a>Langages
+## <a name="languages"></a>Languages
 
 HoloLens 2 prend également en charge des langues supplémentaires. N’oubliez pas que les commandes vocales s’exécutent toujours dans la langue d’affichage du système même si plusieurs claviers sont installés ou si les applications essaient de créer un module de reconnaissance vocale dans une autre langue.
 
-## <a name="troubleshooting"></a>Résolution des problèmes
+## <a name="troubleshooting"></a>Dépannage
 
 Si vous rencontrez des problèmes à l’aide de « SELECT » et de « Hey Cortana », essayez de passer à un espace plus silencieux, à l’extérieur de la source de bruit, ou en parlant plus fort. À ce stade, toute la reconnaissance vocale sur HoloLens est réglée et optimisée spécifiquement pour les intervenants natifs de États-Unis anglais.
 
@@ -297,7 +297,7 @@ Pour la version 2017 de Windows Mixed Reality Edition, la logique de gestion des
 ---
 
 ## <a name="voice-input-in-mrtk-mixed-reality-toolkit-for-unity"></a>Entrée vocale dans MRTK (ensemble d’outils de réalité mixte) pour Unity
-Avec **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** , vous pouvez facilement affecter une commande vocale à n’importe quel objet. Utilisez le **profil d’entrée vocale** de MRTK pour définir vos mots clés. En affectant le script **SpeechInputHandler** , vous pouvez faire en sorte qu’un objet réponde aux mots clés définis dans le profil d’entrée vocal. SpeechInputHandler fournit également une étiquette de confirmation vocale pour améliorer la confiance de l’utilisateur.
+Avec **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)**, vous pouvez facilement affecter une commande vocale à n’importe quel objet. Utilisez le **profil d’entrée vocale** de MRTK pour définir vos mots clés. En affectant le script **SpeechInputHandler** , vous pouvez faire en sorte qu’un objet réponde aux mots clés définis dans le profil d’entrée vocal. SpeechInputHandler fournit également une étiquette de confirmation vocale pour améliorer la confiance de l’utilisateur.
 
 * [Commande MRTK-Voice](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Speech.html)
 
@@ -307,6 +307,6 @@ Avec **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** , vous p
 ## <a name="see-also"></a>Voir aussi
 * [Pointer et valider](gaze-and-commit.md)
 * [Interactions instinctuelles](interaction-fundamentals.md)
-* [Entrée MR 212 : voix](holograms-212.md)
+* [Réalité mixte - Entrées - Cours 212 : Voix](holograms-212.md)
 * [Entrée vocale dans DirectX](voice-input-in-directx.md)
 * [Entrée vocale dans Unity](voice-input-in-unity.md)
