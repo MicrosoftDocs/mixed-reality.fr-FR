@@ -7,12 +7,12 @@ ms.date: 5/5/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, réalité mixte, tutoriel, bien démarrer, mrtk, uxt, UX Tools, documentation
-ms.openlocfilehash: df5ea22e7097fdd3b788ec298bc1cd78c315b585
-ms.sourcegitcommit: ba4c8c2a19bd6a9a181b2cec3cb8e0402f8cac62
+ms.openlocfilehash: 77fe2b59db970a2ac4b531d69efec6794478f7d5
+ms.sourcegitcommit: 09d9fa153cd9072f60e33a5f83ced8167496fcd7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82840398"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83519991"
 ---
 # <a name="5-adding-a-button--resetting-piece-locations"></a>5. Ajout d’un bouton et réinitialisation des positions des pièces
 
@@ -46,13 +46,13 @@ Cette section continue la présentation des fonctionnalités du plug-in UX Tools
 
 ![Créer une variable](images/unreal-uxt/5-var.PNG)
 
-4.  Faites glisser la variable WhiteKing depuis **My Blueprint > Variables** vers l’Event Graph de Simple Button. Choisissez **Get WhiteKing**. 
+4.  Faites glisser la variable WhiteKing depuis **My Blueprint > Variables** vers l’Event Graph de Reset Button. Choisissez **Get WhiteKing**. 
 
 5.  Faites glisser la broche de sortie WhiteKing et relâchez-la pour placer un nouveau nœud. Sélectionnez la fonction **Reset Location**. Pour finir, faites glisser la broche d’exécution sortante depuis **On Button Pressed** vers la broche d’exécution entrante sur **Reset Location**. **Compilez** et **enregistrez** le Blueprint ResetButton, puis revenez dans la fenêtre principale. 
 
 ![Appeler la fonction Reset Location à partir de l’événement On Button Pressed](images/unreal-uxt/5-callresetloc.PNG)
 
-6.  Faites glisser **SimpleButton** vers la fenêtre Viewport et définissez sa position sur X = 50, Y = -25, Z = 10. Sous **Default**, définissez la valeur de la variable WhiteKing sur **WhiteKing**.
+6.  Faites glisser **ResetButton** vers la fenêtre Viewport et définissez sa position sur X = 50, Y = -25, Z = 10. Sous **Default**, définissez la valeur de la variable WhiteKing sur **WhiteKing**.
 
 ![Définir la variable](images/unreal-uxt/5-buttonlevel.PNG)
 
