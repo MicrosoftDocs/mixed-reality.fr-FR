@@ -5,7 +5,7 @@
 ## Programmes et événements
 ### [Calendrier des événements de la San Francisco Reactor Academy](sf-academy-events.md)
 ### [CVPR 2019 : Atelier de réalité mixte](cvpr-2019.md)
-## [Notes de publication actuelles sur la réalité mixte](release-notes-may-2019.md)
+## [Notes de publication actuelles sur la réalité mixte](release-notes-may-2020.md)
 ## [Ressources de la communauté](community.md)
 ## [Contribuer à cette documentation](CONTRIBUTING.md)
 # Découvrir

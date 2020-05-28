@@ -6,14 +6,14 @@ ms.author: trferrel
 ms.date: 3/26/2019
 ms.topic: article
 keywords: Windows Mixed Reality, la réalité mixte, la réalité virtuelle, VR, MR, performances, optimisation, UC, GPU
-ms.openlocfilehash: 54e1eec5445fe655a0b498be5c18f08efe2270f0
-ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
+ms.openlocfilehash: 4a0f4cd9caea5dd601ad663801e760261980c429
+ms.sourcegitcommit: b0d15083ec1095e08c9d776e5bae66b4449383bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81277477"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84111023"
 ---
-# <a name="understanding-performance-for-mixed-reality"></a>Comprendre les performances de la réalité mixte
+# <a name="understanding-performance-for-mixed-reality"></a>Comprendre les performances pour la réalité mixte
 
 Cet article est une introduction à la compréhension de l’importance des performances de votre application de réalité mixte.  L’expérience utilisateur peut être très détériorée si votre application n’est pas exécutée à la fréquence d’images optimale. Les hologrammes apparaissent instables et le suivi des têtes de l’environnement n’est pas exact, ce qui entraîne une mauvaise expérience de l’utilisateur. Les performances doivent être considérées comme une fonctionnalité de première classe pour le développement de la réalité mixte et non pour une tâche polonaise.
 
@@ -66,7 +66,7 @@ Après une réduction de la résolution de rendu, si :
 
 ## <a name="how-to-improve-your-application"></a>Comment améliorer votre application
 
-### <a name="cpu-performance-recommendations"></a>Recommandations sur les performances de processeur
+### <a name="cpu-performance-recommendations"></a>Recommandations relatives aux performances de l’UC
 
 En règle générale, la plupart des travaux dans une application de réalité mixte sur l’UC impliquent la « simulation » de la scène et le traitement de votre logique d’application. Les zones suivantes sont généralement destinées à l’optimisation :
 
@@ -75,14 +75,14 @@ En règle générale, la plupart des travaux dans une application de réalité m
 - Allocations de mémoire
 - Algorithmes complexes (c.-à-d. cinématique inverse, recherche de chemin d’accès)
 
-### <a name="gpu-performance-recommendations"></a>Recommandations sur les performances de GPU
+### <a name="gpu-performance-recommendations"></a>Recommandations relatives aux performances GPU
 
 #### <a name="understanding-bandwidth-vs-fill-rate"></a>Fonctionnement de la bande passante et du taux de remplissage
 Lors du rendu d’une trame sur le GPU, une application est généralement liée par la bande passante de mémoire ou le taux de remplissage.
 
 - La **bande passante** de la mémoire est le taux de lectures et d’écritures que le GPU peut exécuter à partir de la mémoire
     - Pour identifier les limitations de bande passante, réduisez la qualité de la texture et vérifiez si la fréquence d’images a été améliorée.
-    - Dans Unity, cette opération peut être effectuée en modifiant la qualité de la **texture** dans **modifier** > **paramètres du projet** > paramètres de **[qualité](https://docs.unity3d.com/Manual/class-QualitySettings.html)** .
+    - Dans Unity, vous pouvez effectuer cette opération en modifiant la qualité de la **texture** dans **modifier**les paramètres de la  >  **Project Settings**  >  **[qualité paramètres](https://docs.unity3d.com/Manual/class-QualitySettings.html)** du projet.
 - Le **taux de remplissage** fait référence aux pixels qui peuvent être dessinés par seconde par le GPU.
     - Pour identifier les limitations du taux de remplissage, diminuez la résolution de l’affichage et vérifiez si les images sont améliorées. 
     - Dans Unity, cette opération peut être effectuée via la propriété *[XRSettings. renderViewportScale](https://docs.unity3d.com/ScriptReference/XR.XRSettings-renderViewportScale.html)*
@@ -127,13 +127,13 @@ En règle générale, les nuanceurs effectuent de nombreuses transformations et 
 
 Les effets postérieurs au traitement peuvent être très onéreux et augmenter le taux de remplissage de votre application. Cela comprend les techniques d’anticrénelage telles que MSAA. Sur HoloLens, il est recommandé d’éviter ces techniques entièrement, ainsi que des étapes de nuanceur supplémentaires telles que Geometry, la coque et les nuanceurs de calcul.
 
-## <a name="memory-recommendations"></a>Recommandations sur la mémoire
+## <a name="memory-recommendations"></a>Recommandations de mémoire
 
 Les opérations d’allocation et de désallocation de mémoire excessives peuvent entraîner des performances incohérentes, des frames figés et d’autres comportements nuisibles. Il est particulièrement important de comprendre les considérations relatives à la mémoire lors du développement dans Unity, car la gestion de la mémoire est contrôlée par le garbage collector.
 
 #### <a name="object-pooling"></a>Mise en pool d’objets
 
-Le mise en pool d’objets est une technique populaire pour réduire le coût des allocations et des désallocations continues d’objets. Pour la réaliser, vous devez allouer un grand pool d’objets identiques et réutiliser des instances inactives disponibles de ce pool au lieu de générer et détruire constamment des objets au fil du temps. Les pools d’objets conviennent parfaitement aux composants réutilisables qui ont une durée de vie variable pendant une application.
+Le mise en pool d’objets est une technique populaire pour réduire le coût des allocations et des désallocations continues d’objets. Pour ce faire, vous devez allouer un grand pool d’objets identiques et réutiliser les instances inactives de ce pool au lieu de générer et de détruire constamment des objets dans le temps. Les pools d’objets sont idéaux pour les composants réutilisables qui ont une durée de vie variable pendant une application.
 
 ## <a name="see-also"></a>Voir aussi
 - [Recommandations de performances pour Unity](performance-recommendations-for-unity.md)
