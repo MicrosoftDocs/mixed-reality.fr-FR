@@ -1,21 +1,21 @@
 ---
-title: Mouvement système
-description: Mouvement système pour appeler le menu Démarrer.
+title: Démarrer le mouvement
+description: Démarrer le mouvement pour appeler le menu Démarrer.
 author: shengkait
 ms.author: cmeekhof
 ms.date: 10/22/2019
 ms.topic: article
 keywords: Réalité mixte, gestes, interaction, conception
-ms.openlocfilehash: 9cfee1104cb9b8135dae51bea73850062fadd25c
-ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
+ms.openlocfilehash: 84088156d0c9cdacc421985b922d5e9370f6a87e
+ms.sourcegitcommit: fd606e87e3c4785d3ca2a26632be3bb580e39afb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79375906"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84152514"
 ---
-# <a name="system-gesture"></a>Mouvement système
+# <a name="start-gesture"></a>Démarrer le mouvement
 
-Le mouvement système est un mouvement manuel utilisé pour appeler le menu Démarrer. Cela revient à appuyer sur la touche Windows du clavier, le bouton Xbox sur un contrôleur Xbox ou le bouton Windows sur le contrôleur de mouvement du casque immersif. Il est important de comprendre quels mouvements sont réservés pour le système sur chaque appareil de réalité mixte afin d’éviter les conflits lors de la conception de vos interactions.
+Le mouvement de début est un mouvement manuel utilisé pour appeler le menu Démarrer. Cela revient à appuyer sur la touche Windows du clavier, le bouton Xbox sur un contrôleur Xbox ou le bouton Windows sur le contrôleur de mouvement du casque immersif. Il est important de comprendre quels mouvements sont réservés pour le système sur chaque appareil de réalité mixte afin d’éviter les conflits lors de la conception de vos interactions.
 
 ## <a name="device-support"></a>Prise en charge des appareils
 
@@ -33,7 +33,7 @@ Le mouvement système est un mouvement manuel utilisé pour appeler le menu Dém
         <td><a href="immersive-headset-hardware-details.md"><strong>Casques immersifs</strong></a></td>
     </tr>
      <tr>
-        <td>Fleuri</td>
+        <td>Bourgeon</td>
         <td>✔️</td>
         <td>❌</td>
         <td>❌</td>
@@ -52,16 +52,16 @@ Le mouvement système est un mouvement manuel utilisé pour appeler le menu Dém
     </tr>
 </table>
 
-## <a name="bloom"></a>Fleuri
+## <a name="bloom"></a>Bourgeon
 Pour afficher le menu Démarrer dans HoloLens (1ère génération), nous avons conçu « fleuri », qui est un geste symbolique imitant la fleur florale. Il est propre à l’interaction surefooted, facile à effectuer et rapide à rappeler. Pour effectuer le mouvement de floraison sur HoloLens (1ère génération), tenez votre main avec votre paume, puis ouvrez votre main en répartissant vos doigts.
 
 :::row:::
     :::column:::
-        ![](images/bloom-close.png) de fermeture<br>
+        ![Fermeture de la fleur](images/bloom-close.png)<br>
         **Étape 1 : palmier avec les doigts**<br>
     :::column-end:::
     :::column:::
-        ![de fleurs ouvertes](images/bloom-open.png)<br>
+        ![Ouverture de fleurs](images/bloom-open.png)<br>
         **Étape 2 : créer une planche à portée de main**<br>
     :::column-end:::
 :::row-end:::
@@ -75,11 +75,11 @@ Dans HoloLens 2, nous avons remplacé le geste fleuri par un bouton de poignet v
 
 :::row:::
     :::column:::
-        bouton de poignet ![](images/wrist-button-ready.png)<br>
+        ![Bouton de poignet prêt](images/wrist-button-ready.png)<br>
         **Étape 1 : palmier pour montrer le bouton de poignet**<br>
     :::column-end:::
     :::column:::
-        ![bouton de poignet](images/wrist-button-press.png)<br>
+        ![Appui sur le bouton du poignet](images/wrist-button-press.png)<br>
         **Étape 2 : Appuyez sur le bouton du poignet**<br>
     :::column-end:::
 :::row-end:::
@@ -100,11 +100,11 @@ Dans HoloLens 2, nous avons remplacé le geste fleuri par un bouton de poignet v
 Vous pouvez également effectuer le mouvement de démarrage avec une seule main. Pour ce faire, tenez votre main avec votre paume et regardez l' **icône de démarrage** sur votre poignet interne. **Tout en gardant un œil sur l’icône**, pincez votre doigt et votre index ensemble.<br>
 :::row:::
     :::column:::
-        bouton de poignet ![](images/wrist-button-ready.png)<br>
+        ![Bouton de poignet prêt](images/wrist-button-ready.png)<br>
         **Étape 1 : palmier pour montrer le bouton de poignet**<br>
     :::column-end:::
     :::column:::
-        ![pincement du bouton de poignet](images/wrist-button-pinch.png)<br>
+        ![Pince à bouton de poignet](images/wrist-button-pinch.png)<br>
         **Étape 2 : attirez le regard sur le bouton, puis pincez**<br>
     :::column-end:::
 :::row-end:::
@@ -116,5 +116,5 @@ Vous pouvez également effectuer le mouvement de démarrage avec une seule main.
 ## <a name="see-also"></a>Voir aussi
 
 * [Interactions instinctuelles](interaction-fundamentals.md)
-* [Suivre du regard](eye-tracking.md)
+* [Œil-point de regard](eye-tracking.md)
 * [Entrée vocale](voice-input.md)
