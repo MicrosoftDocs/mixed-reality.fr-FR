@@ -7,12 +7,12 @@ ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: 11342bada65e963db6393d35c99e2c2fbffe8ff1
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+ms.openlocfilehash: 62ce1151837a345dea1bea4a8bea275cc851b9bd
+ms.sourcegitcommit: e65f1463aec3c040a1cd042e61fc2bd156a42ff8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "79031256"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83866899"
 ---
 # <a name="3-displaying-azure-spatial-anchor-feedback"></a>3. Affichage du feedback sur les ancres spatiales Azure
 
@@ -57,3 +57,5 @@ Affectez l’objet **Feedback** lui-même au champ **Feedback Text** du composan
 ## <a name="congratulations"></a>Félicitations
 
 Dans ce tutoriel, vous avez appris à créer un panneau d’interface utilisateur pour afficher l’état actuel de l’expérience Azure Spatial Anchors visant à fournir aux utilisateurs un feedback en temps réel.
+
+[Leçon suivante : 4. Azure Spatial Anchors pour Android et iOS](mrlearning-asa-ch4.md)
