@@ -6,12 +6,12 @@ ms.author: flbagar
 ms.date: 03/11/2020
 ms.topic: article
 keywords: HoloLens, communication à distance, communication à distance holographique
-ms.openlocfilehash: b128f91947fa8700502f7541cba23c726238a067
-ms.sourcegitcommit: e65f1463aec3c040a1cd042e61fc2bd156a42ff8
+ms.openlocfilehash: 319e76efbbe1085fc9d60251a6f0f38133de6505
+ms.sourcegitcommit: 7011ac6fde80e5c45f04192fa1db6e1eb559e3b0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83866849"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327899"
 ---
 # <a name="holographic-remoting-version-history"></a>Historique des versions de la communication à distance holographique
 
@@ -22,7 +22,7 @@ ms.locfileid: "83866849"
 * Modification du comportement de l’événement [HolographicSpace. CameraAdded](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace.cameraadded?view=winrt-18362) . Dans les versions précédentes, il n’était **pas** garanti qu’un [HolographicCamera](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamera?view=winrt-18362) ajouté ait également un [HolographicCameraPose](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerapose?view=winrt-18362) valide lors de la création du frame suivant via [HolographicSpace. CreateNextFrame](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace.createnextframe?view=winrt-18362#Windows_Graphics_Holographic_HolographicSpace_CreateNextFrame). À compter de la version 2.1.3 [HolographicSpace. CameraAdded](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace.cameraadded?view=winrt-18362) est synchronisé avec les données de pose provenant du joueur de communication à distance holographique et les utilisateurs peuvent s’attendre à ce que, quand une caméra est ajoutée, un [HolographicCameraPose](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerapose?view=winrt-18362) valide soit disponible pour cette caméra dans le cadre suivant.
 * Ajout de **désactivé** à DepthBufferStreamResolution qui peut être utilisé pour désactiver la diffusion en continu de tampons de profondeur via RemoteContext. ConfigureDepthVideoStream. Notez que s’il est utilisé, [HolographicCameraRenderingParameters. CommitDirect3D11DepthBuffer](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.commitdirect3d11depthbuffer?view=winrt-18362#Windows_Graphics_Holographic_HolographicCameraRenderingParameters_CommitDirect3D11DepthBuffer_Windows_Graphics_DirectX_Direct3D11_IDirect3DSurface_) échouera avec *E_ILLEGAL_METHOD_CALL*.
 * L’écran de démarrage du lecteur de communication à distance holographique a été reconçu et ne bloque pas la vue des utilisateurs.
-* Améliorations de la stabilité et correctifs buf.
+* Améliorations de la stabilité et correctifs de bogues.
 
 ## <a name="version-212-april-5-2020"></a>Version 2.1.2 (5 avril 2020)<a name="v2.1.2"></a>
 * Résolution d’un problème de compatibilité descendante audio entre le dernier lecteur de communication à distance holographique et les applications distantes utilisant une version inférieure à 2.1.0.
