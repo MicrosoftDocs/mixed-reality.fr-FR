@@ -1,19 +1,19 @@
 ---
-title: Capture de réalité mixte pour les développeurs
+title: Capture de Réalité Mixte pour les développeurs
 description: Meilleures pratiques pour la capture de réalité mixte pour les développeurs.
 author: mattzmsft
 ms.author: mazeller
 ms.date: 02/24/2019
 ms.topic: article
 keywords: MRC, photo, vidéo, capture, appareil photo
-ms.openlocfilehash: 72600f889997c96a629faebc35aba4b4841d4d8b
-ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
+ms.openlocfilehash: 0d51945444a411563b67af8569fee7ffe3449957
+ms.sourcegitcommit: f24ac845e184c2f90e8b15adab9addb913f5cb83
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79375966"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84451344"
 ---
-# <a name="mixed-reality-capture-for-developers"></a>Capture de réalité mixte pour les développeurs
+# <a name="mixed-reality-capture-for-developers"></a>Capture de Réalité Mixte pour les développeurs
 
 > [!NOTE]
 > Pour obtenir des conseils sur une nouvelle fonctionnalité MRC pour HoloLens 2, voir [rendu à partir de l’appareil photo PV](#render-from-the-pv-camera-opt-in) ci-dessous.
@@ -59,9 +59,9 @@ Il existe trois étapes pour activer le rendu à partir de l’appareil photo PV
 2. Gérer le rendu HolographicCamera supplémentaire
 3. Vérifier les nuanceurs et le rendu du code correctement à partir de ce HolographicCamera supplémentaire
 
-##### <a name="enable-the-photovideocamera-holographicviewconfiguration"></a>Activer PhotoVideoCamera HolographicViewConfiguration
+##### <a name="enable-the-photovideocamera-holographicviewconfiguration-in-directx"></a>Activer le HolographicViewConfiguration PhotoVideoCamera dans DirectX
 
-Pour s’abonner, une application active simplement le [HolographicViewConfiguration](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic.HolographicViewConfiguration)de PhotoVideoCamera :
+Pour s’abonner au rendu à partir de l’appareil photo PV, une application active simplement le [HolographicViewConfiguration](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic.HolographicViewConfiguration)de PhotoVideoCamera :
 ```csharp
 var display = Windows.Graphics.Holographic.HolographicDisplay.GetDefault();
 var view = display.TryGetViewConfiguration(Windows.Graphics.Holographic.HolographicViewConfiguration.PhotoVideoCamera);
@@ -77,14 +77,38 @@ Lorsque l’application a choisi d’effectuer le rendu à partir de l’apparei
 1. L’événement CameraAdded de HolographicSpace se déclenche. Cet événement peut être différé si l’application ne peut pas gérer l’appareil photo pour l’instant.
 2. Une fois que l’événement est terminé (et qu’il n’y a aucun différé en suspens), le HolographicCamera apparaît dans la liste AddedCameras suivante du HolographicFrame.
 
-Quand la capture de la réalité mixte s’arrête (ou si l’application désactive la configuration de la vue alors que la capture de la réalité mixte est en cours d’exécution) : le HolographicCamera apparaît dans la liste RemovedCameras du HolographicFrame suivant et l’événement CameraRemoved du HolographicSpace flammes.
+Quand la capture de la réalité mixte s’arrête (ou si l’application désactive la configuration de la vue alors que la capture de la réalité mixte est en cours d’exécution) : le HolographicCamera s’affiche dans la liste RemovedCameras du HolographicFrame suivant et l’événement CameraRemoved du HolographicSpace est déclenché.
 
 Une propriété [ViewConfiguration](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamera.viewconfiguration) a été ajoutée à HolographicCamera pour aider à identifier la configuration à laquelle une caméra appartient.
 
+##### <a name="enable-the-photovideocamera-holographicviewconfiguration-in-unity"></a>Activer le HolographicViewConfiguration PhotoVideoCamera dans Unity
+
+> [!NOTE]
+> Cela nécessite **Unity 2018.4.13 F1**, **Unity 2019.3.0 F1**ou plus récent.
+
+Pour accepter le rendu à partir de l’appareil photo PV, lorsque vous utilisez la boîte à outils de la [réalité mixte](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html), activez le fournisseur de [paramètres d’appareil photo Windows Mixed Reality](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/CameraSystem/WindowsMixedRealityCameraSettings.html) et vérifiez le paramètre **rendu à partir d’une caméra va** .
+
+Si vous n’utilisez pas la boîte à outils de réalité mixte, vous pouvez utiliser un composant pour vous [abonner manuellement](#enable-the-photovideocamera-holographicviewconfiguration-in-directx) comme décrit ci-dessus pour DirectX.
+
 ##### <a name="handle-the-additional-holographiccamera-render-in-unity"></a>Gérer le rendu HolographicCamera supplémentaire dans Unity
 
->[!NOTE]
-> La prise en charge Unity pour le rendu à partir de l’appareil photo PV est en cours de développement et ne peut pas encore être utilisée. Cette documentation est mise à jour quand une build d’Unity avec prise en charge du rendu à partir de l’appareil photo PV est disponible.
+Cette opération est effectuée automatiquement par Unity.
+
+##### <a name="enable-the-photovideocamera-holographicviewconfiguration-in-unreal"></a>Activer le HolographicViewConfiguration PhotoVideoCamera dans Unreal
+
+> [!NOTE]
+> Cela nécessite un **moteur inréel 4,25** ou plus récent.
+
+Pour accepter le rendu à partir de l’appareil photo PV :
+
+1. Appeler **SetEnabledMixedRealityCamera** et **ResizeMixedRealityCamera**
+    * Utilisez les valeurs **taille X** et **taille Y** pour définir les dimensions de la vidéo.
+
+![Troisième caméra](images/unreal-camera-3rd.PNG)
+
+##### <a name="handle-the-additional-holographiccamera-render-in-unreal"></a>Gérer le rendu HolographicCamera supplémentaire dans inréel
+
+Cette opération est effectuée automatiquement par inréel.
 
 ##### <a name="verify-shaders-and-code-support-additional-cameras"></a>Vérifier que les nuanceurs et le code prennent en charge des caméras supplémentaires
 
@@ -149,7 +173,7 @@ Voici certains des artefacts que vous pouvez voir dans la MRC si votre applicati
 
 ![Résultat attendu en cas d’effacement au noir transparent](images/cleartransparentblack-300px.png)
 
-**Solution** :
+**Solution**:
 * Modifiez tout le contenu affiché en noir opaque pour avoir une valeur alpha de 0.
 * Assurez-vous que l’application est en mode d’effacement transparent noir.
 * La valeur par défaut Unity est Clear pour être désactivée automatiquement avec MixedRealityToolkit, mais s’il s’agit d’une application non Unity, vous devez modifier la couleur utilisée avec ID3D11DeiceContext :: ClearRenderTargetView (). Vous souhaitez vous assurer que vous vous dépassez du noir transparent (0, 0, 0, 0) au lieu du noir opaque (0, 0, 0, 1).
@@ -190,48 +214,33 @@ D’autres applications peuvent le faire à l’aide des [API de capture Windows
 
 Les applications ont deux options pour ajouter l’effet :
 * API plus ancienne : [Windows. Media. capture. MediaCapture. AddEffectAsync ()](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.addeffectasync)
-* La nouvelle API recommandée par Microsoft (retourne un objet, ce qui permet de manipuler des propriétés dynamiques) : [Windows. Media. capture. MediaCapture. AddVideoEffectAsync ()](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.addvideoeffectasync) / [Windows. Media. capture. MediaCapture. AddAudioEffectAsync ()](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.addaudioeffectasync) qui requièrent que l’application crée sa propre implémentation de [IVideoEffectDefinition](https://docs.microsoft.com/uwp/api/Windows.Media.Effects.IVideoEffectDefinition) et [IAudioEffectDefinition](https://docs.microsoft.com/uwp/api/windows.media.effects.iaudioeffectdefinition). Pour obtenir un exemple d’utilisation, consultez l’exemple d’effet MRC.
+* La nouvelle API recommandée par Microsoft (retourne un objet, ce qui permet de manipuler des propriétés dynamiques) : [Windows. Media. capture. MediaCapture. AddVideoEffectAsync ()](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.addvideoeffectasync)  /  [Windows. Media. capture. MediaCapture. AddAudioEffectAsync ()](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.addaudioeffectasync) qui requièrent que l’application crée sa propre implémentation de [IVideoEffectDefinition](https://docs.microsoft.com/uwp/api/Windows.Media.Effects.IVideoEffectDefinition) et [IAudioEffectDefinition](https://docs.microsoft.com/uwp/api/windows.media.effects.iaudioeffectdefinition). Pour obtenir un exemple d’utilisation, consultez l’exemple d’effet MRC.
 
 >[!NOTE]
 > L’espace de noms Windows. Media. MixedRealityCapture n’est pas reconnu par Visual Studio, mais les chaînes sont toujours valides.
 
 Effet vidéo MRC (**Windows. Media. MixedRealityCapture. MixedRealityCaptureVideoEffect**)
 
-|  Nom de propriété  |  Type  |  Valeur par défaut  |  Description | 
+|  Nom de la propriété  |  Type  |  Valeur par défaut  |  Description |
 |----------|----------|----------|----------|
-|  StreamType  |  UINT32 ([MediaStreamType](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaStreamType))  |  1 (VideoRecord)  |  Décrivez le flux de capture pour lequel cet effet est utilisé. L’audio n’est pas disponible. | 
-|  HologramCompositionEnabled  |  booléen  |  TRUE  |  Indicateur permettant d’activer ou de désactiver les hologrammes dans la capture vidéo. | 
-|  RecordingIndicatorEnabled  |  booléen  |  TRUE  |  Indicateur permettant d’activer ou de désactiver l’indicateur d’enregistrement à l’écran pendant la capture d’hologramme. | 
-|  VideoStabilizationEnabled  |  booléen  |  FALSE  |  Indicateur d’activation ou de désactivation de la stabilisation vidéo optimisée par le dispositif de suivi HoloLens. | 
-|  VideoStabilizationBufferLength  |  UINT32  |  0  |  Définissez le nombre de frames d’historique utilisés pour la stabilisation vidéo. 0 est une latence de 0 et presque « gratuit » du point de vue de l’alimentation et des performances. 15 est recommandé pour une qualité optimale (au prix de 15 trames de latence et de mémoire). | 
-|  GlobalOpacityCoefficient  |  float  |  0,9 (HoloLens) 1,0 (casque immersif)  |  Définissez le coefficient d’opacité globale de l’hologramme dans une plage allant de 0,0 (entièrement transparent) à 1,0 (entièrement opaque). | 
-|  BlankOnProtectedContent  |  booléen  |  FALSE  |  Indicateur d’activation ou de désactivation du retour d’un frame vide si une application UWP 2d présente un contenu protégé. Si cet indicateur a la valeur false et qu’une application UWP 2D affiche du contenu protégé, l’application UWP 2D est remplacée par une texture de contenu protégé dans le casque et dans la capture de la réalité mixte. |
-|  ShowHiddenMesh  |  booléen  |  FALSE  |  Indicateur permettant d’activer ou de désactiver l’indication du maillage de zone masqué et du contenu voisin de l’appareil photo holographique. |
+|  StreamType  |  UINT32 ([MediaStreamType](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaStreamType))  |  1 (VideoRecord)  |  Décrivez le flux de capture pour lequel cet effet est utilisé. L’audio n’est pas disponible. |
+|  HologramCompositionEnabled  |  boolean  |  VRAI  |  Indicateur permettant d’activer ou de désactiver les hologrammes dans la capture vidéo. |
+|  RecordingIndicatorEnabled  |  boolean  |  VRAI  |  Indicateur permettant d’activer ou de désactiver l’indicateur d’enregistrement à l’écran pendant la capture d’hologramme. |
+|  VideoStabilizationEnabled  |  boolean  |  FAUX  |  Indicateur d’activation ou de désactivation de la stabilisation vidéo optimisée par le dispositif de suivi HoloLens. |
+|  VideoStabilizationBufferLength  |  UINT32  |  0  |  Définissez le nombre de frames d’historique utilisés pour la stabilisation vidéo. 0 est une latence de 0 et presque « gratuit » du point de vue de l’alimentation et des performances. 15 est recommandé pour une qualité optimale (au prix de 15 trames de latence et de mémoire). |
+|  GlobalOpacityCoefficient  |  float  |  0,9 (HoloLens) 1,0 (casque immersif)  |  Définissez le coefficient d’opacité globale de l’hologramme dans une plage allant de 0,0 (entièrement transparent) à 1,0 (entièrement opaque). |
+|  BlankOnProtectedContent  |  boolean  |  FAUX  |  Indicateur d’activation ou de désactivation du retour d’un frame vide si une application UWP 2d présente un contenu protégé. Si cet indicateur a la valeur false et qu’une application UWP 2D affiche du contenu protégé, l’application UWP 2D est remplacée par une texture de contenu protégé dans le casque et dans la capture de la réalité mixte. |
+|  ShowHiddenMesh  |  boolean  |  FAUX  |  Indicateur permettant d’activer ou de désactiver l’indication du maillage de zone masqué et du contenu voisin de l’appareil photo holographique. |
 | En-dessous | Taille | 0, 0 | Définissez la taille de sortie souhaitée après rognage pour la stabilisation vidéo. Une taille de rognage par défaut est choisie si 0 ou si une taille de sortie non valide est spécifiée. |
-| PreferredHologramPerspective | UINT32 | 1 (PhotoVideoCamera) | Énumération utilisée pour indiquer la configuration de la vue d’appareil photo holographique à capturer. Le paramètre 0 (affichage) signifie que l’application n’est pas invitée à effectuer le rendu à partir de la caméra photo/vidéo |
+| PreferredHologramPerspective | UINT32 | 0 (affichage) | Énumération utilisée pour indiquer la configuration de vue d’appareil photo holographique à capturer : 0 (affichage) signifie que l’application n’est pas invitée à effectuer le rendu à partir de la caméra photo/vidéo, 1 (PhotoVideoCamera) demande à l’application de s’afficher à partir de la caméra photo/vidéo (si l’application la prend en charge) |
 
 Effet audio MRC (**Windows. Media. MixedRealityCapture. MixedRealityCaptureAudioEffect**)
 
-<table>
-<tr>
-<th>Nom de propriété</th>
-<th>Type</th>
-<th>Valeur par défaut</th>
-<th>Description</th>
-</tr>
-<tr>
-<td>MixerMode</td>
-<td>UINT32</td>
-<td>2</td>
-<td>
-<ul>
-<li>0 : audio MIC uniquement</li>
-<li>1 : audio système uniquement</li>
-<li>2 : MIC et système audio</li>
-</ul>
-</td>
-</tr>
-</table>
+| Nom de la propriété | Type | Valeur par défaut | Description |
+|----------|----------|----------|----------|
+| MixerMode | UINT32 | 2 (MIC et système audio) | Énumération utilisée pour indiquer les sources audio à utiliser : 0 (MIC audio uniquement), 1 (système audio uniquement), 2 (MIC et système audio) |
+| LoopbackGain | float | 1.0 | Gain à appliquer au volume audio système. Les plages sont comprises entre 0,0 et 5,0. Pris en charge uniquement sur HoloLens 2 |
+| MicrophoneGain | float | 1.0 | Gain à appliquer au volume Mic. Les plages sont comprises entre 0,0 et 5,0. Pris en charge uniquement sur HoloLens 2 |
 
 ### <a name="simultaneous-mrc-limitations"></a>Limitations de la MRC simultanée
 
@@ -268,5 +277,8 @@ Avec la mise à jour 2018 d’avril de Windows 10, il n’existe plus de limitat
 Avant la mise à jour 2018 de Windows 10 avril, l’enregistreur MRC personnalisé d’une application était mutuellement exclusif avec la MRC du système (capture de photos, capture de vidéos ou diffusion en continu à partir du portail de périphériques Windows).
 
 ## <a name="see-also"></a>Voir aussi
+
 * [Capture de Réalité Mixte](mixed-reality-capture.md)
 * [Vue Spectateur](spectator-view.md)
+* [Vue d’ensemble du développement Unity](unity-development-overview.md)
+* [Vue d’ensemble du développement Unreal](unreal-development-overview.md)
