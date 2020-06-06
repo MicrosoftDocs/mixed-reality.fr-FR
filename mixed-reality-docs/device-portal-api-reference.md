@@ -6,12 +6,12 @@ ms.author: jlyons
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, portail des appareils Windows, API
-ms.openlocfilehash: 8c9d60f458cddd3ba258aed0ee82f7aa16c10ba6
-ms.sourcegitcommit: 6d9d01d53137435c787f247f095d5255581695fc
+ms.openlocfilehash: 17268c9a20d3da0ee90e5d6cead4342d3badf800
+ms.sourcegitcommit: f24ac845e184c2f90e8b15adab9addb913f5cb83
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83227955"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84451324"
 ---
 # <a name="device-portal-api-reference"></a>Informations de référence sur les API du portail d’appareil
 
@@ -320,7 +320,15 @@ Définit les paramètres de capture de la réalité mixte par défaut.  Certains
 
 **/API/Holographic/MRC/Status (récupération)**
 
-Obtient l’état de la réalité mixte enregistrée (en cours d’exécution, arrêtée).
+Obtient l’état de capture de la réalité mixte dans le portail de périphériques Windows.
+
+***Réponse***
+
+La réponse contient une propriété JSON indiquant si le portail de périphériques Windows enregistre ou non une vidéo.
+
+``` javascript
+{"IsRecording" : boolean}
+```
 
 **/API/Holographic/MRC/thumbnail (récupération)**
 
@@ -419,7 +427,7 @@ Retourne les statistiques de performances système (lecture/écriture d’e/s, s
 Retourner les données
 * JSON avec informations système : processeur, GPU, mémoire, réseau, e/s
 
-## <a name="power"></a>Puissance
+## <a name="power"></a>Avancé
 
 **/API/Power/Battery (récupération)**
 
