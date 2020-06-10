@@ -3,15 +3,15 @@ title: Entrées avancées dans l’émulateur HoloLens et le simulateur de réal
 description: Instructions détaillées pour l’utilisation du clavier, de la souris et du contrôleur Xbox pour simuler l’entrée pour l’émulateur HoloLens et le simulateur Windows Mixed Reality.
 author: pbarnettms
 ms.author: pbarnett
-ms.date: 05/12/2020
+ms.date: 06/8/2020
 ms.topic: article
 keywords: HoloLens, émulateur, simulation, Windows Mixed Reality
-ms.openlocfilehash: e9051ae9e7853924f583b6c38f6177f2f967d9f0
-ms.sourcegitcommit: 6d9d01d53137435c787f247f095d5255581695fc
+ms.openlocfilehash: 0812b1d498ea557e84eecc44142b38d86099f832
+ms.sourcegitcommit: dc60c6ca075e7086b87478f1d7e87ebe02160c0c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83227948"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84631477"
 ---
 # <a name="advanced-hololens-emulator-and-mixed-reality-simulator-input"></a>Entrées avancées dans l’émulateur HoloLens et le simulateur de réalité mixte
 
@@ -57,11 +57,11 @@ Le tableau suivant montre comment chaque type d’entrée est mappé au clavier,
 |  Tonalité |  Flèches haut/bas |  Faire glisser vers le haut/vers le haut |  Joystick droit vers le haut/vers le haut | 
 |  Group |  Q/E |  |  DPad gauche/droite | 
 |  X |  A/D |  |  Stick analogique gauche vers la gauche/droite | 
-|  Y |  PG. suiv/PG. suiv |  |  DPad vers le haut/vers le haut | 
+|  O |  PG. suiv/PG. suiv |  |  DPad vers le haut/vers le haut | 
 |  Z |  W/S |  |  Joystick gauche vers le haut/vers le haut | 
 |  Action |  Entrée ou espace |  Bouton droit |  Un bouton ou un déclencheur | 
 |  Fleuri/système |  F2 ou touche Windows |  |  Bouton B | 
-|  Bouton de poignée du contrôleur |  G  |  |  | 
+|  Bouton de poignée du contrôleur/à la main |  G  |  |  | 
 |  Bouton de menu contrôleur |  M  |  |  | 
 |  Pavé tactile du contrôleur |  U  |  |  | 
 |  Appuyez sur le contrôleur Touchpad |  P  |  |  | 
@@ -100,7 +100,7 @@ Le tableau suivant montre comment chaque modificateur cible mappe chacun des con
 |  Tonalité |  Activer/désactiver la tête |  Monter/descendre |  Activer/désactiver la tête | Point de regard des yeux | 
 |  Group |  Tête de roulement gauche/droite |  |  Tête de roulement gauche/droite | (Aucune action) |
 |  X |  Corps de la diapositive vers la gauche/droite |  Déplacer la main/le contrôleur vers la gauche/droite |  Activer l’en-tête gauche/droite | (Aucune action) |
-|  Y |  Déplacer le corps vers le haut/vers le haut |  Monter/descendre dans la main/le contrôleur |  Activer/désactiver la tête | (Aucune action) |
+|  O |  Déplacer le corps vers le haut/vers le haut |  Monter/descendre dans la main/le contrôleur |  Activer/désactiver la tête | (Aucune action) |
 |  Z |  Déplacer le corps vers l’avant/vers l’arrière |  Déplacer vers l’avant/à l’arrière du contrôleur |  Activer/désactiver la tête | (Aucune action) |
  
  
@@ -131,13 +131,13 @@ L’ensemble de contrôles suivant est suggéré pour une utilisation quotidienn
 |  Déplacer/faire pivoter plus rapidement | Touche Maj de gauche ou de droite | Appuyez sur le joystick droit et maintenez-le enfoncé |
 |  Déplacer/faire pivoter lentement | Touche CTRL de gauche ou de droite | Appuyez sur le stick analogique gauche et maintenez-le enfoncé |
 
-## <a name="using-a-windows-mixed-reality-immersive-headset-and-motion-controllers-with-the-hololens-2-emulator"></a>Utilisation d’un casque et contrôleurs de mouvement immersifs Windows Mixed Reality avec l’émulateur HoloLens 2
+## <a name="using-a-windows-mixed-reality-immersive-headset-and-motion-controllers-with-the-hololens-2-emulator"></a>Utilisation d’un casque immersif et de contrôleurs de mouvement Windows Mixed Reality avec l’émulateur HoloLens 2
 
 Lors de l’utilisation d’un casque immersif Windows Mixed Reality avec l’émulateur HoloLens 2, le déplacement et la rotation sont automatiquement mappés au mouvement et à la rotation du casque.  La position et l’orientation du contrôleur de mouvement sont automatiquement mappées à la position et à l’orientation de la main dans l’émulateur.  Le tableau ci-dessous répertorie les actions supplémentaires disponibles lors de l’utilisation d’un contrôleur de mouvement.
 
 Notez que lorsque vous utilisez un casque, les contrôles standard du clavier, de la souris et du boîtier de commande sont automatiquement ignorés.
 
-|  Opération |  Action |  Notes | 
+|  Opération |  Action |  Remarques | 
 |----------|----------|----------|
 |  Corps X |  Stick analogique gauche/droite |   | 
 |  Corps Z |  Stick analogique avant/arrière |   | 
