@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 02/24/2019
 ms.topic: article
 keywords: MRC, photo, vidéo, capture, appareil photo
-ms.openlocfilehash: 0d51945444a411563b67af8569fee7ffe3449957
-ms.sourcegitcommit: f24ac845e184c2f90e8b15adab9addb913f5cb83
+ms.openlocfilehash: 1116e9a0923129aa2b18d838917eebf12adae694
+ms.sourcegitcommit: 45da0a056fa42088ff81ccdd11232830fbe8430f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84451344"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84720415"
 ---
 # <a name="mixed-reality-capture-for-developers"></a>Capture de Réalité Mixte pour les développeurs
 
@@ -232,15 +232,25 @@ Effet vidéo MRC (**Windows. Media. MixedRealityCapture. MixedRealityCaptureVide
 |  BlankOnProtectedContent  |  boolean  |  FAUX  |  Indicateur d’activation ou de désactivation du retour d’un frame vide si une application UWP 2d présente un contenu protégé. Si cet indicateur a la valeur false et qu’une application UWP 2D affiche du contenu protégé, l’application UWP 2D est remplacée par une texture de contenu protégé dans le casque et dans la capture de la réalité mixte. |
 |  ShowHiddenMesh  |  boolean  |  FAUX  |  Indicateur permettant d’activer ou de désactiver l’indication du maillage de zone masqué et du contenu voisin de l’appareil photo holographique. |
 | En-dessous | Taille | 0, 0 | Définissez la taille de sortie souhaitée après rognage pour la stabilisation vidéo. Une taille de rognage par défaut est choisie si 0 ou si une taille de sortie non valide est spécifiée. |
-| PreferredHologramPerspective | UINT32 | 0 (affichage) | Énumération utilisée pour indiquer la configuration de vue d’appareil photo holographique à capturer : 0 (affichage) signifie que l’application n’est pas invitée à effectuer le rendu à partir de la caméra photo/vidéo, 1 (PhotoVideoCamera) demande à l’application de s’afficher à partir de la caméra photo/vidéo (si l’application la prend en charge) |
+| PreferredHologramPerspective | UINT32 | **Rendre à partir des** paramètres de l’appareil photo dans le portail des appareils Windows | Énumération utilisée pour indiquer la configuration de vue d’appareil photo holographique à capturer : 0 (affichage) signifie que l’application n’est pas invitée à effectuer le rendu à partir de la caméra photo/vidéo, 1 (PhotoVideoCamera) demande à l’application de s’afficher à partir de la caméra photo/vidéo (si l’application la prend en charge). Pris en charge uniquement sur HoloLens 2 |
+
+>[!NOTE]
+> Vous pouvez modifier la valeur par défaut de **PreferredHologramPerspective** dans le portail de périphériques Windows en accédant à la page de capture de la [réalité mixte](using-the-windows-device-portal.md#mixed-reality-capture) et en désactivez **afficher à partir de l’appareil photo**. La valeur par défaut est **1 (PhotoVideoCamera)**, mais elle peut être désactivée pour lui attribuer la valeur **0 (affichage)**.
+>
+> La valeur par défaut de **PreferredHologramPerspective** était **0 (affichage)** avant la mise à jour du 2020 juin (windows holographique, version 2004 Build 19041,1106 et windows holographique, version 1903 Build 18362,1064).
 
 Effet audio MRC (**Windows. Media. MixedRealityCapture. MixedRealityCaptureAudioEffect**)
 
 | Nom de la propriété | Type | Valeur par défaut | Description |
 |----------|----------|----------|----------|
 | MixerMode | UINT32 | 2 (MIC et système audio) | Énumération utilisée pour indiquer les sources audio à utiliser : 0 (MIC audio uniquement), 1 (système audio uniquement), 2 (MIC et système audio) |
-| LoopbackGain | float | 1.0 | Gain à appliquer au volume audio système. Les plages sont comprises entre 0,0 et 5,0. Pris en charge uniquement sur HoloLens 2 |
-| MicrophoneGain | float | 1.0 | Gain à appliquer au volume Mic. Les plages sont comprises entre 0,0 et 5,0. Pris en charge uniquement sur HoloLens 2 |
+| LoopbackGain | float | Paramètre de **gain audio** de l’application dans le portail des appareils Windows | Gain à appliquer au volume audio système. Les plages sont comprises entre 0,0 et 5,0. Pris en charge uniquement sur HoloLens 2 |
+| MicrophoneGain | float | Paramètre de **gain audio MIC** dans le portail d’appareils Windows | Gain à appliquer au volume Mic. Les plages sont comprises entre 0,0 et 5,0. Pris en charge uniquement sur HoloLens 2 |
+
+>[!NOTE]
+> Vous pouvez modifier la valeur par défaut de **LoopbackGain** ou **MicrophoneGain** dans le portail de périphériques Windows en accédant à la page de capture de la [réalité mixte](using-the-windows-device-portal.md#mixed-reality-capture) et en réglant le curseur en regard de leurs paramètres respectifs. Les deux paramètres ont par défaut la valeur **1,0**, mais peuvent être définis sur n’importe quelle valeur comprise entre **0,0** et **5,0**.
+>
+> L’utilisation du portail d’appareils Windows pour configurer les valeurs par défaut a été ajoutée avec la mise à jour de juin 2020 (Windows holographique, version 2004 Build 19041,1106 et Windows holographique, version 1903 Build 18362,1064).
 
 ### <a name="simultaneous-mrc-limitations"></a>Limitations de la MRC simultanée
 
