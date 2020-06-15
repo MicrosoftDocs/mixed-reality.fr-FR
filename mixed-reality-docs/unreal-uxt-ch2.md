@@ -1,138 +1,229 @@
 ---
 title: 2. Initialisation de votre projet et de votre première application
-description: Partie 2 d’un tutoriel pour créer une application de jeu d’échecs simple avec Unreal Engine 4 et le plug-in UX Tools du Mixed Reality Toolkit
-author: sw5813
-ms.author: suwu
+description: Deuxième tutoriel d’une série de six tutoriels, dans lequel vous apprenez à créer une application de jeu d’échecs simple avec Unreal Engine 4 et le plug-in UX Tools du Mixed Reality Toolkit
+author: hferrone
+ms.author: v-haferr
 ms.date: 5/5/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, réalité mixte, tutoriel, bien démarrer, mrtk, uxt, UX Tools, documentation
-ms.openlocfilehash: fc85f011ff3b186f3b4b5449b4f8ec49f0b6418f
-ms.sourcegitcommit: 189a47b8712dd5b620e19815f5cf6d1ac0f29880
+ms.openlocfilehash: e8f03a87ec6b92e4c62cf3f88f519146254e7387
+ms.sourcegitcommit: 1b8090ba6aed9ff128e4f32d40c96fac2e6a220b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82851573"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84330337"
 ---
 # <a name="2-initializing-your-project-and-first-application"></a>2. Initialisation de votre projet et de votre première application
 
-Cette section vous aide à créer une application Unreal pour HoloLens 2. 
+## <a name="overview"></a>Vue d’ensemble
+
+Dans ce premier tutoriel, vous allez démarrer avec une nouvelle application Unreal pour HoloLens 2. Vous allez également ajouter le plug-in HoloLens, créer et éclairer un niveau, puis le remplir avec un échiquier et une pièce de jeu d’échecs. Vous allez utiliser des ressources prédéfinies pour la pièce 3D et les matériaux d’objet, donc vous n’avez pas de modélisation ex nihilo à faire. D’ici la fin de ce tutoriel, vous disposerez d’une zone de dessin vide prête pour la réalité mixte.
+
+Avant de continuer, vérifiez que vous avez tous les prérequis mentionnés dans la page [Bien démarrer](https://docs.microsoft.com/windows/mixed-reality/unreal-uxt-ch1).
 
 ## <a name="objectives"></a>Objectifs
+* Configuration d’un projet Unreal pour le développement HoloLens
+* Importation de ressources et configuration d’une scène
+* Création d’acteurs et d’événements au niveau du script avec des blueprints
 
-* Configurer Unreal pour le développement HoloLens
-* Importer les ressources et configurer la scène
-
-## <a name="create-a-new-unreal-project"></a>Créer un projet Unreal
+## <a name="creating-a-new-unreal-project"></a>Création d’un projet Unreal
+La première chose dont vous avez besoin est un projet avec lequel travailler.
 
 1. Lancer Unreal Engine
 
-2. Sous **New Project Categories**, sélectionnez **Games**, puis cliquez sur Next. Sélectionnez un modèle **Blank**, puis cliquez sur Next. 
+2. Sélectionnez **Games** dans **New Project Categories**, puis cliquez sur **Next**. 
+
+![Sélectionner le modèle de projet Games](images/unreal-uxt/2-gamestemplate.png)
+
+3. Sélectionnez le modèle **Blank**, puis cliquez sur **Next**. 
 
 ![Sélectionner le modèle Blank](images/unreal-uxt/2-template.PNG)
 
-3. Dans Project Settings, choisissez **C++, Scalable 3D or 2D, Mobile / Tablet**, et **No Starter Content**. Sélectionnez un emplacement où enregistrer votre projet, puis cliquez sur **Create Project**. Ceci ouvre vos fichiers C++ dans un projet Visual Studio et dans l’éditeur Unreal. 
+4. Définissez **C++** , **Scalable 3D or 2D, Mobile/Tablet** et **No Starter Content** dans **Project Settings**. 
+    * Choisissez un emplacement d’enregistrement, puis cliquez sur **Create Project**. 
 
 ![Paramètres du projet initial](images/unreal-uxt/2-project-settings.PNG)
 
-4. Dans le coin supérieur gauche, accédez à **Edit > Plugins**. Sous Augmented Reality, cochez la case pour activer le plug-in **HoloLens**. Faites défiler jusqu’à la section Virtual Reality, puis cochez la case pour activer le plug-in **Microsoft Windows Mixed Reality**. Les deux plug-ins sont nécessaires pour le développement HoloLens 2. Redémarrez votre éditeur. 
+Le projet doit s’ouvrir automatiquement dans l’éditeur Unreal, ce qui signifie que vous êtes prêt à passer à la section suivante.
 
-![Plug-ins](images/unreal-uxt/2-plugins.PNG)
+## <a name="enabling-required-plugins"></a>Activation des plug-ins nécessaires
+Avant de commencer à ajouter des objets à la scène, vous avez besoin d’activer deux plug-ins.
 
-5. Dans le coin supérieur gauche, accédez à **File > New Level**. Sélectionnez **Empty Level**. La scène par défaut dans la fenêtre d’affichage doit maintenant être vide.
+1. Ouvrez **Edit > Plugins** et sélectionnez **Augmented Reality** dans la liste des options prédéfinies. 
+    * Faites défiler la liste jusqu’à **HoloLens** et cochez la case **Enabled**. 
 
-6. Faites glisser PlayerStart et déposez PlayerStart à partir du panneau Modes sur la gauche, situé sous l’onglet Basic. Dans le volet d’informations sur la droite, définissez l’emplacement sur X = 0, Y = 0, Z = 0 pour que l’utilisateur commence à l’origine quand l’application démarre.
+![Activation des plug-ins HoloLens](images/unreal-uxt/2-plugins.PNG)
+
+2. Sélectionnez **Virtual Reality** dans la liste des options prédéfinies. 
+    * Faites défiler la liste jusqu’à **Microsoft Windows Mixed Reality**, cochez la case **Enabled**, puis redémarrez votre éditeur. 
+
+![Activation du plug-in Windows Mixed Reality](images/unreal-uxt/2-virtual-reality-plugin.PNG)
+
+> [!NOTE]
+> Les deux plug-ins sont nécessaires pour le développement HoloLens 2.
+
+Une fois que vous avez terminé, votre niveau vide est prêt à avoir de la compagnie.
+
+## <a name="creating-a-level"></a>Création d’un niveau
+La tâche suivante consiste à créer une configuration de joueur simple avec un point de départ et un cube à des fins de référence et de mise à l’échelle.
+
+1. Sélectionnez **File > New Level**, puis choisissez **Empty Level**. La scène par défaut dans la fenêtre d’affichage doit maintenant être vide.
+
+2. Sélectionnez **Basic** sous l’onglet **Modes**, puis faites glisser **PlayerStart** dans la scène. 
+    * Affectez à **Location** les valeurs **X = 0**, **Y = 0** et **Z = 0** sous l’onglet **Details**. L’utilisateur se situe ainsi au centre de la scène quand l’application démarre.
 
 ![Fenêtre d’affichage avec PlayerStart](images/unreal-uxt/2-playerstart.PNG)
 
-7. Faites glisser **Cube** à partir de l’onglet Basic du panneau Modes vers la fenêtre d’affichage. Dans le volet d’informations, définissez l’emplacement sur X = 50, Y = 0, Z = 0 pour placer le cube à 50 cm de distance du lecteur au moment du démarrage. Étant donné que le cube par défaut est assez grand, remplacez l’échelle du cube par (0,2 ; 0,2 ; 0,2). 
+3. Faites glisser un **cube** à partir de l’onglet **Basic** dans la scène. 
+    * Affectez à **Location** les valeurs **X = 50**, **Y = 0** et **Z = 0**. Le cube est alors placé à 50 cm du joueur au moment du démarrage. 
+    * Affectez à **Scale** les valeurs **X = 0,2**, **Y = 0,2** et **Z = 0,2** pour réduire le cube. 
 
-8. Vous ne pourrez pas voir le cube sauf si vous ajoutez une lumière à votre scène. Passez à l’onglet **Lights** dans le panneau Modes, puis faites glisser une **Directional Light** dans la scène, au-dessus du PlayerStart.
+Le cube n’est pas visible, sauf si vous ajoutez une lumière à votre scène, ce qui constitue votre dernière tâche avant de tester la scène.
+
+4. Passez à l’onglet **Lights** dans le panneau **Modes**, puis faites glisser un **Directional Light** dans la scène. Placez la lumière au-dessus de **PlayerStart** pour pouvoir la voir.
 
 ![Fenêtre d’affichage avec une lumière ajoutée](images/unreal-uxt/2-light.PNG)
 
-9.  Appuyez sur le bouton **Play** dans la barre d’outils pour voir votre cube dans la fenêtre d’affichage ! Appuyez sur **Échap** pour arrêter le niveau. 
+5. Accédez à **File > Save Current**, nommez votre niveau **Main**, puis cliquez sur **Save**. 
+
+Une fois la scène définie, appuyez sur **Play** dans la barre d’outils pour voir votre cube en action ! Lorsque vous avez fini d’admirer votre travail, appuyez sur **Échap** pour arrêter l’application.
 
 ![Un cube dans la fenêtre d’affichage](images/unreal-uxt/2-cube.PNG)
 
-10. Enregistrons votre niveau. Dans le coin supérieur gauche, cliquez sur **File > Save Current**. Nommez votre niveau « Main », puis cliquez sur **Save**. 
+Maintenant que la scène est configurée, vous pouvez commencer à y ajouter l’échiquier et la pièce pour compléter l’environnement de l’application.
 
-## <a name="set-up-a-chess-scene"></a>Configurer une scène de jeu d’échecs
+## <a name="importing-assets"></a>Importation de ressources
+La scène a l’air un peu vide pour le moment, mais vous allez y remédier en important les ressources prêtes à l’emploi dans le projet.
 
-1. Dans votre navigateur de contenu, cliquez sur l’icône sous Add New pour afficher le panneau des sources. Cliquez ensuite sur **Add New > New Folder** et nommez le dossier « ChessAssets ». Double-cliquez sur ce dossier pour y accéder. C’est là que nous allons importer les ressources 3D pour notre jeu d’échecs.
+1. Téléchargez et décompressez le dossier des ressources [GitHub](https://github.com/microsoft/MixedReality-Unreal-Samples/blob/master/ChessApp/ChessAssets.7z).
+
+2. Cliquez sur **Add New > New Folder** à partir du **Content Browser** et nommez ce dossier **ChessAssets**. 
+    * Double-cliquez sur le nouveau dossier. C’est là que vous allez importer les ressources 3D.
 
 ![Afficher ou masquer le panneau des sources](images/unreal-uxt/2-showhidesources.PNG)
 
-2. Téléchargez le fichier zip des ressources depuis [GitHub](https://github.com/microsoft/MixedReality-Unreal-Samples/blob/master/ChessApp/ChessAssets.7z). Ce fichier contient les modèles 3D pour un échiquier et pour les pièces du jeu d’échecs. Décompressez ce fichier.
+3. Cliquez sur **Import** à partir du **Content Browser**, sélectionnez tous les éléments inclus dans le dossier des ressources décompressé, puis cliquez sur **Open**. 
+    * Ce dossier contient les maillages d’objets 3D pour l’échiquier et les pièces au format FBX, ainsi que les cartes de texture au format TGA que vous allez utiliser pour les matériaux.  
 
-3. En haut du navigateur de contenu, cliquez sur **Import**. Accédez au dossier que vous venez de décompresser et sélectionnez tous les éléments qui s’y trouvent. Ce dossier contient des fichiers FBX qui sont les maillages des objets 3D pour notre échiquier et nos pièces, ainsi que des fichiers TGA qui sont les cartes de texture que nous allons utiliser pour créer des matériaux pour notre échiquier et nos pièces. Cliquez sur **Ouvrir**. 
-
-4. Une fenêtre FBX Import Options s’ouvre. Dans la section **Material**, changez **Material Import Method** en **Do Not Create Material**. Ensuite, cliquez sur **Import All**.
+4. Lorsque la fenêtre FBX Import Options s’affiche, développez la section **Material** et affectez à **Material Import Method** la valeur **Do Not Create Material**.
+    * Cliquez sur **Import All**.
 
 ![Options d’importation FBX](images/unreal-uxt/2-nocreatemat.PNG)
 
-5. De retour dans votre dossier de contenu, créez un dossier nommé **Blueprints**. C’est là que nous allons stocker tous nos blueprints, qui sont des ressources spéciales qui fournissent une interface basée sur des nœuds pour créer des types d’acteurs et d’événements au niveau des scripts. 
+C’est tout ce que vous devez faire pour les ressources. Votre prochaine série de tâches consiste à créer les composants de l’application avec des blueprints.
 
-6. Double-cliquez sur le dossier **Blueprints** pour y accéder, puis cliquez avec le bouton droit dans votre navigateur de contenu et sélectionnez **Blueprint Class**. Cliquez sur **Actor** et nommez le nouveau blueprint « Board ». Double-cliquez sur Board pour l’ouvrir. 
+## <a name="adding-blueprints"></a>Ajout de blueprints
+
+1. Cliquez sur **Add New > New Folder** dans le **Content Browser** et nommez ce dossier **Content Browser**. 
+
+> [!NOTE]
+> Si vous ne connaissez pas les [blueprints](https://docs.unrealengine.com/en-US/Engine/Blueprints/index.html), il s’agit de ressources spéciales qui fournissent une interface basée sur des nœuds pour créer des types d’acteurs et d’événements au niveau des scripts. 
+
+2. Double-cliquez dans le dossier **Blueprints**, puis cliquez avec le bouton droit et sélectionnez **Blueprint Class**.         
+    * Sélectionnez **Actor** et nommez le blueprint **Board**. 
 
 ![Sélectionner une classe parente pour votre blueprint](images/unreal-uxt/2-bpparent.PNG)
 
+Le nouveau blueprint **Board** apparaît maintenant dans le dossier **Blueprints**, comme l’illustre la capture d’écran suivante. 
+
 ![Le nouveau blueprint Board](images/unreal-uxt/2-bpboard.PNG)
 
-7. Dans l’éditeur de blueprint, accédez au panneau Components, puis cliquez sur **Add Component > Scene**. Nommez la scène nouvellement créée « Root », puis cliquez et faites glisser Root sur DefaultSceneRoot. Cela va remplacer la racine de la scène par défaut et éliminer de la sphère dans la fenêtre d’affichage. 
+Vous êtes fin prêt pour commencer à ajouter des matériaux aux objets créés.
+
+## <a name="working-with-materials"></a>Utilisation de matériaux
+Les objets que vous avez créés sont gris par défaut, ce qui n’est pas très agréable à regarder. L’ajout de matériaux et de maillages à vos objets constitue la dernière série de tâches de ce tutoriel.
+
+1. Double-cliquez sur **Board** pour ouvrir l’éditeur de blueprint. 
+
+2. Cliquez sur **Add Component > Scene** dans le panneau **Components** et nommez le composant **Root**. Notez que **Root** apparaît en tant qu’enfant de **DefaultSceneRoot** dans la capture d’écran ci-dessous :
+
+![Remplacement de la racine](images/unreal-uxt/2-root-blueprint.PNG)
+
+
+3. Cliquez et faites glisser **Root** sur **DefaultSceneRoot** pour le remplacer et vous débarrasser de la sphère dans la fenêtre d’affichage. 
 
 ![Remplacement de la racine](images/unreal-uxt/2-root.PNG)
 
-8. Cliquez à nouveau sur **Add Component** et choisissez cette fois **Static Mesh**. Nommez le nouveau maillage statique « SM_Board ». 
+
+4. Cliquez sur **Add Component > Static Mesh** dans le panneau **Components** et nommez le composant **SM_Board**. Il apparaît en tant qu’objet enfant sous **Root**.
 
 ![Ajout d’un maillage statique](images/unreal-uxt/2-sm-board.PNG)
 
-9. Dans le panneau **Details**, recherchez la section **Static Mesh** et cliquez sur la liste déroulante. Sélectionnez **ChessBoard**. 
+4. Cliquez sur **SM_Board**, faites défiler la page jusqu’à la section **Static Mesh** du panneau **Details**, puis sélectionnez **ChessBoard** dans la liste déroulante. 
 
 ![Le maillage de l’échiquier dans la fenêtre d’affichage](images/unreal-uxt/2-sm-board-view.PNG)
 
-10. Toujours dans le panneau **Details**, recherchez la section **Materials** et cliquez sur la liste déroulante. Sous **Create New Asset**, sélectionnez **Material**. Nommez cette ressource **M_ChessBoard** et enregistrez-la dans le dossier **ChessAssets**. 
+5.  Toujours dans le panneau **Details**, développez la section **Materials** et cliquez sur **Create New Asset > Material** dans la liste déroulante. 
+    * Nommez le matériau **M_ChessBoard** et enregistrez-le dans le dossier **ChessAssets**. 
 
 ![Créer un matériau](images/unreal-uxt/2-newmat.PNG)
 
-11. Double-cliquez sur le carré en regard de la liste déroulante de M_ChessBoard pour ouvrir votre matériau M_ChessBoard nouvellement créé. Dans l’éditeur de matériau, cliquez avec le bouton droit et recherchez le nœud **Texture Sample**. Dans le panneau **Details** sous la section **Material Expression Texture Base**, cliquez sur la liste déroulante et sélectionnez **ChessBoard_Albedo**. Enfin, faites glisser la broche de sortie **RGB** vers la broche Base Color de **M_ChessBoard**. 
+6.  Double-cliquez sur l’image du matériau **M_ChessBoard** pour ouvrir l’éditeur de matériau. 
+
+![Ouvrir l’éditeur de matériau](images/unreal-uxt/2-material-editor.PNG)
+
+7. Dans l’éditeur de matériau, cliquez avec le bouton droit et recherchez **Texture Sample**. 
+    * Développez la section **Material Expression Texture Base** dans le panneau **Details** et affectez à **Texture** la valeur **ChessBoard_Albedo**. 
+    * Faites glisser le repère de sortie **RGB** vers le repère Base Color de **M_ChessBoard**. 
 
 ![Définir la couleur de base](images/unreal-uxt/2-boardalbedomat.PNG)
 
-12. Procédez de même quatre fois de plus, en liant l’exemple de texture **ChessBoard_AO** à la broche**Ambient Occlusion**, l’exemple de texture **ChessBoard_Metal** à la broche **Metallic**, l’exemple de texture **ChessBoard_Normal** à la broche **Normal** et l’exemple de texture **ChessBoard_Rough** à la broche **Roughness**. Cliquez sur **Enregistrer**. 
+8.  Répétez l’étape précédente quatre autres fois pour créer quatre autres nœuds **Texture Sample** avec les paramètres suivants :
+    * Affectez à **Texture** la valeur **ChessBoard_AO** et liez le repère **RGB** au repère **Ambient Occlusion**.
+    * Affectez à **Texture** la valeur **ChessBoard_Metal** et liez le repère **RGB** au repère **Metallic**. 
+    * Affectez à **Texture** la valeur **ChessBoard_Normal** et liez le repère **RGB** au repère **Normal**.
+    * Affectez à **Texture** la valeur **ChessBoard_Rough** et liez le repère **RGB** au repère **Roughness**. 
+    * Cliquez sur **Enregistrer**. 
 
 ![Raccorder les textures restantes](images/unreal-uxt/2-boardmat.PNG)
 
-13. Ouvrez à votre blueprint **Board**. Vous voyez normalement que le matériau que vous venez de créer a été appliqué à votre blueprint. Pour que l’échiquier ait une taille et un emplacement raisonnables une fois que nous le plaçons dans notre scène, changez l’échelle **Scale** de l’échiquier en (0,05 ; 0,05 ; 0,05) et la **Rotation**  en Z = 90. Dans la barre d’outils du haut, cliquez sur **Compile**, puis sur **Save**. Revenez dans votre fenêtre principale. 
+Avant de continuer, vérifiez que la configuration de votre matériau ressemble à la capture d’écran ci-dessus.
+
+## <a name="populating-the-scene"></a>Remplissage de la scène
+Si vous revenez au blueprint **Board**, vous voyez que le matériau que vous venez de créer a été appliqué. Il ne vous reste plus qu’à installer la scène ! Pour commencer, modifiez les propriétés suivantes pour vous assurer que l’échiquier est de taille raisonnable et qu’il est correctement incliné lorsqu’il est placé dans la scène :
+1.  Affectez à **Scale** la valeur **(0,05, 0,05, 0,05)** et à **Z Rotation** la valeur **90**. 
+    * Cliquez sur **Compile** dans la barre d’outils supérieure, puis sur **Save** pour revenir à la fenêtre Main. 
 
 ![Échiquier avec un matériau appliqué](images/unreal-uxt/2-chessboard.PNG)
 
-14. Nous allons maintenant supprimer le cube et le remplacer par l’acteur Board que vous venez de créer. Dans le **World Outliner**, cliquez avec le bouton droit sur **Cube > Edit > Delete**. Faites l’échiquier de votre navigateur de contenu vers la fenêtre d’affichage. Définissez l’emplacement de l’échiquier sur X = 80, Y = 0, Z = -20. 
+2.  Cliquez avec le bouton droit sur **Cube > Edit > Delete**, puis faites glisser **Board** depuis le **Content Browser** dans la fenêtre d’affichage. 
+    * Affectez à **Location** les valeurs **X = 80**, **Y = 0** et **Z = -20**. 
 
-15. Cliquez sur le bouton **Play** pour afficher votre nouvel échiquier dans votre niveau. Appuyez sur **Échap** pour revenir à l’éditeur. 
+3.  Cliquez sur le bouton **Play** pour afficher votre nouvel échiquier dans le niveau. Appuyez sur **Échap** pour revenir à l’éditeur. 
 
-16. Nous allons maintenant suivre les mêmes étapes pour créer une pièce du jeu d’échecs comme nous l’avons fait avec l’échiquier, en sélectionnant cette fois le maillage et le matériau pour la pièce :
+À présent, vous allez suivre les mêmes étapes pour créer une pièce de jeu d’échecs que celles que vous avez effectuées pour l’échiquier :
 
-    a) Accédez au dossier Blueprints dans le navigateur de contenu et créez une nouvelle classe Blueprint de type Actor. Nommez cet acteur « WhiteKing ».
+1. Accédez au dossier **Blueprints**, cliquez avec le bouton droit et sélectionnez **Blueprint Class**, puis choisissez **Actor**. Nommez cet acteur **WhiteKing**.
 
-    b) Double-cliquez sur WhiteKing pour l’ouvrir. Ajoutez un nouveau composant de scène nommé « Root » et utilisez-le pour remplacer DefaultSceneRoot. 
+2. Double-cliquez sur **WhiteKing** pour l’ouvrir dans l’éditeur de blueprint, cliquez sur **Add Component > Scene** et nommez-le **Root**. 
+    * Glissez-déposez **Root** dans **DefaultSceneRoot** pour le remplacer. 
 
-    c) Ajoutez un nouveau composant Static Mesh nommé « SM_King ». Dans le volet d’informations, définissez le **Static Mesh** sur **Chess_King** et **Material** sur un nouveau matériau appelé **M_ChessWhite**. 
+3. Cliquez sur **Add Component > Static Mesh** et nommez ce composant **SM_King**. 
+    * Affectez à **Static Mesh** la valeur **Chess_King** et à **Material** la valeur d’un nouveau matériau appelé **M_ChessWhite** dans le panneau Details. 
 
-    d) Ouvrez le nouveau matériau **M_ChessWhite** et raccordez les textures appropriées à leurs entrées de matériau correspondantes. 
+4. Ouvrez **M_ChessWhite** dans l’éditeur de matériau et raccordez les nœuds **Texture Sample** suivants aux éléments suivants :
+    * Affectez à **Texture** la valeur **ChessWhite_AO** et liez le repère **RGB** au repère **Ambient Occlusion**.
+    * Affectez à **Texture** la valeur **ChessWhite_Metal** et liez le repère **RGB** au repère **Metallic**. 
+    * Affectez à **Texture** la valeur **ChessWhite_Normal** et liez le repère **RGB** au repère **Normal**.
+    * Affectez à **Texture** la valeur **ChessWhite_Rough** et liez le repère **RGB** au repère **Roughness**. 
+    * Cliquez sur **Enregistrer**. 
 
-    ![Créer le matériau pour le roi](images/unreal-uxt/2-chesskingmat.PNG)
+Votre matériau **M_ChessKing** doit ressembler à l’image suivante avant de continuer.
 
-    e) De retour dans votre blueprint **WhiteKing**, changez **Scale** en (0,05 ; 0,05 ; 0,05) et **Rotation** en Z = 90.
+![Créer le matériau pour le roi](images/unreal-uxt/2-chesskingmat.PNG)
 
-    f) Compilez et enregistrez votre blueprint, puis revenez à votre fenêtre principale. 
+Vous y êtes presque, il vous suffit d’ajouter la nouvelle pièce à la scène : 
 
-17. Faites glisser WhiteKing dans votre fenêtre d’affichage. Dans **World Outliner**, faites glisser WhiteKing sur Board, pour que WhiteKing soit désormais un enfant de Board. 
+1. Ouvrez le blueprint **WhiteKing** et affectez à **Scale** la valeur **(0,05, 0,05, 0,05)** et à **Z Rotation** la valeur **90**.
+    * Compilez et enregistrez votre blueprint, puis revenez à la fenêtre principale. 
+
+2.  Faites glisser **WhiteKing** dans la fenêtre d’affichage, basculez vers le panneau **World Outliner**, faites glisser **WhiteKing** sur **Board** pour en faire un objet enfant.
 
 ![World Outliner](images/unreal-uxt/2-child.PNG)
 
-18. Dans le panneau **Details** sous **Transform**, définissez **Location** pour WhiteKing sur X =-26, Y = 4, Z = 0
+3.  Dans le panneau **Details** sous **Transform**, affectez au paramètre **Location** de **WhiteKing** les valeurs **X = -26**, **Y = 4** et **Z = 0**.
 
-19. Cliquez sur **Play** pour voir votre niveau. Appuyez sur **Échap** pour quitter. 
+C’est terminé ! Cliquez sur **Play** pour voir à l’œuvre votre niveau rempli, puis appuyez sur **Échap** lorsque vous êtes prêt à fermer la fenêtre. Ce tutoriel a abordé de nombreux points liés à la création d’un projet simple, mais votre projet est prêt à passer à la partie suivante de la série : la configuration pour la réalité mixte. 
 
 [Section suivante : 3. Configurer votre projet pour la réalité mixte](unreal-uxt-ch3.md)

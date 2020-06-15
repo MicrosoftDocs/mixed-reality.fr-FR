@@ -1,67 +1,92 @@
 ---
 title: 3. Configuration de votre projet pour la réalité mixte
-description: Partie 3 d’un tutoriel pour créer une application de jeu d’échecs simple avec Unreal Engine 4 et le plug-in UX Tools du Mixed Reality Toolkit
-author: sw5813
-ms.author: suwu
+description: Troisième tutoriel d’une série de six tutoriels, dans lequel vous apprenez à créer une application de jeu d’échecs simple avec Unreal Engine 4 et le plug-in UX Tools du Mixed Reality Toolkit
+author: hferrone
+ms.author: v-haferr
 ms.date: 5/5/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, réalité mixte, tutoriel, bien démarrer, mrtk, uxt, UX Tools, documentation
-ms.openlocfilehash: b5b5e2de787279602341e60f2bfa29aa05ea9b31
-ms.sourcegitcommit: ba4c8c2a19bd6a9a181b2cec3cb8e0402f8cac62
+ms.openlocfilehash: d22c3d8c9048f53171298642768877d7bcdcb972
+ms.sourcegitcommit: 1b8090ba6aed9ff128e4f32d40c96fac2e6a220b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82840618"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84330285"
 ---
 # <a name="3-setting-up-your-project-for-mixed-reality"></a>3. Configuration de votre projet pour la réalité mixte
 
-Cette section vous guide pas à pas tout au long du processus de configuration de votre application pour le développement de la réalité mixte. 
+## <a name="overview"></a>Vue d’ensemble
+
+Dans le tutoriel précédent, vous avez configuré le projet d’application de jeu d’échecs. Cette section va vous expliquer comment configurer l’application pour le développement de réalité mixte, ce qui implique l’ajout d’une session de réalité augmentée. Pour cette tâche, vous allez utiliser une ressource de données ARSessionConfig, qui contient un grand nombre de paramètres pour la réalité augmentée, tels que le mappage spatial et l’occlusion. Si vous souhaitez approfondir le sujet, notez que la documentation Unreal Engine décrit en détail la ressource [ARSessionConfig](https://docs.unrealengine.com/en-US/PythonAPI/class/ARSessionConfig.html) et la classe [UARSessionConfig](https://docs.unrealengine.com/en-US/API/Runtime/AugmentedReality/UARSessionConfig/index.html).
 
 ## <a name="objectives"></a>Objectifs
+* Utilisation des paramètres de réalité augmentée d’Unreal Engine 
+* Utilisation d’une ressource de données ARSessionConfig
+* Configuration d’un pion et du mode Jeu
 
-* Comprendre comment configurer un projet de réalité mixte avec ARSessionConfig, Pawn et GameMode
+## <a name="adding-the-session-asset"></a>Ajout de la ressource de session
+Les sessions de réalité augmentée n’arrivent pas toutes seules. Pour utiliser une session, vous devez créer une ressource de données ARSessionConfig, ce qui est d’ailleurs votre prochaine tâche :
 
-## <a name="configure-the-session"></a>Configurer la session
-
-1. Dans le navigateur de contenu, revenez au dossier **Content**. Cliquez sur **Add New > Miscellaneous > Data Asset**. 
-
-2. Sélectionnez la classe **ARSessionConfig**, puis cliquez sur **Select**. Nommez la ressource « ARSessionConfig ».
+1. Cliquez sur **Add New > Miscellaneous > Data Asset** (Ajouter > Divers > Ressource de données) dans le navigateur de contenu (**Content Browser**). Vérifiez que vous vous trouvez au niveau du dossier **Content** racine. 
+    * Sélectionnez **ARSessionConfig**, cliquez sur **Select**, puis nommez la ressource **ARSessionConfig**.
 
 ![Créer une ressource de données](images/unreal-uxt/3-createasset.PNG)
 
-3. Double-cliquez sur la ressource ARSessionConfig pour l’ouvrir. Une ressource de données ARSessionConfig contient divers paramètres AR utiles, notamment pour le mappage spatial et l’occlusion. Pour plus d’informations sur ARSessionConfig, consultez [UARSessionConfig](https://docs.unrealengine.com/en-US/API/Runtime/AugmentedReality/UARSessionConfig/index.html) dans la documentation Unreal Engine. Pour notre application de jeu d’échecs, nous n’avons pas besoin de modifier les paramètres. Sélectionnez simplement **Save** et revenez dans la fenêtre principale. 
+3. Double-cliquez sur **ARSessionConfig** pour l’ouvrir, conservez tous les paramètres par défaut, puis appuyez sur **Save** (Enregistrer). Revenez dans la fenêtre principale. 
 
 ![Configuration de la session AR](images/unreal-uxt/3-arsessionconfig.PNG)
 
-4. Dans la barre d’outils au-dessus de la fenêtre Viewport, cliquez sur **Blueprints > Open Level Blueprint**. Level Blueprint est un Blueprint spécial qui a le rôle de graphe d'événements (« Event Graph ») global à l’échelle du niveau. Nous allons démarrer une session AR ici pour que sa configuration soit appliquée au début du niveau.  
+Une fois cette opération effectuée, l’étape suivante consiste à faire en sorte que la session de réalité augmentée démarre lorsque le niveau est chargé. Unreal comprend un blueprint spécial appelé **blueprint de niveau** (« Level Blueprint ») qui joue le rôle de graphe d’événements (« Event Graph ») à l’échelle du niveau. Le fait de connecter la ressource ARSessionConfig dans le **blueprint de niveau** garantit que la session de réalité augmentée se déclenchera juste au début du jeu.
 
-5. Faites glisser le nœud d’exécution en dehors de **Event BeginPlay** et relâchez-le. Recherchez le nœud **Start AR Session**. Cliquez sur **Session Config** et sélectionnez votre nouvelle ressource **ARSessionConfig**. Sélectionnez **Compile**, puis **Save**. Revenez dans la fenêtre principale.
+1. Cliquez sur **Blueprints > Open Level Blueprint** (Blueprints > Ouvrir le blueprint de niveau) dans la barre d’outils de l’éditeur : 
 
-![Démarrer la session AR](images/unreal-uxt/3-startarsession.PNG)
+![Ouverture du blueprint de niveau](images/unreal-uxt/3-level-blueprint.PNG)
+
+5. Faites glisser le nœud d’exécution (la flèche pointant vers la gauche) en dehors de **Event BeginPlay** puis relâchez. Recherchez **Start AR Session** (Démarrer la session de réalité augmentée) et appuyez sur Entrée.  
+    * Cliquez sur la liste déroulante **Select Asset** (Sélectionner une ressource) sous **Session Config** (Configuration de la session), puis sélectionnez la ressource **ARSessionConfig**. 
+    * Cliquez sur **Compile**, puis sur **Save** pour revenir à la fenêtre principale.
+
+![Démarrer la session AR](images/unreal-uxt/3-start-ar-session.PNG)
 
 ## <a name="create-a-pawn"></a>Créer un Pawn
+À ce stade, le projet a toujours besoin d’un objet de lecteur. Dans Unreal, un pion (**Pawn**) représente l’utilisateur dans le jeu, mais ici, il s’agira de l’expérience HoloLens 2.
 
-1.  Dans le dossier Content, créez un Blueprint qui hérite de **DefaultPawn**. Dans Unreal, un Pawn est la représentation de l’utilisateur dans le jeu ou, ici, de l’expérience HoloLens 2. Renommez votre nouveau Pawn en « MRPawn » et double-cliquez sur MRPawn pour l’ouvrir. 
+1. Cliquez sur **Add New > Blueprint Class** (Ajouter > Classe de blueprint) dans le dossier **Content**, puis développez la section **All Classes** située en bas. 
+    * Recherchez **DefaultPawn**, cliquez sur **Select**, puis double-cliquez sur la ressource pour l’ouvrir. 
 
 ![Créer un Pawn héritant de DefaultPawn](images/unreal-uxt/3-defaultpawn.PNG)
 
-2.  Par défaut, le Pawn a un composant de maillage et un composant de collision ; dans la plupart des projets Unreal, les Pawns contrôlés par l’utilisateur sont des objets solides qui entrent en collision avec d’autres composants. Dans ce cas, étant donné que l’utilisateur est le Pawn, nous souhaitons pouvoir transférer des hologrammes sans générer de collisions. Dans le panneau Components, sélectionnez **CollisionComponent**. Dans le volet Details, faites défiler le contenu jusqu’à la section Collision, puis cliquez sur la liste déroulante à côté de Collision Presets. Sélectionnez **NoCollision** à la place de Pawn. Répétez cette opération pour **MeshComponent**. Sélectionnez **Compile** et **Save** pour compiler et enregistrer le Blueprint. Revenez dans la fenêtre principale. 
+> [!NOTE]
+> Par défaut, les pions (Pawns) ont des composants de maillage et de collision. Dans la plupart des projets Unreal, les pions sont des objets solides qui peuvent entrer en collision avec d’autres composants. Étant donné que le pion et l’utilisateur sont une seule et même entité dans la réalité mixte, vous devez pouvoir passer par des hologrammes sans aucune collision. 
+
+2. Sélectionnez **CollisionComponent** dans le panneau **Components**, puis faites défiler jusqu’à la section **Collision** du panneau **Details**. 
+    * Cliquez sur la liste déroulante **Collision Presets** (Valeurs prédéfinies de collision), puis remplacez la valeur par **NoCollision**. 
+    * Procédez de la même façon pour **MeshComponent**, puis compilez (**Compile**) et enregistrez (**Save**) le blueprint. 
 
 ![Changer la valeur Pawn dans Collision Presets](images/unreal-uxt/3-nocollision.PNG)
 
-## <a name="create-a-game-mode"></a>Créer un mode de jeu
+Une fois votre travail terminé, revenez à la fenêtre principale.
 
-1.  Dans le dossier Content du navigateur de contenu, créez un Blueprint avec le parent **Game Mode Base**. Nommez le Blueprint « MRGameMode » et double-cliquez dessus pour l’ouvrir. Dans Unreal, le mode de jeu (Game Mode) définit plusieurs paramètres du jeu ou de l’expérience, y compris le Pawn par défaut à utiliser. 
+## <a name="create-a-game-mode"></a>Créer un mode de jeu
+La dernière étape de configuration de la réalité mixte est le mode Jeu. Le mode Jeu (Game Mode) définit plusieurs paramètres du jeu ou de l’expérience, y compris le pion par défaut à utiliser.
+
+1.  Cliquez sur **Add New > Blueprint Class** (Ajouter > Classe de blueprint) dans le dossier **Content**, puis développez la section **All Classes** située en bas. 
+    * Recherchez **Game Mode Base** (Base du mode Jeu), nommez-le **MRGameMode**, puis double-cliquez dessus pour l’ouvrir. 
 
 ![MRGameMode dans le navigateur de contenu](images/unreal-uxt/3-gamemode.PNG)
 
-2.  Dans le volet Details, recherchez la section Classes. Pour l’option Default Pawn Class, changez DefaultPawn par le **MRPawn** que vous venez de créer. Sélectionnez **Compile**, puis **Save**. Revenez dans la fenêtre principale. 
+2.  Accédez à la section **Classes** dans le panneau **Details**, puis définissez **Default Pawn Class** (Classe du pion par défaut) sur **MRPawn**. 
+    * Cliquez sur **Compile**, puis sur **Save** pour revenir à la fenêtre principale. 
 
 ![Définir l’option Default Pawn Class](images/unreal-uxt/3-setpawn.PNG)
 
-3.  La dernière étape de la configuration de votre projet consiste à indiquer à Unreal d’utiliser MRGameMode comme mode de jeu par défaut. Accédez à la section **Edit > Projects Settings > Maps & Modes** (dans Projects). Dans la section Default Modes, cliquez sur la liste déroulante et choisissez **MRGameMode**. Dans la section Default Maps juste en dessous, changez **EditorStartupMap** et **GameDefaultMap** à **Main**. De cette façon, quand vous fermez l’éditeur et le rouvrez, la carte principale (Main) est sélectionnée par défaut. De même, lorsque vous jouez, la carte principale est le niveau de démarrage. 
+3.  Sélectionnez **Edit > Projects Settings** (Modifier > Paramètres du projet), puis cliquez sur **Maps & Modes** (Cartes et modes) dans la liste de gauche. 
+    * Développez **Default Modes** (Modes par défaut), puis définissez **Default Game Mode** (Mode Jeu par défaut) sur **MRGameMode**. 
+    * Développez **Default Maps** (Cartes par défaut), puis définissez **EditorStartupMap** et **GameDefaultMap** sur **Main**. De cette façon, quand vous fermerez puis rouvrirez l’éditeur, ou quand vous ferez une partie, la carte principale (Main) sera sélectionnée par défaut.
 
 ![Project Settings - Maps & Modes](images/unreal-uxt/3-mapsandmodes.PNG)
+
+Une fois le projet entièrement configuré pour la réalité mixte, vous êtes prêt à passer au tutoriel suivant et à ajouter une entrée d’utilisateur à la scène. 
 
 [Section suivante : 4. Rendre votre scène interactive](unreal-uxt-ch4.md)

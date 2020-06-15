@@ -1,18 +1,18 @@
 ---
 title: Utilisation du portail d’appareil Windows
 description: Le portail d’appareil Windows pour HoloLens vous permet de configurer et de gérer à distance votre appareil par le biais d’une connexion Wi-Fi ou USB. Le Device Portal est un serveur Web situé sur l'appareil auquel vous pouvez vous connecter depuis un navigateur Web sur votre PC. Le portail d’appareil comprend de nombreux outils qui vous aideront à gérer votre appareil HoloLens, ainsi qu’à déboguer et à optimiser vos applications.
-author: jonmlyons
-ms.author: jlyons
+author: hamalawi
+ms.author: moelhama
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Portail d’appareil Windows, HoloLens
 ms.localizationpriority: high
-ms.openlocfilehash: 9cd9b33fed12802e5b41afa3fee850356911a989
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+ms.openlocfilehash: 4c84670e616d822bb8a9701a82f779a66ec19fe1
+ms.sourcegitcommit: f24ac845e184c2f90e8b15adab9addb913f5cb83
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "81278027"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84451357"
 ---
 # <a name="using-the-windows-device-portal"></a>Utilisation du portail d’appareil Windows
 
@@ -152,17 +152,44 @@ Utilisez la page Vue 3D pour voir comment HoloLens interprète votre environneme
 *Page Capture de Réalité Mixte dans le portail d’appareil Windows sur Microsoft HoloLens*
 
 Utilisez la page MRC pour enregistrer les flux multimédias issus du casque HoloLens.
-* **Paramètres** : contrôle les flux multimédias capturés en vérifiant les paramètres suivants :
+* **Paramètres de capture** : contrôle les flux multimédias capturés en vérifiant les paramètres suivants :
   * **Hologrammes** : capture le contenu holographique du flux vidéo. Les hologrammes font l’objet d’un rendu en mono et non en stéréo.
   * **Caméra PV** : capture le flux vidéo à partir de l’appareil photo ou de la caméra vidéo.
   * **Son du micro** : capture les données audio à partir du réseau de microphones.
   * **Son de l’application** : capture les données audio à partir de l’application en cours d’exécution.
   * **Afficher à partir de la caméra** : aligne la capture sur le point de vue de l’appareil photo ou de la caméra vidéo, si cela est [pris en charge par l’application en cours d’exécution](mixed-reality-capture-for-developers.md#render-from-the-pv-camera-opt-in) (HoloLens 2 uniquement).
   * **Qualité de l’aperçu instantané** : sélectionnez la résolution d’écran, la fréquence d’images et la vitesse de streaming de l’aperçu instantané.
+* **Paramètres audio** (HoloLens 2 uniquement) :
+  * **Catégorie de média audio** : sélectionnez la catégorie utilisée lors du traitement du microphone. La valeur **Par défaut** permet d’inclure une partie de l’environnement, tandis que **Communications** applique une annulation du bruit de fond.
+  * **Gain audio de l’application** : gain appliqué au volume de l’audio de l’application.
+  * **Gain audio du micro** : gain appliqué au volume de l’audio du microphone.
+* **Paramètres photo et vidéo** (HoloLens 2, version 2004 ou ultérieure) :
+  * **Profil de capture** : sélectionnez le profil utilisé lors de la prise de photos et de vidéos. Ce profil détermine les résolutions et fréquences d’images disponibles.
+  * **Résolution photo** : résolution à laquelle la photo sera prise.
+  * **Résolution vidéo et fréquence d’images** : résolution et fréquence d’images auxquelles la vidéo sera prise.
+  * **Tampon de stabilisation vidéo** : taille du tampon utilisé lors de la prise d’une vidéo. Plus la valeur est élevée, plus les mouvements rapides peuvent être compensés.
 * Cliquez ou appuyez sur le bouton **Aperçu instantané** pour afficher le flux de capture. **Arrêter l’aperçu instantané** arrête le flux de capture.
 * Cliquez ou appuyez sur **Enregistrer** pour commencer à enregistrer le flux de réalité mixte à l’aide des paramètres spécifiés. **Arrêter l’enregistrement** arrête l’enregistrement et le sauvegarde.
 * Cliquez ou appuyez sur **Prendre une photo** pour prendre une image fixe à partir du flux de capture.
+* Cliquez ou appuyez sur **Restaurer les paramètres par défaut** pour restaurer les paramètres audio, photo et vidéo par défaut.
 * **Photos et vidéos** : affiche une liste des captures photo et vidéo prises sur l’appareil.
+
+Tous les paramètres de cette page s’appliquent aux captures effectuées à l’aide du Portail d’appareil Windows, mais d’autres s’appliquent également à System MRC (menu de démarrage, boutons physiques, commandes vocales globales, Miracast) et aux enregistreurs MRC personnalisés.
+|  Paramètre  |  S’applique à System MRC  |  S’applique aux enregistreurs MRC personnalisés |
+|----------|----------|----------|
+|  Hologrammes  |  Non  |  Non |
+|  Caméra PV  |  Non  |  Non |
+|  Son du micro  |  Non  |  Non |
+|  Son de l’application  |  Non  |  Non |
+|  Afficher à partir de la caméra  |  Oui    |  Oui (peut être substitué) |
+|  Qualité de l’aperçu instantané  |  Non  |  Non |
+|  Catégorie de média audio  |  Oui  |  Non |
+|  Gain audio de l’application  |  Oui  |  Oui (peut être substitué) |
+|  Gain audio du micro  |  Oui  |  Oui (peut être substitué) |
+|  Profil de capture  |  Oui  |  Non |
+|  Résolution photo  |  Oui  |  Non |
+|  Résolution vidéo et fréquence d’images  |  Oui  |  Non |
+|  Tampon de stabilisation vidéo  |  Oui  |  Oui (peut être substitué) |
 
 > [!NOTE]
 > Il existe des [limites concernant les captures de Réalité Mixte simultanées](mixed-reality-capture-for-developers.md#simultaneous-mrc-limitations) :

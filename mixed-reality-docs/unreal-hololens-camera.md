@@ -1,48 +1,67 @@
 ---
-title: Caméra HoloLens dans Unreal
-description: Guide d’utilisation de la caméra HoloLens dans Unreal
-author: sw5813
-ms.author: jacksonf
+title: Appareil photo/vidéo HoloLens dans Unreal
+description: Guide d’utilisation de l’appareil photo/vidéo HoloLens dans Unreal
+author: hferrone
+ms.author: v-haferr
 ms.date: 5/5/2020
 ms.topic: article
 ms.localizationpriority: high
-keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, réalité mixte, développement, fonctionnalités, documentation, guides, hologrammes, caméra, troisième caméra, MRC
-ms.openlocfilehash: 9ef9ce27d161130c6b9f3aa6bb1dbc47d7608ad9
-ms.sourcegitcommit: ba4c8c2a19bd6a9a181b2cec3cb8e0402f8cac62
+keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, réalité mixte, développement, fonctionnalités, documentation, guides, hologrammes, caméra, appareil photo/vidéo, capture de Réalité Mixte
+ms.openlocfilehash: 06ceb26d58fe60848e5e90360aa2e05984a901c5
+ms.sourcegitcommit: f24ac845e184c2f90e8b15adab9addb913f5cb83
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82840118"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84451334"
 ---
-# <a name="hololens-camera-in-unreal"></a>Caméra HoloLens dans Unreal
+# <a name="hololens-photovideo-camera-in-unreal"></a>Appareil photo/vidéo HoloLens dans Unreal
 
-## <a name="third-camera-mixed-reality-capture"></a>Troisième caméra Mixed Reality Capture (MRC)
+HoloLens propose un appareil photo/vidéo qui est utilisé pour la capture de Réalité Mixte, et qui peut également être utilisé par une application pour accéder à des visuels du monde réel.
 
-La troisième caméra Mixed Reality Capture (MRC) permet de restituer une capture de réalité mixte du point de vue de la caméra sur le viseur HoloLens, plutôt que de la perspective des textures oculaires.  Cela améliore le mappage entre le monde réel et les hologrammes dans la vidéo MRC. 
+## <a name="render-from-the-pv-camera-for-mrc"></a>Affichage à partir de l’appareil photo/vidéo pour la capture de Réalité Mixte
 
-Pour activer l’utilisation de la troisième caméra MRC, appelez SetEnabledMixedRealityCamera et ResizeMixedRealityCamera en spécifiant les dimensions vidéo souhaitées. 
+> [!NOTE]
+> Cela nécessite **Unreal Engine 4.25** ou ultérieur.
+
+Le système et les enregistreurs personnalisés créent des captures de Réalité Mixte en combinant l’appareil photo/vidéo à des hologrammes affichés par l’application immersive.
+
+Par défaut, la capture de Réalité Mixte utilise la sortie holographique de l’œil droit. Si une application immersive choisit de s’[afficher à partir de l’appareil photo/vidéo](mixed-reality-capture-for-developers.md#render-from-the-pv-camera-opt-in), alors cette sortie sera utilisée à la place. Cela améliore le mappage entre le monde réel et les hologrammes dans la vidéo MRC.
+
+Pour choisir le rendu à partir de l’appareil photo/vidéo :
+
+1. Appelez **SetEnabledMixedRealityCamera** et **ResizeMixedRealityCamera**
+    * Utilisez les valeurs de taille **Size X** et **Size Y** pour définir les dimensions de la vidéo.
 
 ![Troisième caméra](images/unreal-camera-3rd.PNG)
 
-Enregistrez ensuite une vidéo MRC dans le portail d’appareil pour HoloLens. 
+Unreal va ensuite gérer les requêtes de capture de Réalité Mixte pour effectuer le rendu du point de vue de l’appareil photo/vidéo.
 
-## <a name="pv-camera"></a>Caméra PV
+> [!NOTE]
+> C’est seulement quand la [capture de Réalité Mixte](mixed-reality-capture.md) est déclenchée qu’il est demandé à l’application de s’afficher du point de vue de l’appareil photo/vidéo.
 
-La texture de la webcam peut également être récupérée dans le jeu au moment de l’exécution.  Pour obtenir la texture de la webcam sur HoloLens, vérifiez d’abord que la fonctionnalité « Webcam » est cochée dans l’éditeur Unreal sous Project Settings > Platform > HoloLens > Capabilities. 
+## <a name="using-the-pv-camera"></a>Utilisation de l’appareil photo/vidéo
 
-Activez l’utilisation de la webcam au moment de l’exécution avec la fonction StartCameraCapture.  Arrêtez la capture avec la fonction StopCameraCapture. 
+La texture de la webcam peut être récupérée dans le jeu au moment de l’exécution. Toutefois, vous devez l’activer dans l’éditeur **Edit > Project Settings** (Modifier > Paramètres du projet) :
+1. Accédez à **Platforms > HoloLens > Capabilities** (Plateformes > HoloLens > Fonctionnalités), puis cochez **Webcam**.
+    * Utilisez la fonction **StartCameraCapture** pour utiliser la webcam au moment de l’exécution, et la fonction **StopCameraCapture** pour arrêter l’enregistrement.
 
 ![Démarrer/Arrêter la caméra](images/unreal-camera-startstop.PNG)
 
-Pour le rendu de l’image de la caméra, créez d’abord une instance de matériau dynamique basée sur un matériau dans le projet.  Dans cet exemple, l’instance est basée sur un matériau nommé PVCamMat.  Affectez-lui une variable de type « Material Instance Dynamic Object Reference ».  Définissez ensuite le matériau de l’objet dans la scène du rendu du flux de la caméra sur cette nouvelle instance de matériel dynamique, et démarrez un minuteur qui sera utilisé pour lier l’image de la caméra au matériau. 
+## <a name="rendering-an-image"></a>Affichage d’une image
+Pour afficher l’image de l’appareil photo :
+1. Créez une instance de matériau dynamique basée sur un matériau du projet, nommé **PVCamMat** dans la capture d’écran ci-dessous.  
+2. Définissez l’instance de matériau dynamique sur une variable **Material Instance Dynamic Object Reference**.  
+3. Définissez le matériau de l’objet de la scène qui affichera le flux de l’appareil sur cette nouvelle instance de matériau dynamique.
+    * Démarrez un minuteur qui sera utilisé pour lier l’image de l’appareil au matériau. 
 
 ![Rendu de la caméra](images/unreal-camera-render.PNG)
 
-Créez une fonction pour ce minuteur, MaterialTimer ici, puis appelez GetARCameraImage pour obtenir la texture à partir de la webcam.  Si cette texture est correcte, définissez un paramètre de texture dans le nuanceur sur cette image.  Sinon, redémarrez le minuteur de matériau. 
+4. Créez une fonction pour ce minuteur, dans ce cas **MaterialTimer**, puis appelez **GetARCameraImage** pour obtenir la texture à partir de la webcam.  
+5. Si la texture est correcte, définissez un paramètre de texture dans le nuanceur de cette image.  Sinon, redémarrez le minuteur de matériau. 
 
 ![Texture de la caméra](images/unreal-camera-texture.PNG)
 
-Le matériau doit avoir un paramètre correspondant au nom dans SetTextureParameterValue associé à une entrée de couleur pour afficher correctement l’image de la caméra. 
+5. Vérifiez que le matériau comprend un paramètre correspondant au nom situé dans **SetTextureParameterValue**, qui est lié à une entrée de couleur. Sans cela, l’image de l’appareil photo/vidéo ne pourra pas être affichée correctement.
 
 ![Texture de la caméra](images/unreal-camera-material.PNG)
 

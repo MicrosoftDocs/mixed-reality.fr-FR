@@ -1,63 +1,89 @@
 ---
 title: 5. Ajout d’un bouton et réinitialisation des positions des pièces
-description: Partie 5 d’un tutoriel pour créer une application de jeu d’échecs simple avec Unreal Engine 4 et le plug-in UX Tools du Mixed Reality Toolkit
-author: sw5813
-ms.author: suwu
+description: Cinquième tutoriel d’une série de six visant à créer une application de jeu d’échecs simple avec Unreal Engine 4 et le plug-in Mixed Reality Toolkit UX Tools
+author: hferrone
+ms.author: v-haferr
 ms.date: 5/5/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, réalité mixte, tutoriel, bien démarrer, mrtk, uxt, UX Tools, documentation
-ms.openlocfilehash: 77fe2b59db970a2ac4b531d69efec6794478f7d5
-ms.sourcegitcommit: 09d9fa153cd9072f60e33a5f83ced8167496fcd7
+ms.openlocfilehash: 49cab5c5a8c6736b800b5ba05de2c88edf008008
+ms.sourcegitcommit: 1b8090ba6aed9ff128e4f32d40c96fac2e6a220b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83519991"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84330266"
 ---
 # <a name="5-adding-a-button--resetting-piece-locations"></a>5. Ajout d’un bouton et réinitialisation des positions des pièces
 
-Cette section continue la présentation des fonctionnalités du plug-in UX Tools du Mixed Reality Toolkit et le développement des fonctionnalités de votre application de jeu d’échecs. Vous allez créer une autre fonction et apprendre à obtenir des références aux acteurs de votre niveau dans un Blueprint.
+
+## <a name="overview"></a>Vue d’ensemble
+
+Dans le tutoriel précédent, vous avez ajouté des acteurs d’interaction manuelle aux composants Pawn et Manipulator de l’échiquier pour les rendre interactifs. Dans cette section, vous allez continuer de travailler avec le plug-in Mixed Reality Toolkit UX Tools en développant les fonctionnalités de votre application de jeu d’échecs. Vous allez notamment créer une fonction et apprendre à obtenir des références aux acteurs dans un blueprint. À la fin de cette section, vous serez prêt à empaqueter et déployer l’application de réalité mixte sur un appareil ou un émulateur.
 
 ## <a name="objectives"></a>Objectifs
 
-* Ajouter un bouton à votre projet
-* Créer une fonction « Reset Location » qui remet une pièce à sa position d’origine
-* Lier le bouton pour déclencher la nouvelle fonction quand l’utilisateur appuie dessus
+* Ajouter un bouton interactif
+* Créer une fonction pour réinitialiser l’emplacement d’une pièce
+* Lier le bouton pour déclencher la fonction quand l’utilisateur appuie dessus
 
-## <a name="create-a-function-to-reset-location"></a>Créer une fonction pour réinitialiser la position
+## <a name="creating-a-reset-function"></a>Création d’une fonction de réinitialisation
+Votre première tâche consiste à créer un blueprint de fonction qui remet une pièce d’échec à sa position d’origine dans la scène. 
 
-1.  Ouvrez **WhiteKing**. Dans le panneau **My Blueprint**, cliquez sur le bouton « + » en regard de la section **Functions** pour créer une fonction. Nommez cette fonction « Reset Location ». 
+1.  Ouvrez **WhiteKing**, cliquez sur l’icône **+** en regard de la section **Functions** de **My Blueprint**, puis nommez-la **Reset Location**. 
 
-2.  Dans le Blueprint **Reset Location** que vous venez de créer, faites glisser la broche d’exécution et relâchez-la n’importe où sur la grille du Blueprint pour appeler un nœud **SetActorRelativeTransform**. Cette fonction définit la transformation (position, rotation et échelle) d’un acteur par rapport à son parent. Nous allons utiliser cette fonction pour réinitialiser la position du roi sur l’échiquier, même si celui-ci a été déplacé de sa position d’origine. Créez un nœud **Make Transform** avec la position X = -26, Y = 4, Z = 0, et reliez-le à l’entrée New Relative Transform. 
+2.  Faites glisser l’exécution de **Drag and release** vers la grille Blueprint pour créer un nœud **SetActorRelativeTransform**. 
+    * Cette fonction définit la transformation (position, rotation et échelle) d’un acteur par rapport à son parent. Vous allez utiliser cette fonction pour réinitialiser la position du roi sur l’échiquier, même si celui-ci a été déplacé de sa position d’origine. 
+    
+3. Cliquez avec le bouton droit dans le graphique d’événements, sélectionnez **Make Transform**, puis déplacez-le en définissant le paramètre **Location** comme suit : **X =-26**, **Y = 4**, **Z = 0**.
+    * Connectez sa valeur de retour (**Return Value**) au repère **New Relative Transform** dans **SetActorRelativeTransform**. 
 
 ![Fonction Reset Location](images/unreal-uxt/5-function.PNG)
 
-3.  Compilez et enregistrez **WhiteKing**. Revenez dans la fenêtre principale. 
+**Compilez** et **enregistrez** le projet avant de revenir à la fenêtre principale. 
 
-## <a name="add-a-button"></a>Ajouter un bouton
 
-1.  Dans votre dossier **Blueprints**, créez un Blueprint dérivé de la classe SimpleButton. SimpleButton est un bouton 3D d’un acteur Blueprint qui est fourni dans le plug-in UX Tools. Nommez ce bouton « ResetButton » et double-cliquez pour ouvrir le Blueprint. 
+## <a name="adding-a-button"></a>Ajout d’un bouton
+Maintenant que la fonction est correctement configurée, la tâche suivante consiste à créer un bouton qui la déclenche quand le joueur appuie dessus. 
+
+1.  Cliquez sur **Add New > Blueprint Class**, développez la section **All Classes**, puis recherchez **SimpleButton**. 
+    * Nommez ce bouton **ResetButton** et double-cliquez pour ouvrir le blueprint.
+
+> [!NOTE]
+> **SimpleButton** est un bouton 3D d’un acteur Blueprint qui est intégré au plug-in UX Tools. . 
 
 ![Nouveau Blueprint dérivé de la classe SimpleButton](images/unreal-uxt/5-subclass.PNG)
 
-2.  Dans le volet **Components**, cliquez sur **PressableButton (Inherited)** . Dans le volet Details, faites défiler le contenu jusqu’à la section **Events**. Cliquez sur le bouton plus vert à côté de **On Button Pressed**. Cette action ajoute un événement **On Button Pressed** à l’Event Graph, qui est appelé quand l’utilisateur appuie sur le bouton. Maintenant, nous voulons appeler la fonction Reset Location de WhiteKing. Pour ce faire, nous devons d’abord obtenir une référence à l’acteur WhiteKing dans notre niveau. 
+2. Cliquez sur **PressableButton (Inherited)** dans le panneau **Components** et faites défiler le volet **Details** jusqu’à la section **Events**. 
+    * Cliquez sur le bouton vert **+** à côté de **On Button Pressed** pour ajouter un événement au graphique d’événements, qui est appelé quand le joueur appuie sur le bouton. 
+    
+À partir de là, vous devez appeler la fonction **Reset Location** de **WhiteKing**, qui a besoin d’une référence à l’acteur **WhiteKing** dans le niveau. 
 
-3.  Dans le volet **My Blueprint**, recherchez la section **Variables**, puis cliquez sur le bouton **+** pour ajouter une nouvelle variable. Nommez cette variable « WhiteKing ». Dans le volet Details, sélectionnez la liste déroulante à côté de **Variable Type**, recherchez « WhiteKing », puis sélectionnez **Object Reference**. Enfin, cochez la case **Instance Editable**. Cela permettra de définir la variable à partir du niveau principal (Main). 
+1.  Accédez à la section **Variables** du panneau **Details**, cliquez sur le bouton **+** , puis nommez la variable **WhiteKing**. 
+    * Sélectionnez la liste déroulante à côté de **Variable Type**, recherchez **WhiteKing**, puis sélectionnez **Object Reference**. 
+    * Cochez la case à côté de **Instance Editable**. Cela permettra de définir la variable à partir du niveau principal (Main). 
 
 ![Créer une variable](images/unreal-uxt/5-var.PNG)
 
-4.  Faites glisser la variable WhiteKing depuis **My Blueprint > Variables** vers l’Event Graph de Reset Button. Choisissez **Get WhiteKing**. 
+2.  Faites glisser la variable WhiteKing de **My Blueprint > Variables** vers le graphique d’événements de Reset Button et choisissez **Get WhiteKing**. 
 
-5.  Faites glisser la broche de sortie WhiteKing et relâchez-la pour placer un nouveau nœud. Sélectionnez la fonction **Reset Location**. Pour finir, faites glisser la broche d’exécution sortante depuis **On Button Pressed** vers la broche d’exécution entrante sur **Reset Location**. **Compilez** et **enregistrez** le Blueprint ResetButton, puis revenez dans la fenêtre principale. 
+## <a name="firing-the-function"></a>Déclenchement de la fonction
+Il ne reste plus qu’à déclencher expressément la fonction de réinitialisation dès lors que le joueur appuie sur le bouton.
+
+1.  Faites glisser la broche de sortie WhiteKing et relâchez-la pour placer un nouveau nœud. Sélectionnez la fonction **Reset Location**. Pour finir, faites glisser la broche d’exécution sortante depuis **On Button Pressed** vers la broche d’exécution entrante sur **Reset Location**. **Compilez** et **enregistrez** le Blueprint ResetButton, puis revenez dans la fenêtre principale. 
 
 ![Appeler la fonction Reset Location à partir de l’événement On Button Pressed](images/unreal-uxt/5-callresetloc.PNG)
 
-6.  Faites glisser **ResetButton** vers la fenêtre Viewport et définissez sa position sur X = 50, Y = -25, Z = 10. Sous **Default**, définissez la valeur de la variable WhiteKing sur **WhiteKing**.
+2.  Faites glisser **ResetButton** vers la fenêtre Viewport et définissez son emplacement sur **X = 50**, **Y = -25** et **Z = 10**. Sous **Default**, attribuez à la variable **WhiteKing** la valeur **WhiteKing**.
 
 ![Définir la variable](images/unreal-uxt/5-buttonlevel.PNG)
 
-Votre application de réalité mixte comporte maintenant un échiquier et une pièce saisissable, ainsi qu’un bouton opérationnel qui réinitialise la position de la pièce quand l’utilisateur appuie dessus. L’application terminée à ce stade est disponible sur [GitHub](https://github.com/microsoft/MixedReality-Unreal-Samples/tree/master/ChessApp). N’hésitez pas à aller plus loin que ce tutoriel et à configurer toutes les autres pièces du jeu d’échecs afin que leurs positions sur l’échiquier soient réinitialisées lorsque l’utilisateur appuie sur le bouton.
+Exécutez l’application, déplacez la pièce d’échec vers son nouvel emplacement, puis appuyez sur le gros bouton rose pour voir la logique de réinitialisation en action.
+
+Votre application de réalité mixte comporte maintenant un échiquier et une pièce avec laquelle vous pouvez interagir, ainsi qu’un bouton entièrement opérationnel qui réinitialise l’emplacement de la pièce. Vous trouverez l’application à ce stade d’avancement dans son dépôt [GitHub](https://github.com/microsoft/MixedReality-Unreal-Samples/tree/master/ChessApp). N’hésitez pas à aller au-delà de ce tutoriel et à configurer les autres pièces du jeu d’échecs en faisant en sorte que l’échiquier se réinitialise entièrement quand le joueur appuie sur le bouton.
 
 ![Scène finale dans la fenêtre Viewport](images/unreal-uxt/5-endscene.PNG)
+
+Vous êtes prêt à passer à la dernière section de ce tutoriel, dans laquelle vous allez apprendre à empaqueter et déployer correctement l’application sur un appareil ou un émulateur.
 
 [Section suivante : 6. Empaquetage et déploiement sur un appareil ou un émulateur](unreal-uxt-ch6.md)
