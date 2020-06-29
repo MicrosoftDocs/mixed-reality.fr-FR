@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: système de coordonnées, système de coordonnées spatiales, échelle mondiale, monde, échelle, position, orientation, ancre, ancre spatiale, verrouillage au monde, verrouillé au monde, partage
-ms.openlocfilehash: f65cf582db43399814737d581ece4694646a144c
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 8d270f96add795fdb54e0a91ebc9d38a34640da1
+ms.sourcegitcommit: 5612e8bfb9c548eac42182702cec87b160efbbfe
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438031"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85441786"
 ---
 # <a name="spatial-anchors"></a>Ancres spatiales
 
@@ -22,7 +22,7 @@ Vous pouvez également conserver et partager des ancres spatiales entre les sess
 * En utilisant des <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">ancres spatiales Azure</a> pour créer une ancre Cloud, votre application peut partager une ancre spatiale sur plusieurs appareils HoloLens, iOS et Android. Si chaque appareil effectue le rendu d’un hologramme à l’aide de la même ancre spatiale, les utilisateurs voient l’hologramme apparaître au même endroit dans le monde réel. Cette technique autorise les expériences partagées en temps réel.
 * Vous pouvez également utiliser <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">Azure Spatial Anchors</a> pour la persistance asynchrone des hologrammes sur les appareils HoloLens, iOS et Android. En partageant une ancre spatiale cloud durable, plusieurs appareils peuvent observer le même hologramme conservé au fil du temps, même si ces appareils ne sont pas présents ensemble en même temps.
 
-Pour les expériences à échelle permanente ou à l’échelle de l’espace pour les casques de bureau attachés qui restent dans un diamètre de 5 mètres, vous pouvez généralement utiliser le [cadre de la phase de référence](coordinate-systems.md#stage-frame-of-reference) au lieu des ancres spatiales, ce qui vous permet de disposer d’un système de coordonnées unique dans lequel restituer tout le contenu. Toutefois, si votre application a l’intention de laisser les utilisateurs se déplacer au-delà de 5 mètres dans HoloLens, peut-être en opérant tout au long d’un étage, vous aurez besoin d’ancres spatiales pour garantir la stabilité du contenu.
+Pour les expériences à échelle permanente ou à l’échelle de l’espace pour les casques de bureau attachés qui restent dans un diamètre de 5 mètres, vous pouvez généralement utiliser le [cadre de la phase de référence](coordinate-systems.md#stage-frame-of-reference) au lieu des ancres spatiales, ce qui vous permet de restituer tout le contenu. Toutefois, si votre application a l’intention de laisser les utilisateurs se déplacer au-delà de 5 mètres dans HoloLens, peut-être en opérant tout au long d’un étage, vous aurez besoin d’ancres spatiales pour garantir la stabilité du contenu.
 
 Bien que les ancres spatiales soient idéales pour les hologrammes qui doivent rester fixes dans le monde, une fois placée, une ancre ne peut pas être déplacée. Il existe des alternatives aux ancres qui sont plus appropriées pour les hologrammes dynamiques qui balisent avec l’utilisateur. Il est préférable de positionner les hologrammes dynamiques à l’aide d’un cadre de référence stationnaire (la base des coordonnées mondiales d’Unity) ou d’un cadre de référence attaché.
 
@@ -52,7 +52,7 @@ La principale restriction pour maintenir la stabilité des hologrammes consiste 
 
 ### <a name="render-highly-dynamic-holograms-using-the-stationary-frame-of-reference-instead-of-a-local-spatial-anchor"></a>Afficher les hologrammes hautement dynamiques à l’aide du cadre de référence stationnaire au lieu d’une ancre spatiale locale
 
-Si vous avez un hologramme très dynamique, tel qu’un personnage qui se trouve autour d’une pièce ou d’une interface utilisateur flottante qui suit le long du mur près de l’utilisateur, il est préférable d’ignorer les ancres spatiales locales et de rendre ces hologrammes directement dans le système de coordonnées fourni par le [ cadre de référence stationnaire](coordinate-systems.md#stationary-frame-of-reference). Pour ce faire, vous devez placer des hologrammes directement en coordonnées universelles sans WorldAnchor. Les hologrammes dans un cadre stationnaire peuvent être dérives lorsque l’utilisateur est éloigné de l’hologramme. Toutefois, cela est moins susceptible d’être perceptible pour les hologrammes dynamiques : l’hologramme se déplace constamment tout de même ou son mouvement le maintient constamment à proximité de l’utilisateur, où la dérive est réduite.
+Si vous avez un hologramme très dynamique, tel qu’un personnage qui se déplacent dans une pièce ou une interface utilisateur flottante qui suit le long du mur près de l’utilisateur, il est préférable d’ignorer les ancres spatiales locales et de rendre ces hologrammes directement dans le système de coordonnées fourni par le [cadre de référence stationnaire](coordinate-systems.md#stationary-frame-of-reference). Dans Unity, vous obtenez cela en plaçant des hologrammes directement en coordonnées universelles sans WorldAnchor. Les hologrammes dans un cadre stationnaire peuvent être dérives lorsque l’utilisateur est éloigné de l’hologramme. Toutefois, cela est moins susceptible d’être perceptible pour les hologrammes dynamiques : l’hologramme se déplace constamment tout de même ou son mouvement le maintient constamment à proximité de l’utilisateur, où la dérive est réduite.
 
 Un cas intéressant d’hologrammes dynamiques est un objet qui s’anime d’un système de coordonnées ancré à un autre. Par exemple, vous pouvez avoir deux mètres de 10 Castles séparés, chacun sur leur propre ancrage spatial avec un Castle déclenchant un Cannonball à l’autre Castle. Au moment où le Cannonball est activé, vous pouvez le rendre à l’emplacement approprié dans le cadre stationnaire de référence pour coïncider avec le Canon dans le système de coordonnées d’ancrage du premier Castle. Il peut ensuite suivre sa trajectoire dans le cadre stationnaire de référence quand il parcourt 10 mètres dans l’air. À mesure que le Cannonball atteint l’autre Castle, vous pouvez choisir de le déplacer dans le second système de coordonnées d’ancrage Castle pour permettre les calculs physiques avec les corps rigides de ce Castle.
 
@@ -71,7 +71,7 @@ Cela est particulièrement important pour les ancres locales que vous avez conse
 
 Pour les ancres spatiales cloud, votre stockage peut évoluer en fonction de votre scénario. Vous pouvez stocker autant d’ancres Cloud que nécessaire, en les libérant uniquement lorsque vous savez que vos utilisateurs n’auront plus besoin de localiser les hologrammes à ce point d’ancrage.
 
-## <a name="see-also"></a>Articles associés
+## <a name="see-also"></a>Voir aussi
 * [Systèmes de coordonnées](coordinate-systems.md)
 * [Expériences partagées dans Mixed Reality](shared-experiences-in-mixed-reality.md)
 * <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure Spatial Anchors</a>

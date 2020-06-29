@@ -62,14 +62,13 @@
 ### [Interaction par pointage du regard](eye-gaze-interaction.md)
 ## Éléments de l’expérience utilisateur
 ### [Vue d’ensemble](app-patterns-landingpage.md)
-### Style
+### Éléments fondamentaux
 #### [Couleurs, éclairage et matériaux](color-light-and-materials.md)
 #### [Mise à l’échelle](scale.md)
 #### [Typographie](typography.md)
-### Son spatial
-#### [Conception du son spatial](spatial-sound-design.md)
-#### [Étude de cas : Holotour ](case-study-spatial-sound-design-for-holotour.md)
-#### [Étude de cas : Roboraid](case-study-using-spatial-sound-in-roboraid.md)
+#### [Son](spatial-sound-design.md)
+##### [Étude de cas : Holotour ](case-study-spatial-sound-design-for-holotour.md)
+##### [Étude de cas : Roboraid](case-study-using-spatial-sound-in-roboraid.md)
 
 ### Contrôles et comportements
 #### [Curseurs](cursors.md)
@@ -81,13 +80,15 @@
 #### [Menu de la main](hand-menu.md)
 #### [Menu proche](near-menu.md)
 #### [Collection d’objets](object-collection.md)
-#### [Commande vocale](voice-input.md)
+#### [Entrée vocale](voice-input.md)
 #### [Clavier](keyboard.md)
 #### [Info-bulle](tooltip.md)
 #### [Tablette](slate.md)
 #### [Curseur](slider.md)
 #### [Nuanceur](shader.md)
+#### [Dialogue](dialog-ui.md)
 #### [Coach de main](hand-coach.md)
+#### [Maillage spatial](spatial-mesh-ux.md)
 #### [Billboarding et tag-along](billboarding-and-tag-along.md)
 #### [Affichage de la progression](progress.md)
 #### [Aimantation de surface](surface-magnetism.md)
@@ -98,12 +99,15 @@
 ### [Microsoft Maquette](https://www.maquette.ms)
 ### [Processus de création des ressources](asset-creation-process.md)
 ### [Concevoir vos propres environnements immersifs](add-custom-home-environments.md)
+
 # Développer
 ## [Découvrir les outils et l’architecture](development.md)
 ## [Installer les outils](install-the-tools.md)
+
 ## Services cloud de réalité mixte
 ### [Azure Remote Rendering](https://docs.microsoft.com/azure/remote-rendering)
 ### [Azure Spatial Anchors](https://docs.microsoft.com/azure/spatial-anchors)
+
 ## [Tutoriels et exemples d’applications](tutorials.md)
 ### Unity
 #### Tutoriels sur HoloLens 2
@@ -178,6 +182,7 @@
 #### [4. Rendre votre scène interactive](unreal-uxt-ch4.md)
 #### [5. Ajout d’un bouton et réinitialisation des emplacements de pièces](unreal-uxt-ch5.md)
 #### [6. Empaquetage et déploiement sur un appareil ou un émulateur](unreal-uxt-ch6.md)
+
 ## Unity
 ### [Vue d’ensemble du développement Unity](unity-development-overview.md)
 ### Mise en route
@@ -209,21 +214,25 @@
 #### [Utilisation de l’espace de noms Windows avec les applications Unity pour HoloLens](using-the-windows-namespace-with-unity-apps-for-hololens.md)
 #### [Objets natifs de réalité mixte dans Unity](unity-xrdevice-advanced.md)
 #### [Utilisation de Vuforia avec Unity](vuforia-development-overview.md)
+
 ## Unreal
 ### [Vue d’ensemble du développement Unreal](unreal-development-overview.md)
 ### [Suivi de la main dans Unreal](unreal-hand-tracking.md)
 ### [Entrée visuelle dans Unreal](unreal-gaze-input.md)
 ### [Mappage spatial dans Unreal](unreal-spatial-mapping.md)
+### [Son spatial dans Unreal](unreal-spatial-sound.md)
 ### [Ancres spatiales dans Unreal](unreal-spatial-anchors.md)
 ### [Entrée vocale dans Unreal](unreal-voice-input.md)
 ### [Appareil photo HoloLens dans Unreal](unreal-hololens-camera.md)
 ### [Codes QR dans Unreal](unreal-qr-codes.md)
 ### [Streaming dans Unreal](unreal-streaming.md)
 ### [Recommandations sur les performances pour Unreal](performance-recommendations-for-unreal.md)
+
 ## JavaScript
 ### [Vue d’ensemble du développement JavaScript](javascript-development-overview.md)
 ### [WebXR](webxr-overview.md)
 ### [WebVR](webvr-overview.md)
+
 ## Natif
 ### [Vue d’ensemble du développement natif](directx-development-overview.md)
 ### OpenXR
@@ -236,6 +245,7 @@
 #### [Création d’un projet holographique natif](creating-a-holographic-directx-project.md)
 #### [Obtention d’un HolographicSpace](getting-a-holographicspace.md)
 #### [Rendu natif](rendering-in-directx.md)
+
 ## API et fonctionnalités de la plateforme
 ### Fonctionnalités principales
 #### [Systèmes de coordonnées](coordinate-systems-in-directx.md)
@@ -286,12 +296,14 @@
 #### [Utilisation du portail d’appareil Windows](using-the-windows-device-portal.md)
 #### [Informations de référence sur les API du portail d’appareil](device-portal-api-reference.md)
 #### [Mode de recherche HoloLens](research-mode.md)
+
 ## Applications de portage
 ### [Portage de HTK/MRTK vers MRTK v2](mrtk-porting-guide.md)
 ### [Guide de portage pour les applications immersives](porting-guides.md)
 ### [Guide de portage des entrées pour Unity](input-porting-guide-for-unity.md)
 ### [Mise à jour de l’application SteamVR pour Windows Mixed Reality](updating-your-steamvr-application-for-windows-mixed-reality.md)
 ### [Mise à jour des applications UWP 2D pour la réalité mixte](building-2d-apps.md)
+
 # Distribuer
 ## [Guide de conception du lanceur d’applications 3D](3d-app-launcher-design-guidance.md)
 ## [Créer des modèles 3D à utiliser dans la page d’accueil](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md)

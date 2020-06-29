@@ -1,19 +1,19 @@
 ---
-title: Frame holographique
+title: Image holographique
 description: Les utilisateurs voient le monde de la réalité mixte via le cadre holographique.
 author: cre8ivepark
 ms.author: dongpark
-ms.date: 03/21/2018
+ms.date: 06/25/2020
 ms.topic: article
 keywords: HoloLens, Windows Mixed Reality, holographique Frame, champ of View
-ms.openlocfilehash: 2145ba3b13bbd903299ad342292dfa8f5c05c023
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 0eae511d6dcbe5b379c8368d8878df6114d805aa
+ms.sourcegitcommit: 5612e8bfb9c548eac42182702cec87b160efbbfe
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73434639"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85441766"
 ---
-# <a name="holographic-frame"></a>Frame holographique
+# <a name="holographic-frame"></a>Image holographique
 
 Les utilisateurs voient le monde de la réalité mixte par le biais d’une fenêtre d’affichage rectangulaire alimentée par leur casque. Sur l’appareil HoloLens, cette zone rectangulaire est appelée « image holographique » et permet aux utilisateurs de voir le contenu numérique superposé au monde réel qui les entoure. La conception d’expériences optimisées pour le frame holographique crée des opportunités, atténue les défis et améliore l’expérience utilisateur des applications de réalité mixte.
 
@@ -37,22 +37,7 @@ Les expériences de nombreux objets ou composants doivent envisager l’utilisat
 
 Une technique pour y parvenir consiste à fournir des points persistants (également appelés « points de repère ») dans l’expérience qui ancrent le contenu dans le monde réel. Par exemple, un repère peut être un objet physique dans le monde réel, tel qu’un tableau où du contenu numérique apparaît ou un objet numérique, tel qu’un ensemble d’écrans numériques où le contenu apparaît fréquemment. Les objets peuvent également être placés à la périphérie du cadre holographique pour encourager l’utilisateur à accéder au contenu de la clé, tandis que la découverte du contenu au-delà de la périphérie peut être facilitée par les [directeurs d’attention](holographic-frame.md#attention-directors).
 
-Placer des objets dans la périphérie peut inciter les utilisateurs à se pencher sur le côté et cela peut être aidé par les directeurs d’attention, comme décrit ci-dessous.
-
-<br>
-
----
-
-## <a name="user-comfort"></a>Confort de l’utilisateur
-
-Pour les expériences de réalité mixte avec des objets volumineux ou de nombreux objets, il est essentiel de prendre en compte la quantité de déplacement de la tête et du cou nécessaire pour interagir avec le contenu. Les expériences peuvent être divisées en trois catégories en termes de mouvement de la tête : **horizontal** (côte à côte), **verticale** (haut et vers le haut) ou **immersif** (à la fois horizontales et verticales). Dans la mesure du possible, limitez la majorité des interactions à des catégories horizontales ou verticales, idéalement, avec la plupart des expériences effectuées au centre du cadre holographique lorsque la tête de l’utilisateur se trouve dans une position neutre. Évitez les interactions qui obligent l’utilisateur à déplacer constamment son affichage vers une position en-tête non naturelle (par exemple, en recherchant toujours un accès à une interaction de menu clé).
-
-![région optimale pour le contenu est comprise entre 0 et 35 degrés en dessous de l’horizon](images/optimal-field-of-view-2.png)<br>
-*La région optimale pour le contenu est comprise entre 0 et 35 degrés en dessous de l’horizon*
-
-Le mouvement des têtes horizontales est plus [confortable](comfort.md) pour les interactions fréquentes, alors que les mouvements verticaux doivent être réservés pour les événements rares. Par exemple, une expérience impliquant une chronologie horizontale longue doit limiter le mouvement des têtes verticales pour les interactions (comme la recherche d’un menu).
-
-Envisagez d’encourager le mouvement du corps complet, plutôt que de simplement se déplacer, en plaçant des objets autour de l’espace de l’utilisateur. Les expériences avec déplacement d’objets ou de grands objets doivent prêter une attention particulière au mouvement de la tête, en particulier lorsqu’ils nécessitent un mouvement fréquent le long des axes horizontal et vertical.
+Placer des objets dans la périphérie peut inciter les utilisateurs à se pencher sur le côté et cela peut être aidé par les directeurs d’attention, comme décrit ci-dessous. Pour plus d’informations sur les considérations relatives aux cadres holographiques, consultez la rubrique [Comfort](comfort.md#holographic-frame-considerations) .
 
 <br>
 
@@ -76,7 +61,7 @@ Vous pouvez également envisager de placer des éléments d’interface directem
 
 ### <a name="gaze-and-gaze-targeting"></a>Cible du regard et du regard
 
-Le cadre holographique présente un outil permettant au développeur de déclencher des interactions, ainsi que de déterminer où se trouve l’attention d’un utilisateur. Le point de [regard](gaze-and-commit.md) est l’une des [interactions clés sur HoloLens](interaction-fundamentals.md), où le point de regard peut être couplé à des [gestes](gaze-and-commit.md#composite-gestures) (par exemple, une pression aérienne) ou une [voix](voice-input.md) (permettant des interactions plus courtes et plus naturelles). Ainsi, le frame holographique est à la fois un espace pour observer le contenu numérique, ainsi que pour interagir avec lui. Si l’expérience nécessite l’interaction avec plusieurs objets autour de l’espace de l’utilisateur (par exemple, la sélection multiple d’objets autour de l’espace de l’utilisateur avec le point de vue + geste), envisagez de placer ces objets dans l’affichage de l’utilisateur ou de limiter le nombre de têtes nécessaires. mouvement pour promouvoir le confort de l' [utilisateur](comfort.md).
+Le cadre holographique présente un outil permettant au développeur de déclencher des interactions, ainsi que de déterminer où se trouve l’attention d’un utilisateur. Le point de [regard](gaze-and-commit.md) est l’une des [interactions clés sur HoloLens](interaction-fundamentals.md), où le point de regard peut être couplé à des [gestes](gaze-and-commit.md#composite-gestures) (par exemple, une pression aérienne) ou une [voix](voice-input.md) (permettant des interactions plus courtes et plus naturelles). Ainsi, le frame holographique est à la fois un espace pour observer le contenu numérique, ainsi que pour interagir avec lui. Si l’expérience nécessite l’interaction avec plusieurs objets autour de l’espace de l’utilisateur (par exemple, la sélection de plusieurs objets autour de l’espace de l’utilisateur avec le point de vue + geste), envisagez de placer ces objets dans l’affichage de l’utilisateur ou de limiter le nombre de mouvements de tête nécessaires pour promouvoir le confort de l' [utilisateur](comfort.md).
 
 Vous pouvez également utiliser le point de regard pour suivre l’attention des utilisateurs via une expérience et voir quels objets ou parties de la scène l’utilisateur a payé le plus d’attention. Cela peut être particulièrement utile pour déboguer une expérience, permettant à des outils analytiques comme cartes thermiques de voir où les utilisateurs passent le plus de temps ou qui manquent certains objets ou interactions. Le suivi du regard peut également fournir un outil puissant pour les animateurs dans les expériences (Voir l’exemple [de cuisine de Lowe](holographic-frame.md#lowes-kitchen) ).
 
@@ -114,7 +99,7 @@ Une expérience de magasin de Lowe invite les clients à effectuer une maquette 
 
 Les surfaces physiques jouent le rôle d’éléments de repère statiques pour que l’utilisateur soit à l’origine de l’expérience, car l’Association d’un Lowe guide l’utilisateur à travers différentes options de produit et se termine. De cette façon, l’Association peut diriger oralement l’attention de l’utilisateur vers le « réfrigérateur » ou le centre de la cuisine pour présenter le contenu numérique.
 
-![l’Association d’un Lowe utilise une tablette pour guider les clients dans le processus HoloLens.](images/loweskitchen-750px.jpg)<br>
+![L’Association d’un Lowe utilise une tablette pour guider les clients dans le processus HoloLens.](images/loweskitchen-750px.jpg)<br>
 *L’Association d’un Lowe utilise une tablette pour guider les clients dans le processus HoloLens.*
 
 L’expérience de l’utilisateur est gérée, en partie, par une expérience de tablette contrôlée par l’Association de Lowe. Dans ce cas, une partie du rôle de l’Association serait également de limiter les déplacements excessifs, en dirigeant leur attention en douceur sur les points d’intérêt de la cuisine. L’expérience de tablette fournit également l’Association de Lowe à des données en regard sous la forme d’une vue carte thermique de la cuisine, en aidant à comprendre où l’utilisateur s’occupait (par exemple, dans une zone spécifique de cabinet) pour lui fournir plus précisément des instructions de remodelage.
@@ -129,7 +114,7 @@ Pour un examen approfondi de l’expérience de cuisine de Lowe, consultez le [d
 
 Dans les fragments de jeu HoloLens, vous vivez de l’espace est transformé en une scène de criminalité virtuelle montrant des indices et des preuves, ainsi qu’une salle de réunion virtuelle, où vous communiquez avec des caractères qui se trouvent sur vos chaises et qui se penchent sur vos murs.
 
-![fragments a été conçu pour être placé dans la page d’origine d’un utilisateur, avec des caractères qui interagissent avec des objets et des surfaces réels.](images/fragments-750px.jpg)<br>
+![Les fragments ont été conçus pour s’exécuter dans le Bureau d’un utilisateur, avec des caractères qui interagissent avec des objets et des surfaces réels.](images/fragments-750px.jpg)<br>
 *Les fragments ont été conçus pour s’exécuter dans le Bureau d’un utilisateur, avec des caractères qui interagissent avec des objets et des surfaces réels.*
 
 Lorsque les utilisateurs commencent à démarrer l’expérience, ils reçoivent une courte période d’ajustement, où très peu d’interaction est requise, et les encouragent à les regarder. Cela permet également de garantir que la salle est correctement mappée pour le contenu interactif du jeu.
@@ -144,19 +129,19 @@ Tout au long de l’expérience, les caractères deviennent des points de réfé
 
 Dans la destination : l’expérience mars dans le [Centre d’espace Kennedy de NASA](https://blogs.windows.com/devices/2016/09/19/hololens-experience-destination-mars-now-open-at-kennedy-space-center-visitor-complex/), les visiteurs ont été invités dans un voyage immersif à la surface de mars, guidé par la représentation virtuelle de légendaires. astronautes.
 
-![un aldrine d’oreille virtuel devient le point focal pour les utilisateurs dans la destination : mars.](images/destinationmars-750px.png)<br>
+![Un bourdonnement d’une vague virtuelle devient le point focal pour les utilisateurs dans la destination : mars.](images/destinationmars-750px.png)<br>
 *Un bourdonnement d’une vague virtuelle devient le point focal pour les utilisateurs dans la destination : mars.*
 
 Comme une expérience immersive, ces utilisateurs ont été encouragés à se pencher, en déplaçant leur tête dans toutes les directions pour voir le paysage Martian virtuel. Bien que pour garantir le confort des utilisateurs, le discours d’Aldrin et la présence virtuelle ont fourni un point focal tout au long de l’expérience. Cet enregistrement virtuel de l’oreille (créé par les [Studios de capture de réalité mixte de Microsoft](https://www.microsoft.com/mixed-reality/capture-studios)) s’approche de la taille réelle, dans le coin de la salle, permettant aux utilisateurs de le voir dans une vue presque complète. La narration de l’oreille a dirigé les utilisateurs à se concentrer sur les différents points de l’environnement (par exemple, un ensemble de roches Martians sur le plancher ou une montagne à distance) avec des changements de scènes spécifiques ou des objets qu’il introduit.
 
-![les narrateurs virtuels s’activent pour suivre le déplacement d’un utilisateur, créant ainsi un point focal puissant tout au long de l’expérience.](images/gazereset-750px.png)<br>
+![Les narrateurs virtuels s’allumeront pour suivre le déplacement d’un utilisateur, créant ainsi un point focal puissant tout au long de l’expérience.](images/gazereset-750px.png)<br>
 *Les narrateurs virtuels s’allumeront pour suivre le déplacement d’un utilisateur, créant ainsi un point focal puissant tout au long de l’expérience.*
 
 La représentation réaliste de l’oreille a fourni un point focal puissant, avec des techniques subtiles pour que l’utilisateur ait l’impression d’être là, en parlant. Quand l’utilisateur se déplace sur l’expérience, il passe à votre seuil avant de revenir à un État neutre si l’utilisateur se déplace trop loin au-delà de sa périphérie. Si l’utilisateur regarde complètement l’oreille (par exemple, pour regarder quelque part dans la scène), puis revenir à l’oreille, la position directionnelle du narrateur sera de nouveau axée sur l’utilisateur. Les techniques telles que celle-ci fournissent un bon sens d’immersion et créent un point focal dans le cadre holographique, réduisant ainsi le déplacement excessif et promouvant le confort de l' [utilisateur](comfort.md).
 
-## <a name="see-also"></a>Articles associés
+## <a name="see-also"></a>Voir aussi
 * [Interactions instinctuelles](interaction-fundamentals.md)
 * [Confort](comfort.md)
-* [Mettre à l’échelle](scale.md)
+* [Mise à l’échelle](scale.md)
 * [Suivre de la tête et stabiliser](gaze-and-dwell.md)
 * [Stabilité des hologrammes](hologram-stability.md)

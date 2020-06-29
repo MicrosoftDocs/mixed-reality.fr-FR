@@ -6,12 +6,12 @@ ms.author: szymons
 ms.date: 07/08/2019
 ms.topic: article
 keywords: Compréhension des scènes, mappage spatial, Windows Mixed Reality, Unity
-ms.openlocfilehash: eb2c6d88ce5a5ba637976a7d67abfdc2763c1674
-ms.sourcegitcommit: 7ca383ef1c5dc895ca2a289435f2e9d4c1ee6e65
+ms.openlocfilehash: 71b5509065ecf6fc700b7f448083754d330e9371
+ms.sourcegitcommit: 5612e8bfb9c548eac42182702cec87b160efbbfe
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85345679"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85441806"
 ---
 # <a name="scene-understanding-sdk-overview"></a>Présentation du SDK présentation de Scene
 
@@ -47,7 +47,7 @@ La partie gauche est un diagramme du runtime de réalité mixte qui est toujours
 
 Étant donné que chaque scène stocke ses données dans l’espace mémoire de votre application, vous pouvez supposer que toutes les fonctions de l’objet de la scène ou de ses données internes sont toujours exécutées dans le processus de votre application.
 
-### <a name="layout"></a>Layout
+### <a name="layout"></a>Mise en page
 
 Pour travailler avec la compréhension des scènes, il peut être utile de savoir et de comprendre comment le runtime représente des composants logiquement et physiquement. La scène représente des données avec une disposition spécifique qui a été choisie comme simple tout en conservant une structure sous-jacente qui est pliable pour répondre aux exigences futures sans avoir besoin de révisions majeures. Pour ce faire, la scène stocke tous les composants (blocs de construction pour tous les objets de scène) dans une liste plate et définit la hiérarchie et la composition par le biais de références où des composants spécifiques référencent d’autres.
 
@@ -311,6 +311,9 @@ Les Quad sont conçus pour faciliter les scénarios de positionnement 2D et doiv
 
 Les Quad présentent des étendues rectangulaires, mais elles représentent des surfaces 2D de forme arbitraire. Pour activer la position sur ces surfaces 2D qui interagissent avec les utilitaires de l’environnement 3D quads, vous pouvez faire en sorte que cette interaction soit possible. Actuellement, la compréhension des scènes fournit deux fonctions telles que **FindCentermostPlacement** et **GetOcclusionMask**. FindCentermostPlacement est une API de haut niveau qui localise une position sur le quadruple dans laquelle un objet peut être placé et tente de trouver le meilleur emplacement pour votre objet, garantissant que le cadre englobant que vous fournissez se trouvera sur la surface sous-jacente.
 
+> [!NOTE]
+> Les coordonnées de la sortie sont relatives au Quad dans « espace quadruple » avec le coin supérieur gauche (x = 0, y = 0), comme c’est le cas avec d’autres types de fenêtres Rect. Veillez à prendre cela en compte lorsque vous travaillez avec les origines de vos propres objets. 
+
 L’exemple suivant montre comment Rechercher l’emplacement positionnable centermost et ancrer un hologramme au quadruple.
 
 ```cs
@@ -341,7 +344,12 @@ foreach (var sceneObject in myScene.SceneObjects)
 }
 ```
 
-Les étapes 1-4 sont fortement dépendantes de votre infrastructure/implémentation particulière, mais les thèmes doivent être similaires. Il est important de noter que le quad représente simplement un plan 2D limité qui est localisé dans l’espace. En faisant savoir à votre moteur/infrastructure où se trouve le quad et la racine de vos objets par rapport au Quad, vos hologrammes se trouveront correctement en ce qui concerne le monde réel. Pour obtenir des informations plus détaillées, consultez nos exemples sur les quatre cœurs qui présentent des implémentations spécifiques.
+Les étapes 1-4 sont fortement dépendantes de votre infrastructure/implémentation particulière, mais les thèmes doivent être similaires. Il est important de noter que le quad représente simplement un plan 2D limité qui est localisé dans l’espace. En faisant savoir à votre moteur/infrastructure où se trouve le quad et la racine de vos objets par rapport au Quad, vos hologrammes se trouveront correctement en ce qui concerne le monde réel. 
+
+<!-- 
+// TODO: Add sample link when released
+For more detailed information please see our samples on quads which show specific implementations.
+-->
 
 ### <a name="mesh"></a>Maillage
 

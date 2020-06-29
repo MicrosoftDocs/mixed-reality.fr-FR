@@ -1,17 +1,17 @@
 ---
 title: Informations de référence sur les API du portail d’appareil
 description: Informations de référence sur l’API pour le portail de périphériques Windows sur HoloLens
-author: jonmlyons
-ms.author: jlyons
+author: hamalawi
+ms.author: moelhama
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, portail des appareils Windows, API
-ms.openlocfilehash: 17268c9a20d3da0ee90e5d6cead4342d3badf800
-ms.sourcegitcommit: f24ac845e184c2f90e8b15adab9addb913f5cb83
+ms.openlocfilehash: b9b9ada49b4f9810dc97c9da2873d4ccb60df424
+ms.sourcegitcommit: 5612e8bfb9c548eac42182702cec87b160efbbfe
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84451324"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85441796"
 ---
 # <a name="device-portal-api-reference"></a>Informations de référence sur les API du portail d’appareil
 
@@ -372,19 +372,19 @@ Paramètres facultatifs (HoloLens 2 uniquement)
 * Vstab : activer la stabilisation vidéo : true ou false (false par défaut)
 * vstabbuffer : latence de la mémoire tampon de stabilisation vidéo : de 0 à 30 frames (15 images par défaut)
 
-**/API/Holographic/Stream/Live.MP4 (récupération)**
+**/API/Holographic/Stream/live.mp4 (récupération)**
 
 Un flux 1280x720p 30fps 5Mbit.
 
-**/API/Holographic/Stream/live_high. MP4 (récupérer)**
+**/API/Holographic/Stream/live_high.mp4 (récupération)**
 
 Un flux 1280x720p 30fps 5Mbit.
 
-**/API/Holographic/Stream/live_med. MP4 (récupérer)**
+**/API/Holographic/Stream/live_med.mp4 (récupération)**
 
 Flux 854x480p 30fps 2,5 Mbits.
 
-**/API/Holographic/Stream/live_low. MP4 (récupérer)**
+**/API/Holographic/Stream/live_low.mp4 (récupération)**
 
 Flux 428x240p 15fps 0,6 Mbit.
 
@@ -534,7 +534,7 @@ Retourner les données
 Démarre une session de suivi WPR (performance)
 
 Paramètres
-* Profil : nom du profil. Les profils disponibles sont stockés dans perfprofiles/profiles. JSON
+* Profil : nom du profil. Les profils disponibles sont stockés dans perfprofiles/profiles.jssur
 
 Retourner les données
 * Dans Démarrer, retourne l’état de la session WPR.
