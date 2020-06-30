@@ -3,16 +3,16 @@ title: 4. Rendre votre scène interactive
 description: Quatrième tutoriel d’une série de six visant à créer une application de jeu d’échecs simple avec Unreal Engine 4 et le plug-in Mixed Reality Toolkit UX Tools
 author: hferrone
 ms.author: v-haferr
-ms.date: 5/5/2020
+ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, réalité mixte, tutoriel, bien démarrer, mrtk, uxt, UX Tools, documentation
-ms.openlocfilehash: a9de5755ab86c96322a8d50fecd7ba2cdea866d3
-ms.sourcegitcommit: 1b8090ba6aed9ff128e4f32d40c96fac2e6a220b
+ms.openlocfilehash: 62c0ff839718f7fda34bdc7560eae634fa37d44f
+ms.sourcegitcommit: 45da0a056fa42088ff81ccdd11232830fbe8430f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84330216"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84720335"
 ---
 # <a name="4-making-your-scene-interactive"></a>4. Rendre votre scène interactive
 

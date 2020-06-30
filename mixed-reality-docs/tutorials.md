@@ -8,12 +8,12 @@ ms.date: 10/22/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-unity, academy, tutoriel
-ms.openlocfilehash: e5961a178d571d2f71e98ff4c3c729d6feb0fd40
-ms.sourcegitcommit: 7011ac6fde80e5c45f04192fa1db6e1eb559e3b0
+ms.openlocfilehash: 57ddf1569ff87a278134eff0204942094b1cd014
+ms.sourcegitcommit: 4282d92e93869e4829338bdf7d981c3ee0260bfd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327959"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85216250"
 ---
 # <a name="tutorials-and-sample-apps"></a>Tutoriels et exemples d’applications
 
@@ -36,9 +36,15 @@ Les tutoriels HoloLens 2 sont conçus pour aider les développeurs à apprendre
 
 Les exemples d’applications open source sont des applications qui ont été créées par nos équipes. Nous fournissons le code source pour que les développeurs puissent l’examiner et tirer des enseignements de nos projets.
 
-* [Tableau périodique des éléments](periodic-table-of-the-elements.md)
+### <a name="hololens-2-open-source-sample-apps"></a>Exemples d’applications open source HoloLens 2
+* [Surfaces](sampleapp-surfaces.md)
+* [Tableau périodique des éléments 2.0](https://medium.com/@dongyoonpark/bringing-the-periodic-table-of-the-elements-app-to-hololens-2-with-mrtk-v2-a6e3d8362158)
+* [Galaxy Explorer 2.0](galaxy-explorer-update.md)
+
+### <a name="hololens-1st-gen-open-source-sample-apps"></a>Exemples d’applications open source HoloLens (1ère gen)
+* [Tableau périodique des éléments 1.0](periodic-table-of-the-elements.md)
+* [Galaxy Explorer 1.0](galaxy-explorer.md)
 * [Lunar Module](lunar-module.md)
-* [Galaxy Explorer](galaxy-explorer.md)
 
 ## <a name="mixed-reality-academy-tutorials"></a>Tutoriels Mixed Reality Academy
 
