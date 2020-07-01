@@ -6,12 +6,12 @@ ms.author: trferrel
 ms.date: 03/26/2019
 ms.topic: article
 keywords: Unity, paramètres, réalité mixte
-ms.openlocfilehash: 9b4e04e10e95f6c4f12a25a6f34236d9d2bf99a2
-ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
+ms.openlocfilehash: e7628a8653fffbab9c792161ac8ff1666b47fa62
+ms.sourcegitcommit: f523b74a549721b6bec69cb5d2eca5b7673a793c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81278007"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85570328"
 ---
 # <a name="recommended-settings-for-unity"></a>Paramètres recommandés pour Unity
 
@@ -25,11 +25,11 @@ Il est important de modifier les **paramètres de qualité des Unity** pour votr
 
 Dans Unity 2018 LTS +, le niveau de qualité du projet peut être défini par :
 
-Sous **modifier** > **paramètres du projet** > **qualité** > définir la **valeur par défaut** en cliquant sur la flèche vers le bas jusqu’au niveau de qualité **très faible**
+Sous **modifier**  >  **les paramètres du projet**  >  **Quality** > définir la **valeur par défaut** en cliquant sur la flèche vers le bas jusqu’au niveau de qualité **très faible**
 
 ### <a name="lighting-settings"></a>Paramètres d’éclairage
 
-À l’instar des paramètres de scène de qualité, il est important de définir des paramètres d’éclairage optimaux pour votre application de réalité mixte. Dans Unity, le paramètre d’éclairage qui aura généralement le plus grand impact sur les performances de votre scène est l' **éclairage global en temps réel**. Cette option peut être désactivée en cliquant sur **fenêtre** > **rendu** > **paramètres d’éclairage** > l' **éclairage global en temps réel**.
+À l’instar des paramètres de scène de qualité, il est important de définir des paramètres d’éclairage optimaux pour votre application de réalité mixte. Dans Unity, le paramètre d’éclairage qui aura généralement le plus grand impact sur les performances de votre scène est l' **éclairage global en temps réel**. Vous pouvez désactiver cette option en sélectionnant Paramètres d’éclairage de l’affichage de la **fenêtre**  >  **Rendering**  >  **Lighting Settings**  >  **éclairage global en temps réel**.
 
 Il existe un autre paramètre d’éclairage, un **éclairage global cuit**. Ce paramètre peut fournir des résultats performants et visuellement sur les casques immersifs, mais il n’est généralement pas applicable au développement HoloLens. Le **Illumniation global cuit** est calculé uniquement pour les GameObjects statiques qui sont généralement introuvables dans les scènes HoloLens en raison de la nature d’un environnement inconnu et en cours de modification.
 
@@ -44,18 +44,18 @@ Dans les applications de réalité mixte, la scène est restituée deux fois, un
 
 Pour activer cette fonctionnalité dans votre projet Unity
 
-1)  Ouvrez **Player XR Settings** (accédez à **Edit** > **Project Settings** > **Player** > **XR Settings**).
-2) Sélectionnez **Single Pass Instanced** dans le menu déroulant **Stereo Rendering Method** (la case **Virtual Reality Supported** doit être cochée).
+1)  Ouvrez les **paramètres du XR de lecteur** (accédez à **modifier**les paramètres du  >  **projet**paramètres du  >  **Player**  >  **XR**de lecteur)
+2) Sélectionnez **une instance de passe unique** dans le menu déroulant **méthode de rendu stéréo** (la case à cocher de**la réalité virtuelle** doit être activée)
 
 Lisez les articles suivants sur Unity pour plus d’informations sur cette approche de rendu.
 
-- [How to maximize AR and VR performance with advanced stereo rendering](https://blogs.unity3d.com/2017/11/21/how-to-maximize-ar-and-vr-performance-with-advanced-stereo-rendering/)
-- [Single Pass Instancing](https://docs.unity3d.com/Manual/SinglePassInstancing.html)
+- [Optimisation des performances de l’AR et du VR avec un rendu stéréo avancé](https://blogs.unity3d.com/2017/11/21/how-to-maximize-ar-and-vr-performance-with-advanced-stereo-rendering/)
+- [Instanciation à passage unique](https://docs.unity3d.com/Manual/SinglePassInstancing.html)
 
 >[!NOTE]
-> Un problème courant avec le rendu d’instance à passage unique se produit si les développeurs ont déjà des nuanceurs personnalisés existants non écrits pour l’instanciation. Une fois cette fonctionnalité activée, les développeurs peuvent remarquer que certains GameObjects ne sont rendus que dans un seul œil. Cela est dû au fait que les nuanceurs personnalisés associés n’ont pas les propriétés appropriées pour l’instanciation.
+> Un problème courant avec un rendu d’instance à passage unique se produit si les développeurs possèdent déjà des nuanceurs personnalisés existants non écrits pour l’instanciation. Une fois cette fonctionnalité activée, les développeurs peuvent remarquer que certains GameObjects ne s’affichent qu’en un seul œil. Cela est dû au fait que les nuanceurs personnalisés associés n’ont pas les propriétés appropriées pour l’instanciation.
 >
-> Consultez [Single Pass Stereo Rendering for HoloLens](https://docs.unity3d.com/Manual/SinglePassStereoRenderingHoloLens.html) sur Unity pour savoir comment résoudre ce problème.
+> Consultez [rendu stéréo à passage unique pour HoloLens](https://docs.unity3d.com/Manual/SinglePassStereoRenderingHoloLens.html) à partir d’Unity pour savoir comment résoudre ce problème
 
 ### <a name="enable-depth-buffer-sharing"></a>Activer le partage de mémoire tampon de profondeur
 
@@ -63,8 +63,8 @@ Pour obtenir une meilleure stabilité de l’hologramme à partir de la percepti
 
 Pour activer cette fonctionnalité dans votre projet Unity
 
-1) Ouvrez **Player XR Settings** (accédez à **Edit** > **Project Settings** > **Player** > **XR Settings**).
-2) Activez la case à cocher **activer le partage de tampons de profondeur** dans les kits de développement logiciel (SDK) de **réalité virtuelle** > la case à cocher expansion de la **réalité mixte** (**Really Supported** )
+1) Ouvrez les **paramètres du XR de lecteur** (accédez à **modifier**les paramètres du  >  **projet**paramètres du  >  **Player**  >  **XR**de lecteur)
+2) Activez la case à cocher **activer le partage de tampons de profondeur** dans les kits de développement logiciel (SDK) **Virtual Real**  >  expansion**Windows Mixed realisation** (la case à cocher**Virtual Really Supported**
 
 En outre, il est recommandé de sélectionner **profondeur de 16 bits** sous le paramètre **format de profondeur** dans ce panneau, en particulier pour le développement HoloLens. La sélection de 16 bits comparée à 24 bits réduit considérablement les besoins en bande passante, car moins de données devront être déplacées/traitées.
 
@@ -78,14 +78,14 @@ Si vous utilisez le [nuanceur standard](https://github.com/microsoft/MixedRealit
 > [!IMPORTANT]
 > Les développeurs doivent être attentifs à la lutte Z lors de la modification de ces valeurs avec les paramètres du plan proche/Far de l’appareil photo. Z-combat se produit lorsque deux Gameobjects essaient de s’afficher sur le même pixel et en raison de limitations de fidélité du tampon de profondeur (par exemple, profondeur z), Unity ne peut pas déterminer quel objet est devant l’autre. Les développeurs notent un scintillement entre deux objets de jeu lorsqu’ils *luttent contre* la même valeur de profondeur z. Cela peut être résolu en basculant au format de profondeur 24 bits, car il y aura une plus grande plage de valeurs pour chaque objet à calculer pour la profondeur z de l’appareil photo.
 >
-> Toutefois, il est recommandé, en particulier pour le développement HoloLens, de modifier les plans presque et Far de l’appareil photo vers une plage plus petite plutôt que de conserver le format de profondeur 16 bits. La profondeur z est mappée de manière non linéaire à la plage de valeurs le long des plans de caméra near et Far. Vous pouvez modifier cette valeur en sélectionnant la *caméra principale* dans votre scène et sous **Inspector**, en remontant le **plan de découpage proche & FAR** pour réduire leur plage (c.-à-d. de 1000MD à 100 m ou à une autre valeur x, etc.)
+> Toutefois, il est recommandé, en particulier pour le développement HoloLens, de modifier les plans presque et Far de l’appareil photo vers une plage plus petite plutôt que de conserver le format de profondeur 16 bits. La profondeur z est mappée de manière non linéaire à la plage de valeurs le long des plans de caméra near et Far. Vous pouvez modifier cette valeur en sélectionnant la *caméra principale* dans votre scène et sous **Inspector**, en remontant le **plan de découpage proche & Far** pour réduire leur plage (c.-à-d. de 1000MD à 100 m ou à une autre valeur x, etc.)
 
 >[!IMPORTANT]
 > [Unity ne crée pas de tampon de stencil lors de](https://docs.unity3d.com/ScriptReference/RenderTexture-depth.html) l’utilisation du format de profondeur 16 bits. Ainsi, certains effets d’interface utilisateur Unity et d’autres effets requis par stencil ne fonctionneront pas, à moins que le format de profondeur 24 bits ne soit sélectionné, ce qui créera une [mémoire tampon de stencil de 8 bits](https://docs.unity3d.com/Manual/SL-Stencil.html).
 
 ### <a name="building-for-il2cpp"></a>Génération pour IL2CPP
 
-Unity a déconseillé la prise en charge du backend de script .NET et recommande donc que les développeurs utilisent **IL2CPP** pour leurs builds Visual Studio UWP. Bien que cela offre différents avantages, la génération de votre solution Visual Studio à partir d’Unity pour **Il2CPP** peut être considérablement plus lente que l’ancienne méthode .net. Par conséquent, il est fortement recommandé de suivre les meilleures pratiques en matière de création de **IL2CPP** pour économiser l’heure de l’itération de développement.
+Unity a déconseillé la prise en charge du backend de script .NET et recommande donc que les développeurs utilisent **IL2CPP** pour leurs builds Visual Studio UWP. Bien que cela offre différents avantages, la génération de votre solution Visual Studio à partir d’Unity pour **IL2CPP** peut être considérablement plus lente que l’ancienne méthode .net. Par conséquent, il est fortement recommandé de suivre les meilleures pratiques en matière de création de **IL2CPP** pour économiser l’heure de l’itération de développement.
 
 1) Tirez parti de la création incrémentielle en générant votre projet dans le même répertoire à chaque fois, en réutilisant les fichiers prédéfinis
 2) Désactiver les analyses logicielles anti-programme malveillant pour votre projet & les dossiers de build
@@ -108,7 +108,7 @@ HoloLens possède un processeur et un GPU de classe mobile, ce qui signifie que 
 
 Pour activer/désactiver l’écran de démarrage holographique :
 
-1) Accédez à **modifier** > **paramètres du projet** > page du **lecteur**
+1) Aller à la page **modifier**les  >  **paramètres du projet**, page du  >  **lecteur**
 2) Cliquez sur l’onglet **Windows Store** et ouvrez la section **image de démarrage** .
 3) Appliquez l’image souhaitée sous la propriété **image de démarrage holographique Windows holographique >** .
     - Le fait de basculer l’option **afficher l’écran de démarrage Unity** active ou désactive l’écran de démarrage de la personnalisation Unity. Si vous ne disposez pas d’une licence Pro Unity, l’écran de démarrage de la personnalisation Unity s’affiche toujours.
@@ -116,9 +116,9 @@ Pour activer/désactiver l’écran de démarrage holographique :
 
 |  Afficher l’écran de démarrage Unity  |  Image de démarrage holographique  |  Comportement |
 |----------|----------|----------|
-|  Activé  |  Aucune  |  Affiche l’écran de démarrage Unity par défaut pendant 5 secondes ou jusqu’à ce que l’application soit chargée, selon la valeur la plus longue. |
+|  Activé  |  None  |  Affiche l’écran de démarrage Unity par défaut pendant 5 secondes ou jusqu’à ce que l’application soit chargée, selon la valeur la plus longue. |
 |  Activé  |  Personnalisé  |  Affichez l’écran de démarrage personnalisé pendant 5 secondes ou jusqu’à ce que l’application soit chargée, selon la valeur la plus longue. |
-|  Désactivé  |  Aucune  |  Affichez le noir transparent (rien) jusqu’à ce que l’application soit chargée. |
+|  Désactivé  |  None  |  Affichez le noir transparent (rien) jusqu’à ce que l’application soit chargée. |
 |  Désactivé  |  Personnalisé  |  Affichez l’écran de démarrage personnalisé pendant 5 secondes ou jusqu’à ce que l’application soit chargée, selon la valeur la plus longue. |
 
 Pour plus d’informations, consultez la [documentation de l’écran de démarrage d’Unity](https://docs.unity3d.com/Manual/class-PlayerSettingsSplashScreen.html) .
@@ -131,7 +131,7 @@ Si une perte de suivi se produit, le comportement par défaut d’Unity consiste
 
 Pour personnaliser l’image de suivi perdu :
 
-1) Accédez à **modifier** > **paramètres du projet** > page du **lecteur**
+1) Aller à la page **modifier**les  >  **paramètres du projet**, page du  >  **lecteur**
 2) Cliquez sur l’onglet **Windows Store** et ouvrez la section **image de démarrage** .
 3) Appliquez l’image souhaitée sous la propriété image de la **perte de suivi de > Windows holographique** .
 
@@ -141,7 +141,7 @@ Certaines applications peuvent ne pas nécessiter de suivi (par exemple, des [ap
 
 Pour refuser le comportement de pause automatique :
 
-1) Accédez à la page **modifier** les **paramètres du projet** >  > **Player**
+1) Accéder à la **page Modifier**les paramètres du  >  **projet**  >  **Player**
 2) Cliquez sur l’onglet **Windows Store** et ouvrez la section **image de démarrage** .
 3) Modifiez la case à cocher **Windows holographique > en cas de suspension de perte de suivi et d’affichage d’image** .
 
@@ -149,19 +149,19 @@ Pour refuser le comportement de pause automatique :
 
 Pour définir un comportement personnalisé lorsque le suivi est perdu, gérez les [événements de perte de suivi](tracking-loss-in-unity.md)global.
 
-### <a name="capabilities"></a>Capacités
+### <a name="capabilities"></a>Fonctionnalités
 
 Pour qu’une application tire parti de certaines fonctionnalités, elle doit déclarer les fonctionnalités appropriées dans son manifeste. Les déclarations de manifeste peuvent être effectuées dans Unity afin qu’elles soient incluses dans chaque exportation de projet suivante.
 
 Les fonctionnalités peuvent être activées pour une application de réalité mixte en :
 
-1) Accédez à **modifier** > **paramètres du projet** > page du **lecteur**
+1) Aller à la page **modifier**les  >  **paramètres du projet**, page du  >  **lecteur**
 2) Cliquez sur l’onglet **Windows Store** , ouvrez la section **paramètres de publication** et recherchez la liste des **fonctionnalités** .
 
 Les fonctionnalités applicables pour activer les API couramment utilisées pour les applications holographiques sont les suivantes :
 <br>
 
-|  Capability  |  API nécessitant des fonctionnalités |
+|  Fonctionnalité  |  API nécessitant des fonctionnalités |
 |----------|----------|
 |  SpatialPerception  |  SurfaceObserver |
 |  WebCam  |  PhotoCapture et VideoCapture |
@@ -172,5 +172,5 @@ Les fonctionnalités applicables pour activer les API couramment utilisées pour
 ## <a name="see-also"></a>Voir aussi
 
 * [Vue d’ensemble du développement Unity](unity-development-overview.md)
-* [Comprendre les performances pour la réalité mixte](understanding-performance-for-mixed-reality.md)
+* [Comprendre les performances de la réalité mixte](understanding-performance-for-mixed-reality.md)
 * [Recommandations de performances pour Unity](performance-recommendations-for-unity.md)

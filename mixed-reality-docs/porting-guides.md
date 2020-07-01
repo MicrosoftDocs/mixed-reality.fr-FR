@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 10/02/2018
 ms.topic: article
 keywords: port, Portage, Unity, intergiciel, moteur, UWP
-ms.openlocfilehash: 06501742d4b5c30036982deef2ec2a88171912bf
-ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
+ms.openlocfilehash: 73126ae90ed12988177cc9192b7db41bae30fcc2
+ms.sourcegitcommit: f523b74a549721b6bec69cb5d2eca5b7673a793c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81278037"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85570320"
 ---
 # <a name="porting-guides"></a>Guides en matière de portage
 
@@ -70,9 +70,10 @@ Avec toute mise à jour Unity, il est probable que vous deviez mettre à jour un
 ### <a name="unity-step-4-target-your-application-to-run-on-universal-windows-platform-uwp"></a>Étape 4 : cibler votre application pour qu’elle s’exécute sur plateforme Windows universelle (UWP)
 
 Après avoir installé les outils, vous devez faire en sorte que votre application s’exécute en tant qu’application Windows universelle.
+
 * Suivez les [instructions pas à pas détaillées](https://unity3d.com/partners/microsoft/porting-guides) fournies par Unity. Veuillez noter que vous devez rester sur la toute dernière version de LTS (n’importe quelle version de 20xx. 4) pour Windows MR.
 * Pour plus d’informations sur les ressources de développement UWP, consultez le [Guide de développement de jeux Windows 10](https://docs.microsoft.com/windows/uwp/gaming/e2e).
-* Notez que Unity continue d’améliorer la prise en charge de IL2CPP ; IL2CPP rend certains ports UWP beaucoup plus faciles. Si vous ciblez actuellement le serveur principal de script .net, vous devez envisager de convertir pour tirer parti du backend IL2CPP à la place.
+* Notez que Unity continue d’améliorer la prise en charge de IL2CPP ; IL2CPP rend certains ports UWP beaucoup plus faciles. Si vous ciblez actuellement le serveur principal de script .NET, vous devez envisager de convertir pour tirer parti du backend IL2CPP à la place.
 
 Remarque : Si votre application a des dépendances sur des services spécifiques aux appareils, comme la mise en correspondance à partir de la vapeur, vous devez les désactiver à cette étape. À un moment ultérieur, vous pouvez raccorder les services équivalents fournis par Windows.
 
@@ -104,7 +105,7 @@ XRDevice.SetTrackingSpaceType(TrackingSpaceType.Stationary);
 
 Définit le système de coordonnées universelles de Unity pour suivre le [cadre stationnaire de référence](coordinate-systems.md#spatial-coordinate-systems). Dans le mode de suivi fixe, le contenu placé dans l’éditeur juste devant l’emplacement par défaut de l’appareil photo (Forward is-Z) s’affiche devant l’utilisateur au lancement de l’application. Pour recentrer l’origine assise de l’utilisateur, vous pouvez appeler XR de l’unité [. Méthode InputTracking. recenter](https://docs.unity3d.com/ScriptReference/XR.InputTracking.Recenter.html) .
 
-Si vous effectuez une mise à l' **échelle permanente** ou une **expérience**de mise à l’échelle de l’espace, vous allez placer du contenu par rapport à l’étage. Vous avez raison de l’étage de l’utilisateur à l’aide de la **[Phase spatiale](coordinate-systems.md#spatial-coordinate-systems)** , qui représente l’origine de l’utilisateur et la limite facultative de l’espace, configurées lors de la première exécution. Pour ces expériences, vous devez vous assurer que Unity est défini sur le type d’espace de suivi **RoomScale** . Alors que RoomScale est la valeur par défaut, vous pouvez le définir explicitement et vous assurer que vous obtenez la valeur true, afin d’intercepter les situations où l’utilisateur a déplacé son ordinateur hors de la salle qu’il a étalonnée :
+Si vous effectuez une mise à l' **échelle permanente** ou une **expérience**de mise à l’échelle de l’espace, vous allez placer du contenu par rapport à l’étage. Vous avez raison de l’étage de l’utilisateur à l’aide de la **[Phase spatiale](coordinate-systems.md#spatial-coordinate-systems)**, qui représente l’origine de l’utilisateur et la limite facultative de l’espace, configurées lors de la première exécution. Pour ces expériences, vous devez vous assurer que Unity est défini sur le type d’espace de suivi **RoomScale** . Alors que RoomScale est la valeur par défaut, vous pouvez le définir explicitement et vous assurer que vous obtenez la valeur true, afin d’intercepter les situations où l’utilisateur a déplacé son ordinateur hors de la salle qu’il a étalonnée :
 
 ```cs
 if (XRDevice.SetTrackingSpaceType(TrackingSpaceType.RoomScale))
