@@ -7,12 +7,12 @@ ms.date: 02/24/2019
 ms.topic: article
 keywords: Portail d’appareil Windows, HoloLens
 ms.localizationpriority: high
-ms.openlocfilehash: 4c84670e616d822bb8a9701a82f779a66ec19fe1
-ms.sourcegitcommit: f24ac845e184c2f90e8b15adab9addb913f5cb83
+ms.openlocfilehash: 234f8a5f2550c4437445ec3ac2726a3588f8bdbe
+ms.sourcegitcommit: 5612e8bfb9c548eac42182702cec87b160efbbfe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84451357"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85441839"
 ---
 # <a name="using-the-windows-device-portal"></a>Utilisation du portail d’appareil Windows
 
@@ -44,8 +44,12 @@ Cette documentation concerne spécifiquement le portail d’appareil Windows pou
 ## <a name="connecting-over-wi-fi"></a>Connexion Wi-Fi
 
 1. [Connectez votre appareil HoloLens au Wi-Fi](connecting-to-wi-fi-on-hololens.md).
-2. Recherchez l’adresse IP de votre appareil.
-   * L’adresse IP de l’appareil se trouve sous **Paramètres > Réseau et Internet > Wi-Fi > Options avancées**.
+2. Recherchez l’adresse IP de votre appareil en effectuant l’une des opérations suivantes :
+   * Accédez à **Paramètres > Réseau et Internet > Wi-Fi > Options avancées**.
+   * Accédez à **Paramètres > Réseau et Internet** et sélectionnez **Propriétés matérielles**.
+
+![Paramètres HoloLens 2](images/windows-device-portal-img-16.png)
+
 3. Sur votre PC, dans un navigateur web, accédez à https://<ADRESSE_IP_DE_VOTRE_APPAREIL_HOLOLENS>
    * Le navigateur affichera le message suivant : « Le certificat de sécurité de ce site web présente un problème ». Cela se produit car le certificat envoyé à Device Portal est un certificat de test. Vous pouvez ignorer cette erreur de certificat pour le moment et continuer.
 
@@ -175,6 +179,7 @@ Utilisez la page MRC pour enregistrer les flux multimédias issus du casque Holo
 * **Photos et vidéos** : affiche une liste des captures photo et vidéo prises sur l’appareil.
 
 Tous les paramètres de cette page s’appliquent aux captures effectuées à l’aide du Portail d’appareil Windows, mais d’autres s’appliquent également à System MRC (menu de démarrage, boutons physiques, commandes vocales globales, Miracast) et aux enregistreurs MRC personnalisés.
+
 |  Paramètre  |  S’applique à System MRC  |  S’applique aux enregistreurs MRC personnalisés |
 |----------|----------|----------|
 |  Hologrammes  |  Non  |  Non |

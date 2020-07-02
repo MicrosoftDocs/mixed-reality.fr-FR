@@ -3,18 +3,20 @@ title: Confort
 description: Dans le processus de vision naturelle, le système visuel humain s’appuie sur plusieurs sources d’informations, ou « signaux », pour interpréter les formes 3D et la position relative des objets.
 author: erickjpaul
 ms.author: erpau
-ms.date: 04/5/2019
+ms.date: 06/25/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Réalité mixte, conception, confort, HoloLens 2, HoloLens (1ère génération)
-ms.openlocfilehash: 178044ce8c76de75b7cce5e10664ce65d108f0f8
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+ms.openlocfilehash: 12dc632e4cba925abb1c4ac9e17364f94a6804c9
+ms.sourcegitcommit: 5612e8bfb9c548eac42182702cec87b160efbbfe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "79376066"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85441816"
 ---
 # <a name="comfort"></a>Confort
+
+## <a name="overview"></a>Vue d’ensemble
 
 Dans le processus de vision naturelle, le système visuel humain s’appuie sur plusieurs sources d’informations, ou « signaux », pour interpréter les formes 3D et la position relative des objets. Certains signaux ne reposent que sur un œil (signaux monoculaires). C’est le cas de la [perspective linéaire](https://en.wikipedia.org/wiki/Perspective_(graphical)), de la [taille familière](https://en.wikipedia.org/wiki/Size#Perception_of_size), de l’occlusion, du [flou de profondeur de champ](https://en.wikipedia.org/wiki/Depth_of_field) et de l’[accommodation](https://en.wikipedia.org/wiki/Accommodation_(eye)). D’autres signaux reposent sur les deux yeux (signaux binoculaires). Il s’agit notamment de la [vergence](https://en.wikipedia.org/wiki/Vergence) (rotations oculaires relatives qui sont nécessaires pour regarder un objet) et de la [disparité binoculaire](https://en.wikipedia.org/wiki/Stereopsis) (différences entre les projections de la scène sur la rétine de chaque œil). Pour garantir un confort maximal sur les afficheurs placés sur la tête, il est important que les concepteurs et les développeurs créent du contenu et le présentent d’une manière qui imite le fonctionnement de ces indicateurs dans le monde naturel. D’un point de vue physique, il est également important de concevoir du contenu qui ne nécessite pas de mouvements fatigants du cou ou des bras. Dans cet article, nous allons voir comment atteindre ces objectifs.
 
@@ -125,37 +127,28 @@ Dans les jeux vidéos de tir à la première personne, l’affichage tête haute
 
 ## <a name="text-legibility"></a>Lisibilité du texte
 
-Une lisibilité optimale du texte peut réduire la fatigue oculaire et assurer le confort visuel des utilisateurs, en particulier dans les applications ou les scénarios qui obligent les utilisateurs à lire dans un casque audiovisuel. La lisibilité du texte dépend de divers facteurs, notamment des propriétés d’affichage (par exemple, la densité de pixels, la luminosité, le contraste), des propriétés des verres (aberration chromatique, etc.), ainsi que des propriétés du texte et de la police (par exemple, les caractéristiques de police telles que l’épaisseur, l’espacement des caractères, les sérifs, la couleur de la police, la couleur de l’arrière-plan, etc.).  
+Une lisibilité optimale du texte peut réduire la fatigue oculaire et assurer le confort visuel des utilisateurs, en particulier dans les applications ou les scénarios qui obligent les utilisateurs à lire quand ils se servent d’un casque audiovisuel. La lisibilité du texte dépend de divers facteurs, notamment :
+* Les propriétés d’affichage telles que la densité des pixels, la luminosité et le contraste. 
+* Les propriétés des lentilles comme les aberrations chromatiques.
+* Les propriétés de texte/police telles que le poids, l’espacement, les empattements et la couleur de police/d’arrière-plan.  
 
-En général, nous vous recommandons de tester la lisibilité sur certaines applications et d’agrandir autant que possible les tailles de police pour un confort visuel maximal. Vous trouverez ci-dessous des recommandations générales qui vous serviront de point de départ pour le développement. Notez que toutes les tailles de police sont indiquées comme des degrés d’[angle visuel](https://en.wikipedia.org/wiki/Visual_angle) plutôt que comme des tailles physiques. Cela fournit des indications de distance au sein de la zone de positionnement optimal des hologrammes, car cela tient compte à la fois de la taille du texte et de la distance à laquelle il s’affiche pour l’utilisateur. 
+En général, nous vous recommandons de tester la lisibilité sur certaines applications et d’agrandir autant que possible les tailles de police pour un confort visuel maximal. Vous trouverez des conseils plus détaillés sur les appareils holographiques et immersifs dans nos pages [Typographie](typography.md) et [Texte dans Unity](text-in-unity.md).
 
-Pour obtenir des instructions plus détaillées, consultez [Typographie](typography.md) et [Texte dans Unity](text-in-unity.md).
+## <a name="holographic-frame-considerations"></a>Considérations relatives aux cadres holographiques
 
-### <a name="guidance-for-holographic-devices"></a>Conseils pour les appareils holographiques
+Pour les expériences de réalité mixte avec des objets volumineux ou nombreux, il est essentiel de prendre en compte l’étendue du déplacement de la tête et du cou nécessaire pour interagir avec le contenu. En termes de mouvement de la tête, les expériences peuvent être divisées en trois catégories : 
+* **Horizontales** (d’un côté à l’autre)
+* **Verticales** (vers le haut et vers le bas)
+* **Immersives** (à la fois horizontales et verticales)
+ 
+Dans la mesure du possible, limitez la plupart des interactions aux catégories horizontales ou verticales. Dans l’idéal, la plupart des expériences doivent avoir lieu au centre du cadre holographique quand la tête de l’utilisateur se trouve dans une position neutre. Évitez les interactions qui obligent l’utilisateur à déplacer constamment sa vue dans une position de tête non naturelle (par exemple, regarder tout le temps en haut pour accéder à une interaction de menu essentielle).
 
-Pour les appareils holographiques, l’affichage de texte noir/foncé sur un arrière-plan blanc/clair fournit le rapport de contraste le plus cohérent, car l’arrière-plan va occulter les interférences du monde réel à l’arrière de l’affichage. L’affichage de texte blanc/clair sur un arrière-plan noir/foncé permet davantage à l’environnement réel de transparaître, ce qui peut interférer avec la lisibilité du texte. 
+![La région optimale pour le contenu est comprise entre 0 et 35 degrés en dessous de l’horizon](images/optimal-field-of-view-2.png)<br>
+*La région optimale pour le contenu est comprise entre 0 et 35 degrés en dessous de l’horizon*
 
-#### <a name="hololens-1st-gen"></a>HoloLens (1ère génération)
+Les mouvements horizontaux de la tête conviennent davantage aux interactions fréquentes, tandis que les mouvements verticaux doivent être réservés aux événements rares. Par exemple, une expérience impliquant une longue chronologie horizontale doit limiter le mouvement vertical de la tête aux interactions (comme la recherche d’un menu).
 
-La taille de police minimale pour la lisibilité (mesurée de la ligne de base au jambage ascendant) est d’environ 0,35 °, et une taille de police confortable doit être d’au moins 0,5 ° pour permettre la lecture d’un contenu présenté à une distance de 2 mètres de l’utilisateur. 
-
-#### <a name="hololens-2"></a>HoloLens 2
-
-La taille de police minimale pour la lisibilité (mesurée de la ligne de base au jambage ascendant) doit être au moins égale à environ : 
-   - 0,4 °-0,5 ° à 45 cm (distance de manipulation directe) 
-   - 0,35 °-0,4 ° à 2 mètres
-   
-La taille de police confortable pour la lisibilité (mesurée de la ligne de base au jambage ascendant) doit être au moins égale à environ : 
-   - 0,65 °-0,8 ° à 45 cm (distance de manipulation directe)
-   - 0,6 °-0,75 ° à 2 mètres
-
-Notez que les tailles de police doivent être légèrement supérieures pour le texte présenté à des distances de manipulation directe en raison du conflit vergence-accommodation décrit plus haut (les yeux de l’utilisateur s’accommodent à une distance de 2 mètres sur l’écran HoloLens, ce qui fait que le contenu affiché à 45 cm, par exemple, peut paraître plus flou). 
-
-### <a name="guidance-for-immersive-devices"></a>Conseils pour les appareils immersifs
-
-Les appareils immersifs présentent généralement des taux de contraste plus élevés en raison de l’occlusion complète de l’environnement extérieur. Toutefois, ils peuvent avoir une densité plus faible de pixels effectifs, en raison notamment de l’effet de loupe des verres placés devant l’écran. 
-
-Pour les casques audiovisuels immersifs Windows Mixed Reality, la taille de police verticale minimale pour la lisibilité (mesurée de la ligne de base au jambage ascendant) est d’environ 0,7-0,9 °, et une taille de police confortable doit être d’au moins 1 ° pour permettre la lecture d’un contenu présenté à une distance de 2 mètres de l’utilisateur.
+Favorisez le mouvement complet du corps, plutôt que juste le déplacement de la tête, en plaçant des objets autour de l’espace de l’utilisateur. En cas d’expérience avec des objets en mouvement ou de grands objets, vous devez prêter une attention particulière aux mouvements de la tête, en particulier quand ils nécessitent un mouvement fréquent le long des axes horizontal et vertical.
 
 ## <a name="gaze-direction"></a>Direction du regard
 
@@ -166,14 +159,11 @@ Pour éviter la fatigue oculaire et les douleurs cervicales, le contenu doit êt
 
 L’angle de regard optimal (de repos) est situé entre 10 et 20 degrés en dessous de l’horizon, car la tête tend à pencher légèrement vers le bas, en particulier pendant les activités.
 
-![Champ de vision possible, tel que déterminé par l’amplitude de mouvement du cou](images/optimal-field-of-view-2.png)<br>
-*Champ de vision possible, tel que déterminé par l’amplitude de mouvement du cou*
-
 ## <a name="arm-positions"></a>Positions des bras
 
 Une fatigue musculaire peut s’installer si les utilisateurs sont censés garder une main levée pendant toute la durée de l’expérience. Les clics aériens répétés peuvent également se révéler fatigants s’ils doivent être effectués sur une longue période. Nous vous recommandons donc d’éviter les expériences qui exigent des gestes répétés ou maintenus. Pour cela, vous pouvez intégrer de courtes pauses ou proposer une combinaison de saisies gestuelles et vocales pour interagir avec l’application.
 
-## <a name="see-also"></a>Voir également
+## <a name="see-also"></a>Voir aussi
 * [Pointage du regard](gaze-and-commit.md)
 * [Stabilité des hologrammes](hologram-stability.md)
 * [Interactions instinctuelles](interaction-fundamentals.md)

@@ -3,16 +3,16 @@ title: 2. Initialisation de votre projet et de votre première application
 description: Deuxième tutoriel d’une série de six tutoriels, dans lequel vous apprenez à créer une application de jeu d’échecs simple avec Unreal Engine 4 et le plug-in UX Tools du Mixed Reality Toolkit
 author: hferrone
 ms.author: v-haferr
-ms.date: 5/5/2020
+ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, réalité mixte, tutoriel, bien démarrer, mrtk, uxt, UX Tools, documentation
-ms.openlocfilehash: e8f03a87ec6b92e4c62cf3f88f519146254e7387
-ms.sourcegitcommit: 1b8090ba6aed9ff128e4f32d40c96fac2e6a220b
+ms.openlocfilehash: 150fee721bb9cd72d287737aca4262bd87dccba8
+ms.sourcegitcommit: 7ca383ef1c5dc895ca2a289435f2e9d4c1ee6e65
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84330337"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85345729"
 ---
 # <a name="2-initializing-your-project-and-first-application"></a>2. Initialisation de votre projet et de votre première application
 
@@ -28,7 +28,7 @@ Avant de continuer, vérifiez que vous avez tous les prérequis mentionnés dans
 * Création d’acteurs et d’événements au niveau du script avec des blueprints
 
 ## <a name="creating-a-new-unreal-project"></a>Création d’un projet Unreal
-La première chose dont vous avez besoin est un projet avec lequel travailler.
+La première chose dont vous avez besoin est un projet avec lequel travailler. S’il s’agit de la première fois que vous créez une application Unreal pour HoloLens, vous devrez [télécharger les fichiers de prise en charge](https://docs.microsoft.com/windows/mixed-reality/unreal-uxt-ch6#packaging-and-deploying-the-app) à partir de l’Epic Launcher.
 
 1. Lancer Unreal Engine
 
@@ -42,6 +42,9 @@ La première chose dont vous avez besoin est un projet avec lequel travailler.
 
 4. Définissez **C++** , **Scalable 3D or 2D, Mobile/Tablet** et **No Starter Content** dans **Project Settings**. 
     * Choisissez un emplacement d’enregistrement, puis cliquez sur **Create Project**. 
+
+> [!NOTE]
+> Vous devez sélectionner un projet C++ plutôt qu’un projet Blueprint afin de générer le plug-in UX Tools, que vous configurerez plus loin dans la section 4.
 
 ![Paramètres du projet initial](images/unreal-uxt/2-project-settings.PNG)
 

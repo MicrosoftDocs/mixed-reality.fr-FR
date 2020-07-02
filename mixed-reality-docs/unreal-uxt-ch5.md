@@ -3,16 +3,16 @@ title: 5. Ajout d’un bouton et réinitialisation des positions des pièces
 description: Cinquième tutoriel d’une série de six visant à créer une application de jeu d’échecs simple avec Unreal Engine 4 et le plug-in Mixed Reality Toolkit UX Tools
 author: hferrone
 ms.author: v-haferr
-ms.date: 5/5/2020
+ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, réalité mixte, tutoriel, bien démarrer, mrtk, uxt, UX Tools, documentation
-ms.openlocfilehash: 49cab5c5a8c6736b800b5ba05de2c88edf008008
-ms.sourcegitcommit: 1b8090ba6aed9ff128e4f32d40c96fac2e6a220b
+ms.openlocfilehash: 473f47884bbc492451007436f80e8d9762cf1ab7
+ms.sourcegitcommit: 45da0a056fa42088ff81ccdd11232830fbe8430f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84330266"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84720255"
 ---
 # <a name="5-adding-a-button--resetting-piece-locations"></a>5. Ajout d’un bouton et réinitialisation des positions des pièces
 
@@ -43,7 +43,7 @@ Votre première tâche consiste à créer un blueprint de fonction qui remet une
 **Compilez** et **enregistrez** le projet avant de revenir à la fenêtre principale. 
 
 
-## <a name="adding-a-button"></a>Ajout d’un bouton
+## <a name="adding-a-button"></a>Ajouter un bouton
 Maintenant que la fonction est correctement configurée, la tâche suivante consiste à créer un bouton qui la déclenche quand le joueur appuie dessus. 
 
 1.  Cliquez sur **Add New > Blueprint Class**, développez la section **All Classes**, puis recherchez **SimpleButton**. 
@@ -54,7 +54,7 @@ Maintenant que la fonction est correctement configurée, la tâche suivante cons
 
 ![Nouveau Blueprint dérivé de la classe SimpleButton](images/unreal-uxt/5-subclass.PNG)
 
-2. Cliquez sur **PressableButton (Inherited)** dans le panneau **Components** et faites défiler le volet **Details** jusqu’à la section **Events**. 
+2. Cliquez sur **Pressable Button (Inherited)** dans le panneau **Components** et faites défiler le volet **Details** jusqu’à la section **Events**. 
     * Cliquez sur le bouton vert **+** à côté de **On Button Pressed** pour ajouter un événement au graphique d’événements, qui est appelé quand le joueur appuie sur le bouton. 
     
 À partir de là, vous devez appeler la fonction **Reset Location** de **WhiteKing**, qui a besoin d’une référence à l’acteur **WhiteKing** dans le niveau. 

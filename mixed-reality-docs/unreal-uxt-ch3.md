@@ -3,16 +3,16 @@ title: 3. Configuration de votre projet pour la réalité mixte
 description: Troisième tutoriel d’une série de six tutoriels, dans lequel vous apprenez à créer une application de jeu d’échecs simple avec Unreal Engine 4 et le plug-in UX Tools du Mixed Reality Toolkit
 author: hferrone
 ms.author: v-haferr
-ms.date: 5/5/2020
+ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, réalité mixte, tutoriel, bien démarrer, mrtk, uxt, UX Tools, documentation
-ms.openlocfilehash: d22c3d8c9048f53171298642768877d7bcdcb972
-ms.sourcegitcommit: 1b8090ba6aed9ff128e4f32d40c96fac2e6a220b
+ms.openlocfilehash: f79985b2ce9e26971c23acf36a3538bf7f3c166e
+ms.sourcegitcommit: ff0e89b07d0b4a945967d64c5b8845a21dc5f476
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84330285"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84879554"
 ---
 # <a name="3-setting-up-your-project-for-mixed-reality"></a>3. Configuration de votre projet pour la réalité mixte
 
@@ -37,17 +37,21 @@ Les sessions de réalité augmentée n’arrivent pas toutes seules. Pour utilis
 
 ![Configuration de la session AR](images/unreal-uxt/3-arsessionconfig.PNG)
 
-Une fois cette opération effectuée, l’étape suivante consiste à faire en sorte que la session de réalité augmentée démarre lorsque le niveau est chargé. Unreal comprend un blueprint spécial appelé **blueprint de niveau** (« Level Blueprint ») qui joue le rôle de graphe d’événements (« Event Graph ») à l’échelle du niveau. Le fait de connecter la ressource ARSessionConfig dans le **blueprint de niveau** garantit que la session de réalité augmentée se déclenchera juste au début du jeu.
+Une fois cette opération effectuée, l’étape suivante consiste à faire en sorte que la session de réalité augmentée démarre quand le niveau se charge et s’arrête quand le niveau se termine. Unreal comprend un blueprint spécial appelé **blueprint de niveau** (« Level Blueprint ») qui joue le rôle de graphe d’événements (« Event Graph ») à l’échelle du niveau. Le fait de connecter la ressource ARSessionConfig dans le **blueprint de niveau** garantit que la session de réalité augmentée se déclenchera juste au début du jeu.
 
 1. Cliquez sur **Blueprints > Open Level Blueprint** (Blueprints > Ouvrir le blueprint de niveau) dans la barre d’outils de l’éditeur : 
 
 ![Ouverture du blueprint de niveau](images/unreal-uxt/3-level-blueprint.PNG)
 
-5. Faites glisser le nœud d’exécution (la flèche pointant vers la gauche) en dehors de **Event BeginPlay** puis relâchez. Recherchez **Start AR Session** (Démarrer la session de réalité augmentée) et appuyez sur Entrée.  
+5. Faites glisser le nœud d’exécution (la flèche pointant vers la gauche) en dehors de **Event BeginPlay** puis relâchez. Recherchez le nœud **Start AR Session** (Démarrer la session de réalité augmentée) et appuyez sur Entrée.  
     * Cliquez sur la liste déroulante **Select Asset** (Sélectionner une ressource) sous **Session Config** (Configuration de la session), puis sélectionnez la ressource **ARSessionConfig**. 
-    * Cliquez sur **Compile**, puis sur **Save** pour revenir à la fenêtre principale.
 
 ![Démarrer la session AR](images/unreal-uxt/3-start-ar-session.PNG)
+
+6. Cliquez avec le bouton droit n’importe où dans l’EventGraph et créez un nœud **Event EndPlay**. Faites glisser le repère d’exécution et relâchez-le. Recherchez un nœud **Stop AR Session** (Arrêter la session AR) et appuyez sur Entrée. Si la session AR n’est pas arrêtée à la fin du niveau, certaines fonctionnalités peuvent cesser de fonctionner si vous redémarrez votre application lors du streaming sur un casque. 
+    * Cliquez sur **Compile**, puis sur **Save** pour revenir à la fenêtre principale.
+
+![Arrêter la session AR](images/unreal-uxt/3-stoparsession.PNG)
 
 ## <a name="create-a-pawn"></a>Créer un Pawn
 À ce stade, le projet a toujours besoin d’un objet de lecteur. Dans Unreal, un pion (**Pawn**) représente l’utilisateur dans le jeu, mais ici, il s’agira de l’expérience HoloLens 2.

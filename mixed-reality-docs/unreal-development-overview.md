@@ -3,16 +3,16 @@ title: Vue d’ensemble du développement Unreal
 description: Vue d’ensemble du développement en réalité mixte avec Unreal Engine 4
 author: hferrone
 ms.author: v-haferr
-ms.date: 5/5/2020
+ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, streaming, communication à distance, réalité mixte, développement, démarrage, fonctionnalités, nouveau projet, émulateur, documentation, guides, fonctionnalités, hologrammes, développement de jeux
-ms.openlocfilehash: 3e3862bd701d6e873f623abc9f9cda0b3085e753
-ms.sourcegitcommit: 1b8090ba6aed9ff128e4f32d40c96fac2e6a220b
+ms.openlocfilehash: 0e3f40c7aa05a9c5f93d7eb9dc9793b6daeb8b90
+ms.sourcegitcommit: 45da0a056fa42088ff81ccdd11232830fbe8430f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84330156"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84720365"
 ---
 # <a name="unreal-development-overview"></a>Vue d’ensemble du développement Unreal
 
@@ -26,7 +26,7 @@ Démarrer avec les <a href="https://docs.microsoft.com/en-us/windows/mixed-reali
 
 Si vous n’avez aucune expérience du développement Unreal, ne vous lancez pas tête baissée. Explorez la <a href="https://docs.unrealengine.com//GettingStarted/index.html" target="_blank">série de tutoriels</a> Unreal pour devenir rapidement opérationnel en recherchant des ressources sur la <a href="https://www.unrealengine.com/marketplace//store" target="_blank">place de marché</a> Unreal et de l’aide sur les <a href="https://forums.unrealengine.com/development-discussion/vr-ar-development" target="_blank">forums</a> de réalité mixte. Ces ressources constituent vos liens avec la communauté de concepteurs et de solutionneurs de problèmes sur le marché de la réalité mixte d’aujourd’hui.
 
-## <a name="mixed-reality-toolkit-for-unreal"></a>Mixed Reality Toolkit for Unreal
+## <a name="mixed-reality-toolkit-for-unreal"></a>Mixed Reality Toolkit pour Unreal
 
 [Mixed Reality Toolkit for Unreal](https://github.com/microsoft/MixedRealityToolkit-Unreal) est un ensemble de composants conçus pour accélérer votre développement dans Unreal. Chaque composant comprend des plug-ins, des exemples et une documentation pour configurer des expériences immersives. 
 
@@ -38,6 +38,9 @@ Si vous n’avez aucune expérience du développement Unreal, ne vous lancez pas
 * Composant comportement suiveur
 
 Vous pouvez explorer le dépôt GitHub [UX Tools for Unreal](https://github.com/microsoft/MixedReality-UXTools-Unreal) pour obtenir des détails sur les fonctionnalités et des informations sur la façon de configurer votre projet.
+
+## <a name="additional-files"></a>Fichiers supplémentaires
+S’il s’agit de la première fois que vous empaquetez ou déployez une application Unreal pour HoloLens, vous devrez [télécharger les fichiers de prise en charge](https://docs.microsoft.com/windows/mixed-reality/unreal-uxt-ch6#packaging-and-deploying-the-app) à partir de l’Epic Launcher.
 
 ## <a name="tutorial"></a>Tutoriel
 

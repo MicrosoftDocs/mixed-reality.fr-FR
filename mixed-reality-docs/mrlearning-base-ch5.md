@@ -7,12 +7,12 @@ ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: ec078015304e1cddc9b042fb5e94cf1904a302cb
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+ms.openlocfilehash: 9a19ad59e520a2743aafd954910f43c6f51d6c8a
+ms.sourcegitcommit: 5612e8bfb9c548eac42182702cec87b160efbbfe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "79376086"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85441856"
 ---
 # <a name="6-exploring-advanced-input-options"></a>6. Exploration des options d’entrée avancées
 
@@ -38,10 +38,15 @@ Voici les principales étapes à suivre pour y parvenir :
 5. Implémenter l’événement Response pour la commande Speech
 
 ### <a name="1-clone-the-default-input-system-profile"></a>1. Cloner le Input System Profile par défaut
-
 Dans la fenêtre Hierarchy, sélectionnez l’objet **MixedRealityToolkit** puis, dans la fenêtre Inspector, sélectionnez l’onglet **Input** et clonez le **DefaultHoloLens2InputSystemProfile** pour le remplacer par votre propre **Input System Profile** personnalisable :
 
 ![mrlearning-base](images/mrlearning-base/tutorial5-section1-step1-1.png)
+
+> [!NOTE]
+> Si vous utilisez MRTK 2.4.0 ou ultérieur :
+> * Sélectionnez l’objet **MixedRealityToolkit** sous l’onglet Hierarchy, puis cliquez sur l’onglet **Input** dans la fenêtre de l’inspecteur et développez la section **Pointers**. 
+> * Clonez le **DefaultMixedRealityInputPointerProfile** et remplacez-le par votre propre **profil de pointeur d’entrée** personnalisable.
+> * Vérifiez que **Is Eye Tracked Enabled** (Le suivi des yeux est-il activé ?) a la valeur true dans la section **Gaze Settings** (Paramètres de suivi). 
 
 > [!TIP]
 > Pour un rappel de la façon de cloner des profils MRTK, vous pouvez consulter les instructions du [Guide pratique pour configurer les profils du Kit de ressources de réalité mixte](mrlearning-base-ch2.md#how-to-configure-the-mixed-reality-toolkit-profiles-change-spatial-awareness-display-option).

@@ -3,16 +3,16 @@ title: Utilisation de l’émulateur HoloLens
 description: Utilisation de l’émulateur HoloLens pour tester des applications de réalité mixte sur votre PC sans avoir besoin d’un appareil HoloLens physique.
 author: pbarnettms
 ms.author: pbarnett
-ms.date: 5/12/2020
+ms.date: 6/8/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: HoloLens, émulateur
-ms.openlocfilehash: f525276d127bc0bbb682d7cea6821028258c6177
-ms.sourcegitcommit: 6d9d01d53137435c787f247f095d5255581695fc
+ms.openlocfilehash: dba0b1a1260c62ac7f26bc80678439d12183d77f
+ms.sourcegitcommit: dc60c6ca075e7086b87478f1d7e87ebe02160c0c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83227984"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84631504"
 ---
 # <a name="using-the-hololens-emulator"></a>Utilisation de l’émulateur HoloLens
 
@@ -28,7 +28,7 @@ Si vous devez développer des applications ou jeux avec casques immersifs de ré
 Téléchargez l’émulateur HoloLens.
 
 Versions : 
-* [Émulateur HoloLens 2 (Windows Holographique, version 2004)](https://go.microsoft.com/fwlink/?linkid=2129088).
+* [Émulateur HoloLens 2 (Windows Holographique, version 2004, mise à jour de juin 2020)](https://go.microsoft.com/fwlink/?linkid=2132415).
 * [Émulateur HoloLens (1ère génération) et modèles de projet holographiques](https://go.microsoft.com/fwlink/?linkid=2065980).
 
 Des notes de publication et des versions antérieures de l’émulateur HoloLens sont disponibles dans la page [Archive de l’émulateur HoloLens](hololens-emulator-archive.md).
@@ -251,7 +251,7 @@ Dans l’émulateur, vous voyez uniquement les hologrammes que vous affichez. Ma
 
 ## <a name="known-issues"></a>Problèmes connus
 
-* Lors de la désinstallation de l’émulateur HoloLens 2, l’image de disque dur (Flash.vhdx) peut rester sur votre disque dur dans le dossier Windows Kits\10\Emulation\HoloLens\<numéro de build>.  Vous pouvez supprimer ce fichier sans risque.
+* Lors de la désinstallation de l’émulateur HoloLens 2, l’image de disque dur (Flash.vhdx) peut rester sur votre disque dur dans le dossier Windows Kits\10\Emulation\HoloLens\<build number>.  Vous pouvez supprimer ce fichier sans risque.
 * L’accélération graphique matérielle peut provoquer le plantage des applications holographiques sur certains systèmes avec des graphiques AMD ou Intel.  Pour contourner ce problème, désactivez l’accélération graphique matérielle dans la fenêtre Outils de l’émulateur.
 
 ## <a name="troubleshooting"></a>Résolution des problèmes

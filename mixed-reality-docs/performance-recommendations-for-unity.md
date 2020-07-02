@@ -7,12 +7,12 @@ ms.date: 03/26/2019
 ms.topic: article
 keywords: graphiques, UC, GPU, rendu, garbage collection, Hololens
 ms.localizationpriority: high
-ms.openlocfilehash: 28f09986cdb8c562aedfc9deae7b0369214ebc05
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+ms.openlocfilehash: c6c68a6dd6e8ba59bee983e158e210aed27d2b17
+ms.sourcegitcommit: 4282d92e93869e4829338bdf7d981c3ee0260bfd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "81277567"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85216240"
 ---
 # <a name="performance-recommendations-for-unity"></a>Recommandations sur les performances pour Unity
 
@@ -79,7 +79,7 @@ public class ExampleClass : MonoBehaviour
 > Éviter GetComponent(string) <br/>
 > Quand vous utilisez *[GetComponent()](https://docs.unity3d.com/ScriptReference/GameObject.GetComponent.html)* , il existe plusieurs surcharges différentes. Il est important de toujours utiliser les implémentations basées sur le type et jamais la surcharge de recherche basée sur la chaîne. Une recherche par chaîne dans votre scène est beaucoup plus coûteuse qu’une recherche par type. <br/>
 > (Correct) Component GetComponent(Type type) <br/>
-> (Correct) T GetComponent\<T>() <br/>
+> (Good) T GetComponent\<T>() <br/>
 > (Mauvais) Component GetComponent(string)> <br/>
 
 #### <a name="avoid-expensive-operations"></a>Éviter les opérations coûteuses
@@ -282,6 +282,8 @@ En outre, il est recommandé de désactiver la projection d’ombres, car elle a
 
 Sélectionnez **Edit** > **Project Settings**, puis la catégorie **Quality** et **Low Quality** pour la plateforme UWP. Vous pouvez également affecter simplement à la propriété **Shadows** la valeur **Disable Shadows**.
 
+Nous vous recommandons d’utiliser l’éclairage baked avec vos modèles dans Unity.
+
 ### <a name="reduce-poly-count"></a>Réduire le nombre de polygones
 
 Le nombre de polygones est généralement réduit par les opérations suivantes :
@@ -344,7 +346,7 @@ L’une des pratiques les plus courantes qui conduisent à un garbage collection
 Autres conseils rapides :
 - Utilisez la classe C# [StringBuilder](https://docs.microsoft.com/dotnet/api/system.text.stringbuilder?view=netframework-4.7.2) pour créer dynamiquement des chaînes complexes au moment de l’exécution.
 - Supprimez les appels à Debug.log() quand vous n’en avez plus besoin, car ils s’exécutent encore dans toutes les versions de build d’une application.
-- Si votre application holographique nécessite généralement beaucoup de mémoire, envisagez d’appeler [ _**System.GC.Collect()**_ ](https://docs.microsoft.com/dotnet/api/system.gc.collect?view=netframework-4.7.2) pendant les phases de chargement, par exemple lors de la présentation d’un écran de chargement ou de transition.
+- Si votre application holographique nécessite généralement beaucoup de mémoire, envisagez d’appeler [_**System.GC.Collect()**_](https://docs.microsoft.com/dotnet/api/system.gc.collect?view=netframework-4.7.2) pendant les phases de chargement, par exemple lors de la présentation d’un écran de chargement ou de transition.
 
 #### <a name="object-pooling"></a>Mise en pool d’objets
 
