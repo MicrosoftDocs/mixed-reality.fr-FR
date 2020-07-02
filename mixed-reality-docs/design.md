@@ -8,12 +8,12 @@ ms.date: 08/24/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: réalité mixte, découvrir, distribuer, index, page d’accueil, conception, développement, tutoriels, exemples d’applications, principes fondamentaux, études de cas, ressources, procédures HoloLens, projets open source, concepts principaux, interaction
-ms.openlocfilehash: 9ef408e1551e9f6c52a6c5fcf7df3123cc099c8c
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+ms.openlocfilehash: d011a00b55a6b78332233b21535a129774f99c9f
+ms.sourcegitcommit: 7ca383ef1c5dc895ca2a289435f2e9d4c1ee6e65
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75334144"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85345649"
 ---
 # <a name="start-designing-and-prototyping"></a>Commencer à concevoir et à créer des prototypes
 
@@ -60,7 +60,7 @@ Le mappage spatial permet de placer des objets sur des surfaces réelles. Cela p
 
 <br>
 
-![Facteurs de conception des interactions](images/MRTK_BoundingBox_Main.png)
+![Facteurs de conception des interactions](images/UX/UX_Hero_Manipulation.jpg)
 
 ## <a name="interaction-design-factors-to-consider"></a>Facteurs de conception des interactions à prendre en compte
 
@@ -85,6 +85,17 @@ HoloLens 2 permet d’accéder à un nouveau niveau de compréhension contextue
 
 <br>
 
+
+---
+
+<br>
+
+
+![Éléments de l’expérience utilisateur](images/UX/UX_Hero_BoundingBox.jpg)
+
+## <a name="user-experience-elements-for-mixed-reality"></a>Éléments de l’expérience utilisateur pour la réalité mixte
+
+
 ### <a name="color-light-and-materials"></a>[Couleurs, éclairage et matériaux](color,-light-and-materials.md)
 La conception de contenu pour la réalité mixte nécessite d’accorder une attention particulière à la couleur, à l’éclairage et aux matériaux de chacune des ressources visuelles utilisées dans votre expérience.
 
@@ -100,8 +111,11 @@ Tout comme la typographie sur les écrans 2D, l’objectif est d’être clair 
 
 <br>
 
-### <a name="ux-elements-for-the-mixed-reality"></a>[Éléments d’expérience utilisateur pour la réalité mixte](app-patterns-landingpage.md)
-Découvrez les principales composantes des interactions spatiales et de l’interface utilisateur en réalité mixte.
+### <a name="common-controls-and-behaviors"></a>[Contrôles et comportements communs](app-patterns-landingpage.md)
+Découvrez les modules d’interface utilisateur et les interactions spatiales courantes fréquemment utilisés pour les expériences de réalité mixte.
+
+
+
 <br>
 
 
