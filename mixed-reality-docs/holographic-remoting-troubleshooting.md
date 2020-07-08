@@ -6,12 +6,12 @@ ms.author: flbagar
 ms.date: 03/11/2020
 ms.topic: article
 keywords: Windows Mixed Reality, hologrammes, accès distant holographique, rendu à distance, rendu réseau, HoloLens, hologrammes distants, dépannage, aide
-ms.openlocfilehash: fc379eb4ad849fb5b236b82719711b37fead8a68
-ms.sourcegitcommit: 48456c607a2d0dcf035a77e8ba67615396b0a211
+ms.openlocfilehash: 79650ceab5d0125a8a06c776a59a45a78d0aa20c
+ms.sourcegitcommit: fef42e2908e49822f2d13b05d2f9260bf0d72158
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81484309"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86061112"
 ---
 # <a name="holographic-remoting-troubleshooting"></a>Résolution des problèmes de communication à distance holographique
 
@@ -22,11 +22,15 @@ ms.locfileid: "81484309"
 
 Les exemples d’applications de communication à distance holographique ont une atténuation de spectre (/Qspectre) activée dans la configuration Release.
 
-Si vous recevez une erreur irrécupérable de l’éditeur de liens qui indique que « vccorlib. lib » ne peut pas être ouvert, vérifiez que votre charge de travail Visual Studio comprend les bibliothèques atténuées spectre. Pour plus d'informations, consultez https://aka.ms/Ofhn4c.
+Si vous recevez une erreur irrécupérable de l’éditeur de liens qui indique que « vccorlib. lib » ne peut pas être ouvert, vérifiez que votre charge de travail Visual Studio comprend les bibliothèques atténuées spectre. Consultez la rubrique https://aka.ms/Ofhn4c (éventuellement en anglais) pour plus d'informations.
+
+## <a name="speech"></a>Voix
+
+Le lecteur de communication à distance holographique prend en charge une superposition de diagnostics qui peut être activée en disant ```Enable Diagnostics``` et en désactivant ```Disable Diagnostics``` . Si vous rencontrez des problèmes avec ces commandes vocales, vous pouvez également lancer le lecteur de communication à distance holographique via un navigateur Web en ```ms-holographic-remoting:?stats``` tant qu’URL.
 
 ## <a name="limitations"></a>Limitations
 
-Les API suivantes ne sont actuellement **pas** prises en charge lors de l’utilisation de la communication à distance holographique pour HoloLens 2 et déclencheront une erreur ```ERROR_NOT_SUPPORTED```, sauf indication contraire :
+Les API suivantes ne sont actuellement **pas** prises en charge lors de l’utilisation de la communication à distance holographique pour HoloLens 2 et génèrent une ```ERROR_NOT_SUPPORTED``` erreur sauf indication contraire :
 
 [Windows.Graphics.Holographic](https://docs.microsoft.com/uwp/api/windows.graphics.holographic)
 
@@ -43,7 +47,7 @@ Les API suivantes ne sont actuellement **pas** prises en charge lors de l’util
   - N’échoue pas, mais la mémoire tampon de profondeur ne sera pas distante.
   - Pris en charge à partir de la version [2.1.0](holographic-remoting-version-history.md#v2.1.0)
 * [HolographicDisplay.TryGetViewConfiguration](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicdisplay.trygetviewconfiguration)
-  - L’interrogation de HolographicViewConfigurationKind. PhotoVideoCamera renverra toujours un ```nullptr```.
+  - L’interrogation de HolographicViewConfigurationKind. PhotoVideoCamera retourne toujours un ```nullptr``` .
   - Pris en charge à partir de la version [2.0.18](holographic-remoting-version-history.md#v2.0.18)
   - Dans les versions précédentes génère toujours une erreur.
 * [HolographicSpace.CreateFramePresentationMonitor](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace.createframepresentationmonitor)
@@ -54,36 +58,39 @@ Les API suivantes ne sont actuellement **pas** prises en charge lors de l’util
 [Windows.Perception.Spatial](https://docs.microsoft.com/uwp/api/windows.perception.spatial)
 
 * [SpatialLocation. AbsoluteAngularAcceleration](https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatiallocation.absoluteangularacceleration)
-* [SpatialLocation. AbsoluteAngularAccelerationAxisAngle](https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatiallocation.absoluteangularaccelerationaxisangle)
+* [SpatialLocation.AbsoluteAngularAccelerationAxisAngle](https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatiallocation.absoluteangularaccelerationaxisangle)
 * [SpatialLocation. AbsoluteAngularVelocity](https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatiallocation.absoluteangularvelocity)
-* [SpatialLocation. AbsoluteAngularVelocityAxisAngle](https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatiallocation.absoluteangularvelocityaxisangle)
+* [SpatialLocation.AbsoluteAngularVelocityAxisAngle](https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatiallocation.absoluteangularvelocityaxisangle)
 * [SpatialLocation. AbsoluteLinearAcceleration](https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatiallocation.absolutelinearacceleration)
 * [SpatialLocation. AbsoluteLinearVelocity](https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatiallocation.absolutelinearvelocity)
 * [SpatialStageFrameOfReference. Current](https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialstageframeofreference.current)
-  - Retourne toujours ```nullptr```.
+  - Pris en charge à partir de la version [2.2.0](holographic-remoting-version-history.md#v2.2.0)
+  - Dans les versions précédentes retourne toujours ```nullptr``` .
 * [SpatialStageFrameOfReference.RequestNewStageAsync](https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialstageframeofreference.requestnewstageasync)
+  - Pris en charge à partir de la version [2.2.0](holographic-remoting-version-history.md#v2.2.0)
 * [SpatialAnchor.RemovedByUser](https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialanchor.removedbyuser)
 * [SpatialAnchorExporter.GetDefault](https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialanchorexporter.getdefault
 )
   - Pris en charge à partir de la version [2.0.9](holographic-remoting-version-history.md#v2.0.9). 
-  - Dans les versions précédentes retourne toujours ```nullptr```. 
+  - Dans les versions précédentes retourne toujours ```nullptr``` . 
 * [SpatialAnchorExporter.RequestAccessAsync](https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialanchorexporter.requestaccessasync
 )
   - Pris en charge à partir de la version [2.0.9](holographic-remoting-version-history.md#v2.0.9). 
-  - Dans les versions précédentes, l’opération asynchrone s’est toujours terminée avec ```SpatialPerceptionAccessStatus.DeniedBySystem```.
+  - Dans les versions précédentes, l’opération asynchrone s’est toujours terminée avec ```SpatialPerceptionAccessStatus.DeniedBySystem``` .
 * [SpatialAnchorTransferManager.RequestAccessAsync](https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialanchortransfermanager.requestaccessasync#Windows_Perception_Spatial_SpatialAnchorTransferManager_RequestAccessAsync)
-  - L’opération asynchrone se termine toujours avec ```SpatialPerceptionAccessStatus.DeniedBySystem```.
+  - L’opération asynchrone se termine toujours par ```SpatialPerceptionAccessStatus.DeniedBySystem``` .
 * [SpatialAnchorTransferManager.TryExportAnchorsAsync](https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialanchortransfermanager.tryexportanchorsasync#Windows_Perception_Spatial_SpatialAnchorTransferManager_TryExportAnchorsAsync_Windows_Foundation_Collections_IIterable_Windows_Foundation_Collections_IKeyValuePair_System_String_Windows_Perception_Spatial_SpatialAnchor___Windows_Storage_Streams_IOutputStream_)
-  - L’opération asynchrone se termine toujours avec ```false```.
+  - L’opération asynchrone se termine toujours par ```false``` .
 * [SpatialAnchorTransferManager.TryImportAnchorsAsync](https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialanchortransfermanager.tryimportanchorsasync
 )
-  - L’opération asynchrone se termine toujours avec ```nullptr```.
+  - L’opération asynchrone se termine toujours par ```nullptr``` .
 
 [Windows.UI.Input.Spatial](https://docs.microsoft.com/uwp/api/windows.ui.input.spatial)
 
 * [SpatialInteractionSource.TryCreateHandMeshObserver](https://docs.microsoft.com/uwp/api/windows.ui.input.spatial.spatialinteractionsource.trycreatehandmeshobserver#Windows_UI_Input_Spatial_SpatialInteractionSource_TryCreateHandMeshObserver)
 * [SpatialInteractionSource.TryCreateHandMeshObserverAsync](https://docs.microsoft.com/uwp/api/windows.ui.input.spatial.spatialinteractionsource.trycreatehandmeshobserverasync)
 * [SpatialInteractionSource. Controller](https://docs.microsoft.com/uwp/api/windows.ui.input.spatial.spatialinteractionsource.controller#Windows_UI_Input_Spatial_SpatialInteractionSource_Controller)
+  - Pris en charge à partir de la version [2.2.0](holographic-remoting-version-history.md#v2.2.0)
 
 [Windows.Perception.Spatial.Preview](https://docs.microsoft.com/uwp/api/windows.perception.spatial.preview)
 
@@ -92,7 +99,7 @@ Les API suivantes ne sont actuellement **pas** prises en charge lors de l’util
 
 ## <a name="see-also"></a>Voir aussi
 * [Historique des versions de la communication à distance holographique](holographic-remoting-version-history.md)
-* [Écriture d’une application distante de communication à distance holographique](holographic-remoting-create-host.md)
+* [Écriture d’une application de communication à distance holographique](holographic-remoting-create-host.md)
 * [Écriture d’une application de lecteur de communication à distance holographique personnalisée](holographic-remoting-create-player.md)
 * [Termes du contrat de licence de la communication à distance holographique](https://docs.microsoft.com/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
 * [Déclaration de confidentialité Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839)

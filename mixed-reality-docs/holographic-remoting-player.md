@@ -1,19 +1,19 @@
 ---
-title: Lecteur de communication à distance holographique
+title: Holographic Remoting Player
 description: Le lecteur de communication à distance holographique est une application auxiliaire qui se connecte aux applications de PC et aux jeux qui prennent en charge la communication à distance holographique. La communication à distance holographique diffuse du contenu holographique depuis un PC vers votre Microsoft HoloLens en temps réel, à l’aide d’une connexion Wi-Fi.
 author: florianbagarmicrosoft
 ms.author: flbagar
 ms.date: 03/11/2020
 ms.topic: article
 keywords: HoloLens, communication à distance, communication à distance holographique
-ms.openlocfilehash: e5255fb5537201058c491f5e4c682bb1c22d0edb
-ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
+ms.openlocfilehash: 8b1d58b2c2ce8f379a87059bb5add0f85f507259
+ms.sourcegitcommit: fef42e2908e49822f2d13b05d2f9260bf0d72158
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81278207"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86061132"
 ---
-# <a name="holographic-remoting-player"></a>Lecteur de communication à distance holographique
+# <a name="holographic-remoting-player"></a>Holographic Remoting Player
 
 >[!IMPORTANT]
 >La communication à distance holographique pour HoloLens 2 est une modification majeure de la version. Les [applications distantes pour **hololens (1re génération)** ](add-holographic-remoting.md) doivent utiliser le package NuGet version **1. x. x** et les [applications distantes pour **hololens 2** ](holographic-remoting-create-host.md) doivent utiliser **2. x**. x. Cela implique que les applications distantes écrites pour HoloLens 2 ne sont pas compatibles avec HoloLens (1ère génération) et vice versa.
@@ -24,11 +24,14 @@ Le lecteur de communication à distance holographique peut uniquement être util
 
 Le lecteur de communication à distance holographique est disponible à la fois pour HoloLens (1re génération) et HoloLens 2.  Les applications PC qui prennent en charge la communication à distance holographique avec HoloLens doivent être mises à jour pour prendre en charge la communication à distance holographique avec HoloLens 2. Si vous avez des questions sur les versions prises en charge, contactez le fournisseur de votre application.
 
+>[!TIP]
+>À partir de la version [2.2.0](holographic-remoting-version-history.md#v2.2.0) , le lecteur de communication à distance holographique est également disponible pour les PC Windows exécutant [Windows Mixed Reality](navigating-the-windows-mixed-reality-home.md).
+
 ## <a name="connecting-to-the-holographic-remoting-player"></a>Connexion au lecteur de communication à distance holographique
 
 Suivez les instructions de votre application pour vous connecter au lecteur de communication à distance holographique. Vous devrez entrer l’adresse IP de votre appareil HoloLens, que vous pouvez voir sur l’écran principal du lecteur de communication à distance, comme suit :
 
-![Lecteur de communication à distance holographique](images/holographicremotingplayer.png)
+![Holographic Remoting Player](images/holographicremotingplayer.png)
 
 Chaque fois que vous voyez l’écran principal, vous savez que vous ne disposez pas d’une application connectée.
 
@@ -55,9 +58,9 @@ Sur **HoloLens 2** , l’application vous indiquera :
 * **Render** : nombre d’images rendu par le joueur de communication à distance au cours de la dernière seconde. Notez que cela ne dépend pas du nombre de trames qui sont arrivés via le réseau (voir **images vidéo**). En outre, l’affichage de l’heure Delta de rendu moyenne/maximale en millisecondes au cours de la dernière seconde entre les images rendues est affiché.
 
 * **Trames vidéo** : le premier nombre affiché est ignoré, le second est une trame vidéo réutilisée, et la troisième les images vidéo. Tous les nombres représentent le nombre au cours de la dernière seconde.
-    * ```Received frames``` est le nombre de trames vidéo arrivant au cours de la dernière seconde. Dans des conditions normales, cette valeur doit être 60, mais si ce n’est pas le cas, l’un des cadres est abandonné en raison de problèmes réseau ou la partie distante/distante ne produit pas de frames avec le taux attendu.
-    * ```Reused frames``` est le nombre de trames vidéo utilisées plusieurs fois au cours de la dernière seconde. Par exemple, si des images vidéo arrivent en retard, la boucle de rendu du lecteur affiche toujours un frame, mais doit *réutiliser* le frame vidéo qu’il a déjà utilisé pour le frame précédent.
-    * ```Skipped frames``` est le nombre de trames vidéo qui n’ont pas été utilisées par la boucle de rendu du lecteur. Par exemple, l’instabilité du réseau peut avoir pour effet que les trames vidéo qui arrivent ne sont plus distribuées uniformément. Par exemple, si certains sont en retard et que d’autres arrivent dans le temps avec le résultat, ils n’ont plus de Delta de 16,66 millisecondes lorsqu’ils s’exécutent sur 60 Hz. Cela peut se produire si plusieurs frames arrivent entre deux graduations de la boucle de rendu du joueur. Dans ce cas, le lecteur *ignore* un ou plusieurs frames, car il est supposé afficher toujours la dernière image vidéo reçue.
+    * ```Received frames```nombre de trames vidéo arrivant au cours de la dernière seconde. Dans des conditions normales, cette valeur doit être 60, mais si ce n’est pas le cas, l’un des cadres est abandonné en raison de problèmes réseau ou la partie distante/distante ne produit pas de frames avec le taux attendu.
+    * ```Reused frames```nombre de trames vidéo utilisées plusieurs fois au cours de la dernière seconde. Par exemple, si des images vidéo arrivent en retard, la boucle de rendu du lecteur affiche toujours un frame, mais doit *réutiliser* le frame vidéo qu’il a déjà utilisé pour le frame précédent.
+    * ```Skipped frames```nombre de trames vidéo qui n’ont pas été utilisées par la boucle de rendu du lecteur. Par exemple, l’instabilité du réseau peut avoir pour effet que les trames vidéo qui arrivent ne sont plus distribuées uniformément. Par exemple, si certains sont en retard et que d’autres arrivent dans le temps avec le résultat, ils n’ont plus de Delta de 16,66 millisecondes lorsqu’ils s’exécutent sur 60 Hz. Cela peut se produire si plusieurs frames arrivent entre deux graduations de la boucle de rendu du joueur. Dans ce cas, le lecteur *ignore* un ou plusieurs frames, car il est supposé afficher toujours la dernière image vidéo reçue.
 
     >[!NOTE]
     >En cas d’instabilité du réseau, les trames ignorées et réutilisées sont généralement à la même. En revanche, si vous voyez uniquement les frames ignorés, cela indique que le lecteur n’atteint pas sa fréquence d’images cible. Dans ce cas, vous devez garder un œil sur l’heure de Delta de rendu maximale lors du diagnostic des problèmes.

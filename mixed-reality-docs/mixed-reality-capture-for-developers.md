@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 02/24/2019
 ms.topic: article
 keywords: MRC, photo, vidéo, capture, appareil photo
-ms.openlocfilehash: 1116e9a0923129aa2b18d838917eebf12adae694
-ms.sourcegitcommit: 45da0a056fa42088ff81ccdd11232830fbe8430f
+ms.openlocfilehash: 44b853e96ab956e5ea6c03d8c23a61e91ac733d4
+ms.sourcegitcommit: fef42e2908e49822f2d13b05d2f9260bf0d72158
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84720415"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86061142"
 ---
 # <a name="mixed-reality-capture-for-developers"></a>Capture de Réalité Mixte pour les développeurs
 
@@ -64,10 +64,10 @@ Il existe trois étapes pour activer le rendu à partir de l’appareil photo PV
 Pour s’abonner au rendu à partir de l’appareil photo PV, une application active simplement le [HolographicViewConfiguration](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic.HolographicViewConfiguration)de PhotoVideoCamera :
 ```csharp
 var display = Windows.Graphics.Holographic.HolographicDisplay.GetDefault();
-var view = display.TryGetViewConfiguration(Windows.Graphics.Holographic.HolographicViewConfiguration.PhotoVideoCamera);
+var view = display.TryGetViewConfiguration(Windows.Graphics.Holographic.HolographicViewConfigurationKind.PhotoVideoCamera);
 if (view != null)
 {
-   view.IsEnabled = true;
+    view.IsEnabled = true;
 }
 ```
 
@@ -97,12 +97,12 @@ Cette opération est effectuée automatiquement par Unity.
 ##### <a name="enable-the-photovideocamera-holographicviewconfiguration-in-unreal"></a>Activer le HolographicViewConfiguration PhotoVideoCamera dans Unreal
 
 > [!NOTE]
-> Cela nécessite un **moteur inréel 4,25** ou plus récent.
+> Cela nécessite **Unreal Engine 4.25** ou ultérieur.
 
-Pour accepter le rendu à partir de l’appareil photo PV :
+Pour choisir le rendu à partir de l’appareil photo/vidéo :
 
-1. Appeler **SetEnabledMixedRealityCamera** et **ResizeMixedRealityCamera**
-    * Utilisez les valeurs **taille X** et **taille Y** pour définir les dimensions de la vidéo.
+1. Appelez **SetEnabledMixedRealityCamera** et **ResizeMixedRealityCamera**
+    * Utilisez les valeurs de taille **Size X** et **Size Y** pour définir les dimensions de la vidéo.
 
 ![Troisième caméra](images/unreal-camera-3rd.PNG)
 
@@ -224,13 +224,13 @@ Effet vidéo MRC (**Windows. Media. MixedRealityCapture. MixedRealityCaptureVide
 |  Nom de la propriété  |  Type  |  Valeur par défaut  |  Description |
 |----------|----------|----------|----------|
 |  StreamType  |  UINT32 ([MediaStreamType](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaStreamType))  |  1 (VideoRecord)  |  Décrivez le flux de capture pour lequel cet effet est utilisé. L’audio n’est pas disponible. |
-|  HologramCompositionEnabled  |  boolean  |  VRAI  |  Indicateur permettant d’activer ou de désactiver les hologrammes dans la capture vidéo. |
-|  RecordingIndicatorEnabled  |  boolean  |  VRAI  |  Indicateur permettant d’activer ou de désactiver l’indicateur d’enregistrement à l’écran pendant la capture d’hologramme. |
-|  VideoStabilizationEnabled  |  boolean  |  FAUX  |  Indicateur d’activation ou de désactivation de la stabilisation vidéo optimisée par le dispositif de suivi HoloLens. |
+|  HologramCompositionEnabled  |  boolean  |  TRUE  |  Indicateur permettant d’activer ou de désactiver les hologrammes dans la capture vidéo. |
+|  RecordingIndicatorEnabled  |  boolean  |  TRUE  |  Indicateur permettant d’activer ou de désactiver l’indicateur d’enregistrement à l’écran pendant la capture d’hologramme. |
+|  VideoStabilizationEnabled  |  boolean  |  FALSE  |  Indicateur d’activation ou de désactivation de la stabilisation vidéo optimisée par le dispositif de suivi HoloLens. |
 |  VideoStabilizationBufferLength  |  UINT32  |  0  |  Définissez le nombre de frames d’historique utilisés pour la stabilisation vidéo. 0 est une latence de 0 et presque « gratuit » du point de vue de l’alimentation et des performances. 15 est recommandé pour une qualité optimale (au prix de 15 trames de latence et de mémoire). |
 |  GlobalOpacityCoefficient  |  float  |  0,9 (HoloLens) 1,0 (casque immersif)  |  Définissez le coefficient d’opacité globale de l’hologramme dans une plage allant de 0,0 (entièrement transparent) à 1,0 (entièrement opaque). |
-|  BlankOnProtectedContent  |  boolean  |  FAUX  |  Indicateur d’activation ou de désactivation du retour d’un frame vide si une application UWP 2d présente un contenu protégé. Si cet indicateur a la valeur false et qu’une application UWP 2D affiche du contenu protégé, l’application UWP 2D est remplacée par une texture de contenu protégé dans le casque et dans la capture de la réalité mixte. |
-|  ShowHiddenMesh  |  boolean  |  FAUX  |  Indicateur permettant d’activer ou de désactiver l’indication du maillage de zone masqué et du contenu voisin de l’appareil photo holographique. |
+|  BlankOnProtectedContent  |  boolean  |  FALSE  |  Indicateur d’activation ou de désactivation du retour d’un frame vide si une application UWP 2d présente un contenu protégé. Si cet indicateur a la valeur false et qu’une application UWP 2D affiche du contenu protégé, l’application UWP 2D est remplacée par une texture de contenu protégé dans le casque et dans la capture de la réalité mixte. |
+|  ShowHiddenMesh  |  boolean  |  FALSE  |  Indicateur permettant d’activer ou de désactiver l’indication du maillage de zone masqué et du contenu voisin de l’appareil photo holographique. |
 | En-dessous | Taille | 0, 0 | Définissez la taille de sortie souhaitée après rognage pour la stabilisation vidéo. Une taille de rognage par défaut est choisie si 0 ou si une taille de sortie non valide est spécifiée. |
 | PreferredHologramPerspective | UINT32 | **Rendre à partir des** paramètres de l’appareil photo dans le portail des appareils Windows | Énumération utilisée pour indiquer la configuration de vue d’appareil photo holographique à capturer : 0 (affichage) signifie que l’application n’est pas invitée à effectuer le rendu à partir de la caméra photo/vidéo, 1 (PhotoVideoCamera) demande à l’application de s’afficher à partir de la caméra photo/vidéo (si l’application la prend en charge). Pris en charge uniquement sur HoloLens 2 |
 
@@ -288,7 +288,7 @@ Avant la mise à jour 2018 de Windows 10 avril, l’enregistreur MRC personnalis
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Capture de Réalité Mixte](mixed-reality-capture.md)
+* [MRC (Mixed Reality Capture)](mixed-reality-capture.md)
 * [Vue Spectateur](spectator-view.md)
 * [Vue d’ensemble du développement Unity](unity-development-overview.md)
 * [Vue d’ensemble du développement Unreal](unreal-development-overview.md)
