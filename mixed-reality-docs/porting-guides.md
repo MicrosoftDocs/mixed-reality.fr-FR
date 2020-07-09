@@ -5,19 +5,19 @@ author: JBrentJ
 ms.author: alexturn
 ms.date: 07/07/2020
 ms.topic: article
-keywords: port, Portage, Unity, intergiciel, moteur, UWP
-ms.openlocfilehash: 5cf66ce857806ab6fcf8c94b94c7a9a540339b97
-ms.sourcegitcommit: fef42e2908e49822f2d13b05d2f9260bf0d72158
+keywords: port, Portage, Unity, intergiciel, Engine, UWP, Win32
+ms.openlocfilehash: a1e3cd47096d728091d62d6c038bf6b2eb6bab16
+ms.sourcegitcommit: 0eb99fae933d4374af2c032af4e9ceda1807e532
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86061152"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86156770"
 ---
 # <a name="porting-guides"></a>Guides en matière de portage
 
 ## <a name="overview"></a>Vue d’ensemble
 
-Windows 10 offre une prise en charge directe des casques immersifs et holographiques. Si vous avez créé du contenu pour d’autres appareils, tels que le rift Oculus ou le HTC, ceux-ci ont des dépendances vis-à-vis des bibliothèques qui se trouvent au-dessus de l’API de plateforme du système d’exploitation. L’intégration du contenu existant à Windows Mixed Reality implique le reciblage de l’utilisation de ces autres kits SDK sur les API Windows. Les [API de la plate-forme Windows pour la réalité mixte](https://docs.microsoft.com/uwp/api/Windows.Perception) fonctionnent avec le modèle d’application Windows x86 et le plateforme Windows universelle (UWP). Si votre application n’est pas déjà générée pour UWP, la modification de la plateforme UWP fera partie de l’expérience de Portage.
+Windows 10 offre une prise en charge directe des casques immersifs et holographiques. Si vous avez créé du contenu pour d’autres appareils, tels que le rift Oculus ou le HTC, ceux-ci ont des dépendances vis-à-vis des bibliothèques qui se trouvent au-dessus de l’API de plateforme du système d’exploitation. L’intégration du contenu existant à Windows Mixed Reality implique le reciblage de l’utilisation de ces autres kits SDK sur les API Windows. Les [API de la plate-forme Windows pour la réalité mixte](https://docs.microsoft.com/uwp/api/Windows.Perception) fonctionnent avec le modèle d’application Win32 et le plateforme Windows universelle (UWP). Si votre application n’est pas déjà générée pour UWP, la modification de la plateforme UWP fera partie de l’expérience de Portage.
 
 ## <a name="porting-overview"></a>Vue d’ensemble du Portage
 
@@ -74,7 +74,7 @@ Avec toute mise à jour Unity, il y a de bonnes chances que vous deviez mettre �
 
 ### <a name="unity-step-4-target-your-application-to-run-on-universal-windows-platform-uwp"></a>Étape 4 : cibler votre application pour qu’elle s’exécute sur plateforme Windows universelle (UWP)
 
-Si vous ciblez Windows x86, vous pouvez ignorer cette étape et passer à l’étape 5.
+Si vous ciblez Win32, vous pouvez ignorer cette étape et passer à l’étape 5.
 
 Après avoir installé les outils, vous devez faire en sorte que votre application s’exécute en tant qu’application Windows universelle.
 
@@ -84,12 +84,12 @@ Après avoir installé les outils, vous devez faire en sorte que votre applicati
 > [!NOTE]
 > Unity continue d’améliorer la prise en charge de IL2CPP ; IL2CPP rend certains ports UWP plus faciles. Si vous ciblez actuellement le serveur principal de script .NET, vous devez envisager de convertir pour tirer parti du backend IL2CPP à la place.
 
-* Vous pouvez ignorer « Unity Step 5 », car vous ciblez UWP au lieu de x86.
+* Vous pouvez ignorer « Unity Step 5 », car vous ciblez UWP au lieu de Win32.
 
 > [!NOTE] 
 > Si votre application a des dépendances sur des services spécifiques à l’appareil, tels que la mise en correspondance à partir de la vapeur, vous devez les désactiver à cette étape. Vous pouvez vous connecter aux services équivalents fournis par Windows plus tard.
 
-### <a name="unity-step-5-target-your-application-to-run-on-windows-x86"></a>Étape 5 : cibler votre application pour qu’elle s’exécute sous Windows x86
+### <a name="unity-step-5-target-your-application-to-run-on-win32"></a>Unity Step 5 : cibler votre application pour qu’elle s’exécute sur Win32
 
 À l’intérieur de votre application Unity :
 
