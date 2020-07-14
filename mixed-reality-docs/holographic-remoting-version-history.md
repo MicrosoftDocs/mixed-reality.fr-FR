@@ -6,17 +6,21 @@ ms.author: flbagar
 ms.date: 03/11/2020
 ms.topic: article
 keywords: HoloLens, communication à distance, communication à distance holographique
-ms.openlocfilehash: 131c5237801c381a371b197a5b7d8e0ec64fa2d6
-ms.sourcegitcommit: fef42e2908e49822f2d13b05d2f9260bf0d72158
+ms.openlocfilehash: 1f4d463ab734cbb627f251486b0058fbf295d2ed
+ms.sourcegitcommit: b392847529961ac36bbff154ce0830f8b2dbd766
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86061122"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86300519"
 ---
 # <a name="holographic-remoting-version-history"></a>Historique des versions de la communication à distance holographique
 
 > [!IMPORTANT]
 > Ce guide est spécifique à la communication à distance holographique sur HoloLens 2.
+
+## <a name="version-222-july-10-2020"></a>Version 2.2.2 (10 juillet 2020)<a name="v2.2.2"></a>
+* Résolution du problème lié à [HolographicCamera. LeftViewportParameters](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamera.leftviewportparameters?view=winrt-19041#Windows_Graphics_Holographic_HolographicCamera_LeftViewportParameters) et [HolographicCamera. RightViewportParameters](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamera.rightviewportparameters?view=winrt-19041#Windows_Graphics_Holographic_HolographicCamera_RightViewportParameters) ne renvoyant aucun vertex de maillage de zone masqué lors de la diffusion en continu à partir d’un casque Windows Mixed Reality.
+* Résolution d’un incident qui peut se produire avec une mauvaise connexion réseau.
 
 ## <a name="version-221-july-6-2020"></a>Version 2.2.1 (6 juillet 2020)<a name="v2.2.1"></a>
 > [!IMPORTANT]

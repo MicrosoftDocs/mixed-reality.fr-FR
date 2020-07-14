@@ -6,12 +6,12 @@ ms.author: flbagar
 ms.date: 03/11/2020
 ms.topic: article
 keywords: Windows Mixed Reality, hologrammes, accès distant holographique, rendu à distance, rendu réseau, HoloLens, hologrammes distants, dépannage, aide
-ms.openlocfilehash: 79650ceab5d0125a8a06c776a59a45a78d0aa20c
-ms.sourcegitcommit: fef42e2908e49822f2d13b05d2f9260bf0d72158
+ms.openlocfilehash: 593b242326b83d4596d22a7e1a39ef18c26bc67a
+ms.sourcegitcommit: b392847529961ac36bbff154ce0830f8b2dbd766
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86061112"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86300501"
 ---
 # <a name="holographic-remoting-troubleshooting"></a>Résolution des problèmes de communication à distance holographique
 
@@ -28,7 +28,11 @@ Si vous recevez une erreur irrécupérable de l’éditeur de liens qui indique 
 
 Le lecteur de communication à distance holographique prend en charge une superposition de diagnostics qui peut être activée en disant ```Enable Diagnostics``` et en désactivant ```Disable Diagnostics``` . Si vous rencontrez des problèmes avec ces commandes vocales, vous pouvez également lancer le lecteur de communication à distance holographique via un navigateur Web en ```ms-holographic-remoting:?stats``` tant qu’URL.
 
-## <a name="limitations"></a>Limitations
+## <a name="h265-video-codec-not-available"></a>Codec vidéo H265 non disponible
+
+Vous devez installer les [extensions vidéo HEVC](https://www.microsoft.com/p/hevc-video-extensions/9nmzlz57r3t7) lors de l’utilisation du codec vidéo H265 dans votre application distante. Si vous rencontrez des problèmes d’installation du codec mais que vous ne pouvez pas les utiliser, consultez le Guide de [Dépannage](https://docs.microsoft.com/azure/remote-rendering/resources/troubleshoot#h265-codec-not-available) .
+
+## <a name="limitations"></a>Limites
 
 Les API suivantes ne sont actuellement **pas** prises en charge lors de l’utilisation de la communication à distance holographique pour HoloLens 2 et génèrent une ```ERROR_NOT_SUPPORTED``` erreur sauf indication contraire :
 
@@ -39,10 +43,12 @@ Les API suivantes ne sont actuellement **pas** prises en charge lors de l’util
   - Dans les versions précédentes génère toujours une erreur.
 * [HolographicCamera.IsHardwareContentProtectionEnabled](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamera.ishardwarecontentprotectionenabled#Windows_Graphics_Holographic_HolographicCamera_IsHardwareContentProtectionEnabled)
 * [HolographicViewConfiguration.RequestRenderTargetSize](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicviewconfiguration.requestrendertargetsize#Windows_Graphics_Holographic_HolographicViewConfiguration_RequestRenderTargetSize_Windows_Foundation_Size_)
-  - N’échoue pas, mais la taille de la cible de rendu n’est pas modifiée.
+  - Pris en charge à partir de la version [2.2.0](holographic-remoting-version-history.md#v2.2.0)
+  - Dans les versions précédentes n’échoue pas, mais la taille de la cible de rendu n’est pas modifiée.
 * [HolographicCameraPose.OverrideProjectionTransform](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerapose.overrideprojectiontransform)
 * [HolographicCameraPose.OverrideViewport](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerapose.overrideviewport)
 * [HolographicCameraPose.OverrideViewTransform](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerapose.overrideviewtransform)
+  - Pris en charge à partir de la version [2.2.0](holographic-remoting-version-history.md#v2.2.0)
 * [HolographicCameraRenderingParameters.CommitDirect3D11DepthBuffer](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.commitdirect3d11depthbuffer#Windows_Graphics_Holographic_HolographicCameraRenderingParameters_CommitDirect3D11DepthBuffer_Windows_Graphics_DirectX_Direct3D11_IDirect3DSurface_)
   - N’échoue pas, mais la mémoire tampon de profondeur ne sera pas distante.
   - Pris en charge à partir de la version [2.1.0](holographic-remoting-version-history.md#v2.1.0)
