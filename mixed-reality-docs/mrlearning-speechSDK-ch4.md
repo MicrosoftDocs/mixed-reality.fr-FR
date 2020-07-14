@@ -7,12 +7,12 @@ ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: b2342e7d0d502af2787ca311d18a44f8726acf2d
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+ms.openlocfilehash: 8cebe1fb203aeed9a262a2e9f482993b4775e0a6
+ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "79028369"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86303660"
 ---
 # <a name="4-setting-up-intent-and-natural-language-understanding"></a>4. Configuration des intentions et compréhension du langage naturel
 
@@ -63,7 +63,7 @@ Dans la page Créer, cliquez sur l’option **Prédiction** et entrez les valeur
 > Au moment de la rédaction de cet article, vous n’avez pas besoin de créer une ressource de création, car une clé d’essai de création est automatiquement générée dans LUIS quand vous créez l’application LUIS (Language Understanding Intelligent Service) dans la section suivante.
 
 > [!TIP]
-> Si vous avez déjà un autre groupe de ressources approprié dans votre compte Azure, par exemple, si vous avez suivi le tutoriel [Azure Spatial Anchors](mrlearning-asa-ch1.md), vous pouvez utiliser ce groupe de ressources au lieu d’en créer un.
+> Si vous avez déjà un autre groupe de ressources approprié dans votre compte Azure, par exemple, si vous avez suivi le tutoriel [Azure Spatial Anchors](mr-learning-asa-01.md), vous pouvez utiliser ce groupe de ressources au lieu d’en créer un.
 
 Toujours dans la page Créer, entrez les valeurs suivantes :
 
