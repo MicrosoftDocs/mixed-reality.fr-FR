@@ -112,34 +112,47 @@
 ### Unity
 #### Tutoriels sur HoloLens 2
 ##### Tutoriels de démarrage
-###### [1. Vue d’ensemble et objectifs](mrlearning-base.md)
-###### [2. Initialisation de votre projet et première application](mrlearning-base-ch1.md)
-###### [3. Création de l’interface utilisateur et configuration du kit d’outils de réalité mixte](mrlearning-base-ch2.md)
-###### [4. Placement du contenu dynamique et utilisation de solveurs](mrlearning-base-ch3.md)
-###### [5. Interaction avec les objets 3D](mrlearning-base-ch4.md)
-###### [6. Exploration des options d’entrée avancées](mrlearning-base-ch5.md)
-###### [7. Création d’un exemple d’application Module lunaire](mrlearning-base-ch6.md)
+###### [1. Introduction](mr-learning-base-01.md)
+###### [2. Initialisation de votre projet et première application](mr-learning-base-02.md)
+###### [3. Configuration des profils Mixed Reality Toolkit](mr-learning-base-03.md)
+###### [4. Positionnement des objets dans la scène](mr-learning-base-04.md)
+###### [5. Création de contenu dynamique avec des solveurs](mr-learning-base-05.md)
+###### [6. Création d’une interface utilisateur](mr-learning-base-06.md)
+###### [7. Interaction avec les objets 3D](mr-learning-base-07.md)
+###### [8. Utilisation de l’eye-tracking](mr-learning-base-08.md)
+###### [9. Utilisation des commandes vocales](mr-learning-base-09.md)
 ##### Tutoriels sur les ancres spatiales Azure
-###### [1. Bien démarrer avec les ancres spatiales Azure](mrlearning-asa-ch1.md)
-###### [2. Enregistrement, récupération et partage d’ancres spatiales Azure](mrlearning-asa-ch2.md)
-###### [3. Affichage des commentaires sur les ancres spatiales Azure](mrlearning-asa-ch3.md)
-###### [4. Azure Spatial Anchors pour Android et iOS](mrlearning-asa-ch4.md)
+###### [1. Introduction](mr-learning-asa-01.md)
+###### [2. Bien démarrer avec les ancres spatiales Azure](mr-learning-asa-02.md)
+###### [3. Enregistrement, récupération et partage d’ancres spatiales Azure](mr-learning-asa-03.md)
+###### [4. Affichage des commentaires sur les ancres spatiales Azure](mr-learning-asa-04.md)
+###### [5. Azure Spatial Anchors pour Android et iOS](mr-learning-asa-05.md)
+##### Tutoriels sur les fonctionnalités multiutilisateurs
+###### [1. Introduction](mr-learning-sharing-01.md)
+###### [2. Configuration du réseau Photon Unity](mr-learning-sharing-02.md)
+###### [3. Connexion de plusieurs utilisateurs](mr-learning-sharing-03.md)
+###### [4. Partage de mouvements d’objet avec plusieurs utilisateurs](mr-learning-sharing-04.md)
+###### [5. Intégration d’ancres spatiales Azure dans une expérience partagée](mr-learning-sharing-05.md)
 ##### Tutoriels sur les services de reconnaissance vocale Azure
 ###### [1. Intégration et utilisation de la reconnaissance vocale et de la transcription](mrlearning-speechSDK-ch1.md)
 ###### [2. Ajout d’un mode hors connexion pour la traduction de parole en texte locale](mrlearning-speechSDK-ch2.md)
 ###### [3. Ajout du composant de traduction vocale Azure Cognition Services](mrlearning-speechSDK-ch3.md)
 ###### [4. Configuration des intentions et compréhension du langage naturel](mrlearning-speechSDK-ch4.md)
-##### Tutoriels sur les fonctionnalités multiutilisateurs
-###### [1. Configuration du réseau Photon Unity](mrlearning-sharing(photon)-ch1.md)
-###### [2. Connexion de plusieurs utilisateurs](mrlearning-sharing(photon)-ch2.md)
-###### [3. Partage de mouvements d’objet avec plusieurs utilisateurs](mrlearning-sharing(photon)-ch3.md)
-###### [4. Intégration d’ancres spatiales Azure dans une expérience partagée](mrlearning-sharing(photon)-ch4.md)
 ##### Tutoriels sur le contenu audio spatial
 ###### [1. Ajout de contenu audio spatial dans votre projet](unity-spatial-audio-ch1.md)
 ###### [2. Spatialisation des sons d’interaction avec les boutons](unity-spatial-audio-ch2.md)
 ###### [3. Spatialisation du contenu audio d’une vidéo](unity-spatial-audio-ch3.md)
 ###### [4. Activation et désactivation de contenu audio spatial au moment de l’exécution](unity-spatial-audio-ch4.md)
 ###### [5. Utilisation de la réverbération pour ajouter une distance à du contenu audio spatial](unity-spatial-audio-ch5.md)
+#### Tutoriels sur Azure Cloud Services
+##### [1. Azure Cloud Services pour HoloLens 2](mr-learning-azure-01.md)
+##### [2. Intégration de Stockage Azure](mr-learning-azure-02.md)
+##### [3. Intégration d’Azure Custom Vision](mr-learning-azure-03.md)
+##### [4. Intégration d’Azure Spatial Anchors](mr-learning-azure-04.md)
+##### [5. Intégration d’Azure Bot Service](mr-learning-azure-05.md)
+#### Tutoriels sur la communication à distance holographique de PC
+##### [1. Démarrage avec la communication à distance holographique de PC](mr-learning-pc-holographic-remoting-01.md)
+##### [2. Création d’une application de PC avec communication à distance holographique](mr-learning-pc-holographic-remoting-02.md)
 #### Exemples d’applications open source HoloLens 2
 ##### [Surfaces](sampleapp-surfaces.md)
 ##### [Tableau périodique des éléments 2.0](https://medium.com/@dongyoonpark/bringing-the-periodic-table-of-the-elements-app-to-hololens-2-with-mrtk-v2-a6e3d8362158)
@@ -217,15 +230,17 @@
 
 ## Unreal
 ### [Vue d’ensemble du développement Unreal](unreal-development-overview.md)
-### [Suivi de la main dans Unreal](unreal-hand-tracking.md)
 ### [Entrée visuelle dans Unreal](unreal-gaze-input.md)
+### [Suivi de la main dans Unreal](unreal-hand-tracking.md)
+### [Appareil photo HoloLens dans Unreal](unreal-hololens-camera.md)
+### [Codes QR dans Unreal](unreal-qr-codes.md)
 ### [Mappage spatial dans Unreal](unreal-spatial-mapping.md)
 ### [Son spatial dans Unreal](unreal-spatial-audio.md)
 ### [Ancres spatiales dans Unreal](unreal-spatial-anchors.md)
-### [Entrée vocale dans Unreal](unreal-voice-input.md)
-### [Appareil photo HoloLens dans Unreal](unreal-hololens-camera.md)
-### [Codes QR dans Unreal](unreal-qr-codes.md)
 ### [Streaming dans Unreal](unreal-streaming.md)
+### [Déployer sur l’appareil dans Unreal](unreal-deploying.md)
+### [Entrée vocale dans Unreal](unreal-voice-input.md)
+### [WinRT dans Unreal](unreal-winrt.md)
 ### [Recommandations sur les performances pour Unreal](performance-recommendations-for-unreal.md)
 
 ## JavaScript
