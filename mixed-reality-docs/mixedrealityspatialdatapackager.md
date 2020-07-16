@@ -5,23 +5,23 @@ author: alfred-msft
 ms.author: yuripek
 ms.date: 05/16/2019
 ms.topic: article
-keywords: LBE, MixedRealitySpatialDataPackager. exe, MixedRealitySpatialDataPackager
-ms.openlocfilehash: 3beb8f9168bfb6fd921d6d5c1eb6d250c70a714d
-ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
+keywords: LBE, MixedRealitySpatialDataPackager.exe, MixedRealitySpatialDataPackager
+ms.openlocfilehash: 4a285cbd7423d7cacaf52370e6e19acf42672289
+ms.sourcegitcommit: cfca6cb016d8683fa2c611a97d493a4947935dbb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74539678"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86402738"
 ---
 # <a name="mixed-reality-spatial-data-packager-documentation"></a>Documentation du package de données spatiales de la réalité mixte
 
 >[!NOTE]
 > Cet outil et son fonctionnement sont proposés tels quels. Elle est sujette à modification sans aucun préavis et peut ne pas être compatible avec les futures versions de Windows ou de Windows Mixed Reality HMD.
 
-## <a name="download"></a>Télécharger
+## <a name="download"></a>Téléchargement
  Téléchargez [MixedRealitySpatialDataPackager ici](https://download.microsoft.com/download/A/1/2/A12B8A90-B3F7-4ED9-A4BB-D59DDCDAA125/MixedRealitySpatialDataPackager.zip)
 
-## <a name="device-support"></a>Périphériques pris en charge
+## <a name="device-support"></a>Prise en charge des appareils
 
 <table>
     <colgroup>
@@ -44,7 +44,7 @@ ms.locfileid: "74539678"
     </tr>
 </table>
 
-## <a name="quickstart"></a>Didacticiel
+## <a name="quickstart"></a>Démarrage rapide
 
 L’outil mélangeur de données spatiales de réalité mixte copie les données spatiales d’une application cible d’un ordinateur vers un autre à l’aide d’un processus d’exportation et d’importation en deux étapes. L’outil doit être exécuté avec des privilèges d’administrateur et supprimer les données spatiales existantes lors de l’importation. L’exportation laisse les données spatiales existantes intactes.
 
@@ -60,7 +60,7 @@ Principales exigences et limitations :
 
 ## <a name="mapping-best-practices"></a>Meilleures pratiques de mappage
 
-1. Effacer les mappages existants dans le panneau de configuration (paramètres-> réalité mixte-> Environnement-> Effacer les données d’environnement)
+1. Effacer les mappages existants dans le panneau de configuration (paramètres-> réalité mixte-> environnement-> effacer les données d’environnement)
 2. Garantir un éclairage suffisant pour un bon suivi et si l’exécution du mode de mappage verrouillé tente de maintenir le même éclairage
 3. Lorsque cela est possible, conservez la plage dynamique d’éclairage en évitant les zones d’éclairage élevé en regard des zones masquées et sombres
 4. Réduire les surfaces vides et sans texture, par exemple placer une plage de différentes affiches sur des murs blancs
@@ -71,7 +71,7 @@ Principales exigences et limitations :
 
 ## <a name="running-mixed-reality-spatial-data-packager-with-companion-script"></a>Exécution d’un package de données spatiales de réalité mixte avec un script compagnon
 
-Nous avons fourni MRSpatialPackagerHelperScript. ps1 qui exécute les outils de mappage de package. 
+Nous avons fourni MRSpatialPackagerHelperScript.ps1 qui exécute les outils de mappage de package. 
 
 
 Les paramètres de script sont définis ci-dessous :
@@ -102,7 +102,7 @@ Les paramètres de script sont définis ci-dessous :
 
 ### <a name="powershell-script-example-usage-and-output"></a>Utilisation et sortie de l’exemple de script PowerShell
 
-.\MRSpatialPackagerHelperScript.ps1-AppName holoshell-UserName administrateur-mode Export-MapxPath D:\temp\-LockMap 0
+.\MRSpatialPackagerHelperScript.ps1-AppName holoshell-nom_utilisateur mode administrateur Export-MapxPath D:\temp\-LockMap 0
 ```
 Package Family Name for holoshell: HoloShell_cw5n1h2txyewy
 User SID for Administrator: S-1-5-21-1279937937-3984375698-1043392598-499
@@ -135,14 +135,14 @@ Started SPECTRUM
 IMPORT SUCCESS
 ```
 
-### <a name="how-to-export-using-mixedrealitypackagerexe"></a>Procédure d’exportation à l’aide de MixedRealityPackager. exe
+### <a name="how-to-export-using-mixedrealityspatialdatapackagerexe"></a>Procédure d’exportation à l’aide de MixedRealitySpatialDataPackager.exe
 ```
 MixedRealitySpatialDataPackager.exe export <folderpath to mapx files> <source package family name>    
 ```
 
 L’exportation des mappages de l’appareil génère deux fichiers MapX, obtenir. MapX et sa. MapX. Pendant le processus d’exportation, toutes les ancres spatiales sont supprimées, à l’exception de l’application spécifiée et de la limite créée par l’utilisateur (le cas échéant). Le nom de famille du package source doit correspondre à une application installée existante. sinon, le fichier exe échoue.
 
-### <a name="how-to-import-using-mixedrealitypackagerexe"></a>Procédure d’importation à l’aide de MixedRealityPackager. exe
+### <a name="how-to-import-using-mixedrealityspatialdatapackagerexe"></a>Procédure d’importation à l’aide de MixedRealitySpatialDataPackager.exe
 ```
 MixedRealitySpatialDataPackager.exe import <folderpath to mapx files> <target package family name> <user SID>
 ```
