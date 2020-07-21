@@ -7,12 +7,12 @@ ms.date: 03/21/2018
 ms.topic: article
 keywords: réalité mixte, holographique, ar, vr, mr, xr, réalité augmentée, réalité virtuelle, explication
 ms.localizationpriority: high
-ms.openlocfilehash: 7b0dcbdb88f880d4c1632fae874ba6a610f023fb
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+ms.openlocfilehash: 541752ef32149f64f9b85616883c284b33bb8fed
+ms.sourcegitcommit: 8daefb763d1f23fe02b95b766b00b373f04c5c2d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "81278047"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86447905"
 ---
 # <a name="what-is-mixed-reality"></a>Qu’est-ce que la réalité mixte ?
 
@@ -117,7 +117,7 @@ Parfois, il est recommandé de réfléchir au type d’expérience qu’un déve
 ## <a name="see-also"></a>Voir aussi
 
 * [Qu’est-ce qu’un hologramme ?](hologram.md)
-* [Comprendre les principes de base de la réalité mixte](index.md#understand-the-basics)
+* [Comprendre les principes de base de la réalité mixte](get-started-with-mr.md#understand-the-basics)
 * [Commencer à concevoir et à créer des prototypes](design.md)
 * [Découvrir les outils et l’architecture](development.md)
 
