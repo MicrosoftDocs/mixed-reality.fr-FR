@@ -8,12 +8,12 @@ metadata:
   author: hferrone
   ms.author: v-haferr
   ms.date: 07/03/2020
-  ms.openlocfilehash: afb6d40c969d90af5bf1b5f6844ab357eb255f15
-  ms.sourcegitcommit: 8daefb763d1f23fe02b95b766b00b373f04c5c2d
+  ms.openlocfilehash: 01623c90dccfbc94f8645daedf60b56b8c7a6b82
+  ms.sourcegitcommit: 3c32f45fd941767d408cccc5a76f1ff1cec763da
   ms.translationtype: HT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 07/17/2020
-  ms.locfileid: "86451333"
+  ms.lasthandoff: 07/22/2020
+  ms.locfileid: "86879274"
 landingContent:
 - title: Découvrir de nouveaux mondes immersifs
   linkLists:
@@ -51,7 +51,7 @@ landingContent:
       url: unity-development-overview.md
     - text: Commencer votre parcours Unreal
       url: unreal-development-overview.md
-    - text: Commencer votre parcours Javascript
+    - text: Commencer votre parcours JavaScript
       url: javascript-development-overview.md
     - text: Commencer votre parcours natif (OpenXR/WinRT)
       url: directx-development-overview.md
