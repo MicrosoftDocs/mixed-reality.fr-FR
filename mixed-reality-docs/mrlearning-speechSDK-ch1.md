@@ -7,12 +7,12 @@ ms.date: 02/26/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: 71a6c2124258f05e80e624b940386db72a36070b
-ms.sourcegitcommit: 92ff5478a5c55b4e2c5cc2f44f1588702f4ec5d1
+ms.openlocfilehash: f376ab268e9c2869e48b325fa728672a16ee6d32
+ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82604980"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86303680"
 ---
 # <a name="1-integrating-and-using-speech-recognition-and-transcription"></a>1. Intégration et utilisation de la reconnaissance vocale et de la transcription
 
@@ -29,7 +29,7 @@ Dans cette série de tutoriels, vous allez créer une application de réalité m
 ## <a name="prerequisites"></a>Prérequis
 
 >[!TIP]
->Si vous n’avez pas encore terminé la série de [tutoriels de démarrage](mrlearning-base.md), nous vous conseillons de le faire avant d’aller plus loin.
+>Si vous n’avez pas encore terminé la série de [tutoriels de démarrage](mr-learning-base-01.md), nous vous conseillons de le faire avant d’aller plus loin.
 
 * PC Windows 10 configuré avec les [outils appropriés installés](install-the-tools.md)
 * SDK Windows 10 (10.0.18362.0 ou version ultérieure)
@@ -44,24 +44,16 @@ Dans cette série de tutoriels, vous allez créer une application de réalité m
 
 Dans cette section, vous allez créer un projet Unity et le préparer au développement avec MRTK.
 
-Pour cela, suivez d’abord [Initialisation de votre projet et de votre première application](mrlearning-base-ch1.md), en excluant les instructions données dans [Générer votre application sur votre appareil](mrlearning-base-ch1.md#build-your-application-to-your-device), ce qui inclut les étapes suivantes :
+Pour cela, suivez d’abord [Initialisation de votre projet et de votre première application](mr-learning-base-02.md), en excluant les instructions données dans [Générer votre application sur votre appareil](mr-learning-base-02.md#building-your-application-to-your-hololens-2), ce qui inclut les étapes suivantes :
 
-1. [Créer un projet Unity](mrlearning-base-ch1.md#create-new-unity-project) et lui donner un nom approprié, par exemple *MRTK Tutorials*
+1. [Création du projet Unity](mr-learning-base-02.md#creating-the-unity-project) et affectation d’un nom pertinent, par exemple *MRTK Tutorials*
+2. [Changement de plateforme de génération](mr-learning-base-02.md#configuring-the-unity-project)
+3. [Importation des ressources TextMeshPro Essential](mr-learning-base-02.md#importing-the-textmeshpro-essential-resources)
+4. [Importation du Mixed Reality Toolkit](mr-learning-base-02.md#importing-the-mixed-reality-toolkit)
+5. [Configuration du projet Unity](mr-learning-base-02.md#configuring-the-unity-project)
+6. [Création et configuration de la scène](mr-learning-base-02.md#creating-and-configuring-the-scene), et affectation d’un nom pertinent à la scène, par exemple *AzureSpeechServices*
 
-2. [Configurer le projet Unity pour Windows Mixed Reality](mrlearning-base-ch1.md#configure-the-unity-project-for-windows-mixed-reality)
-
-3. [Importer les ressources essentielles TextMeshPro](mrlearning-base-ch1.md#import-textmesh-pro-essential-resources)
-
-4. [Importer Mixed Reality Toolkit](mrlearning-base-ch1.md#import-the-mixed-reality-toolkit)
-
-5. [Configurer le projet Unity pour Mixed Reality Toolkit](mrlearning-base-ch1.md#configure-the-unity-project-for-the-mixed-reality-toolkit)
-
-6. [Ajouter Mixed Reality Toolkit à la scène Unity](mrlearning-base-ch1.md#configure-the-mixed-reality-toolkit) et donner à la scène un nom approprié, par exemple *AzureSpeechServices*
-
-Ensuite, suivez les instructions du [Guide pratique pour configurer les profils Mixed Reality Toolkit (Modifier l’option d’affichage de la sensibilisation spatiale)](mrlearning-base-ch2.md#how-to-configure-the-mixed-reality-toolkit-profiles-change-spatial-awareness-display-option) pour remplacer le profil de configuration MRTK de votre scène par **DefaultHoloLens2ConfigurationProfile** et pour remplacer les options d’affichage du maillage de la sensibilisation spatiale par **Occlusion**.
-
-> [!CAUTION]
-> Comme mentionné dans les instructions de l’étape [Configurer le projet Unity pour Mixed Reality Toolkit](mrlearning-base-ch1.md#configure-the-unity-project-for-the-mixed-reality-toolkit) dont le lien est disponible ci-dessus, il est fortement recommandé de ne pas activer MSBuild pour Unity.
+Ensuite, suivez les instructions de [Modification de l’option d’affichage de la reconnaissance spatiale](mr-learning-base-03.md#changing-the-spatial-awareness-display-option) pour remplacer le profil de configuration MRTK de votre scène par **DefaultHoloLens2ConfigurationProfile** et remplacer les options d’affichage du maillage de la reconnaissance spatiale par **Occlusion**.
 
 ## <a name="configuring-the-speech-commands-start-behavior"></a>Configuration du comportement de démarrage des commandes vocales
 
@@ -72,7 +64,7 @@ Avec l’objet **MixedRealityToolkit** sélectionné dans la fenêtre Hierarchy,
 ![mrlearning-speech](images/mrlearning-speech/tutorial1-section2-step1-1.png)
 
 > [!TIP]
-> Pour obtenir un rappel sur la façon de cloner et de configurer des profils MRTK, vous pouvez vous reportez aux instructions données dans le [Guide pratique pour configurer les profils Mixed Reality Toolkit (Modifier l’option d’affichage de la sensibilisation spatiale)](mrlearning-base-ch2.md#how-to-configure-the-mixed-reality-toolkit-profiles-change-spatial-awareness-display-option).
+> Pour vous rappeler comment cloner et configurer des profils MRTK, reportez-vous aux instructions fournies dans [Configuration des profils Mixed Reality Toolkit](mr-learning-base-03.md).
 
 ## <a name="configuring-the-capabilities"></a>Configuration des fonctionnalités
 
@@ -93,9 +85,9 @@ Téléchargez et **importez** les packages personnalisés Unity suivants **dans 
 * [MRTK.HoloLens2.Unity.Tutorials.Assets.AzureSpeechServices.2.3.0.0.unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/azure-speech-services-v2.3.0.0/MRTK.HoloLens2.Unity.Tutorials.Assets.AzureSpeechServices.2.3.0.0.unitypackage)
 
 > [!TIP]
-> Pour obtenir un rappel sur la façon d’importer un package personnalisé Unity, vous pouvez vous reporter aux instructions données dans [Importer Mixed Reality Toolkit](mrlearning-base-ch1.md#import-the-mixed-reality-toolkit).
+> Pour vous rappeler comment importer un package personnalisé Unity, reportez-vous aux instructions fournies dans [Importation du Mixed Reality Toolkit](mr-learning-base-02.md#importing-the-mixed-reality-toolkit).
 
-Une fois que vous avez importé les ressources du tutoriel, votre fenêtre de projet doit ressembler à ceci :
+Une fois que vous avez importé les ressources du tutoriel, votre fenêtre Project doit ressembler à ceci :
 
 ![mrlearning-speech](images/mrlearning-speech/tutorial1-section4-step1-1.png)
 

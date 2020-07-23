@@ -7,12 +7,12 @@ ms.date: 5/5/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, réalité mixte, performances, optimisation, paramètres, documentation
-ms.openlocfilehash: 9f128a3ef09f29fc745c21b09b7ec97f5db33605
-ms.sourcegitcommit: 7f50210b71a65631fd1bc3fdb215064e0db34333
+ms.openlocfilehash: a7972962eeb2b1480a7da38210b5ee77104f508b
+ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84533121"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86303633"
 ---
 # <a name="performance-recommendations-for-unreal"></a>Recommandations sur les performances pour Unreal
 
@@ -32,10 +32,11 @@ Vous trouverez chacun des paramètres suivants dans **Edit > Project Settings**.
     * Faites défiler la page jusqu’à la section **Engine**, sélectionnez **Rendering**, développez la section **Culling**, puis décochez la case **Occlusion Culling**.
         + Si vous avez besoin d’éliminer des occlusions pour une scène précise en cours de rendu, nous vous recommandons de cocher la case **Support Software Occlusion Culling** dans **Engine > Rendering**. Ceci permet à Unreal d’effectuer le travail sur le processeur et d’éviter les requêtes d’occlusion du GPU, dont les performances sont faibles sur HoloLens 2.
 
-![Définition de la cible mobile](images/unreal/performance-recommendations-img-02.png)
+![Désactivation de l’élimination de l’occlusion](images/unreal/performance-recommendations-img-02.png)
 
-3. Mise à jour du rendu VR :
-    * Faites défiler la page jusqu’à la section **Engine**, sélectionnez **Rendering**, développez la section **VR** et cochez les cases **Instanced Stereo** et **Mobile Multi-View**.
-        + Il peut être nécessaire de décocher **Mobile Post-Processing** pour pouvoir cocher **Mobile Multi-View**.
+3. En utilisant la multivue mobile :
+    * Faites défiler la page jusqu’à la section **Engine**, sélectionnez **Rendering**, développez la section **VR** et cochez les cases **Instanced Stereo** et **Mobile Multi-View**. La case Mobile HDR doit être décochée.
 
-![Définition de la cible mobile](images/unreal/performance-recommendations-img-03.png)
+![Paramètres de rendu VR](images/unreal/performance-recommendations-img-03.png)
+
+4. Définissez **Maximum number of CSM cascades to render** avec la valeur **1** et **Max Movable Spotlights / Point Lights** avec la valeur **0**. 

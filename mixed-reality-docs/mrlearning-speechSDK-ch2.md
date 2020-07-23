@@ -7,12 +7,12 @@ ms.date: 06/27/2019
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: 75ddce9063bb9d33f5fe2343fe30178222a5f8ac
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+ms.openlocfilehash: 7a0fa915a80763300eff470e29356034d6a0f841
+ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "79031631"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86303670"
 ---
 # <a name="2-using-speech-recognition-to-execute-commands"></a>2. Utilisation de la reconnaissance vocale pour exécuter des commandes
 
@@ -46,7 +46,7 @@ Et réactivez-le en prononçant la valeur de Wake Word, à savoir **Activer le t
 > L’application a besoin de se connecter à Azure, donc vérifiez que votre ordinateur/appareil est connecté à Internet.
 
 > [!TIP]
-> Si vous prévoyez d’être souvent dans l’impossibilité de vous connecter à Azure, vous pouvez également implémenter des commandes vocales à l’aide de MRTK en suivant les instructions données dans [Activation des commandes vocales](mrlearning-base-ch5.md#enabling-voice-commands).
+> Si vous prévoyez d’être souvent dans l’impossibilité de vous connecter à Azure, vous pouvez aussi implémenter des commandes vocales à l’aide de MRTK en suivant les instructions données dans [Utilisation des commandes vocales](mr-learning-base-09.md).
 
 ## <a name="congratulations"></a>Félicitations
 

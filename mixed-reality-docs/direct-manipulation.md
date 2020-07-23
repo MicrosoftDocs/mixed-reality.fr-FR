@@ -7,12 +7,12 @@ ms.date: 04/02/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Réalité mixte, pointage du regard, ciblage par pointage du regard, interaction, conception, à portée de main, HoloLens
-ms.openlocfilehash: 40a8441177582a55b58acbfbd15c7b506853e4da
-ms.sourcegitcommit: 6d9d01d53137435c787f247f095d5255581695fc
+ms.openlocfilehash: 2a63f53464e354ae49f8c63fafbf592508bd5e3b
+ms.sourcegitcommit: 0eb99fae933d4374af2c032af4e9ceda1807e532
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83227994"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86156780"
 ---
 # <a name="direct-manipulation-with-hands"></a>Manipulation directe avec les mains
 
@@ -327,9 +327,9 @@ En procédant ainsi, vous passez accidentellement votre main sur des boutons hol
 ---
 
 ## <a name="manipulation-in-mrtk-mixed-reality-toolkit-for-unity"></a>Manipulation dans MRTK (Mixed Reality Toolkit) pour Unity
-Avec **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** , vous pouvez facilement obtenir un comportement de manipulation courant à l’aide du script **ManipulationHandler**. Avec ManipulationHandler, vous pouvez saisir et déplacer les objets directement avec les mains ou avec un rayon émanant de la main. Il prend également en charge les manipulations à deux mains pour la mise à l’échelle et la rotation des objets.
+Avec **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** , vous pouvez facilement obtenir un comportement de manipulation courant à l’aide du script **ObjectManipulator**. Avec ObjectManipulator, vous pouvez saisir et déplacer les objets directement avec les mains ou avec un rayon émanant de la main. Il prend également en charge les manipulations à deux mains pour la mise à l’échelle et la rotation des objets.
 
-* [MRTK - Manipulation](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ManipulationHandler.html)
+* [MRTK - Manipulation](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ObjectManipulator.html)
 
 
 ---

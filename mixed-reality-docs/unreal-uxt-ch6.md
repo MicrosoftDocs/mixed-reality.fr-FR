@@ -7,12 +7,12 @@ ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, réalité mixte, tutoriel, bien démarrer, mrtk, uxt, UX Tools, documentation
-ms.openlocfilehash: 99407a4069f914bf077e6323dde3e12978f6b765
-ms.sourcegitcommit: 7ca383ef1c5dc895ca2a289435f2e9d4c1ee6e65
+ms.openlocfilehash: c49e2a69cb97a996da4bf601a105c2176ccf267f
+ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85345689"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86303540"
 ---
 # <a name="6-packaging--deploying-to-device-or-emulator"></a>6. Empaquetage et déploiement sur un appareil ou un émulateur
 
@@ -30,15 +30,15 @@ La [communication à distance holographique](https://docs.microsoft.com/windows/
 
 Si vous suivez ce chemin avec l’application de jeu d’échecs, vous aurez besoin de quelques éléments :
 
-1.  Installez **Holographic Remoting Player** à partir du Microsoft Store sur votre HoloLens 2 et exécutez l’application.
+1.  Installez **Holographic Remoting Player** à partir du Microsoft Store sur votre HoloLens 2 et exécutez l’application. Notez votre adresse IP affichée dans l’application.
 
-2.  Accédez à **Edit > Project Settings** et cochez la case **enable remoting** dans **Holographic Remoting**.
+2.  De retour dans l’éditeur Unreal, accédez à **Edit > Project Settings** et cochez la case **Enable Remoting** dans la section **Holographic Remoting**.
 
-3.  Redémarrez l’éditeur, [recherchez l’adresse IP de votre appareil](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-hololens#connect-over-wi-fi), puis entrez-la et cliquez sur **Connect**.
+3.  Redémarrez l’éditeur, entrez l’adresse IP de votre appareil (qui figure dans l’application Holographic Remoting Player), puis cliquez sur **Connect**.
 
-Une fois que vous êtes connecté, cliquez sur la flèche déroulante à droite du bouton **Play** et sélectionnez **VR Preview**. L’application est alors exécutée dans la fenêtre VR Preview, qui est diffusée en streaming vers le casque HoloLens. 
+Une fois que vous êtes connecté, cliquez sur la flèche déroulante à droite du bouton **Play** et sélectionnez **VR Preview**. L’application est alors exécutée dans la fenêtre VR Preview, qui est diffusée en streaming sur le casque HoloLens. 
 
-## <a name="packaging-and-deploying-the-app"></a>Empaquetage et déploiement de l’application 
+## <a name="packaging-and-deploying-the-app-via-device-portal"></a>Empaquetage et déploiement de l’application par le biais du portail de l’appareil
 
 >[!NOTE]
 >S’il s’agit de la première fois que vous empaquetez une application Unreal pour HoloLens, vous devrez télécharger les fichiers de prise en charge à partir de l’Epic Launcher. 
@@ -63,7 +63,7 @@ Une fois que vous êtes connecté, cliquez sur la flèche déroulante à droite 
 3.  Cliquez sur **Generate new** dans la section **Packaging** (en regard de **Signing Certificate**).
 
 > [!IMPORTANT]
-> Si vous utilisez un certificat déjà généré, le nom de l’éditeur du certificat doit être identique au nom de l’éditeur de l’application. Sinon, le message d’erreur « Clé de signature introuvable. L’application n’a pas pu être signée numériquement. » s’affiche.
+> Si vous utilisez un certificat déjà généré, le nom de l’éditeur du certificat doit être identique au nom de l’éditeur de l’application. Sinon, le message d’erreur « Clé de signature introuvable. L’application n’a pas pu être signée numériquement. » erreur.
 
 ![Paramètres du projet - Plateformes - HoloLens](images/unreal-uxt/6-packaging.PNG)
 
