@@ -7,35 +7,36 @@ ms.date: 5/5/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, réalité mixte, performances, optimisation, paramètres, documentation
-ms.openlocfilehash: 9f128a3ef09f29fc745c21b09b7ec97f5db33605
-ms.sourcegitcommit: 7f50210b71a65631fd1bc3fdb215064e0db34333
+ms.openlocfilehash: a7972962eeb2b1480a7da38210b5ee77104f508b
+ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84533121"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86303633"
 ---
-# <a name="performance-recommendations-for-unreal"></a><span data-ttu-id="ad99e-104">Recommandations sur les performances pour Unreal</span><span class="sxs-lookup"><span data-stu-id="ad99e-104">Performance recommendations for Unreal</span></span>
+# <a name="performance-recommendations-for-unreal"></a><span data-ttu-id="ec309-104">Recommandations sur les performances pour Unreal</span><span class="sxs-lookup"><span data-stu-id="ec309-104">Performance recommendations for Unreal</span></span>
 
-## <a name="overview"></a><span data-ttu-id="ad99e-105">Vue d’ensemble</span><span class="sxs-lookup"><span data-stu-id="ad99e-105">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="ec309-105">Vue d’ensemble</span><span class="sxs-lookup"><span data-stu-id="ec309-105">Overview</span></span>
 
-<span data-ttu-id="ad99e-106">Cet article s’appuie sur les [recommandations sur les performances pour la réalité mixte](understanding-performance-for-mixed-reality.md), mais il se concentre sur des fonctionnalités propres à Unreal Engine.</span><span class="sxs-lookup"><span data-stu-id="ad99e-106">This article builds on the discussion outlined in [performance recommendations for mixed reality](understanding-performance-for-mixed-reality.md), but focuses on features specific to Unreal Engine.</span></span> <span data-ttu-id="ad99e-107">Avant de continuer, nous vous encourageons à vous informer sur les goulots d’étranglement des applications, l’analyse et le profilage des applications de réalité mixte, ainsi que les correctifs des performances généraux.</span><span class="sxs-lookup"><span data-stu-id="ad99e-107">You're encouraged to read up on application bottlenecks, analyzing and profiling mixed reality apps, and general performance fixes before continuing.</span></span>
+<span data-ttu-id="ec309-106">Cet article s’appuie sur les [recommandations sur les performances pour la réalité mixte](understanding-performance-for-mixed-reality.md), mais il se concentre sur des fonctionnalités propres à Unreal Engine.</span><span class="sxs-lookup"><span data-stu-id="ec309-106">This article builds on the discussion outlined in [performance recommendations for mixed reality](understanding-performance-for-mixed-reality.md), but focuses on features specific to Unreal Engine.</span></span> <span data-ttu-id="ec309-107">Avant de continuer, nous vous encourageons à vous informer sur les goulots d’étranglement des applications, l’analyse et le profilage des applications de réalité mixte, ainsi que les correctifs des performances généraux.</span><span class="sxs-lookup"><span data-stu-id="ec309-107">You're encouraged to read up on application bottlenecks, analyzing and profiling mixed reality apps, and general performance fixes before continuing.</span></span>
 
-## <a name="recommended-unreal-project-settings"></a><span data-ttu-id="ad99e-108">Paramètres de projet Unreal recommandés</span><span class="sxs-lookup"><span data-stu-id="ad99e-108">Recommended Unreal project settings</span></span>
-<span data-ttu-id="ad99e-109">Vous trouverez chacun des paramètres suivants dans **Edit > Project Settings**.</span><span class="sxs-lookup"><span data-stu-id="ad99e-109">You can find each of the following settings in **Edit > Project Settings**.</span></span>
+## <a name="recommended-unreal-project-settings"></a><span data-ttu-id="ec309-108">Paramètres de projet Unreal recommandés</span><span class="sxs-lookup"><span data-stu-id="ec309-108">Recommended Unreal project settings</span></span>
+<span data-ttu-id="ec309-109">Vous trouverez chacun des paramètres suivants dans **Edit > Project Settings**.</span><span class="sxs-lookup"><span data-stu-id="ec309-109">You can find each of the following settings in **Edit > Project Settings**.</span></span>
 
-1. <span data-ttu-id="ad99e-110">Utilisation du convertisseur VR mobile :</span><span class="sxs-lookup"><span data-stu-id="ad99e-110">Using the mobile VR renderer:</span></span>
-    * <span data-ttu-id="ad99e-111">Faites défiler la page jusqu’à la section **Project**, sélectionnez **Target Hardware**, puis définissez la plateforme cible sur **Mobile/Tablet**.</span><span class="sxs-lookup"><span data-stu-id="ad99e-111">Scroll to the **Project** section, select **Target Hardware**, and set the target platform to **Mobile/Tablet**</span></span>
+1. <span data-ttu-id="ec309-110">Utilisation du convertisseur VR mobile :</span><span class="sxs-lookup"><span data-stu-id="ec309-110">Using the mobile VR renderer:</span></span>
+    * <span data-ttu-id="ec309-111">Faites défiler la page jusqu’à la section **Project**, sélectionnez **Target Hardware**, puis définissez la plateforme cible sur **Mobile/Tablet**.</span><span class="sxs-lookup"><span data-stu-id="ec309-111">Scroll to the **Project** section, select **Target Hardware**, and set the target platform to **Mobile/Tablet**</span></span>
 
 ![Définition de la cible mobile](images/unreal/performance-recommendations-img-01.png)
 
-2. <span data-ttu-id="ad99e-113">Désactivation de l’élimination de l’occlusion :</span><span class="sxs-lookup"><span data-stu-id="ad99e-113">Disabling occlusion culling:</span></span>
-    * <span data-ttu-id="ad99e-114">Faites défiler la page jusqu’à la section **Engine**, sélectionnez **Rendering**, développez la section **Culling**, puis décochez la case **Occlusion Culling**.</span><span class="sxs-lookup"><span data-stu-id="ad99e-114">Scroll to the **Engine** section, select **Rendering**, expand the **Culling** section, and uncheck **Occlusion Culling**.</span></span>
-        + <span data-ttu-id="ad99e-115">Si vous avez besoin d’éliminer des occlusions pour une scène précise en cours de rendu, nous vous recommandons de cocher la case **Support Software Occlusion Culling** dans **Engine > Rendering**.</span><span class="sxs-lookup"><span data-stu-id="ad99e-115">If you need occlusion culling for a detailed scene being rendered, it's recommended that you enable **Support Software Occlusion Culling** in **Engine > Rendering**.</span></span> <span data-ttu-id="ad99e-116">Ceci permet à Unreal d’effectuer le travail sur le processeur et d’éviter les requêtes d’occlusion du GPU, dont les performances sont faibles sur HoloLens 2.</span><span class="sxs-lookup"><span data-stu-id="ad99e-116">This lets Unreal to do the work on the CPU and avoid GPU occlusion queries, which perform poorly on HoloLens 2.</span></span>
+2. <span data-ttu-id="ec309-113">Désactivation de l’élimination de l’occlusion :</span><span class="sxs-lookup"><span data-stu-id="ec309-113">Disabling occlusion culling:</span></span>
+    * <span data-ttu-id="ec309-114">Faites défiler la page jusqu’à la section **Engine**, sélectionnez **Rendering**, développez la section **Culling**, puis décochez la case **Occlusion Culling**.</span><span class="sxs-lookup"><span data-stu-id="ec309-114">Scroll to the **Engine** section, select **Rendering**, expand the **Culling** section, and uncheck **Occlusion Culling**.</span></span>
+        + <span data-ttu-id="ec309-115">Si vous avez besoin d’éliminer des occlusions pour une scène précise en cours de rendu, nous vous recommandons de cocher la case **Support Software Occlusion Culling** dans **Engine > Rendering**.</span><span class="sxs-lookup"><span data-stu-id="ec309-115">If you need occlusion culling for a detailed scene being rendered, it's recommended that you enable **Support Software Occlusion Culling** in **Engine > Rendering**.</span></span> <span data-ttu-id="ec309-116">Ceci permet à Unreal d’effectuer le travail sur le processeur et d’éviter les requêtes d’occlusion du GPU, dont les performances sont faibles sur HoloLens 2.</span><span class="sxs-lookup"><span data-stu-id="ec309-116">This lets Unreal to do the work on the CPU and avoid GPU occlusion queries, which perform poorly on HoloLens 2.</span></span>
 
-![Définition de la cible mobile](images/unreal/performance-recommendations-img-02.png)
+![Désactivation de l’élimination de l’occlusion](images/unreal/performance-recommendations-img-02.png)
 
-3. <span data-ttu-id="ad99e-118">Mise à jour du rendu VR :</span><span class="sxs-lookup"><span data-stu-id="ad99e-118">Updating VR rendering:</span></span>
-    * <span data-ttu-id="ad99e-119">Faites défiler la page jusqu’à la section **Engine**, sélectionnez **Rendering**, développez la section **VR** et cochez les cases **Instanced Stereo** et **Mobile Multi-View**.</span><span class="sxs-lookup"><span data-stu-id="ad99e-119">Scroll to the **Engine** section, select **Rendering**, expand the **VR** section, and enable both **Instanced Stereo** and **Mobile Multi-View**.</span></span>
-        + <span data-ttu-id="ad99e-120">Il peut être nécessaire de décocher **Mobile Post-Processing** pour pouvoir cocher **Mobile Multi-View**.</span><span class="sxs-lookup"><span data-stu-id="ad99e-120">You may need to uncheck **Mobile Post-Processing** in order to be able to check **Mobile Multi-View**</span></span>
+3. <span data-ttu-id="ec309-118">En utilisant la multivue mobile :</span><span class="sxs-lookup"><span data-stu-id="ec309-118">Using mobile multi-view:</span></span>
+    * <span data-ttu-id="ec309-119">Faites défiler la page jusqu’à la section **Engine**, sélectionnez **Rendering**, développez la section **VR** et cochez les cases **Instanced Stereo** et **Mobile Multi-View**.</span><span class="sxs-lookup"><span data-stu-id="ec309-119">Scroll to the **Engine** section, select **Rendering**, expand the **VR** section, and enable both **Instanced Stereo** and **Mobile Multi-View**.</span></span> <span data-ttu-id="ec309-120">La case Mobile HDR doit être décochée.</span><span class="sxs-lookup"><span data-stu-id="ec309-120">Mobile HDR should be unchecked.</span></span>
 
-![Définition de la cible mobile](images/unreal/performance-recommendations-img-03.png)
+![Paramètres de rendu VR](images/unreal/performance-recommendations-img-03.png)
+
+4. <span data-ttu-id="ec309-122">Définissez **Maximum number of CSM cascades to render** avec la valeur **1** et **Max Movable Spotlights / Point Lights** avec la valeur **0**.</span><span class="sxs-lookup"><span data-stu-id="ec309-122">Setting the **Maximum number of CSM cascades to render** to **1** and **Max Movable Spotlights / Point Lights** to **0**.</span></span> 
