@@ -3,15 +3,15 @@ title: Paramètres recommandés pour Unity
 description: Unity offre des comportements spécifiques à la réalité mixte qui peuvent être activés via les paramètres du projet.
 author: troy-ferrell
 ms.author: trferrel
-ms.date: 03/26/2019
+ms.date: 07/07/2020
 ms.topic: article
 keywords: Unity, paramètres, réalité mixte
-ms.openlocfilehash: e7628a8653fffbab9c792161ac8ff1666b47fa62
-ms.sourcegitcommit: f523b74a549721b6bec69cb5d2eca5b7673a793c
+ms.openlocfilehash: d2cc79ba0818985795c49f8812d33eba77b92b74
+ms.sourcegitcommit: 161f3c5a80f6988a9c4af26e29481fee06840e0f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85570328"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87390116"
 ---
 # <a name="recommended-settings-for-unity"></a>Paramètres recommandés pour Unity
 
@@ -23,9 +23,7 @@ Unity fournit un ensemble d’options par défaut qui sont généralement le cas
 
 Il est important de modifier les **paramètres de qualité des Unity** pour votre environnement afin qu’ils soient **très faibles**. Cela permet de s’assurer que votre application exécute efficacement à la fréquence appropriée. Cela est extrêmement important pour le développement HoloLens. Pour le développement sur des casques immersifs, selon les spécifications du bureau qui alimente l’expérience VR, vous pouvez toujours obtenir une fréquence d’images sans les paramètres de qualité la plus basse.
 
-Dans Unity 2018 LTS +, le niveau de qualité du projet peut être défini par :
-
-Sous **modifier**  >  **les paramètres du projet**  >  **Quality** > définir la **valeur par défaut** en cliquant sur la flèche vers le bas jusqu’au niveau de qualité **très faible**
+Dans Unity 2019 LTS +, vous pouvez définir le niveau de qualité du projet en accédant à **modifier**  >  **Project Settings**  >  la**qualité** des paramètres du projet et en définissant la **valeur par défaut** en cliquant sur la flèche vers le bas jusqu’au niveau de qualité **très faible** .
 
 ### <a name="lighting-settings"></a>Paramètres d’éclairage
 
@@ -44,18 +42,18 @@ Dans les applications de réalité mixte, la scène est restituée deux fois, un
 
 Pour activer cette fonctionnalité dans votre projet Unity
 
-1)  Ouvrez les **paramètres du XR de lecteur** (accédez à **modifier**les paramètres du  >  **projet**paramètres du  >  **Player**  >  **XR**de lecteur)
-2) Sélectionnez **une instance de passe unique** dans le menu déroulant **méthode de rendu stéréo** (la case à cocher de**la réalité virtuelle** doit être activée)
+1)  Ouvrez **Player XR Settings** (accédez à **Edit** > **Project Settings** > **Player** > **XR Settings**).
+2) Sélectionnez **Single Pass Instanced** dans le menu déroulant **Stereo Rendering Method** (la case **Virtual Reality Supported** doit être cochée).
 
 Lisez les articles suivants sur Unity pour plus d’informations sur cette approche de rendu.
 
-- [Optimisation des performances de l’AR et du VR avec un rendu stéréo avancé](https://blogs.unity3d.com/2017/11/21/how-to-maximize-ar-and-vr-performance-with-advanced-stereo-rendering/)
-- [Instanciation à passage unique](https://docs.unity3d.com/Manual/SinglePassInstancing.html)
+- [How to maximize AR and VR performance with advanced stereo rendering](https://blogs.unity3d.com/2017/11/21/how-to-maximize-ar-and-vr-performance-with-advanced-stereo-rendering/)
+- [Single Pass Instancing](https://docs.unity3d.com/Manual/SinglePassInstancing.html)
 
 >[!NOTE]
-> Un problème courant avec un rendu d’instance à passage unique se produit si les développeurs possèdent déjà des nuanceurs personnalisés existants non écrits pour l’instanciation. Une fois cette fonctionnalité activée, les développeurs peuvent remarquer que certains GameObjects ne s’affichent qu’en un seul œil. Cela est dû au fait que les nuanceurs personnalisés associés n’ont pas les propriétés appropriées pour l’instanciation.
+> Un problème courant avec le rendu d’instance à passage unique se produit si les développeurs ont déjà des nuanceurs personnalisés existants non écrits pour l’instanciation. Une fois cette fonctionnalité activée, les développeurs peuvent remarquer que certains GameObjects ne sont rendus que dans un seul œil. Cela est dû au fait que les nuanceurs personnalisés associés n’ont pas les propriétés appropriées pour l’instanciation.
 >
-> Consultez [rendu stéréo à passage unique pour HoloLens](https://docs.unity3d.com/Manual/SinglePassStereoRenderingHoloLens.html) à partir d’Unity pour savoir comment résoudre ce problème
+> Consultez [Single Pass Stereo Rendering for HoloLens](https://docs.unity3d.com/Manual/SinglePassStereoRenderingHoloLens.html) sur Unity pour savoir comment résoudre ce problème.
 
 ### <a name="enable-depth-buffer-sharing"></a>Activer le partage de mémoire tampon de profondeur
 
@@ -63,7 +61,7 @@ Pour obtenir une meilleure stabilité de l’hologramme à partir de la percepti
 
 Pour activer cette fonctionnalité dans votre projet Unity
 
-1) Ouvrez les **paramètres du XR de lecteur** (accédez à **modifier**les paramètres du  >  **projet**paramètres du  >  **Player**  >  **XR**de lecteur)
+1) Ouvrez **Player XR Settings** (accédez à **Edit** > **Project Settings** > **Player** > **XR Settings**).
 2) Activez la case à cocher **activer le partage de tampons de profondeur** dans les kits de développement logiciel (SDK) **Virtual Real**  >  expansion**Windows Mixed realisation** (la case à cocher**Virtual Really Supported**
 
 En outre, il est recommandé de sélectionner **profondeur de 16 bits** sous le paramètre **format de profondeur** dans ce panneau, en particulier pour le développement HoloLens. La sélection de 16 bits comparée à 24 bits réduit considérablement les besoins en bande passante, car moins de données devront être déplacées/traitées.
@@ -116,10 +114,10 @@ Pour activer/désactiver l’écran de démarrage holographique :
 
 |  Afficher l’écran de démarrage Unity  |  Image de démarrage holographique  |  Comportement |
 |----------|----------|----------|
-|  Activé  |  None  |  Affiche l’écran de démarrage Unity par défaut pendant 5 secondes ou jusqu’à ce que l’application soit chargée, selon la valeur la plus longue. |
-|  Activé  |  Personnalisé  |  Affichez l’écran de démarrage personnalisé pendant 5 secondes ou jusqu’à ce que l’application soit chargée, selon la valeur la plus longue. |
-|  Désactivé  |  None  |  Affichez le noir transparent (rien) jusqu’à ce que l’application soit chargée. |
-|  Désactivé  |  Personnalisé  |  Affichez l’écran de démarrage personnalisé pendant 5 secondes ou jusqu’à ce que l’application soit chargée, selon la valeur la plus longue. |
+|  Activé  |  Aucun  |  Affiche l’écran de démarrage Unity par défaut pendant 5 secondes ou jusqu’à ce que l’application soit chargée, selon la valeur la plus longue. |
+|  Activé  |  Custom  |  Affichez l’écran de démarrage personnalisé pendant 5 secondes ou jusqu’à ce que l’application soit chargée, selon la valeur la plus longue. |
+|  Désactivé  |  Aucun  |  Affichez le noir transparent (rien) jusqu’à ce que l’application soit chargée. |
+|  Désactivé  |  Custom  |  Affichez l’écran de démarrage personnalisé pendant 5 secondes ou jusqu’à ce que l’application soit chargée, selon la valeur la plus longue. |
 
 Pour plus d’informations, consultez la [documentation de l’écran de démarrage d’Unity](https://docs.unity3d.com/Manual/class-PlayerSettingsSplashScreen.html) .
 
@@ -172,5 +170,5 @@ Les fonctionnalités applicables pour activer les API couramment utilisées pour
 ## <a name="see-also"></a>Voir aussi
 
 * [Vue d’ensemble du développement Unity](unity-development-overview.md)
-* [Comprendre les performances de la réalité mixte](understanding-performance-for-mixed-reality.md)
+* [Comprendre les performances pour la réalité mixte](understanding-performance-for-mixed-reality.md)
 * [Recommandations de performances pour Unity](performance-recommendations-for-unity.md)
