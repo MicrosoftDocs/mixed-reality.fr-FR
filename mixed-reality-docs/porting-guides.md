@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 07/07/2020
 ms.topic: article
 keywords: port, Portage, Unity, intergiciel, Engine, UWP, Win32
-ms.openlocfilehash: ff97f843d6af62a5d49d7920abdf78fa4d1e46c9
-ms.sourcegitcommit: 2813f5b3027d47f7c6e9772338935eeccfa2aaec
+ms.openlocfilehash: ed6c613c8aa3649cffb42d08dbb18661f06b9a53
+ms.sourcegitcommit: ef0bf03833eda826ed0b884859b4573775112aba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86408197"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87476931"
 ---
 # <a name="porting-guides"></a>Guides en matière de portage
 
@@ -33,7 +33,7 @@ Windows 10 offre une prise en charge directe des casques immersifs et holographi
 
 ### <a name="common-step-1-make-sure-you-have-the-right-development-hardware"></a>Étape courante 1 : Assurez-vous d’avoir le bon matériel de développement
 
-La page [installer les outils](install-the-tools.md#for-immersive-vr-headset-development) répertorie le matériel de développement recommandé.
+La page [installer les outils](install-the-tools.md#immersive-vr-headset-requirements) répertorie le matériel de développement recommandé.
 
 ### <a name="common-step-2-upgrade-to-the-latest-flight-of-windows-10"></a>Étape 2 courante : mettre à niveau vers le dernier vol de Windows 10
 

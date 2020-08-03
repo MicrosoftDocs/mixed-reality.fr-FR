@@ -3,15 +3,15 @@ title: Windows Mixed Reality et le nouveau Microsoft Edge
 description: Préparez-vous au nouveau Microsoft Edge dans Windows Mixed Reality. Comprend les modifications à attendre, les mises à jour pour rechercher et les problèmes connus.
 author: mattzmsft
 ms.author: mazeller
-ms.date: 01/15/2020
+ms.date: 07/31/2020
 ms.topic: article
 keywords: Edge, nouveau, immersion sur le Web, Microsoft Edge, navigateur, VR
-ms.openlocfilehash: d61780045e795850012536a36fde67b9934c76aa
-ms.sourcegitcommit: 4282d92e93869e4829338bdf7d981c3ee0260bfd
+ms.openlocfilehash: 107b825496cc318042da0e0cd9acdbe482994a69
+ms.sourcegitcommit: ef0bf03833eda826ed0b884859b4573775112aba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85216230"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87476981"
 ---
 # <a name="windows-mixed-reality-and-the-new-microsoft-edge"></a>Windows Mixed Reality et le nouveau Microsoft Edge
 
@@ -46,13 +46,41 @@ Pour une expérience Microsoft Edge optimale dans la réalité mixte, nous vous 
 - L’application WebVR Showcase est présente dans la réalité mixte, en dépit du fait que WebVR n’est plus pris en charge.
 - Améliorations générales apportées au lancement et aux visuels du clavier.
 
+### <a name="monitor-and-input-handling-issues"></a>Problèmes de gestion des entrées et des analyses
+
+Après avoir effectué la mise à jour cumulative 2020-01 pour Windows 10 version 1903 (ou ultérieure), les analyses virtuelles s’affichent en tant que moniteurs physiques génériques dans les **paramètres > système > affichent** pendant les sessions Windows Mixed Reality. Certains clients, en particulier ceux qui disposent de plusieurs moniteurs physiques, peuvent remarquer des problèmes de disposition des postes de travail et de gestion des entrées.
+
+**Pourquoi cela se produit**
+
+La prise en charge des applications Win32 classiques dans Windows Mixed Reality a été introduite dans la [mise à jour de Windows 10 mai 2019](#release-notes-may-2019.md). Pour activer cette prise en charge, vous devez créer un moniteur virtuel pour héberger l’application Win32. À chaque fois qu’une nouvelle application Win32 est lancée, une autre analyse virtuelle doit être créée. Malheureusement, la création d’un moniteur virtuel est une tâche intensive qui peut entraîner un blocage rapide de l’affichage du casque. Les clients nous ont proposé des commentaires qui étaient une expérience inconfortable et perturbatrice. En raison de ces commentaires, en plus de l’utilisation accrue des applications Win32, nous avons décidé de préallouer trois analyses virtuelles au démarrage de Windows Mixed Reality pour éviter cette interruption et permettre aux clients de lancer jusqu’à trois applications Win32 simultanées sans avoir à se figer.
+
+**Solution de contournement**
+
+Depuis que nous avons reçu des commentaires que certains clients, en particulier ceux qui disposent de plusieurs moniteurs physiques, préfèrent désactiver cette pré-allocation du moniteur virtuel. Pour permettre aux clients de contrôler et de choisir, nous avons activé une solution de contournement qui implique la modification d’une valeur de clé de Registre (disponible avec la mise à jour cumulative 2020-07 pour Windows 10 version 2004).
+
+>[!NOTE]
+>La modification des valeurs de clé de Registre est destinée aux utilisateurs expérimentés.
+
+>[!WARNING]
+>La désactivation de la pré-allocation du moniteur virtuel peut entraîner un blocage court de votre casque quand vous lancez une application Win32 (telle que la vapeur, le nouveau Microsoft Edge ou Google Chrome) dans Windows Mixed Reality.
+
+Pour désactiver la pré-allocation du moniteur virtuel :
+1. Consultez **Windows Update** pour obtenir la mise à jour cumulative 2020-07 pour Windows 10 version 2004 et installer la mise à jour quand elle est disponible.
+2. Lancez l' **éditeur du Registre**.
+3. Accédez à HKEY_CURRENT_USER \SOFTWARE\Microsoft\Windows\CurrentVersion\Holographic\PreallocateVirtualMonitors
+4. Remplacez la valeur DWORD 1 (valeur par défaut) par 0 (zéro).
+    * VRAI-1
+    * FALSE-0
+
+Les analyses virtuelles sont désormais allouées lorsque vous tentez de lancer une application Win32 dans Windows Mixed Reality au lieu de la pré-allouer. Pour réinitialiser cette valeur et réactiver la pré-allocation du moniteur virtuel, renvoyez la valeur DWORD sur 1.
+
 ### <a name="additional-known-issues"></a>Autres problèmes connus
 
 -   Les sites Web ouverts dans Windows Mixed Reality sont perdus lorsque le portail de réalité mixte se ferme, bien que les fenêtres Microsoft Edge restent là où elles ont été placées dans la page d’hébergement de la réalité mixte.
 - Les expériences WebXR, y compris l’extension de visionneuse 360, peuvent ne pas démarrer correctement sur les PC avec une configuration GPU hybride. Vous pourrez peut-être contourner ce problème en sélectionnant votre GPU dédié en tant que GPU par défaut dans votre logiciel de carte graphique.
 -   L’audio des fenêtres Microsoft Edge n’est pas spatial.
 -   **Correction de la version d’extension de visionneuse 360 2.3.8**: l’ouverture d’une vidéo 360 à partir de YouTube dans Windows Mixed Reality peut entraîner la déformation de la vidéo dans le casque. Le redémarrage de Edge doit mettre à jour l’extension de visionneuse 360 de façon invisible pour résoudre ce problème. Vous pouvez vérifier la version de l’extension que vous avez en entrant `edge://system/` dans la barre d’adresses et en sélectionnant le bouton de **développement** en regard de « extensions ».
--   Pendant les sessions Windows Mixed Reality, les moniteurs virtuels s’affichent sous la forme de moniteurs physiques génériques dans les paramètres > système > écran.
+
 
 
 

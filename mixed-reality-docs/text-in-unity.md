@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 06/03/2019
 ms.topic: article
 keywords: Windows Mixed Reality, conception, contrôles, police, typographie, UI, UX
-ms.openlocfilehash: 6aa03eedf717fb73877db8660526e13444c43fe9
-ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
+ms.openlocfilehash: 63f0992a4623cf91c1b9c62c4ebf30de12529515
+ms.sourcegitcommit: ef0bf03833eda826ed0b884859b4573775112aba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87376571"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87476941"
 ---
 # <a name="text-in-unity"></a>Texte dans Unity
 
@@ -83,16 +83,18 @@ Segoe UI (police par défaut pour Windows) fonctionne bien dans la plupart des c
 ![Affichage de la ](images/Text_In_Unity_ViewingAngle.jpg)
  *distance d’affichage de l’angle, angle et hauteur du texte*
 
-## <a name="sharp-text-rendering-quality-with-proper-dimension"></a>Qualité de rendu de texte précise avec une dimension appropriée
+## <a name="text-with-mixed-reality-toolkit-v2"></a>Texte avec Mixed Reality Toolkit v2
+
+### <a name="sharp-text-rendering-quality-with-proper-dimension"></a>Qualité de rendu de texte précise avec une dimension appropriée
 
 En fonction de ces facteurs de mise à l’échelle, nous avons créé le [texte prefabs avec le texte de l’interface utilisateur et le maillage de texte 3D](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MRTK/SDK/StandardAssets/Prefabs/Text). Les développeurs peuvent utiliser ces prefabs pour optimiser le texte et la taille de police.
 
 ![Qualité de rendu de texte précise avec une dimension appropriée](images/hug-text-06-1000px.png)<br>
 *Qualité de rendu de texte précise avec une dimension appropriée*
 
-## <a name="shader-with-occlusion-support"></a>Nuanceur avec prise en charge d’occlusion
+### <a name="shader-with-occlusion-support"></a>Nuanceur avec prise en charge d’occlusion
 
-La matière de police par défaut d’Unity ne prend pas en charge l’occlusion. Pour cette raison, le texte derrière les objets s’affiche par défaut. Nous avons inclus un [nuanceur simple qui prend en charge l’occlusion](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Assets/MixedRealityToolkit/StandardAssets/Shaders/Text3DShader.shader). L’image ci-dessous montre le texte avec les éléments de police par défaut (à gauche) et le texte avec une occlusion appropriée (à droite).
+La matière de police par défaut d’Unity ne prend pas en charge l’occlusion. Pour cette raison, le texte derrière les objets s’affiche par défaut. Nous avons inclus un [nuanceur simple qui prend en charge l’occlusion](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Assets/MRTK/Core/StandardAssets/Shaders/Text3DShader.shader). L’image ci-dessous montre le texte avec les éléments de police par défaut (à gauche) et le texte avec une occlusion appropriée (à droite).
 
 ![Nuanceur avec prise en charge d’occlusion](images/hug-text-07-1000px.png)<br>
 *Nuanceur avec prise en charge d’occlusion*
