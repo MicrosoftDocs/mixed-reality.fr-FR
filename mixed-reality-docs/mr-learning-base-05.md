@@ -3,16 +3,16 @@ title: Tutoriels de démarrage - 5. Création de contenu dynamique avec des solv
 description: Ce cours vous montre comment utiliser Mixed Reality Toolkit (MRTK) pour créer une application de réalité mixte.
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 02/26/2019
+ms.date: 07/01/2020
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: cbeaa8b65b7aecc0600294b3739fedfb903e568e
-ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
+ms.openlocfilehash: 1a5017d8bc18ef239db88ee62cb2b65c77b2ab6f
+ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86305718"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87376611"
 ---
 # <a name="5-creating-dynamic-content-using-solvers"></a>5. Création de contenu dynamique avec des solveurs
 

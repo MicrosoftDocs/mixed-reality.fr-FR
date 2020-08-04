@@ -3,16 +3,16 @@ title: Tutoriels Azure Spatial Anchors - 3. Enregistrement, récupération et p
 description: Suivez ce cours pour découvrir comment implémenter Azure Spatial Anchors dans une application de réalité mixte.
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 02/26/2019
+ms.date: 07/01/2020
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: 25676404a71daf41b6a5c7587fa9bed95ab813f6
-ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
+ms.openlocfilehash: 274722588f156cb01fdd45525912e2e15687bc2d
+ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86304429"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87376531"
 ---
 # <a name="3-saving-retrieving-and-sharing-azure-spatial-anchors"></a>3. Enregistrement, récupération et partage d’ancres spatiales Azure
 

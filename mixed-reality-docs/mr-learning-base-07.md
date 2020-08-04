@@ -3,16 +3,16 @@ title: Tutoriels de démarrage - 7. Interaction avec les objets 3D
 description: Ce cours montre comment utiliser Mixed Reality Toolkit (MRTK) pour créer une application de réalité mixte.
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 05/02/2019
+ms.date: 07/01/2020
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: 8920b35d1583777b86bc82868bb90338e25298e2
-ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
+ms.openlocfilehash: f02780a1b9421b814242727ce92311d62b5e3461
+ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86304445"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87376421"
 ---
 # <a name="7-interacting-with-3d-objects"></a>7. Interaction avec les objets 3D
 

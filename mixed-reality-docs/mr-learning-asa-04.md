@@ -3,16 +3,16 @@ title: Tutoriels Azure Spatial Anchors - 4. Affichage du feedback Azure Spatial 
 description: Suivez ce cours pour découvrir comment implémenter Azure Spatial Anchors dans une application de réalité mixte.
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 02/26/2019
+ms.date: 07/01/2020
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: d221a7e64bda7a6dabf76b60c7bff7c6333666ef
-ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
+ms.openlocfilehash: afcd7753fb2296503e67a1977b183df951124560
+ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86304436"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87376521"
 ---
 # <a name="4-displaying-feedback-from-azure-spatial-anchors"></a>4. Affichage du feedback Azure Spatial Anchors
 

@@ -3,16 +3,16 @@ title: Tutoriels Azure Spatial Anchors - 2. Bien démarrer avec Azure Spatial A
 description: Suivez ce cours pour découvrir comment implémenter Azure Spatial Anchors dans une application de réalité mixte.
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 02/26/2019
+ms.date: 07/01/2020
 ms.topic: article
 keywords: réalité mixte, unity, tutoriel, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: a24b6b03ce75a57db49b3d0c875d123ea87c8162
-ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
+ms.openlocfilehash: d117839e51e586f4b905a20510fffc670d34cd4e
+ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86304533"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87376491"
 ---
 # <a name="2-getting-started-with-azure-spatial-anchors"></a>2. Bien démarrer avec Azure Spatial Anchors
 

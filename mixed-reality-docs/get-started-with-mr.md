@@ -3,16 +3,16 @@ title: Bien démarrer avec la réalité mixte
 description: Aidez les novices en réalité mixte à comprendre en quoi cette technologie consiste et quelles fonctionnalités elle offre.
 author: grbury
 ms.author: grbury
-ms.date: 08/24/2019
+ms.date: 07/29/2020
 ms.topic: overview
 ms.localizationpriority: high
 keywords: réalité mixte, découvrir, distribuer, index, page d’accueil, conception, développement, tutoriels, exemples d’applications, principes fondamentaux, études de cas, ressources, procédures HoloLens, projets open source
-ms.openlocfilehash: 720261164a4b2eedc47c1054f19edfb109ed3f83
-ms.sourcegitcommit: 8daefb763d1f23fe02b95b766b00b373f04c5c2d
+ms.openlocfilehash: 010e0b9d73b5537d480a28ee510fe2ae1bde3b10
+ms.sourcegitcommit: ef0bf03833eda826ed0b884859b4573775112aba
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86451361"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87476921"
 ---
 # <a name="get-started-with-mixed-reality"></a>Bien démarrer avec la réalité mixte
 
@@ -184,7 +184,7 @@ L’une des clés pour afficher du contenu qui semble réaliste sous forme holog
     :::column:::
        [![Faire un essai](images/icon-hololensuser.jpg)](https://www.microsoft.com//windows/windows-mixed-reality?icid=SSM_Search_Promo_XCat_WindowsMixedReality_CTA1#storelocator)<br>
         **[Essayer la réalité mixte](https://www.microsoft.com//windows/windows-mixed-reality?icid=SSM_Search_Promo_XCat_WindowsMixedReality_CTA1#storelocator)**<br>
-        Profitez d’une démonstration de la réalité mixte et de HoloLens dans votre Microsoft Store local. 
+        Profitez d’une démonstration de la réalité mixte et de HoloLens dans votre Microsoft Store local.
     :::column-end:::
     :::column:::
         [![Devenir créateur](images/icon-design.jpg)](design.md)<br>
@@ -211,4 +211,4 @@ L’une des clés pour afficher du contenu qui semble réaliste sous forme holog
 
 
 >[!IMPORTANT]
->L’ensemble de la documentation concernant le développement de réalité mixte est fournie à titre de référence uniquement. Votre application, son utilisation et ses effets sur les utilisateurs finaux sont sous votre entière responsabilité en tant que développeur de l’application. En cette qualité, vous devez vous assurer que votre application ne cause aucune gêne, aucune blessure ni aucun autre préjudice physique aux utilisateurs finaux, et veiller à fournir les avertissements et clauses d’exclusion de responsabilité appropriés. Vous devez suivre les étapes de développement et de publication fournies, et ce, à tout moment, afin de garantir que votre application est sécurisée et qu’elle respecte toutes les obligations citées dans votre [Contrat du développeur d’application passé avec Microsoft](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement). 
+>L’ensemble de la documentation concernant le développement de réalité mixte est fournie à titre de référence uniquement. Votre application, son utilisation et ses effets sur les utilisateurs finaux sont sous votre entière responsabilité en tant que développeur de l’application. En cette qualité, vous devez vous assurer que votre application ne cause aucune gêne, aucune blessure ni aucun autre préjudice physique aux utilisateurs finaux, et veiller à fournir les avertissements et clauses d’exclusion de responsabilité appropriés. Vous devez suivre les étapes de développement et de publication fournies, et ce, à tout moment, afin de garantir que votre application est sécurisée et qu’elle respecte toutes les obligations citées dans votre [Contrat du développeur d’application passé avec Microsoft](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement).
