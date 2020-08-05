@@ -1,20 +1,22 @@
 ---
 title: Préparer une application existante pour HoloLens 2
-description: Conçu pour les développeurs qui disposent déjà d’une application HoloLens (1re génération) et/ou d’une ancienne version de MRTK, et qui souhaitent effectuer le portage de MRTK version 2 vers HoloLens 2.
+description: Conçu pour les développeurs qui disposent déjà d’une application HoloLens (1re génération) et/ou d’une ancienne version de MRTK, et qui souhaitent effectuer le portage vers MRTK version 2 et HoloLens 2.
 author: grbury
 ms.author: grbury
-ms.date: 10/14/2019
+ms.date: 07/29/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Windows Mixed Reality, test, MRTK, MRTK version 2, HoloLens 2
-ms.openlocfilehash: 409959b3c73eff684585706dfde87afc5f8a5495
-ms.sourcegitcommit: f523b74a549721b6bec69cb5d2eca5b7673a793c
+ms.openlocfilehash: a6d6c4ad2b9ec0de2663536f2299f31f7d79571a
+ms.sourcegitcommit: ef0bf03833eda826ed0b884859b4573775112aba
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85570340"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87476991"
 ---
 # <a name="get-your-existing-app-ready-for-hololens-2"></a>Préparer une application existante pour HoloLens 2
+
+## <a name="overview"></a>Vue d’ensemble
 
 Ce guide sur mesure a été conçu pour aider les développeurs qui disposent d’une application Unity pour HoloLens (1re génération) à effectuer le portage de leur application vers l’appareil HoloLens 2. Le portage d’une application Unity pour HoloLens (1re génération) vers HoloLens 2 comprend quatre étapes clés. 
 
@@ -25,33 +27,35 @@ Les sections ci-dessous expliquent en détail chacune de ces étapes :
 | ![Logo Visual Studio](images/visualstudio_logo.png) | ![Logo Unity](images/final_unity_logo.png)| ![Icône Unity](images/hololens2_icon.jpg) | ![Logo MRTK](images/final_mrtk-small_logo.png) |
 | Télécharger les derniers outils | Mettre à jour un projet Unity | Compiler pour ARM | Effectuer une migration vers MRTK v2
 
-Prérequis :
+Éléments requis :
 
-Avant de démarrer le processus de portage, il est **vivement recommandé** aux développeurs d’utiliser le contrôle de code source afin d’enregistrer un instantané de l’état d’origine de leur application. En outre, il est recommandé d’*enregistrer* les états des points de contrôle à différents stades du processus. Le fait de disposer d’une autre instance Unity de l’application d’origine peut vous être très utile, car cela vous permet d’effectuer une comparaison côte à côte au cours du processus de portage. 
+Avant de démarrer le processus de portage, nous vous **recommandons vivement** d’utiliser le contrôle de code source pour enregistrer un instantané de l’état d’origine de vos applications. Nous vous recommandons également d’*enregistrer* les états des points de contrôle à différents stades du processus. Le fait de disposer d’une autre instance Unity de l’application d’origine peut vous être utile pour effectuer une comparaison côte à côte au cours du processus de portage. 
 
 > [!NOTE]
-> Avant d’effectuer le portage, vérifiez que vous avez installé les derniers outils de développement Windows Mixed Reality. Pour la plupart des développeurs HoloLens, il s’agit principalement d’effectuer une mise à jour vers la dernière version de Visual Studio 2019 et d’installer le kit de développement logiciel (SDK) Windows correspondant. Le contenu ci-dessous offre une présentation détaillée des différentes versions de Unity et de Mixed Reality Toolkit (MRTK), version 2.
+> Avant d’effectuer le portage, vérifiez que vous avez installé les derniers outils de développement Windows Mixed Reality. Pour la plupart des développeurs HoloLens, il s’agit d’effectuer une mise à jour vers la dernière version de Visual Studio 2019 et d’installer le SDK Windows correspondant. Le contenu ci-dessous offre une présentation détaillée des différentes versions de Unity et de Mixed Reality Toolkit (MRTK), version 2.
 >
 > Pour plus d’informations, consultez [Installer les outils](install-the-tools.md).
 
 ## <a name="migrate-project-to-the-latest-version-of-unity"></a>Effectuer la migration d’un projet vers la dernière version de Unity
 
-Si vous utilisez [MRTK v2](https://github.com/microsoft/MixedRealityToolkit-Unity), [Unity 2018 LTS](https://unity3d.com/unity/qa/lts-releases) est le chemin de prise en charge le mieux adapté à long terme, car il ne nécessite aucune modification importante dans Unity ou MRTK. MRTK v2 garantit également la prise en charge de Unity 2018 LTS, mais pas nécessairement celle de chaque itération de Unity 2019.x.
+Si vous utilisez [MRTK v2](https://github.com/microsoft/MixedRealityToolkit-Unity), [Unity 2019 LTS](https://unity3d.com/unity/qa/lts-releases) est le chemin de prise en charge le mieux adapté à long terme, car il ne nécessite aucune modification importante dans Unity ou MRTK. Vous devez évaluer les [dépendances de plug-ins](https://docs.unity3d.com/Manual/Plugins.html) qui existent actuellement dans votre projet et déterminer si ces DLL peuvent être créées ou non pour ARM64. Si un plug-in de dépendance matérielle ne peut pas être généré pour ARM64, vous devrez peut-être continuer à créer votre application pour ARM.
 
-Pour aider à clarifier d’autres différences entre [Unity 2018 LTS](https://unity3d.com/unity/qa/lts-releases) et Unity 2019.x, les points suivants illustrent les compromis entre ces deux versions. La principale différence entre les deux est la possibilité de compiler pour ARM64 dans Unity 2019.
+<!-- MRTK v2 always guarantees support for Unity 2018 LTS, but does not necessarily guarantee support for every iteration of Unity 2019.x.
 
-Les développeurs doivent évaluer les [dépendances de plug-ins](https://docs.unity3d.com/Manual/Plugins.html) de leur projet afin de déterminer si ces DLL peuvent être créées pour ARM64. Si un plug-in de dépendance matérielle ne peut pas être généré pour ARM64, vous devrez peut-être continuer à créer votre application pour ARM.
+To help clarify additional differences between [Unity 2018 LTS](https://unity3d.com/unity/qa/lts-releases) and Unity 2019.x, the following table outlines the trade-offs between the two versions. The primary difference between the two is the ability to compile for ARM64 in Unity 2019.
 
-| Unity 2018 LTS | Unity 2019.x |
+| Unity 2018 LTS | Unity 2019.x |
 |----------|-------------------|
-| Prise en charge de la build ARM32 | Prise en charge des builds ARM32 et ARM64 |
-| Build LTS stable | Stabilité de la version bêta |
-| [Back-end ’écriture de scripts .NET](https://docs.unity3d.com/2018.4/Documentation/Manual/windowsstore-dotnet.html) *déprécié* | [Back-end d’écriture de scripts .NET](https://docs.unity3d.com/2018.4/Documentation/Manual/windowsstore-dotnet.html) *supprimé* |
-| Réseau UNet *déprécié* | Réseau UNet *déprécié* |
+| ARM32 build support | ARM32 and ARM64 build support |
+| Stable LTS build release | Beta stability |
+| [.NET Scripting back-end](https://docs.unity3d.com/2018.4/Documentation/Manual/windowsstore-dotnet.html) *deprecated* | [.NET Scripting back-end](https://docs.unity3d.com/2018.4/Documentation/Manual/windowsstore-dotnet.html) *removed* |
+| UNET Networking *deprecated* | UNET Networking *deprecated* |
+
+-->
 
 ## <a name="update-sceneproject-settings-in-unity"></a>Mettre à jour les paramètres de scène et de projet dans Unity
 
-Après la mise à jour vers [Unity 2018 LTS](https://unity3d.com/unity/qa/lts-releases) ou Unity 2019.x, il est recommandé de mettre à jour certains paramètres Unity pour des résultats optimaux sur l’appareil. Ces paramètres sont décrits en détail sous **[Paramètres recommandés pour Unity](Recommended-settings-for-Unity.md)** .
+Après la mise à jour vers [Unity 2019 LTS](https://unity3d.com/unity/qa/lts-releases), nous vous recommandons de mettre à jour certains paramètres Unity pour des résultats optimaux sur l’appareil. Ces paramètres sont décrits en détail sous [Paramètres recommandés pour Unity](Recommended-settings-for-Unity.md).
 
 Il convient de rappeler que le [back-end d’écriture de code principal .NET](https://docs.unity3d.com/Manual/windowsstore-dotnet.html) est déprécié dans Unity 2018 et *supprimé* dans Unity 2019. Les développeurs doivent sérieusement envisager de basculer leur projet vers [IL2CPP.](https://docs.unity3d.com/Manual/IL2CPP.html)
 
@@ -59,21 +63,24 @@ Il convient de rappeler que le [back-end d’écriture de code principal .NET](h
 > Il est possible que le back-end d’écriture de code IL2CPP entraîne des temps de génération plus longs entre Unity et Visual Studio. Les développeurs doivent configurer leur ordinateur de développement de manière à [optimiser les temps de génération IL2CPP](https://docs.unity3d.com/Manual/IL2CPP-OptimizingBuildTimes.html).
 > Il peut également être avantageux de configurer un [serveur de cache](https://docs.unity3d.com/Manual/CacheServer.html), en particulier pour les projets Unity qui comprennent une grande quantité de ressources (à l’exclusion des fichiers de script) ainsi que pour les scènes et les ressources qui changent constamment. Lorsque vous ouvrez un projet, Unity stocke les ressources éligibles dans un format de cache interne sur l’ordinateur de développement. Les éléments doivent être réimportés et retraités après modification. Ce processus peut être effectué une fois puis enregistré dans un serveur de cache. Pour gagner du temps, vous pouvez le partager avec les autres développeurs, au lieu que chaque développeur réimporte localement les éléments modifiés.
 
-Une fois qu’ils ont pris en compte les changements importants entraînés par la mise à jour de la version de Unity, les développeurs doivent générer et tester leurs applications sur HoloLens (1re génération). C’est le bon moment pour créer et enregistrer une validation dans le contrôle de code source.
+Une fois qu’ils ont pris en compte les changements importants entraînés par la mise à jour de la version de Unity, vous devez générer et tester vos applications sur HoloLens (1re génération). C’est le bon moment pour créer et enregistrer une validation dans le contrôle de code source.
 
 ## <a name="compile-dependenciesplugins-for-arm-processor"></a>Compiler des dépendances ou des plug-ins pour processeurs ARM
 
-HoloLens (1re génération) exécutait les applications sur un processeur x86 alors que l’HoloLens 2 utilise un processeur ARM. C’est pourquoi les applications HoloLens existantes doivent être portées en vue de prendre en charge ARM. Comme nous l’avons vu précédemment, Unity 2018 LTS prend en charge la compilation des applications ARM32, alors que Unity 2019.x prend en charge la compilation des applications ARM32 et ARM64. En général, il est recommandé de développer des applications ARM64, car celles-ci fournissent de meilleures performances. Toutefois, cela nécessite que toutes les [dépendances de plug-ins](https://docs.unity3d.com/Manual/Plugins.html) soient également conçues pour ARM64.
+HoloLens (1re génération) exécutait les applications sur un processeur x86 alors que l’HoloLens 2 utilise un processeur ARM. C’est pourquoi les applications HoloLens existantes doivent être portées en vue de prendre en charge ARM. Comme nous l’avons vu précédemment, Unity 2018 LTS prend en charge la compilation des applications ARM32, alors que Unity 2019.x prend en charge la compilation des applications ARM32 et ARM64. Il est recommandé de développer des applications ARM64, car celles-ci fournissent de meilleures performances. Toutefois, cela nécessite que toutes les [dépendances de plug-ins](https://docs.unity3d.com/Manual/Plugins.html) soient également conçues pour ARM64.
 
 Passez en revue toutes les dépendances DLL qui se trouvent dans votre application. Il est recommandé de supprimer du projet toute dépendance dont vous n’avez plus besoin. Pour les autres plug-ins nécessaires, ingérez les fichiers binaires ARM32 ou ARM64 dans votre projet Unity.
 
 Après l’ingestion des DLL nécessaires, créez une solution Visual Studio dans Unity, puis compilez un AppX pour ARM dans Visual Studio, afin de vérifier si votre application peut être conçue pour les processeurs ARM. Il est conseillé d’enregistrer l’application sous forme de validation dans votre solution de contrôle de code source.
 
+> [!IMPORTANT]
+> Vous pouvez exécuter l’application utilisant MRTK v1 sur HoloLens 2 après avoir remplacé la cible de build par ARM, à supposer que toutes les autres conditions soient remplies. Vous devez donc veiller à disposer des versions ARM de tous vos plug-ins. Toutefois, votre application n’aura pas accès aux fonctions spécifiques à HoloLens 2 comme la main articulée et le suivi oculaire. MRTK v1 et MRTK v2 ont des espaces de noms différents qui permettent aux deux versions d’être dans le même projet, ce qui est utile pour passer de l’une à l’autre.
+
 ## <a name="update-to-mrtk-version-2"></a>Effectuer une mise à jour vers MRTK version 2
 
 [MRTK version 2](https://github.com/microsoft/MixedRealityToolkit-Unity) est le nouveau kit d’outils en supplément de Unity qui prend en charge à la fois HoloLens (1re génération) et HoloLens 2. Il s’agit également du kit dans lequel toutes les nouvelles fonctionnalités HoloLens 2 ont été ajoutées, notamment les interactions avec les mains et le suivi oculaire.
 
-Consultez les rubriques suivantes pour plus d’informations sur l’utilisation de MRTK version 2 :
+Pour plus d’informations sur l’utilisation de MRTK version 2, consultez les ressources suivantes :
 
 - [Page d’accueil MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html)
 - [Prise en main de MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html)
@@ -133,13 +140,13 @@ Les applications et les scénarios ont tous leurs propres spécificités. Nous c
 
 - Dans certains cas, il est possible qu’un plug-in UWP/ARM n’existe pas pour les plug-ins requis par l’application, ce qui bloque la capacité à porter l’application et à l’exécuter sur HoloLens 2. Contactez votre fournisseur de plug-ins pour résoudre le problème et obtenir une prise en charge d’ARM.
 
-- Dans les nuanceurs, minfloat (et ses variantes, telles que min16float, minint, etc.) peuvent ne pas avoir le même comportement dans HoloLens 2 que dans HoloLens (1re génération). Ceux-ci ont pour but de garantir que le nombre de bits spécifié sera utilisé (au minimum). Avec les processeurs graphiques Intel/Nvidia, ils sont le plus souvent traités comme des 32 bits. Sur ARM, le nombre de bits spécifié est respecté. Dans la pratique, cela signifie que les nombres peuvent avoir une précision ou une portée moindre dans HoloLens 2 que dans HoloLens (1re génération).
+- Dans les nuanceurs, minfloat et ses variantes (telles que min16float, minint, etc.) peuvent ne pas avoir le même comportement dans HoloLens 2 que dans HoloLens (1re génération). Ceux-ci ont pour but de garantir que le nombre de bits spécifié sera utilisé (au minimum). Avec les processeurs graphiques Intel/Nvidia, ils sont le plus souvent traités comme des 32 bits. Sur ARM, le nombre de bits spécifié est respecté. Dans la pratique, cela signifie que les nombres peuvent avoir une précision ou une portée moindre dans HoloLens 2 que dans HoloLens (1re génération).
 
 - Les instructions _asm ne semblent pas fonctionner sur ARM, ce qui signifie que tout code utilisant les instructions _asm doit être réécrit.
 
 - Le jeu d’instructions SIMD n’est pas pris en charge sur ARM, car plusieurs en-têtes, comme xmmintrin.h, emmintrin.h, tmmintrin.h et immintrin.h, ne sont pas disponibles sur ARM.
 
-- Sur ARM, le compilateur du nuanceur est exécuté lors du premier appel de dessin, après le chargement du nuanceur ou après la modification d’un élément dont dépend le nuanceur, mais pas au moment du chargement du nuanceur. L’impact sur le taux de trames peut être très visible, en fonction du nombre de nuanceurs qui doivent être compilés. Cela a plusieurs impacts sur la façon dont les nuanceurs doivent être gérés, packagés et mis à jour sur HoloLens 2, par rapport à HoloLens (1re génération).
+- Sur ARM, le compilateur du nuanceur est exécuté lors du premier appel de dessin, après le chargement du nuanceur ou après la modification d’un élément dont dépend le nuanceur, mais pas au moment du chargement du nuanceur. L’impact sur le taux de trames peut être visible, en fonction du nombre de nuanceurs qui doivent être compilés. Cela a plusieurs impacts sur la façon dont les nuanceurs doivent être gérés, packagés et mis à jour sur HoloLens 2, par rapport à HoloLens (1re génération).
 
 ## <a name="see-also"></a>Voir aussi
 * [Installer les outils](install-the-tools.md)

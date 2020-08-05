@@ -3,28 +3,26 @@ title: Vue d’ensemble du développement Unity
 description: Commencez à créer des applications de réalité mixte dans Unity.
 author: thetuvix
 ms.author: kurtie
-ms.date: 10/25/2018
+ms.date: 07/29/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unity, réalité mixte, développement, bien démarrer, nouveau projet, portage, capacité, caméra, simulation, émulation, documentation
-ms.openlocfilehash: e0fe775f5fe891416145d91e52a5a801e049c568
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+ms.openlocfilehash: 4679e1a2b58a7e0d77e6b295803624a4de1fac19
+ms.sourcegitcommit: ef0bf03833eda826ed0b884859b4573775112aba
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "81433415"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87476711"
 ---
 # <a name="unity-development-overview"></a>Vue d’ensemble du développement Unity
 
 Rien de tel qu’[Unity](https://unity.com) pour créer rapidement une [application de réalité mixte](app-views.md). Nous vous recommandons de prendre le temps d’explorer les [tutoriels Unity](https://unity3d.com/learn/tutorials). Si vous avez besoin de ressources, Unity dispose d’un [magasin de ressources](https://www.assetstore.unity3d.com/) complet. Une fois que vous avez acquis des connaissances de base sur Unity, consultez les [tutoriels](tutorials.md) pour découvrir les spécificités du développement de réalité mixte avec Unity. N’hésitez pas à visiter les [forums Unity](https://forum.unity3d.com/forums/hololens.102/) pour dialoguer avec des membres de la communauté qui créent des applications de réalité mixte dans Unity et trouver des solutions aux problèmes que vous pouvez rencontrer.
 
-Pour commencer à créer des applications de réalité mixte avec Unity, [installez les outils nécessaires](install-the-tools.md). 
-
->[!VIDEO https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Setting-up-your-HoloLens-2-development-environment/player?format=ny]
+Pour commencer à créer des applications de réalité mixte avec Unity, [installez les outils nécessaires](install-the-tools.md).
 
 ## <a name="new-unity-project-with-mixed-reality-toolkit"></a>Nouveau projet Unity avec Mixed Reality Toolkit 
 
-Le moyen le plus simple de développer dans Unity consiste à utiliser le Mixed Reality Toolkit. Ce kit d’outils vous aide à configurer automatiquement votre projet et fournit un ensemble de fonctionnalités de réalité mixte pour accélérer le développement. Pour en savoir plus et pour démarrer, consultez [Mixed Reality Toolkit v2](mrtk-getting-started.md). 
+Le moyen le plus simple de développer dans Unity est d’utiliser le Mixed Reality Toolkit. Ce kit d’outils vous aide à configurer automatiquement votre projet et fournit un ensemble de fonctionnalités de réalité mixte pour accélérer le développement. Pour en savoir plus et pour démarrer, consultez [Mixed Reality Toolkit v2](mrtk-getting-started.md). 
 
 ## <a name="porting-an-existing-unity-app-to-windows-mixed-reality"></a>Portage d’une application Unity existante vers Windows Mixed Reality
 
@@ -32,7 +30,7 @@ Si vous souhaitez porter un projet Unity existant vers Windows Mixed Reality, su
 
 ## <a name="configuring-new-unity-project-for-windows-mixed-reality"></a>Configuration d’un nouveau projet Unity pour Windows Mixed Reality
 
-Si vous souhaitez créer un projet Unity sans importer le Mixed Reality Toolkit, vous devez changer manuellement quelques paramètres dans Unity pour Windows Mixed Reality. Ceux-ci sont divisés en deux catégories : par projet et par scène. Pour obtenir un guide pas à pas, consultez [Configurer un nouveau projet Unity pour Windows Mixed Reality](Configure-Unity-Project.md)
+Si vous créez un projet Unity sans importer le Mixed Reality Toolkit, vous devez changer quelques paramètres dans Unity pour Windows Mixed Reality. Ces paramètres sont divisés en deux catégories : par projet et par scène. Pour obtenir un guide pas à pas, consultez [Configurer un nouveau projet Unity pour Windows Mixed Reality](Configure-Unity-Project.md).
 
 ## <a name="adding-mixed-reality-capabilities-and-inputs"></a>Ajout de fonctionnalités et d’entrées de réalité mixte
 
@@ -81,7 +79,7 @@ En plus de cette documentation disponible sur docs.microsoft.com, Unity installe
     * Ce manuel est conçu pour vous aider à utiliser Unity, des notions de base aux techniques avancées.
     * Accessible à partir de l’éditeur Unity (**Help > Manual**).
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a>Voir également
 * [Mixed Reality Toolkit v2](mrtk-getting-started.md)
 * [Réalité mixte - Principes fondamentaux - Cours 100 : Bien démarrer avec Unity](holograms-100.md)
 * [Paramètres recommandés pour Unity](recommended-settings-for-unity.md)
