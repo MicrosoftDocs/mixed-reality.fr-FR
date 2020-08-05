@@ -7,12 +7,12 @@ ms.date: 7/13/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: HoloLens, émulateur
-ms.openlocfilehash: e7c89cc2d839edc46a73a765acad603341b52716
-ms.sourcegitcommit: 3c867622e99c07f95db92e88551d2b904ceb8def
+ms.openlocfilehash: 597a0a9103f8313d26449b996c1e7af6f5619b2c
+ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86383071"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87376661"
 ---
 # <a name="using-the-hololens-emulator"></a>Utilisation de l’émulateur HoloLens
 
@@ -253,6 +253,8 @@ Dans l’émulateur, vous voyez uniquement les hologrammes que vous affichez. Ma
 
 * Lors de la désinstallation de l’émulateur HoloLens 2, l’image de disque dur (Flash.vhdx) peut rester sur votre disque dur dans le dossier Windows Kits\10\Emulation\HoloLens\<build number>.  Vous pouvez supprimer ce fichier sans risque.
 * L’accélération graphique matérielle peut provoquer le plantage des applications holographiques sur certains systèmes avec des graphiques AMD ou Intel.  Pour contourner ce problème, désactivez l’accélération graphique matérielle dans la fenêtre Outils de l’émulateur.
+* Après l’installation des dernières mises à jour Windows à compter du mois de juillet 2020, l’accélération graphique matérielle de l’émulateur HoloLens (1ère génération) risque de ne plus être disponible.
+Le composant RemoteFX nécessaire à l’accélération graphique matérielle est déprécié et sera supprimé dans une prochaine version de Windows.  Pour réactiver l’accélération graphique matérielle, utilisez l’applet de commande PowerShell [Enable-VMRemoteFXPhysicalVideoAdapter](https://docs.microsoft.com/powershell/module/hyper-v/enable-vmremotefxphysicalvideoadapter?view=win10-ps).  Pour plus d’informations, consultez la [documentation sur la dépréciation et la suppression de la prise en charge de RemoteFX dans Windows](https://support.microsoft.com/help/4570006/update-to-disable-and-remove-the-remotefx-vgpu-component). 
 
 ## <a name="troubleshooting"></a>Résolution des problèmes
 

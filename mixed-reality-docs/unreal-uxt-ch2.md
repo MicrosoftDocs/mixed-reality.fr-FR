@@ -7,12 +7,12 @@ ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, réalité mixte, tutoriel, bien démarrer, mrtk, uxt, UX Tools, documentation
-ms.openlocfilehash: 150fee721bb9cd72d287737aca4262bd87dccba8
-ms.sourcegitcommit: 7ca383ef1c5dc895ca2a289435f2e9d4c1ee6e65
+ms.openlocfilehash: 1fce9c34b1d31c56eb628979089399926f3cbf51
+ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85345729"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87376504"
 ---
 # <a name="2-initializing-your-project-and-first-application"></a>2. Initialisation de votre projet et de votre première application
 
@@ -40,8 +40,7 @@ La première chose dont vous avez besoin est un projet avec lequel travailler. S
 
 ![Sélectionner le modèle Blank](images/unreal-uxt/2-template.PNG)
 
-4. Définissez **C++** , **Scalable 3D or 2D, Mobile/Tablet** et **No Starter Content** dans **Project Settings**. 
-    * Choisissez un emplacement d’enregistrement, puis cliquez sur **Create Project**. 
+4. Définissez **C++** , **Scalable 3D or 2D, Mobile/Tablet** et **No Starter Content** dans **Project Settings**, puis choisissez un emplacement d’enregistrement et cliquez sur **Create Project**. 
 
 > [!NOTE]
 > Vous devez sélectionner un projet C++ plutôt qu’un projet Blueprint afin de générer le plug-in UX Tools, que vous configurerez plus loin dans la section 4.

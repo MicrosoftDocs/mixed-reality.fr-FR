@@ -7,12 +7,12 @@ ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, réalité mixte, tutoriel, bien démarrer, mrtk, uxt, UX Tools, documentation
-ms.openlocfilehash: f79985b2ce9e26971c23acf36a3538bf7f3c166e
-ms.sourcegitcommit: ff0e89b07d0b4a945967d64c5b8845a21dc5f476
+ms.openlocfilehash: 105e817e54f7de12afdcab9fde1dfce0c38ff4a7
+ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84879554"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87376381"
 ---
 # <a name="3-setting-up-your-project-for-mixed-reality"></a>3. Configuration de votre projet pour la réalité mixte
 
@@ -57,7 +57,7 @@ Une fois cette opération effectuée, l’étape suivante consiste à faire en s
 À ce stade, le projet a toujours besoin d’un objet de lecteur. Dans Unreal, un pion (**Pawn**) représente l’utilisateur dans le jeu, mais ici, il s’agira de l’expérience HoloLens 2.
 
 1. Cliquez sur **Add New > Blueprint Class** (Ajouter > Classe de blueprint) dans le dossier **Content**, puis développez la section **All Classes** située en bas. 
-    * Recherchez **DefaultPawn**, cliquez sur **Select**, puis double-cliquez sur la ressource pour l’ouvrir. 
+    * Recherchez **DefaultPawn**, cliquez sur **Select**, nommez-le **MRPawn**, puis double-cliquez sur la ressource pour l’ouvrir. 
 
 ![Créer un Pawn héritant de DefaultPawn](images/unreal-uxt/3-defaultpawn.PNG)
 
@@ -66,9 +66,13 @@ Une fois cette opération effectuée, l’étape suivante consiste à faire en s
 
 2. Sélectionnez **CollisionComponent** dans le panneau **Components**, puis faites défiler jusqu’à la section **Collision** du panneau **Details**. 
     * Cliquez sur la liste déroulante **Collision Presets** (Valeurs prédéfinies de collision), puis remplacez la valeur par **NoCollision**. 
-    * Procédez de la même façon pour **MeshComponent**, puis compilez (**Compile**) et enregistrez (**Save**) le blueprint. 
+    * Répétez cette opération pour **MeshComponent**.
 
 ![Changer la valeur Pawn dans Collision Presets](images/unreal-uxt/3-nocollision.PNG)
+
+3. Cliquez sur **Add Component > Camera** dans le panneau **Components** et nommez le composant **Camera**. Cela permet à la caméra du joueur de se déplacer avec l’appareil HoloLens 2.
+
+4. **Compilez** et **enregistrez** le blueprint.
 
 Une fois votre travail terminé, revenez à la fenêtre principale.
 

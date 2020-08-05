@@ -1,5 +1,5 @@
 ---
-title: Ancres spatiales dans Unreal
+title: Ancres spatiales locales dans Unreal
 description: Guide d’utilisation des ancres spatiales dans Unreal
 author: hferrone
 ms.author: v-haferr
@@ -7,18 +7,21 @@ ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, réalité mixte, développement, fonctionnalités, documentation, guides, hologrammes, ancres spatiales
-ms.openlocfilehash: 58394f4e27aff5070d55ed5f0d62cd81ff579d1f
-ms.sourcegitcommit: 45da0a056fa42088ff81ccdd11232830fbe8430f
+ms.openlocfilehash: b102d506b1d670291c3b97ca34d277e2597af043
+ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84720315"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87376044"
 ---
-# <a name="spatial-anchors-in-unreal"></a>Ancres spatiales dans Unreal
+# <a name="local-spatial-anchors-in-unreal"></a>Ancres spatiales locales dans Unreal
 
 ## <a name="overview"></a>Vue d’ensemble
 
-Les ancres spatiales sont utilisées pour enregistrer les hologrammes en place dans l’espace réel entre les sessions d’application.  Elles sont exposées via Unreal sous forme d’**ARPins** et sont enregistrées dans le magasin d’ancres HoloLens, que vous allez charger dans les sessions ultérieures. 
+Les ancres spatiales sont utilisées pour enregistrer les hologrammes en place dans l’espace réel entre les sessions d’application. Elles sont exposées via Unreal sous forme d’**ARPins** et sont enregistrées dans le magasin d’ancres HoloLens, que vous allez charger dans les sessions ultérieures. Les ancres locales sont idéales comme solutions de secours lorsqu’il n’y a pas de connectivité Internet.
+
+> [!IMPORTANT]
+> Les ancres locales sont stockées sur l’appareil, alors que les ancres spatiales Azure sont stockées dans le cloud. Si vous envisagez d’utiliser les services cloud Azure pour stocker vos ancres, nous avons créé un guide qui vous aidera à intégrer [Azure Spatial Anchors](unreal-azure-spatial-anchors.md). Notez que vous pouvez avoir des ancres locales et Azure dans le même projet sans conflit.
 
 ## <a name="checking-the-anchor-store"></a>Vérification du magasin d’ancres
 
@@ -65,5 +68,6 @@ Lorsque vous n’avez plus besoin d’une ancre, vous pouvez l’effacer individ
 > N’oubliez pas que les ancres spatiales sont encore en version bêta, donc n’hésitez pas à vous tenir au courant des dernières informations et fonctionnalités.
 
 ## <a name="see-also"></a>Voir aussi
+* [Azure Spatial Anchors](unreal-azure-spatial-anchors.md)
 * [Ancres spatiales](spatial-anchors.md)
 * [Systèmes de coordonnées](coordinate-systems.md)
